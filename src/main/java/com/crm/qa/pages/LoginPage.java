@@ -12,13 +12,15 @@ import com.crm.qa.base.TestBase;
 public class LoginPage extends TestBase{
 	
 	//Load PageFactory(OR - Object Repository)
-	@FindBy(name="username")
+	@FindBy(name="userName")
 	WebElement username;
 	
-	@FindBy(name="password")
+	@FindBy(name="userPassword")
 	WebElement password;
 	
-	@FindBy(xpath="//input[@type='submit']")
+	//@FindBy(xpath="//input[@id='submit']")
+	@FindBy(name="commit")
+	//[@id="login_form"]/form/button
 	WebElement loginBtn;
 	
 	@FindBy(xpath="//button[contains(text(),'Sign Up']")
@@ -33,6 +35,7 @@ public class LoginPage extends TestBase{
 	}
 	
 	public String validateLoginPageTitle() {
+		//System.out.print(driver.getTitle());
 		return driver.getTitle();
 	}
 	

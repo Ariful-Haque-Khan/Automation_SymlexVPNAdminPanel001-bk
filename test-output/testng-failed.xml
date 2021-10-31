@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="FreeCRMTesting.FreeCRMTest">
+      <class name="com.admin.qa.tests.Status200Test">
         <methods>
-          <include name="loginWithGroupUserTest"/>
-          <include name="setup"/>
+          <include name="statusResellerLinkTest"/>
+          <include name="statusResellerLinkDropDownTest"/>
+          <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- FreeCRMTesting.FreeCRMTest -->
+      </class> <!-- com.admin.qa.tests.Status200Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
