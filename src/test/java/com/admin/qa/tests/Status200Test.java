@@ -6,21 +6,14 @@ package com.admin.qa.tests;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.FindBy;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import org.openqa.selenium.support.FindBy;
 import com.admin.qa.pages.PageLinks;
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.HomePage;
@@ -37,7 +30,7 @@ public class Status200Test extends TestBase{
 	//Initializing PageFactory
 	public Status200Test() {
 		super();   //Call the Constructor of the Super class - TestBase
-		props = new Properties();
+		//props = new Properties();
 		try {
 			props = new Properties();
 			FileInputStream ip = new FileInputStream(
@@ -82,7 +75,7 @@ public class Status200Test extends TestBase{
 	public void statusResellerLinkDropDownTest() throws IOException, InterruptedException {
 		//testUtils.switchToFrame();
 		//pageLinks.clickOnResellerDropDown();
-		driver.findElement(By.xpath("/html/body/div[2]/aside/section/ul/li[3]/ul/li[1]/a")).click();
+		//driver.findElement(By.xpath("/html/body/div[2]/aside/section/ul/li[3]/ul/li[1]/a")).click();
 		//@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[1]/a")
 		//WebElement resellerListPageLink;
 		//HttpURLConnection c=(HttpURLConnection)new URL(props.getProperty("url")+"/reseller").openConnection();

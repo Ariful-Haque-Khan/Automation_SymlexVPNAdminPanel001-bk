@@ -21,6 +21,9 @@ public class HomePage extends TestBase{
 	@FindBy(xpath="//a[contains(text(),'Contacts')]")
 	WebElement contactsLink;
 	
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	WebElement resellerListPageLink;
+	
 	@FindBy(xpath="//a[@title='New Contact']")
 	WebElement newContactLink;
 	
@@ -44,6 +47,17 @@ public class HomePage extends TestBase{
 	public ContactsPage clickOnContactsLink() {
 		contactsLink.click();
 		return new ContactsPage();
+	}
+	
+	public HomePage clickOnResellerPINLink() {
+		//System.out.print("XZ....");
+		//driver.findElements( By.id("...") ).size() != 0
+		//boolean exists = resellerListPageLink.isDisplayed();
+		
+		//System.out.print(exists);
+		
+		resellerListPageLink.click();
+		return new HomePage();
 	}
 	
 	public DealsPage clickOnDealsLink() {

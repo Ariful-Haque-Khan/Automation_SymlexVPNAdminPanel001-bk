@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.admin.qa.pages.PageLinks;
 import com.crm.qa.base.TestBase;
 
 public class LoginPage extends TestBase{
@@ -50,6 +51,15 @@ public class LoginPage extends TestBase{
 		loginBtn.click();
 		
 		return new HomePage(); //HomePage is the landing page for LoginPage
+	}
+	
+	public PageLinks loginPagelink(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new PageLinks(); //HomePage is the landing page for LoginPage
 	}
 	
 }

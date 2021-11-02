@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.admin.qa.tests.Status200Test">
+      <class name="com.admin.qa.tests.Check200Status">
         <methods>
-          <include name="statusResellerLinkTest"/>
-          <include name="statusResellerLinkDropDownTest"/>
-          <include name="setUp"/>
+          <include name="loginTest"/>
           <include name="tearDown"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.admin.qa.tests.Status200Test -->
+      </class> <!-- com.admin.qa.tests.Check200Status -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
