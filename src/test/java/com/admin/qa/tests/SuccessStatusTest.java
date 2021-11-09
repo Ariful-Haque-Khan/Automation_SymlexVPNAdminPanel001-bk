@@ -11,6 +11,7 @@ import java.net.URL;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import com.admin.qa.pages.PageLinks;
@@ -40,26 +41,187 @@ public class SuccessStatusTest extends TestBase{
 		testUtils = new TestUtils();
 	}
 	
+	@Ignore
 	@Test(priority=1)
 	public void loginTest() throws IOException {
 		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		
 		pageLinks = pageLinks.clickOnResellerPINLink();
-		
 		String strUrl = driver.getCurrentUrl();
-		
 		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
 	    cn.setRequestMethod("HEAD");
 	    cn.connect();
-	    
 	    int res = cn.getResponseCode();
-	    
 	    Assert.assertEquals(res, 200);
 	}
 	
-	@AfterMethod
-	public void tearDown() {
-		super.tearDown();
+	/* 82. check mail address link is okay and return http status 200! */
+	@Ignore
+	@Test(priority=2)
+	public void MailAddressLinkTest() throws IOException {
+		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
+		pageLinks = pageLinks.clickOnMailAddressLink();
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
 	}
+	
+	/* 83. check mail list page is okay and return http status 200! */
+	@Ignore
+	@Test(priority=3)
+	public void MailListLinkTest() throws IOException {
+		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
+		pageLinks.clickOnMailAddressLink(); // depend on mail address(82) parent drop down.
+		pageLinks = pageLinks.clickOnMailListLink();
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 84. check reseller mail list page is okay and return http status 200! */
+	@Ignore
+	@Test(priority=4)
+	public void ResellersMailListLinkTest() throws IOException {
+		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
+		pageLinks.clickOnMailAddressLink(); // depend on mail address(82) parent drop down.
+		pageLinks = pageLinks.clickOnResellersMailListLink();
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 80. check SSL Commerz Tnx list page is okay and return http status 200! */
+	@Ignore
+	@Test(priority=4)
+	public void SSLCommerzTnxListLinkTest() throws IOException {
+		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
+		pageLinks = pageLinks.clickOnSSLCommerzTnxLink();
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 81. check Latest Success Transaction page is okay and return http status 200! */
+	
+	@Ignore
+	@Test(priority=4)
+	public void LatestSuccessTnxLinkTest() throws IOException {
+		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
+		pageLinks.clickOnSSLCommerzTnxLink(); // depend on mail address(82) parent drop down.
+		pageLinks = pageLinks.clickOnLatestSuccessTnxLink();
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	
+	/* 77. check Receipt Report page is okay and return http status 200! */
+	@Ignore
+	@Test(priority=4)
+	public void ReceiptReportLinkTest() throws IOException {
+		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
+		pageLinks.clickOnPaymentndRechargeReportLink(); // depend on mail address(82) parent drop down.
+		pageLinks = pageLinks.clickOnReceiptReportLink();
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 78. Check Recharged Report page is okay and return http status 200! */
+	@Ignore
+	@Test(priority=4)
+	public void RechargedReporttLinkTest() throws IOException {
+		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
+		pageLinks.clickOnPaymentndRechargeReportLink(); // depend on mail address(82) parent drop down.
+		pageLinks = pageLinks.clickOnRechargedReportLink();
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 79. Check Balance Report page is okay and return http status 200! */
+	@Ignore
+	@Test(priority=1)
+	public void BalanceReporttLinkTest() throws IOException {
+		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
+		pageLinks.clickOnPaymentndRechargeReportLink(); // depend on mail address(82) parent drop down.
+		pageLinks = pageLinks.clickOnBalanceReportLink();
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 80. Check Sales Graph page is okay and return http status 200! */
+	@Ignore
+	@Test(priority=1)
+	public void SalesGraphtLinkTest() throws IOException {
+		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
+		pageLinks.clickResellerReportLink(); // depend on mail address(82) parent drop down.
+		pageLinks = pageLinks.clickSalesGraphLink();
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 80. Check Reseller's Sold Pin page is okay and return http status 200! */
+	@Ignore
+	@Test(priority=1)
+	public void ResellerSoldPinLinkTest() throws IOException {
+		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
+		pageLinks.clickResellerReportLink(); // depend on mail address(82) parent drop down.
+		pageLinks = pageLinks.clickResellerSoldPINLink();
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 80. Check Reseller's Total Subscription Page is okay and return http status 200! */
+	@Test(priority=1)
+	public void ResellerTotalSubscriptionLinkTest() throws IOException {
+		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
+		pageLinks.clickResellerReportLink(); // depend on mail address(82) parent drop down.
+		pageLinks = pageLinks.clickResellerTotalSubscriptionLink();
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+//	@AfterMethod
+//	public void tearDown() {
+//		pageLinks.Logout();
+//		super.tearDown();
+//	}
 
 }
