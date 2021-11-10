@@ -205,11 +205,71 @@ public class SuccessStatusTest extends TestBase{
 	}
 	
 	/* 80. Check Reseller's Total Subscription Page is okay and return http status 200! */
+	@Ignore
 	@Test(priority=1)
 	public void ResellerTotalSubscriptionLinkTest() throws IOException {
 		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
 		pageLinks.clickResellerReportLink(); // depend on mail address(82) parent drop down.
 		pageLinks = pageLinks.clickResellerTotalSubscriptionLink();
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 80. Check Reseller4 Daily Sales Page is okay and return http status 200! */
+	@Ignore
+	@Test(priority=1)
+	public void Reseller4DailySalesLinkTest() throws IOException {
+		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
+		pageLinks.clickResellerReportLink(); // depend on mail address(82) parent drop down.
+		pageLinks = pageLinks.clickReseller4DailySalesLink();
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 80. Check Reseller4 PIN Analysis Page is okay and return http status 200! */
+	@Ignore
+	@Test(priority=1)
+	public void Reseller4PINAnalysisLinkTest() throws IOException {
+		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
+		pageLinks.clickResellerReportLink(); // depend on mail address(82) parent drop down.
+		pageLinks = pageLinks.clickOnReseller4PINAnalysisLink();
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 80. Check Reseller Daily Balance History Page is okay and return http status 200! */
+	@Ignore
+	@Test(priority=1)
+	public void ResellerDailyBalanceHistoryLinkTest() throws IOException {
+		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
+		pageLinks.clickResellerReportLink(); // depend on mail address(82) parent drop down.
+		pageLinks = pageLinks.clickOnResellerDailyBalanceHistoryLink();
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 80. Check Hourly Server Connection Page is okay and return http status 200! */
+	@Test(priority=1)
+	public void HourlyServerConnectionLinkTest() throws IOException {
+		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
+		pageLinks.clickServerConnectionLink(); // depend on mail address(82) parent drop down.
+		pageLinks = pageLinks.clickHourlyServerConnectionLink();
 		String strUrl = driver.getCurrentUrl();
 		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
 	    cn.setRequestMethod("HEAD");

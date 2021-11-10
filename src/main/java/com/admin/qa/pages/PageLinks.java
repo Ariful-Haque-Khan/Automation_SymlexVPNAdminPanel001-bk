@@ -264,28 +264,28 @@ public class PageLinks extends TestBase{
 	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement returnPINReportPageLink;
 		
-	//63. Hourly Server Connection
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
-	WebElement hourlyServerConnectionPageLink;
-		
-	//64. Reset PIN Report
+	//63. Reset PIN Report
 	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement resetPINReportPageLink;
 		
-	//65. Campaign Sale Report
+	//64. Campaign Sale Report
 	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement campaignSaleReportPageLink;
 		
-	//66. Server Connection
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	//65. Server Connection
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[13]/a")
 	WebElement serverConnectionPageLink;
+	
+	//66. Hourly Server Connection
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[13]/ul/li[1]/a")
+	WebElement hourlyServerConnectionPageLink;
 		
 	//67. Hourly Max Connections
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[13]/ul/li[2]/a")
 	WebElement hourlyMaxConnectionsPageLink;
 		
 	//68. Server Connection
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[13]/ul/li[3]/a")
 	WebElement sserverConnectionPageLink;
 		
 	//69. Reseller Report
@@ -467,4 +467,27 @@ public class PageLinks extends TestBase{
 		return new PageLinks();
 	}
 	
+	//68. Server Connection
+	public PageLinks clicksServerConnectionLink() {
+		sserverConnectionPageLink.click();
+		return new PageLinks();
+	}
+	
+	//67. Hourly Max Connections
+	public PageLinks clickHourlyMaxConnectionsLink() {
+		hourlyMaxConnectionsPageLink.click();
+		return new PageLinks();
+	}
+	
+	//66. Hourly Server Connection
+	public PageLinks clickHourlyServerConnectionLink() {
+		hourlyServerConnectionPageLink.click();
+		return new PageLinks();
+	}
+	
+	//65. Parent Server Connection
+	public PageLinks clickServerConnectionLink() {
+		serverConnectionPageLink.click();
+		return new PageLinks();
+	}
 }

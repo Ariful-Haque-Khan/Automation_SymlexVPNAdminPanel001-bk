@@ -5,7 +5,7 @@
     <classes>
       <class name="com.admin.qa.tests.SuccessStatusTest">
         <methods>
-          <include name="SalesGraphtLinkTest"/>
+          <include name="ResellerDailyBalanceHistoryLinkTest"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.admin.qa.tests.SuccessStatusTest -->

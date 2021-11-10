@@ -2,19 +2,19 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-11-09T16:30:02 BDT" name="Default suite" finished-at="2021-11-09T16:30:42 BDT" duration-ms="39822">
+  <suite started-at="2021-11-10T11:17:05 BDT" name="Default suite" finished-at="2021-11-10T11:17:28 BDT" duration-ms="22169">
     <groups>
     </groups>
-    <test started-at="2021-11-09T16:30:02 BDT" name="Default test" finished-at="2021-11-09T16:30:42 BDT" duration-ms="39822">
+    <test started-at="2021-11-10T11:17:05 BDT" name="Default test" finished-at="2021-11-10T11:17:28 BDT" duration-ms="22169">
       <class name="com.admin.qa.tests.SuccessStatusTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.admin.qa.tests.SuccessStatusTest@6a84a97d]" started-at="2021-11-09T16:30:02 BDT" name="setUp" finished-at="2021-11-09T16:30:05 BDT" duration-ms="2502" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.admin.qa.tests.SuccessStatusTest@6d3a388c]" started-at="2021-11-10T11:17:05 BDT" name="setUp" finished-at="2021-11-10T11:17:08 BDT" duration-ms="2539" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="ResellerTotalSubscriptionLinkTest()[pri:1, instance:com.admin.qa.tests.SuccessStatusTest@6a84a97d]" started-at="2021-11-09T16:30:05 BDT" name="ResellerTotalSubscriptionLinkTest" finished-at="2021-11-09T16:30:42 BDT" duration-ms="37272" status="PASS">
+        <test-method signature="HourlyServerConnectionLinkTest()[pri:1, instance:com.admin.qa.tests.SuccessStatusTest@6d3a388c]" started-at="2021-11-10T11:17:08 BDT" name="HourlyServerConnectionLinkTest" finished-at="2021-11-10T11:17:28 BDT" duration-ms="19575" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ResellerTotalSubscriptionLinkTest -->
+        </test-method> <!-- HourlyServerConnectionLinkTest -->
       </class> <!-- com.admin.qa.tests.SuccessStatusTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
