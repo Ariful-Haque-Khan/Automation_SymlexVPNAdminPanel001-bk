@@ -129,147 +129,147 @@ public class PageLinks extends TestBase{
 	WebElement addVPNServerPageLink;
 	
 	//29. Push Management
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[7]/a")
 	WebElement pushManagementPageLink;
 	
 	//30. APP List
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[7]/ul/li[1]/a")
 	WebElement appListPageLink;
 	
 	//31. Push Automation
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[7]/ul/li[2]/a")
 	WebElement  pushAutomationPageLink;
 	
 	//32. Send Push
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[7]/ul/li[3]/a")
 	WebElement sendPushPageLink;
 	
 	//33. Pending Push Request
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[7]/ul/li[4]/a")
 	WebElement pendingPushRequestPageLink;
 	
 	//34. Push Templates
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[7]/ul/li[5]/a")
 	WebElement pushTemplatesPageLink;
 	
 	//35. News For Reseller
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[7]/ul/li[6]/a")
 	WebElement newsForResellerPageLink;
 	
 	//36. Notice For Users
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[7]/ul/li[7]/a")
 	WebElement noticeForUsersPageLink;
 	
 	//37. Campaigns
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[8]/a")
 	WebElement campaignsPageLink;
 	
 	//38. Campaign List
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[8]/ul/li[1]/a")
 	WebElement campaignListPageLink;
 	
 	//39. Add New Campaign
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[8]/ul/li[2]/a")
 	WebElement addNewCampaignPageLink;
 	
 	//40. Affiliator List
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[8]/ul/li[3]/a")
 	WebElement affiliatorListPageLink;
 	
 	//41. Affiliator Withdraw Tnx
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[8]/ul/li[4]/a")
 	WebElement affiliatorWithdrawTnxPageLink;
 	
 	//42. Affiliator Paymant Gateways
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[8]/ul/li[5]/a")
 	WebElement affiliatorPaymantGatewaysPageLink;
 	
 	//43. VPN Settings
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[9]/a")
 	WebElement vpnSettingsPageLink;
 	
 	//44. Profile
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
-	WebElement ProfilePageLink;
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[9]/ul/li[1]/a")
+	WebElement profilePageLink;
 		
 	//45. Admin Users
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[9]/ul/li[2]/a")
 	WebElement adminUsersPageLink;
 		
 	//46. Application
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[9]/ul/li[3]/a")
 	WebElement ApplicationLink;
 		
 	//47. PIN Reports
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[12]/a")
 	WebElement pinReportsPageLink;
 	
 	//48. PIN Subscription
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[12]/ul/li[1]/a")
 	WebElement pinSubscriptionPageLink;
 	
 	//49. Hourly Subscription
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[12]/ul/li[2]/a")
 	WebElement hourlySubscriptionPageLink;
 	
 	//50. Hourly Subscription Search
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[12]/ul/li[3]/a")
 	WebElement hourlySubscriptionSearchPageLink;
 	
 	//51. Online Transaction (PIN)
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[12]/ul/li[4]/a")
 	WebElement onlineTransactionPINPageLink;
 		
 	//52. Individual Sold PINs
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[12]/ul/li[5]/a")
 	WebElement individualSoldPINsPageLink;
 		
 	//53. Reseller Pin Login Report
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
-	WebElement ResellerPinLoginReportPageLink;
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[12]/ul/li[6]/a")
+	WebElement resellerPinLoginReportPageLink;
 		
-	//54. YallaVPN Subscrption
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	//54. YallaVPN Subscription
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[12]/ul/li[7]/a")
 	WebElement yallaVPNSubscrptionPageLink;
 		
 	//55.Package Wise Subscription
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[12]/ul/li[8]/a")
 	WebElement packageWiseSubscriptionPageLink;
 		
 	//56. User Log
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[12]/ul/li[9]/a")
 	WebElement userLogPageLink;
 		
 	//57. Online Payment Subscription Report
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[12]/ul/li[10]/a")
 	WebElement onlinePaymentSubscriptionReportPageLink;
 		
 	//58. Free Sign Up PINS Report
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[12]/ul/li[11]/a")
 	WebElement freeSignUpPINSReportPageLink;
 		
 	//59. Online Sign Up PINS
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[12]/ul/li[12]/a")
 	WebElement onlineSignUpPINSPageLink;
 		
 	//60. Country Wise Online PINS
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[12]/ul/li[13]/a")
 	WebElement countryWiseOnlinePINSPageLink;
 		
 	//61. iOS Payment Log
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[12]/ul/li[14]/a")
 	WebElement iOSPaymentLogPageLink;
 		
 	//62. Return PIN Report
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[12]/ul/li[15]/a")
 	WebElement returnPINReportPageLink;
 		
 	//63. Reset PIN Report
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[12]/ul/li[16]/a")
 	WebElement resetPINReportPageLink;
 		
 	//64. Campaign Sale Report
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[12]/ul/li[17]/a")
 	WebElement campaignSaleReportPageLink;
 		
 	//65. Server Connection
@@ -287,11 +287,11 @@ public class PageLinks extends TestBase{
 	//68. Server Connection
 	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[13]/ul/li[3]/a")
 	WebElement sserverConnectionPageLink;
-		
+	
 	//69. Reseller Report
 	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[14]/a")
 	WebElement resellerReportPageLink;
-		
+	
 	//70. Sales Graph
 	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[14]/ul/li[1]/a")
 	WebElement salesGraphPageLink;
@@ -332,11 +332,11 @@ public class PageLinks extends TestBase{
 	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[15]/ul/li[3]")
 	WebElement balanceReortPageLink;
 			
-	//80. SSL Commerz Tnx
+	//80. SSL Commerce Transaction
 	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[16]/a")
 	WebElement sslCommerzTnxPageLink;
 	
-	//81. Latest Success Tnx
+	//81. Latest Success Transaction
 	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[16]/ul/li/a")
 	WebElement latestSuccessTnxPageLink;
 			
@@ -389,13 +389,13 @@ public class PageLinks extends TestBase{
 		mailAddressPageLink.click();
 		return new PageLinks();
 	}
-	//81. Latest Success Tnx
+	//81. Latest Success Transaction
 	public PageLinks clickOnLatestSuccessTnxLink() {
 		latestSuccessTnxPageLink.click();
 		return new PageLinks();
 	}
 	
-	//80. SSL Commerz Tnx
+	//80. SSL Commerce Transaction
 	public PageLinks clickOnSSLCommerzTnxLink() {
 		sslCommerzTnxPageLink.click();
 		return new PageLinks();
@@ -490,4 +490,228 @@ public class PageLinks extends TestBase{
 		serverConnectionPageLink.click();
 		return new PageLinks();
 	}
+	
+	//64. Campaign Sale Report
+	public PageLinks clickCampaignSaleReportLink() {
+		campaignSaleReportPageLink.click();
+		return new PageLinks();
+	}
+	
+	//63. Reset PIN Report
+	public PageLinks clickResetPINReportLink() {
+		resetPINReportPageLink.click();
+		return new PageLinks();
+	}
+	
+	//62. Return PIN Report
+	public PageLinks clickReturnPINReportLink() {
+		returnPINReportPageLink.click();
+		return new PageLinks();
+	}
+	
+	//61. iOS Payment Log
+	public PageLinks clickiOSPaymentLogLink() {
+		iOSPaymentLogPageLink.click();
+		return new PageLinks();
+	}
+	
+	//60. Country Wise Online PINS
+	public PageLinks clickCountryWiseOnlinePINSLink() {
+		countryWiseOnlinePINSPageLink.click();
+		return new PageLinks();
+	}
+	
+	//59. Online Sign Up PINS
+	public PageLinks clickOnlineSignUpPINSLink() {
+		onlineSignUpPINSPageLink.click();
+		return new PageLinks();
+	}
+	
+	//58. Free Sign Up PINS
+	public PageLinks clickFreeSignUpPINStLink() {
+		freeSignUpPINSReportPageLink.click();
+		return new PageLinks();
+	}
+	
+	//57. Online Payment Subscription
+	public PageLinks clickOnlinepaymentSubscriptionLink() {
+		onlinePaymentSubscriptionReportPageLink.click();
+		return new PageLinks();
+	}
+	
+	//56. User Log
+	public PageLinks clickUserLogReportLink() {
+		userLogPageLink.click();
+		return new PageLinks();
+	}
+	
+	//55. Package Wise Subscription
+	public PageLinks clickPackageWiseSubscriptionLink() {
+		packageWiseSubscriptionPageLink.click();
+		return new PageLinks();
+	}
+	
+	//54. YallaVPN Subscription
+	public PageLinks clickYallaVPNSubscriptionReportLink() {
+		yallaVPNSubscrptionPageLink.click();
+		return new PageLinks();
+	}
+	
+	//53. Reseller Pin Login Report
+	public PageLinks clickResellerPinLoginReportReportLink() {
+		resellerPinLoginReportPageLink.click();
+		return new PageLinks();
+	}
+	
+	//52. Individual Sold PINs
+	public PageLinks clickIndividualSoldPINsReportLink() {
+		individualSoldPINsPageLink.click();
+		return new PageLinks();
+	}
+	
+	//51. Online Transaction (PIN)
+	public PageLinks clickOnlineTransactionPINReportLink() {
+		onlineTransactionPINPageLink.click();
+		return new PageLinks();
+	}
+	
+	//50. Hourly Subscription
+	public PageLinks clickHourlySubscriptionReportLink() {
+		hourlySubscriptionSearchPageLink.click();
+		return new PageLinks();
+	}
+	
+	//49. Hourly Subscription Search
+	public PageLinks clickHourlySubscriptionSearchReportLink() {
+		hourlySubscriptionPageLink.click();
+		return new PageLinks();
+	}
+	
+	//48. PIN Subscription
+	public PageLinks clickPINSubscriptionReportLink() {
+		pinSubscriptionPageLink.click();
+		return new PageLinks();
+	}
+	
+	//47. PIN Reports parent drop down
+	public PageLinks clickPINReportsLink() {
+		pinReportsPageLink.click();
+		return new PageLinks();
+	}
+	
+	//46. Application
+	public PageLinks clickApplicationLink() {
+		ApplicationLink.click();
+		return new PageLinks();
+	}
+	
+	//45. Admin Users
+	public PageLinks clickAdminUsersLink() {
+		adminUsersPageLink.click();
+		return new PageLinks();
+	}
+	
+	//44. Profile
+	public PageLinks clickProfileLink() {
+		profilePageLink.click();
+		return new PageLinks();
+	}
+	
+	//43. VPN Settings parent drop down
+	public PageLinks clickVPNSettingsLink() {
+		vpnSettingsPageLink.click();
+		return new PageLinks();
+	}
+	
+	//42. Affiliator Paymant Gateways
+	public PageLinks clickAffiliatorPaymantGatewaysLink() {
+		affiliatorPaymantGatewaysPageLink.click();
+		return new PageLinks();
+	}
+	//41. Affiliator Withdraw Tnx
+	public PageLinks clickAffiliatorWithdrawTnxLink() {
+		affiliatorWithdrawTnxPageLink.click();
+		return new PageLinks();
+	}
+	//40. Affiliator List
+	public PageLinks clickAffiliatorListLink() {
+		affiliatorListPageLink.click();
+		return new PageLinks();
+	}
+	//39. Add New Campaign
+	public PageLinks clickAddNewCampaignLink() {
+		addNewCampaignPageLink.click();
+		return new PageLinks();
+	}
+	//38. Campaign List
+	public PageLinks clickCampaignListLink() {
+		campaignListPageLink.click();
+		return new PageLinks();
+	}
+	//37. Campaigns parent drop down
+	public PageLinks clickCampaignsLink() {
+		campaignsPageLink.click();
+		return new PageLinks();
+	}
+	
+	//36. Notice For Users
+	public PageLinks clickNoticeForUsersLink() {
+		noticeForUsersPageLink.click();
+		return new PageLinks();
+	}
+	
+	//35. News For Reseller
+	public PageLinks clickNewsForResellerLink() {
+		newsForResellerPageLink.click();
+		return new PageLinks();
+	}
+	//34. Push Templates
+	public PageLinks clickPushTemplatesLink() {
+		pushTemplatesPageLink.click();
+		return new PageLinks();
+	}
+	//33. Pending Push Request
+	public PageLinks clickPendingPushRequestLink() {
+		pendingPushRequestPageLink.click();
+		return new PageLinks();
+	}
+	//32. Send Push
+	public PageLinks clickSendPushLink() {
+		sendPushPageLink.click();
+		return new PageLinks();
+	}
+	//31. Push Automation
+	public PageLinks clickPushAutomationLink() {
+		pushAutomationPageLink.click();
+		return new PageLinks();
+	}
+	//30. APP List
+	public PageLinks clickAPPListLink() {
+		appListPageLink.click();
+		return new PageLinks();
+	}
+	
+	//29. Push Management parent drop down
+	public PageLinks clickPushManagementLink() {
+		pushManagementPageLink.click();
+		return new PageLinks();
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
