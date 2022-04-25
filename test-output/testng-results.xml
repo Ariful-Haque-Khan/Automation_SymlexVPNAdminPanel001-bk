@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-11-10T18:15:48 BDT" name="Default suite" finished-at="2021-11-10T18:16:09 BDT" duration-ms="20399">
+  <suite started-at="2022-04-25T11:33:47 BDT" name="Default suite" finished-at="2022-04-25T11:34:16 BDT" duration-ms="28521">
     <groups>
     </groups>
-    <test started-at="2021-11-10T18:15:48 BDT" name="Default test" finished-at="2021-11-10T18:16:09 BDT" duration-ms="20399">
+    <test started-at="2022-04-25T11:33:47 BDT" name="Default test" finished-at="2022-04-25T11:34:16 BDT" duration-ms="28521">
       <class name="com.admin.qa.tests.SuccessStatusTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.admin.qa.tests.SuccessStatusTest@ea6147e]" started-at="2021-11-10T18:15:48 BDT" name="setUp" finished-at="2021-11-10T18:15:51 BDT" duration-ms="2436" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.admin.qa.tests.SuccessStatusTest@fba92d3]" started-at="2022-04-25T11:33:47 BDT" name="setUp" finished-at="2022-04-25T11:33:53 BDT" duration-ms="6088" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="AffiliatorPaymantGatewaysLinkTest()[pri:1, instance:com.admin.qa.tests.SuccessStatusTest@ea6147e]" started-at="2021-11-10T18:15:51 BDT" name="AffiliatorPaymantGatewaysLinkTest" finished-at="2021-11-10T18:16:09 BDT" duration-ms="17914" status="PASS">
+        <test-method signature="AffiliatorRequestLinkTest()[pri:1, instance:com.admin.qa.tests.SuccessStatusTest@fba92d3]" started-at="2022-04-25T11:33:53 BDT" name="AffiliatorRequestLinkTest" finished-at="2022-04-25T11:34:02 BDT" duration-ms="8403" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AffiliatorPaymantGatewaysLinkTest -->
+        </test-method> <!-- AffiliatorRequestLinkTest -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.admin.qa.tests.SuccessStatusTest@fba92d3]" started-at="2022-04-25T11:34:02 BDT" name="setUp" finished-at="2022-04-25T11:34:07 BDT" duration-ms="4914" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="ReferralWithdrawTnxLinkTest()[pri:1, instance:com.admin.qa.tests.SuccessStatusTest@fba92d3]" started-at="2022-04-25T11:34:07 BDT" name="ReferralWithdrawTnxLinkTest" finished-at="2022-04-25T11:34:16 BDT" duration-ms="9027" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReferralWithdrawTnxLinkTest -->
       </class> <!-- com.admin.qa.tests.SuccessStatusTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

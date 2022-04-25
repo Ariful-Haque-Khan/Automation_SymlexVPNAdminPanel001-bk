@@ -51,7 +51,7 @@ public class TestBase {
 	public static void initialization() {
 		if (props.getProperty("browser").equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver",
-					"C:\\jar_files\\chromedriver_win32\\94\\chromedriver.exe");
+					"C:\\jar_files\\chromedriver_win32\\100\\chromedriver.exe");
 			driver = new ChromeDriver(); // launch chrome browser
 		} else if (props.getProperty("browser").equals("edge")) {
 			System.setProperty("webdriver.edge.driver",

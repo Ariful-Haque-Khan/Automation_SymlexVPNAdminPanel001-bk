@@ -5,8 +5,8 @@
     <classes>
       <class name="com.admin.qa.tests.SuccessStatusTest">
         <methods>
+          <include name="ReturnPinRequestLinkTest"/>
           <include name="setUp"/>
-          <include name="AffiliatorListLinkTest"/>
         </methods>
       </class> <!-- com.admin.qa.tests.SuccessStatusTest -->
     </classes>
