@@ -9,13 +9,18 @@ import com.crm.qa.base.TestBase;
 public class RateSectionPageLinks extends TestBase{
 	
 	
-	//1. Reseller & PIN
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
-	WebElement resellerPINDropdown;
+	//1. Rates Section
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[4]/a/span[1]")
 	
-	//2. Reseller
+	WebElement ratesSectionDropdown;
+	
+	//2. Add New Rate Plan
 	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[1]/a")
-	WebElement resellerListPageLink;
+	WebElement addNewRatePlanPageLink;
+	
+	//3. Rate Plan
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[1]/a")
+	WebElement ratePlanPageLink;
 	
 	
 	
@@ -23,14 +28,20 @@ public class RateSectionPageLinks extends TestBase{
 		PageFactory.initElements(driver, this);
 	}
 	
-	//01. Click on Reseller & PIN's Drop Down
+	//01. Click on Rates Section Drop Down
 	public RateSectionPageLinks clickOnResellerDropDownLink() {
-		resellerPINDropdown.click();
+		ratesSectionDropdown.click();
 		return new RateSectionPageLinks();
 	}
-	//02. Click on Reseller List page Link
-	public RateSectionPageLinks clickOnResellerLink() {
-		resellerListPageLink.click();
+	//02. Click on Add New Rate Plan page Link
+	public RateSectionPageLinks clickOnAddNewRatePlanLink() {
+		addNewRatePlanPageLink.click();
+		return new RateSectionPageLinks();
+	}
+	
+	//03. Click on Rate Plan List page Link
+	public RateSectionPageLinks clickOnRatePlanLink() {
+		ratePlanPageLink.click();
 		return new RateSectionPageLinks();
 	}
 	

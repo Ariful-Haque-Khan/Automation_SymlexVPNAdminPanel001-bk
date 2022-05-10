@@ -15,6 +15,7 @@ import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import com.admin.qa.pages.PageLinks;
+import com.admin.qa.pages.RateSectionPageLinks;
 import com.admin.qa.pages.ResellerandPINPageLinks;
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.ContactsPage;
@@ -28,6 +29,7 @@ public class SuccessStatusTestforRatesSection extends TestBase{
 	HomePage homePage;
 	PageLinks pageLinks;
 	ResellerandPINPageLinks resellerandPINPageLinks;
+	RateSectionPageLinks rateSectionPageLinks;
 	ContactsPage conPage;
 	TestUtils testUtils;
 	
@@ -47,11 +49,11 @@ public class SuccessStatusTestforRatesSection extends TestBase{
 	/* 02. Check Reseller Page is okay and return http status 200! */
 	
 	@Test(priority=1)
-	public void ResellerLinkTest() throws IOException {
-		resellerandPINPageLinks = loginPage.loginPagelinkinResellerandPIN(props.getProperty("username"),props.getProperty("password"));
-		resellerandPINPageLinks.clickOnResellerDropDownLink(); // depend on mail address(82) parent drop down.
+	public void RateSectionDropDownTest() throws IOException {
+		rateSectionPageLinks = loginPage.loginPagelinkinRateSetion(props.getProperty("username"),props.getProperty("password"));
+		rateSectionPageLinks.clickOnResellerDropDownLink(); // depend on mail address(82) parent drop down.
 		
-		resellerandPINPageLinks.clickOnResellerLink();
+		//resellerandPINPageLinks.clickOnResellerLink();
 		
 		String strUrl = driver.getCurrentUrl();
 		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
