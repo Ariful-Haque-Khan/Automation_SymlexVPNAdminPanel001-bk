@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.admin.qa.tests.SuccessStatusTest">
+      <class name="com.admin.qa.tests.SuccessStatusTestforResellerandPIN">
         <methods>
-          <include name="NewsForResellerLinkTest"/>
           <include name="setUp"/>
+          <include name="ResellerDDLinkTest"/>
         </methods>
-      </class> <!-- com.admin.qa.tests.SuccessStatusTest -->
+      </class> <!-- com.admin.qa.tests.SuccessStatusTestforResellerandPIN -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

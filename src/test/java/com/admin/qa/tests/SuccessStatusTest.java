@@ -15,6 +15,7 @@ import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import com.admin.qa.pages.PageLinks;
+import com.admin.qa.pages.ResellerandPINPageLinks;
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.ContactsPage;
 import com.crm.qa.pages.HomePage;
@@ -26,6 +27,7 @@ public class SuccessStatusTest extends TestBase{
 	LoginPage loginPage;
 	HomePage homePage;
 	PageLinks pageLinks;
+	ResellerandPINPageLinks resellerandPINPageLinks;
 	ContactsPage conPage;
 	TestUtils testUtils;
 	
@@ -692,7 +694,7 @@ public class SuccessStatusTest extends TestBase{
 	}
 	
 	/* 80. Check APP List Page is okay and return http status 200! */
-	
+	@Ignore
 	@Test(priority=1)
 	public void APPListLinkTest() throws IOException {
 		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
@@ -709,7 +711,7 @@ public class SuccessStatusTest extends TestBase{
 	}
 	
 	/* 80. Check Push Automation Page is okay and return http status 200! */
-	
+	@Ignore
 	@Test(priority=1)
 	public void PushAutomationLinkTest() throws IOException {
 		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
@@ -726,7 +728,7 @@ public class SuccessStatusTest extends TestBase{
 	}
 	
 	/* 80. Check Send Push Page is okay and return http status 200! */
-	
+	@Ignore
 	@Test(priority=1)
 	public void SendPushLinkTest() throws IOException {
 		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
@@ -743,7 +745,7 @@ public class SuccessStatusTest extends TestBase{
 	}
 	
 	/* 80. Check Pending Push Request Page is okay and return http status 200! */
-	
+	@Ignore
 	@Test(priority=1)
 	public void PendingPushRequestLinkTest() throws IOException {
 		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
@@ -760,7 +762,7 @@ public class SuccessStatusTest extends TestBase{
 	}
 	
 	/* 80. Check Push Templates Page is okay and return http status 200! */
-	
+	@Ignore
 	@Test(priority=1)
 	public void PushTemplatesLinkTest() throws IOException {
 		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
@@ -777,7 +779,7 @@ public class SuccessStatusTest extends TestBase{
 	}
 	
 	/* 80. Check News For Reseller Page is okay and return http status 200! */
-	
+	@Ignore
 	@Test(priority=1)
 	public void NewsForResellerLinkTest() throws IOException {
 		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
@@ -794,13 +796,31 @@ public class SuccessStatusTest extends TestBase{
 	}
 	
 	/* 80. Check Notice For Users Page is okay and return http status 200! */
-	
+	@Ignore
 	@Test(priority=1)
 	public void NoticeForUsersLinkTest() throws IOException {
 		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
 		pageLinks.clickPushManagementLink(); // depend on mail address(82) parent drop down.
 		
-		pageLinks.clickAffiliatorPaymantGatewaysLink();
+		pageLinks.clickNoticeForUsersLink();
+		
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	
+	/* 80. Check Notice For Users Page is okay and return http status 200! */
+	
+	@Test(priority=1)
+	public void ResellerDDLinkTest() throws IOException {
+		resellerandPINPageLinks = loginPage.loginPagelinkinResellerandPIN(props.getProperty("username"),props.getProperty("password"));
+		resellerandPINPageLinks.clickOnResellerDropDownLink(); // depend on mail address(82) parent drop down.
+		
+		//pageLinks.clickNoticeForUsersLink();
 		
 		String strUrl = driver.getCurrentUrl();
 		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();

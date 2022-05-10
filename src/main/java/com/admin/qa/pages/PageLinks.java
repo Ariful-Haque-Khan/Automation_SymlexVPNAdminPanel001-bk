@@ -16,6 +16,19 @@ public class PageLinks extends TestBase{
 	@FindBy(xpath="/html/body/div[2]/header/nav/div/ul/li[2]/a")
 	WebElement logout;
 	
+	/**********************
+	 * ******************
+	 * *************
+	 * ***********
+	 * 
+	 * Start Reseller and PIN
+	 * 
+	 * *********************
+	 * *********************
+	 * */
+	
+	
+	
 	//1. Reseller & PIN
 	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement resellerPINDropdown;
@@ -56,7 +69,7 @@ public class PageLinks extends TestBase{
 	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement onlinePINMigrationListPageLink;
 	
-	//11. Redcheck Pins
+	//11. Radcheck Pins
 	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement redcheckPinstPageLink;
 	
@@ -76,6 +89,30 @@ public class PageLinks extends TestBase{
 	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement returnPinRequestPageLink;
 	
+	
+	/**********************
+	 * ******************
+	 * *************
+	 * ***********
+	 * 
+	 * End Reseller and PIN
+	 * 
+	 * *********************
+	 * *********************
+	 * */
+	
+	
+	/**********************
+	 * ******************
+	 * *************
+	 * ***********
+	 * 
+	 * Start Rate Section
+	 * 
+	 * *********************
+	 * *********************
+	 * */
+	
 	//16. Rates Section
 	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement rateSectionPageLink;
@@ -87,6 +124,30 @@ public class PageLinks extends TestBase{
 	//18. Rate Plan
 	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement ratePlanPageLink;
+	
+	
+	/**********************
+	 * ******************
+	 * *************
+	 * ***********
+	 * 
+	 * End Rate Section
+	 * 
+	 * *********************
+	 * *********************
+	 * */
+	
+	
+	/**********************
+	 * ******************
+	 * *************
+	 * ***********
+	 * 
+	 * Start IP Management
+	 * 
+	 * *********************
+	 * *********************
+	 * */
 	
 	//19. IP Management
 	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
@@ -696,6 +757,7 @@ public class PageLinks extends TestBase{
 		pushManagementPageLink.click();
 		return new PageLinks();
 	}
+
 }
 
 
