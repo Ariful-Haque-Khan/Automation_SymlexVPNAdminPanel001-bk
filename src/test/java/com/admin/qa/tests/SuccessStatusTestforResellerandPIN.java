@@ -62,7 +62,7 @@ public class SuccessStatusTestforResellerandPIN extends TestBase{
 	}
 	
 	/* 02. Check Single PIN Page is okay and return http status 200! */
-	
+	@Ignore
 	@Test(priority=2)
 	public void SinglePINLinkTest() throws IOException {
 		resellerandPINPageLinks = loginPage.loginPagelinkinResellerandPIN(props.getProperty("username"),props.getProperty("password"));
@@ -79,13 +79,98 @@ public class SuccessStatusTestforResellerandPIN extends TestBase{
 	}
 	
 	/* 03. Check PIN Batch Page is okay and return http status 200! */
-	
-	@Test(priority=2)
+	@Ignore
+	@Test(priority=3)
 	public void PINBatchLinkTest() throws IOException {
 		resellerandPINPageLinks = loginPage.loginPagelinkinResellerandPIN(props.getProperty("username"),props.getProperty("password"));
 		resellerandPINPageLinks.clickOnResellerDropDownLink(); // depend on mail address(82) parent drop down.
 		
-		resellerandPINPageLinks.clickOnSInglePINLink();
+		resellerandPINPageLinks.clickOnPINBatchLink();
+		
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 04. Check Add PIN Validity Page is okay and return http status 200! */
+	@Ignore
+	@Test(priority=4)
+	public void AddPINValidityLinkTest() throws IOException {
+		resellerandPINPageLinks = loginPage.loginPagelinkinResellerandPIN(props.getProperty("username"),props.getProperty("password"));
+		resellerandPINPageLinks.clickOnResellerDropDownLink(); // depend on mail address(82) parent drop down.
+		
+		resellerandPINPageLinks.clickOnAddPINValidityLink();
+		
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 05. Check Reseller Panel Lists Page is okay and return http status 200! */
+	@Ignore
+	@Test(priority=5)
+	public void ResellerPanelListsLinkTest() throws IOException {
+		resellerandPINPageLinks = loginPage.loginPagelinkinResellerandPIN(props.getProperty("username"),props.getProperty("password"));
+		resellerandPINPageLinks.clickOnResellerDropDownLink(); // depend on mail address(82) parent drop down.
+		
+		resellerandPINPageLinks.clickOnResellerPanelListsLink();
+		
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 06. Check Reseller Panel Lists Page is okay and return http status 200! */
+	@Ignore
+	@Test(priority=5)
+	public void AllResellerListsLinkTest() throws IOException {
+		resellerandPINPageLinks = loginPage.loginPagelinkinResellerandPIN(props.getProperty("username"),props.getProperty("password"));
+		resellerandPINPageLinks.clickOnResellerDropDownLink(); // depend on mail address(82) parent drop down.
+		
+		resellerandPINPageLinks.clickOnAllResellerListPageLinkListsLink();
+		
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 07. Check Online PIN Activation Lists Page is okay and return http status 200! */
+	@Ignore
+	@Test(priority=5)
+	public void OnlinePINActivationListsLinkTest() throws IOException {
+		resellerandPINPageLinks = loginPage.loginPagelinkinResellerandPIN(props.getProperty("username"),props.getProperty("password"));
+		resellerandPINPageLinks.clickOnResellerDropDownLink(); // depend on mail address(82) parent drop down.
+		
+		resellerandPINPageLinks.clickOnOnlinePINActivationListPageLinkListsLink();
+		
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 08. Check Online PIN Activation 2 Lists Page is okay and return http status 200! */
+	
+	@Test(priority=5)
+	public void OnlinePINActivation2ListsLinkTest() throws IOException {
+		resellerandPINPageLinks = loginPage.loginPagelinkinResellerandPIN(props.getProperty("username"),props.getProperty("password"));
+		resellerandPINPageLinks.clickOnResellerDropDownLink(); // depend on mail address(82) parent drop down.
+		
+		resellerandPINPageLinks.clickOnOnlinePINActivation2ListPageLinkListsLink();
 		
 		String strUrl = driver.getCurrentUrl();
 		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
