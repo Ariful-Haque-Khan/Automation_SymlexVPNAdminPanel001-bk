@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.admin.qa.pages.IPManagementSectionLinks;
 import com.admin.qa.pages.PageLinks;
 import com.admin.qa.pages.RateSectionPageLinks;
 import com.admin.qa.pages.ResellerandPINPageLinks;
@@ -80,6 +81,15 @@ public class LoginPage extends TestBase{
 		loginBtn.click();
 		
 		return new RateSectionPageLinks(); //HomePage is the landing page for LoginPage
+	}
+	
+	public IPManagementSectionLinks loginPagelinkinIPManagement(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new IPManagementSectionLinks(); //HomePage is the landing page for LoginPage
 	}
 	
 }

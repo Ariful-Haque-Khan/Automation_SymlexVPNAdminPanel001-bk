@@ -15,11 +15,12 @@ public class RateSectionPageLinks extends TestBase{
 	WebElement ratesSectionDropdown;
 	
 	//2. Add New Rate Plan
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[1]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[2]/a")
+	
 	WebElement addNewRatePlanPageLink;
 	
 	//3. Rate Plan
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[1]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[3]/a")
 	WebElement ratePlanPageLink;
 	
 	

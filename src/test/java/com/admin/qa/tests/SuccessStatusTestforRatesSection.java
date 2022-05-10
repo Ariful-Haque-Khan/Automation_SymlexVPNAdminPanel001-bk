@@ -46,7 +46,7 @@ public class SuccessStatusTestforRatesSection extends TestBase{
 	}
 	
 	
-	/* 02. Check Reseller Page is okay and return http status 200! */
+	/* 01. Check Reseller Page is okay and return http status 200! */
 	
 	@Test(priority=1)
 	public void RateSectionDropDownTest() throws IOException {
@@ -63,7 +63,39 @@ public class SuccessStatusTestforRatesSection extends TestBase{
 	    Assert.assertEquals(res, 200);
 	}
 	
+	/* 02. Check Add New Rate Plan Page is okay and return http status 200! */
 	
+	@Test(priority=2)
+	public void AddNewRatePlanTest() throws IOException {
+		rateSectionPageLinks = loginPage.loginPagelinkinRateSetion(props.getProperty("username"),props.getProperty("password"));
+		rateSectionPageLinks.clickOnResellerDropDownLink(); // depend on mail address(82) parent drop down.
+		
+		rateSectionPageLinks.clickOnAddNewRatePlanLink();
+		
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 03. Check Rate Plan Page is okay and return http status 200! */
+	
+	@Test(priority=3)
+	public void RatePlanTest() throws IOException {
+		rateSectionPageLinks = loginPage.loginPagelinkinRateSetion(props.getProperty("username"),props.getProperty("password"));
+		rateSectionPageLinks.clickOnResellerDropDownLink(); // depend on mail address(82) parent drop down.
+		
+		rateSectionPageLinks.clickOnRatePlanLink();
+		
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
 	
 //	@AfterMethod
 //	public void tearDown() {
