@@ -691,48 +691,14 @@ public class SuccessStatusTest extends TestBase{
 	    Assert.assertEquals(res, 200);
 	}
 	
-	/* 80. Check Affiliator Withdraw Tnx Page is okay and return http status 200! */
-	
-	@Test(priority=1)
-	public void AffiliatorRequestLinkTest() throws IOException {
-		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		pageLinks.clickCampaignsLink(); // depend on mail address(82) parent drop down.
-		
-		pageLinks.clickAffiliatorRequestLink();
-		
-		String strUrl = driver.getCurrentUrl();
-		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
-	    cn.setRequestMethod("HEAD");
-	    cn.connect();
-	    int res = cn.getResponseCode();
-	    Assert.assertEquals(res, 200);
-	}
-	
-	/* 80. Check Affiliator Withdraw Tnx Page is okay and return http status 200! */
-	
-	@Test(priority=1)
-	public void ReferralWithdrawTnxLinkTest() throws IOException {
-		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		pageLinks.clickCampaignsLink(); // depend on mail address(82) parent drop down.
-		
-		pageLinks.clickReferralWithdrawTnxLink();
-		
-		String strUrl = driver.getCurrentUrl();
-		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
-	    cn.setRequestMethod("HEAD");
-	    cn.connect();
-	    int res = cn.getResponseCode();
-	    Assert.assertEquals(res, 200);
-	}
-	
 	/* 80. Check APP List Page is okay and return http status 200! */
-	@Ignore
+	
 	@Test(priority=1)
 	public void APPListLinkTest() throws IOException {
 		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
 		pageLinks.clickPushManagementLink(); // depend on mail address(82) parent drop down.
 		
-		pageLinks.clickAPPListLink();
+		pageLinks.clickAffiliatorPaymantGatewaysLink();
 		
 		String strUrl = driver.getCurrentUrl();
 		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
@@ -743,13 +709,13 @@ public class SuccessStatusTest extends TestBase{
 	}
 	
 	/* 80. Check Push Automation Page is okay and return http status 200! */
-	@Ignore
+	
 	@Test(priority=1)
 	public void PushAutomationLinkTest() throws IOException {
 		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
 		pageLinks.clickPushManagementLink(); // depend on mail address(82) parent drop down.
 		
-		pageLinks.clickPushAutomationLink();
+		pageLinks.clickAffiliatorPaymantGatewaysLink();
 		
 		String strUrl = driver.getCurrentUrl();
 		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
@@ -760,13 +726,13 @@ public class SuccessStatusTest extends TestBase{
 	}
 	
 	/* 80. Check Send Push Page is okay and return http status 200! */
-	@Ignore
+	
 	@Test(priority=1)
 	public void SendPushLinkTest() throws IOException {
 		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
 		pageLinks.clickPushManagementLink(); // depend on mail address(82) parent drop down.
 		
-		pageLinks.clickSendPushLink();
+		pageLinks.clickAffiliatorPaymantGatewaysLink();
 		
 		String strUrl = driver.getCurrentUrl();
 		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
@@ -777,13 +743,13 @@ public class SuccessStatusTest extends TestBase{
 	}
 	
 	/* 80. Check Pending Push Request Page is okay and return http status 200! */
-	@Ignore
+	
 	@Test(priority=1)
 	public void PendingPushRequestLinkTest() throws IOException {
 		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		pageLinks.clickPushManagementLink(); // depend on mail address(82) parent drop down.
+		pageLinks.clickCampaignsLink(); // depend on mail address(82) parent drop down.
 		
-		pageLinks.clickPendingPushRequestLink();
+		pageLinks.clickAffiliatorPaymantGatewaysLink();
 		
 		String strUrl = driver.getCurrentUrl();
 		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
@@ -794,13 +760,13 @@ public class SuccessStatusTest extends TestBase{
 	}
 	
 	/* 80. Check Push Templates Page is okay and return http status 200! */
-	@Ignore
+	
 	@Test(priority=1)
 	public void PushTemplatesLinkTest() throws IOException {
 		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
 		pageLinks.clickPushManagementLink(); // depend on mail address(82) parent drop down.
 		
-		pageLinks.clickPushTemplatesLink();
+		pageLinks.clickAffiliatorPaymantGatewaysLink();
 		
 		String strUrl = driver.getCurrentUrl();
 		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
@@ -811,13 +777,13 @@ public class SuccessStatusTest extends TestBase{
 	}
 	
 	/* 80. Check News For Reseller Page is okay and return http status 200! */
-	@Ignore
+	
 	@Test(priority=1)
 	public void NewsForResellerLinkTest() throws IOException {
 		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
 		pageLinks.clickPushManagementLink(); // depend on mail address(82) parent drop down.
 		
-		pageLinks.clickNewsForResellerLink();
+		pageLinks.clickAffiliatorPaymantGatewaysLink();
 		
 		String strUrl = driver.getCurrentUrl();
 		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
@@ -828,421 +794,13 @@ public class SuccessStatusTest extends TestBase{
 	}
 	
 	/* 80. Check Notice For Users Page is okay and return http status 200! */
-	@Ignore
+	
 	@Test(priority=1)
 	public void NoticeForUsersLinkTest() throws IOException {
 		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
 		pageLinks.clickPushManagementLink(); // depend on mail address(82) parent drop down.
 		
-		pageLinks.clickNoticeForUsersLink();
-		
-		String strUrl = driver.getCurrentUrl();
-		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
-	    cn.setRequestMethod("HEAD");
-	    cn.connect();
-	    int res = cn.getResponseCode();
-	    Assert.assertEquals(res, 200);
-	}
-	
-	/* 80. Check Server List Page is okay and return http status 200! */
-	@Ignore
-	@Test(priority=1)
-	public void ServerListLinkTest() throws IOException {
-		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		pageLinks.clickVPNServerLink(); // depend on mail address(82) parent drop down.
-		
-		pageLinks.clickServerListLink();
-		
-		String strUrl = driver.getCurrentUrl();
-		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
-	    cn.setRequestMethod("HEAD");
-	    cn.connect();
-	    int res = cn.getResponseCode();
-	    Assert.assertEquals(res, 200);
-	}
-	
-	/* 80. Check Add VPN Server Page is okay and return http status 200! */
-	@Ignore
-	@Test(priority=1)
-	public void AddVPNServerLinkTest() throws IOException {
-		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		pageLinks.clickVPNServerLink(); // depend on mail address(82) parent drop down.
-		
-		pageLinks.clickAddVPNServerLink();
-		
-		String strUrl = driver.getCurrentUrl();
-		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
-	    cn.setRequestMethod("HEAD");
-	    cn.connect();
-	    int res = cn.getResponseCode();
-	    Assert.assertEquals(res, 200);
-	}
-	
-	/* 80. Check IP List Page is okay and return http status 200! */
-	@Ignore
-	@Test(priority=1)
-	public void IPListLinkTest() throws IOException {
-		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		pageLinks.clickIPManagementParentDropDownLink(); // depend on mail address(82) parent drop down.
-		
-		pageLinks.clickIPListLink();
-		
-		String strUrl = driver.getCurrentUrl();
-		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
-	    cn.setRequestMethod("HEAD");
-	    cn.connect();
-	    int res = cn.getResponseCode();
-	    Assert.assertEquals(res, 200);
-	}
-	
-	/* 80. Check IP Bundle Page is okay and return http status 200! */
-	@Ignore
-	@Test(priority=1)
-	public void IPBundleLinkTest() throws IOException {
-		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		pageLinks.clickIPManagementParentDropDownLink(); // depend on mail address(82) parent drop down.
-		
-		pageLinks.clickIPBundleLink();
-		
-		String strUrl = driver.getCurrentUrl();
-		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
-	    cn.setRequestMethod("HEAD");
-	    cn.connect();
-	    int res = cn.getResponseCode();
-	    Assert.assertEquals(res, 200);
-	}
-	
-	/* 80. Check Assign to Batch Page is okay and return http status 200! */
-	@Ignore
-	@Test(priority=1)
-	public void AssigntoBatchLinkTest() throws IOException {
-		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		pageLinks.clickIPManagementParentDropDownLink(); // depend on mail address(82) parent drop down.
-		
-		pageLinks.clickAssigntoBatchLink();
-		
-		String strUrl = driver.getCurrentUrl();
-		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
-	    cn.setRequestMethod("HEAD");
-	    cn.connect();
-	    int res = cn.getResponseCode();
-	    Assert.assertEquals(res, 200);
-	}
-	
-	/* 80. Check New Block Record Page is okay and return http status 200! */
-	@Ignore
-	@Test(priority=1)
-	public void NewBlockRecordLinkTest() throws IOException {
-		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		pageLinks.clickIPManagementParentDropDownLink(); // depend on mail address(82) parent drop down.
-		
-		pageLinks.clickNewBlockRecordLink();
-		
-		String strUrl = driver.getCurrentUrl();
-		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
-	    cn.setRequestMethod("HEAD");
-	    cn.connect();
-	    int res = cn.getResponseCode();
-	    Assert.assertEquals(res, 200);
-	}
-	
-	/* 80. Check IP Block History Page is okay and return http status 200! */
-	@Ignore
-	@Test(priority=1)
-	public void IPBlockHistoryLinkTest() throws IOException {
-		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		pageLinks.clickIPManagementParentDropDownLink(); // depend on mail address(82) parent drop down.
-		
-		pageLinks.clickIPBlockHistoryLink();
-		
-		String strUrl = driver.getCurrentUrl();
-		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
-	    cn.setRequestMethod("HEAD");
-	    cn.connect();
-	    int res = cn.getResponseCode();
-	    Assert.assertEquals(res, 200);
-	}
-	
-	/* 80. Check Server Lock Schedules Page is okay and return http status 200! */
-	@Ignore
-	@Test(priority=1)
-	public void ServerLockSchedulesLinkTest() throws IOException {
-		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		pageLinks.clickIPManagementParentDropDownLink(); // depend on mail address(82) parent drop down.
-		
-		pageLinks.clickServerLockSchedulesLink();
-		
-		String strUrl = driver.getCurrentUrl();
-		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
-	    cn.setRequestMethod("HEAD");
-	    cn.connect();
-	    int res = cn.getResponseCode();
-	    Assert.assertEquals(res, 200);
-	}
-	
-	/* 80. Check Add New Rate Plan Page is okay and return http status 200! */
-	@Ignore
-	@Test(priority=1)
-	public void AddNewRatePlanLinkTest() throws IOException {
-		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		pageLinks.clickRatesSectionParentDropDownLink(); // depend on mail address(82) parent drop down.
-		
-		pageLinks.clickAddNewRatePlanLink();
-		
-		String strUrl = driver.getCurrentUrl();
-		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
-	    cn.setRequestMethod("HEAD");
-	    cn.connect();
-	    int res = cn.getResponseCode();
-	    Assert.assertEquals(res, 200);
-	}
-	
-	/* 80. Check Rate Plan Page is okay and return http status 200! */
-	@Ignore
-	@Test(priority=1)
-	public void RatePlanLinkTest() throws IOException {
-		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		pageLinks.clickRatesSectionParentDropDownLink(); // depend on mail address(82) parent drop down.
-		
-		pageLinks.clickRatePlanLink();
-		
-		String strUrl = driver.getCurrentUrl();
-		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
-	    cn.setRequestMethod("HEAD");
-	    cn.connect();
-	    int res = cn.getResponseCode();
-	    Assert.assertEquals(res, 200);
-	}
-	
-	/* 80. Check Reseller Page is okay and return http status 200! */
-	@Ignore
-	@Test(priority=1)
-	public void ResellerLinkTest() throws IOException {
-		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		pageLinks.clickResellerPINParentDropDownLink(); // depend on mail address(82) parent drop down.
-		
-		pageLinks.clickResellerLink();
-		
-		String strUrl = driver.getCurrentUrl();
-		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
-	    cn.setRequestMethod("HEAD");
-	    cn.connect();
-	    int res = cn.getResponseCode();
-	    Assert.assertEquals(res, 200);
-	}
-	
-	/* 80. Check Single PIN Page is okay and return http status 200! */
-	@Ignore
-	@Test(priority=1)
-	public void SinglePINLinkTest() throws IOException {
-		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		pageLinks.clickResellerPINParentDropDownLink(); // depend on mail address(82) parent drop down.
-		
-		pageLinks.clickSinglePINLink();
-		
-		String strUrl = driver.getCurrentUrl();
-		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
-	    cn.setRequestMethod("HEAD");
-	    cn.connect();
-	    int res = cn.getResponseCode();
-	    Assert.assertEquals(res, 200);
-	}
-	
-	/* 80. Check PIN Batch Page is okay and return http status 200! */
-	@Ignore
-	@Test(priority=1)
-	public void PINBatchLinkTest() throws IOException {
-		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		pageLinks.clickResellerPINParentDropDownLink(); // depend on mail address(82) parent drop down.
-		
-		pageLinks.clickPINBatchLink();
-		
-		String strUrl = driver.getCurrentUrl();
-		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
-	    cn.setRequestMethod("HEAD");
-	    cn.connect();
-	    int res = cn.getResponseCode();
-	    Assert.assertEquals(res, 200);
-	}
-	
-	/* 80. Check Add PIN Validity Page is okay and return http status 200! */
-	@Ignore
-	@Test(priority=1)
-	public void AddPINValidityLinkTest() throws IOException {
-		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		pageLinks.clickResellerPINParentDropDownLink(); // depend on mail address(82) parent drop down.
-		
-		pageLinks.clickAddPINValidityLink();
-		
-		String strUrl = driver.getCurrentUrl();
-		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
-	    cn.setRequestMethod("HEAD");
-	    cn.connect();
-	    int res = cn.getResponseCode();
-	    Assert.assertEquals(res, 200);
-	}
-	
-	/* 80. Check Reseller Panel Lists Page is okay and return http status 200! */
-	@Ignore
-	@Test(priority=1)
-	public void ResellerPanelListsLinkTest() throws IOException {
-		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		pageLinks.clickResellerPINParentDropDownLink(); // depend on mail address(82) parent drop down.
-		
-		pageLinks.clickResellerPanelListsLink();
-		
-		String strUrl = driver.getCurrentUrl();
-		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
-	    cn.setRequestMethod("HEAD");
-	    cn.connect();
-	    int res = cn.getResponseCode();
-	    Assert.assertEquals(res, 200);
-	}
-	
-	/* 80. Check All Reseller Page is okay and return http status 200! */
-	@Ignore
-	@Test(priority=1)
-	public void AllResellerListsLinkTest() throws IOException {
-		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		pageLinks.clickResellerPINParentDropDownLink(); // depend on mail address(82) parent drop down.
-		
-		pageLinks.clickAllResellertLink();
-		
-		String strUrl = driver.getCurrentUrl();
-		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
-	    cn.setRequestMethod("HEAD");
-	    cn.connect();
-	    int res = cn.getResponseCode();
-	    Assert.assertEquals(res, 200);
-	}
-	
-	/* 80. Check Online PIN Activation Page is okay and return http status 200! */
-	@Ignore
-	@Test(priority=1)
-	public void OnlinePINActivationLinkTest() throws IOException {
-		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		pageLinks.clickResellerPINParentDropDownLink(); // depend on mail address(82) parent drop down.
-		
-		pageLinks.clickOnlinePINActivationLink();
-		
-		String strUrl = driver.getCurrentUrl();
-		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
-	    cn.setRequestMethod("HEAD");
-	    cn.connect();
-	    int res = cn.getResponseCode();
-	    Assert.assertEquals(res, 200);
-	}
-	
-	/* 80. Check Online PIN Activation 2 Page is okay and return http status 200! */
-	@Ignore
-	@Test(priority=1)
-	public void OnlinePINActivation2LinkTest() throws IOException {
-		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		pageLinks.clickResellerPINParentDropDownLink(); // depend on mail address(82) parent drop down.
-		
-		pageLinks.clickOnlinePINActivation2Link();
-		
-		String strUrl = driver.getCurrentUrl();
-		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
-	    cn.setRequestMethod("HEAD");
-	    cn.connect();
-	    int res = cn.getResponseCode();
-	    Assert.assertEquals(res, 200);
-	}
-	
-	/* 80. Check Online PIN Migration Page is okay and return http status 200! */
-	@Ignore
-	@Test(priority=1)
-	public void OnlinePINMigrationLinkTest() throws IOException {
-		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		pageLinks.clickResellerPINParentDropDownLink(); // depend on mail address(82) parent drop down.
-		
-		pageLinks.clickOnlinePINMigrationLink();
-		
-		String strUrl = driver.getCurrentUrl();
-		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
-	    cn.setRequestMethod("HEAD");
-	    cn.connect();
-	    int res = cn.getResponseCode();
-	    Assert.assertEquals(res, 200);
-	}
-	
-	/* 80. Check Redcheck Pins Page is okay and return http status 200! */
-	@Ignore
-	@Test(priority=1)
-	public void RedcheckPinsLinkTest() throws IOException {
-		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		pageLinks.clickResellerPINParentDropDownLink(); // depend on mail address(82) parent drop down.
-		
-		pageLinks.clickRedcheckPinsLink();
-		
-		String strUrl = driver.getCurrentUrl();
-		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
-	    cn.setRequestMethod("HEAD");
-	    cn.connect();
-	    int res = cn.getResponseCode();
-	    Assert.assertEquals(res, 200);
-	}
-	
-	/* 80. Check Reseller Connected Users Page is okay and return http status 200! */
-	@Ignore
-	@Test(priority=1)
-	public void ResellerConnectedUsersLinkTest() throws IOException {
-		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		pageLinks.clickResellerPINParentDropDownLink(); // depend on mail address(82) parent drop down.
-		
-		pageLinks.clickResellerConnectedUsersLink();
-		
-		String strUrl = driver.getCurrentUrl();
-		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
-	    cn.setRequestMethod("HEAD");
-	    cn.connect();
-	    int res = cn.getResponseCode();
-	    Assert.assertEquals(res, 200);
-	}
-	
-	/* 80. Check Device Wise Reseller PINs Page is okay and return http status 200! */
-	@Ignore
-	@Test(priority=1)
-	public void DeviceWiseResellerPINsLinkTest() throws IOException {
-		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		pageLinks.clickResellerPINParentDropDownLink(); // depend on mail address(82) parent drop down.
-		
-		pageLinks.clickDeviceWiseResellerPINsLink();
-		
-		String strUrl = driver.getCurrentUrl();
-		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
-	    cn.setRequestMethod("HEAD");
-	    cn.connect();
-	    int res = cn.getResponseCode();
-	    Assert.assertEquals(res, 200);
-	}
-	
-	/* 80. Check Suspicious Block PINs Page is okay and return http status 200! */
-	@Ignore
-	@Test(priority=1)
-	public void SuspiciousBlockPINsLinkTest() throws IOException {
-		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		pageLinks.clickResellerPINParentDropDownLink(); // depend on mail address(82) parent drop down.
-		
-		pageLinks.clickSuspiciousBlockPINsLink();
-		
-		String strUrl = driver.getCurrentUrl();
-		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
-	    cn.setRequestMethod("HEAD");
-	    cn.connect();
-	    int res = cn.getResponseCode();
-	    Assert.assertEquals(res, 200);
-	}
-	
-	/* 80. Check Return Pin Request Page is okay and return http status 200! */
-	@Ignore
-	@Test(priority=1)
-	public void ReturnPinRequestLinkTest() throws IOException {
-		pageLinks = loginPage.loginPagelink(props.getProperty("username"),props.getProperty("password"));
-		pageLinks.clickResellerPINParentDropDownLink(); // depend on mail address(82) parent drop down.
-		
-		pageLinks.clickReturnPinRequestLink();
+		pageLinks.clickAffiliatorPaymantGatewaysLink();
 		
 		String strUrl = driver.getCurrentUrl();
 		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();

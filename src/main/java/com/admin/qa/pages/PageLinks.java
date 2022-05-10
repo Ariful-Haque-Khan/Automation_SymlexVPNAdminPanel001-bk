@@ -17,115 +17,115 @@ public class PageLinks extends TestBase{
 	WebElement logout;
 	
 	//1. Reseller & PIN
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement resellerPINDropdown;
 	
 	//2. Reseller
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[1]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement resellerListPageLink;
 	
 	//3. Single PIN
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[2]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement singlePINPageLink;
 	
 	//4. PIN Batch
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[3]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement pinBatchPageLink;
 	
 	//5. Add PIN Validity
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[4]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement addPINValidityPageLink;
 	
 	//6. Reseller Panel Lists
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[5]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement resellerPanelListsListPageLink;
 	
 	//7. All Reseller
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[6]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement allResellerPageLink;
 	
 	//8. Online PIN Activation
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[7]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement onlinePINActivationPageLink;
 	
 	//9. Online PIN Activation 2
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[8]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement onlinePINActivation2tPageLink;
 	
 	//10. Online PIN Migration
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[9]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement onlinePINMigrationListPageLink;
 	
 	//11. Redcheck Pins
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[10]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement redcheckPinstPageLink;
 	
 	//12. Reseller Connected Users
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[11]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement  resellerConnectedUsersPageLink;
 	
 	//13. Device Wise Reseller PINs
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[12]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement deviceWiseResellerPINsListPageLink;
 	
 	//14. Suspicious Block PINs
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[13]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement suspiciousBlockPINsPageLink;
 	
 	//15. Return Pin Request
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[14]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement returnPinRequestPageLink;
 	
 	//16. Rates Section
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[4]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement rateSectionPageLink;
 	
 	//17. Add New Rate Plan
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[4]/ul/li[1]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement addNewRatePlanPageLink;
 	
 	//18. Rate Plan
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[4]/ul/li[2]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement ratePlanPageLink;
 	
 	//19. IP Management
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[5]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement ipManagementPageLink;
 	
 	//20. IP List
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[5]/ul/li[1]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement ipListPageLink;
 	
 	//21. IP Bundle
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[5]/ul/li[2]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement ipBundlePageLink;
 	
 	//22. Assign to Batch
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[5]/ul/li[3]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement assigntoBatchPageLink;
 	
 	//23. New Block Record
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[5]/ul/li[4]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement newBlockRecordPageLink;
 	
 	//24. IP Block History
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[5]/ul/li[5]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement ipBlockHistoryPageLink;
 	
 	//25. Server Lock Schedules
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[5]/ul/li[6]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement serverLockSchedulesPageLink;
 	
 	//26. VPN Server
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[6]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement vpnServernPageLink;
 	
 	//27. Server List
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[6]/ul/li[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement serverListPageLink;
 	
 	//28. Add VPN Server
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[6]/ul/li[2]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement addVPNServerPageLink;
 	
 	//29. Push Management
@@ -183,14 +183,6 @@ public class PageLinks extends TestBase{
 	//42. Affiliator Paymant Gateways
 	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[8]/ul/li[5]/a")
 	WebElement affiliatorPaymantGatewaysPageLink;
-	
-	//42. Affiliator Request
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[8]/ul/li[6]/a")
-	WebElement affiliatorRequestPageLink;
-	
-	//42. Referral Withdraw Tnx
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[8]/ul/li[7]/a")
-	WebElement referralWithdrawTnxPageLink;
 	
 	//43. VPN Settings
 	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[9]/a")
@@ -359,6 +351,7 @@ public class PageLinks extends TestBase{
 	//84. Resellers mail List
 	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[17]/ul/li[2]/a")
 	WebElement resellersmailListPageLink;
+	
 	
 	public PageLinks(){
 		PageFactory.initElements(driver, this);
@@ -630,21 +623,9 @@ public class PageLinks extends TestBase{
 		return new PageLinks();
 	}
 	
-	//42. Referral Withdraw Tnx
-	public PageLinks clickReferralWithdrawTnxLink() {
-		referralWithdrawTnxPageLink.click();
-		return new PageLinks();
-	}
-	
 	//42. Affiliator Paymant Gateways
 	public PageLinks clickAffiliatorPaymantGatewaysLink() {
 		affiliatorPaymantGatewaysPageLink.click();
-		return new PageLinks();
-	}
-	
-	//42. Affiliator Request
-	public PageLinks clickAffiliatorRequestLink() {
-		affiliatorRequestPageLink.click();
 		return new PageLinks();
 	}
 	//41. Affiliator Withdraw Tnx
@@ -715,173 +696,9 @@ public class PageLinks extends TestBase{
 		pushManagementPageLink.click();
 		return new PageLinks();
 	}
-	
-	//28. Add VPN Server
-	public PageLinks clickAddVPNServerLink() {
-		addVPNServerPageLink.click();
-		return new PageLinks();
-	}
-	//27. Server List
-	public PageLinks clickServerListLink() {
-		serverListPageLink.click();
-		return new PageLinks();
-	}
-	
-	//26. VPN Server parent drop down
-	public PageLinks clickVPNServerLink() {
-		vpnServernPageLink.click();
-		return new PageLinks();
-	}
-	
-	//25. Server Lock Schedules
-	public PageLinks clickServerLockSchedulesLink() {
-		serverLockSchedulesPageLink.click();
-		return new PageLinks();
-	}
-	
-	//24. IP Block History
-	public PageLinks clickIPBlockHistoryLink() {
-		ipBlockHistoryPageLink.click();
-		return new PageLinks();
-	}
-	
-	//23. New Block Record
-	public PageLinks clickNewBlockRecordLink() {
-		newBlockRecordPageLink.click();
-		return new PageLinks();
-	}
-	
-	//22. Assign to Batch
-	public PageLinks clickAssigntoBatchLink() {
-		assigntoBatchPageLink.click();
-		return new PageLinks();
-	}
-	
-	//21. IP Bundle
-	public PageLinks clickIPBundleLink() {
-		ipBundlePageLink.click();
-		return new PageLinks();
-	}
-	
-	//20. IP List
-	public PageLinks clickIPListLink() {
-		ipListPageLink.click();
-		return new PageLinks();
-	}
-	
-	//19. IP Management parent drop down
-	public PageLinks clickIPManagementParentDropDownLink() {
-		ipManagementPageLink.click();
-		return new PageLinks();
-	}
-	
-	//18. Rate Plan
-	public PageLinks clickRatePlanLink() {
-		ratePlanPageLink.click();
-		return new PageLinks();
-	}
-	
-	//17. Add New Rate Plan
-	public PageLinks clickAddNewRatePlanLink() {
-		addNewRatePlanPageLink.click();
-		return new PageLinks();
-	}
-	
-	//16. Rates Section parent drop down
-	public PageLinks clickRatesSectionParentDropDownLink() {
-		rateSectionPageLink.click();
-		return new PageLinks();
-	}
-	
-	//15. Return Pin Request
-	public PageLinks clickReturnPinRequestLink() {
-		returnPinRequestPageLink.click();
-		return new PageLinks();
-	}
-	//14. Suspicious Block PINs
-	public PageLinks clickSuspiciousBlockPINsLink() {
-		suspiciousBlockPINsPageLink.click();
-		return new PageLinks();
-	}
-	
-	//13. Device Wise Reseller PINs
-	public PageLinks clickDeviceWiseResellerPINsLink() {
-		deviceWiseResellerPINsListPageLink.click();
-		return new PageLinks();
-	}
-	
-	//12. Reseller Connected Users
-	public PageLinks clickResellerConnectedUsersLink() {
-		resellerConnectedUsersPageLink.click();
-		return new PageLinks();
-	}
-	
-	//11. Redcheck Pins
-	public PageLinks clickRedcheckPinsLink() {
-		redcheckPinstPageLink.click();
-		return new PageLinks();
-	}
-	
-	//10. Online PIN Migration
-	public PageLinks clickOnlinePINMigrationLink() {
-		onlinePINMigrationListPageLink.click();
-		return new PageLinks();
-	}
-	
-	//9. Online PIN Activation 2
-	public PageLinks clickOnlinePINActivation2Link() {
-		onlinePINActivation2tPageLink.click();
-		return new PageLinks();
-	}
-	
-	//8. Online PIN Activation
-	public PageLinks clickOnlinePINActivationLink() {
-		onlinePINActivationPageLink.click();
-		return new PageLinks();
-	}
-	
-	//7. All Reseller
-	public PageLinks clickAllResellertLink() {
-		allResellerPageLink.click();
-		return new PageLinks();
-	}
-	
-	//6. Reseller Panel Lists
-	public PageLinks clickResellerPanelListsLink() {
-		resellerPanelListsListPageLink.click();
-		return new PageLinks();
-	}
-	
-	//5. Add PIN Validity
-	public PageLinks clickAddPINValidityLink() {
-		addPINValidityPageLink.click();
-		return new PageLinks();
-	}
-	
-	//4. PIN Batch
-	public PageLinks clickPINBatchLink() {
-		pinBatchPageLink.click();
-		return new PageLinks();
-	}
-	
-	//3. Single PIN
-	public PageLinks clickSinglePINLink() {
-		singlePINPageLink.click();
-		return new PageLinks();
-	}
-	
-	//2. Reseller
-	public PageLinks clickResellerLink() {
-		resellerListPageLink.click();
-		return new PageLinks();
-	}
-	
-	//1. Reseller & PIN Parent Drop Down
-	public PageLinks clickResellerPINParentDropDownLink() {
-		resellerPINDropdown.click();
-		return new PageLinks();
-	}
 }
+
+
 
 
 

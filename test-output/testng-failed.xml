@@ -5,7 +5,7 @@
     <classes>
       <class name="com.admin.qa.tests.SuccessStatusTest">
         <methods>
-          <include name="ReturnPinRequestLinkTest"/>
+          <include name="NewsForResellerLinkTest"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.admin.qa.tests.SuccessStatusTest -->
