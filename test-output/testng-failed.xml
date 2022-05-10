@@ -6,7 +6,7 @@
       <class name="com.admin.qa.tests.SuccessStatusTestforResellerandPIN">
         <methods>
           <include name="setUp"/>
-          <include name="ResellerDDLinkTest"/>
+          <include name="ResellerConnectedUsersLinkTest"/>
         </methods>
       </class> <!-- com.admin.qa.tests.SuccessStatusTestforResellerandPIN -->
     </classes>

@@ -1,20 +1,191 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="13" passed="12" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-10T16:02:26 BDT" name="Default suite" finished-at="2022-05-10T16:02:50 BDT" duration-ms="23855">
+  <suite started-at="2022-05-10T17:43:34 BDT" name="Default suite" finished-at="2022-05-10T17:48:21 BDT" duration-ms="286967">
     <groups>
     </groups>
-    <test started-at="2022-05-10T16:02:26 BDT" name="Default test" finished-at="2022-05-10T16:02:50 BDT" duration-ms="23855">
+    <test started-at="2022-05-10T17:43:34 BDT" name="Default test" finished-at="2022-05-10T17:48:21 BDT" duration-ms="286967">
       <class name="com.admin.qa.tests.SuccessStatusTestforResellerandPIN">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@2dde1bff]" started-at="2022-05-10T16:02:26 BDT" name="setUp" finished-at="2022-05-10T16:02:30 BDT" duration-ms="4039" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@50ad3bc1]" started-at="2022-05-10T17:43:34 BDT" name="setUp" finished-at="2022-05-10T17:43:37 BDT" duration-ms="3752" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="OnlinePINActivation2ListsLinkTest()[pri:5, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@2dde1bff]" started-at="2022-05-10T16:02:30 BDT" name="OnlinePINActivation2ListsLinkTest" finished-at="2022-05-10T16:02:50 BDT" duration-ms="19742" status="PASS">
+        <test-method signature="ResellerLinkTest()[pri:1, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@50ad3bc1]" started-at="2022-05-10T17:43:37 BDT" name="ResellerLinkTest" finished-at="2022-05-10T17:43:47 BDT" duration-ms="9678" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- OnlinePINActivation2ListsLinkTest -->
+        </test-method> <!-- ResellerLinkTest -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@50ad3bc1]" started-at="2022-05-10T17:43:47 BDT" name="setUp" finished-at="2022-05-10T17:43:50 BDT" duration-ms="2505" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="SinglePINLinkTest()[pri:2, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@50ad3bc1]" started-at="2022-05-10T17:43:50 BDT" name="SinglePINLinkTest" finished-at="2022-05-10T17:44:05 BDT" duration-ms="15446" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SinglePINLinkTest -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@50ad3bc1]" started-at="2022-05-10T17:44:05 BDT" name="setUp" finished-at="2022-05-10T17:44:08 BDT" duration-ms="2746" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="PINBatchLinkTest()[pri:3, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@50ad3bc1]" started-at="2022-05-10T17:44:08 BDT" name="PINBatchLinkTest" finished-at="2022-05-10T17:44:19 BDT" duration-ms="11436" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PINBatchLinkTest -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@50ad3bc1]" started-at="2022-05-10T17:44:19 BDT" name="setUp" finished-at="2022-05-10T17:44:22 BDT" duration-ms="2793" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="AddPINValidityLinkTest()[pri:4, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@50ad3bc1]" started-at="2022-05-10T17:44:22 BDT" name="AddPINValidityLinkTest" finished-at="2022-05-10T17:44:32 BDT" duration-ms="9575" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddPINValidityLinkTest -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@50ad3bc1]" started-at="2022-05-10T17:44:32 BDT" name="setUp" finished-at="2022-05-10T17:44:35 BDT" duration-ms="3520" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="ResellerPanelListsLinkTest()[pri:5, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@50ad3bc1]" started-at="2022-05-10T17:44:35 BDT" name="ResellerPanelListsLinkTest" finished-at="2022-05-10T17:44:47 BDT" duration-ms="11422" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ResellerPanelListsLinkTest -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@50ad3bc1]" started-at="2022-05-10T17:44:47 BDT" name="setUp" finished-at="2022-05-10T17:44:50 BDT" duration-ms="3249" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="AllResellerListsLinkTest()[pri:6, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@50ad3bc1]" started-at="2022-05-10T17:44:50 BDT" name="AllResellerListsLinkTest" finished-at="2022-05-10T17:45:03 BDT" duration-ms="13093" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AllResellerListsLinkTest -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@50ad3bc1]" started-at="2022-05-10T17:45:03 BDT" name="setUp" finished-at="2022-05-10T17:45:06 BDT" duration-ms="3347" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="OnlinePINActivationListsLinkTest()[pri:7, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@50ad3bc1]" started-at="2022-05-10T17:45:06 BDT" name="OnlinePINActivationListsLinkTest" finished-at="2022-05-10T17:45:18 BDT" duration-ms="11385" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OnlinePINActivationListsLinkTest -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@50ad3bc1]" started-at="2022-05-10T17:45:18 BDT" name="setUp" finished-at="2022-05-10T17:45:21 BDT" duration-ms="3125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="OnlinePINActivation2LinkTest()[pri:8, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@50ad3bc1]" started-at="2022-05-10T17:45:21 BDT" name="OnlinePINActivation2LinkTest" finished-at="2022-05-10T17:45:34 BDT" duration-ms="12894" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OnlinePINActivation2LinkTest -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@50ad3bc1]" started-at="2022-05-10T17:45:34 BDT" name="setUp" finished-at="2022-05-10T17:45:37 BDT" duration-ms="3462" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="OnlinePINMigrationLinkTest()[pri:9, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@50ad3bc1]" started-at="2022-05-10T17:45:37 BDT" name="OnlinePINMigrationLinkTest" finished-at="2022-05-10T17:45:49 BDT" duration-ms="12212" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OnlinePINMigrationLinkTest -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@50ad3bc1]" started-at="2022-05-10T17:45:49 BDT" name="setUp" finished-at="2022-05-10T17:45:53 BDT" duration-ms="3196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="RedcheckPinsLinkTest()[pri:10, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@50ad3bc1]" started-at="2022-05-10T17:45:53 BDT" name="RedcheckPinsLinkTest" finished-at="2022-05-10T17:46:09 BDT" duration-ms="16617" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RedcheckPinsLinkTest -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@50ad3bc1]" started-at="2022-05-10T17:46:09 BDT" name="setUp" finished-at="2022-05-10T17:46:13 BDT" duration-ms="3512" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="ResellerConnectedUsersLinkTest()[pri:11, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@50ad3bc1]" started-at="2022-05-10T17:46:13 BDT" name="ResellerConnectedUsersLinkTest" finished-at="2022-05-10T17:47:20 BDT" duration-ms="67489" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[timeout: Timed out receiving message from renderer: 60.000
+  (Session info: chrome=101.0.4951.54)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-U3JSRN1', ip: '172.22.32.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\rumyk\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:13701}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c14ec4678fbe5469e2167a6a04539a6d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 60.000
+  (Session info: chrome=101.0.4951.54)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-U3JSRN1', ip: '172.22.32.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\rumyk\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:13701}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c14ec4678fbe5469e2167a6a04539a6d
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+at com.admin.qa.pages.ResellerandPINPageLinks.clickOnResellerConnectedLink(ResellerandPINPageLinks.java:143)
+at com.admin.qa.tests.SuccessStatusTestforResellerandPIN.ResellerConnectedUsersLinkTest(SuccessStatusTestforResellerandPIN.java:224)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ResellerConnectedUsersLinkTest -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@50ad3bc1]" started-at="2022-05-10T17:47:20 BDT" name="setUp" finished-at="2022-05-10T17:47:24 BDT" duration-ms="3569" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="DeviceWiseResellerPINsLinkTest()[pri:12, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@50ad3bc1]" started-at="2022-05-10T17:47:24 BDT" name="DeviceWiseResellerPINsLinkTest" finished-at="2022-05-10T17:48:04 BDT" duration-ms="40567" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeviceWiseResellerPINsLinkTest -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@50ad3bc1]" started-at="2022-05-10T17:48:04 BDT" name="setUp" finished-at="2022-05-10T17:48:08 BDT" duration-ms="3497" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="SuspiciousBlockPINsListsLinkTest()[pri:13, instance:com.admin.qa.tests.SuccessStatusTestforResellerandPIN@50ad3bc1]" started-at="2022-05-10T17:48:08 BDT" name="SuspiciousBlockPINsListsLinkTest" finished-at="2022-05-10T17:48:21 BDT" duration-ms="12767" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SuspiciousBlockPINsListsLinkTest -->
       </class> <!-- com.admin.qa.tests.SuccessStatusTestforResellerandPIN -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
