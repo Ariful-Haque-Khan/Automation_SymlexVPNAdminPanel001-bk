@@ -10,31 +10,31 @@ public class IPManagementSectionLinks extends TestBase{
 	
 	
 	//1. IP Management Drop Down
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[4]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[5]/a")
 	WebElement ratesSectionDropdown;
 	
 	//2. IP List
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[2]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[5]/ul/li[1]/a")
 	WebElement addNewRatePlanPageLink;
 	
 	//3. IP Bundle
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[3]/a")
-	WebElement ratePlanPageLink;
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[5]/ul/li[2]/a")
+	WebElement ipBundlePageLink;
 	
 	//4. Assign to Batch
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[4]/a/span[1]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[5]/a/span[3]/a")
 	WebElement assigntoBatchPageLink;
 	
 	//5. New Block Record
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[2]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[5]/ul/li[4]/a")
 	WebElement newBlockRecordPageLink;
 	
 	//6. IP Block History
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[3]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[5]/ul/li[5]/a")
 	WebElement ipBlockHistoryPageLink;
 	
 	//7. Server Lock Schedules
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[3]/a")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[5]/ul/li[6]/a")
 	WebElement serverLockSchedulesPageLink;
 	
 	
@@ -55,7 +55,7 @@ public class IPManagementSectionLinks extends TestBase{
 	
 	//03. Click on IP Bundle page Link
 	public IPManagementSectionLinks clickOnIPBundleLink() {
-		ratePlanPageLink.click();
+		ipBundlePageLink.click();
 		return new IPManagementSectionLinks();
 	}
 	

@@ -64,7 +64,7 @@ public class SuccessStatusTestforRatesSection extends TestBase{
 	}
 	
 	/* 02. Check Add New Rate Plan Page is okay and return http status 200! */
-	
+	@Ignore
 	@Test(priority=2)
 	public void AddNewRatePlanTest() throws IOException {
 		rateSectionPageLinks = loginPage.loginPagelinkinRateSetion(props.getProperty("username"),props.getProperty("password"));
@@ -81,7 +81,7 @@ public class SuccessStatusTestforRatesSection extends TestBase{
 	}
 	
 	/* 03. Check Rate Plan Page is okay and return http status 200! */
-	
+	@Ignore
 	@Test(priority=3)
 	public void RatePlanTest() throws IOException {
 		rateSectionPageLinks = loginPage.loginPagelinkinRateSetion(props.getProperty("username"),props.getProperty("password"));

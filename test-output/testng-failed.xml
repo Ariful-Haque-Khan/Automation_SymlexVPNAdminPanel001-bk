@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.admin.qa.tests.SuccessStatusTestforRatesSection">
+      <class name="com.admin.qa.tests.TestforSearchandFilterSectionInResellerListPage">
         <methods>
-          <include name="RatePlanTest"/>
-          <include name="AddNewRatePlanTest"/>
+          <include name="LoginSearchTextwithTestTest"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.admin.qa.tests.SuccessStatusTestforRatesSection -->
+      </class> <!-- com.admin.qa.tests.TestforSearchandFilterSectionInResellerListPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -29,29 +29,31 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
-	<classpathentry kind="lib" path="D:/jar_files/sel/animal-sniffer-annotations-1.14.jar"/>
-	<classpathentry kind="lib" path="D:/jar_files/sel/byte-buddy-1.8.15.jar"/>
-	<classpathentry kind="lib" path="D:/jar_files/sel/checker-compat-qual-2.0.0.jar"/>
-	<classpathentry kind="lib" path="D:/jar_files/sel/commons-codec-1.10.jar"/>
-	<classpathentry kind="lib" path="D:/jar_files/sel/commons-exec-1.3.jar"/>
-	<classpathentry kind="lib" path="D:/jar_files/sel/commons-logging-1.2.jar"/>
-	<classpathentry kind="lib" path="D:/jar_files/sel/error_prone_annotations-2.1.3.jar"/>
-	<classpathentry kind="lib" path="D:/jar_files/sel/guava-25.0-jre.jar"/>
-	<classpathentry kind="lib" path="D:/jar_files/sel/httpclient-4.5.5.jar"/>
-	<classpathentry kind="lib" path="D:/jar_files/sel/httpcore-4.4.9.jar"/>
-	<classpathentry kind="lib" path="D:/jar_files/sel/j2objc-annotations-1.1.jar"/>
-	<classpathentry kind="lib" path="D:/jar_files/sel/jsr305-1.3.9.jar"/>
-	<classpathentry kind="lib" path="D:/jar_files/sel/okhttp-3.10.0.jar"/>
-	<classpathentry kind="lib" path="D:/jar_files/sel/okio-1.14.1.jar"/>
-	<classpathentry kind="lib" path="D:/jar_files/sel/selenium-api-3.14.0.jar"/>
-	<classpathentry kind="lib" path="D:/jar_files/sel/selenium-chrome-driver-3.14.0.jar"/>
-	<classpathentry kind="lib" path="D:/jar_files/sel/selenium-edge-driver-3.14.0.jar"/>
-	<classpathentry kind="lib" path="D:/jar_files/sel/selenium-firefox-driver-3.14.0.jar"/>
-	<classpathentry kind="lib" path="D:/jar_files/sel/selenium-ie-driver-3.14.0.jar"/>
-	<classpathentry kind="lib" path="D:/jar_files/sel/selenium-java-3.14.0.jar"/>
-	<classpathentry kind="lib" path="D:/jar_files/sel/selenium-opera-driver-3.14.0.jar"/>
-	<classpathentry kind="lib" path="D:/jar_files/sel/selenium-remote-driver-3.14.0.jar"/>
-	<classpathentry kind="lib" path="D:/jar_files/sel/selenium-safari-driver-3.14.0.jar"/>
-	<classpathentry kind="lib" path="D:/jar_files/sel/selenium-support-3.14.0.jar"/>
+	<classpathentry kind="lib" path="C:/jar_files/sel/animal-sniffer-annotations-1.14.jar"/>
+	<classpathentry kind="lib" path="C:/jar_files/sel/byte-buddy-1.8.15.jar"/>
+	<classpathentry kind="lib" path="C:/jar_files/sel/checker-compat-qual-2.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/jar_files/sel/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="C:/jar_files/sel/commons-exec-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/jar_files/sel/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/jar_files/sel/error_prone_annotations-2.1.3.jar"/>
+	<classpathentry kind="lib" path="C:/jar_files/sel/guava-25.0-jre.jar"/>
+	<classpathentry kind="lib" path="C:/jar_files/sel/httpclient-4.5.5.jar"/>
+	<classpathentry kind="lib" path="C:/jar_files/sel/httpcore-4.4.9.jar"/>
+	<classpathentry kind="lib" path="C:/jar_files/sel/j2objc-annotations-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/jar_files/sel/jsr305-1.3.9.jar"/>
+	<classpathentry kind="lib" path="C:/jar_files/sel/okhttp-3.10.0.jar"/>
+	<classpathentry kind="lib" path="C:/jar_files/sel/okio-1.14.1.jar"/>
+	<classpathentry kind="lib" path="C:/jar_files/sel/selenium-api-3.14.0.jar"/>
+	<classpathentry kind="lib" path="C:/jar_files/sel/selenium-chrome-driver-3.14.0.jar"/>
+	<classpathentry kind="lib" path="C:/jar_files/sel/selenium-edge-driver-3.14.0.jar"/>
+	<classpathentry kind="lib" path="C:/jar_files/sel/selenium-firefox-driver-3.14.0.jar"/>
+	<classpathentry kind="lib" path="C:/jar_files/sel/selenium-ie-driver-3.14.0.jar"/>
+	<classpathentry kind="lib" path="C:/jar_files/sel/selenium-java-3.14.0.jar"/>
+	<classpathentry kind="lib" path="C:/jar_files/sel/selenium-opera-driver-3.14.0.jar"/>
+	<classpathentry kind="lib" path="C:/jar_files/sel/selenium-remote-driver-3.14.0.jar"/>
+	<classpathentry kind="lib" path="C:/jar_files/sel/selenium-safari-driver-3.14.0.jar"/>
+	<classpathentry kind="lib" path="C:/jar_files/sel/selenium-support-3.14.0.jar"/>
+	<classpathentry kind="lib" path="C:/jar_files/sel/mysql-connector-java-8.0.29.jar"/>
+	<classpathentry kind="lib" path="C:/jar_files/sel/protobuf-java-3.19.4.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
