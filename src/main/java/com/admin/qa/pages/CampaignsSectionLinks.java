@@ -9,78 +9,86 @@ import com.crm.qa.base.TestBase;
 public class CampaignsSectionLinks extends TestBase{
 	
 	
-	//1. IP Management Drop Down
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[4]/a/span[1]")
-	WebElement ratesSectionDropdown;
+	//1. Campaign Drop Down
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[11]/a")
+	WebElement campaignDropDownLink;
 	
-	//2. IP List
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[2]/a")
-	WebElement addNewRatePlanPageLink;
+	//2. Campaign List
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[11]/ul/li[1]/a")
+	WebElement campaignListPageLink;
 	
-	//3. IP Bundle
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[3]/a")
-	WebElement ratePlanPageLink;
+	//3. New Campaign
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[11]/ul/li[2]/a")
+	WebElement newCampaignPageLink;
 	
-	//4. Assign to Batch
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[4]/a/span[1]")
-	WebElement assigntoBatchPageLink;
+	//4. Affiliator List
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[11]/ul/li[3]/a")
+	WebElement affiliatorListPageLink;
 	
-	//5. New Block Record
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[2]/a")
-	WebElement newBlockRecordPageLink;
+	//5. Affiliator Withdraw Tnx
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[11]/ul/li[4]/a")
+	WebElement affiliatorWithdrawTnxPageLink;
 	
-	//6. IP Block History
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[3]/a")
-	WebElement ipBlockHistoryPageLink;
+	//6. Affiliator Payment Gateways
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[11]/ul/li[5]/a")
+	WebElement affiliatorPaymentGatewaysPageLink;
 	
-	//7. Server Lock Schedules
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[3]/a")
-	WebElement serverLockSchedulesPageLink;
+	//7. Afiliator Requests
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[11]/ul/li[6]/a")
+	WebElement affiliatorRequestsPageLink;
+	
+	//8. Referral Withdraw Tnx
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[11]/ul/li[7]/a")
+	WebElement refferalWithdrawTnxPageLink;
 	
 	
 	public CampaignsSectionLinks(){
 		PageFactory.initElements(driver, this);
 	}
 	
-	//01. Click on IP Management Drop Down
-	public CampaignsSectionLinks clickOnIPManagementDropDownLink() {
-		ratesSectionDropdown.click();
+	//01. Click on Campaign Drop Down
+	public CampaignsSectionLinks clickOnCampaignDropDownLink() {
+		campaignDropDownLink.click();
 		return new CampaignsSectionLinks();
 	}
-	//02. Click on IP List page Link
-	public CampaignsSectionLinks clickOnIPListLink() {
-		addNewRatePlanPageLink.click();
-		return new CampaignsSectionLinks();
-	}
-	
-	//03. Click on IP Bundle page Link
-	public CampaignsSectionLinks clickOnIPBundleLink() {
-		ratePlanPageLink.click();
+	//02. Click on Campaign List Link
+	public CampaignsSectionLinks clickOnCampaignListLink() {
+		campaignListPageLink.click();
 		return new CampaignsSectionLinks();
 	}
 	
-	//04. Click on Assign to Batch Drop Down
-	public CampaignsSectionLinks clickOnAssigntoBatchLink() {
-		assigntoBatchPageLink.click();
-		return new CampaignsSectionLinks();
-	}
-	//05. Click on New Block Record page Link
-	public CampaignsSectionLinks clickOnNewBlockRecordLink() {
-		newBlockRecordPageLink.click();
+	//03. Click on New Campaign page Link
+	public CampaignsSectionLinks clickOnNewCampaignLink() {
+		newCampaignPageLink.click();
 		return new CampaignsSectionLinks();
 	}
 	
-	//06. Click on IP Block History List page Link
-	public CampaignsSectionLinks clickOnIPBlockHistoryLink() {
-		ipBlockHistoryPageLink.click();
+	//04. Click on Affiliator List page Link
+	public CampaignsSectionLinks clickOnAffiliatorListpageLink() {
+		affiliatorListPageLink.click();
+		return new CampaignsSectionLinks();
+	}
+	//05. Click on Affiliator Withdraw Tnx page Link
+	public CampaignsSectionLinks clickOnAffiliatorWithdrawTnxLink() {
+		affiliatorWithdrawTnxPageLink.click();
 		return new CampaignsSectionLinks();
 	}
 	
-	//07. Click on Server Lock Schedules List page Link
-	public CampaignsSectionLinks clickOnServerLockSchedulesPlanLink() {
-		serverLockSchedulesPageLink.click();
+	//06. Click on Affiliator Payment Gateways page Link
+	public CampaignsSectionLinks clickOnAffiliatorPaymentGatewaysLink() {
+		affiliatorPaymentGatewaysPageLink.click();
 		return new CampaignsSectionLinks();
 	}
 	
+	//07. Click on Afiliator Requests List page Link
+	public CampaignsSectionLinks clickOnAfiliatorRequestsLink() {
+		affiliatorRequestsPageLink.click();
+		return new CampaignsSectionLinks();
+	}
 	
+	//08. Click on Referral Withdraw Tnx page Link
+	public CampaignsSectionLinks clickOnReferralWithdrawTnxLink() {
+		refferalWithdrawTnxPageLink.click();
+		return new CampaignsSectionLinks();
+	}
 }

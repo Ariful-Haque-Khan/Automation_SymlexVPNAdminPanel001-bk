@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.admin.qa.tests.TestforSearchandFilterSectionInResellerListPage">
+      <class name="com.admin.qa.tests.SuccessStatusTestforResellerandPIN">
         <methods>
-          <include name="LoginSearchTextwithTestTest"/>
           <include name="setUp"/>
+          <include name="ResellerLinkTest"/>
         </methods>
-      </class> <!-- com.admin.qa.tests.TestforSearchandFilterSectionInResellerListPage -->
+      </class> <!-- com.admin.qa.tests.SuccessStatusTestforResellerandPIN -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

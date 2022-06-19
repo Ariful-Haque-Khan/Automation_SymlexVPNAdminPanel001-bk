@@ -9,9 +9,17 @@ import com.crm.qa.base.TestBase;
 public class ResellerandPINPageLinks extends TestBase{
 	
 	
-	//1. Reseller & PIN
+	//0. Reseller & PIN
 	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/a/span[1]")
 	WebElement resellerPINDropdown;
+	
+	//1. Resellers
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[14]/a")
+	WebElement resellersDropdown;
+	
+	//1222. pinListLinkTest
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[14]/ul/li[13]/a")
+	WebElement pinListLinkTest;
 	
 	//2. Reseller
 	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[3]/ul/li[1]/a")
@@ -71,6 +79,18 @@ public class ResellerandPINPageLinks extends TestBase{
 	
 	public ResellerandPINPageLinks(){
 		PageFactory.initElements(driver, this);
+	}
+	
+	//00. Click on Reseller  Drop Down
+	public ResellerandPINPageLinks clickOnResellerDropDownLinkNew() {
+		resellersDropdown.click();
+		return new ResellerandPINPageLinks();
+	}
+	
+	//001122. Click on Reseller  Drop Down
+	public ResellerandPINPageLinks clickOnPinListLinkTest() {
+		pinListLinkTest.click();
+		return new ResellerandPINPageLinks();
 	}
 	
 	//01. Click on Reseller & PIN's Drop Down

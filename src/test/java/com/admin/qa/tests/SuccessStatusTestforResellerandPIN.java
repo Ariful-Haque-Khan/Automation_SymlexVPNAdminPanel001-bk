@@ -49,9 +49,9 @@ public class SuccessStatusTestforResellerandPIN extends TestBase{
 	@Test(priority=1)
 	public void ResellerLinkTest() throws IOException {
 		resellerandPINPageLinks = loginPage.loginPagelinkinResellerandPIN(props.getProperty("username"),props.getProperty("password"));
-		resellerandPINPageLinks.clickOnResellerDropDownLink(); // depend on mail address(82) parent drop down.
+		resellerandPINPageLinks.clickOnResellerDropDownLinkNew(); // depend on mail address(82) parent drop down.
 		
-		resellerandPINPageLinks.clickOnResellerLink();
+		resellerandPINPageLinks.clickOnPinListLinkTest();
 		
 		String strUrl = driver.getCurrentUrl();
 		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
@@ -62,7 +62,7 @@ public class SuccessStatusTestforResellerandPIN extends TestBase{
 	}
 	
 	/* 03. Check Single PIN Page is okay and return http status 200! */
-	
+	@Ignore
 	@Test(priority=2)
 	public void SinglePINLinkTest() throws IOException {
 		resellerandPINPageLinks = loginPage.loginPagelinkinResellerandPIN(props.getProperty("username"),props.getProperty("password"));
@@ -79,7 +79,7 @@ public class SuccessStatusTestforResellerandPIN extends TestBase{
 	}
 	
 	/* 04. Check PIN Batch Page is okay and return http status 200! */
-	
+	@Ignore
 	@Test(priority=3)
 	public void PINBatchLinkTest() throws IOException {
 		resellerandPINPageLinks = loginPage.loginPagelinkinResellerandPIN(props.getProperty("username"),props.getProperty("password"));
@@ -96,7 +96,7 @@ public class SuccessStatusTestforResellerandPIN extends TestBase{
 	}
 	
 	/* 05. Check Add PIN Validity Page is okay and return http status 200! */
-	
+	@Ignore
 	@Test(priority=4)
 	public void AddPINValidityLinkTest() throws IOException {
 		resellerandPINPageLinks = loginPage.loginPagelinkinResellerandPIN(props.getProperty("username"),props.getProperty("password"));
@@ -113,7 +113,7 @@ public class SuccessStatusTestforResellerandPIN extends TestBase{
 	}
 	
 	/* 06. Check Reseller Panel Lists Page is okay and return http status 200! */
-	
+	@Ignore
 	@Test(priority=5)
 	public void ResellerPanelListsLinkTest() throws IOException {
 		resellerandPINPageLinks = loginPage.loginPagelinkinResellerandPIN(props.getProperty("username"),props.getProperty("password"));
@@ -130,7 +130,7 @@ public class SuccessStatusTestforResellerandPIN extends TestBase{
 	}
 	
 	/* 07. Check Reseller Panel Lists Page is okay and return http status 200! */
-	
+	@Ignore
 	@Test(priority=6)
 	public void AllResellerListsLinkTest() throws IOException {
 		resellerandPINPageLinks = loginPage.loginPagelinkinResellerandPIN(props.getProperty("username"),props.getProperty("password"));
@@ -147,7 +147,7 @@ public class SuccessStatusTestforResellerandPIN extends TestBase{
 	}
 	
 	/* 08. Check Online PIN Activation Lists Page is okay and return http status 200! */
-	
+	@Ignore
 	@Test(priority=7)
 	public void OnlinePINActivationListsLinkTest() throws IOException {
 		resellerandPINPageLinks = loginPage.loginPagelinkinResellerandPIN(props.getProperty("username"),props.getProperty("password"));
@@ -164,7 +164,7 @@ public class SuccessStatusTestforResellerandPIN extends TestBase{
 	}
 	
 	/* 09. Check Online PIN Activation 2 Page is okay and return http status 200! */
-	
+	@Ignore
 	@Test(priority=8)
 	public void OnlinePINActivation2LinkTest() throws IOException {
 		resellerandPINPageLinks = loginPage.loginPagelinkinResellerandPIN(props.getProperty("username"),props.getProperty("password"));
@@ -181,7 +181,7 @@ public class SuccessStatusTestforResellerandPIN extends TestBase{
 	}
 	
 	/* 10. Check Online PIN Migration Page is okay and return http status 200! */
-	
+	@Ignore
 	@Test(priority=9)
 	public void OnlinePINMigrationLinkTest() throws IOException {
 		resellerandPINPageLinks = loginPage.loginPagelinkinResellerandPIN(props.getProperty("username"),props.getProperty("password"));
@@ -198,7 +198,7 @@ public class SuccessStatusTestforResellerandPIN extends TestBase{
 	}
 	
 	/* 11. Check Redcheck Pins Page is okay and return http status 200! */
-	
+	@Ignore
 	@Test(priority=10)
 	public void RedcheckPinsLinkTest() throws IOException {
 		resellerandPINPageLinks = loginPage.loginPagelinkinResellerandPIN(props.getProperty("username"),props.getProperty("password"));
@@ -215,7 +215,7 @@ public class SuccessStatusTestforResellerandPIN extends TestBase{
 	}
 	
 	/* 12. Check Reseller Connected Users Lists Page is okay and return http status 200! */
-	
+	@Ignore
 	@Test(priority=11)
 	public void ResellerConnectedUsersLinkTest() throws IOException {
 		resellerandPINPageLinks = loginPage.loginPagelinkinResellerandPIN(props.getProperty("username"),props.getProperty("password"));
@@ -232,7 +232,7 @@ public class SuccessStatusTestforResellerandPIN extends TestBase{
 	}
 	
 	/* 13. Check Device Wise Reseller PINs Lists Page is okay and return http status 200! */
-	
+	@Ignore
 	@Test(priority=12)
 	public void DeviceWiseResellerPINsLinkTest() throws IOException {
 		resellerandPINPageLinks = loginPage.loginPagelinkinResellerandPIN(props.getProperty("username"),props.getProperty("password"));
@@ -249,7 +249,7 @@ public class SuccessStatusTestforResellerandPIN extends TestBase{
 	}
 	
 	/* 14. Check Suspicious Block PINs Lists Page is okay and return http status 200! */
-	
+	@Ignore
 	@Test(priority=13)
 	public void SuspiciousBlockPINsListsLinkTest() throws IOException {
 		resellerandPINPageLinks = loginPage.loginPagelinkinResellerandPIN(props.getProperty("username"),props.getProperty("password"));

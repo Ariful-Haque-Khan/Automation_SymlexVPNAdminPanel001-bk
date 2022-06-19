@@ -14,7 +14,7 @@ public class ResellerAddFormValidationElement extends TestBase{
 	
 	
 	//1. Reseller Section Drop Down
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[4]/a/span[2]")
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[5]/a")
 	WebElement resellerSectionDropdown;
 	
 	//2. Reseller Name

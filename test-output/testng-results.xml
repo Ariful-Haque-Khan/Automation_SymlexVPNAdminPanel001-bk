@@ -1,21 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-06-06T10:32:21 BDT" name="Default suite" finished-at="2022-06-06T10:32:33 BDT" duration-ms="11681">
+  <suite started-at="2022-06-19T16:37:36 BDT" name="Default suite" finished-at="2022-06-19T16:39:07 BDT" duration-ms="90776">
     <groups>
     </groups>
-    <test started-at="2022-06-06T10:32:21 BDT" name="Default test" finished-at="2022-06-06T10:32:33 BDT" duration-ms="11681">
-      <class name="com.admin.qa.tests.TestforSearchandFilterSectionInResellerListPage">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.admin.qa.tests.TestforSearchandFilterSectionInResellerListPage@483f6d77]" started-at="2022-06-06T10:32:21 BDT" name="setUp" finished-at="2022-06-06T10:32:24 BDT" duration-ms="2933" status="PASS">
+    <test started-at="2022-06-19T16:37:36 BDT" name="Default test" finished-at="2022-06-19T16:39:07 BDT" duration-ms="90776">
+      <class name="com.admin.qa.tests.SuccessStatusTestforCampaignSection">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.admin.qa.tests.SuccessStatusTestforCampaignSection@581ac8a8]" started-at="2022-06-19T16:37:36 BDT" name="setUp" finished-at="2022-06-19T16:37:39 BDT" duration-ms="2633" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="LoginSearchTextwithTestTest()[pri:1, instance:com.admin.qa.tests.TestforSearchandFilterSectionInResellerListPage@483f6d77]" started-at="2022-06-06T10:32:24 BDT" name="LoginSearchTextwithTestTest" finished-at="2022-06-06T10:32:33 BDT" duration-ms="8687" status="PASS">
+        <test-method signature="CampaignListLinkTest()[pri:1, instance:com.admin.qa.tests.SuccessStatusTestforCampaignSection@581ac8a8]" started-at="2022-06-19T16:37:39 BDT" name="CampaignListLinkTest" finished-at="2022-06-19T16:37:47 BDT" duration-ms="7556" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginSearchTextwithTestTest -->
-      </class> <!-- com.admin.qa.tests.TestforSearchandFilterSectionInResellerListPage -->
+        </test-method> <!-- CampaignListLinkTest -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.admin.qa.tests.SuccessStatusTestforCampaignSection@581ac8a8]" started-at="2022-06-19T16:37:47 BDT" name="setUp" finished-at="2022-06-19T16:37:49 BDT" duration-ms="2055" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="NewCampaignLinkTest()[pri:2, instance:com.admin.qa.tests.SuccessStatusTestforCampaignSection@581ac8a8]" started-at="2022-06-19T16:37:49 BDT" name="NewCampaignLinkTest" finished-at="2022-06-19T16:38:01 BDT" duration-ms="12500" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NewCampaignLinkTest -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.admin.qa.tests.SuccessStatusTestforCampaignSection@581ac8a8]" started-at="2022-06-19T16:38:01 BDT" name="setUp" finished-at="2022-06-19T16:38:03 BDT" duration-ms="2386" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="AffiliatorListLinkTest()[pri:3, instance:com.admin.qa.tests.SuccessStatusTestforCampaignSection@581ac8a8]" started-at="2022-06-19T16:38:03 BDT" name="AffiliatorListLinkTest" finished-at="2022-06-19T16:38:13 BDT" duration-ms="9378" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AffiliatorListLinkTest -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.admin.qa.tests.SuccessStatusTestforCampaignSection@581ac8a8]" started-at="2022-06-19T16:38:13 BDT" name="setUp" finished-at="2022-06-19T16:38:15 BDT" duration-ms="2299" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="AffiliatorWithdrawTnxLinkTest()[pri:4, instance:com.admin.qa.tests.SuccessStatusTestforCampaignSection@581ac8a8]" started-at="2022-06-19T16:38:15 BDT" name="AffiliatorWithdrawTnxLinkTest" finished-at="2022-06-19T16:38:26 BDT" duration-ms="11061" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AffiliatorWithdrawTnxLinkTest -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.admin.qa.tests.SuccessStatusTestforCampaignSection@581ac8a8]" started-at="2022-06-19T16:38:26 BDT" name="setUp" finished-at="2022-06-19T16:38:28 BDT" duration-ms="2099" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="AffiliatorPaymentGatewaysLinkTest()[pri:5, instance:com.admin.qa.tests.SuccessStatusTestforCampaignSection@581ac8a8]" started-at="2022-06-19T16:38:28 BDT" name="AffiliatorPaymentGatewaysLinkTest" finished-at="2022-06-19T16:38:38 BDT" duration-ms="9617" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AffiliatorPaymentGatewaysLinkTest -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.admin.qa.tests.SuccessStatusTestforCampaignSection@581ac8a8]" started-at="2022-06-19T16:38:38 BDT" name="setUp" finished-at="2022-06-19T16:38:40 BDT" duration-ms="2415" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="AffiliatorRequestsLinkTest()[pri:6, instance:com.admin.qa.tests.SuccessStatusTestforCampaignSection@581ac8a8]" started-at="2022-06-19T16:38:40 BDT" name="AffiliatorRequestsLinkTest" finished-at="2022-06-19T16:38:54 BDT" duration-ms="13740" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AffiliatorRequestsLinkTest -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.admin.qa.tests.SuccessStatusTestforCampaignSection@581ac8a8]" started-at="2022-06-19T16:38:54 BDT" name="setUp" finished-at="2022-06-19T16:38:56 BDT" duration-ms="2334" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="RefferalWithdrawTnxLinkTest()[pri:9, instance:com.admin.qa.tests.SuccessStatusTestforCampaignSection@581ac8a8]" started-at="2022-06-19T16:38:56 BDT" name="RefferalWithdrawTnxLinkTest" finished-at="2022-06-19T16:39:07 BDT" duration-ms="10644" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RefferalWithdrawTnxLinkTest -->
+      </class> <!-- com.admin.qa.tests.SuccessStatusTestforCampaignSection -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
