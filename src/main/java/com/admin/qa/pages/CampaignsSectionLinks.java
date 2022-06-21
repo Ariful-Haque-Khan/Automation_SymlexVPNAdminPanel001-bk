@@ -1,6 +1,8 @@
 package com.admin.qa.pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -46,49 +48,64 @@ public class CampaignsSectionLinks extends TestBase{
 		PageFactory.initElements(driver, this);
 	}
 	
+	//01xxx. Click on Campaign Drop Down
+	public CampaignsSectionLinks openCampaignDropDownLink() {
+		//WebDriver driver = new ChromeDriver();
+	    driver.get("http://localhost/vpnadmin/index.php/campaign/campaignList");
+		//campaignDropDownLink.click();
+		return new CampaignsSectionLinks();
+	}
+	
 	//01. Click on Campaign Drop Down
 	public CampaignsSectionLinks clickOnCampaignDropDownLink() {
 		campaignDropDownLink.click();
 		return new CampaignsSectionLinks();
 	}
-	//02. Click on Campaign List Link
+	//02. Open Campaign List Link
 	public CampaignsSectionLinks clickOnCampaignListLink() {
-		campaignListPageLink.click();
+		driver.get("http://localhost/vpnadmin/index.php/campaign/campaignList");
+		//campaignListPageLink.click();
 		return new CampaignsSectionLinks();
 	}
 	
 	//03. Click on New Campaign page Link
 	public CampaignsSectionLinks clickOnNewCampaignLink() {
-		newCampaignPageLink.click();
+		driver.get("http://localhost/vpnadmin/index.php/campaign/addCampaign");
+		//newCampaignPageLink.click();
 		return new CampaignsSectionLinks();
 	}
 	
 	//04. Click on Affiliator List page Link
 	public CampaignsSectionLinks clickOnAffiliatorListpageLink() {
-		affiliatorListPageLink.click();
+		driver.get("http://localhost/vpnadmin/index.php/campaign/affiliatorList");
+		//affiliatorListPageLink.click();
 		return new CampaignsSectionLinks();
 	}
 	//05. Click on Affiliator Withdraw Tnx page Link
 	public CampaignsSectionLinks clickOnAffiliatorWithdrawTnxLink() {
-		affiliatorWithdrawTnxPageLink.click();
+		driver.get("http://localhost/vpnadmin/index.php/campaign/affiliatorWithdrawTnx");
+		//affiliatorWithdrawTnxPageLink.click();
 		return new CampaignsSectionLinks();
 	}
 	
 	//06. Click on Affiliator Payment Gateways page Link
 	public CampaignsSectionLinks clickOnAffiliatorPaymentGatewaysLink() {
-		affiliatorPaymentGatewaysPageLink.click();
+		driver.get("http://localhost/vpnadmin/index.php/campaign/paymentGateways");
+		//affiliatorPaymentGatewaysPageLink.click();
 		return new CampaignsSectionLinks();
 	}
 	
 	//07. Click on Afiliator Requests List page Link
 	public CampaignsSectionLinks clickOnAfiliatorRequestsLink() {
-		affiliatorRequestsPageLink.click();
+		driver.get("http://localhost/vpnadmin/index.php/campaign/affiliatorRequests");
+		//affiliatorRequestsPageLink.click();
 		return new CampaignsSectionLinks();
 	}
 	
 	//08. Click on Referral Withdraw Tnx page Link
 	public CampaignsSectionLinks clickOnReferralWithdrawTnxLink() {
-		refferalWithdrawTnxPageLink.click();
+		driver.get("http://localhost/vpnadmin/index.php/campaign/referralWithdrawTnx");
+		//refferalWithdrawTnxPageLink.click();
 		return new CampaignsSectionLinks();
 	}
 }

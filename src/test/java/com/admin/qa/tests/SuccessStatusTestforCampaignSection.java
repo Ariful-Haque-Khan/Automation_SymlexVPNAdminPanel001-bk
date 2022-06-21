@@ -7,16 +7,19 @@ package com.admin.qa.tests;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import com.admin.qa.pages.CampaignsSectionLinks;
 import com.admin.qa.pages.PageLinks;
-import com.admin.qa.pages.ResellerandPINPageLinks;
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.ContactsPage;
 import com.crm.qa.pages.HomePage;
@@ -44,16 +47,13 @@ public class SuccessStatusTestforCampaignSection extends TestBase{
 		testUtils = new TestUtils();
 	}
 	
-	
 	/* 01. Check Campaign List is okay and return http status 200! */
 	
 	@Test(priority=1)
 	public void CampaignListLinkTest() throws IOException {
 		campaignsSectionLinks = loginPage.loginPagelinkinCampaignLink(props.getProperty("username"),props.getProperty("password"));
-		campaignsSectionLinks.clickOnCampaignDropDownLink(); // depend on mail address(82) parent drop down.
-		
+		//campaignsSectionLinks.clickOnCampaignDropDownLink(); // depend on mail address(82) parent drop down.
 		campaignsSectionLinks.clickOnCampaignListLink();
-		
 		String strUrl = driver.getCurrentUrl();
 		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
 	    cn.setRequestMethod("HEAD");

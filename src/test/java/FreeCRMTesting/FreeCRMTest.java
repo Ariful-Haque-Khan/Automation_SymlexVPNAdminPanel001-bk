@@ -15,6 +15,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 public class FreeCRMTest {
@@ -24,7 +25,7 @@ public class FreeCRMTest {
 	
 	@BeforeMethod
 	public void setup(){
-		 System.setProperty("webdriver.chrome.driver", "C:\\jar_files\\chromedriver_win32\\94\\chromedriver.exe");
+		 System.setProperty("webdriver.chrome.driver", "C:\\jar_files\\chromedriver_win32\\102\\chromedriver.exe");
 		 driver=new ChromeDriver();//launch chrome browser
 
 		 driver.manage().window().maximize(); //maximize the windows
@@ -44,7 +45,7 @@ public class FreeCRMTest {
 	//seller	````
 	//distributor
 	//delivery boy
-	
+	@Ignore
 	@Test(priority=1)
 	public void loginWithGroupUserTest() throws InterruptedException {
 		
