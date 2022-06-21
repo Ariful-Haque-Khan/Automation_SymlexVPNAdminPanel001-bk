@@ -31,7 +31,7 @@ public class TestBase {
 		try {
 			props = new Properties();
 			FileInputStream ip = new FileInputStream(
-					"C:\\project\\eclipse\\SymlexAdminPanel001_bk\\src\\main\\java\\com\\crm\\qa\\config\\config.properties");
+					"C:\\project\\eclipse\\SymlexAdminPanel001\\src\\main\\java\\com\\crm\\qa\\config\\config.properties");
 			//C:\project\eclipse\SymlexResPanel001
 			props.load(ip);
 			System.out.println(props.getProperty("url"));

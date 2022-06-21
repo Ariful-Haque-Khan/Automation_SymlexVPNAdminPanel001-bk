@@ -13,6 +13,7 @@ import java.util.Properties;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import com.crm.qa.base.TestBase;
@@ -34,7 +35,7 @@ public class LoginPageTest extends TestBase{
 		initialization();
 		loginPage = new LoginPage();
 	}
-	
+	@Ignore
 	@Test(priority=1)
 	public void loginPageTitleTest() {
 		String title = loginPage.validateLoginPageTitle();
