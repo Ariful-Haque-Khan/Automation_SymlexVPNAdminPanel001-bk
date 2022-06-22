@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.admin.qa.pages.CampaignsSectionLinks;
 import com.admin.qa.pages.IPManagementSectionLinks;
+import com.admin.qa.pages.MailAddressSectionLinks;
 import com.crm.qa.base.TestBase;
 
 public class LoginPage extends TestBase{
@@ -72,5 +73,12 @@ public class LoginPage extends TestBase{
 		return new IPManagementSectionLinks(); //HomePage is the landing page for LoginPage
 	}
 	
-	
+	public MailAddressSectionLinks loginMailAddressSectionLinks(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new MailAddressSectionLinks(); //HomePage is the landing page for LoginPage
+	}
 }

@@ -43,7 +43,7 @@ public class SuccessStatusTestforIPManagement extends TestBase{
 	
 	
 	/* 02. Check IP List Page is okay and return http status 200! */
-	
+	@Ignore
 	@Test(priority=1)
 	public void IPListTest() throws IOException {
 		ipManagementSectionLinks = loginPage.loginPagelinkinIPManagement(props.getProperty("username"),props.getProperty("password"));
@@ -60,7 +60,7 @@ public class SuccessStatusTestforIPManagement extends TestBase{
 	}
 	
 	/* 03. Check IP Bundle Page is okay and return http status 200! */
-	
+	@Ignore
 	@Test(priority=2)
 	public void IPBundleTest() throws IOException {
 		ipManagementSectionLinks = loginPage.loginPagelinkinIPManagement(props.getProperty("username"),props.getProperty("password"));
@@ -77,7 +77,7 @@ public class SuccessStatusTestforIPManagement extends TestBase{
 	}
 	
 	/* 04. Check Assign to Batch Page is okay and return http status 200! */
-	
+	@Ignore
 	@Test(priority=3)
 	public void AssigntoBatchPageTest() throws IOException {
 		ipManagementSectionLinks = loginPage.loginPagelinkinIPManagement(props.getProperty("username"),props.getProperty("password"));
@@ -94,7 +94,7 @@ public class SuccessStatusTestforIPManagement extends TestBase{
 	}
 	
 	/* 05. Check New Block Record Page is okay and return http status 200! */
-
+	@Ignore
 	@Test(priority=4)
 	public void NewBlockRecordTest() throws IOException {
 		ipManagementSectionLinks = loginPage.loginPagelinkinIPManagement(props.getProperty("username"),props.getProperty("password"));
