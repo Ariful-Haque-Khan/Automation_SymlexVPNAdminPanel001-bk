@@ -53,43 +53,44 @@ public class CampaignsSectionLinks extends TestBase{
 	}
 	//02. Click on Campaign List Link
 	public CampaignsSectionLinks clickOnCampaignListLink() {
-		driver.get("http://185.198.189.21:4041/vpnadmin/index.php/campaign/campaignList");
+		//System.out.println(props.getProperty("url"));
+		//System.out.println(props.getProperty("browser"));
+		driver.get(props.getProperty("url")+"campaign/campaignList");
 		//campaignListPageLink.click();
 		return new CampaignsSectionLinks();
 	}
 	
 	//03. Click on New Campaign page Link
 	public CampaignsSectionLinks clickOnNewCampaignLink() {
-		newCampaignPageLink.click();
+		//newCampaignPageLink.click();
+		driver.get(props.getProperty("url")+"campaign/addCampaign");
 		return new CampaignsSectionLinks();
 	}
 	
 	//04. Click on Affiliator List page Link
 	public CampaignsSectionLinks clickOnAffiliatorListpageLink() {
-		affiliatorListPageLink.click();
+		//affiliatorListPageLink.click();
+		driver.get(props.getProperty("url")+"campaign/affiliatorList");
 		return new CampaignsSectionLinks();
 	}
 	//05. Click on Affiliator Withdraw Tnx page Link
 	public CampaignsSectionLinks clickOnAffiliatorWithdrawTnxLink() {
-		affiliatorWithdrawTnxPageLink.click();
+		driver.get(props.getProperty("url")+"campaign/affiliatorWithdrawTnx");
+		//affiliatorWithdrawTnxPageLink.click();
 		return new CampaignsSectionLinks();
 	}
 	
 	//06. Click on Affiliator Payment Gateways page Link
 	public CampaignsSectionLinks clickOnAffiliatorPaymentGatewaysLink() {
-		affiliatorPaymentGatewaysPageLink.click();
+		driver.get(props.getProperty("url")+"campaign/paymentGateways");
+		//affiliatorPaymentGatewaysPageLink.click();
 		return new CampaignsSectionLinks();
 	}
 	
 	//07. Click on Afiliator Requests List page Link
 	public CampaignsSectionLinks clickOnAfiliatorRequestsLink() {
-		affiliatorRequestsPageLink.click();
-		return new CampaignsSectionLinks();
-	}
-	
-	//08. Click on Referral Withdraw Tnx page Link
-	public CampaignsSectionLinks clickOnReferralWithdrawTnxLink() {
-		refferalWithdrawTnxPageLink.click();
+		driver.get(props.getProperty("url")+"campaign/affiliatorRequests");
+		//affiliatorRequestsPageLink.click();
 		return new CampaignsSectionLinks();
 	}
 }
