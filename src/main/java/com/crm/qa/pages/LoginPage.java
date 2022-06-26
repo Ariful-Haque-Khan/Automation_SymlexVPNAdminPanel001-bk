@@ -8,8 +8,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.admin.qa.pages.CampaignsSectionLinks;
+import com.admin.qa.pages.PINsSectionLinks;
+
 import com.admin.qa.pages.IPManagementSectionLinks;
 import com.admin.qa.pages.MailAddressSectionLinks;
+import com.admin.qa.pages.OnlinePINReportsSectionLinks;
 import com.crm.qa.base.TestBase;
 
 public class LoginPage extends TestBase{
@@ -80,5 +83,23 @@ public class LoginPage extends TestBase{
 		loginBtn.click();
 		
 		return new MailAddressSectionLinks(); //HomePage is the landing page for LoginPage
+	}
+	
+	public OnlinePINReportsSectionLinks loginOnlinePINReportSuccessStatusSectionLinks(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new OnlinePINReportsSectionLinks(); //HomePage is the landing page for LoginPage
+	}
+	
+	public PINsSectionLinks loginPINsSectionLinksSuccessStatusSectionLinks(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new PINsSectionLinks(); //HomePage is the landing page for LoginPage
 	}
 }

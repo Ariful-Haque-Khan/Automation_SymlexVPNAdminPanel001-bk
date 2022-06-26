@@ -42,7 +42,7 @@ public class SuccessStatusTestforMailReport extends TestBase{
 	}
 	
 	
-	/* 02. Check IP List Page is okay and return http status 200! */
+	/* 02. Check Mail List Page is okay and return http status 200! */
 	
 	@Test(priority=1)
 	public void TestMailListLink() throws IOException {
@@ -59,7 +59,7 @@ public class SuccessStatusTestforMailReport extends TestBase{
 	    Assert.assertEquals(res, 200);
 	}
 	
-	/* 03. Check IP Bundle Page is okay and return http status 200! */
+	/* 03. Check Resellers Mail List Link Page is okay and return http status 200! */
 	
 	@Test(priority=2)
 	public void TestResellersMailListLink() throws IOException {

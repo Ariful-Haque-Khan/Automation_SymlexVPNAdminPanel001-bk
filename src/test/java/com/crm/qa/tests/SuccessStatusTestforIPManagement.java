@@ -62,7 +62,7 @@ public class SuccessStatusTestforIPManagement extends TestBase{
 	/* 03. Check IP Bundle Page is okay and return http status 200! */
 	@Ignore
 	@Test(priority=2)
-	public void IPBundleTest() throws IOException {
+	public void TestIPBundleLink() throws IOException {
 		ipManagementSectionLinks = loginPage.loginPagelinkinIPManagement(props.getProperty("username"),props.getProperty("password"));
 		//ipManagementSectionLinks.clickOnIPManagementDropDownLink(); // depend on mail address(82) parent drop down.
 		
@@ -76,10 +76,10 @@ public class SuccessStatusTestforIPManagement extends TestBase{
 	    Assert.assertEquals(res, 200);
 	}
 	
-	/* 04. Check Assign to Batch Page is okay and return http status 200! */
+	/* 04. Check Lots Name With IP BundleList Page is okay and return http status 200! */
 	@Ignore
 	@Test(priority=3)
-	public void AssigntoBatchPageTest() throws IOException {
+	public void TestLotsNameWithIpBundleList() throws IOException {
 		ipManagementSectionLinks = loginPage.loginPagelinkinIPManagement(props.getProperty("username"),props.getProperty("password"));
 		//ipManagementSectionLinks.clickOnIPManagementDropDownLink(); // depend on mail address(82) parent drop down.
 		
@@ -93,10 +93,10 @@ public class SuccessStatusTestforIPManagement extends TestBase{
 	    Assert.assertEquals(res, 200);
 	}
 	
-	/* 05. Check New Block Record Page is okay and return http status 200! */
+	/* 05. Check Server Lock Schedule List Page is okay and return http status 200! */
 	@Ignore
 	@Test(priority=4)
-	public void NewBlockRecordTest() throws IOException {
+	public void TestServerLockScheduleList() throws IOException {
 		ipManagementSectionLinks = loginPage.loginPagelinkinIPManagement(props.getProperty("username"),props.getProperty("password"));
 		//ipManagementSectionLinks.clickOnIPManagementDropDownLink(); // depend on mail address(82) parent drop down.
 		
