@@ -4,11 +4,14 @@
 
 package com.crm.qa.tests;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import org.apache.commons.io.FileUtils;
 import org.testng.Assert;
+import org.testng.TestNG;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Ignore;
@@ -23,6 +26,8 @@ import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.ExtentReportListener;
 import com.crm.qa.util.TestUtils;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 import javax.activation.DataHandler;
@@ -74,7 +79,7 @@ public class SuccessStatusTestforPINsSection extends TestBase{
 		TestUtils.takeScreenshotAtEndOfTest();
 		//ExtentReportListener.generateReport("testng-results.xml", "", "rep");
 		pinSSectionLinks.pinListLinks();
-		
+		/*
 		// Create object of Property file
 	    Properties props = new Properties();
 	    props.put("mail.smtp.host", "smtp.gmail.com");
@@ -110,9 +115,21 @@ public class SuccessStatusTestforPINsSection extends TestBase{
 	     } catch (MessagingException e) {
 	    	 throw new RuntimeException(e);
 	     }
-		
+	    */
+	    
+	    
+	    /*
+		TestNG runner=new TestNG();
+	    List<String> suitefiles=new ArrayList<String>();
+	    //FileUtils.copyFile(scrFile, new File(currentDir + "/screenshots/" + System.currentTimeMillis() + ".png"));
+	    suitefiles.add("C:\\project\\eclipse\\SymlexAdminPanel001\\src\\test\\java\\com\\crm\\qa\\tests\\testng.xml");
+	    runner.setTestSuites(suitefiles);
+	    runner.run();
+	    */
+	    
 	    String strUrl = driver.getCurrentUrl();
 		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+		
 	    cn.setRequestMethod("HEAD");
 	    cn.connect();
 	    

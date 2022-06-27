@@ -3,12 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.crm.qa.tests.SuccessStatusTestforCampaignSection">
+      <class name="com.crm.qa.tests.SuccessStatusTestforResellerSection">
         <methods>
+          <include name="TestAddFormReseller4Link"/>
+          <include name="TestindexLink"/>
           <include name="setUp"/>
-          <include name="CampaignListLinkTest"/>
+          <include name="TestAllResellerListLink"/>
         </methods>
-      </class> <!-- com.crm.qa.tests.SuccessStatusTestforCampaignSection -->
+      </class> <!-- com.crm.qa.tests.SuccessStatusTestforResellerSection -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

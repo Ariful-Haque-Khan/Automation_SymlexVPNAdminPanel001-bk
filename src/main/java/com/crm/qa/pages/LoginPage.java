@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.admin.qa.pages.CampaignsSectionLinks;
 import com.admin.qa.pages.PINsSectionLinks;
-
+import com.admin.qa.pages.ResellerSectionLinks;
 import com.admin.qa.pages.IPManagementSectionLinks;
 import com.admin.qa.pages.MailAddressSectionLinks;
 import com.admin.qa.pages.OnlinePINReportsSectionLinks;
@@ -101,5 +101,14 @@ public class LoginPage extends TestBase{
 		loginBtn.click();
 		
 		return new PINsSectionLinks(); //HomePage is the landing page for LoginPage
+	}
+	
+	public ResellerSectionLinks loginResellerSectionLinksSuccessStatusSectionLinks(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new ResellerSectionLinks(); //HomePage is the landing page for LoginPage
 	}
 }

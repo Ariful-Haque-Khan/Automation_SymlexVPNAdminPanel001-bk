@@ -4,10 +4,13 @@
 	<listeners>
 		<listener class-name="com.crm.qa.util.ExtentReportListener" />
 	</listeners>
-	<test thread-count="5" name="Free CRM PRO Tests">
-		
+	<test name="Free CRM PRO Tests">
 		<classes>
-			<class name="com.crm.qa.tests.SuccessStatusTestforPINsSection" />
+			<class name="com.crm.qa.tests.SuccessStatusTestforPINsSection">
+				<methods>
+		        	<include name="TestPinListLinks" />
+		        </methods>
+			</class>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
