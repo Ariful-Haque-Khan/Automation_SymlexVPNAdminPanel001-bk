@@ -1,5 +1,5 @@
 /*
- * @author: Naveen Kumar Rajashekar
+ * @author: Md. Abdullah Al Rumy
  */
 
 package com.crm.qa.tests;
@@ -35,27 +35,18 @@ public class LoginPageTest extends TestBase{
 		initialization();
 		loginPage = new LoginPage();
 	}
-	@Ignore
+	
 	@Test(priority=1)
 	public void loginPageTitleTest() {
 		String title = loginPage.validateLoginPageTitle();
 		Assert.assertEquals(title, "SYMLEX VPN - Administrator Login");
 	}
 	
-	@Test(priority=2)
-	public void loginTest() throws IOException {
-		homePage = loginPage.login(props.getProperty("username"),props.getProperty("password"));
-		props = new Properties();
-		HttpURLConnection c=(HttpURLConnection)new URL("https://www.tutorialspoint.com/index.htm").openConnection();
-		c.setRequestMethod("HEAD");
-		c.connect();
-		int r = c.getResponseCode();
-		System.out.println("Http response code: " + r);
-	}
-	
+	/*
 	@AfterMethod
 	public void tearDown() {
 		super.tearDown();
 	}
+	*/
 
 }

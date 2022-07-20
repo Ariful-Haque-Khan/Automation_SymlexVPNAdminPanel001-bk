@@ -7,13 +7,23 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.admin.qa.pages.ApplicationSectionLinks;
 import com.admin.qa.pages.CampaignsSectionLinks;
 import com.admin.qa.pages.PINsSectionLinks;
+import com.admin.qa.pages.PushManagementSectionLinks;
+import com.admin.qa.pages.RateSectionLinks;
+import com.admin.qa.pages.ReportsOfflinePINSectionLinks;
+import com.admin.qa.pages.ResellerPanelSectionLinks;
+import com.admin.qa.pages.ResellerRprtOnlinePINSectionLinks;
 import com.admin.qa.pages.ResellerSectionLinks;
+import com.admin.qa.pages.VPNServerSectionLinks;
+import com.admin.qa.pages.UserPermissionSectionLinks;
 import com.admin.qa.pages.IPManagementSectionLinks;
 import com.admin.qa.pages.MailAddressSectionLinks;
 import com.admin.qa.pages.OnlinePINReportsSectionLinks;
+import com.admin.qa.pages.AllLinksFromDB;
 import com.crm.qa.base.TestBase;
+
 
 public class LoginPage extends TestBase{
 	
@@ -29,12 +39,6 @@ public class LoginPage extends TestBase{
 	//[@id="login_form"]/form/button
 	WebElement loginBtn;
 	
-	@FindBy(xpath="//button[contains(text(),'Sign Up']")
-	WebElement signUpBtn;
-	
-	@FindBy(xpath="//img[contains(@class,'img-responsive')]")
-	WebElement freeCRMLogo;
-	
 	//Initializing PageFactory
 	public LoginPage() {
 		PageFactory.initElements(driver, this); //this --> points to current class object.
@@ -45,8 +49,9 @@ public class LoginPage extends TestBase{
 		return driver.getTitle();
 	}
 	
-	public Boolean validateCRMImage() {
-		return freeCRMLogo.isEnabled();
+	public void openTheLink() {
+		//driver.get(props.getProperty("url")+"campaign/campaignList");
+		driver.get("google.com");
 	}
 	
 	public HomePage login(String uname , String pwd) {
@@ -110,5 +115,86 @@ public class LoginPage extends TestBase{
 		loginBtn.click();
 		
 		return new ResellerSectionLinks(); //HomePage is the landing page for LoginPage
+	}
+	
+	public RateSectionLinks loginRateSectionLinksSuccessStatusSectionLinks(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new RateSectionLinks(); //HomePage is the landing page for LoginPage
+	}
+	
+	public ResellerPanelSectionLinks loginResellerPanelSectionLinksSectionLinksSuccessStatusSectionLinks(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new ResellerPanelSectionLinks(); //HomePage is the landing page for LoginPage
+	}
+	
+	public VPNServerSectionLinks loginResellerVPNServerSuccessStatusSectionLinks(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new VPNServerSectionLinks(); //HomePage is the landing page for LoginPage
+	}
+	
+	public UserPermissionSectionLinks loginUserPermissionSectionLinksSuccessStatusSectionLinks(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new UserPermissionSectionLinks(); //HomePage is the landing page for LoginPage
+	}
+	
+	public PushManagementSectionLinks loginPushManagementSuccessStatusSectionLinks(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new PushManagementSectionLinks(); //HomePage is the landing page for LoginPage
+	}
+	
+	public ApplicationSectionLinks loginApplicationSuccessStatusSectionLinks(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new ApplicationSectionLinks(); //HomePage is the landing page for LoginPage
+	}
+	
+	public ResellerRprtOnlinePINSectionLinks loginResellerRprtOnlinePINSuccessStatusSectionLinks(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new ResellerRprtOnlinePINSectionLinks(); //HomePage is the landing page for LoginPage
+	}
+	
+	public ReportsOfflinePINSectionLinks loginReportsOfflinePINSectionLinks(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new ReportsOfflinePINSectionLinks(); //HomePage is the landing page for LoginPage
+	}
+	
+	public AllLinksFromDB AllLinksFromDBStatus(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new AllLinksFromDB(); //HomePage is the landing page for LoginPage
 	}
 }

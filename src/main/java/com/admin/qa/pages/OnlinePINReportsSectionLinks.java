@@ -8,7 +8,6 @@ import com.crm.qa.base.TestBase;
 
 public class OnlinePINReportsSectionLinks extends TestBase{
 	
-	
 	//1. IP Management Drop Down For Previously Used
 	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[4]/a/span[1]")
 	WebElement ratesSectionDropdown;
