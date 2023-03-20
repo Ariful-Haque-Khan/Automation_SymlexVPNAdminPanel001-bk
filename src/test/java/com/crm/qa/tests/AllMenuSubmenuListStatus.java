@@ -31,7 +31,6 @@ public class AllMenuSubmenuListStatus extends TestBase{
 	LoginPage loginPage;
 	HomePage homePage;
 	AllLinksFromDB allLinksFromDB;
-	TestUtils testUtils;
 	
 	//Initializing PageFactory
 	public AllMenuSubmenuListStatus() {
@@ -42,7 +41,6 @@ public class AllMenuSubmenuListStatus extends TestBase{
 	public void setUp() {
 		initialization();
 		loginPage = new LoginPage();
-		testUtils = new TestUtils();
 	}
 	
 	

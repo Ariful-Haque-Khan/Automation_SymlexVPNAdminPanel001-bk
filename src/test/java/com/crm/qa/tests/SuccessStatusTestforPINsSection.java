@@ -70,7 +70,7 @@ public class SuccessStatusTestforPINsSection extends TestBase{
 	
 	
 	/* 01. Check Campaign List is okay and return http status 200! */
-	
+	@Ignore
 	@Test(priority=1)
 	public void TestPinListLinks() throws IOException {
 		pinSSectionLinks = loginPage.loginPINsSectionLinksSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
@@ -138,7 +138,7 @@ public class SuccessStatusTestforPINsSection extends TestBase{
 	}
 	
 	/* 02. Check Lots Name List is okay and return http status 200! */
-	@Ignore
+	
 	@Test(priority=1)
 	public void TestLotsNameListLink() throws IOException {
 		pinSSectionLinks = loginPage.loginPINsSectionLinksSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
@@ -155,7 +155,7 @@ public class SuccessStatusTestforPINsSection extends TestBase{
 	}
 	
 	/* 03. Check Pin Validity List is okay and return http status 200! */
-	@Ignore
+	
 	@Test(priority=1)
 	public void TestLotsPinValidityLink() throws IOException {
 		pinSSectionLinks = loginPage.loginPINsSectionLinksSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
@@ -172,7 +172,6 @@ public class SuccessStatusTestforPINsSection extends TestBase{
 	}
 	
 	/* 04. Check Online PinActivation2 List is okay and return http status 200! */
-	@Ignore
 	@Test(priority=1)
 	public void TestonlinePinActivation2Link () throws IOException {
 		pinSSectionLinks = loginPage.loginPINsSectionLinksSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
@@ -189,7 +188,6 @@ public class SuccessStatusTestforPINsSection extends TestBase{
 	}
 	
 	/* 05. Check Test Pin Migration Online List is okay and return http status 200! */
-	@Ignore
 	@Test(priority=1)
 	public void TestPinMigrationLink() throws IOException {
 		pinSSectionLinks = loginPage.loginPINsSectionLinksSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
@@ -206,7 +204,6 @@ public class SuccessStatusTestforPINsSection extends TestBase{
 	}
 	
 	/* 06. Check RadCheck Pins Link is okay and return http status 200! */
-	@Ignore
 	@Test(priority=1)
 	public void TestRadCheckPinsLink() throws IOException {
 		pinSSectionLinks = loginPage.loginPINsSectionLinksSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
@@ -223,7 +220,6 @@ public class SuccessStatusTestforPINsSection extends TestBase{
 	}
 	
 	/* 07. Check Test Reseller Connected Users Link is okay and return http status 200! */
-	@Ignore
 	@Test(priority=1)
 	public void TestResellerConnectedUsersLink() throws IOException {
 		pinSSectionLinks = loginPage.loginPINsSectionLinksSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
@@ -240,7 +236,6 @@ public class SuccessStatusTestforPINsSection extends TestBase{
 	}
 	
 	/* 08. Check Test Device Wise Reseller Pins Link is okay and return http status 200! */
-	@Ignore
 	@Test(priority=1)
 	public void TestDeviceWiseResellerPinsLink() throws IOException {
 		pinSSectionLinks = loginPage.loginPINsSectionLinksSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
@@ -257,7 +252,6 @@ public class SuccessStatusTestforPINsSection extends TestBase{
 	}
 	
 	/* 09. Check Suspicious Block Pin List Link is okay and return http status 200! */
-	@Ignore
 	@Test(priority=1)
 	public void TestSuspiciousBlockPinListLink() throws IOException {
 		pinSSectionLinks = loginPage.loginPINsSectionLinksSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
@@ -274,7 +268,6 @@ public class SuccessStatusTestforPINsSection extends TestBase{
 	}
 	
 	/* 10. Check Test Return Pin Request List Link is okay and return http status 200! */
-	@Ignore
 	@Test(priority=1)
 	public void TestReturnPinRequestListLink() throws IOException {
 		pinSSectionLinks = loginPage.loginPINsSectionLinksSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
@@ -291,10 +284,10 @@ public class SuccessStatusTestforPINsSection extends TestBase{
 	}
 	
 	
-//	@AfterMethod
-//	public void tearDown() {
-//		pageLinks.Logout();
-//		super.tearDown();
-//	}
+	@AfterMethod
+	public void tearDown() {
+		//pageLinks.Logout();
+		super.tearDown();
+	}
 
 }

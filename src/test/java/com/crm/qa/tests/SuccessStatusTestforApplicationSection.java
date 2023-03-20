@@ -82,10 +82,9 @@ public class SuccessStatusTestforApplicationSection extends TestBase{
 	    Assert.assertEquals(title, "Admin Panel List");
 	}
 	
-//	@AfterMethod
-//	public void tearDown() {
-//		pageLinks.Logout();
-//		super.tearDown();
-//	}
+	@AfterMethod
+	public void tearDown() {
+		super.tearDown();
+	}
 
 }

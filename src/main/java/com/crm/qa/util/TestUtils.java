@@ -1,5 +1,5 @@
 /*
- * @author: Naveen Kumar Rajashekar
+ * @author: Md. Abdullah Al Rumy
  */
 package com.crm.qa.util;
 
@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -32,7 +33,7 @@ public class TestUtils extends TestBase {
 		driver.switchTo().frame("mainpanel");
 	}
 
-	public static Object[][] getTestData(String sheetName) throws IOException {
+	public static Object[][] getTestData(String sheetName) throws IOException, InvalidFormatException {
 		InputStream file = null;
 		try {
 			file = new FileInputStream(TESTDATA_SHEET_PATH);

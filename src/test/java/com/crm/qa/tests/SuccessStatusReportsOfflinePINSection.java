@@ -69,13 +69,12 @@ public class SuccessStatusReportsOfflinePINSection extends TestBase{
 		reportsOfflinePINSectionLinks.openHourlyActivePinsReportLinks();
 		String title;
 		title = reportsOfflinePINSectionLinks.getTextfromtitleHourlyActivePinsReport();
-	    Assert.assertEquals(title, "Add New Server");
+	    Assert.assertEquals(title, "Hourly PIN Subscription reports");
 	}
 	
-//	@AfterMethod
-//	public void tearDown() {
-//		pageLinks.Logout();
-//		super.tearDown();
-//	}
+	@AfterMethod
+	public void tearDown() {
+		super.tearDown();
+	}
 
 }

@@ -1,63 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-20T13:02:09 BDT" name="Default suite" finished-at="2022-07-20T13:02:18 BDT" duration-ms="8608">
+  <suite started-at="2023-03-19T01:55:50 BDT" name="Default suite" finished-at="2023-03-19T01:56:25 BDT" duration-ms="34936">
     <groups>
     </groups>
-    <test started-at="2022-07-20T13:02:09 BDT" name="Default test" finished-at="2022-07-20T13:02:18 BDT" duration-ms="8608">
-      <class name="com.crm.qa.tests.AllMenuSubmenuListStatus">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.crm.qa.tests.AllMenuSubmenuListStatus@22e357dc]" started-at="2022-07-20T13:02:09 BDT" name="setUp" finished-at="2022-07-20T13:02:12 BDT" duration-ms="2831" status="PASS">
+    <test started-at="2023-03-19T01:55:50 BDT" name="Default test" finished-at="2023-03-19T01:56:25 BDT" duration-ms="34936">
+      <class name="com.crm.qa.tests.SuccessStatusTestforRateSection">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.crm.qa.tests.SuccessStatusTestforRateSection@6bedbc4d]" started-at="2023-03-19T01:55:50 BDT" name="setUp" finished-at="2023-03-19T01:55:56 BDT" duration-ms="6071" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TestActivePinsReportPageLink()[pri:1, instance:com.crm.qa.tests.AllMenuSubmenuListStatus@22e357dc]" started-at="2022-07-20T13:02:12 BDT" name="TestActivePinsReportPageLink" finished-at="2022-07-20T13:02:18 BDT" duration-ms="5696" status="FAIL">
-          <exception class="java.lang.NumberFormatException">
-            <message>
-              <![CDATA[For input string: "Tom"]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NumberFormatException: For input string: "Tom"
-at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
-at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
-at java.base/java.lang.Double.parseDouble(Double.java:556)
-at com.admin.qa.pages.AllLinksFromDB.openindexLink(AllLinksFromDB.java:68)
-at com.crm.qa.tests.AllMenuSubmenuListStatus.TestActivePinsReportPageLink(AllMenuSubmenuListStatus.java:54)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NumberFormatException -->
+        <test-method signature="TestindexLink()[pri:1, instance:com.crm.qa.tests.SuccessStatusTestforRateSection@6bedbc4d]" started-at="2023-03-19T01:55:56 BDT" name="TestindexLink" finished-at="2023-03-19T01:56:08 BDT" duration-ms="11997" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestActivePinsReportPageLink -->
-      </class> <!-- com.crm.qa.tests.AllMenuSubmenuListStatus -->
+        </test-method> <!-- TestindexLink -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.crm.qa.tests.SuccessStatusTestforRateSection@6bedbc4d]" started-at="2023-03-19T01:56:08 BDT" name="tearDown" finished-at="2023-03-19T01:56:08 BDT" duration-ms="229" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.crm.qa.tests.SuccessStatusTestforRateSection@6bedbc4d]" started-at="2023-03-19T01:56:08 BDT" name="setUp" finished-at="2023-03-19T01:56:14 BDT" duration-ms="5464" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TestAddFormRateLink()[pri:2, instance:com.crm.qa.tests.SuccessStatusTestforRateSection@6bedbc4d]" started-at="2023-03-19T01:56:14 BDT" name="TestAddFormRateLink" finished-at="2023-03-19T01:56:24 BDT" duration-ms="10896" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestAddFormRateLink -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.crm.qa.tests.SuccessStatusTestforRateSection@6bedbc4d]" started-at="2023-03-19T01:56:24 BDT" name="tearDown" finished-at="2023-03-19T01:56:25 BDT" duration-ms="247" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.crm.qa.tests.SuccessStatusTestforRateSection -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

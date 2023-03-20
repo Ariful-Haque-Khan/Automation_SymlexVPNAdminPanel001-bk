@@ -39,6 +39,9 @@ public class LoginPage extends TestBase{
 	//[@id="login_form"]/form/button
 	WebElement loginBtn;
 	
+	@FindBy(name="Logout")
+	WebElement logoutBtn;
+	
 	//Initializing PageFactory
 	public LoginPage() {
 		PageFactory.initElements(driver, this); //this --> points to current class object.
@@ -168,6 +171,11 @@ public class LoginPage extends TestBase{
 		password.sendKeys(pwd);
 		loginBtn.click();
 		
+		return new ApplicationSectionLinks(); //HomePage is the landing page for LoginPage
+	}
+	
+	public ApplicationSectionLinks logoutApplicationSuccessStatusSectionLinks() {
+		logoutBtn.click();		
 		return new ApplicationSectionLinks(); //HomePage is the landing page for LoginPage
 	}
 	

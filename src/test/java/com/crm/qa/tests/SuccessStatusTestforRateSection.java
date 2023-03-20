@@ -77,10 +77,10 @@ public class SuccessStatusTestforRateSection extends TestBase{
 	    Assert.assertEquals(res, 200);
 	}
 	
-//	@AfterMethod
-//	public void tearDown() {
+	@AfterMethod
+	public void tearDown() {
 //		pageLinks.Logout();
-//		super.tearDown();
-//	}
+		super.tearDown();
+	}
 
 }
