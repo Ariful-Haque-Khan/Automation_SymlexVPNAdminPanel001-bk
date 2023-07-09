@@ -5,19 +5,11 @@
 package com.crm.qa.tests;
 
 import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.URL;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
-
-import com.admin.qa.pages.MailAddressSectionLinks;
-import com.admin.qa.pages.RateSectionLinks;
 import com.admin.qa.pages.ResellerPanelSectionLinks;
-import com.admin.qa.pages.ResellerSectionLinks;
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.ContactsPage;
 import com.crm.qa.pages.HomePage;
@@ -67,7 +59,7 @@ public class SuccessStatusTestforResellerPanelSection extends TestBase{
 		resellerPanelSectionLinks.openAddFormLinks();
 		String title;
 		title = resellerPanelSectionLinks.getTextfromAddNewResellerPanel();
-	    Assert.assertEquals(title, "New Customize Reseller Panel  x");
+	    Assert.assertEquals(title, "New Customize Reseller Panel");
 	}
 	
 //	@AfterMethod

@@ -43,7 +43,6 @@ public class SuccessStatusTestforIPManagement extends TestBase{
 	
 	
 	/* 02. Check IP List Page is okay and return http status 200! */
-	@Ignore
 	@Test(priority=1)
 	public void IPListTest() throws IOException {
 		ipManagementSectionLinks = loginPage.loginPagelinkinIPManagement(props.getProperty("username"),props.getProperty("password"));
@@ -60,7 +59,6 @@ public class SuccessStatusTestforIPManagement extends TestBase{
 	}
 	
 	/* 03. Check IP Bundle Page is okay and return http status 200! */
-	@Ignore
 	@Test(priority=2)
 	public void TestIPBundleLink() throws IOException {
 		ipManagementSectionLinks = loginPage.loginPagelinkinIPManagement(props.getProperty("username"),props.getProperty("password"));
@@ -77,7 +75,6 @@ public class SuccessStatusTestforIPManagement extends TestBase{
 	}
 	
 	/* 04. Check Lots Name With IP BundleList Page is okay and return http status 200! */
-	@Ignore
 	@Test(priority=3)
 	public void TestLotsNameWithIpBundleList() throws IOException {
 		ipManagementSectionLinks = loginPage.loginPagelinkinIPManagement(props.getProperty("username"),props.getProperty("password"));
@@ -94,7 +91,6 @@ public class SuccessStatusTestforIPManagement extends TestBase{
 	}
 	
 	/* 05. Check Server Lock Schedule List Page is okay and return http status 200! */
-	@Ignore
 	@Test(priority=4)
 	public void TestServerLockScheduleList() throws IOException {
 		ipManagementSectionLinks = loginPage.loginPagelinkinIPManagement(props.getProperty("username"),props.getProperty("password"));
@@ -110,10 +106,24 @@ public class SuccessStatusTestforIPManagement extends TestBase{
 	    Assert.assertEquals(res, 200);
 	}
 	
-//	@AfterMethod
-//	public void tearDown() {
-//		pageLinks.Logout();
-//		super.tearDown();
-//	}
+	@Test(priority=5)
+	public void TestCountriesWithIPBundleList() throws IOException {
+		ipManagementSectionLinks = loginPage.loginPagelinkinIPManagement(props.getProperty("username"),props.getProperty("password"));
+		//ipManagementSectionLinks.clickOnIPManagementDropDownLink(); // depend on mail address(82) parent drop down.
+		
+		ipManagementSectionLinks.openCountriesWithBundleList();
+		
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	@AfterMethod
+	public void tearDown() {
+		super.tearDown();	
+	}
 
 }
