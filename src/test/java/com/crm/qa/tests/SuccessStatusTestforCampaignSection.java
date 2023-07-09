@@ -55,7 +55,6 @@ public class SuccessStatusTestforCampaignSection extends TestBase{
 	
 	
 	/* 01. Check Campaign List is okay and return http status 200! */
-	@Ignore
 	@Test(priority=1)
 	public void CampaignListLinkTest() throws IOException {
 		campaignsSectionLinks = loginPage.loginCampaignsSectionLinks(props.getProperty("username"),props.getProperty("password"));
@@ -128,7 +127,6 @@ public class SuccessStatusTestforCampaignSection extends TestBase{
 	 		int res = cn.getResponseCode();
 		    Assert.assertEquals(res, 200);
 	}
-	@Ignore
 	/* 03. Check Affiliator List is okay and return http status 200! */
 	
 	@Test(priority=3)
@@ -164,7 +162,7 @@ public class SuccessStatusTestforCampaignSection extends TestBase{
 	}
 	
 	/* 05. Check Affiliator Payment Gateways Page is okay and return http status 200! */
-	@Ignore
+	
 	@Test(priority=5)
 	public void AffiliatorPaymentGatewaysLinkTest() throws IOException {
 		campaignsSectionLinks = loginPage.loginCampaignsSectionLinks(props.getProperty("username"),props.getProperty("password"));
@@ -181,13 +179,28 @@ public class SuccessStatusTestforCampaignSection extends TestBase{
 	}
 	
 	/* 06. Check Affiliator Requests Page is okay and return http status 200! */
-	@Ignore
 	@Test(priority=6)
 	public void AffiliatorRequestsLinkTest() throws IOException {
 		campaignsSectionLinks = loginPage.loginCampaignsSectionLinks(props.getProperty("username"),props.getProperty("password"));
 		//campaignsSectionLinks.clickOnCampaignDropDownLink(); // depend on mail address(82) parent drop down.
 		
 		campaignsSectionLinks.clickOnAfiliatorRequestsLink();
+		
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 07. Check Affiliator Requests Page is okay and return http status 200! */
+	@Test(priority=6)
+	public void ReferralWithdrawTnxListPageTest() throws IOException {
+		campaignsSectionLinks = loginPage.loginCampaignsSectionLinks(props.getProperty("username"),props.getProperty("password"));
+		//campaignsSectionLinks.clickOnCampaignDropDownLink(); // depend on mail address(82) parent drop down.
+		
+		campaignsSectionLinks.openReferralWithdrawTnxListPage();
 		
 		String strUrl = driver.getCurrentUrl();
 		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();

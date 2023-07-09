@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.crm.qa.tests.SuccessStatusReportsOfflinePINSection">
+      <class name="com.crm.qa.tests.SuccessStatusTestforSSLCommerzTransactionSection">
         <methods>
+          <include name="tearDown"/>
+          <include name="TestopenSuccessTNXLast30ReportLink"/>
           <include name="setUp"/>
-          <include name="TestHourlyActivePinsReportLink"/>
         </methods>
-      </class> <!-- com.crm.qa.tests.SuccessStatusReportsOfflinePINSection -->
+      </class> <!-- com.crm.qa.tests.SuccessStatusTestforSSLCommerzTransactionSection -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
