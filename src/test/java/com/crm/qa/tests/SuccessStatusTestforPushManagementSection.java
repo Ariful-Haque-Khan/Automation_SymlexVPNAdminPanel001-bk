@@ -42,7 +42,6 @@ public class SuccessStatusTestforPushManagementSection extends TestBase{
 	}
 	
 	/* 01. Check Roles List is okay and return http status 200! */
-	@Ignore
 	@Test(priority=1)
 	public void TestRoleListLink() throws IOException {
 		pushManagementSectionLinks = loginPage.loginPushManagementSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
@@ -55,7 +54,6 @@ public class SuccessStatusTestforPushManagementSection extends TestBase{
 	}
 	
 	/* 02. Check Automated Push List is okay and return http status 200! */
-	@Ignore
 	@Test(priority=2)
 	public void TestMenusListLink() throws IOException {
 		pushManagementSectionLinks = loginPage.loginPushManagementSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
@@ -120,10 +118,10 @@ public class SuccessStatusTestforPushManagementSection extends TestBase{
 	    Assert.assertEquals(title, "Notice List");
 	}
 	
-//	@AfterMethod
-//	public void tearDown() {
-//		pageLinks.Logout();
-//		super.tearDown();
-//	}
+	@AfterMethod
+	public void tearDown() {
+		super.tearDown();	
+	}
+	
 
 }

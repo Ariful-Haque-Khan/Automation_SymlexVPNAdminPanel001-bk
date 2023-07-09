@@ -46,4 +46,10 @@ public class IPManagementSectionLinks extends TestBase{
 		return new IPManagementSectionLinks();
 	}
 	
+	//06. Open URL of Countries With IP Bundle
+	public IPManagementSectionLinks openCountriesWithBundleList() {
+		driver.get(props.getProperty("url")+"ip/countriesWithBundle");
+		return new IPManagementSectionLinks();
+	}
+	
 }

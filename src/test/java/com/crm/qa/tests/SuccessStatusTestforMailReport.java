@@ -11,7 +11,6 @@ import java.net.URL;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import com.admin.qa.pages.MailAddressSectionLinks;
@@ -42,14 +41,14 @@ public class SuccessStatusTestforMailReport extends TestBase{
 	}
 	
 	
-	/* 02. Check Mail List Page is okay and return http status 200! */
+	/* 01. Check Mail List Page is okay and return http status 200! */
 	
 	@Test(priority=1)
 	public void TestMailListLink() throws IOException {
 		mailAddressSectionLinks = loginPage.loginMailAddressSectionLinks(props.getProperty("username"),props.getProperty("password"));
 		//ipManagementSectionLinks.clickOnIPManagementDropDownLink(); // depend on mail address(82) parent drop down.
 		
-		mailAddressSectionLinks.clickOnMailListLink();
+		mailAddressSectionLinks.opennMailAddress();
 		
 		String strUrl = driver.getCurrentUrl();
 		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
@@ -59,14 +58,14 @@ public class SuccessStatusTestforMailReport extends TestBase{
 	    Assert.assertEquals(res, 200);
 	}
 	
-	/* 03. Check Resellers Mail List Link Page is okay and return http status 200! */
+	/* 02. Check Resellers Mail List Link Page is okay and return http status 200! */
 	
 	@Test(priority=2)
 	public void TestResellersMailListLink() throws IOException {
 		mailAddressSectionLinks = loginPage.loginMailAddressSectionLinks(props.getProperty("username"),props.getProperty("password"));
 		//ipManagementSectionLinks.clickOnIPManagementDropDownLink(); // depend on mail address(82) parent drop down.
 		
-		mailAddressSectionLinks.clickOnResellersMailListLink();
+		mailAddressSectionLinks.openResellerMailsListLink();
 		
 		String strUrl = driver.getCurrentUrl();
 		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
@@ -76,10 +75,26 @@ public class SuccessStatusTestforMailReport extends TestBase{
 	    Assert.assertEquals(res, 200);
 	}
 	
-//	@AfterMethod
-//	public void tearDown() {
-//		pageLinks.Logout();
-//		super.tearDown();
-//	}
+	/* 02. Check Promotional Email List Link Page is okay and return http status 200! */
+	
+	@Test(priority=2)
+	public void TestPromotionalEmailsListLink() throws IOException {
+		mailAddressSectionLinks = loginPage.loginMailAddressSectionLinks(props.getProperty("username"),props.getProperty("password"));
+		//ipManagementSectionLinks.clickOnIPManagementDropDownLink(); // depend on mail address(82) parent drop down.
+		
+		mailAddressSectionLinks.openPromotionalEmailListLink();
+		
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	@AfterMethod
+	public void tearDown() {
+		super.tearDown();
+	}
 
 }

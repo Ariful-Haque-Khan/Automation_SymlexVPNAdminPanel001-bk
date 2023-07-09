@@ -48,7 +48,6 @@ public class SuccessStatusTestforUserPermissionSection extends TestBase{
 	
 	
 	/* 01. Check Roles List is okay and return http status 200! */
-	@Ignore
 	@Test(priority=1)
 	public void TestRoleListLink() throws IOException {
 		userPermissionSectionLinks = loginPage.loginUserPermissionSectionLinksSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
@@ -61,7 +60,6 @@ public class SuccessStatusTestforUserPermissionSection extends TestBase{
 	}
 	
 	/* 02. Check Menu List is okay and return http status 200! */
-	@Ignore
 	@Test(priority=2)
 	public void TestMenusListLink() throws IOException {
 		userPermissionSectionLinks = loginPage.loginUserPermissionSectionLinksSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
@@ -72,7 +70,6 @@ public class SuccessStatusTestforUserPermissionSection extends TestBase{
 	}
 	
 	/* 03. Check RoleMenuPermissions Links List is okay and return http status 200! */
-	@Ignore
 	@Test(priority=2)
 	public void TestRoleMenuPermissionsListLink() throws IOException {
 		userPermissionSectionLinks = loginPage.loginUserPermissionSectionLinksSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
@@ -83,7 +80,7 @@ public class SuccessStatusTestforUserPermissionSection extends TestBase{
 	}
 	
 	/* 04. Check User Menu Permissions List is okay and return http status 200! */
-	@Ignore
+
 	@Test(priority=2)
 	public void TestUserMenuPermissionsListLink() throws IOException {
 		userPermissionSectionLinks = loginPage.loginUserPermissionSectionLinksSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
@@ -94,7 +91,6 @@ public class SuccessStatusTestforUserPermissionSection extends TestBase{
 	}
 	
 	/* 05. Check User List Links List is okay and return http status 200! */
-	@Ignore
 	@Test(priority=2)
 	public void TestUserListLink() throws IOException {
 		userPermissionSectionLinks = loginPage.loginUserPermissionSectionLinksSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
@@ -105,7 +101,6 @@ public class SuccessStatusTestforUserPermissionSection extends TestBase{
 	}
 	
 	/* 06. Check User List Links List is okay and return http status 200! */
-	@Ignore
 	@Test(priority=2)
 	public void TestRoleUsersListLink() throws IOException {
 		userPermissionSectionLinks = loginPage.loginUserPermissionSectionLinksSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
@@ -115,10 +110,9 @@ public class SuccessStatusTestforUserPermissionSection extends TestBase{
 	    Assert.assertEquals(title, "Role Users List");
 	}
 	
-//	@AfterMethod
-//	public void tearDown() {
-//		pageLinks.Logout();
-//		super.tearDown();
-//	}
+	@AfterMethod
+	public void tearDown() {
+		super.tearDown();
+	}
 
 }
