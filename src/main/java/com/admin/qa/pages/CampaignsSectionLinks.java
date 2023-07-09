@@ -57,4 +57,10 @@ public class CampaignsSectionLinks extends TestBase{
 		driver.get(props.getProperty("url")+"campaign/affiliatorRequests");
 		return new CampaignsSectionLinks();
 	}
+	
+	//08. Open URL of  Referral Withdraw Tnx List page Link
+	public CampaignsSectionLinks openReferralWithdrawTnxListPage() {
+		driver.get(props.getProperty("url")+"campaign/referralWithdrawTnx");
+		return new CampaignsSectionLinks();
+	}
 }

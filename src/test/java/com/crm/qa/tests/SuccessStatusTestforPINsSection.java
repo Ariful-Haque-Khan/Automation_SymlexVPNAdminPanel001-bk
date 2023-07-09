@@ -70,7 +70,6 @@ public class SuccessStatusTestforPINsSection extends TestBase{
 	
 	
 	/* 01. Check Campaign List is okay and return http status 200! */
-	@Ignore
 	@Test(priority=1)
 	public void TestPinListLinks() throws IOException {
 		pinSSectionLinks = loginPage.loginPINsSectionLinksSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));

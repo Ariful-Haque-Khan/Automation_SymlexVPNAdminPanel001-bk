@@ -10,12 +10,17 @@ import org.openqa.selenium.support.PageFactory;
 import com.admin.qa.pages.ApplicationSectionLinks;
 import com.admin.qa.pages.CampaignsSectionLinks;
 import com.admin.qa.pages.PINsSectionLinks;
+import com.admin.qa.pages.PaymentRecharge;
 import com.admin.qa.pages.PushManagementSectionLinks;
 import com.admin.qa.pages.RateSectionLinks;
+import com.admin.qa.pages.ReportLog;
 import com.admin.qa.pages.ReportsOfflinePINSectionLinks;
 import com.admin.qa.pages.ResellerPanelSectionLinks;
+import com.admin.qa.pages.ResellerReports;
 import com.admin.qa.pages.ResellerRprtOnlinePINSectionLinks;
 import com.admin.qa.pages.ResellerSectionLinks;
+import com.admin.qa.pages.SSLCommerzTransaction;
+import com.admin.qa.pages.SuccessStatusServerConnectionSection;
 import com.admin.qa.pages.VPNServerSectionLinks;
 import com.admin.qa.pages.UserPermissionSectionLinks;
 import com.admin.qa.pages.IPManagementSectionLinks;
@@ -204,5 +209,50 @@ public class LoginPage extends TestBase{
 		loginBtn.click();
 		
 		return new AllLinksFromDB(); //HomePage is the landing page for LoginPage
+	}
+	
+	public ResellerReports ResellerReportsLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new ResellerReports(); //HomePage is the landing page for LoginPage
+	}
+	
+	public SSLCommerzTransaction SSLCommerzTransactionLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new SSLCommerzTransaction(); //HomePage is the landing page for LoginPage
+	}
+	
+	public PaymentRecharge PaymentRechargeLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new PaymentRecharge(); //HomePage is the landing page for LoginPage
+	}
+	
+	public SuccessStatusServerConnectionSection SuccessStatusServerConnectionSectionLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new SuccessStatusServerConnectionSection(); //HomePage is the landing page for LoginPage
+	}
+	
+	public ReportLog ReportLogLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new ReportLog(); //HomePage is the landing page for LoginPage
 	}
 }

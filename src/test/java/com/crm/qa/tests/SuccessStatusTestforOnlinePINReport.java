@@ -75,24 +75,6 @@ public class SuccessStatusTestforOnlinePINReport extends TestBase{
 	    int res = cn.getResponseCode();
 	    Assert.assertEquals(res, 200);
 	}
-
-	
-	/* 03. Check Resellers Mail List Link Page is okay and return http status 200! */
-	
-	@Test(priority=1)
-	public void TestOnlinePinsYallavpnLink() throws IOException {
-		onlinePINReportSuccessStatusSectionLinks = loginPage.loginOnlinePINReportSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
-		//ipManagementSectionLinks.clickOnIPManagementDropDownLink(); // depend on mail address(82) parent drop down.
-		
-		onlinePINReportSuccessStatusSectionLinks.clickOnOnlinePinsYallavpnLink();
-		
-		String strUrl = driver.getCurrentUrl();
-		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
-	    cn.setRequestMethod("HEAD");
-	    cn.connect();
-	    int res = cn.getResponseCode();
-	    Assert.assertEquals(res, 200);
-	}
 	
 	/* 04. Check IP Bundle Page is okay and return http status 200! */
 
@@ -128,11 +110,192 @@ public class SuccessStatusTestforOnlinePINReport extends TestBase{
 	    Assert.assertEquals(res, 200);
 	}
 	
+	/* 06. Check Country Wise Online PINs Page is okay and return http status 200! */
+
+	@Test(priority=1)
+	public void TestCountryWiseOnlinePINsLink() throws IOException {
+		onlinePINReportSuccessStatusSectionLinks = loginPage.loginOnlinePINReportSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
+		//ipManagementSectionLinks.clickOnIPManagementDropDownLink(); // depend on mail address(82) parent drop down.
+		
+		onlinePINReportSuccessStatusSectionLinks.openCountryWiseOnlinePinsPage();
+		
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
 	
-//	@AfterMethod
-//	public void tearDown() {
+	/* 07. Check iOS Payment log Page is okay and return http status 200! */
+
+	@Test(priority=1)
+	public void TestiOSPaymentlogLink() throws IOException {
+		onlinePINReportSuccessStatusSectionLinks = loginPage.loginOnlinePINReportSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
+		//ipManagementSectionLinks.clickOnIPManagementDropDownLink(); // depend on mail address(82) parent drop down.
+		
+		onlinePINReportSuccessStatusSectionLinks.openiOSPaymentLogReportPage();
+		
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 08. Check iOS Payment log Page is okay and return http status 200! */
+
+	@Test(priority=1)
+	public void TestCampaignSalesReportLink() throws IOException {
+		onlinePINReportSuccessStatusSectionLinks = loginPage.loginOnlinePINReportSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
+		//ipManagementSectionLinks.clickOnIPManagementDropDownLink(); // depend on mail address(82) parent drop down.
+		
+		onlinePINReportSuccessStatusSectionLinks.openCampaignSaleReport();
+		
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 09. Check iOS RTDN Receipt Page is okay and return http status 200! */
+
+	@Test(priority=1)
+	public void TestiOSRTDNReceiptLink() throws IOException {
+		onlinePINReportSuccessStatusSectionLinks = loginPage.loginOnlinePINReportSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
+		//ipManagementSectionLinks.clickOnIPManagementDropDownLink(); // depend on mail address(82) parent drop down.
+		
+		onlinePINReportSuccessStatusSectionLinks.openiOSRTDNReceiptReport();
+		
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 10. Check Offline Payment Page is okay and return http status 200! */
+
+	@Test(priority=1)
+	public void TestOfflinePaymentLink() throws IOException {
+		onlinePINReportSuccessStatusSectionLinks = loginPage.loginOnlinePINReportSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
+		//ipManagementSectionLinks.clickOnIPManagementDropDownLink(); // depend on mail address(82) parent drop down.
+		
+		onlinePINReportSuccessStatusSectionLinks.openOfflinePaymentReport();
+		
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 11. Check Package Wise Online Sales Page is okay and return http status 200! */
+
+	@Test(priority=1)
+	public void TestPackageWiseOnlineSalesLink() throws IOException {
+		onlinePINReportSuccessStatusSectionLinks = loginPage.loginOnlinePINReportSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
+		//ipManagementSectionLinks.clickOnIPManagementDropDownLink(); // depend on mail address(82) parent drop down.
+		
+		onlinePINReportSuccessStatusSectionLinks.openPackageWiseOnlineSalesReport();
+		
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 12. Check Package Online Silent PINs Page is okay and return http status 200! */
+
+	@Test(priority=1)
+	public void TestOnlineSilentPINsLink() throws IOException {
+		onlinePINReportSuccessStatusSectionLinks = loginPage.loginOnlinePINReportSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
+		
+		onlinePINReportSuccessStatusSectionLinks.openOnlineSilentUsersReport();
+		
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 13. Check Monthly Sales Summary Page is okay and return http status 200! */
+
+	@Test(priority=1)
+	public void TestMonthlySalesSummeryLink() throws IOException {
+		onlinePINReportSuccessStatusSectionLinks = loginPage.loginOnlinePINReportSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
+		
+		onlinePINReportSuccessStatusSectionLinks.openMonthlySalesSummaryReport();
+		
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 14. Check Daily Sales Summary Page is okay and return http status 200! */
+
+	@Test(priority=1)
+	public void TestDailySalesSummeryLink() throws IOException {
+		onlinePINReportSuccessStatusSectionLinks = loginPage.loginOnlinePINReportSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
+		
+		onlinePINReportSuccessStatusSectionLinks.openDailyOnlineSalesSummeryReport();
+		
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 15. Check Daily Signup Report Page is okay and return http status 200! */
+
+	@Test(priority=1)
+	public void TestDailySignupReportLink() throws IOException {
+		onlinePINReportSuccessStatusSectionLinks = loginPage.loginOnlinePINReportSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
+		
+		onlinePINReportSuccessStatusSectionLinks.openSignupPinDailyReport();
+		
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	/* 16. Check Online Renew Trend Calendar Report Page is okay and return http status 200! */
+
+	@Test(priority=1)
+	public void TestOnlineRenewTrendCalendarLink() throws IOException {
+		onlinePINReportSuccessStatusSectionLinks = loginPage.loginOnlinePINReportSuccessStatusSectionLinks(props.getProperty("username"),props.getProperty("password"));
+		
+		onlinePINReportSuccessStatusSectionLinks.openOnlinRenewTrendCalenderReport();
+		
+		String strUrl = driver.getCurrentUrl();
+		HttpURLConnection cn = (HttpURLConnection)new URL(strUrl).openConnection();
+	    cn.setRequestMethod("HEAD");
+	    cn.connect();
+	    int res = cn.getResponseCode();
+	    Assert.assertEquals(res, 200);
+	}
+	
+	@AfterMethod
+	public void tearDown() {
 //		pageLinks.Logout();
-//		super.tearDown();
-//	}
+		super.tearDown();
+	}
 
 }
