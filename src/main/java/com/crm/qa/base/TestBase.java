@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
@@ -60,9 +61,12 @@ public class TestBase {
 			//C:\project\eclipse
 			//E:\\selenium\\
 			driver = new EdgeDriver(); // launch edge browser
+			EdgeOptions options = new EdgeOptions();
+			//capability = DesiredCapabilities.edge();
+			
 		} else if (props.getProperty("browser").equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver",
-					"C:\\Data\\Selenium\\Softwares\\geckodriver-v0.29.1-win64\\geckodriver.exe");
+					"C:\\project\\eclipse\\geko\\geckodriver.exe");
 			driver = new FirefoxDriver(); // launch firefox browser
 		}
 		e_driver = new EventFiringWebDriver(driver);
