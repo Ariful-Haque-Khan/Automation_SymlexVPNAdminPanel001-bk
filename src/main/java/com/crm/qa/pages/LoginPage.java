@@ -26,6 +26,7 @@ import com.admin.qa.pages.UserPermissionSectionLinks;
 import com.admin.qa.pages.IPManagementSectionLinks;
 import com.admin.qa.pages.MailAddressSectionLinks;
 import com.admin.qa.pages.OnlinePINReportsSectionLinks;
+import com.admin.qa.function.AddPINValidity;
 import com.admin.qa.pages.AllLinksFromDB;
 import com.crm.qa.base.TestBase;
 
@@ -254,5 +255,14 @@ public class LoginPage extends TestBase{
 		loginBtn.click();
 		
 		return new ReportLog(); //HomePage is the landing page for LoginPage
+	}
+	
+	public AddPINValidity addPINValidityLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new AddPINValidity(); //HomePage is the landing page for LoginPage
 	}
 }
