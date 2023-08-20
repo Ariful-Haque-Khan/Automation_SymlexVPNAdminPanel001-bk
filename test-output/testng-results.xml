@@ -1,61 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-13T15:54:09 BDT" name="Default suite" finished-at="2023-04-13T15:55:19 BDT" duration-ms="70405">
+  <suite started-at="2023-08-20T13:03:20 BDT" name="Default suite" finished-at="2023-08-20T13:03:39 BDT" duration-ms="18526">
     <groups>
     </groups>
-    <test started-at="2023-04-13T15:54:09 BDT" name="Default test" finished-at="2023-04-13T15:55:19 BDT" duration-ms="70405">
-      <class name="com.crm.qa.tests.SuccessStatusTestforResellerRprtOnlinePINSection">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.crm.qa.tests.SuccessStatusTestforResellerRprtOnlinePINSection@702b8b12]" started-at="2023-04-13T15:54:09 BDT" name="setUp" finished-at="2023-04-13T15:54:16 BDT" duration-ms="6703" status="PASS">
+    <test started-at="2023-08-20T13:03:20 BDT" name="Default test" finished-at="2023-08-20T13:03:39 BDT" duration-ms="18526">
+      <class name="com.functional.qa.test.FunctionalTestforUserPINSection">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.functional.qa.test.FunctionalTestforUserPINSection@73700b80]" started-at="2023-08-20T13:03:20 BDT" name="setUp" finished-at="2023-08-20T13:03:30 BDT" duration-ms="9786" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TestAllOnlineTransactionLink()[pri:1, instance:com.crm.qa.tests.SuccessStatusTestforResellerRprtOnlinePINSection@702b8b12]" started-at="2023-04-13T15:54:16 BDT" name="TestAllOnlineTransactionLink" finished-at="2023-04-13T15:54:28 BDT" duration-ms="12202" status="PASS">
+        <test-method signature="TestRoleListLink()[pri:1, instance:com.functional.qa.test.FunctionalTestforUserPINSection@73700b80]" started-at="2023-08-20T13:03:30 BDT" name="TestRoleListLink" finished-at="2023-08-20T13:03:39 BDT" duration-ms="8677" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestAllOnlineTransactionLink -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.crm.qa.tests.SuccessStatusTestforResellerRprtOnlinePINSection@702b8b12]" started-at="2023-04-13T15:54:28 BDT" name="tearDown" finished-at="2023-04-13T15:54:28 BDT" duration-ms="332" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.crm.qa.tests.SuccessStatusTestforResellerRprtOnlinePINSection@702b8b12]" started-at="2023-04-13T15:54:28 BDT" name="setUp" finished-at="2023-04-13T15:54:34 BDT" duration-ms="6139" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="TestBDPlusOnlineActiveSubscriptionLink()[pri:1, instance:com.crm.qa.tests.SuccessStatusTestforResellerRprtOnlinePINSection@702b8b12]" started-at="2023-04-13T15:54:34 BDT" name="TestBDPlusOnlineActiveSubscriptionLink" finished-at="2023-04-13T15:54:45 BDT" duration-ms="10661" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestBDPlusOnlineActiveSubscriptionLink -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.crm.qa.tests.SuccessStatusTestforResellerRprtOnlinePINSection@702b8b12]" started-at="2023-04-13T15:54:45 BDT" name="tearDown" finished-at="2023-04-13T15:54:45 BDT" duration-ms="346" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.crm.qa.tests.SuccessStatusTestforResellerRprtOnlinePINSection@702b8b12]" started-at="2023-04-13T15:54:45 BDT" name="setUp" finished-at="2023-04-13T15:54:51 BDT" duration-ms="5578" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="TestKeymaxOnlineActiveSubscriptionLink()[pri:1, instance:com.crm.qa.tests.SuccessStatusTestforResellerRprtOnlinePINSection@702b8b12]" started-at="2023-04-13T15:54:51 BDT" name="TestKeymaxOnlineActiveSubscriptionLink" finished-at="2023-04-13T15:55:02 BDT" duration-ms="10808" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestKeymaxOnlineActiveSubscriptionLink -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.crm.qa.tests.SuccessStatusTestforResellerRprtOnlinePINSection@702b8b12]" started-at="2023-04-13T15:55:02 BDT" name="tearDown" finished-at="2023-04-13T15:55:02 BDT" duration-ms="269" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.crm.qa.tests.SuccessStatusTestforResellerRprtOnlinePINSection@702b8b12]" started-at="2023-04-13T15:55:02 BDT" name="setUp" finished-at="2023-04-13T15:55:07 BDT" duration-ms="5429" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="TestRedcardOnlineActiveSubscriptionLink()[pri:1, instance:com.crm.qa.tests.SuccessStatusTestforResellerRprtOnlinePINSection@702b8b12]" started-at="2023-04-13T15:55:07 BDT" name="TestRedcardOnlineActiveSubscriptionLink" finished-at="2023-04-13T15:55:19 BDT" duration-ms="11574" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestRedcardOnlineActiveSubscriptionLink -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.crm.qa.tests.SuccessStatusTestforResellerRprtOnlinePINSection@702b8b12]" started-at="2023-04-13T15:55:19 BDT" name="tearDown" finished-at="2023-04-13T15:55:19 BDT" duration-ms="296" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.crm.qa.tests.SuccessStatusTestforResellerRprtOnlinePINSection -->
+        </test-method> <!-- TestRoleListLink -->
+      </class> <!-- com.functional.qa.test.FunctionalTestforUserPINSection -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
