@@ -27,6 +27,8 @@ import com.admin.qa.pages.IPManagementSectionLinks;
 import com.admin.qa.pages.MailAddressSectionLinks;
 import com.admin.qa.pages.OnlinePINReportsSectionLinks;
 import com.admin.qa.function.AddPINValidity;
+import com.admin.qa.function.OnlinePINActivation;
+import com.admin.qa.function.OnlinePINMigration;
 import com.admin.qa.pages.AllLinksFromDB;
 import com.crm.qa.base.TestBase;
 
@@ -264,5 +266,23 @@ public class LoginPage extends TestBase{
 		loginBtn.click();
 		
 		return new AddPINValidity(); //HomePage is the landing page for LoginPage
+	}
+	
+	public OnlinePINActivation onlinePINActivationLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new OnlinePINActivation(); //HomePage is the landing page for LoginPage
+	}
+	
+	public OnlinePINMigration onlinePINMigrationLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new OnlinePINMigration(); //HomePage is the landing page for LoginPage
 	}
 }
