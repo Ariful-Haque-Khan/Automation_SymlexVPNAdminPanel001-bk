@@ -1,5 +1,6 @@
 package com.admin.qa.function;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,7 +14,6 @@ public class AddPINValidity extends TestBase{
 	public AddPINValidity(){
 		PageFactory.initElements(driver, this);
 	}
-	
 	
 	public EmailReport openEmailListReport() {
 		driver.get(props.getProperty("url")+"client/pinValidity");
