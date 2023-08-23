@@ -22,11 +22,18 @@ public class OnlinePINActivation extends TestBase{
 	}
 	@FindBy(name="payment_gate_way")
 	WebElement xxxx;
+	
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[2]/form/div/div[1]/div[2]/div[1]/div/span/span[1]/span/span[1]")
+	WebElement xyz;
 	//01. Select Payment Gateway
 	public OnlinePINActivation selectPaymentGateway() {
-		//Select drp = new Select(driver.findElement(By.name("payment_gate_way")));
+		Select drp = new Select(driver.findElement(By.name("payment_gate_way")));
 		//drp.selectByIndex();
 		xxxx.click();
+		try {Thread.sleep(6000);} catch (InterruptedException ie) {}
+		//xyz.click();
+		drp.selectByVisibleText("Offline Payment");
+		//xxxx.click();
 		return new OnlinePINActivation();
 	}
 	
@@ -71,7 +78,7 @@ public class OnlinePINActivation extends TestBase{
 	}
 	
 	//06. Element of Pop Up Yes Button
-	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[2]/form/div/div[2]/input")
+	@FindBy(xpath="/html/body/div[4]/div[2]/div/div/div/div/div/div/div/div[4]/button[1]")
 	WebElement PopUpYesButtonElement;
 	
 	//06.  Type to the Verify and Activate Button
@@ -79,6 +86,18 @@ public class OnlinePINActivation extends TestBase{
 		Thread.sleep(5000);
 		//wait.Until(ExpectedConditions.elementToBeClickable (PopUpYesButtonElement));
 		PopUpYesButtonElement.click();
+		return new AddPINValidity(); 
+	}
+	
+	//07. Element of Pop Up Yes Button
+	@FindBy(xpath="/html/body/div[4]/div[2]/div/div/div/div/div/div/div/div[4]/button[2]")
+	WebElement PopUpNoButtonElement;
+	
+	//07.  Type to the Verify and Activate Button
+	public AddPINValidity clickPopUpNoButton() throws InterruptedException {
+		Thread.sleep(5000);
+		//wait.Until(ExpectedConditions.elementToBeClickable (PopUpYesButtonElement));
+		PopUpNoButtonElement.click();
 		return new AddPINValidity(); 
 	}
 }
