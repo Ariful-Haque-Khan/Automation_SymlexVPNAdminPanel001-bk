@@ -5,7 +5,7 @@
     <classes>
       <class name="com.functional.qa.test.FunctionalTestforUserPINSection">
         <methods>
-          <include name="TestOnlinePINMigrationForm"/>
+          <include name="TestAddPINJailForm"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.functional.qa.test.FunctionalTestforUserPINSection -->
