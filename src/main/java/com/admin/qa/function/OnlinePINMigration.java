@@ -81,4 +81,14 @@ public class OnlinePINMigration extends TestBase{
 		return new OnlinePINMigration();
 	}
 	
+	//07. Element of Pop Up Yes Button
+	@FindBy(xpath="/html/body/div[4]/div[2]/div/div/div/div/div/div/div/div[4]/button[2]")
+	WebElement popUpNoButtonElement;
+	
+	//07. Type to the Migration Now Button
+	public OnlinePINMigration clickOnpopUpNoButton() {
+		popUpNoButtonElement.click();
+		return new OnlinePINMigration();
+	}
+	
 }
