@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
+import com.admin.qa.function.AddNewResellerClient;
 import com.admin.qa.function.AddPINJail;
 import com.admin.qa.function.AddPINValidity;
 import com.admin.qa.function.OnlinePINActivation;
@@ -32,6 +33,7 @@ public class FunctionalTestforUserPINSection extends TestBase{
 	OnlinePINActivation onlinePINActivation;
 	OnlinePINMigration onlinePINMigration;
 	SendBackgroundorSilentPushtoSinglePIN sendBackgroundorSilentPushtoSinglePIN;
+	AddNewResellerClient addNewResellerClient;
 	AddPINJail addPINJail;
 	ContactsPage conPage;
 	TestUtils testUtils;
@@ -109,19 +111,28 @@ public class FunctionalTestforUserPINSection extends TestBase{
 	}
 	
 	/* 05. Test Send Background/Silent Push to Single PIN!!! */
-	@Test(priority=1)
-	//@Ignore
+	//@Test(priority=1)
+	@Ignore
 	public void TestSendBackgroundorSilentPushtoSinglePINForm() throws IOException, InterruptedException {
 		sendBackgroundorSilentPushtoSinglePIN = loginPage.sendBackgroundorSilentPushtoSinglePINLogin(props.getProperty("username"),props.getProperty("password"));
 		
 		sendBackgroundorSilentPushtoSinglePIN.openSendBackgroundorSilentPushtoSinglePINPage();
-		sendBackgroundorSilentPushtoSinglePIN.searchandtypeelementDropDownAppNameField();
-		sendBackgroundorSilentPushtoSinglePIN.searchandtypeelementDropDownPushTypeField();
-		sendBackgroundorSilentPushtoSinglePIN.typeInpininCSVInputField();
-		sendBackgroundorSilentPushtoSinglePIN.clickONSaveButton();
+		sendBackgroundorSilentPushtoSinglePIN.searchandtypeelementDropDownAppNameField();/* Select Push Type from the Drop Down in App Name Field */
+		sendBackgroundorSilentPushtoSinglePIN.searchandtypeelementDropDownPushTypeField();/* Select Push Type from the Drop Down in Push Type Field */
+		sendBackgroundorSilentPushtoSinglePIN.typeInpininCSVInputField();/*Type in the PIN in CSV Input Field.*/
+		sendBackgroundorSilentPushtoSinglePIN.clickONSaveButton();/*click on the save button.*/
 		try {Thread.sleep(4000);} catch (InterruptedException ie) {}
 		sendBackgroundorSilentPushtoSinglePIN.clickOnpopUpYesButton(); /* click on the Yes Button in the pop up alert form. */
 		//sendBackgroundorSilentPushtoSinglePIN.clickOnpopUpNoButton();/*click on the Pop Up No Button.*/
+	}
+	
+	/* 05. Test Send Background/Silent Push to Single PIN!!! */
+	@Test(priority=1)
+	//@Ignore
+	public void TestAddNewResellerClientForm() throws IOException, InterruptedException {
+		addNewResellerClient = loginPage.addNewResellerClientLogin(props.getProperty("username"),props.getProperty("password"));
+		addNewResellerClient.openaddNewResellerForm();
+		addNewResellerClient.typeToPINinCSVorNewLine();
 	}
 	
 	/*
