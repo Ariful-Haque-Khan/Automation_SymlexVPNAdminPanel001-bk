@@ -1,5 +1,6 @@
 /*
- * @author: Md. Abdullah Al Rumy, Kolpolok Limited.
+ * @author: Md. Abdullah Al Rumy, 
+ * @company: Kolpolok Limited.
 */
 
 package com.functional.qa.test;
@@ -15,6 +16,7 @@ import com.admin.qa.function.AddPINJail;
 import com.admin.qa.function.AddPINValidity;
 import com.admin.qa.function.OnlinePINActivation;
 import com.admin.qa.function.OnlinePINMigration;
+import com.admin.qa.function.SendBackgroundorSilentPushtoSinglePIN;
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.ContactsPage;
 import com.crm.qa.pages.HomePage;
@@ -29,6 +31,7 @@ public class FunctionalTestforUserPINSection extends TestBase{
 	AddPINValidity addPINValidity;
 	OnlinePINActivation onlinePINActivation;
 	OnlinePINMigration onlinePINMigration;
+	SendBackgroundorSilentPushtoSinglePIN sendBackgroundorSilentPushtoSinglePIN;
 	AddPINJail addPINJail;
 	ContactsPage conPage;
 	TestUtils testUtils;
@@ -90,19 +93,35 @@ public class FunctionalTestforUserPINSection extends TestBase{
 		onlinePINMigration.clickOnmigrationNowButton(); /*Click on the Migration Now Button.*/
 		try {Thread.sleep(7000);} catch (InterruptedException ie) {}
 		onlinePINMigration.clickOnpopUpYesButton(); /* click on the Yes Button in the pop up alert form. */
-		//onlinePINMigration.clickPopUpNoButton();/*Click on the Pop Up No Button.*/
+		//onlinePINMigration.clickPopUpNoButton();/*click on the Pop Up No Button.*/
 	}
 	
-	/* 03. Test Add PIN Jail Bundle!!! */
-	@Test(priority=1)
-	//@Ignore
+	/* 04. Test Add PIN Jail Bundle!!! */
+	//@Test(priority=1)
+	@Ignore
 	public void TestAddPINJailForm() throws IOException, InterruptedException {
 		addPINJail = loginPage.addPINJailLogin(props.getProperty("username"),props.getProperty("password"));
 		
-		addPINJail.openAddPINJail();
+		addPINJail.openAddPINJail();/*open the PIN Jail Bundle Page.*/
 		addPINJail.typeToPINorUsernames();
 		addPINJail.searchandtypeelementDropDownField();
 		addPINJail.clickONSaveButton();
+	}
+	
+	/* 05. Test Send Background/Silent Push to Single PIN!!! */
+	@Test(priority=1)
+	//@Ignore
+	public void TestSendBackgroundorSilentPushtoSinglePINForm() throws IOException, InterruptedException {
+		sendBackgroundorSilentPushtoSinglePIN = loginPage.sendBackgroundorSilentPushtoSinglePINLogin(props.getProperty("username"),props.getProperty("password"));
+		
+		sendBackgroundorSilentPushtoSinglePIN.openSendBackgroundorSilentPushtoSinglePINPage();
+		sendBackgroundorSilentPushtoSinglePIN.searchandtypeelementDropDownAppNameField();
+		sendBackgroundorSilentPushtoSinglePIN.searchandtypeelementDropDownPushTypeField();
+		sendBackgroundorSilentPushtoSinglePIN.typeInpininCSVInputField();
+		sendBackgroundorSilentPushtoSinglePIN.clickONSaveButton();
+		try {Thread.sleep(4000);} catch (InterruptedException ie) {}
+		sendBackgroundorSilentPushtoSinglePIN.clickOnpopUpYesButton(); /* click on the Yes Button in the pop up alert form. */
+		//sendBackgroundorSilentPushtoSinglePIN.clickOnpopUpNoButton();/*click on the Pop Up No Button.*/
 	}
 	
 	/*
