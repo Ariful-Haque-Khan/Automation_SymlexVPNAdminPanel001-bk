@@ -30,6 +30,7 @@ import com.admin.qa.function.AddPINJail;
 import com.admin.qa.function.AddPINValidity;
 import com.admin.qa.function.OnlinePINActivation;
 import com.admin.qa.function.OnlinePINMigration;
+import com.admin.qa.function.SendBackgroundorSilentPushtoSinglePIN;
 import com.admin.qa.pages.AllLinksFromDB;
 import com.crm.qa.base.TestBase;
 
@@ -294,5 +295,14 @@ public class LoginPage extends TestBase{
 		loginBtn.click();
 		
 		return new AddPINJail(); //HomePage is the landing page for LoginPage
+	}
+	
+	public SendBackgroundorSilentPushtoSinglePIN sendBackgroundorSilentPushtoSinglePINLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new SendBackgroundorSilentPushtoSinglePIN(); //HomePage is the landing page for LoginPage
 	}
 }
