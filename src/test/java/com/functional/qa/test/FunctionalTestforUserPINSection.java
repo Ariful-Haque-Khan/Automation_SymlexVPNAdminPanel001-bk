@@ -131,8 +131,15 @@ public class FunctionalTestforUserPINSection extends TestBase{
 	//@Ignore
 	public void TestAddNewResellerClientForm() throws IOException, InterruptedException {
 		addNewResellerClient = loginPage.addNewResellerClientLogin(props.getProperty("username"),props.getProperty("password"));
-		addNewResellerClient.openaddNewResellerForm();
-		addNewResellerClient.typeToPINinCSVorNewLine();
+		addNewResellerClient.openaddNewResellerForm();/*Open the Online PIN Migration Page.*/
+		//addNewResellerClient.typeToResellerNameInputField();/*Highlight and Type in the Reseller Name Input Field.*/
+		//addNewResellerClient.typeTologinInputFieldElement();/*Highlight and Type in the Reseller Login Input Field.*/
+		//addNewResellerClient.typeToPasswordInputFieldElement();/*Highlight and Type in the Reseller Password Input Field.*/
+		//addNewResellerClient.typeToCreditLimitInputFieldElement();/*Highlight and Type in the Reseller Credit Limit Input Field.*/
+		//addNewResellerClient.searchandtypeelementDropDownIPBundleField();/*Highlight and Select IP Bundle in the Reseller IP Bundle Drop down Field.*/
+		//addNewResellerClient.searchandtypeelementDropDownIPBundle2Field();/*Highlight and Select IP Bundle 2 in the Reseller IP Bundle Drop down Field.*/
+		//addNewResellerClient.ratePlaneelementDropDownField();/*Highlight and Select Rate plan in the Reseller Rate plan Drop down Field.*/
+		addNewResellerClient.pinResetOptioneelementDropDownField();/*Highlight and Select PIN Reset Option in the Reseller PIN Reset Option Drop down Field.*/
 	}
 	
 	/*
