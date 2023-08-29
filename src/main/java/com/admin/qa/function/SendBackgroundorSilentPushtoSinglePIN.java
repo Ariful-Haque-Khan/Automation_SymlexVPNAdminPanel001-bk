@@ -23,7 +23,7 @@ public class SendBackgroundorSilentPushtoSinglePIN extends TestBase{
 	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[2]/form/div/div[1]/div[2]/div[1]/div/span")
 	WebElement dropDownIPBundlemainSelect;
 	
-	// 01. App Name Input of Dropdown Element
+	// 01. App Name Input of Drop down Element
 	@FindBy(xpath="/html/body/span/span/span[1]/input")
 	WebElement searchInDropDown;
 	
@@ -54,11 +54,11 @@ public class SendBackgroundorSilentPushtoSinglePIN extends TestBase{
 		return new SendBackgroundorSilentPushtoSinglePIN(); 
 	}
 	
-	// 02. Push Type expandable list Element
+	// 02. Push Type Expandable List Element
 	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[2]/form/div/div[1]/div[2]/div[1]/div/span")
 	WebElement dropDownPushTypeSelect;
 	
-	// 02. Push Type Input of Dropdown Element
+	// 02. Push Type Input of Drop down Element
 	@FindBy(xpath="/html/body/span/span/span[1]/input")
 	WebElement searchPushTypeInDropDown;
 	

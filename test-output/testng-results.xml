@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-27T16:54:59 BDT" name="Default suite" finished-at="2023-08-27T16:55:24 BDT" duration-ms="25441">
+  <suite started-at="2023-08-29T18:17:34 BDT" name="Default suite" finished-at="2023-08-29T18:18:03 BDT" duration-ms="29382">
     <groups>
     </groups>
-    <test started-at="2023-08-27T16:54:59 BDT" name="Default test" finished-at="2023-08-27T16:55:24 BDT" duration-ms="25441">
+    <test started-at="2023-08-29T18:17:34 BDT" name="Default test" finished-at="2023-08-29T18:18:03 BDT" duration-ms="29382">
       <class name="com.functional.qa.test.FunctionalTestforUserPINSection">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.functional.qa.test.FunctionalTestforUserPINSection@429bffaa]" started-at="2023-08-27T16:54:59 BDT" name="setUp" finished-at="2023-08-27T16:55:09 BDT" duration-ms="9552" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.functional.qa.test.FunctionalTestforUserPINSection@429bffaa]" started-at="2023-08-29T18:17:34 BDT" name="setUp" finished-at="2023-08-29T18:17:43 BDT" duration-ms="9258" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TestAddNewResellerClientForm()[pri:1, instance:com.functional.qa.test.FunctionalTestforUserPINSection@429bffaa]" started-at="2023-08-27T16:55:09 BDT" name="TestAddNewResellerClientForm" finished-at="2023-08-27T16:55:24 BDT" duration-ms="15809" status="PASS">
+        <test-method signature="TestAddNewResellerClientForm()[pri:1, instance:com.functional.qa.test.FunctionalTestforUserPINSection@429bffaa]" started-at="2023-08-29T18:17:43 BDT" name="TestAddNewResellerClientForm" finished-at="2023-08-29T18:18:03 BDT" duration-ms="20066" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestAddNewResellerClientForm -->
