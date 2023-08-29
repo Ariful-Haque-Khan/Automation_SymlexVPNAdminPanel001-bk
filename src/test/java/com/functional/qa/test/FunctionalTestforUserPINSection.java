@@ -126,20 +126,84 @@ public class FunctionalTestforUserPINSection extends TestBase{
 		//sendBackgroundorSilentPushtoSinglePIN.clickOnpopUpNoButton();/*click on the Pop Up No Button.*/
 	}
 	
-	/* 05. Test Send Background/Silent Push to Single PIN!!! */
+	/* 05. Test Add New Reseller Client!!! */
 	@Test(priority=1)
 	//@Ignore
 	public void TestAddNewResellerClientForm() throws IOException, InterruptedException {
 		addNewResellerClient = loginPage.addNewResellerClientLogin(props.getProperty("username"),props.getProperty("password"));
 		addNewResellerClient.openaddNewResellerForm();/*Open the Online PIN Migration Page.*/
-		//addNewResellerClient.typeToResellerNameInputField();/*Highlight and Type in the Reseller Name Input Field.*/
-		//addNewResellerClient.typeTologinInputFieldElement();/*Highlight and Type in the Reseller Login Input Field.*/
-		//addNewResellerClient.typeToPasswordInputFieldElement();/*Highlight and Type in the Reseller Password Input Field.*/
-		//addNewResellerClient.typeToCreditLimitInputFieldElement();/*Highlight and Type in the Reseller Credit Limit Input Field.*/
-		//addNewResellerClient.searchandtypeelementDropDownIPBundleField();/*Highlight and Select IP Bundle in the Reseller IP Bundle Drop down Field.*/
-		//addNewResellerClient.searchandtypeelementDropDownIPBundle2Field();/*Highlight and Select IP Bundle 2 in the Reseller IP Bundle Drop down Field.*/
-		//addNewResellerClient.ratePlaneelementDropDownField();/*Highlight and Select Rate plan in the Reseller Rate plan Drop down Field.*/
-		addNewResellerClient.pinResetOptioneelementDropDownField();/*Highlight and Select PIN Reset Option in the Reseller PIN Reset Option Drop down Field.*/
+		//addNewResellerClient.typeToResellerNameInputField();/* 1.Highlight and Type in the Reseller Name Input Field.*/
+		
+		//addNewResellerClient.typeTologinInputFieldElement();/* 2.Highlight and Type in the Reseller Login Input Field.*/
+		
+		//addNewResellerClient.typeToPasswordInputFieldElement();/* 3.Highlight and Type in the Reseller Password Input Field.*/
+		
+		//addNewResellerClient.typeToCreditLimitInputFieldElement();/* 4.Highlight and Type in the Reseller Credit Limit Input Field.*/
+		
+		//addNewResellerClient.searchandtypeelementDropDownIPBundleField();/* 5.Highlight and Select IP Bundle in the Reseller IP Bundle Drop down Field.*/
+		
+		//addNewResellerClient.searchandtypeelementDropDownIPBundle2Field();/* 6.Highlight and Select IP Bundle 2 in the Reseller IP Bundle Drop down Field.*/
+		
+		//addNewResellerClient.ratePlaneelementDropDownField();/* 7.Highlight and Select Rate plan in the Reseller Rate plan Drop down Field.*/
+		
+		//addNewResellerClient.pinResetOptioneelementDropDownField();/* 8.Highlight and Select PIN Reset Option in the Reseller PIN Reset Option Drop down Field.*/
+		
+		//addNewResellerClient.resellerPanelTypeelementDropDownField();/* 9.Highlight and Select Reseller Panel Type Option in the Reseller Panel Type Drop down Field.*/
+		
+		//addNewResellerClient.checkActiveInactiveCheckboxInputField();/* 10.Highlight and check un check Active / Inactive  Check box Input Field in the Active / Inactive  Check box Input Field.*/
+		
+		//addNewResellerClient.appPINLoginelementDropDownField();/* 11.Highlight and Select  App PIN Login in the  App PIN Login Drop down Field.*/
+		
+		//addNewResellerClient.typeToBrandNameInputFieldElement();/* 12.Highlight and Type in the Brand Name Input Field.*/
+		
+		//addNewResellerClient.typeToBrandPINPrefixInputFieldElement();/* 13.Highlight and Type in the Brand PIN Prefix Input Field.*/
+		
+		//addNewResellerClient.typeToAllowAppsInputFieldElement();/* 14.Highlight and Type in the Allow Apps Input Field.*/
+		
+		//addNewResellerClient.isCustomizePanelelementDropDownField();/* 15.Highlight and Select  App PIN Login in the  Is Customize Panel Drop down Field.*/
+		
+		//addNewResellerClient.typeToIsCustomizePanelPanelNameFieldElement();/* 16.Highlight and Type in the Brand Name Input Field.*/
+		
+		//addNewResellerClient.hasLimitofPINelementDropDownField();/* 17.Highlight and Select  Has Limit of PIN? in the  Has Limit of PIN? Drop down Field.*/
+		
+		//addNewResellerClient.typeToPinLimitInputFieldElement();/* 18.Highlight and Type in the Pin Limit Input Field.*/
+		
+		//addNewResellerClient.onlyTypeelementDropDownField();/* 19.Highlight and Select  Only Type in the Only Type Drop down Field.*/
+		
+		//addNewResellerClient.mainResellerTypeelementDropDownField();/* 20.Highlight and Select   Main Reseller Type in the Only Type Drop down Field.*/
+		Thread.sleep(2000);
+		//addNewResellerClient.numberOfDevicesInputFieldElement();/* 21.Highlight and Type in the Number Of Devices Input Field.*/
+		
+		//addNewResellerClient.resellerLimitInputFieldElement();/* 22.Highlight and Type in the Reseller Limit Input Field.*/
+		
+		//addNewResellerClient.balanceLimitInputFieldElement();/* 23.Highlight and Type in the Balance Limit Input Field.*/
+		
+		//addNewResellerClient.emailInputFieldElement();/* 24.Highlight and Type in the Email Input Field.*/
+		
+		//addNewResellerClient.phoneNoInputFieldElement();/* 25.Highlight and Type in the Phone No. Input Field.*/
+		
+		//addNewResellerClient.cityInputFieldElement();/* 26.Highlight and Type in the City Input Field.*/
+		
+		//addNewResellerClient.countryTypeDropDownFieldHighlight();/* 27.Highlight and Select Country Type in the Country Drop down Field.*/
+		
+		//addNewResellerClient.stateInputFieldElement();/* 28.Highlight and Type in the State Input Field.*/
+		
+		//addNewResellerClient.addressInputFieldElement();/* 29.Highlight and Type in the Address Input Field.*/
+		
+		//addNewResellerClient.isTVResellerelementDropDownField();/* 30.Highlight and Select Is TV Reseller in the Is TV Reseller Drop down Field.*/
+		
+		//addNewResellerClient.creditLimitInputFieldElement();/* 31.Highlight and Type in the TV Credit Limit Input Field.*/
+		
+		//addNewResellerClient.showAppBannerelementDropDownField();/* 32.Highlight and Select Show App Banner in the Show App Banner Drop down Field.*/
+		
+		//addNewResellerClient.showFullScreenelementDropDownField();/* 33.Highlight and Select Show Full Screen in the Show Full Screen Drop down Field.*/
+		
+		//addNewResellerClient.lowBALNotifyEmailelementDropDownField();/* 34.Highlight and Select Low BAL Notify Email in the Low BAL Notify Email Drop down Field.*/
+		
+		//addNewResellerClient.assignPremiumLockedBundleelementDropDownField();/* 35.Highlight and Select Assign Premium Locked Bundle in the Assign Premium Locked Bundle Drop down Field.*/
+		
+		addNewResellerClient.submitButton();/* 35.Highlight and Click on the Submit */
+		
 	}
 	
 	/*
