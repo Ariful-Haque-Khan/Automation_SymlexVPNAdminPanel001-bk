@@ -4,10 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
-import com.admin.qa.pages.EmailReport;
 import com.crm.qa.base.TestBase;
 
 public class OnlinePINActivation extends TestBase{
@@ -16,10 +14,11 @@ public class OnlinePINActivation extends TestBase{
 	}
 	
 	
-	public EmailReport openOnlinePINActivationPage() {
+	public OnlinePINActivation openOnlinePINActivationPage() {
 		driver.get(props.getProperty("url")+"client/onlinePinActivation2");
-		return new EmailReport();
+		return new OnlinePINActivation();
 	}
+	
 	@FindBy(name="payment_gate_way")
 	WebElement xxxx;
 	
@@ -89,7 +88,7 @@ public class OnlinePINActivation extends TestBase{
 		return new AddPINValidity(); 
 	}
 	
-	//07. Element of Pop Up Yes Button
+	//07. Element of Pop Up No Button
 	@FindBy(xpath="/html/body/div[4]/div[2]/div/div/div/div/div/div/div/div[4]/button[2]")
 	WebElement PopUpNoButtonElement;
 	
