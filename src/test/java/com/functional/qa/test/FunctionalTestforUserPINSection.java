@@ -51,22 +51,26 @@ public class FunctionalTestforUserPINSection extends TestBase{
 	}
 	
 	
+	
+	
 	/* 01. Test add validity in any PIN!!! */
 	//@Test(priority=1)
 	//@Ignore
 	public void TestAddPINValidityForm() throws IOException, InterruptedException {
 		addPINValidity = loginPage.addPINValidityLogin(props.getProperty("username"),props.getProperty("password"));
 		
-		addPINValidity.openEmailListReport();
-		addPINValidity.typeToNumberofDays();
-		addPINValidity.typeelementDropDownField();
-		addPINValidity.typeToPINinCSVorNewLine();
-		addPINValidity.clickOnSubmitButton();
+		addPINValidity.openAddPINvalidityReport();/*open the Add PIN Validity Page.*/
+		addPINValidity.typeToNumberofDays();/*Type in the PIN Type Input Field.*/
+		//addPINValidity.typeelementDropDownField();/*Type in the PIN Type Drop Down Field.*/
+		addPINValidity.typeToPINinCSVorNewLine();/*Type in the PIN in CSV or New Line Input Field.*/
+		addPINValidity.clickOnSubmitButton();/* click on Submit Button */
+		//addPINValidity.clickPopUpYesButton();/* click on the Pop Up Yes Button */
+		addPINValidity.clickPopUpNoButton();/* click on the Pop Up No Button */
 		
 	}
 	
 	/* 02. Test active a PIN by providing the payment Information. */
-	//@Test(priority=1)
+	@Test(priority=1)
 	//@Ignore
 	public void TestOnlinePINActivationForm() throws IOException, InterruptedException {
 		onlinePINActivation = loginPage.onlinePINActivationLogin(props.getProperty("username"),props.getProperty("password"));
@@ -127,8 +131,8 @@ public class FunctionalTestforUserPINSection extends TestBase{
 	}
 	
 	/* 05. Test Add New Reseller Client!!! */
-	@Test(priority=1)
-	//@Ignore
+	//@Test(priority=1)
+	@Ignore
 	public void TestAddNewResellerClientForm() throws IOException, InterruptedException {
 		addNewResellerClient = loginPage.addNewResellerClientLogin(props.getProperty("username"),props.getProperty("password"));
 		addNewResellerClient.openaddNewResellerForm();/*Open the Online PIN Migration Page.*/
@@ -202,8 +206,7 @@ public class FunctionalTestforUserPINSection extends TestBase{
 		
 		//addNewResellerClient.assignPremiumLockedBundleelementDropDownField();/* 35.Highlight and Select Assign Premium Locked Bundle in the Assign Premium Locked Bundle Drop down Field.*/
 		
-		addNewResellerClient.submitButton();/* 35.Highlight and Click on the Submit */
-		
+		addNewResellerClient.submitButton();/* 36.Highlight and Click on the Submit */
 	}
 	
 	/*

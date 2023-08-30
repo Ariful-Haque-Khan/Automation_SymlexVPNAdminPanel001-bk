@@ -6,7 +6,7 @@
       <class name="com.functional.qa.test.FunctionalTestforUserPINSection">
         <methods>
           <include name="setUp"/>
-          <include name="TestAddNewResellerClientForm"/>
+          <include name="TestAddPINValidityForm"/>
         </methods>
       </class> <!-- com.functional.qa.test.FunctionalTestforUserPINSection -->
     </classes>
