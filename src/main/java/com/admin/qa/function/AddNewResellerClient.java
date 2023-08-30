@@ -898,11 +898,11 @@ public class AddNewResellerClient extends TestBase{
 	public void emailInputFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", emailInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", emailInputFieldElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(1000);
 			js.executeScript("arguments[0].setAttribute('style', '');", emailInputFieldElement);
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", emailInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", emailInputFieldElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(2000);
 			js.executeScript("arguments[0].setAttribute('style', '');", emailInputFieldElement);
 			Thread.sleep(1000);
@@ -940,11 +940,11 @@ public class AddNewResellerClient extends TestBase{
 	public void phoneNoInputFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", phoneNoInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", phoneNoInputFieldElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(1000);
 			js.executeScript("arguments[0].setAttribute('style', '');", phoneNoInputFieldElement);
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", phoneNoInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", phoneNoInputFieldElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(2000);
 			js.executeScript("arguments[0].setAttribute('style', '');", phoneNoInputFieldElement);
 			Thread.sleep(1000);
@@ -982,11 +982,11 @@ public class AddNewResellerClient extends TestBase{
 	public void cityInputFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", cityInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", cityInputFieldElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(1000);
 			js.executeScript("arguments[0].setAttribute('style', '');", cityInputFieldElement);
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", cityInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", cityInputFieldElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(2000);
 			js.executeScript("arguments[0].setAttribute('style', '');", cityInputFieldElement);
 			Thread.sleep(1000);
@@ -1025,11 +1025,11 @@ public class AddNewResellerClient extends TestBase{
 	public void countryTypeDropDownFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", countryTypeDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", countryTypeDropDownFieldInputElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(1000);
 			js.executeScript("arguments[0].setAttribute('style', '');", countryTypeDropDownFieldInputElement);
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", countryTypeDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", countryTypeDropDownFieldInputElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(2000);
 			js.executeScript("arguments[0].setAttribute('style', '');", countryTypeDropDownFieldInputElement);
 			Thread.sleep(1000);
@@ -1062,11 +1062,11 @@ public class AddNewResellerClient extends TestBase{
 	public void stateInputFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", stateInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", stateInputFieldElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(1000);
 			js.executeScript("arguments[0].setAttribute('style', '');", stateInputFieldElement);
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", stateInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", stateInputFieldElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(2000);
 			js.executeScript("arguments[0].setAttribute('style', '');", stateInputFieldElement);
 			Thread.sleep(1000);
@@ -1104,11 +1104,11 @@ public class AddNewResellerClient extends TestBase{
 	public void addressInputFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", addressInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", addressInputFieldElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(1000);
 			js.executeScript("arguments[0].setAttribute('style', '');", addressInputFieldElement);
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", addressInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", addressInputFieldElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(2000);
 			js.executeScript("arguments[0].setAttribute('style', '');", addressInputFieldElement);
 			Thread.sleep(1000);
@@ -1149,11 +1149,11 @@ public class AddNewResellerClient extends TestBase{
 	public void isTVResellerDropDownFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isTVResellerDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isTVResellerDropDownFieldInputElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(1000);
 			js.executeScript("arguments[0].setAttribute('style', '');", isTVResellerDropDownFieldInputElement);
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isTVResellerDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isTVResellerDropDownFieldInputElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(2000);
 			js.executeScript("arguments[0].setAttribute('style', '');", isTVResellerDropDownFieldInputElement);
 			Thread.sleep(1000);
@@ -1173,7 +1173,9 @@ public class AddNewResellerClient extends TestBase{
 		return new AddNewResellerClient(); 
 	}
 	/***************************************************************************************************************
-			 * **************************    End No.30 - Is TV Reseller Option Field    ***************
+	 		 *******************************************************************************************
+			 ***************************    End No.30 - Is TV Reseller Option Field    *****************
+			 *******************************************************************************************
 			******************************************************************************************************************************/
 	
 	
@@ -1192,11 +1194,11 @@ public class AddNewResellerClient extends TestBase{
 	public void creditLimitInputFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", tvcreditLimitInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", tvcreditLimitInputFieldElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(1000);
 			js.executeScript("arguments[0].setAttribute('style', '');", tvcreditLimitInputFieldElement);
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", tvcreditLimitInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", tvcreditLimitInputFieldElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(2000);
 			js.executeScript("arguments[0].setAttribute('style', '');", tvcreditLimitInputFieldElement);
 			Thread.sleep(1000);
@@ -1238,12 +1240,11 @@ public class AddNewResellerClient extends TestBase{
 	public void showAppBannerDropDownFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", showAppBannerDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", showAppBannerDropDownFieldInputElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(1000);
 			js.executeScript("arguments[0].setAttribute('style', '');", showAppBannerDropDownFieldInputElement);
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", showAppBannerDropDownFieldInputElement);
-			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", showAppBannerDropDownFieldInputElement);/*make a yellow border outside edge of the element*/
 			js.executeScript("arguments[0].setAttribute('style', '');", showAppBannerDropDownFieldInputElement);
 			Thread.sleep(1000);
 		}
@@ -1282,11 +1283,11 @@ public class AddNewResellerClient extends TestBase{
 	public void showFullScreenDropDownFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", showFullScreenDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", showFullScreenDropDownFieldInputElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(1000);
 			js.executeScript("arguments[0].setAttribute('style', '');", showFullScreenDropDownFieldInputElement);
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", showFullScreenDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", showFullScreenDropDownFieldInputElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(2000);
 			js.executeScript("arguments[0].setAttribute('style', '');", showFullScreenDropDownFieldInputElement);
 			Thread.sleep(1000);
@@ -1328,11 +1329,11 @@ public class AddNewResellerClient extends TestBase{
 	public void lowBALNotifyEmailDropDownFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", lowBALNotifyEmailDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", lowBALNotifyEmailDropDownFieldInputElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(1000);
 			js.executeScript("arguments[0].setAttribute('style', '');", lowBALNotifyEmailDropDownFieldInputElement);
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", lowBALNotifyEmailDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", lowBALNotifyEmailDropDownFieldInputElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(2000);
 			js.executeScript("arguments[0].setAttribute('style', '');", lowBALNotifyEmailDropDownFieldInputElement);
 			Thread.sleep(1000);
@@ -1357,6 +1358,7 @@ public class AddNewResellerClient extends TestBase{
 			 * * *****************************************************************************************************
 			******************************************************************************************************************************/
 	
+	
 	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
      * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.35 -   Assign Premium Locked Bundle Option Field    $$$$$$$$$$$$$$$$$$$$$$$$$$$$
      *$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
@@ -1373,11 +1375,11 @@ public class AddNewResellerClient extends TestBase{
 	public void assignPremiumLockedBundleDropDownFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", assignPremiumLockedBundleDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", assignPremiumLockedBundleDropDownFieldInputElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(1000);
 			js.executeScript("arguments[0].setAttribute('style', '');", assignPremiumLockedBundleDropDownFieldInputElement);
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", assignPremiumLockedBundleDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", assignPremiumLockedBundleDropDownFieldInputElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(2000);
 			js.executeScript("arguments[0].setAttribute('style', '');", assignPremiumLockedBundleDropDownFieldInputElement);
 			Thread.sleep(1000);
@@ -1386,54 +1388,56 @@ public class AddNewResellerClient extends TestBase{
 	
 	//035. Select from Assign Premium Locked Bundle Drop Down Field
 	public AddNewResellerClient assignPremiumLockedBundleelementDropDownField() throws InterruptedException {
-		assignPremiumLockedBundleexpandHideButtoninOtherInfo.click();
+		assignPremiumLockedBundleexpandHideButtoninOtherInfo.click();/*  click on the (+) button of the portion hide in the segment  */
 		try {Thread.sleep(1000);} catch (InterruptedException ie) {}
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
-		jse.executeScript("window.scrollBy(0,250)");
-		assignPremiumLockedBundleDropDownFieldHighlight();
-		try {Thread.sleep(2000);} catch (InterruptedException ie) {}
+		jse.executeScript("window.scrollBy(0,250)");/* scroll the browser for visible the element. */
+		assignPremiumLockedBundleDropDownFieldHighlight(); /* highlight the element of the tested. */
+		try {Thread.sleep(2000);} catch (InterruptedException ie) {} 
 		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div/form/div[5]/div/div[2]/div[4]/div/select")));
-		drp.selectByIndex(1);
+		drp.selectByIndex(1);/* select the second element of the select fields. */
 		return new AddNewResellerClient(); 
 	}
 	/***************************************************************************************************************
 	         * *****************************************************************************************************
-			 * **************************    End No.34 - Assign Premium Locked Bundle Option Field    ***************
+			 * **************************    End No.35 - Assign Premium Locked Bundle Option Field    ***************
 			 * * *****************************************************************************************************
 			******************************************************************************************************************************/
 	
 	
 	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-     * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.36 -   Submit Button   $$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	 		* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	 		* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.36 -   Submit Button   $$$$$$$$$$$$$$$$$$$$$$$$$$$$
+     		* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
      *$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
 	
 	// 036. Element Submit Button
 	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div[6]/input[3]")
 	WebElement  submitButton;
 	
-	//036. Highlight the Assign Premium Locked Bundle Drop Down Field
+	//036. Highlight the Assign Premium Locked Bundle Drop Down Field, element will be 
 	public void submitButtonHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", submitButton);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", submitButton);/*make a yellow border outside edge of the element*/
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", submitButton);
+			js.executeScript("arguments[0].setAttribute('style', '');", submitButton);/*make a yellow border off outside edge of the element*/
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", submitButton);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", submitButton);/*make a yellow border outside edge of the element*/
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", submitButton);
+			js.executeScript("arguments[0].setAttribute('style', '');", submitButton);/*make a yellow border off outside edge of the element*/
 			Thread.sleep(1000);
 		}
 	}
 	
-	//036. Select from Submit Button
+	//036. Click on The Submit Button
 	public AddNewResellerClient submitButton() throws InterruptedException {
-		try {Thread.sleep(1000);} catch (InterruptedException ie) {}
+		try {Thread.sleep(1000);} catch (InterruptedException ie) {} /* make wait the script for 1s. */
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
-		jse.executeScript("window.scrollBy(0,250)");
-		assignPremiumLockedBundleDropDownFieldHighlight();
+		jse.executeScript("window.scrollBy(0,250)");/* scroll the browser for visible the element. */
+		assignPremiumLockedBundleDropDownFieldHighlight();/* highlight the element of the tested. */
 		try {Thread.sleep(2000);} catch (InterruptedException ie) {}
-		submitButton.click();
+		submitButton.click(); /*click on the element */
 		return new AddNewResellerClient(); 
 	}
 	/***************************************************************************************************************

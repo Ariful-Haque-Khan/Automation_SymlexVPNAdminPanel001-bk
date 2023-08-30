@@ -4,7 +4,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.admin.qa.pages.EmailReport;
 import com.crm.qa.base.TestBase;
 
 public class AddPINJail extends TestBase{
@@ -12,9 +11,9 @@ public class AddPINJail extends TestBase{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public EmailReport openAddPINJail() {
+	public AddPINJail openAddPINJail() {
 		driver.get(props.getProperty("url")+"client/addPinToSuspiciousBlockList");
-		return new EmailReport();
+		return new AddPINJail();
 	}
 	
 	//01. Element of PIN or Username
