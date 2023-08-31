@@ -75,13 +75,16 @@ public class FunctionalTestforUserPINSection extends TestBase{
 	public void TestOnlinePINActivationForm() throws IOException, InterruptedException {
 		onlinePINActivation = loginPage.onlinePINActivationLogin(props.getProperty("username"),props.getProperty("password"));
 		onlinePINActivation.openOnlinePINActivationPage(); /*open the Online PIN Activation 2 Page.*/
-		//try {Thread.sleep(6000);} catch (InterruptedException ie) {}
-		//onlinePINActivation.selectPaymentGateway(); /*open the Online PIN Activation 2 Page.*/
+		try {Thread.sleep(3000);} catch (InterruptedException ie) {} /* make wait the script for 3s. */
+		//onlinePINActivation.selectPaymentGateway(); /* Select Payment Gateway from the Drop Down in Payment Gateway Field */
 		onlinePINActivation.typetothePaymentTNXID();/*Type in the Payment TNX ID Input Field.*/
 		onlinePINActivation.typetothePriceUSD();/*Type in the Price USD Input Field.*/
 		onlinePINActivation.typetotheUsernameandPIN();/*Type in the Username/PIN Input Field.*/
+		//onlinePINActivation.selectPaymentVia();/* Select Payment Via from the Drop Down in Payment Via Field */
+		//onlinePINActivation.selectRatePlan();/* Select Rate Plan from the Drop Down in Rate Plan Field */
+		//onlinePINActivation.typetotheRemarks();/*Type in the Remarks Input Field.*/
 		onlinePINActivation.clickVerifyandActivateButton();/*Click on the Verify and Activate Button.*/
-		try {Thread.sleep(4000);} catch (InterruptedException ie) {}
+		//try {Thread.sleep(4000);} catch (InterruptedException ie) {}
 		//onlinePINActivation.clickPopUpYesButton();/*Click on the Pop Up Yes Button.*/
 		onlinePINActivation.clickPopUpNoButton();/*Click on the Pop Up No Button.*/
 	}

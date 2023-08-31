@@ -83,7 +83,7 @@ public class AddPINValidity extends TestBase{
 		}
 	}
 	
-	//2. Select from PIN Type Element
+	//02. Select from PIN Type Element
 	public AddPINValidity typeelementDropDownField() throws InterruptedException {
 		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/div/section[2]/div/form/div[1]/div/div[2]/div[4]/div/select")));
 		drp.selectByIndex(1);
