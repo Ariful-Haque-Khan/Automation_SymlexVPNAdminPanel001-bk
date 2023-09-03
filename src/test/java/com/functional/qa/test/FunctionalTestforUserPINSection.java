@@ -49,10 +49,7 @@ public class FunctionalTestforUserPINSection extends TestBase{
 		loginPage = new LoginPage();
 		testUtils = new TestUtils();
 	}
-	
-	
-	
-	
+
 	/* 01. Test add validity in any PIN!!! */
 	//@Test(priority=1)
 	//@Ignore
@@ -70,23 +67,23 @@ public class FunctionalTestforUserPINSection extends TestBase{
 	}
 	
 	/* 02. Test active a PIN by providing the payment Information. */
-	@Test(priority=1)
-	//@Ignore
+	//@Test(priority=1)
+	@Ignore
 	public void TestOnlinePINActivationForm() throws IOException, InterruptedException {
 		onlinePINActivation = loginPage.onlinePINActivationLogin(props.getProperty("username"),props.getProperty("password"));
 		onlinePINActivation.openOnlinePINActivationPage(); /*open the Online PIN Activation 2 Page.*/
 		try {Thread.sleep(3000);} catch (InterruptedException ie) {} /* make wait the script for 3s. */
 		//onlinePINActivation.selectPaymentGateway(); /* Select Payment Gateway from the Drop Down in Payment Gateway Field */
-		onlinePINActivation.typetothePaymentTNXID();/*Type in the Payment TNX ID Input Field.*/
-		onlinePINActivation.typetothePriceUSD();/*Type in the Price USD Input Field.*/
-		onlinePINActivation.typetotheUsernameandPIN();/*Type in the Username/PIN Input Field.*/
+		//onlinePINActivation.typetothePaymentTNXID();/*Type in the Payment TNX ID Input Field.*/
+		//onlinePINActivation.typetothePriceUSD();/*Type in the Price USD Input Field.*/
+		//onlinePINActivation.typetotheUsernameandPIN();/*Type in the Username/PIN Input Field.*/
 		//onlinePINActivation.selectPaymentVia();/* Select Payment Via from the Drop Down in Payment Via Field */
 		//onlinePINActivation.selectRatePlan();/* Select Rate Plan from the Drop Down in Rate Plan Field */
 		//onlinePINActivation.typetotheRemarks();/*Type in the Remarks Input Field.*/
-		onlinePINActivation.clickVerifyandActivateButton();/*Click on the Verify and Activate Button.*/
+		//onlinePINActivation.clickVerifyandActivateButton();/*Click on the Verify and Activate Button.*/
 		//try {Thread.sleep(4000);} catch (InterruptedException ie) {}
 		//onlinePINActivation.clickPopUpYesButton();/*Click on the Pop Up Yes Button.*/
-		onlinePINActivation.clickPopUpNoButton();/*Click on the Pop Up No Button.*/
+		//onlinePINActivation.clickPopUpNoButton();/*Click on the Pop Up No Button.*/
 	}
 	
 	/* 03. Test Online PIN Migration from Old to New. */
@@ -95,26 +92,26 @@ public class FunctionalTestforUserPINSection extends TestBase{
 	public void TestOnlinePINMigrationForm() throws IOException, InterruptedException {
 		onlinePINMigration = loginPage.onlinePINMigrationLogin(props.getProperty("username"),props.getProperty("password"));
 		onlinePINMigration.openOnlinePINMigrationPage(); /*open the Online PIN Migration Page.*/
-		onlinePINMigration.typeToNewPINandEmail(); /*Type in the New PIN / Email Input Field.*/
-		onlinePINMigration.typeTopasswordforNewPINandEmail(); /*Type in the Password input Field for New PIN / Email Input Field.*/
-		onlinePINMigration.typeToOldPINandEmail(); /*Type in the Old PIN / Email Input Field.*/
-		onlinePINMigration.typeTopasswordforOldPINandEmail(); /*Type in the Password input Field for Old PIN / Email Input Field.*/
-		onlinePINMigration.clickOnmigrationNowButton(); /*Click on the Migration Now Button.*/
-		try {Thread.sleep(7000);} catch (InterruptedException ie) {}
-		onlinePINMigration.clickOnpopUpYesButton(); /* click on the Yes Button in the pop up alert form. */
-		//onlinePINMigration.clickPopUpNoButton();/*click on the Pop Up No Button.*/
+		onlinePINMigration.typeToNewPINandEmail(); /*1. Type in the New PIN / Email Input Field.*/
+		onlinePINMigration.typeTopasswordforNewPINandEmail(); /*2. Type in the Password input Field for New PIN / Email Input Field.*/
+		onlinePINMigration.typeToOldPINandEmail(); /*3. Type in the Old PIN / Email Input Field.*/
+		onlinePINMigration.typeTopasswordforOldPINandEmail(); /*4. Type in the Password input Field for Old PIN / Email Input Field.*/
+		onlinePINMigration.clickOnmigrationNowButton(); /*5. Click on the Migration Now Button.*/
+		try {Thread.sleep(3000);} catch (InterruptedException ie) {}
+		//onlinePINMigration.clickOnpopUpYesButton(); /*6. click on the Yes Button in the pop up alert form. */
+		onlinePINMigration.clickPopUpNoButton();/*7. click on the Pop Up No Button.*/
 	}
 	
 	/* 04. Test Add PIN Jail Bundle!!! */
-	//@Test(priority=1)
-	@Ignore
+	@Test(priority=1)
+	//@Ignore
 	public void TestAddPINJailForm() throws IOException, InterruptedException {
 		addPINJail = loginPage.addPINJailLogin(props.getProperty("username"),props.getProperty("password"));
 		
 		addPINJail.openAddPINJail();/*open the PIN Jail Bundle Page.*/
-		addPINJail.typeToPINorUsernames();
-		addPINJail.searchandtypeelementDropDownField();
-		addPINJail.clickONSaveButton();
+		//addPINJail.typeToPINorUsernames();/* 1.Highlight and Type in the PIN or Username Input Field.*/
+		addPINJail.searchandtypeelementDropDownField();/* 2.Highlight and PIN Type in the PIN Type Drop down Field.*/
+		//addPINJail.clickONSaveButton(); /*3. click on the save Button.*/
 	}
 	
 	/* 05. Test Send Background/Silent Push to Single PIN!!! */
