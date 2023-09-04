@@ -191,7 +191,7 @@ public class AddNewResellerClient extends TestBase{
 	public AddNewResellerClient searchandtypeelementDropDownIPBundleField() throws InterruptedException {
 		resellerIPBundleDropDownFieldHighlight();
 		dropDownIPBundleElementSelect.click(); /*click on the expandable list */
-		try {Thread.sleep(42000);} catch (InterruptedException ie) {}
+		try {Thread.sleep(2000);} catch (InterruptedException ie) {}
 		searchInIPBundleElement.sendKeys("Back"); /* type on the search bar */
 		try {Thread.sleep(2000);} catch (InterruptedException ie) {}
 		valueForSearchInIPBundleElement.click();/* click on the Single value */
@@ -485,7 +485,7 @@ public class AddNewResellerClient extends TestBase{
 	//013. Type to the Brand PIN Prefix Input Field
 	public AddNewResellerClient typeToBrandPINPrefixInputFieldElement() throws InterruptedException {
 		resellerBrandPINPrefixInputFieldHighlight();
-		brandPINPrefixInputFieldElement.sendKeys("12");
+		brandPINPrefixInputFieldElement.sendKeys("ab");
 		return new AddNewResellerClient();
 	}
 	/***************************************************************************************************************
@@ -1207,7 +1207,7 @@ public class AddNewResellerClient extends TestBase{
 	
 	//031. Type to the TV Credit Limit Input Field
 	public AddNewResellerClient creditLimitInputFieldElement() throws InterruptedException {
-		tvcrCreditLimitexpandHideButton.click();
+		//tvcrCreditLimitexpandHideButton.click();
 		Thread.sleep(2000);
 		creditLimitInputFieldHighlight();
 		tvcreditLimitInputFieldElement.sendKeys("1");
