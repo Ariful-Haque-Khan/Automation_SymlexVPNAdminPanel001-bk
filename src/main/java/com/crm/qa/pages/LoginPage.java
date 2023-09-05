@@ -27,6 +27,7 @@ import com.admin.qa.pages.IPManagementSectionLinks;
 import com.admin.qa.pages.MailAddressSectionLinks;
 import com.admin.qa.pages.OnlinePINReportsSectionLinks;
 import com.admin.qa.function.AddNewResellerClient;
+import com.admin.qa.function.AddNewServer;
 import com.admin.qa.function.AddPINJail;
 import com.admin.qa.function.AddPINValidity;
 import com.admin.qa.function.NewCustomizeResellerPanel;
@@ -324,5 +325,14 @@ public class LoginPage extends TestBase{
 		loginBtn.click();
 		
 		return new NewCustomizeResellerPanel(); //HomePage is the landing page for LoginPage
+	}
+	
+	public AddNewServer addNewServerLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new AddNewServer(); // Add New Server page for LoginPage
 	}
 }

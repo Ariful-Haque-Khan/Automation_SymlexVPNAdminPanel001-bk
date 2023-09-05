@@ -2,19 +2,19 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-04T17:09:04 BDT" name="Default suite" finished-at="2023-09-04T17:09:36 BDT" duration-ms="31784">
+  <suite started-at="2023-09-05T18:32:43 BDT" name="Default suite" finished-at="2023-09-05T18:33:23 BDT" duration-ms="39243">
     <groups>
     </groups>
-    <test started-at="2023-09-04T17:09:04 BDT" name="Default test" finished-at="2023-09-04T17:09:36 BDT" duration-ms="31784">
+    <test started-at="2023-09-05T18:32:43 BDT" name="Default test" finished-at="2023-09-05T18:33:23 BDT" duration-ms="39243">
       <class name="com.functional.qa.test.FunctionalTestforUserPINSection">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.functional.qa.test.FunctionalTestforUserPINSection@5403f35f]" started-at="2023-09-04T17:09:05 BDT" name="setUp" finished-at="2023-09-04T17:09:17 BDT" duration-ms="12327" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.functional.qa.test.FunctionalTestforUserPINSection@483f6d77]" started-at="2023-09-05T18:32:44 BDT" name="setUp" finished-at="2023-09-05T18:32:52 BDT" duration-ms="7998" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TestCustoPanelNameForm()[pri:1, instance:com.functional.qa.test.FunctionalTestforUserPINSection@5403f35f]" started-at="2023-09-04T17:09:17 BDT" name="TestCustoPanelNameForm" finished-at="2023-09-04T17:09:36 BDT" duration-ms="19410" status="PASS">
+        <test-method signature="TestAddNewServerForm()[pri:1, instance:com.functional.qa.test.FunctionalTestforUserPINSection@483f6d77]" started-at="2023-09-05T18:32:52 BDT" name="TestAddNewServerForm" finished-at="2023-09-05T18:33:23 BDT" duration-ms="31193" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestCustoPanelNameForm -->
+        </test-method> <!-- TestAddNewServerForm -->
       </class> <!-- com.functional.qa.test.FunctionalTestforUserPINSection -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
