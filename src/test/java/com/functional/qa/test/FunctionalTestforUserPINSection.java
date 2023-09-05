@@ -13,6 +13,7 @@ import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import com.admin.qa.function.AddNewResellerClient;
+import com.admin.qa.function.AddNewServer;
 import com.admin.qa.function.AddPINJail;
 import com.admin.qa.function.AddPINValidity;
 import com.admin.qa.function.NewCustomizeResellerPanel;
@@ -37,6 +38,7 @@ public class FunctionalTestforUserPINSection extends TestBase{
 	AddNewResellerClient addNewResellerClient;
 	NewCustomizeResellerPanel newCustomizeResellerPanel;
 	AddPINJail addPINJail;
+	AddNewServer addNewServer;
 	ContactsPage conPage;
 	TestUtils testUtils;
 	
@@ -212,8 +214,8 @@ public class FunctionalTestforUserPINSection extends TestBase{
 	}
 	
 	/* 07. Test Custom Panel Name!!! */
-	@Test(priority=1)
-	//@Ignore
+	//@Test(priority=1)
+	@Ignore
 	public void TestCustoPanelNameForm() throws IOException, InterruptedException {
 		newCustomizeResellerPanel = loginPage.customPanelNameLogin(props.getProperty("username"),props.getProperty("password"));
 		
@@ -224,6 +226,39 @@ public class FunctionalTestforUserPINSection extends TestBase{
 		//newCustomizeResellerPanel.typeONBrandName();/* click on Submit Button */
 		newCustomizeResellerPanel.clickONSubmitButton();/* click on the Submit Button */
 		
+	}
+	
+	/* ***** Test _Blank!!! 
+	//@Test(priority=1)
+	//@Ignore
+	public void TestAddNewServerBlankForm() throws IOException, InterruptedException {
+		newCustomizeResellerPanel = loginPage.customPanelNameLogin(props.getProperty("username"),props.getProperty("password"));
+		newCustomizeResellerPanel.openNewCustomizeResellerPanelPage();/*open the Custom Panel Name Page.
+		
+	}*/
+	
+	/****** Test Add New Server!!! */
+	@Test(priority=1)
+	//@Ignore
+	public void TestAddNewServerForm() throws IOException, InterruptedException {
+		addNewServer = loginPage.addNewServerLogin(props.getProperty("username"),props.getProperty("password"));
+		addNewServer.openAddNewServerPage();/*open the Add New Server Page.*/
+		//addNewServer.typeToserverNameInputField();/*1. Type to the Server Name Input Field.*/
+		//addNewServer.typeToipInputField();/*2. Type to the IP Input Field.*/
+		//addNewServer.typeToipRangeInputField();/*3. Type to the IP Range Input Field.*/
+		//addNewServer.typeTopathInputField();/*4. Type to the Path Input Field.*/
+		//addNewServer.capacityTopathInputField();/*5. Type to the Capacity Input Field.*/
+		//addNewServer.countrySelectField();/*6. Select Country to the Country Select Drop Down Field.*/
+		//addNewServer.typeToCityInputField();/*7. Type to the City Input Field.*/
+		//addNewServer.typeToOrderPriorityInputField();/*8. Type to the Order Priority Input Field.*/
+		//addNewServer.typeToServerPriceInputFieldElementInputField();/*9. Type to the Server Price Input Field.*/
+		addNewServer.clickToUploadWireGuardConfigCheckboxField();/*Click to the Upload WireGuard Config? Checkbox Field.*/
+		//addNewServer.wireGurdFilePriorityInputField();/*Input File Location to the Wireguard File Input Field.*/
+		//addNewServer.clickTIsActiveCheckboxField();/*click to theIs Active Checkbox Field.*/
+		addNewServer.clickTOpenVPNCheckboxField();/*click to the OpenVPN Checkbox Field.*/
+		addNewServer.anyconnectInputField();/*click to the AnyConnect Checkbox Field.*/
+		addNewServer.shadowsockInputField();/*click to the AnyConnect Checkbox Field.*/
+		addNewServer.SSHInputField();/*click to the SSH Checkbox Field.*/
 	}
 	
 	/*
