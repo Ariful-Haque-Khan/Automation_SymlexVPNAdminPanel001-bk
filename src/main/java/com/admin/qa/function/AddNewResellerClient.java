@@ -31,13 +31,13 @@ public class AddNewResellerClient extends TestBase{
 	public void resellerNameHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 	        JavascriptExecutor js = (JavascriptExecutor) driver;
-	        js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", resellerNameElement);
+	        js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", resellerNameElement);/* make a yellow border outside edge of the element */
 	        Thread.sleep(1000);
-	        js.executeScript("arguments[0].setAttribute('style', '');", resellerNameElement);
+	        js.executeScript("arguments[0].setAttribute('style', '');", resellerNameElement);/* make a yellow border off outside edge of the element */
 	        Thread.sleep(1000);
-	        js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", resellerNameElement);
+	        js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", resellerNameElement);/* make a yellow border outside edge of the element */
 	        Thread.sleep(2000);
-	        js.executeScript("arguments[0].setAttribute('style', '');", resellerNameElement);
+	        js.executeScript("arguments[0].setAttribute('style', '');", resellerNameElement);/* make a yellow border off outside edge of the element */
 	        Thread.sleep(1000);
 	    }
 	}
@@ -65,13 +65,13 @@ public class AddNewResellerClient extends TestBase{
 	public void resellerLoginInputFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", loginInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", loginInputFieldElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", loginInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", loginInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", loginInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", loginInputFieldElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", loginInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", loginInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -99,13 +99,13 @@ public class AddNewResellerClient extends TestBase{
 	public void resellerPasswordInputFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", passwordInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", passwordInputFieldElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", passwordInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", passwordInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", passwordInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", passwordInputFieldElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", passwordInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", passwordInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -132,13 +132,13 @@ public class AddNewResellerClient extends TestBase{
 	public void resellerCreditLimitInputFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", creditLimitInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", creditLimitInputFieldElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", creditLimitInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", creditLimitInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", creditLimitInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", creditLimitInputFieldElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", creditLimitInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", creditLimitInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -176,13 +176,13 @@ public class AddNewResellerClient extends TestBase{
 	public void resellerIPBundleDropDownFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", dropDownIPBundleElementSelect);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", dropDownIPBundleElementSelect);/* make a yellow border outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", dropDownIPBundleElementSelect);
+			js.executeScript("arguments[0].setAttribute('style', '');", dropDownIPBundleElementSelect);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", dropDownIPBundleElementSelect);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", dropDownIPBundleElementSelect);/* make a yellow border outside edge of the element */
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", dropDownIPBundleElementSelect);
+			js.executeScript("arguments[0].setAttribute('style', '');", dropDownIPBundleElementSelect);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -222,13 +222,13 @@ public class AddNewResellerClient extends TestBase{
 	public void resellerIPBundle2DropDownFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", dropDownIPBundle2ElementSelect);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", dropDownIPBundle2ElementSelect);/* make a yellow border outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", dropDownIPBundle2ElementSelect);
+			js.executeScript("arguments[0].setAttribute('style', '');", dropDownIPBundle2ElementSelect);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", dropDownIPBundle2ElementSelect);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", dropDownIPBundle2ElementSelect);/* make a yellow border outside edge of the element */
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", dropDownIPBundle2ElementSelect);
+			js.executeScript("arguments[0].setAttribute('style', '');", dropDownIPBundle2ElementSelect);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -260,13 +260,13 @@ public class AddNewResellerClient extends TestBase{
 	public void resellerRatePlanDropDownFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", ratePlanDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", ratePlanDropDownFieldInputElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", ratePlanDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", ratePlanDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", ratePlanDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", ratePlanDropDownFieldInputElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", ratePlanDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", ratePlanDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -296,13 +296,13 @@ public class AddNewResellerClient extends TestBase{
 	public void resellerPINResetOptionDropDownFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", pinResetOptionDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", pinResetOptionDropDownFieldInputElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", pinResetOptionDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", pinResetOptionDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", pinResetOptionDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", pinResetOptionDropDownFieldInputElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", pinResetOptionDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", pinResetOptionDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -332,13 +332,13 @@ public class AddNewResellerClient extends TestBase{
 	public void resellerResellerPanelTypeDropDownFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", resellerPanelTypeDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", resellerPanelTypeDropDownFieldInputElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", resellerPanelTypeDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", resellerPanelTypeDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", resellerPanelTypeDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", resellerPanelTypeDropDownFieldInputElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", resellerPanelTypeDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", resellerPanelTypeDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -368,13 +368,13 @@ public class AddNewResellerClient extends TestBase{
 	public void activeInactiveCheckboxInputFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", activeInactiveCheckboxInputField);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", activeInactiveCheckboxInputField);/* make a yellow border outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", activeInactiveCheckboxInputField);
+			js.executeScript("arguments[0].setAttribute('style', '');", activeInactiveCheckboxInputField);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", activeInactiveCheckboxInputField);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", activeInactiveCheckboxInputField);/* make a yellow border outside edge of the element */
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", activeInactiveCheckboxInputField);
+			js.executeScript("arguments[0].setAttribute('style', '');", activeInactiveCheckboxInputField);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -403,13 +403,13 @@ public class AddNewResellerClient extends TestBase{
 	public void appPINLoginDropDownFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", appPINLoginDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", appPINLoginDropDownFieldInputElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", appPINLoginDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", appPINLoginDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", appPINLoginDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", appPINLoginDropDownFieldInputElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", appPINLoginDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", appPINLoginDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -438,13 +438,13 @@ public class AddNewResellerClient extends TestBase{
 	public void resellerBrandNameInputFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", brandNameInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", brandNameInputFieldElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", brandNameInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", brandNameInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", brandNameInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", brandNameInputFieldElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", brandNameInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", brandNameInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -471,13 +471,13 @@ public class AddNewResellerClient extends TestBase{
 	public void resellerBrandPINPrefixInputFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", brandPINPrefixInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", brandPINPrefixInputFieldElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", brandPINPrefixInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", brandPINPrefixInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", brandPINPrefixInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", brandPINPrefixInputFieldElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", brandPINPrefixInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", brandPINPrefixInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -508,13 +508,13 @@ public class AddNewResellerClient extends TestBase{
 	public void resellerAllowAppsInputFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", allowAppsInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", allowAppsInputFieldElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", allowAppsInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", allowAppsInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", allowAppsInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", allowAppsInputFieldElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", allowAppsInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", allowAppsInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -551,13 +551,13 @@ public class AddNewResellerClient extends TestBase{
 			JavascriptExecutor jse = (JavascriptExecutor)driver;
 			jse.executeScript("window.scrollBy(0,250)");
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isCustomizePanelDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isCustomizePanelDropDownFieldInputElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", isCustomizePanelDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", isCustomizePanelDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isCustomizePanelDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isCustomizePanelDropDownFieldInputElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", isCustomizePanelDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", isCustomizePanelDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -587,13 +587,13 @@ public class AddNewResellerClient extends TestBase{
 			JavascriptExecutor jse = (JavascriptExecutor)driver;
 			jse.executeScript("window.scrollBy(0,250)");
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isCustomizePanelPanelNameInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isCustomizePanelPanelNameInputFieldElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", isCustomizePanelPanelNameInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", isCustomizePanelPanelNameInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isCustomizePanelPanelNameInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isCustomizePanelPanelNameInputFieldElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", isCustomizePanelPanelNameInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", isCustomizePanelPanelNameInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -621,13 +621,13 @@ public class AddNewResellerClient extends TestBase{
 	public void hasLimitofPINDropDownFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", hasLimitofPINDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", hasLimitofPINDropDownFieldInputElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", hasLimitofPINDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", hasLimitofPINDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", hasLimitofPINDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", hasLimitofPINDropDownFieldInputElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", hasLimitofPINDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", hasLimitofPINDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -658,13 +658,13 @@ public class AddNewResellerClient extends TestBase{
 	public void resellerpinLimitInputFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", pinLimitInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", pinLimitInputFieldElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", pinLimitInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", pinLimitInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", pinLimitInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", pinLimitInputFieldElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", pinLimitInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", pinLimitInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -699,13 +699,13 @@ public class AddNewResellerClient extends TestBase{
 	public void onlyTypeDropDownFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", onlyTypeDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", onlyTypeDropDownFieldInputElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", onlyTypeDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", onlyTypeDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", onlyTypeDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", onlyTypeDropDownFieldInputElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", onlyTypeDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", onlyTypeDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -736,13 +736,13 @@ public class AddNewResellerClient extends TestBase{
 	public void mainResellerTypeDropDownFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", mainResellerTypeDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", mainResellerTypeDropDownFieldInputElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", mainResellerTypeDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", mainResellerTypeDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", mainResellerTypeDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", mainResellerTypeDropDownFieldInputElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", mainResellerTypeDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", mainResellerTypeDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -773,13 +773,13 @@ public class AddNewResellerClient extends TestBase{
 	public void numberOfDevicesInputFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", numberOfDevicesInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", numberOfDevicesInputFieldElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", numberOfDevicesInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", numberOfDevicesInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", numberOfDevicesInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", numberOfDevicesInputFieldElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", numberOfDevicesInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", numberOfDevicesInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -815,13 +815,13 @@ public class AddNewResellerClient extends TestBase{
 	public void resellerLimitInputFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", resellerLimitInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", resellerLimitInputFieldElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", resellerLimitInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", resellerLimitInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", resellerLimitInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", resellerLimitInputFieldElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", resellerLimitInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", resellerLimitInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -856,13 +856,13 @@ public class AddNewResellerClient extends TestBase{
 	public void balanceLimitInputFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", balanceLimitInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", balanceLimitInputFieldElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", balanceLimitInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", balanceLimitInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", balanceLimitInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", balanceLimitInputFieldElement);/* make a yellow border outside edge of the element */
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", balanceLimitInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", balanceLimitInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -900,11 +900,11 @@ public class AddNewResellerClient extends TestBase{
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", emailInputFieldElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", emailInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", emailInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", emailInputFieldElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", emailInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", emailInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -942,11 +942,11 @@ public class AddNewResellerClient extends TestBase{
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", phoneNoInputFieldElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", phoneNoInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", phoneNoInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", phoneNoInputFieldElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", phoneNoInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", phoneNoInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -984,11 +984,11 @@ public class AddNewResellerClient extends TestBase{
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", cityInputFieldElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", cityInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", cityInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", cityInputFieldElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", cityInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", cityInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -1027,11 +1027,11 @@ public class AddNewResellerClient extends TestBase{
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", countryTypeDropDownFieldInputElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", countryTypeDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", countryTypeDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", countryTypeDropDownFieldInputElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", countryTypeDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", countryTypeDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -1064,11 +1064,11 @@ public class AddNewResellerClient extends TestBase{
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", stateInputFieldElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", stateInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", stateInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", stateInputFieldElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", stateInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", stateInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -1106,11 +1106,11 @@ public class AddNewResellerClient extends TestBase{
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", addressInputFieldElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", addressInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", addressInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", addressInputFieldElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", addressInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", addressInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -1151,11 +1151,11 @@ public class AddNewResellerClient extends TestBase{
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isTVResellerDropDownFieldInputElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", isTVResellerDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", isTVResellerDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isTVResellerDropDownFieldInputElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", isTVResellerDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", isTVResellerDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -1196,11 +1196,11 @@ public class AddNewResellerClient extends TestBase{
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", tvcreditLimitInputFieldElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", tvcreditLimitInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", tvcreditLimitInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", tvcreditLimitInputFieldElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", tvcreditLimitInputFieldElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", tvcreditLimitInputFieldElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -1242,10 +1242,10 @@ public class AddNewResellerClient extends TestBase{
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", showAppBannerDropDownFieldInputElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", showAppBannerDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", showAppBannerDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", showAppBannerDropDownFieldInputElement);/*make a yellow border outside edge of the element*/
-			js.executeScript("arguments[0].setAttribute('style', '');", showAppBannerDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", showAppBannerDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -1285,11 +1285,11 @@ public class AddNewResellerClient extends TestBase{
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", showFullScreenDropDownFieldInputElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", showFullScreenDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", showFullScreenDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", showFullScreenDropDownFieldInputElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", showFullScreenDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", showFullScreenDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -1331,11 +1331,11 @@ public class AddNewResellerClient extends TestBase{
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", lowBALNotifyEmailDropDownFieldInputElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", lowBALNotifyEmailDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", lowBALNotifyEmailDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", lowBALNotifyEmailDropDownFieldInputElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", lowBALNotifyEmailDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", lowBALNotifyEmailDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -1377,11 +1377,11 @@ public class AddNewResellerClient extends TestBase{
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", assignPremiumLockedBundleDropDownFieldInputElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", assignPremiumLockedBundleDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", assignPremiumLockedBundleDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", assignPremiumLockedBundleDropDownFieldInputElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", assignPremiumLockedBundleDropDownFieldInputElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", assignPremiumLockedBundleDropDownFieldInputElement);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -1405,11 +1405,11 @@ public class AddNewResellerClient extends TestBase{
 			******************************************************************************************************************************/
 	
 	
-	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-	 		* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-	 		* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.36 -   Submit Button   $$$$$$$$$$$$$$$$$$$$$$$$$$$$
-     		* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
-     *$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	 							* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	 							* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.36 -   Submit Button   $$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	 							* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	 							*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
 	
 	// 036. Element Submit Button
 	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div[6]/input[3]")
@@ -1425,7 +1425,7 @@ public class AddNewResellerClient extends TestBase{
 			Thread.sleep(1000);
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", submitButton);/*make a yellow border outside edge of the element*/
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", submitButton);/*make a yellow border off outside edge of the element*/
+			js.executeScript("arguments[0].setAttribute('style', '');", submitButton);/* make a yellow border off outside edge of the element */
 			Thread.sleep(1000);
 		}
 	}
@@ -1440,9 +1440,9 @@ public class AddNewResellerClient extends TestBase{
 		submitButton.click(); /*click on the element */
 		return new AddNewResellerClient(); 
 	}
-	/***************************************************************************************************************
-	         * *****************************************************************************************************
-			 * **************************    End No.36 - Submit Button    ******************************************
-			 * * *****************************************************************************************************
-			******************************************************************************************************************************/
+	/**************************************************************************
+	         								* **********************************************************************************************
+			 								* *********************************   End No.36 - Submit Button    *****************************
+			 								* * ********************************************************************************************
+			 								*****************************************************************************************************************/
 }

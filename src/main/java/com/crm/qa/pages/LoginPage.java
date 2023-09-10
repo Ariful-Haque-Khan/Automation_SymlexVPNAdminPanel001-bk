@@ -30,9 +30,11 @@ import com.admin.qa.function.AddNewResellerClient;
 import com.admin.qa.function.AddNewServer;
 import com.admin.qa.function.AddPINJail;
 import com.admin.qa.function.AddPINValidity;
+import com.admin.qa.function.CreateNewApp;
 import com.admin.qa.function.NewCustomizeResellerPanel;
 import com.admin.qa.function.OnlinePINActivation;
 import com.admin.qa.function.OnlinePINMigration;
+import com.admin.qa.function.PushAutomationForm;
 import com.admin.qa.function.SendBackgroundorSilentPushtoSinglePIN;
 import com.admin.qa.pages.AllLinksFromDB;
 import com.crm.qa.base.TestBase;
@@ -334,5 +336,23 @@ public class LoginPage extends TestBase{
 		loginBtn.click();
 		
 		return new AddNewServer(); // Add New Server page for LoginPage
+	}
+	
+	public CreateNewApp createNewAppLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new CreateNewApp(); // Add New Server page for LoginPage
+	}
+	
+	public PushAutomationForm pushAutomationLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new PushAutomationForm(); // Login form Push Automation Form page
 	}
 }
