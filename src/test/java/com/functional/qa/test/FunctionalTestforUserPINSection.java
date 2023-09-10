@@ -255,10 +255,12 @@ public class FunctionalTestforUserPINSection extends TestBase{
 		addNewServer.clickToUploadWireGuardConfigCheckboxField();/*Click to the Upload WireGuard Config? Checkbox Field.*/
 		//addNewServer.wireGurdFilePriorityInputField();/*Input File Location to the Wireguard File Input Field.*/
 		//addNewServer.clickTIsActiveCheckboxField();/*click to theIs Active Checkbox Field.*/
-		addNewServer.clickTOpenVPNCheckboxField();/*click to the OpenVPN Checkbox Field.*/
-		addNewServer.anyconnectInputField();/*click to the AnyConnect Checkbox Field.*/
-		addNewServer.shadowsockInputField();/*click to the AnyConnect Checkbox Field.*/
-		addNewServer.SSHInputField();/*click to the SSH Checkbox Field.*/
+		//addNewServer.clickTOpenVPNCheckboxField();/*click to the OpenVPN Checkbox Field.*/
+		//addNewServer.anyconnectInputField();/*click to the AnyConnect Checkbox Field.*/
+		//addNewServer.shadowsockInputField();/*click to the AnyConnect Checkbox Field.*/
+		//addNewServer.SSHInputField();/*click to the SSH Checkbox Field.*/
+		//addNewServer.typeToWireGuardInputField();/*click to the WireGuard Checkbox Field.*/
+		addNewServer.clickToIsFreeCheckboxInputField();/*click to the Is Free Checkbox Input Field.*/
 	}
 	
 	/*

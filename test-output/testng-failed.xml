@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.functional.qa.test.FunctionalTestforUserPINSection">
+      <class name="com.functional.qa.test.FunctionalTestforPushManagementSection">
         <methods>
           <include name="setUp"/>
-          <include name="TestCustoPanelNameForm"/>
+          <include name="TestPushAutomationForm"/>
         </methods>
-      </class> <!-- com.functional.qa.test.FunctionalTestforUserPINSection -->
+      </class> <!-- com.functional.qa.test.FunctionalTestforPushManagementSection -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

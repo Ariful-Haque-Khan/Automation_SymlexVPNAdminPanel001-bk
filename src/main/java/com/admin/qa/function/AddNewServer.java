@@ -667,5 +667,83 @@ public class  AddNewServer extends TestBase{
 											* ************************    End No.17 - Element of SSH Input Field   ********************
 											* * ***************************************************************************************
 											 						 ******************************************************************************************/
+		
+		/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+										* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+										* $$$$$$$$$$$$$$$$$$$$$$$    Start No.18 -   Element of WireGuard Input Field   $$$$$$$$$$$$$$$$$$$$$$$
+										* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+																*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+		//18. Element of WireGuard Input Field
+		@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[18]/div/div/input")
+		WebElement wireGuardkInputFieldElement;
+		
+		//18. Highlight the SSH Input Field
+		public void  wireGuardInputFieldHighlight() throws InterruptedException {
+			if (driver instanceof JavascriptExecutor) {
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", wireGuardkInputFieldElement);
+				Thread.sleep(1000);
+				js.executeScript("arguments[0].setAttribute('style', '');", wireGuardkInputFieldElement);
+				Thread.sleep(1000);
+				js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", wireGuardkInputFieldElement);
+				Thread.sleep(2000);
+				js.executeScript("arguments[0].setAttribute('style', '');", wireGuardkInputFieldElement);
+				Thread.sleep(1000);
+			}
+		}
+
+		//18. Type to the SSH Input Field
+		public AddPINValidity typeToWireGuardInputField() throws InterruptedException {
+			Thread.sleep(1000);
+			//SSHInputFieldHighlight();
+			wireGuardkInputFieldElement.click();
+			return new AddPINValidity();
+		}
+		
+		/*************************************************************
+											* *****************************************************************************************
+											* ************************    End No.18 - Element of WireGuard Input Field   **************
+											* * ***************************************************************************************
+					 						 						******************************************************************************************/
+		
+		/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		 								* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+										* $$$$$$$$$$$$$$$$$$$$$$$    Start No.19 -   Element of Is Free Checkbox Input Field   $$$$$$$$$$$$$$$$
+										* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+																*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+		//19. Element of Is Free Checkbox Input Field
+		@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[19]/div/div/input")
+		WebElement isFreeInputCheckBox;
+		
+		//19. Highlight the Is Free Checkbox Input Field
+		public void  isFreeCheckboxInputFieldHighlight() throws InterruptedException {
+			if (driver instanceof JavascriptExecutor) {
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isFreeInputCheckBox);
+				Thread.sleep(1000);
+				js.executeScript("arguments[0].setAttribute('style', '');", isFreeInputCheckBox);
+				Thread.sleep(1000);
+				js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isFreeInputCheckBox);
+				Thread.sleep(2000);
+				js.executeScript("arguments[0].setAttribute('style', '');", isFreeInputCheckBox);
+				Thread.sleep(1000);
+			}
+		}
+		
+		//19. Type to the Is Free Checkbox Input Field
+		public AddPINValidity clickToIsFreeCheckboxInputField() throws InterruptedException {
+			Thread.sleep(1000);
+			//SSHInputFieldHighlight();
+			isFreeInputCheckBox.click();
+			return new AddPINValidity();
+		}
+		
+		/*************************************************************
+											* *****************************************************************************************
+											* ************************    End No.19 - Element of Is Free Checkbox Input Field   *******
+											* * ***************************************************************************************
+						 												******************************************************************************************/
 	
 }
