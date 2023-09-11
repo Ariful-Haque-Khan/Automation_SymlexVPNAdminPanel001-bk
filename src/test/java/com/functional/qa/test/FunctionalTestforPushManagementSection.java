@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 
 import com.admin.qa.function.CreateNewApp;
 import com.admin.qa.function.PushAutomationForm;
+import com.admin.qa.function.SendPushtoUser;
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.TestUtils;
@@ -24,6 +25,7 @@ public class FunctionalTestforPushManagementSection extends TestBase{
 	LoginPage loginPage;
 	CreateNewApp createNewApp;
 	PushAutomationForm pushAutomationForm;
+	SendPushtoUser sendPushtoUser;
 	TestUtils testUtils;
 	
 	//Initializing PageFactory
@@ -55,8 +57,8 @@ public class FunctionalTestforPushManagementSection extends TestBase{
 	}
 	
 	/****** Test Push Automation Form!!! *****/
-	@Test(priority=1)
-	//@Ignore
+	//@Test(priority=1)
+	@Ignore
 	public void TestPushAutomationForm() throws IOException, InterruptedException {
 		pushAutomationForm = loginPage.pushAutomationLogin(props.getProperty("username"),props.getProperty("password"));
 		pushAutomationForm.openPushAutomationFormPage();/*open the Push Automation Form Page */
@@ -82,6 +84,18 @@ public class FunctionalTestforPushManagementSection extends TestBase{
 		pushAutomationForm.activeInactiveStatusCheckboxInputboxElement();/*20.. Click Active/Inactive Status, Checkbox Input  Element */
 		pushAutomationForm.deviceTypeDropdownField();/*21.. select data from Device Type Dropdown Field */
 		pushAutomationForm.purchaseTypeDropdownField();/*22.. select data from Purchase Type Dropdown Field */
+	}
+	
+	/* ***** Test Send Push to user Form */
+	@Test(priority=1)
+	//@Ignore
+	public void TestSendPushtoUserForm() throws IOException, InterruptedException {
+		sendPushtoUser = loginPage.sendPushtoUserLogin(props.getProperty("username"),props.getProperty("password"));
+		sendPushtoUser.openSendPushtoUserPage();/*0.. open the Send Push to User Page. */
+		//sendPushtoUser.selectDatafromAppNameDropDownElement();/*1.. select data from App name Field */
+		//sendPushtoUser.sendToDropdownField();/*2.. select data from App name Field */
+		//sendPushtoUser.datafromWithChildDropDownElement();/*3.. check from With Child checkbox Field */
+		sendPushtoUser.datafromPINWithCommaSeparatedInputboxElement();/*4.. type data to PIN with comma separated Input Box Field */
 	}
 	
 	
