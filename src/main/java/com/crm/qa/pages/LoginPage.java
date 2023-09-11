@@ -36,6 +36,7 @@ import com.admin.qa.function.OnlinePINActivation;
 import com.admin.qa.function.OnlinePINMigration;
 import com.admin.qa.function.PushAutomationForm;
 import com.admin.qa.function.SendBackgroundorSilentPushtoSinglePIN;
+import com.admin.qa.function.SendPushtoUser;
 import com.admin.qa.pages.AllLinksFromDB;
 import com.crm.qa.base.TestBase;
 
@@ -354,5 +355,14 @@ public class LoginPage extends TestBase{
 		loginBtn.click();
 		
 		return new PushAutomationForm(); // Login form Push Automation Form page
+	}
+	
+    public SendPushtoUser sendPushtoUserLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new SendPushtoUser(); // Login form Push Automation Form page
 	}
 }
