@@ -26,10 +26,13 @@ import com.admin.qa.pages.UserPermissionSectionLinks;
 import com.admin.qa.pages.IPManagementSectionLinks;
 import com.admin.qa.pages.MailAddressSectionLinks;
 import com.admin.qa.pages.OnlinePINReportsSectionLinks;
+import com.admin.qa.function.AddNewBanner;
+import com.admin.qa.function.AddNewNotice;
 import com.admin.qa.function.AddNewResellerClient;
 import com.admin.qa.function.AddNewServer;
 import com.admin.qa.function.AddPINJail;
 import com.admin.qa.function.AddPINValidity;
+import com.admin.qa.function.AddPushTemplate;
 import com.admin.qa.function.CreateNewApp;
 import com.admin.qa.function.NewCustomizeResellerPanel;
 import com.admin.qa.function.OnlinePINActivation;
@@ -364,5 +367,32 @@ public class LoginPage extends TestBase{
 		loginBtn.click();
 		
 		return new SendPushtoUser(); // Login form Push Automation Form page
+	}
+    
+    public AddPushTemplate addPushTemplateLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new AddPushTemplate(); // Login form Push Automation Form page
+	}
+    
+    public AddNewNotice addNewNoticeLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new AddNewNotice(); // Login form Push Automation Form page
+	}
+    
+    public AddNewBanner addNewBannerLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new AddNewBanner(); // Login form Add New Banner Form page
 	}
 }
