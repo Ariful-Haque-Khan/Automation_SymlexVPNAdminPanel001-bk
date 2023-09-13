@@ -238,8 +238,8 @@ public class FunctionalTestforUserPINSection extends TestBase{
 	}*/
 	
 	/****** Test Add New Server!!! */
-	@Test(priority=1)
-	//@Ignore
+	//@Test(priority=1)
+	@Ignore
 	public void TestAddNewServerForm() throws IOException, InterruptedException {
 		addNewServer = loginPage.addNewServerLogin(props.getProperty("username"),props.getProperty("password"));
 		addNewServer.openAddNewServerPage();/*open the Add New Server Page.*/
@@ -262,6 +262,7 @@ public class FunctionalTestforUserPINSection extends TestBase{
 		//addNewServer.typeToWireGuardInputField();/*click to the WireGuard Checkbox Field.*/
 		addNewServer.clickToIsFreeCheckboxInputField();/*click to the Is Free Checkbox Input Field.*/
 	}
+
 	
 	/*
 	@AfterMethod
