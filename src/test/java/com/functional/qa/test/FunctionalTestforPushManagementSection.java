@@ -172,9 +172,24 @@ public class FunctionalTestforPushManagementSection extends TestBase{
 	public void TestAddNewBannerForm() throws IOException, InterruptedException {
 		addNewBanner = loginPage.addNewBannerLogin(props.getProperty("username"),props.getProperty("password"));
 		addNewBanner.openAddNewBannerFormPage();/*open the Add New Banner Page. */
-		addNewBanner.typeToBannerName();/*1.. type data to banner name element. */
-		addNewBanner.typeToAppHomeBannerAndroidElement();/*2.. type data to App Home Banner Android Element. */
-		addNewBanner.typeToOnclickURLElement();/*2.. type data to Onclick URL Element. */
+		//addNewBanner.typeToBannerName();/*1.. type data to banner name element. */
+		//addNewBanner.typeToAppHomeBannerAndroidElement();/*2.. type data to App Home Banner Android Element. */
+		//addNewBanner.typeToOnclickURLElement();/*3.. type data to Onclick URL Element. */
+		//addNewBanner.typeToHomeBanneriOSElement();/*4.. type data to App Home Banner iOS Element. */
+		//addNewBanner.typeToiOSOnclickURLElement();/*5.. type data to iOS Onclick URL Element. */
+		//addNewBanner.typeToResellerPanelBannerElement();/*6.. type data to Reseller Panel Banner Element. */
+		//addNewBanner.typeToResellerOnclickURLElement();/*7.. type data to Reseller Onclick URL Element. */
+		//addNewBanner.selectDatafromCountryDropDownElement();/*8.. select and type data to Reseller Element. */
+		//addNewBanner.clickOncommonPanelElement();/*9.. click to Common Panel Checkbox Element. */
+		//addNewBanner.typeToBannerRemarksElement();/*10.. type to Banner Remarks Input Element. */
+		addNewBanner.clickOnLoginTypeAppElement();/*11.. click to Login Type(App) All Element. */
+		addNewBanner.clickOnloginTypeAppSymlexElement();/*12.. click to Login Type(App) Symlex Element. */
+		addNewBanner.clickOnloginTypeAppPlatinumElement();/*13.. click to Login Type(App) Platinum Element. */
+		addNewBanner.clickOnUserTypeAppAllElement();/*14.. click to User Type(App) All Element. */
+		addNewBanner.clickOnUserTypeAppFreeElement();/*15.. click to User Type(App) Free Element. */
+		addNewBanner.clickOnUserTypeAppExpiredElement();/*16.. click to User Type(App) Expired Element. */
+		addNewBanner.clickOnUserTypeAppPaidElement();/*17.. click to User Type(App) Expired Element. */
+		addNewBanner.clickOnUserTypeAppPremiumElement();/*18.. click to User Type(App) Expired Element. */
 	}
 	
 	/*
