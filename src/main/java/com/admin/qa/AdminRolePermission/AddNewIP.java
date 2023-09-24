@@ -161,7 +161,7 @@ public class AddNewIP extends TestBase{
 	}
 	
 	//04. Select from Server Type Dropdown Field
-	public AddNewIP sendToDropdownField() throws InterruptedException {
+	public AddNewIP serverTypeDropdownField() throws InterruptedException {
 		serverTypeFieldHighlight();/* highlight the element of the tested. */
 		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[4]/div/select")));
 		drp.selectByIndex(1);
@@ -171,7 +171,7 @@ public class AddNewIP extends TestBase{
 	
 	/***************************************************
 							*********************************************************************************************
-							****************************    End No.04 - Element of Send To    ***************************
+							****************************    End No.04 - Element of Server Type    ***********************
 							*********************************************************************************************
 										  				*****************************************************************************************************/
 	
@@ -202,7 +202,7 @@ public class AddNewIP extends TestBase{
 	
 	//05. Select from UAE Network Dropdown Field
 	public AddNewIP uaeNetworkDropdownField() throws InterruptedException {
-		serverTypeFieldHighlight();/* highlight the element of the tested. */
+		uaeNetworkFieldHighlight();/* highlight the element of the tested. */
 		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[5]/div/select")));
 		drp.selectByIndex(1);
 		return new AddNewIP(); 
@@ -264,7 +264,210 @@ public class AddNewIP extends TestBase{
 											 **************************************************************************************************
 																   ********************************************************************************************/
 	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		 			 * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		 			 * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.07 -   Element of VPN Server   $$$$$$$$$$$$$$$$$$$$$
+		 			 * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+															 *$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+	//07. VPN Server Element for First click On the Element
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[7]/div/span")
+	WebElement dropDownVPNServerinSelect;
+	
+	//07. VPN Server Element for Search On the Element
+	@FindBy(xpath="/html/body/span/span/span[1]/input")
+	WebElement searchInVPNServerDropDown;
+	
+	//07. VPN Server Element for Last click of first element On the Element
+	@FindBy(xpath="/html/body/span/span/span[2]/ul/li")
+	WebElement valueForVPNServerSearch;
+	
+	//07. Highlight the VPN Server Input Field
+	public void vpnServerDropDownElementdHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", dropDownVPNServerinSelect);/* make a yellow border outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", dropDownVPNServerinSelect);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", dropDownVPNServerinSelect);/* make a yellow border outside edge of the element */
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", dropDownVPNServerinSelect);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+		}
+	}
+	
+	//07. Select From the VPN Server
+	public AddNewIP selectDatafromVPNServerDropDownElement() throws InterruptedException {
+		countryDropDownElementdHighlight();/* highlight the element of the tested. */
+		dropDownCountryinSelect.click(); /*click on the element */
+		searchInCountryDropDown.sendKeys("Bangladesh");/*type on the input field */
+		valueForCountrySearch.click();/*click on the element from result of the first value. */
+		return new AddNewIP();
+	}
+	
+	/*******************************************************************
+								 			 **************************************************************************************************
+								 			 ***************************    End No.07 - Element of VPN Server    ******************************
+								 			 **************************************************************************************************
+													                  ********************************************************************************************/
 	
 	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	 				* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+					* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.08 -  Element of Connection Type   $$$$$$$$$$$$$$$$$$$$$$$$
+					* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+															*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+	//08. Element of Connection Type
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[9]/div/select")
+	WebElement connectionTypeElement;
+	
+	//08. Highlight the Connection Type Dropdown Field
+	public void connectionTypeFieldHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", connectionTypeElement);/* make a yellow border outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", connectionTypeElement);/*make a yellow border off outside edge of the element*/
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", connectionTypeElement);/* make a yellow border outside edge of the element */
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", connectionTypeElement);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+		}
+	}
+	
+	//08. Select from Connection Type Dropdown Field
+	public AddNewIP connectionTypeDropdownField() throws InterruptedException {
+		uaeNetworkFieldHighlight();/* highlight the element of the tested. */
+		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[9]/div/select")));
+		drp.selectByIndex(1);
+		return new AddNewIP(); 
+	}
+	
+	
+	/***************************************************
+							*********************************************************************************************
+						    ****************************    End No.08 - Element of Connection Type    *******************
+						    *********************************************************************************************
+				  										*****************************************************************************************************/
+	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	  				  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.09 -   Element of SSL IP   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+									 			  *$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+	//09. Element of SSL IP
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[1]/div/input")
+	WebElement sslIPElement;
+	
+	//09. Highlight the SSL IP Input Field
+	public void sslIPElementInputFieldHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", sslIPElement);/* make a yellow border outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", sslIPElement);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", sslIPElement);/* make a yellow border outside edge of the element */
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", sslIPElement);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+		}
+	}
+	
+	//09. Type to the SSL IP
+	public AddNewIP typeToSSLIP() throws InterruptedException {
+		sslIPElementInputFieldHighlight();/* highlight the element of the tested. */
+		sslIPElement.sendKeys("11.22.0.99");/*select data on the dropdown field */
+		return new AddNewIP();
+	}
+	
+	/***********************************************
+						* *****************************************************************************************************
+						* **************************    End No.09 - Element of Server Name    *********************************
+						* * ***************************************************************************************************
+												   ******************************************************************************************************/
+	
+	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.10 -   Element of Site   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+					 			  				  *$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+	//10. Element of Site
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[1]/div/input")
+	WebElement siteElement;
+	
+	//10. Highlight the Site Input Field
+	public void siteElementInputFieldHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", siteElement);/* make a yellow border outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", siteElement);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", siteElement);/* make a yellow border outside edge of the element */
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", siteElement);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+		}
+	}
+	
+	//10. Type to the Site
+	public AddNewIP typeToSite() throws InterruptedException {
+		siteElementInputFieldHighlight();/* highlight the element of the tested. */
+		siteElement.sendKeys("Test...");/*select data on the dropdown field */
+		return new AddNewIP();
+	}
+	
+	/***********************************************
+						* *****************************************************************************************************
+						* **************************    End No.10 - Element of Site    ****************************************
+						* * ***************************************************************************************************
+									   				******************************************************************************************************/
+	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+					* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+					* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.11 -  Element of Platform   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+					* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+															*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+	//11. Element of Platform
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[12]/div/select")
+	WebElement platformElement;
+	
+	//11. Highlight the Platform Dropdown Field
+	public void platformFieldHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", platformElement);/* make a yellow border outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", platformElement);/*make a yellow border off outside edge of the element*/
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", platformElement);/* make a yellow border outside edge of the element */
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", platformElement);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+		}
+	}
+	
+	//11. Select from Platform Dropdown Field
+	public AddNewIP platformDropdownField() throws InterruptedException {
+		platformFieldHighlight();/* highlight the element of the tested. */
+		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[12]/div/select")));
+		drp.selectByIndex(1);
+		return new AddNewIP(); 
+	}
+	
+	
+	/***************************************************
+							*********************************************************************************************
+			    			****************************    End No.11 - Element of Platform    **************************
+			    			*********************************************************************************************
+	  													*****************************************************************************************************/
 	
 }

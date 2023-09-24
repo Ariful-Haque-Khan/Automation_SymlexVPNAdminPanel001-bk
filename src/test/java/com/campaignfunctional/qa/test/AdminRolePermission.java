@@ -95,9 +95,15 @@ public class AdminRolePermission extends TestBase{
 	public void TestAddNewServerBlankForm() throws IOException, InterruptedException {
 		addNewIP = loginPage.addNewIPLogin(props.getProperty("username"),props.getProperty("password"));
 		addNewIP.openAddNewIPPage();/*open the Add New IP Form Page */
-		addNewIP.typeToServerName();/* 1.. type to Server Name Input Element */
-		addNewIP.typeToIP();/* 2.. type to Server IP Element */
+		//addNewIP.typeToServerName();/* 1.. type to Server Name Input Element */
+		//addNewIP.typeToIP();/* 2.. type to Server IP Element */
+		//addNewIP.typeToServerNote();/* 3.. type to Server Note Element */
+		addNewIP.serverTypeDropdownField();/* 4.. select from Server Type Dropdown Field Element */
+		addNewIP.uaeNetworkDropdownField();/* 5.. select from UAE Network Dropdown Field Element */
 		addNewIP.selectDatafromCountryDropDownElement();/* 6.. select from Country Dropdown Field Element */
+		addNewIP.selectDatafromVPNServerDropDownElement();/* 7.. select from VPN Server Field Element */
+		addNewIP.connectionTypeDropdownField();/* 8.. select from Connection Type Dropdown Field Element */
+		addNewIP.typeToSSLIP();/* 9.. type to SSL IP Element */
 	}
 	
 	/*
