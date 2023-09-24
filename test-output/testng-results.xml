@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-14T18:29:46 BDT" name="Default suite" finished-at="2023-09-14T18:30:55 BDT" duration-ms="68832">
+  <suite started-at="2023-09-21T18:30:20 BDT" name="Default suite" finished-at="2023-09-21T18:32:02 BDT" duration-ms="101953">
     <groups>
     </groups>
-    <test started-at="2023-09-14T18:29:46 BDT" name="Default test" finished-at="2023-09-14T18:30:55 BDT" duration-ms="68832">
-      <class name="com.functional.qa.test.FunctionalTestforPushManagementSection">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.functional.qa.test.FunctionalTestforPushManagementSection@429bffaa]" started-at="2023-09-14T18:29:47 BDT" name="setUp" finished-at="2023-09-14T18:29:59 BDT" duration-ms="12294" status="PASS">
+    <test started-at="2023-09-21T18:30:20 BDT" name="Default test" finished-at="2023-09-21T18:32:02 BDT" duration-ms="101953">
+      <class name="com.campaignfunctional.qa.test.AdminRolePermission">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.campaignfunctional.qa.test.AdminRolePermission@3e84448c]" started-at="2023-09-21T18:30:20 BDT" name="setUp" finished-at="2023-09-21T18:30:53 BDT" duration-ms="32241" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TestAddNewBannerForm()[pri:1, instance:com.functional.qa.test.FunctionalTestforPushManagementSection@429bffaa]" started-at="2023-09-14T18:29:59 BDT" name="TestAddNewBannerForm" finished-at="2023-09-14T18:30:55 BDT" duration-ms="56472" status="PASS">
+        <test-method signature="TestAddNewServerBlankForm()[pri:1, instance:com.campaignfunctional.qa.test.AdminRolePermission@3e84448c]" started-at="2023-09-21T18:30:53 BDT" name="TestAddNewServerBlankForm" finished-at="2023-09-21T18:32:02 BDT" duration-ms="69651" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestAddNewBannerForm -->
-      </class> <!-- com.functional.qa.test.FunctionalTestforPushManagementSection -->
+        </test-method> <!-- TestAddNewServerBlankForm -->
+      </class> <!-- com.campaignfunctional.qa.test.AdminRolePermission -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
