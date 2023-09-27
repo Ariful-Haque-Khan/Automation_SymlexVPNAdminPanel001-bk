@@ -300,9 +300,9 @@ public class AddNewIP extends TestBase{
 	//07. Select From the VPN Server
 	public AddNewIP selectDatafromVPNServerDropDownElement() throws InterruptedException {
 		countryDropDownElementdHighlight();/* highlight the element of the tested. */
-		dropDownCountryinSelect.click(); /*click on the element */
-		searchInCountryDropDown.sendKeys("Bangladesh");/*type on the input field */
-		valueForCountrySearch.click();/*click on the element from result of the first value. */
+		dropDownVPNServerinSelect.click(); /*click on the element */
+		searchInVPNServerDropDown.sendKeys("Dhaka-5");/*type on the input field */
+		valueForVPNServerSearch.click();/*click on the element from result of the first value. */
 		return new AddNewIP();
 	}
 	
@@ -340,7 +340,7 @@ public class AddNewIP extends TestBase{
 	
 	//08. Select from Connection Type Dropdown Field
 	public AddNewIP connectionTypeDropdownField() throws InterruptedException {
-		uaeNetworkFieldHighlight();/* highlight the element of the tested. */
+		connectionTypeFieldHighlight();/* highlight the element of the tested. */
 		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[9]/div/select")));
 		drp.selectByIndex(1);
 		return new AddNewIP(); 
@@ -360,7 +360,7 @@ public class AddNewIP extends TestBase{
 									 			  *$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
 
 	//09. Element of SSL IP
-	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[1]/div/input")
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[10]/div/input")
 	WebElement sslIPElement;
 	
 	//09. Highlight the SSL IP Input Field
@@ -399,7 +399,7 @@ public class AddNewIP extends TestBase{
 					 			  				  *$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
 
 	//10. Element of Site
-	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[1]/div/input")
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[11]/div/input")
 	WebElement siteElement;
 	
 	//10. Highlight the Site Input Field
@@ -469,5 +469,309 @@ public class AddNewIP extends TestBase{
 			    			****************************    End No.11 - Element of Platform    **************************
 			    			*********************************************************************************************
 	  													*****************************************************************************************************/
+	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.12 -   Element of Active / Inactive   $$$$$$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	 			  				  				*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+	//12. Element of Active / Inactive
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[13]/div/div/input")
+	WebElement activeInactiveElement;
+	
+	//12. Highlight the Active / Inactive Input Field
+	public void activeInactiveElementInputFieldHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", activeInactiveElement);/* make a yellow border outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", activeInactiveElement);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", activeInactiveElement);/* make a yellow border outside edge of the element */
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", activeInactiveElement);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+		}
+	}
+	
+	//12. Type to the Active / Inactive
+	public AddNewIP clickToActiveInactive() throws InterruptedException {
+		activeInactiveElementInputFieldHighlight();/* highlight the element of the tested. */
+		activeInactiveElement.click();/*select data on the dropdown field */
+		return new AddNewIP();
+	}
+	
+	/***********************************************
+						* *****************************************************************************************************
+						* **************************    End No.12 - Element of Active / Inactive    ****************************************
+						* * ***************************************************************************************************
+						   							******************************************************************************************************/
+
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.13 -   Element of Is Streaming   $$$$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+				  				  					*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
+	//10. Element of Is Streaming
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[14]/div/div/input")
+	WebElement isStreamingElement;
+	
+	//10. Highlight the Is Streaming Input Field
+	public void isStreamingElementInputFieldHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isStreamingElement);/* make a yellow border outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", isStreamingElement);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isStreamingElement);/* make a yellow border outside edge of the element */
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", isStreamingElement);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+		}
+	}
+	
+	//10. Type to the Is Streaming
+	public AddNewIP clickToIsStreaming() throws InterruptedException {
+		isStreamingElementInputFieldHighlight();/* highlight the element of the tested. */
+		isStreamingElement.click();/*select data on the dropdown field */
+		return new AddNewIP();
+	}
+	
+	/***********************************************
+						* *****************************************************************************************************
+						* **************************    End No.13 - Element of Is Streaming    ********************************
+						* * ***************************************************************************************************
+					   								******************************************************************************************************/
+
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.14 -   Element of Gaming   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+				  				  				 *$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
+	//14. Element of Gaming
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[15]/div/div/input")
+	WebElement isGamingElement;
+	
+	//14. Highlight the Site Input Field
+	public void isGamingElementInputFieldHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isGamingElement);/* make a yellow border outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", isGamingElement);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isGamingElement);/* make a yellow border outside edge of the element */
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", isGamingElement);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+		}
+	}
+	
+	//14. Type to the is Gaming
+	public AddNewIP clickToisGaming() throws InterruptedException {
+		isGamingElementInputFieldHighlight();/* highlight the element of the tested. */
+		isGamingElement.click();/*select data on the dropdown field */
+		return new AddNewIP();
+	}
+	
+	/***********************************************
+						* *****************************************************************************************************
+						* **************************    End No.14 - Element of is Gaming    ***********************************
+						* * ***************************************************************************************************
+					   								******************************************************************************************************/
+
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.15 -   Element of Is Free   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+				  				  					*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
+	//15. Element of Is Free
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[16]/div/div/input")
+	WebElement isFreeElement;
+	
+	//15. Highlight the Is Free Input Field
+	public void isFreeElementInputFieldHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isFreeElement);/* make a yellow border outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", isFreeElement);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isFreeElement);/* make a yellow border outside edge of the element */
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", isFreeElement);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+		}
+	}
+	
+	//15. Type to the Is Free
+	public AddNewIP clickToIsFree() throws InterruptedException {
+		isFreeElementInputFieldHighlight();/* highlight the element of the tested. */
+		isFreeElement.click();/*select data on the dropdown field */
+		return new AddNewIP();
+	}
+	
+	/***********************************************
+						* *****************************************************************************************************
+						* **************************    End No.15 - Element of Is FreeElement    ******************************
+						* * ***************************************************************************************************
+					   								******************************************************************************************************/
+
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.16 -   Element of Is Ads Blocker   $$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+				  				  					*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
+	//16. Element of Is Ads Blocker
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[17]/div/div/input")
+	WebElement isAdsBlockerElement;
+	
+	//16. Highlight the Is Ads Blocker Input Field
+	public void isAdsBlockerElementInputFieldHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isAdsBlockerElement);/* make a yellow border outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", isAdsBlockerElement);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isAdsBlockerElement);/* make a yellow border outside edge of the element */
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", isAdsBlockerElement);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+		}
+	}
+	
+	//16. Type to the Is Ads Blocker
+	public AddNewIP clickToIsAdsBlocker() throws InterruptedException {
+		isAdsBlockerElementInputFieldHighlight();/* highlight the element of the tested. */
+		isAdsBlockerElement.click();/*select data on the dropdown field */
+		return new AddNewIP();
+	}
+	
+	/***********************************************
+						* *****************************************************************************************************
+						* **************************    End No.16 - Element of Is Ads Blocker    ******************************
+						* * ***************************************************************************************************
+					   								******************************************************************************************************/
+
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.17 -   Element of Is Fast Server   $$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+				  				  					*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
+	//17. Element of Is Fast Server
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[18]/div/div/input")
+	WebElement isFastServerElement;
+	
+	//17. Highlight the Is Fast Server Input Field
+	public void isFastServerElementInputFieldHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isFastServerElement);/* make a yellow border outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", isFastServerElement);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isFastServerElement);/* make a yellow border outside edge of the element */
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", isFastServerElement);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+		}
+	}
+	
+	//17. Type to the Is Fast Server
+	public AddNewIP clickToIsFastServer() throws InterruptedException {
+		isFastServerElementInputFieldHighlight();/* highlight the element of the tested. */
+		isFastServerElement.click();/*select data on the dropdown field */
+		return new AddNewIP();
+	}
+	
+	/***********************************************
+						* *****************************************************************************************************
+					 	* **************************    End No.17 - Element of Site    ****************************************
+					 	* * ***************************************************************************************************
+					   									******************************************************************************************************/
+
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.18 -   Element of Loyal User Server   $$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+				  				                *$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
+	//18. Element of Loyal User Server
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[19]/div/div/input")
+	WebElement loyalUserServerElement;
+	
+	//18. Highlight the Loyal User Server Input Field
+	public void loyalUserServerElementInputFieldHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", loyalUserServerElement);/* make a yellow border outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", loyalUserServerElement);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", loyalUserServerElement);/* make a yellow border outside edge of the element */
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", loyalUserServerElement);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+		}
+	}
+	
+	//18. Type to the Loyal User Server
+	public AddNewIP clickToLoyalUserServer() throws InterruptedException {
+		loyalUserServerElementInputFieldHighlight();/* highlight the element of the tested. */
+		loyalUserServerElement.click();/*select data on the dropdown field */
+		return new AddNewIP();
+	}
+	
+	/***********************************************
+						* *****************************************************************************************************
+						* **************************    End No.18 - Element of Site    ****************************************
+						* * ***************************************************************************************************
+					   								******************************************************************************************************/
+	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.19 -   Element of Submit Button   $$$$$$$$$$$$$$$$$$$$$$$$
+		  			  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ 				                					*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+	//19. Element of Submit Button
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[2]/input[3]")
+	WebElement submitButtonElement;
+	
+	//19. Highlight the Submit Button Input Field
+	public void submitButtonElementInputFieldHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", submitButtonElement);/* make a yellow border outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", submitButtonElement);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", submitButtonElement);/* make a yellow border outside edge of the element */
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", submitButtonElement);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+		}
+	}
+	
+	//19. Type to the Loyal User Server
+	public AddNewIP clickToLoyalUseSubmitButton() throws InterruptedException {
+		submitButtonElementInputFieldHighlight();/* highlight the element of the tested. */
+		submitButtonElement.click();/*select data on the dropdown field */
+		return new AddNewIP();
+	}
+	
+	/***********************************************
+						* *****************************************************************************************************
+						* **************************    End No.19 - Element of Site    ****************************************
+						* * ***************************************************************************************************
+		   											******************************************************************************************************/
 	
 }

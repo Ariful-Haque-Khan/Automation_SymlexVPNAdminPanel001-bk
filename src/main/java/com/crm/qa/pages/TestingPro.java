@@ -70,7 +70,7 @@ public class  TestingPro {
     // Build a new authorized API client service.
     final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
     final String spreadsheetId = "1RxSDjeG1ivfRLJL8bPH56n3IJyz3tJzuvtW6lJ5paqY";
-    final String range = "Paid_Reseller!C72:G72";
+    final String range = "Sheet10!A1:A4";
     Sheets service =
         new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
             .setApplicationName(APPLICATION_NAME)
@@ -78,19 +78,33 @@ public class  TestingPro {
     ValueRange response = service.spreadsheets().values()
         .get(spreadsheetId, range)
         .execute();
-    System.out.println(response.getValues());
+    //System.out.println(response.getValues());
     List<List<Object>> values = response.getValues();
-    System.out.println(values.get(0).get(2));
+    //System.out.println(values.get(0).get(1));
+    //System.out.println(response.getRange());
+    int i=1, j=0;
+    System.out.println((String) values.get(i-1).get(0));
+    try {
+	    for (List row : values) {
+	        // Print columns A and E, which correspond to indices 0 and 4.
+	    	i++;
+	    	System.out.println(values.get(i-1).get(0));
+	    }
+    }catch (Exception e) {
+        System.out.println("\nException caught");
+    }
     /*
+    //int i = 1;
     if (values == null || values.isEmpty()) {
       System.out.println("No data found.");
     } else {
       //System.out.printf("%s, %s\n", values.get("c31"), values.get(1));
-      System.out.println("Name, Major");
+      //System.out.println("Name, Major");
       for (List row : values) {
           // Print columns A and E, which correspond to indices 0 and 4.
-          System.out.printf("%s, %s\n", row.get(1), row.get(2));
+          //System.out.printf("%s\n", row.get(0).toString());
       }
+      
       
     }*/
   }

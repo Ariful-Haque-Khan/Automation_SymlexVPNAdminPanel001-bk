@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.campaignfunctional.qa.test.AdminRolePermission">
+      <class name="com.addpinvalidity.positive.GenericFormField">
         <methods>
           <include name="setUp"/>
-          <include name="TestAddNewRoleForm"/>
+          <include name="checktheResultbyputtingDataContainIntergerValuefortheNumberofDays_TC_SAD_APV_N004"/>
         </methods>
-      </class> <!-- com.campaignfunctional.qa.test.AdminRolePermission -->
+      </class> <!-- com.addpinvalidity.positive.GenericFormField -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
