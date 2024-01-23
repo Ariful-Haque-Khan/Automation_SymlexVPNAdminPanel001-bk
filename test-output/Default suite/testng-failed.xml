@@ -3,12 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.addpinvalidity.positive.GenericFormField">
+      <class name="com.crm.qa.tests.SuccessStatusTestforIPManagement">
         <methods>
+          <include name="TestServerLockScheduleList"/>
+          <include name="TestIPBundleLink"/>
           <include name="setUp"/>
-          <include name="checktheResultbyputtingDataContainIntergerValuefortheNumberofDays_TC_SAD_APV_N004"/>
+          <include name="TestCountriesWithIPBundleList"/>
+          <include name="TestLotsNameWithIpBundleList"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.addpinvalidity.positive.GenericFormField -->
+      </class> <!-- com.crm.qa.tests.SuccessStatusTestforIPManagement -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

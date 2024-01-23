@@ -19,6 +19,9 @@ import com.crm.qa.util.TestUtils;
 public class _Blank extends TestBase{
 	
 	
+	
+	
+	
 	LoginPage loginPage;
 
 	TestUtils testUtils;
@@ -38,7 +41,7 @@ public class _Blank extends TestBase{
 	
 	
 	/* ***** Test _Blank!!! 
-	//@Test(priority=1)
+	//@Test((priority=1))
 	//@Ignore
 	public void TestAddNewServerBlankForm() throws IOException, InterruptedException {
 		newCustomizeResellerPanel = loginPage.customPanelNameLogin(props.getProperty("username"),props.getProperty("password"));
