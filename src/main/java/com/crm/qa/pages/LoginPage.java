@@ -26,15 +26,6 @@ import com.admin.qa.pages.UserPermissionSectionLinks;
 import com.admin.qa.pages.IPManagementSectionLinks;
 import com.admin.qa.pages.MailAddressSectionLinks;
 import com.admin.qa.pages.OnlinePINReportsSectionLinks;
-import com.admin.qa.AdminRolePermission.AddNewIP;
-import com.admin.qa.AdminRolePermission.AddNewMenuPermission;
-import com.admin.qa.AdminRolePermission.AddNewRole;
-import com.admin.qa.AdminRolePermission.NewAdminCreation;
-import com.admin.qa.CampaignForm.AddNewAdminPanel;
-import com.admin.qa.CampaignForm.AddNewCampaign;
-import com.admin.qa.CampaignForm.AddNewPaymentGateway;
-import com.admin.qa.CampaignForm.AddNewRatePlan;
-import com.admin.qa.CampaignForm.ProfileInformation;
 import com.admin.qa.function.AddNewBanner;
 import com.admin.qa.function.AddNewNotice;
 import com.admin.qa.function.AddNewResellerClient;
@@ -42,7 +33,6 @@ import com.admin.qa.function.AddNewServer;
 import com.admin.qa.function.AddPINJail;
 import com.admin.qa.function.AddPINValidity;
 import com.admin.qa.function.AddPushTemplate;
-import com.admin.qa.function.AppsDynamicMenuManagement;
 import com.admin.qa.function.CreateNewApp;
 import com.admin.qa.function.NewCustomizeResellerPanel;
 import com.admin.qa.function.OnlinePINActivation;
@@ -404,95 +394,5 @@ public class LoginPage extends TestBase{
 		loginBtn.click();
 		
 		return new AddNewBanner(); // Login form Add New Banner Form page
-	}
-    
-    public AppsDynamicMenuManagement appsDynamicMenuManagementLogin(String uname , String pwd) {
-		
-		username.sendKeys(uname);
-		password.sendKeys(pwd);
-		loginBtn.click();
-		
-		return new AppsDynamicMenuManagement(); // Login form Apps Dynamic Menu Management Form page
-	}
-    
-    public AddNewCampaign addNewCampaignLogin(String uname , String pwd) {
-		
-		username.sendKeys(uname);
-		password.sendKeys(pwd);
-		loginBtn.click();
-		
-		return new AddNewCampaign(); // Login form Add New Campaign Form page
-	}
-    
-    public AddNewPaymentGateway addNewPaymentGatewayLogin(String uname , String pwd) {
-		
-		username.sendKeys(uname);
-		password.sendKeys(pwd);
-		loginBtn.click();
-		
-		return new AddNewPaymentGateway(); // Login form Add New Campaign Form page
-	}
-    
-    public AddNewRatePlan addNewRatePlanLogin(String uname , String pwd) {
-		
-		username.sendKeys(uname);
-		password.sendKeys(pwd);
-		loginBtn.click();
-		
-		return new AddNewRatePlan(); // Login form Add New Rate Plan Form page
-	}
-    
-    public ProfileInformation profileInformationLogin(String uname , String pwd) {
-		
-		username.sendKeys(uname);
-		password.sendKeys(pwd);
-		loginBtn.click();
-		
-		return new ProfileInformation(); // Login form Profile Information Form page
-	}
-    
-    public AddNewAdminPanel addNewAdminPanelLogin(String uname , String pwd) {
-		
-		username.sendKeys(uname);
-		password.sendKeys(pwd);
-		loginBtn.click();
-		
-		return new AddNewAdminPanel(); // Login form Add New Admin Panel ln Form page
-	}
-    
-    public NewAdminCreation newAdminCreationLogin(String uname , String pwd) {
-		
-		username.sendKeys(uname);
-		password.sendKeys(pwd);
-		loginBtn.click();
-		
-		return new NewAdminCreation(); // Login form Add New Admin Creation Form page
-	}
-    
-    public AddNewRole addNewRoleLogin(String uname , String pwd) {
-		
-		username.sendKeys(uname);
-		password.sendKeys(pwd);
-		loginBtn.click();
-		
-		return new AddNewRole(); // Login form Add New Admin Creation Form page
-	}
-    
-    public AddNewMenuPermission addNewMenuPermissionLogin(String uname , String pwd) {
-		
-		username.sendKeys(uname);
-		password.sendKeys(pwd);
-		loginBtn.click();
-		
-		return new AddNewMenuPermission(); // Login form Add New Admin Creation Form page
-	}
-    
-    public AddNewIP addNewIPLogin(String uname , String pwd) {
-		
-		username.sendKeys(uname);
-		password.sendKeys(pwd);
-		loginBtn.click();
-		
-		return new AddNewIP(); //Login form Add New IP Form page
 	}
 }

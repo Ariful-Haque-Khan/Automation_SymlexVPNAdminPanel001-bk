@@ -3,16 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.crm.qa.tests.SuccessStatusTestforIPManagement">
+      <class name="com.crm.qa.tests.AllMenuSubmenuListStatus">
         <methods>
-          <include name="TestServerLockScheduleList"/>
-          <include name="TestIPBundleLink"/>
+          <include name="TestActivePinsReportPageLink"/>
           <include name="setUp"/>
-          <include name="TestCountriesWithIPBundleList"/>
-          <include name="TestLotsNameWithIpBundleList"/>
-          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.crm.qa.tests.SuccessStatusTestforIPManagement -->
+      </class> <!-- com.crm.qa.tests.AllMenuSubmenuListStatus -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
