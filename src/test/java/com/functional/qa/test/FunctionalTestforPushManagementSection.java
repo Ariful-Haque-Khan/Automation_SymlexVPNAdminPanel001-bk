@@ -15,6 +15,7 @@ import org.testng.annotations.Test;
 import com.admin.qa.function.AddNewBanner;
 import com.admin.qa.function.AddNewNotice;
 import com.admin.qa.function.AddPushTemplate;
+import com.admin.qa.function.AppsDynamicMenuManagement;
 import com.admin.qa.function.CreateNewApp;
 import com.admin.qa.function.PushAutomationForm;
 import com.admin.qa.function.SendPushtoUser;
@@ -32,6 +33,7 @@ public class FunctionalTestforPushManagementSection extends TestBase{
 	AddPushTemplate addPushTemplate;
 	AddNewNotice addNewNotice;
 	AddNewBanner addNewBanner;
+	AppsDynamicMenuManagement appsDynamicMenuManagement;
 	TestUtils testUtils;
 	
 	//Initializing PageFactory
@@ -167,8 +169,8 @@ public class FunctionalTestforPushManagementSection extends TestBase{
 	}
 	
 	/****** Test Add New Banner   !!! */ 
-	@Test(priority=1)
-	//@Ignore
+	//@Test(priority=1)
+	@Ignore
 	public void TestAddNewBannerForm() throws IOException, InterruptedException {
 		addNewBanner = loginPage.addNewBannerLogin(props.getProperty("username"),props.getProperty("password"));
 		addNewBanner.openAddNewBannerFormPage();/*open the Add New Banner Page. */
@@ -182,14 +184,35 @@ public class FunctionalTestforPushManagementSection extends TestBase{
 		//addNewBanner.selectDatafromCountryDropDownElement();/*8.. select and type data to Reseller Element. */
 		//addNewBanner.clickOncommonPanelElement();/*9.. click to Common Panel Checkbox Element. */
 		//addNewBanner.typeToBannerRemarksElement();/*10.. type to Banner Remarks Input Element. */
-		addNewBanner.clickOnLoginTypeAppElement();/*11.. click to Login Type(App) All Element. */
-		addNewBanner.clickOnloginTypeAppSymlexElement();/*12.. click to Login Type(App) Symlex Element. */
-		addNewBanner.clickOnloginTypeAppPlatinumElement();/*13.. click to Login Type(App) Platinum Element. */
-		addNewBanner.clickOnUserTypeAppAllElement();/*14.. click to User Type(App) All Element. */
-		addNewBanner.clickOnUserTypeAppFreeElement();/*15.. click to User Type(App) Free Element. */
-		addNewBanner.clickOnUserTypeAppExpiredElement();/*16.. click to User Type(App) Expired Element. */
+		//addNewBanner.clickOnLoginTypeAppElement();/*11.. click to Login Type(App) All Element. */
+		//addNewBanner.clickOnloginTypeAppSymlexElement();/*12.. click to Login Type(App) Symlex Element. */
+		//addNewBanner.clickOnloginTypeAppPlatinumElement();/*13.. click to Login Type(App) Platinum Element. */
+		//addNewBanner.clickOnUserTypeAppAllElement();/*14.. click to User Type(App) All Element. */
+		//addNewBanner.clickOnUserTypeAppFreeElement();/*15.. click to User Type(App) Free Element. */
+		//addNewBanner.clickOnUserTypeAppExpiredElement();/*16.. click to User Type(App) Expired Element. */
 		addNewBanner.clickOnUserTypeAppPaidElement();/*17.. click to User Type(App) Expired Element. */
 		addNewBanner.clickOnUserTypeAppPremiumElement();/*18.. click to User Type(App) Expired Element. */
+		addNewBanner.clickOnActiveInactiveStatusElement();/*19.. click to Active/Inactive Status Element. */
+		addNewBanner.clickOnSaveNowButtonElement();/*20.. click to Save Now Button */
+	}
+	
+	/****** Test Apps Dynamic Menu Management   !!! */  
+	@Test(priority=1)
+	//@Ignore
+	public void TestAppsDynamicMenuManagementForm() throws IOException, InterruptedException {
+		appsDynamicMenuManagement = loginPage.appsDynamicMenuManagementLogin(props.getProperty("username"),props.getProperty("password"));
+		appsDynamicMenuManagement.openAppsDynamicMenuManagementFormPage();/*open the Apps Dynamic Menu Management Page. */
+		//appsDynamicMenuManagement.selectDatafromIncludeResellersDropDownElement();/*1.. select multiple data from Include Resellers Filter Drop Down Field */
+		//appsDynamicMenuManagement.selectDatafromExcludeResellersDropDownElement();/*2.. select multiple data from Exclude Resellers Filter Drop Down Field */
+		//appsDynamicMenuManagement.startDateInputField();/*03.. type to Start Date Input Element. */
+		//appsDynamicMenuManagement.endDateInputField();/*04.. type to end Date Input Element. */
+		//appsDynamicMenuManagement.menu1TextInputField();/*05.. type to Menu 1 Text Input Element. */
+		//appsDynamicMenuManagement.menu2TextInputField();/*06.. type to Menu 2 Text Input Element. */
+		//appsDynamicMenuManagement.menu3TextInputField();/*07.. type to Menu 3 Text Input Element. */
+		//appsDynamicMenuManagement.crossButtonInputField();/*08.. click to Cross Button Input Field. */
+		//appsDynamicMenuManagement.addNewMenuButtonInputField();/*09.. click to Add New Button Input Field. */
+		//appsDynamicMenuManagement.refreshAppButtonInputField();/*10.. click to Refresh App Button Input Field. */
+		appsDynamicMenuManagement.saveButtonInputField();/*11.. click to Save Button Input Field. */
 	}
 	
 	/*

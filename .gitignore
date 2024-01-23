@@ -2,3 +2,4 @@
 /.vscode/
 /.settings/
 tokens/StoredCredential
+/src/main/java/com/crm/qa/config/
