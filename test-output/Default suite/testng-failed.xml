@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.functional.qa.test.FunctionalTestforPushManagementSection">
+      <class name="com.crm.qa.tests.AllMenuSubmenuListStatus">
         <methods>
+          <include name="TestActivePinsReportPageLink"/>
           <include name="setUp"/>
-          <include name="TestSendPushtoUserForm"/>
         </methods>
-      </class> <!-- com.functional.qa.test.FunctionalTestforPushManagementSection -->
+      </class> <!-- com.crm.qa.tests.AllMenuSubmenuListStatus -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
