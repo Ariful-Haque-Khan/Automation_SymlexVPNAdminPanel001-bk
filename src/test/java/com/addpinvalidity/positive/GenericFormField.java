@@ -153,15 +153,117 @@ public class GenericFormField extends TestBase{
 	        System.out.println(e);
 	    }
 	}
-	
-	@Test(priority=1)
 	//@Ignore
-	public void checktheresultbyputtingdatacontainfractionalvaluefortheNumberofDaysField_TC_SAD_APV_N004() throws IOException, InterruptedException, GeneralSecurityException {
+	public void check_the_result_by_putting_data_contain_fractional_value_for_the_Number_of_Days_Field_TC_SAD_APV_N004() throws IOException, InterruptedException, GeneralSecurityException {
 		addPINValidity = loginPage.addPINValidityLogin(props.getProperty("username"),props.getProperty("password"));	
 		// Build a new authorized API client service.
 	    final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
 	    final String spreadsheetId = "1JEEXR4f8gOM0htUV8PYFUfqVKjsZWQAFeSI1Lv-442g";
 	    final String range = "DatasheetforAddPINValidity!A6:A8";
+	    Sheets service =
+	        new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
+	            .setApplicationName(APPLICATION_NAME)
+	            .build();
+	    ValueRange response = service.spreadsheets().values()
+	        .get(spreadsheetId, range)
+	        .execute();
+	    //System.out.println(response.getValues());
+	    List<List<Object>> values = response.getValues();
+	    int i=1;
+	    //System.out.println((CharSequence[]) (values.get(i-1).get(0)));
+	    try {
+		    for (List row : values) {
+		    	i++;
+		    	addPINValidity.openAddPINvalidityReport();/*open the Add PIN Validity Page.*/
+				addPINValidity.typeToNumberofDaysWithParam((String) values.get(i-1).get(0));/*Type in the PIN Type Input Field.*/
+				addPINValidity.typeToPINinCSVorNewLine();/*Type in the PIN in CSV or New Line Input Field.*/
+				addPINValidity.clickOnSubmitButton();/* click on the Pop Up No Button */
+				//addPINValidity.clickPopUpYesButton();/* click on the Pop Up Yes Button */
+				Assert.assertEquals(addPINValidity.getFrontendNumberofDaysfornotnumberinaddpinvalidity(), "Please enter a value greater than or equal to 1.");
+		    	//System.out.println(values.get(i-1).get(0));
+		    }
+	    }catch (Exception e) {
+	        System.out.println(e);
+	    }
+	}
+	
+	@Test(priority=1)
+	//@Ignore
+	public void check_the_result_by_putting_data_contain_alphaneumeric_value_for_the_Number_of_Days_Field_TC_SAD_APV_N005() throws IOException, InterruptedException, GeneralSecurityException {
+		addPINValidity = loginPage.addPINValidityLogin(props.getProperty("username"),props.getProperty("password"));	
+		// Build a new authorized API client service.
+	    final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
+	    final String spreadsheetId = "1JEEXR4f8gOM0htUV8PYFUfqVKjsZWQAFeSI1Lv-442g";
+	    final String range = "DatasheetforAddPINValidity!A14:A18";
+	    Sheets service =
+	        new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
+	            .setApplicationName(APPLICATION_NAME)
+	            .build();
+	    ValueRange response = service.spreadsheets().values()
+	        .get(spreadsheetId, range)
+	        .execute();
+	    //System.out.println(response.getValues());
+	    List<List<Object>> values = response.getValues();
+	    int i=1;
+	    //System.out.println((CharSequence[]) (values.get(i-1).get(0)));
+	    try {
+		    for (List row : values) {
+		    	i++;
+		    	addPINValidity.openAddPINvalidityReport();/*open the Add PIN Validity Page.*/
+				addPINValidity.typeToNumberofDaysWithParam((String) values.get(i-1).get(0));/*Type in the PIN Type Input Field.*/
+				addPINValidity.typeToPINinCSVorNewLine();/*Type in the PIN in CSV or New Line Input Field.*/
+				addPINValidity.clickOnSubmitButton();/* click on the Pop Up No Button */
+				//addPINValidity.clickPopUpYesButton();/* click on the Pop Up Yes Button */
+				Assert.assertEquals(addPINValidity.getFrontendNumberofDaysfornotnumberinaddpinvalidity(), "Please enter a value greater than or equal to 1.");
+		    	//System.out.println(values.get(i-1).get(0));
+		    }
+	    }catch (Exception e) {
+	        System.out.println(e);
+	    }
+	}
+	
+	//@Ignore
+	public void check_the_result_by_putting_data_contain_digit_with_space_value_for_the_Number_of_Days_Field_TC_SAD_APV_N006() throws IOException, InterruptedException, GeneralSecurityException {
+		addPINValidity = loginPage.addPINValidityLogin(props.getProperty("username"),props.getProperty("password"));	
+		// Build a new authorized API client service.
+	    final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
+	    final String spreadsheetId = "1JEEXR4f8gOM0htUV8PYFUfqVKjsZWQAFeSI1Lv-442g";
+	    final String range = "DatasheetforAddPINValidity!A20:A24";
+	    Sheets service =
+	        new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
+	            .setApplicationName(APPLICATION_NAME)
+	            .build();
+	    ValueRange response = service.spreadsheets().values()
+	        .get(spreadsheetId, range)
+	        .execute();
+	    //System.out.println(response.getValues());
+	    List<List<Object>> values = response.getValues();
+	    int i=1;
+	    //System.out.println((CharSequence[]) (values.get(i-1).get(0)));
+	    try {
+		    for (List row : values) {
+		    	i++;
+		    	addPINValidity.openAddPINvalidityReport();/*open the Add PIN Validity Page.*/
+				addPINValidity.typeToNumberofDaysWithParam((String) values.get(i-1).get(0));/*Type in the PIN Type Input Field.*/
+				addPINValidity.typeToPINinCSVorNewLine();/*Type in the PIN in CSV or New Line Input Field.*/
+				addPINValidity.clickOnSubmitButton();/* click on the Pop Up No Button */
+				//addPINValidity.clickPopUpYesButton();/* click on the Pop Up Yes Button */
+				Assert.assertEquals(addPINValidity.getFrontendNumberofDaysfornotnumberinaddpinvalidity(), "Please enter a value greater than or equal to 1.");
+		    	//System.out.println(values.get(i-1).get(0));
+		    }
+	    }catch (Exception e) {
+	        System.out.println(e);
+	    }
+	}
+	
+	@Test(priority=1)
+	//@Ignore
+	public void check_the_result_by_putting_data_contain_only_alphabet_value_for_the_Number_of_Days_Field_TC_SAD_APV_N007() throws IOException, InterruptedException, GeneralSecurityException {
+		addPINValidity = loginPage.addPINValidityLogin(props.getProperty("username"),props.getProperty("password"));	
+		// Build a new authorized API client service.
+	    final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
+	    final String spreadsheetId = "1JEEXR4f8gOM0htUV8PYFUfqVKjsZWQAFeSI1Lv-442g";
+	    final String range = "DatasheetforAddPINValidity!A26:A28";
 	    Sheets service =
 	        new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
 	            .setApplicationName(APPLICATION_NAME)
