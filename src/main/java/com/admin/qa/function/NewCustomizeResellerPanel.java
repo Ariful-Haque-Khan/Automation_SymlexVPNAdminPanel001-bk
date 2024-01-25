@@ -89,7 +89,7 @@ public class NewCustomizeResellerPanel extends TestBase{
 	
 	//2. Select from Reseller with Level Element
 	public NewCustomizeResellerPanel searchandtypeelementDropDownField() throws InterruptedException {
-		resellerwithLevelHighlight();/* highlight the element of the tested. */
+		resellerwithLevelHighlight();
 		dropDownIPBundlemainSelect.click(); /*click on the element */
 		searchInDropDown.sendKeys("abcvp");/*type on the input field */
 		valueForSearch.click();/*click on the element from result of the first value. */

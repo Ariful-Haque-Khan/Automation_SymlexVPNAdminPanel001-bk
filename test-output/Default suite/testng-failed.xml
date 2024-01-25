@@ -3,13 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.addpinvalidity.positive.GenericFormField">
+      <class name="com.crm.qa.tests.AllMenuSubmenuListStatus">
         <methods>
+<<<<<<< HEAD
           <include name="check_the_result_by_putting_data_contain_only_alphabet_value_for_the_Number_of_Days_Field_TC_SAD_APV_N007"/>
           <include name="setUp"/>
           <include name="check_the_result_by_putting_data_contain_alphaneumeric_value_for_the_Number_of_Days_Field_TC_SAD_APV_N005"/>
+=======
+          <include name="TestActivePinsReportPageLink"/>
+          <include name="setUp"/>
+>>>>>>> 7cd67ef652534a12e6cdd3e86d1d0fae18e81888
         </methods>
-      </class> <!-- com.addpinvalidity.positive.GenericFormField -->
+      </class> <!-- com.crm.qa.tests.AllMenuSubmenuListStatus -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
