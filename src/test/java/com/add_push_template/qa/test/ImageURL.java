@@ -133,7 +133,7 @@ public class ImageURL extends TestBase{
 			
 	}
 	
-	//@Test(priority=7)
+	@Test(priority=7)
 	//@Ignore
 	public void input_image_URL_with_HTTP_into_the_image_URL_field() throws IOException, InterruptedException {
 		addPushTemplate = loginPage.addPushTemplateLogin(props.getProperty("username"),props.getProperty("password"));

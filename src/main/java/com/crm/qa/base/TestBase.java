@@ -58,9 +58,7 @@ public class TestBase {
 			driver = new ChromeDriver(); // launch chrome browser
 		} else if (props.getProperty("browser").equals("edge")) {
 			System.setProperty("webdriver.edge.driver",
-					"E:\\SymlexAdminPanel\\SymlexAdminPanel001\\edgedriver_win64\\msedgedriver.exe");
-			//C:\project\eclipse
-			//E:\\selenium\\
+					"E:\\eclipse\\SymlexAdminPanel001\\edgedriver_win64\\msedgedriver.exe");
 			driver = new EdgeDriver(); // launch edge browser
 			EdgeOptions options = new EdgeOptions();
 			//capability = DesiredCapabilities.edge();
