@@ -32,7 +32,8 @@ public class TestBase {
 		try {
 			props = new Properties();
 			FileInputStream ip = new FileInputStream(
-					"E:\\SymlexAdminPanel\\SymlexAdminPanel001\\src\\main\\java\\com\\crm\\qa\\config\\config.properties");
+
+					"E:\\eclipse\\SymlexAdminPanel001\\src\\main\\java\\com\\crm\\qa\\config\\config.properties");
 			//C:\project\eclipse\SymlexResPanel001
 			//E:\\selenium\\SymlexAdminPanel001
 			props.load(ip);
@@ -66,7 +67,7 @@ public class TestBase {
 			
 		} else if (props.getProperty("browser").equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver",
-					"C:\\project\\eclipse\\geko\\geckodriver.exe");
+					"E:\\eclipse\\geckodriver_v0_33_0\\geckodriver.exe");
 			driver = new FirefoxDriver(); // launch firefox browser
 		}
 		e_driver = new EventFiringWebDriver(driver);
