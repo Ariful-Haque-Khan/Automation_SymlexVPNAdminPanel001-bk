@@ -130,20 +130,20 @@ public class FunctionalTestforPushManagementSection extends TestBase{
 	}
 	
 	/****** Test Add Push Template Form  *****/
-	//@Test(priority=1)
-	@Ignore
+	@Test(priority=1)
+	//@Ignore
 	public void TestAddPushTemplateForm() throws IOException, InterruptedException {
 		addPushTemplate = loginPage.addPushTemplateLogin(props.getProperty("username"),props.getProperty("password"));
 		addPushTemplate.openAddPushTemplatePage();/*open the Custom Panel Name Page. */
-		//addPushTemplate.typeTotemplateNameInputField();/*1.. type data to Template Name Input Box Field */
+		addPushTemplate.typeTotemplateNameInputField(null);/*1.. type data to Template Name Input Box Field */
 		//addPushTemplate.selectDatafromAppNameDropDownElement();/*2.. select data from APP Name element. */
-		//addPushTemplate.typeTotemplateTitleInputField();/*3.. type data to Push Title Input Box Field */
-		//addPushTemplate.typeTotemplateMessageInputField();/*4.. type data to Push Message Input Box Field */
+		addPushTemplate.typeTotemplateTitleInputField();/*3.. type data to Push Title Input Box Field */
+		addPushTemplate.typeTotemplateMessageInputField();/*4.. type data to Push Message Input Box Field */
 		//addPushTemplate.typeTotemplateImageURLInputField();/*5.. type data to Push Image URL Input Box Field */
 		//addPushTemplate.typeTotemplateURLforAndroidInputField();/*6.. type data to Push URL for Android Input Box Field */
 		//addPushTemplate.typeTotemplateURLforiOSInputField();/*7.. type data to Push URL for iOS Input Box Field */
-		addPushTemplate.typeTotemplatePageControlInputField();/*8.. type data to Push URL for Page Control Input Box Field */
-		addPushTemplate.typeTotemplateActiveDeactiveStatusInputField();/*9.. click to the Active/Deactive Status */
+		//addPushTemplate.typeTotemplatePageControlInputField();/*8.. type data to Push URL for Page Control Input Box Field */
+		//addPushTemplate.typeTotemplateActiveDeactiveStatusInputField();/*9.. click to the Active/Deactive Status */
 		addPushTemplate.typeTotemplateSaveButtonField();/*10.. click to the Active/Deactive Status */
 	}
 	
@@ -167,8 +167,8 @@ public class FunctionalTestforPushManagementSection extends TestBase{
 	}
 	
 	/****** Test Add New Banner   !!! */ 
-	@Test(priority=1)
-	//@Ignore
+	//@Test(priority=1)
+	@Ignore
 	public void TestAddNewBannerForm() throws IOException, InterruptedException {
 		addNewBanner = loginPage.addNewBannerLogin(props.getProperty("username"),props.getProperty("password"));
 		addNewBanner.openAddNewBannerFormPage();/*open the Add New Banner Page. */

@@ -68,7 +68,7 @@ public class LoginPage extends TestBase{
 	
 	public String validateLoginPageTitle() {
 		//System.out.print(driver.getTitle());
-		return driver.getTitle();
+		return driver.getTitle(); 
 	}
 	
 	public void openTheLink() {
@@ -395,4 +395,5 @@ public class LoginPage extends TestBase{
 		
 		return new AddNewBanner(); // Login form Add New Banner Form page
 	}
+    
 }

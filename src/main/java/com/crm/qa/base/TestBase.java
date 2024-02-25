@@ -32,6 +32,7 @@ public class TestBase {
 		try {
 			props = new Properties();
 			FileInputStream ip = new FileInputStream(
+
 					"E:\\eclipse\\SymlexAdminPanel001\\src\\main\\java\\com\\crm\\qa\\config\\config.properties");
 			//C:\project\eclipse\SymlexResPanel001
 			//E:\\selenium\\SymlexAdminPanel001
@@ -50,14 +51,14 @@ public class TestBase {
 
 	}
 
-	public static void initialization() {
+	public void initialization() {
 		if (props.getProperty("browser").equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver",
 					"C:\\jar_files\\chromedriver_win32\\103\\chromedriver.exe");
 			driver = new ChromeDriver(); // launch chrome browser
 		} else if (props.getProperty("browser").equals("edge")) {
 			System.setProperty("webdriver.edge.driver",
-					"C:\\project\\eclipse\\edgedriver_win64\\msedgedriver.exe");
+					"E:\\SymlexAdminPanel\\SymlexAdminPanel001\\edgedriver_win64\\msedgedriver.exe");
 			//C:\project\eclipse
 			//E:\\selenium\\
 			driver = new EdgeDriver(); // launch edge browser
