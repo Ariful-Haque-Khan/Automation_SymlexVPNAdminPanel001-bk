@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.crm.qa.tests.AllMenuSubmenuListStatus">
+      <class name="com.add_push_template.qa.test.MessageFieldTest">
         <methods>
-          <include name="TestActivePinsReportPageLink"/>
+          <include name="paste_the_text_into_the_message_field_using_the_paste_action"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.crm.qa.tests.AllMenuSubmenuListStatus -->
+      </class> <!-- com.add_push_template.qa.test.MessageFieldTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
