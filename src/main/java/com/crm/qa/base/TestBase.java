@@ -31,8 +31,7 @@ public class TestBase {
 
 		try {
 			props = new Properties();
-			FileInputStream ip = new FileInputStream(
-					"E:\\SymlexAdminPanel\\SymlexAdminPanel001\\src\\main\\java\\com\\crm\\qa\\config\\config.properties");
+			FileInputStream ip = new FileInputStream("E:\\SymlexAdminPanel001\\src\\main\\java\\com\\crm\\qa\\config\\config.properties");
 			//C:\project\eclipse\SymlexResPanel001
 			//E:\\selenium\\SymlexAdminPanel001
 			props.load(ip);
@@ -57,16 +56,14 @@ public class TestBase {
 			driver = new ChromeDriver(); // launch chrome browser
 		} else if (props.getProperty("browser").equals("edge")) {
 			System.setProperty("webdriver.edge.driver",
-					"E:\\SymlexAdminPanel\\SymlexAdminPanel001\\edgedriver_win64\\msedgedriver.exe");
-			//C:\project\eclipse
-			//E:\\selenium\\
+					"E:\\SymlexAdminPanel001\\edgedriver_win64\\msedgedriver.exe");
 			driver = new EdgeDriver(); // launch edge browser
 			EdgeOptions options = new EdgeOptions();
 			//capability = DesiredCapabilities.edge();
 			
 		} else if (props.getProperty("browser").equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver",
-					"C:\\project\\eclipse\\geko\\geckodriver.exe");
+					"E:\\eclipse\\geckodriver_v0_33_0\\geckodriver.exe");
 			driver = new FirefoxDriver(); // launch firefox browser
 		}
 		e_driver = new EventFiringWebDriver(driver);
