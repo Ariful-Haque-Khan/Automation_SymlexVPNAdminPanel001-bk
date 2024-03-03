@@ -148,6 +148,199 @@ public class ImageURL extends TestBase{
 				
 	}
 	
+	//@Test(priority=8)
+	//@Ignore
+	public void input_image_URL_with_query_parameters_into_the_image_URL_field() throws IOException, InterruptedException {
+		addPushTemplate = loginPage.addPushTemplateLogin(props.getProperty("username"),props.getProperty("password"));
+		addPushTemplate.openAddPushTemplatePage(); /*open the Custom Panel Name Page. */
+		addPushTemplate.typeTotemplatenameInputFieldParam("Limited Time Only"); /*taking input into the template name input field.*/
+		addPushTemplate.selectDatafromAppNameDropDownElement(); /*taking input into the app name drop down field.*/
+		addPushTemplate.typeTotemplateTitleInputFieldParam("Exclusive Flash Sale: Limited Time Only!");/*taking input into the title field.*/
+		addPushTemplate.typeTotemplateMessageInputFieldParam(" Don't miss out! Exclusive discounts inside. Tap to unlock savings now! "); /*taking input into the image URL field.*/
+		addPushTemplate.typeToImageURLFieldParam("http://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg?width=500&height=300"); /*taking input into the message field.*/
+		//addPushTemplate.typeTotemplateSaveButtonField(); /*for the save button*/
+				
+				
+	}
+	
+	
+	
+
+	//@Test(priority=9)
+	//@Ignore
+	public void input_image_URL_with_fragment_identifier_into_the_image_URL_field() throws IOException, InterruptedException {
+		addPushTemplate = loginPage.addPushTemplateLogin(props.getProperty("username"),props.getProperty("password"));
+		addPushTemplate.openAddPushTemplatePage(); /*open the Custom Panel Name Page. */
+		addPushTemplate.typeTotemplatenameInputFieldParam("Limited Time Only"); /*taking input into the template name input field.*/
+		addPushTemplate.selectDatafromAppNameDropDownElement(); /*taking input into the app name drop down field.*/
+		addPushTemplate.typeTotemplateTitleInputFieldParam("Exclusive Flash Sale: Limited Time Only!");/*taking input into the title field.*/
+		addPushTemplate.typeTotemplateMessageInputFieldParam(" Don't miss out! Exclusive discounts inside. Tap to unlock savings now! "); /*taking input into the image URL field.*/
+		addPushTemplate.typeToImageURLFieldParam("http://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg#zoom=200"); /*taking input into the message field.*/
+		//addPushTemplate.typeTotemplateSaveButtonField(); /*for the save button*/
+					
+					
+	}
+	
+	//@Test(priority=10)
+	//@Ignore
+		public void input_image_URL_with_special_characters_into_the_image_URL_field() throws IOException, InterruptedException {
+			addPushTemplate = loginPage.addPushTemplateLogin(props.getProperty("username"),props.getProperty("password"));
+			addPushTemplate.openAddPushTemplatePage(); /*open the Custom Panel Name Page. */
+			addPushTemplate.typeTotemplatenameInputFieldParam("Limited Time Only"); /*taking input into the template name input field.*/
+			addPushTemplate.selectDatafromAppNameDropDownElement(); /*taking input into the app name drop down field.*/
+			addPushTemplate.typeTotemplateTitleInputFieldParam("Exclusive Flash Sale: Limited Time Only!");/*taking input into the title field.*/
+			addPushTemplate.typeTotemplateMessageInputFieldParam(" Don't miss out! Exclusive discounts inside. Tap to unlock savings now! "); /*taking input into the image URL field.*/
+			addPushTemplate.typeToImageURLFieldParam("http://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg"); /*taking input into the message field.*/
+			//addPushTemplate.typeTotemplateSaveButtonField(); /*for the save button*/
+					
+					
+	}
+	
+	//@Test(priority=11)
+	//@Ignore
+	public void input_URL_pointing_to_a_non_image_file_into_the_image_URL_field() throws IOException, InterruptedException {
+			addPushTemplate = loginPage.addPushTemplateLogin(props.getProperty("username"),props.getProperty("password"));
+			addPushTemplate.openAddPushTemplatePage(); /*open the Custom Panel Name Page. */
+			addPushTemplate.typeTotemplatenameInputFieldParam("Limited Time Only"); /*taking input into the template name input field.*/
+			addPushTemplate.selectDatafromAppNameDropDownElement(); /*taking input into the app name drop down field.*/
+			addPushTemplate.typeTotemplateTitleInputFieldParam("Exclusive Flash Sale: Limited Time Only!");/*taking input into the title field.*/
+			addPushTemplate.typeTotemplateMessageInputFieldParam(" Don't miss out! Exclusive discounts inside. Tap to unlock savings now! "); /*taking input into the image URL field.*/
+			addPushTemplate.typeToImageURLFieldParam("https://www.rokomari.com/booksample"); /*taking input into the message field.*/
+			//addPushTemplate.typeTotemplateSaveButtonField(); /*for the save button*/
+							
+							
+	}
+		
+	
+	//@Test(priority=12)
+	//@Ignore
+	
+	
+	
+	
+	public void input_URL_that_redirects_to_another_image_into_the_image_URL_field() throws IOException, InterruptedException {
+			addPushTemplate = loginPage.addPushTemplateLogin(props.getProperty("username"),props.getProperty("password"));
+			addPushTemplate.openAddPushTemplatePage(); /*open the Custom Panel Name Page. */
+			addPushTemplate.typeTotemplatenameInputFieldParam("Limited Time Only"); /*taking input into the template name input field.*/
+			addPushTemplate.selectDatafromAppNameDropDownElement(); /*taking input into the app name drop down field.*/
+			addPushTemplate.typeTotemplateTitleInputFieldParam("Exclusive Flash Sale: Limited Time Only!");/*taking input into the title field.*/
+			addPushTemplate.typeTotemplateMessageInputFieldParam(" Don't miss out! Exclusive discounts inside. Tap to unlock savings now! "); /*taking input into the image URL field.*/
+			addPushTemplate.typeToImageURLFieldParam("http://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpghttp://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg"); /*taking input into the message field.*/
+			//addPushTemplate.typeTotemplateSaveButtonField(); /*for the save button*/
+								
+								
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	//@Test(priority=13)
+	//@Ignore
+	public void entering_the_same_image_URL_wice_into_the_image_URL_field() throws IOException, InterruptedException {
+			addPushTemplate = loginPage.addPushTemplateLogin(props.getProperty("username"),props.getProperty("password"));
+			addPushTemplate.openAddPushTemplatePage(); /*open the Custom Panel Name Page. */
+			addPushTemplate.typeTotemplatenameInputFieldParam("Limited Time Only"); /*taking input into the template name input field.*/
+			addPushTemplate.selectDatafromAppNameDropDownElement(); /*taking input into the app name drop down field.*/
+			addPushTemplate.typeTotemplateTitleInputFieldParam("Exclusive Flash Sale: Limited Time Only!");/*taking input into the title field.*/
+			addPushTemplate.typeTotemplateMessageInputFieldParam(" Don't miss out! Exclusive discounts inside. Tap to unlock savings now! "); /*taking input into the image URL field.*/
+			addPushTemplate.typeToImageURLFieldParam("http://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpghttp://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg"); /*taking input into the message field.*/
+			//addPushTemplate.typeTotemplateSaveButtonField(); /*for the save button*/
+									
+									
+	}
+	
+	
+	
+	
+	
+	
+	
+	@Test(priority=14)
+	//@Ignore
+	public void load_an_image_change_the_image_on_the_server_and_load_it_again_into_the_image_URL_field() throws IOException, InterruptedException {
+			addPushTemplate = loginPage.addPushTemplateLogin(props.getProperty("username"),props.getProperty("password"));
+			addPushTemplate.openAddPushTemplatePage(); /*open the Custom Panel Name Page. */
+			addPushTemplate.typeTotemplatenameInputFieldParam("Limited Time Only"); /*taking input into the template name input field.*/
+			addPushTemplate.selectDatafromAppNameDropDownElement(); /*taking input into the app name drop down field.*/
+			addPushTemplate.typeTotemplateTitleInputFieldParam("Exclusive Flash Sale: Limited Time Only!");/*taking input into the title field.*/
+			addPushTemplate.typeTotemplateMessageInputFieldParam(" Don't miss out! Exclusive discounts inside. Tap to unlock savings now! "); /*taking input into the image URL field.*/
+			addPushTemplate.typeToImageURLFieldParam("http://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpghttp://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg"); /*taking input into the message field.*/
+			//addPushTemplate.typeTotemplateSaveButtonField(); /*for the save button*/
+										
+										
+	}
+	
+	
+	
+	
+	
+	//@Test(priority=15)
+	//@Ignore
+	public void enter_URL_pointing_to_an_image_that_takes_too_long_to_load() throws IOException, InterruptedException {
+			addPushTemplate = loginPage.addPushTemplateLogin(props.getProperty("username"),props.getProperty("password"));
+			addPushTemplate.openAddPushTemplatePage(); /*open the Custom Panel Name Page. */
+			addPushTemplate.typeTotemplatenameInputFieldParam("Limited Time Only"); /*taking input into the template name input field.*/
+			addPushTemplate.selectDatafromAppNameDropDownElement(); /*taking input into the app name drop down field.*/
+			addPushTemplate.typeTotemplateTitleInputFieldParam("Exclusive Flash Sale: Limited Time Only!");/*taking input into the title field.*/
+			addPushTemplate.typeTotemplateMessageInputFieldParam(" Don't miss out! Exclusive discounts inside. Tap to unlock savings now! "); /*taking input into the image URL field.*/
+			addPushTemplate.typeToImageURLFieldParam("https://i.postimg.cc/MKP2pFn3/infographics-2a.jpg"); /*taking input into the message field.*/
+			//addPushTemplate.typeTotemplateSaveButtonField(); /*for the save button*/
+											
+											
+	}
+	
+	
+	//@Test(priority=16)
+	//@Ignore
+	public void enter_URL_with_a_non_existing_domain_into_the_image_URL_field() throws IOException, InterruptedException {
+			addPushTemplate = loginPage.addPushTemplateLogin(props.getProperty("username"),props.getProperty("password"));
+			addPushTemplate.openAddPushTemplatePage(); /*open the Custom Panel Name Page. */
+			addPushTemplate.typeTotemplatenameInputFieldParam("Limited Time Only"); /*taking input into the template name input field.*/
+			addPushTemplate.selectDatafromAppNameDropDownElement(); /*taking input into the app name drop down field.*/
+			addPushTemplate.typeTotemplateTitleInputFieldParam("Exclusive Flash Sale: Limited Time Only!");/*taking input into the title field.*/
+			addPushTemplate.typeTotemplateMessageInputFieldParam(" Don't miss out! Exclusive discounts inside. Tap to unlock savings now! "); /*taking input into the image URL field.*/
+			addPushTemplate.typeToImageURLFieldParam("http://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg"); /*taking input into the message field.*/
+			//addPushTemplate.typeTotemplateSaveButtonField(); /*for the save button*/
+												
+												
+	}
+	
+	
+	//@Test(priority=17)
+	//@Ignore
+	public void enter_URL_with_different_letter_cases_into_the_image_URL_field() throws IOException, InterruptedException {
+			addPushTemplate = loginPage.addPushTemplateLogin(props.getProperty("username"),props.getProperty("password"));
+			addPushTemplate.openAddPushTemplatePage(); /*open the Custom Panel Name Page. */
+			addPushTemplate.typeTotemplatenameInputFieldParam("Limited Time Only"); /*taking input into the template name input field.*/
+			addPushTemplate.selectDatafromAppNameDropDownElement(); /*taking input into the app name drop down field.*/
+			addPushTemplate.typeTotemplateTitleInputFieldParam("Exclusive Flash Sale: Limited Time Only!");/*taking input into the title field.*/
+			addPushTemplate.typeTotemplateMessageInputFieldParam(" Don't miss out! Exclusive discounts inside. Tap to unlock savings now! "); /*taking input into the image URL field.*/
+			addPushTemplate.typeToImageURLFieldParam("http://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=NAME.jpg"); /*taking input into the message field.*/
+			//addPushTemplate.typeTotemplateSaveButtonField(); /*for the save button*/
+													
+													
+    }
+	
+	
+	//@Test(priority=18)
+	//@Ignore
+	public void enter_URL_that_was_valid_but_has_expired_into_the_image_URL_field() throws IOException, InterruptedException {
+			addPushTemplate = loginPage.addPushTemplateLogin(props.getProperty("username"),props.getProperty("password"));
+			addPushTemplate.openAddPushTemplatePage(); /*open the Custom Panel Name Page. */
+			addPushTemplate.typeTotemplatenameInputFieldParam("Limited Time Only"); /*taking input into the template name input field.*/
+			addPushTemplate.selectDatafromAppNameDropDownElement(); /*taking input into the app name drop down field.*/
+			addPushTemplate.typeTotemplateTitleInputFieldParam("Exclusive Flash Sale: Limited Time Only!");/*taking input into the title field.*/
+			addPushTemplate.typeTotemplateMessageInputFieldParam(" Don't miss out! Exclusive discounts inside. Tap to unlock savings now! "); /*taking input into the image URL field.*/
+			addPushTemplate.typeToImageURLFieldParam("https://example.com/expired_image.jpg\r\n"); /*taking input into the message field.*/
+			//addPushTemplate.typeTotemplateSaveButtonField(); /*for the save button*/
+														
+														
+    }
+		
 	
 	
 	/*

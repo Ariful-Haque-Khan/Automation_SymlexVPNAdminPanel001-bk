@@ -541,6 +541,14 @@ public class AddPushTemplate extends TestBase{
 		return new AddPushTemplate();
 	}
 	
+	//06. Type to theURL for Android Input Field
+	public AddPushTemplate typeToURLForAndroidFieldParam(String $android) throws InterruptedException {
+		templateURLforAndroidInputFieldHighlight();
+		templateURLforAndroidElement.sendKeys($android);
+		return new AddPushTemplate();
+			
+	}
+	
 	/***************************************************
 									* ****************************************************************************************
 									* ******************    End No.06 - Element of Template URL for Android    ***************
@@ -575,9 +583,18 @@ public class AddPushTemplate extends TestBase{
 	//07. Type to the Template URL for iOS Input Field
 	public AddPushTemplate typeTotemplateURLforiOSInputField() throws InterruptedException {
 		templateURLforiOSInputFieldHighlight();
-		templateImageURLElement.sendKeys("");
+		templateURLforiOSElement.sendKeys("");
 		return new AddPushTemplate();
 	}
+	
+	
+	//07. Type to the URL for iOS Input Field
+		public AddPushTemplate typeToURLForiOSFieldParam(String $iOS) throws InterruptedException {
+			templateURLforiOSInputFieldHighlight();
+			templateURLforiOSElement.sendKeys($iOS);
+			return new AddPushTemplate();
+				
+		}
 	
 	/***************************************************
 									* ****************************************************************************************

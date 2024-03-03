@@ -40,7 +40,7 @@ public class TemplateName extends TestBase{
 
 	
 	// ***** Test _Blank!!! 
-	//@Test(priority=1)
+	@Test(priority=1)
 	//@Ignore
 	public void check_with_empty_text_in_the_template_name_field() throws IOException, InterruptedException {
 		addPushTemplate = loginPage.addPushTemplateLogin(props.getProperty("username"),props.getProperty("password"));
@@ -49,12 +49,12 @@ public class TemplateName extends TestBase{
 		addPushTemplate.selectDatafromAppNameDropDownElement(); /*taking input into the app name drop down field.*/
 		addPushTemplate.typeTotemplateTitleInputFieldParam("Exclusive Flash Sale: Limited Time Only!");/*taking input into the title field.*/
 		addPushTemplate.typeTotemplateMessageInputFieldParam(" Don't miss out! Exclusive discounts inside. Tap to unlock savings now! "); /*taking input into the message field.*/
-		addPushTemplate.typeTotemplateSaveButtonField(); /*for the save button*/
+		//addPushTemplate.typeTotemplateSaveButtonField(); /*for the save button*/
 		
 	}
 	
 	
-	//@Test(priority=2)
+	@Test(priority=2)
 	//@Ignore
 	public void enter_a_valid_and_unique_template_name() throws IOException, InterruptedException {
 		addPushTemplate = loginPage.addPushTemplateLogin(props.getProperty("username"),props.getProperty("password"));
@@ -63,12 +63,12 @@ public class TemplateName extends TestBase{
 		addPushTemplate.selectDatafromAppNameDropDownElement(); /*taking input into the app name drop down field.*/
 		addPushTemplate.typeTotemplateTitleInputFieldParam("Exclusive Flash Sale: Limited Time Only!");/*taking input into the title field.*/
 		addPushTemplate.typeTotemplateMessageInputFieldParam(" Don't miss out! Exclusive discounts inside. Tap to unlock savings now! "); /*taking input into the message field.*/
-		addPushTemplate.typeTotemplateSaveButtonField();/*for the save button*/
+		//addPushTemplate.typeTotemplateSaveButtonField();/*for the save button*/
 			
 	}
 	
 	
-	//@Test(priority=3)
+	@Test(priority=3)
 	//@Ignore
 	public void enter_the_maximum_number_of_allowed_characters_into_the_template_name_field() throws IOException, InterruptedException {
 		addPushTemplate = loginPage.addPushTemplateLogin(props.getProperty("username"),props.getProperty("password"));
@@ -77,12 +77,12 @@ public class TemplateName extends TestBase{
 		addPushTemplate.selectDatafromAppNameDropDownElement(); /*taking input into the app name drop down field.*/
 		addPushTemplate.typeTotemplateTitleInputFieldParam("Exclusive Flash Sale: Limited Time Only!");/*taking input into the title field.*/
 		addPushTemplate.typeTotemplateMessageInputFieldParam(" Don't miss out! Exclusive discounts inside. Tap to unlock savings now! "); /*taking input into the message field.*/
-		addPushTemplate.typeTotemplateSaveButtonField();/*for the save button*/
+		//addPushTemplate.typeTotemplateSaveButtonField();/*for the save button*/
 				
 	}
 	
 	
-	//@Test(priority=4)
+	@Test(priority=4)
 	//@Ignore
 	public void enter_the_minimum_number_of_allowed_characters_into_the_template_name_field() throws IOException, InterruptedException {
 		addPushTemplate = loginPage.addPushTemplateLogin(props.getProperty("username"),props.getProperty("password"));
@@ -91,12 +91,12 @@ public class TemplateName extends TestBase{
 		addPushTemplate.selectDatafromAppNameDropDownElement(); /*taking input into the app name drop down field.*/
 		addPushTemplate.typeTotemplateTitleInputFieldParam("Exclusive Flash Sale: Limited Time Only!");/*taking input into the title field.*/
 		addPushTemplate.typeTotemplateMessageInputFieldParam(" Don't miss out! Exclusive discounts inside. Tap to unlock savings now! "); /*taking input into the message field.*/
-		addPushTemplate.typeTotemplateSaveButtonField();/*for the save button*/
+		//addPushTemplate.typeTotemplateSaveButtonField();/*for the save button*/
 				
 	}
 	
 	
-	//@Test(priority=5)
+	@Test(priority=5)
 	//@Ignore
 	public void enter_only_alphabetic_characters_into_the_template_name_field() throws IOException, InterruptedException {
 		addPushTemplate = loginPage.addPushTemplateLogin(props.getProperty("username"),props.getProperty("password"));
@@ -110,7 +110,7 @@ public class TemplateName extends TestBase{
 	}
 	
 	
-	//@Test(priority=6)
+	@Test(priority=6)
 	//@Ignore
 	public void enter_only_numeric_characters_into_the_template_name_field() throws IOException, InterruptedException {
 		addPushTemplate = loginPage.addPushTemplateLogin(props.getProperty("username"),props.getProperty("password"));
@@ -119,12 +119,12 @@ public class TemplateName extends TestBase{
 		addPushTemplate.selectDatafromAppNameDropDownElement(); /*taking input into the app name drop down field.*/
 		addPushTemplate.typeTotemplateTitleInputFieldParam("Exclusive Flash Sale: Limited Time Only!");/*taking input into the title field.*/
 		addPushTemplate.typeTotemplateMessageInputFieldParam(" Don't miss out! Exclusive discounts inside. Tap to unlock savings now! "); /*taking input into the message field.*/
-		addPushTemplate.typeTotemplateSaveButtonField();/*for the save button*/
+		//addPushTemplate.typeTotemplateSaveButtonField();/*for the save button*/
 						
 	}
 	
 	
-	//@Test(priority=7)
+	@Test(priority=7)
 	//@Ignore
 	public void enter_a_combination_of_alphabetic_and_numeric_characters_into_the_template_name_field() throws IOException, InterruptedException {
 		addPushTemplate = loginPage.addPushTemplateLogin(props.getProperty("username"),props.getProperty("password"));
@@ -133,12 +133,12 @@ public class TemplateName extends TestBase{
 		addPushTemplate.selectDatafromAppNameDropDownElement(); /*taking input into the app name drop down field.*/
 		addPushTemplate.typeTotemplateTitleInputFieldParam("Exclusive Flash Sale: Limited Time Only!");/*taking input into the title field.*/
 		addPushTemplate.typeTotemplateMessageInputFieldParam(" Don't miss out! Exclusive discounts inside. Tap to unlock savings now! "); /*taking input into the message field.*/
-		addPushTemplate.typeTotemplateSaveButtonField();/*for the save button*/
+		//addPushTemplate.typeTotemplateSaveButtonField();/*for the save button*/
 							
 	}
 	
 	
-	//@Test(priority=8)
+	@Test(priority=8)
 	//@Ignore
 	public void enter_special_characters_into_the_template_name_field() throws IOException, InterruptedException {
 		addPushTemplate = loginPage.addPushTemplateLogin(props.getProperty("username"),props.getProperty("password"));
@@ -147,12 +147,12 @@ public class TemplateName extends TestBase{
 		addPushTemplate.selectDatafromAppNameDropDownElement(); /*taking input into the app name drop down field.*/
 		addPushTemplate.typeTotemplateTitleInputFieldParam("Exclusive Flash Sale: Limited Time Only!");/*taking input into the title field.*/
 		addPushTemplate.typeTotemplateMessageInputFieldParam(" Don't miss out! Exclusive discounts inside. Tap to unlock savings now! "); /*taking input into the message field.*/
-		addPushTemplate.typeTotemplateSaveButtonField();/*for the save button*/
+		//addPushTemplate.typeTotemplateSaveButtonField();/*for the save button*/
 								
 	}
 	
 	
-	//@Test(priority=9)
+	@Test(priority=9)
 	//@Ignore
 	public void enter_text_with_leading_whitespaces() throws IOException, InterruptedException {
 		addPushTemplate = loginPage.addPushTemplateLogin(props.getProperty("username"),props.getProperty("password"));
@@ -161,12 +161,12 @@ public class TemplateName extends TestBase{
 		addPushTemplate.selectDatafromAppNameDropDownElement(); /*taking input into the app name drop down field.*/
 		addPushTemplate.typeTotemplateTitleInputFieldParam("Exclusive Flash Sale: Limited Time Only!");/*taking input into the title field.*/
 		addPushTemplate.typeTotemplateMessageInputFieldParam(" Don't miss out! Exclusive discounts inside. Tap to unlock savings now! "); /*taking input into the message field.*/
-		addPushTemplate.typeTotemplateSaveButtonField();/*for the save button*/
+		//addPushTemplate.typeTotemplateSaveButtonField();/*for the save button*/
 									
 	}
 	
 	
-	//@Test(priority=10)
+	@Test(priority=10)
 	//@Ignore
 	public void enter_text_with_trailing_whitespaces() throws IOException, InterruptedException {
 		addPushTemplate = loginPage.addPushTemplateLogin(props.getProperty("username"),props.getProperty("password"));
@@ -377,7 +377,7 @@ public class TemplateName extends TestBase{
 	 }
 	
 	
-	@Test(priority=24)
+	//@Test(priority=24)
 	//@Ignore
 				  
 	 public void enter_text_and_navigate_through_the_template_name_field_using_the_tab_key() throws IOException, InterruptedException {
