@@ -49,6 +49,17 @@ public class CreateNewApp extends TestBase{
 		return new CreateNewApp();
 	}
 	
+	//01. Type to the App Name
+	public CreateNewApp typeToAppNameInputFieldParam(String $name) throws InterruptedException {
+		appnameInputFieldHighlight();
+		appNameElement.sendKeys($name);
+		
+		Thread.sleep(2000);
+		
+		return new CreateNewApp();
+	}
+	
+	
 	/***************************************************
      						* *****************************************************************************************************
 	 						* **************************    End No.01 - Element ofApp Name    *************************************
