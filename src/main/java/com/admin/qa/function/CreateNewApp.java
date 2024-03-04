@@ -98,6 +98,18 @@ public class CreateNewApp extends TestBase{
 			return new CreateNewApp();
 		}
 		
+		
+		
+		//02. Type to the APP ID (One Signal)
+		public CreateNewApp typeToAPPIDOneSignalTestParam(String $id) throws InterruptedException {
+			appIDOneSignalInputFieldHighlight();
+			appIDOneSignalElement.sendKeys($id);
+			
+			Thread.sleep(2000);
+			
+			return new CreateNewApp();
+		}
+		
 		/***************************************************
 								* **********************************************************************************************
 								* **************************    End No.02 - Element of APP ID (One Signal)   *******************
@@ -129,10 +141,22 @@ public class CreateNewApp extends TestBase{
 			}
 		}
 		
-		//03. Type to the APP ID (One Signal)
+		//03. Type to the APP key (One Signal)
 		public CreateNewApp typeToAPPKeyOneSignalTest() throws InterruptedException {
 			appKeyOneSignalInputFieldHighlight();
 			appKeyOneSignalElement.sendKeys("test");
+			return new CreateNewApp();
+		}
+		
+		
+		
+		//03. Type to the APP key (One Signal)
+		public CreateNewApp typeToAPPKeyOneSignalTestParam(String $key) throws InterruptedException {
+			appKeyOneSignalInputFieldHighlight();
+			appKeyOneSignalElement.sendKeys($key);
+					
+			Thread.sleep(2000);
+					
 			return new CreateNewApp();
 		}
 		
