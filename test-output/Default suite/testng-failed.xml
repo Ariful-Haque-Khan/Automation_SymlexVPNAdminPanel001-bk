@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.add_push_template.qa.test.MessageFieldTest">
+      <class name="com.add_new_app.qa.test.AppNameFieldTest">
         <methods>
-          <include name="paste_the_text_into_the_message_field_using_the_paste_action"/>
           <include name="setUp"/>
-          <include name="check_with_empty_text_in_the_message_field"/>
+          <include name="enter_text_and_navigate_through_the_input_field_using_the_tab_key"/>
         </methods>
-      </class> <!-- com.add_push_template.qa.test.MessageFieldTest -->
+      </class> <!-- com.add_new_app.qa.test.AppNameFieldTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

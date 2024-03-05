@@ -44,7 +44,7 @@ public class MessageFieldTest extends TestBase{
 	
 	// Test _Blank!!! 
 	
-	@Test(priority=1)
+	//@Test(priority=1)
 	//@Ignor
 		 
 	public void check_with_empty_text_in_the_message_field() throws IOException, InterruptedException {
@@ -238,7 +238,7 @@ public class MessageFieldTest extends TestBase{
 	}
 			  
 			  
-	//@Test(priority=18)
+	@Test(priority=18)
 	//@Ignore
 				 
 	public void enter_text_containing_emojis_into_the_message_field() throws IOException, InterruptedException {
@@ -325,14 +325,14 @@ public class MessageFieldTest extends TestBase{
 		addPushTemplate = loginPage.addPushTemplateLogin(props.getProperty("username"), props.getProperty("password"));
 		addPushTemplate.openAddPushTemplatePage(); // Open the Add Push Template Page.
 		addPushTemplate.typeTotemplateMessageInputFieldParam("a big offer of get 2 months"); // taking input into message field
-		addPushTemplate.typeAndTabKeyTemplateMessageInputFieldParam("");
+		addPushTemplate.typeAndTabKeyTemplateMessageInputFieldParam(""); // navigate to the tab key
 		addPushTemplate.typeTotemplateSaveButtonField(); // Click the save button.
 	    
 	}
 
   
 			  
-	@Test(priority=25) 
+	//@Test(priority=25) 
 	//@Ignore
 			  
 	 public void paste_the_text_into_the_message_field_using_the_paste_action() throws IOException, InterruptedException {
