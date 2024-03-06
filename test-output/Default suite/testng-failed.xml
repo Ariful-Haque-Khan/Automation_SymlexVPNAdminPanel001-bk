@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.add_new_app.qa.test.AppNameFieldTest">
+      <class name="com.add_push_template.qa.test.TitleFieldTest">
         <methods>
           <include name="setUp"/>
-          <include name="enter_text_and_navigate_through_the_input_field_using_the_tab_key"/>
+          <include name="enter_text_containing_emojis_into_the_title_field"/>
         </methods>
-      </class> <!-- com.add_new_app.qa.test.AppNameFieldTest -->
+      </class> <!-- com.add_push_template.qa.test.TitleFieldTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
