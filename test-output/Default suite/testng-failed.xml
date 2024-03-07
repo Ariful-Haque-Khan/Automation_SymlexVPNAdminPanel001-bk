@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.add_push_template.qa.test.TitleFieldTest">
+      <class name="com.add_new_app.qa.test.AppIDFieldTest">
         <methods>
+          <include name="enter_text_containing_emojis_into_the_app_id_field"/>
           <include name="setUp"/>
-          <include name="enter_text_containing_emojis_into_the_title_field"/>
         </methods>
-      </class> <!-- com.add_push_template.qa.test.TitleFieldTest -->
+      </class> <!-- com.add_new_app.qa.test.AppIDFieldTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

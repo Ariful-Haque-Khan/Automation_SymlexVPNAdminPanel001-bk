@@ -60,7 +60,7 @@ public class CreateNewApp extends TestBase{
 		
 	}
 	
-	//1.0.1. Type to the App name Input Field (enter text, then clear the title field)
+	//1.0.1. Type to the App name Input Field (enter text, then clear the app name field)
     public CreateNewApp typeAndClearAppNameInputField(String $name) throws InterruptedException {
     	appnameInputFieldHighlight();
     	appNameElement.sendKeys($name);
@@ -128,17 +128,32 @@ public class CreateNewApp extends TestBase{
 		return new CreateNewApp();
 	}
 	
-	//02. Type to the APP key (One Signal)
-		public CreateNewApp typeAndTabKeyAppIDInputFieldParam(String $id) throws InterruptedException {
-			appIDOneSignalInputFieldHighlight();
-			appIDOneSignalElement.sendKeys($id);
-			appIDOneSignalElement.sendKeys(Keys.TAB); // Navigate to the next field
+	//02.0.1. Type to the APP key (One Signal)
+	public CreateNewApp typeAndTabKeyAppIDInputFieldParam(String $id) throws InterruptedException {
+		appIDOneSignalInputFieldHighlight();
+		appIDOneSignalElement.sendKeys($id);
+		appIDOneSignalElement.sendKeys(Keys.TAB); // Navigate to the next field
 						
-			Thread.sleep(2000);
+		Thread.sleep(2000);
 					
-			return new CreateNewApp();
-		}
+		return new CreateNewApp();
+	}
 		
+		
+		
+	//2.0.2. Type to the App id Input Field (enter text, then clear the app id field)
+	 public CreateNewApp typeAndClearAppIDInputField(String $id) throws InterruptedException {
+		appIDOneSignalInputFieldHighlight();
+	    appIDOneSignalElement.sendKeys($id);
+	    Thread.sleep(500);
+	    appIDOneSignalElement.clear();
+	    return new CreateNewApp();
+	    			
+	}
+	 
+	
+		
+	
 	
 		/***************************************************
 								* **********************************************************************************************
@@ -187,6 +202,17 @@ public class CreateNewApp extends TestBase{
 		Thread.sleep(2000);
 				
 		return new CreateNewApp();
+	}
+	
+	
+	//3.0.1. Type to the App id Input Field (enter text, then clear the app id field)
+	public CreateNewApp typeAndClearAppKeyInputField(String $key) throws InterruptedException {
+		appKeyOneSignalInputFieldHighlight();
+		appKeyOneSignalElement.sendKeys($key);
+		Thread.sleep(500);
+		appKeyOneSignalElement.clear();
+		return new CreateNewApp();
+		    			
 	}
 		
 	
