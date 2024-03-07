@@ -17,7 +17,7 @@ import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.TestUtils;
 
-public class AppNameFieldTest extends TestBase{
+public class AppIDFieldTest extends TestBase{
 	
 	
 	LoginPage loginPage;
@@ -27,7 +27,7 @@ public class AppNameFieldTest extends TestBase{
 	CreateNewApp createNewApp;
 	
 	//Initializing PageFactory
-	public AppNameFieldTest() {
+	public AppIDFieldTest() {
 		super();   //Call the Constructor of the Super class - TestBase
 	}
 	
@@ -39,14 +39,15 @@ public class AppNameFieldTest extends TestBase{
 	}
 
 	
-	// Test _Blank!!! 
+	
+	// ***** Test _Blank!!! 
 	//@Test(priority=1)
 	//@Ignore
-	public void enter_empty_text_into_the_app_name_field() throws IOException, InterruptedException {
+	public void enter_empty_text_into_the_app_ID_field() throws IOException, InterruptedException {
 		createNewApp = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
 		createNewApp.openCreateNewAppPage(); //open the Custom Panel Name Page.
-		createNewApp.typeToAppNameInputFieldParam(""); //for taking inputs into the app name field
-		createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
+		createNewApp.typeToAppNameInputFieldParam("SymlexlVPN12345"); //for taking inputs into the app name field
+		createNewApp.typeToAPPIDOneSignalTestParam("");//for taking inputs into the app id field
 		createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
 		createNewApp.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
 		createNewApp.clickToSaveButtonTest(); //for the save button
@@ -57,7 +58,7 @@ public class AppNameFieldTest extends TestBase{
 	
 	//@Test(priority=2)
 	//@Ignore
-	public void enter_a_valid_app_name_into_the_app_name_field() throws IOException, InterruptedException {
+	public void enter_a_valid_app_id_into_the_app_ID_field() throws IOException, InterruptedException {
 		createNewApp = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
 		createNewApp.openCreateNewAppPage(); //open the Custom Panel Name Page.
 		createNewApp.typeToAppNameInputFieldParam("SymlexlVPN12345"); //for taking inputs into the app name field
@@ -72,12 +73,12 @@ public class AppNameFieldTest extends TestBase{
 	   
 	//@Test(priority=3)
 	//@Ignore
-	public void enter_the_above_maximum_allowed_length_of_characters_into_the_app_name_field () throws IOException, InterruptedException{
+	public void enter_the_above_maximum_allowed_length_of_characters_into_the_app_id_field () throws IOException, InterruptedException{
 		createNewApp = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
 		createNewApp.openCreateNewAppPage(); //open the Custom Panel Name Page.
-		createNewApp.typeToAppNameInputFieldParam("SymlexlVPNdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"); //for taking inputs into the app name field
-		createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
-		//createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
+		createNewApp.typeToAppNameInputFieldParam("SymlexlVPN12345"); //for taking inputs into the app name field
+		createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483883da8da-ba2e-4966-a025-d1a2483883da8da-ba2e-4966-a025-d1a2483883da8da-ba2e-4966-a025-d1a2483883da8da-ba2e-4966-a025-d1a2483883da8da-ba2e-4966-a025-d1a2483883da8da-ba2e-4966-a025-d1a2483883da8da-ba2e-4966-a025-d1a2483883da8da-ba2e-4966-a025-d1a2483883da8da-ba2e-4966-a025-d1a2483883da8da-ba2e-4966-a025-d1a2483883da8da-ba2e-4966-a025-d1a248883da8da-ba2e-4966-a025-d1a2483883da8da-ba2e-4966-a025-d1a2483883da8da-ba2e-4966-a025-d1a24833883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
+		createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
 		createNewApp.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
 		createNewApp.clickToSaveButtonTest(); //for the save button
 
@@ -86,11 +87,11 @@ public class AppNameFieldTest extends TestBase{
 
 	//@Test(priority=4)
 	//@Ignore
-    public void enter_the_below_minimum_allowed_length_of_characters_into_the_app_name_field() throws  IOException,InterruptedException {
+    public void enter_the_below_minimum_allowed_length_of_characters_into_the_app_id_field() throws  IOException,InterruptedException {
     	createNewApp = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
 		createNewApp.openCreateNewAppPage(); //open the Custom Panel Name Page.
-		createNewApp.typeToAppNameInputFieldParam("s"); //for taking inputs into the app name field
-		createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
+		createNewApp.typeToAppNameInputFieldParam("SymlexlVPN12345"); //for taking inputs into the app name field
+		createNewApp.typeToAPPIDOneSignalTestParam("88");//for taking inputs into the app id field
 		createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
 		createNewApp.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
 		createNewApp.clickToSaveButtonTest(); //for the save button
@@ -99,14 +100,14 @@ public class AppNameFieldTest extends TestBase{
 
 	//@Test(priority=5)
 	//@Ignore
-	public void enter_only_alphabetic_characters_into_the_app_name_field()throws  IOException,InterruptedException  {
+	public void enter_only_alphabetic_characters_into_the_app_id_field()throws  IOException,InterruptedException  {
 		createNewApp = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
 		createNewApp.openCreateNewAppPage(); //open the Custom Panel Name Page.
-		createNewApp.typeToAppNameInputFieldParam("symlexsymlexsymlex"); //for taking inputs into the app name field
-		createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
-		//createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
+		createNewApp.typeToAppNameInputFieldParam("SymlexlVPN12345"); //for taking inputs into the app name field
+		createNewApp.typeToAPPIDOneSignalTestParam("abcdefghijklmnop");//for taking inputs into the app id field
+		createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
 		createNewApp.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
-		createNewApp.clickToSaveButtonTest(); //for the save button
+		//createNewApp.clickToSaveButtonTest(); //for the save button
 
 
 	}
@@ -114,14 +115,14 @@ public class AppNameFieldTest extends TestBase{
 
 	//@Test(priority=6)
     //@Ignore
-    public void enter_numeric_characters_into_the_app_name_field()throws IOException,InterruptedException {
+    public void enter_numeric_characters_into_the_app_id_field()throws IOException,InterruptedException {
     	createNewApp = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
 		createNewApp.openCreateNewAppPage(); //open the Custom Panel Name Page.
-		createNewApp.typeToAppNameInputFieldParam("12345678901234567890"); //for taking inputs into the app name field
-		createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
-		//createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
+		createNewApp.typeToAppNameInputFieldParam("SymlexlVPN12345"); //for taking inputs into the app name field
+		createNewApp.typeToAPPIDOneSignalTestParam("88382496602512483");//for taking inputs into the app id field
+		createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
 		createNewApp.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
-		createNewApp.clickToSaveButtonTest(); //for the save button
+		//createNewApp.clickToSaveButtonTest(); //for the save button
 
 		
 	}
@@ -129,14 +130,14 @@ public class AppNameFieldTest extends TestBase{
     
     //@Test(priority=7)
   	//@Ignore
-	public void enter_a_combination_of_alphabetic_and_numeric_characters_into_the_app_name_field()throws IOException,InterruptedException {
+	public void enter_a_combination_of_alphabetic_and_numeric_characters_into_the_app_id_field()throws IOException,InterruptedException {
 		createNewApp = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
 		createNewApp.openCreateNewAppPage(); //open the Custom Panel Name Page.
-		createNewApp.typeToAppNameInputFieldParam("symlex567890"); //for taking inputs into the app name field
+		createNewApp.typeToAppNameInputFieldParam("SymlexlVPN12345"); //for taking inputs into the app name field
 		createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
-		//createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
+		createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
 		createNewApp.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
-		createNewApp.clickToSaveButtonTest(); //for the save button
+		//createNewApp.clickToSaveButtonTest(); //for the save button
 		
 
 	}
@@ -144,12 +145,12 @@ public class AppNameFieldTest extends TestBase{
 
 	//@Test(priority=8)
 	//@Ignore
-	public void enter_special_characters_into_the_app_name_field()throws IOException,InterruptedException {
+	public void enter_special_characters_into_the_app_id_field()throws IOException,InterruptedException {
 		createNewApp = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
 		createNewApp.openCreateNewAppPage(); //open the Custom Panel Name Page.
-		createNewApp.typeToAppNameInputFieldParam("!@#$%^&*!@#$%^&"); //for taking inputs into the app name field
-		createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
-		//createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
+		createNewApp.typeToAppNameInputFieldParam("SymlexlVPN12345"); //for taking inputs into the app name field
+		createNewApp.typeToAPPIDOneSignalTestParam("!@#$%^&*!@#$%^&**&^%$#@!");//for taking inputs into the app id field
+		createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
 		createNewApp.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
 		createNewApp.clickToSaveButtonTest(); //for the save button
 
@@ -158,11 +159,11 @@ public class AppNameFieldTest extends TestBase{
 
 	//@Test(priority=9)
 	//@Ignore
-	public void enter_text_with_leading_whitespaces_into_the_app_name_field() throws IOException,InterruptedException {
+	public void enter_text_with_leading_whitespaces_into_the_app_id_field() throws IOException,InterruptedException {
 		createNewApp = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
 		createNewApp.openCreateNewAppPage(); //open the Custom Panel Name Page.
-		createNewApp.typeToAppNameInputFieldParam("                 symlex567890"); //for taking inputs into the app name field
-        //createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
+		createNewApp.typeToAppNameInputFieldParam("SymlexlVPN12345"); //for taking inputs into the app name field
+        createNewApp.typeToAPPIDOneSignalTestParam("                                     883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
 		createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
 		createNewApp.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
 		createNewApp.clickToSaveButtonTest(); //for the save button
@@ -172,12 +173,12 @@ public class AppNameFieldTest extends TestBase{
 	
 	//@Test(priority=10)
 	//@Ignore
-	public void enter_text_with_trailing_whitespaces_into_the_app_name_field() throws IOException,InterruptedException  {
+	public void enter_text_with_trailing_whitespaces_into_the_app_id_field() throws IOException,InterruptedException  {
 		createNewApp = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
 		createNewApp.openCreateNewAppPage(); //open the Custom Panel Name Page.
-		createNewApp.typeToAppNameInputFieldParam("symlex567890                 "); //for taking inputs into the app name field
-		//createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
-		createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
+		createNewApp.typeToAppNameInputFieldParam("SymlexlVPN12345"); //for taking inputs into the app name field
+		createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483                                                      ");//for taking inputs into the app id field
+		//createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
 		createNewApp.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
 		createNewApp.clickToSaveButtonTest(); //for the save button
 
@@ -186,11 +187,11 @@ public class AppNameFieldTest extends TestBase{
 	
 	//@Test(priority=11)
 	//@Ignore
-	public void enter_text_with_spaces_within_the_content_into_the_app_name_field() throws IOException,InterruptedException  {
+	public void enter_text_with_spaces_within_the_content_into_the_app_id_field() throws IOException,InterruptedException  {
 		createNewApp = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
 		createNewApp.openCreateNewAppPage(); //open the Custom Panel Name Page.
-		createNewApp.typeToAppNameInputFieldParam("symlex  vpn   "); //for taking inputs into the app name field
-		//createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
+		createNewApp.typeToAppNameInputFieldParam("SymlexlVPN12345"); //for taking inputs into the app name field
+		createNewApp.typeToAPPIDOneSignalTestParam("883da8da    -ba2e    -4966     -a025-d1a2483");//for taking inputs into the app id field
 		createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
 		createNewApp.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
 		createNewApp.clickToSaveButtonTest(); //for the save button
@@ -199,14 +200,14 @@ public class AppNameFieldTest extends TestBase{
 
 	//@Test(priority=12)
 	//@Ignore
-	public void enter_text_in_uppercase_letters_into_the_app_name_field() throws IOException,InterruptedException {
+	public void enter_text_in_uppercase_letters_into_the_app_id_field() throws IOException,InterruptedException {
 		createNewApp = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
 		createNewApp.openCreateNewAppPage(); //open the Custom Panel Name Page.
-		createNewApp.typeToAppNameInputFieldParam("SYMLEX VPN"); //for taking inputs into the app name field
-		//createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
+		createNewApp.typeToAppNameInputFieldParam("SymlexlVPN12345"); //for taking inputs into the app name field
+		createNewApp.typeToAPPIDOneSignalTestParam("ASDFGHLIYGHBJVHJFDCHGFJHGXFDXNHMGJHFHJGHJ");//for taking inputs into the app id field
 		createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
 		createNewApp.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
-		createNewApp.clickToSaveButtonTest(); //for the save button
+		//createNewApp.clickToSaveButtonTest(); //for the save button
 
 
 	}
@@ -214,14 +215,14 @@ public class AppNameFieldTest extends TestBase{
 
 	//@Test(priority=13)
 	//@Ignore
-	public void enter_text_in_lowercases_letters_into_the_app_name_field() throws IOException,InterruptedException  {
+	public void enter_text_in_lowercases_letters_into_the_app_id_field() throws IOException,InterruptedException  {
 		createNewApp = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
 		createNewApp.openCreateNewAppPage(); //open the Custom Panel Name Page.
-		createNewApp.typeToAppNameInputFieldParam("symlex vpn"); //for taking inputs into the app name field
-	    //createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
+		createNewApp.typeToAppNameInputFieldParam("SymlexlVPN12345"); //for taking inputs into the app name field
+	    createNewApp.typeToAPPIDOneSignalTestParam("assdfghjklasdfghjklasdfghjkl");//for taking inputs into the app id field
 		createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
 		createNewApp.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
-		createNewApp.clickToSaveButtonTest(); //for the save button
+		//createNewApp.clickToSaveButtonTest(); //for the save button
 
 
 	}
@@ -229,14 +230,14 @@ public class AppNameFieldTest extends TestBase{
 	 
 	//@Test(priority=14)
 	//@Ignore
-	public void enter_text_with_a_mix_of_uppercase_and_lowercase_letter_into_the_app_name_field() throws IOException,InterruptedException  {
+	public void enter_text_with_a_mix_of_uppercase_and_lowercase_letter_into_the_app_id_field() throws IOException,InterruptedException  {
 		createNewApp = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
 		createNewApp.openCreateNewAppPage(); //open the Custom Panel Name Page.
-		createNewApp.typeToAppNameInputFieldParam("SymLex VpN"); //for taking inputs into the app name field
-		//createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
+		createNewApp.typeToAppNameInputFieldParam("SymlexlVPN12345"); //for taking inputs into the app name field
+		createNewApp.typeToAPPIDOneSignalTestParam("assASSFG345ASDFasdf");//for taking inputs into the app id field
 		createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
 		createNewApp.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
-		createNewApp.clickToSaveButtonTest(); //for the save button
+		//createNewApp.clickToSaveButtonTest(); //for the save button
 
 		
 	}
@@ -244,11 +245,11 @@ public class AppNameFieldTest extends TestBase{
 	
 	//@Test(priority=15)
 	//@Ignore
-	public void enter_text_with_punctuation_marks_into_the_app_name_field() throws IOException,InterruptedException  {
+	public void enter_text_with_punctuation_marks_into_the_app_id_field() throws IOException,InterruptedException  {
 		createNewApp = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
 		createNewApp.openCreateNewAppPage(); //open the Custom Panel Name Page.
-		createNewApp.typeToAppNameInputFieldParam(",.;',/.,;'/.,.;///;.;,',;.'"); //for taking inputs into the app name field
-		//createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
+		createNewApp.typeToAppNameInputFieldParam("SymlexlVPN12345"); //for taking inputs into the app name field
+		createNewApp.typeToAPPIDOneSignalTestParam(",./;,./;,./;");//for taking inputs into the app id field
 		createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
 		createNewApp.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
 		createNewApp.clickToSaveButtonTest(); //for the save button
@@ -259,26 +260,26 @@ public class AppNameFieldTest extends TestBase{
 
 	//@Test(priority=16)
 	//@Ignore
-	public void enter_text_with_line_breaks_or_newlines_into_the_app_name_field() throws IOException,InterruptedException  {
+	public void enter_text_with_line_breaks_or_newlines_into_the_app_id_field() throws IOException,InterruptedException  {
 		createNewApp = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
 		createNewApp.openCreateNewAppPage(); //open the Custom Panel Name Page.
-		createNewApp.typeToAppNameInputFieldParam("Twinkle, twinkle, little star,\\r\\n\"\r\n"
-				+ "				+ \"How I wonder what you are!\\r\\n\""); //for taking inputs into the app name field
-        //createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
+		createNewApp.typeToAppNameInputFieldParam("SymlexlVPN12345"); //for taking inputs into the app name field
+		createNewApp.typeToAPPIDOneSignalTestParam("\"883da8da-ba2e-4966-a025-d1a2483\\n\" +\r\n"
+				+ "                                  \"ba2e-4966-a025-d\"");
 		createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
 		createNewApp.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
-		createNewApp.clickToSaveButtonTest(); //for the save button
+		//createNewApp.clickToSaveButtonTest(); //for the save button
 
 	}
 
 
 	//@Test(priority=17)
 	//@Ignore
-	public void enter_text_with_unicode_characters_into_the_app_name_field()throws IOException,InterruptedException {
+	public void enter_text_with_unicode_characters_into_the_app_id_field()throws IOException,InterruptedException {
 		createNewApp = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
 		createNewApp.openCreateNewAppPage(); //open the Custom Panel Name Page.
-		createNewApp.typeToAppNameInputFieldParam("こんにちは"); //for taking inputs into the app name field
-		//createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
+		createNewApp.typeToAppNameInputFieldParam("SymlexlVPN12345"); //for taking inputs into the app name field
+		createNewApp.typeToAPPIDOneSignalTestParam("こんにちは");//for taking inputs into the app id field
 		createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
 		createNewApp.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
 		createNewApp.clickToSaveButtonTest(); //for the save button 
@@ -288,12 +289,12 @@ public class AppNameFieldTest extends TestBase{
 
 	//@Test(priority=18)
 	//@Ignore
-	public void enter_text_containing_emojis_into_the_app_name_field() throws IOException,InterruptedException {
+	public void enter_text_containing_emojis_into_the_app_id_field() throws IOException,InterruptedException {
 		createNewApp = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
 		createNewApp.openCreateNewAppPage(); //open the Custom Panel Name Page.
-		createNewApp.typeToAppNameInputFieldParam("😊, 🐱, 🍕, 🎉"); //for taking inputs into the app name field
-		//createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
-		createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
+		createNewApp.typeToAppNameInputFieldParam("SymlexlVPN12345"); //for taking inputs into the app name field
+		createNewApp.typeToAPPIDOneSignalTestParam("😊, 🐱, 🍕, 🎉");//for taking inputs into the app id field
+		//createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
 		createNewApp.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
 		createNewApp.clickToSaveButtonTest(); //for the save button
 
@@ -303,11 +304,11 @@ public class AppNameFieldTest extends TestBase{
 	
 	//@Test(priority=19)
 	//@Ignore
-	public void enter_text_with_accented_characters_into_the_app_name_field()throws IOException,InterruptedException  {
+	public void enter_text_with_accented_characters_into_the_app_id_field()throws IOException,InterruptedException  {
 		createNewApp = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
 		createNewApp.openCreateNewAppPage(); //open the Custom Panel Name Page.
-		createNewApp.typeToAppNameInputFieldParam(" á, ç, ō,  á, ç, ō"); //for taking inputs into the app name field
-		createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
+		createNewApp.typeToAppNameInputFieldParam("SymlexlVPN1234"); //for taking inputs into the app name field
+		createNewApp.typeToAPPIDOneSignalTestParam("á, ç, ō,  á, ç, ō");//for taking inputs into the app id field
 		createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
 		createNewApp.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
 		//createNewApp.clickToSaveButtonTest(); //for the save button
@@ -318,7 +319,7 @@ public class AppNameFieldTest extends TestBase{
 	
 	//@Test(priority=20)
 	//@Ignore
-	public void enter_default_placeholder_text_into_the_app_name_field()throws IOException,InterruptedException {
+	public void enter_default_placeholder_text_into_the_app_id_field()throws IOException,InterruptedException {
 		
 
 	}
@@ -330,8 +331,8 @@ public class AppNameFieldTest extends TestBase{
 		createNewApp = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
 		createNewApp.openCreateNewAppPage(); //open the Custom Panel Name Page.
 		createNewApp.typeToAppNameInputFieldParam("Symlex VPN"); //for taking inputs into the app name field
-		createNewApp.typeAndClearAppNameInputField("");//clear the text from the field
 		createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
+		createNewApp.typeAndClearAppIDInputField("");// clear the key field
 		createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
 		createNewApp.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
 		createNewApp.clickToSaveButtonTest(); //for the save button
@@ -342,12 +343,12 @@ public class AppNameFieldTest extends TestBase{
 
 	//@Test(priority=22)
 	//@Ignore
-	public void enter_then_undo_the_input_action_into_the_app_name_field()throws IOException,InterruptedException  {
+	public void enter_then_undo_the_input_action_into_the_app_id_field()throws IOException,InterruptedException  {
 		createNewApp = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
 		createNewApp.openCreateNewAppPage(); //open the Custom Panel Name Page.
 		createNewApp.typeToAppNameInputFieldParam("Symlex VPN"); //for taking inputs into the app name field
-		createNewApp.typeAndClearAppNameInputField("");// indo the input action
 		createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
+		createNewApp.typeAndClearAppIDInputField("");// undo the text of  the key field
 		createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
 		createNewApp.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
 		createNewApp.clickToSaveButtonTest(); //for the save button
@@ -355,31 +356,30 @@ public class AppNameFieldTest extends TestBase{
 	}
 
 
-	//.@Test(priority=23)
+	//@Test(priority=23)
 	//@Ignore
-	public void enter_then_undo_then_redo_the_input_action_into_the_app_name_field() throws IOException,InterruptedException  {
+	public void enter_then_undo_then_redo_the_input_action_into_the_app_id_field() throws IOException,InterruptedException  {
 		createNewApp = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
 		createNewApp.openCreateNewAppPage(); //open the Custom Panel Name Page.
 		createNewApp.typeToAppNameInputFieldParam("Symlex VPN"); //for taking inputs into the app name field
-		createNewApp.typeAndClearAppNameInputField("");// indo the input action
-		createNewApp.typeToAppNameInputFieldParam("Symlex VPN"); //redo the input action
-		//createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
+		createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
+		createNewApp.typeAndClearAppIDInputField("");// undo the text of  the key field
+		createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
 		createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
 		createNewApp.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
-		createNewApp.clickToSaveButtonTest(); //for the save button
-
+		//createNewApp.clickToSaveButtonTest(); //for the save button
 		
 	}
 
 	
-	@Test(priority=24)
+	//@Test(priority=24)
 	//@Ignore
 	public void enter_text_and_navigate_through_the_input_field_using_the_tab_key()throws IOException,InterruptedException {
 		createNewApp = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
 		createNewApp.openCreateNewAppPage(); //open the Custom Panel Name Page.
 		createNewApp.typeToAppNameInputFieldParam("Symlex VPN"); //for taking inputs into the app name field
-		createNewApp.typeAndTabKeyAppNameInputFieldParam("");//navigate to the tab key
-		//createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
+		createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
+		createNewApp.typeAndTabKeyAppIDInputFieldParam("");// navigate to the tab key
 		//createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
 		createNewApp.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
 		createNewApp.clickToSaveButtonTest(); //for the save button
@@ -390,17 +390,18 @@ public class AppNameFieldTest extends TestBase{
 	
 	//@Test(priority=25)
 	//@Ignore
-	public void paste_the_text_into_the_app_name_field_using_the_paste_action() throws IOException,InterruptedException  {
+	public void paste_the_text_into_the_template_id_field_using_the_paste_action() throws IOException,InterruptedException  {
 		createNewApp = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
 		createNewApp.openCreateNewAppPage(); //open the Custom Panel Name Page.
 		createNewApp.typeToAppNameInputFieldParam("SymlexlVPN"); //for taking inputs into the app name field
 		createNewApp.typeToAPPIDOneSignalTestParam("883da8da-ba2e-4966-a025-d1a2483");//for taking inputs into the app id field
-		createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
+		//createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
 		createNewApp.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
 		//createNewApp.clickToSaveButtonTest(); //for the save button
 
 	}
 
+	
 	
 	
 	/*
