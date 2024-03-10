@@ -44,12 +44,12 @@ public class AddNewratePlanFieldTest extends TestBase{
 	@Test(priority=1)
 	//@Ignore
 	public void TestAddNewServerBlankForm() throws IOException, InterruptedException {
-		addNewRatePlan = loginPage.addNewRatePlan(props.getProperty("username"),props.getProperty("password"));
-		addNewRatePlan.openRatePlanNameFormPage();
-		addNewRatePlan.typeToRatePlanNameElement();
-		addNewRatePlan.typeToRatePlanDescriptionElement();
-		addNewRatePlan.clickToRatePlanStatusElement();
-		addNewRatePlan.clickToRatePlanSubmitButtonElement();
+		addNewRatePlan = loginPage.addNewRatePlan(props.getProperty("username"),props.getProperty("password")); //login to the system
+		addNewRatePlan.openRatePlanNameFormPage();// open the Custom Panel Name Page.
+		addNewRatePlan.typeToRatePlanNameElement();// for taking inputs from the rate name input text field
+		addNewRatePlan.typeToRatePlanDescriptionElement();// for taking inputs from the rate description input textarea field
+		addNewRatePlan.clickToRatePlanStatusElement();//for clicking/unchecking status check box
+		addNewRatePlan.clickToRatePlanSubmitButtonElement(); //for submitting with the form data
 		
 	}
 	
@@ -62,22 +62,29 @@ public class AddNewratePlanFieldTest extends TestBase{
 	
 	public void enter_empty_text_into_the_rate_name_field() throws IOException, InterruptedException{
 		addNewRatePlan = loginPage.addNewRatePlan(props.getProperty("username"),props.getProperty("password"));
-		addNewRatePlan.openRatePlanNameFormPage();
-		addNewRatePlan.typeToRatePlanNameElemenParam("");
-		addNewRatePlan.typeToRatePlanDescriptionElementParam("test");
-		addNewRatePlan.clickToRatePlanStatusElement();
-		//addNewRatePlan.clickToRatePlanSubmitButtonElement();
+		addNewRatePlan.openRatePlanNameFormPage();// open the Custom Panel Name Page.
+		addNewRatePlan.typeToRatePlanNameElemenParam("");// for taking inputs from the rate name input text field
+		addNewRatePlan.typeToRatePlanDescriptionElementParam("test");// for taking inputs from the rate description input textarea field
+		addNewRatePlan.clickToRatePlanStatusElement();//for clicking/unchecking status check box
+		//addNewRatePlan.clickToRatePlanSubmitButtonElement(); //for submitting with the form data
 	}
 	
 	public void enter_a_valid_rate_name_into_the_rate_name_field() throws IOException, InterruptedException{
 		addNewRatePlan = loginPage.addNewRatePlan(props.getProperty("username"),props.getProperty("password"));
-		addNewRatePlan.openRatePlanNameFormPage();
-		addNewRatePlan.typeToRatePlanNameElemenParam("");
-		addNewRatePlan.typeToRatePlanDescriptionElementParam("test");
-		addNewRatePlan.clickToRatePlanStatusElement();
-		//addNewRatePlan.clickToRatePlanSubmitButtonElement();
+		addNewRatePlan.openRatePlanNameFormPage();// open the Custom Panel Name Page.
+		addNewRatePlan.typeToRatePlanNameElemenParam("");// for taking inputs from the rate name input text field
+		addNewRatePlan.typeToRatePlanDescriptionElementParam("test");// for taking inputs from the rate description input textarea field
+		addNewRatePlan.clickToRatePlanStatusElement();//for clicking/unchecking status check box
+		//addNewRatePlan.clickToRatePlanSubmitButtonElement();//for submitting with the form data
 	}
-	public void enter_the_above_maximum_allowed_length_of_characters_into_the_rate_name_field() throws IOException, InterruptedException{}
+	public void enter_the_above_maximum_allowed_length_of_characters_into_the_rate_name_field() throws IOException, InterruptedException{
+		addNewRatePlan = loginPage.addNewRatePlan(props.getProperty("username"),props.getProperty("password"));
+		addNewRatePlan.openRatePlanNameFormPage();// open the Custom Panel Name Page.
+		addNewRatePlan.typeToRatePlanNameElemenParam("");// for taking inputs from the rate name input text field
+		addNewRatePlan.typeToRatePlanDescriptionElementParam("test");// for taking inputs from the rate description input textarea field
+		addNewRatePlan.clickToRatePlanStatusElement();//for clicking/unchecking status check box
+		//addNewRatePlan.clickToRatePlanSubmitButtonElement();//for submitting with the form data
+	}
 	public void enter_the_below_minimum_allowed_length_of_characters_into_the_rate_name_field() throws IOException, InterruptedException{}
 	public void enter_only_alphabetic_characters_into_the_rate_name_field() throws IOException, InterruptedException{}
 	public void enter_numeric_characters_into_the_rate_name_field() throws IOException, InterruptedException{}

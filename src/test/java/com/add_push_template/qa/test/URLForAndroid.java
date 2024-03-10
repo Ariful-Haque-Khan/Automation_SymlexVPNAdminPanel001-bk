@@ -252,7 +252,7 @@ public class URLForAndroid extends TestBase{
 	
 	//@Test(priority=14)
 	//@Ignore
-	public void   Enter_URLs_with_different_protocols_in_the_URL_for_android_field() throws IOException, InterruptedException {
+	public void Enter_URLs_with_different_protocols_in_the_URL_for_android_field() throws IOException, InterruptedException {
 		addPushTemplate = loginPage.addPushTemplateLogin(props.getProperty("username"),props.getProperty("password"));
 		addPushTemplate.openAddPushTemplatePage(); /*open the Custom Panel Name Page. */
 		addPushTemplate.typeTotemplatenameInputFieldParam("Limited Time Only"); /*taking input into the template name input field.*/
@@ -354,12 +354,8 @@ public class URLForAndroid extends TestBase{
 		addPushTemplate.typeTotemplateMessageInputFieldParam(" Don't miss out! Exclusive discounts inside. Tap to unlock savings now! "); /*taking input into the message field.*/
 		addPushTemplate.typeToImageURLFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg"); /*taking input into the image URL field.*/
 		addPushTemplate.typeToURLForAndroidFieldParam("myapp://expiredContent?contentId=12345"); /*taking input into the image URL field.*/
-		//addPushTemplate.typeTotemplateSaveButtonField(); /*for the save button*/
-																	
+		//addPushTemplate.typeTotemplateSaveButtonField(); /*for the save button*/														
 	}
-
-
-	
 	
 	/*
 	@AfterMethod
