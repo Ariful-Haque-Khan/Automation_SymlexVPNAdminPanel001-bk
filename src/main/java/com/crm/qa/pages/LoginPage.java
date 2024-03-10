@@ -40,6 +40,8 @@ import com.admin.qa.function.OnlinePINMigration;
 import com.admin.qa.function.PushAutomationForm;
 import com.admin.qa.function.SendBackgroundorSilentPushtoSinglePIN;
 import com.admin.qa.function.SendPushtoUser;
+import com.admin.qa.function.AddNewRatePlan;
+
 import com.admin.qa.pages.AllLinksFromDB;
 import com.crm.qa.base.TestBase;
 
@@ -394,6 +396,15 @@ public class LoginPage extends TestBase{
 		loginBtn.click();
 		
 		return new AddNewBanner(); // Login form Add New Banner Form page
+	}
+    
+    public AddNewRatePlan addNewRatePlan(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new AddNewRatePlan(); // Login form Add New Banner Form page
 	}
     
 }

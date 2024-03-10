@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-25T17:05:54 BDT" name="Default suite" finished-at="2024-02-25T17:06:39 BDT" duration-ms="45990">
+  <suite started-at="2024-03-09T21:26:27 BDT" name="Default suite" finished-at="2024-03-09T21:27:59 BDT" duration-ms="91549">
     <groups>
     </groups>
-    <test started-at="2024-02-25T17:05:54 BDT" name="Default test" finished-at="2024-02-25T17:06:39 BDT" duration-ms="45990">
-      <class name="com.add_push_template.qa.test.ImageURL">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.add_push_template.qa.test.ImageURL@576d5deb]" started-at="2024-02-25T17:05:54 BDT" name="setUp" finished-at="2024-02-25T17:05:57 BDT" duration-ms="3749" status="PASS">
+    <test started-at="2024-03-09T21:26:27 BDT" name="Default test" finished-at="2024-03-09T21:27:59 BDT" duration-ms="91549">
+      <class name="com.rate.test.AddNewratePlanFieldTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.rate.test.AddNewratePlanFieldTest@fa49800]" started-at="2024-03-09T21:26:27 BDT" name="setUp" finished-at="2024-03-09T21:26:50 BDT" duration-ms="23099" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="input_image_URL_with_HTTP_into_the_image_URL_field()[pri:7, instance:com.add_push_template.qa.test.ImageURL@576d5deb]" started-at="2024-02-25T17:05:57 BDT" name="input_image_URL_with_HTTP_into_the_image_URL_field" finished-at="2024-02-25T17:06:39 BDT" duration-ms="42200" status="PASS">
+        <test-method signature="TestAddNewServerBlankForm()[pri:1, instance:com.rate.test.AddNewratePlanFieldTest@fa49800]" started-at="2024-03-09T21:26:50 BDT" name="TestAddNewServerBlankForm" finished-at="2024-03-09T21:27:59 BDT" duration-ms="68414" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- input_image_URL_with_HTTP_into_the_image_URL_field -->
-      </class> <!-- com.add_push_template.qa.test.ImageURL -->
+        </test-method> <!-- TestAddNewServerBlankForm -->
+      </class> <!-- com.rate.test.AddNewratePlanFieldTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

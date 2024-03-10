@@ -166,12 +166,22 @@
 			<version>5.3.0</version>
 			<scope>test</scope>
 		</dependency>
+<<<<<<< HEAD
 		<!-- https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports -->
 		<dependency>
 		    <groupId>net.sf.jasperreports</groupId>
 		    <artifactId>jasperreports</artifactId>
 		    <version>6.21.2</version>
 		</dependency>
+=======
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-api</artifactId>
+		    <version>2.0.12</version>
+		</dependency>
+		
+>>>>>>> 3a59d0dd36a4311bba08e763e47d618a6f352d3a
 
 	</dependencies>
 </project>
