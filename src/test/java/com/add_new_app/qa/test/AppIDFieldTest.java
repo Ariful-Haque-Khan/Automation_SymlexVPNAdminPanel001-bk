@@ -52,7 +52,6 @@ public class AppIDFieldTest extends TestBase{
 		createNewApp.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
 		createNewApp.clickToSaveButtonTest(); //for the save button
 		
-		
 	}
 	
 	
@@ -81,8 +80,6 @@ public class AppIDFieldTest extends TestBase{
 		createNewApp.typeToAPPKeyOneSignalTestParam("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njl");//for taking inputs into the app key field
 		createNewApp.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
 		createNewApp.clickToSaveButtonTest(); //for the save button
-
-		
 	}
 
 	//@Test(priority=4)
