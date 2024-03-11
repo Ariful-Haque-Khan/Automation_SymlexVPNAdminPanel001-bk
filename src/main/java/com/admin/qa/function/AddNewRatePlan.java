@@ -49,6 +49,18 @@ public class AddNewRatePlan extends TestBase{
 		return new AddNewRatePlan();
 	}
 	
+	
+	
+	//1.0.1. Type to the rate plan Input Field (enter text, then clear the app id field)
+		public CreateNewApp typeAndClearRatePlanNameInputField(String $plan) throws InterruptedException {
+			ratePlanNameElementInputFieldHighlight();
+			ratePlanNameElement.sendKeys($plan);
+			Thread.sleep(500);
+			ratePlanNameElement.clear();
+			return new CreateNewApp();
+			    			
+		}
+	
 	//02. Type to the APP ID (One Signal)
 	public AddNewRatePlan typeToRatePlanNameElemenParam(String $id) throws InterruptedException {
 		ratePlanNameElementInputFieldHighlight();
@@ -107,6 +119,17 @@ public class AddNewRatePlan extends TestBase{
 			
 		return new AddNewRatePlan();
 	}
+	
+	
+	//2.0.1. Type to the App id Input Field (enter text, then clear the app id field)
+			public CreateNewApp typeAndClearRescriptionInputField(String $plan) throws InterruptedException {
+				ratePlanNameElementInputFieldHighlight();
+				ratePlanNameElement.sendKeys($plan);
+				Thread.sleep(500);
+				ratePlanNameElement.clear();
+				return new CreateNewApp();
+				    			
+			}
 	
 	/*******************************************************************************************************************
      			* ******************************************************************************************************

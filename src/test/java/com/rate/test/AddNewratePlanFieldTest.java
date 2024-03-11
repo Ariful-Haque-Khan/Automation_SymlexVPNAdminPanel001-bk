@@ -55,10 +55,10 @@ public class AddNewratePlanFieldTest extends TestBase{
 	
 	//@Test(priority=1)
 	@Ignore
-	public void enter_empty_text_into_the_app_ID_field() throws IOException, InterruptedException {
+	/*public void enter_empty_text_into_the_app_ID_field() throws IOException, InterruptedException {
 		addNewRatePlan = loginPage.addNewRatePlan(props.getProperty("username"),props.getProperty("password"));
 		addNewRatePlan.openRatePlanNameFormPage();
-	}
+	} */
 	
 	public void enter_empty_text_into_the_rate_name_field() throws IOException, InterruptedException{
 		addNewRatePlan = loginPage.addNewRatePlan(props.getProperty("username"),props.getProperty("password"));
@@ -81,7 +81,7 @@ public class AddNewratePlanFieldTest extends TestBase{
 		addNewRatePlan = loginPage.addNewRatePlan(props.getProperty("username"),props.getProperty("password"));
 		addNewRatePlan.openRatePlanNameFormPage();// open the Custom Panel Name Page.
 		addNewRatePlan.typeToRatePlanNameElemenParam("");// for taking inputs from the rate name input text field
-		addNewRatePlan.typeToRatePlanDescriptionElementParam("test");// for taking inputs from the rate description input textarea field
+		addNewRatePlan.typeToRatePlanDescriptionElementParam("test");// for taking inputs from the rate description input text area field
 		addNewRatePlan.clickToRatePlanStatusElement();//for clicking/unchecking status check box
 		//addNewRatePlan.clickToRatePlanSubmitButtonElement();//for submitting with the form data
 	}
