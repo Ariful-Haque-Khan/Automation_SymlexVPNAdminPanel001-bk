@@ -1,9 +1,11 @@
 package com.admin.qa.function;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.crm.qa.base.TestBase;
 
@@ -143,6 +145,47 @@ public class AddNewRatePlan extends TestBase{
 		public AddNewRatePlan clickToRatePlanStatusElement() throws InterruptedException {
 			ratePlanStatusElementInputFieldHighlight();
 			ratePlanStatusElement.click();
+			return new AddNewRatePlan();
+		}
+		
+		//03.01. Type to the Rate Plan Status
+		public AddNewRatePlan checkRatePlanStatusElementExists() throws InterruptedException {
+			if(driver.findElements( By.xpath("/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[3]/div/input") ).size() != 0) {
+				ratePlanStatusElementInputFieldHighlight();
+				Assert.assertFalse(false);
+			}else {
+				Assert.assertFalse(true);
+			}
+			return new AddNewRatePlan();
+		}
+		
+		//03.02. Type to the Rate Plan Status - get value
+		public AddNewRatePlan valueOfCheckRatePlanStatusElement() throws InterruptedException {
+			WebElement checkbox = driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[3]/div/input"));
+			//System.out.print(checkbox.isSelected());
+			if(checkbox.isSelected()) {
+				ratePlanStatusElementInputFieldHighlight();
+				Assert.assertFalse(false);
+			}else {
+				Assert.assertFalse(true);
+			}
+			return new AddNewRatePlan();
+		}
+		
+		//03.02. Type to the Rate Plan Status - get value
+		public AddNewRatePlan valueAfterandBeforeRefreshOfCheckRatePlanStatusElement() throws InterruptedException {
+			WebElement checkbox = driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[3]/div/input"));
+			//System.out.print(checkbox.isSelected());
+			boolean a=true, b=true;
+			b = checkbox.isSelected();
+			driver.navigate().refresh();
+			a = checkbox.isSelected();
+			if(a==b) {
+				ratePlanStatusElementInputFieldHighlight();
+				Assert.assertFalse(false);
+			}else {
+				Assert.assertFalse(true);
+			}
 			return new AddNewRatePlan();
 		}
 		
