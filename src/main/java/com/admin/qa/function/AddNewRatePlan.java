@@ -2,6 +2,7 @@ package com.admin.qa.function;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -52,26 +53,36 @@ public class AddNewRatePlan extends TestBase{
 	}
 	
 	
-	
-	//1.0.1. Type to the rate plan Input Field (enter text, then clear the app id field)
-		public CreateNewApp typeAndClearRatePlanNameInputField(String $plan) throws InterruptedException {
-			ratePlanNameElementInputFieldHighlight();
-			ratePlanNameElement.sendKeys($plan);
-			Thread.sleep(500);
-			ratePlanNameElement.clear();
-			return new CreateNewApp();
-			    			
-		}
-	
-	//02. Type to the APP ID (One Signal)
-	public AddNewRatePlan typeToRatePlanNameElemenParam(String $id) throws InterruptedException {
+	//01. Type to the Rate Plan Name parameter
+	public AddNewRatePlan typeToRatePlanNameElemenParam(String $plan) throws InterruptedException {
 		ratePlanNameElementInputFieldHighlight();
-		ratePlanNameElement.sendKeys($id);
-			
+		ratePlanNameElement.sendKeys($plan);
+				
 		Thread.sleep(2000);
-			
+				
 		return new AddNewRatePlan();
 	}
+		
+	
+	//1.0.1. Type to the rate plan name Input Field (enter text, then clear the rate plan name field)
+	public AddNewRatePlan typeAndClearRatePlanNameInputField(String $plan) throws InterruptedException {
+		ratePlanNameElementInputFieldHighlight();
+		ratePlanNameElement.sendKeys($plan);
+		Thread.sleep(500);
+		ratePlanNameElement.clear();
+		return new AddNewRatePlan();
+			    			
+	}	
+		
+	//1.0.2. enter text and navigate through the Rate plan name field using the tab key
+	public AddNewRatePlan typeAndTabKeyRatePlanNameFieldParam(String $plan) throws InterruptedException {
+		ratePlanNameElementInputFieldHighlight();
+		ratePlanNameElement.sendKeys($plan);
+		ratePlanNameElement.sendKeys(Keys.TAB); // Navigate to the next field
+
+	    return new AddNewRatePlan();
+	}
+	
 	
 	/*******************************************************************************************************************
      			* ******************************************************************************************************
@@ -108,14 +119,14 @@ public class AddNewRatePlan extends TestBase{
 	//02. Type to the Rate Plan Description
 	public AddNewRatePlan typeToRatePlanDescriptionElement() throws InterruptedException {
 		ratePlanDescriptionElementInputFieldHighlight();
-		ratePlanDescriptionElement.sendKeys("12ccccc");
+		ratePlanDescriptionElement.sendKeys("Rate Plan Description");
 		return new AddNewRatePlan();
 	}
 	
-	//02. Type to the Rate Plan Description
-	public AddNewRatePlan typeToRatePlanDescriptionElementParam(String $id) throws InterruptedException {
+	//02. Type to the Rate Plan Description parameter
+	public AddNewRatePlan typeToRatePlanDescriptionElementParam(String $description) throws InterruptedException {
 		ratePlanDescriptionElementInputFieldHighlight();
-		ratePlanDescriptionElement.sendKeys($id);
+		ratePlanDescriptionElement.sendKeys($description);
 			
 		Thread.sleep(2000);
 			
@@ -123,15 +134,25 @@ public class AddNewRatePlan extends TestBase{
 	}
 	
 	
-	//2.0.1. Type to the App id Input Field (enter text, then clear the app id field)
-			public CreateNewApp typeAndClearRescriptionInputField(String $plan) throws InterruptedException {
-				ratePlanNameElementInputFieldHighlight();
-				ratePlanNameElement.sendKeys($plan);
-				Thread.sleep(500);
-				ratePlanNameElement.clear();
-				return new CreateNewApp();
+	//2.0.1. Type to the Rate Plan Description Input Field (enter text, then clear the Description field)
+	public AddNewRatePlan typeAndClearDescriptionInputField(String $description) throws InterruptedException {
+		ratePlanDescriptionElementInputFieldHighlight();
+		ratePlanDescriptionElement.sendKeys($description);
+		Thread.sleep(500);
+		ratePlanDescriptionElement.clear();
+		return new AddNewRatePlan();
 				    			
-			}
+	}
+			
+			
+	//2.0.2. enter text and navigate through the Rate plan description field using the tab key
+	public AddNewRatePlan typeAndTabKeyDescriptionInputFieldParam(String $description) throws InterruptedException {
+		ratePlanDescriptionElementInputFieldHighlight();
+	  	ratePlanDescriptionElement.sendKeys($description);
+	  	ratePlanDescriptionElement.sendKeys(Keys.TAB); // Navigate to the next field
+
+        return new AddNewRatePlan();
+	}
 	
 	/*******************************************************************************************************************
      			* ******************************************************************************************************
@@ -145,72 +166,72 @@ public class AddNewRatePlan extends TestBase{
 		 			 * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
 		 			 *$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
 
-		//03. Element of Rate Plan Status
-		@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[3]/div/input")
-		WebElement ratePlanStatusElement;
+	//03. Element of Rate Plan Status
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[3]/div/input")
+	WebElement ratePlanStatusElement;
 		
-		//03. Highlight the Rate Plan Status Input Field
-		public void ratePlanStatusElementInputFieldHighlight() throws InterruptedException {
-			if (driver instanceof JavascriptExecutor) {
-				JavascriptExecutor js = (JavascriptExecutor) driver;
-				js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", ratePlanStatusElement);
-				Thread.sleep(1000);
-				js.executeScript("arguments[0].setAttribute('style', '');", ratePlanStatusElement);
-				Thread.sleep(1000);
-				js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", ratePlanStatusElement);
-				Thread.sleep(2000);
-				js.executeScript("arguments[0].setAttribute('style', '');", ratePlanStatusElement);
-				Thread.sleep(1000);
-			}
+	//03. Highlight the Rate Plan Status Input Field
+	public void ratePlanStatusElementInputFieldHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", ratePlanStatusElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", ratePlanStatusElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", ratePlanStatusElement);
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", ratePlanStatusElement);
+			Thread.sleep(1000);
 		}
+	}
 		
-		//03. Type to the Rate Plan Name
-		public AddNewRatePlan clickToRatePlanStatusElement() throws InterruptedException {
+	//03. Type to the Rate Plan Status
+	public AddNewRatePlan clickToRatePlanStatusElement() throws InterruptedException {
+		ratePlanStatusElementInputFieldHighlight();
+		ratePlanStatusElement.click();
+		return new AddNewRatePlan();
+	}
+		
+	//03.01. Type to the Rate Plan Status
+	public AddNewRatePlan checkRatePlanStatusElementExists() throws InterruptedException {
+		if(driver.findElements( By.xpath("/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[3]/div/input") ).size() != 0) {
+		    ratePlanStatusElementInputFieldHighlight();
+			Assert.assertFalse(false);
+		}else {
+			Assert.assertFalse(true);
+		}
+		return new AddNewRatePlan();
+	}
+		
+	//03.02. Type to the Rate Plan Status - get value
+	public AddNewRatePlan valueOfCheckRatePlanStatusElement() throws InterruptedException {
+	WebElement checkbox = driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[3]/div/input"));
+	//System.out.print(checkbox.isSelected());
+		if(checkbox.isSelected()) {
 			ratePlanStatusElementInputFieldHighlight();
-			ratePlanStatusElement.click();
-			return new AddNewRatePlan();
+			Assert.assertFalse(false);
+		}else {
+			Assert.assertFalse(true);
 		}
+		return new AddNewRatePlan();
+	}
 		
-		//03.01. Type to the Rate Plan Status
-		public AddNewRatePlan checkRatePlanStatusElementExists() throws InterruptedException {
-			if(driver.findElements( By.xpath("/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[3]/div/input") ).size() != 0) {
-				ratePlanStatusElementInputFieldHighlight();
-				Assert.assertFalse(false);
-			}else {
-				Assert.assertFalse(true);
-			}
-			return new AddNewRatePlan();
+	//03.02. Type to the Rate Plan Status - get value
+	public AddNewRatePlan valueAfterandBeforeRefreshOfCheckRatePlanStatusElement() throws InterruptedException {
+	WebElement checkbox = driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[3]/div/input"));
+	//System.out.print(checkbox.isSelected());
+		boolean a=true, b=true;
+		b = checkbox.isSelected();
+		driver.navigate().refresh();
+		a = checkbox.isSelected();
+		if(a==b) {
+			ratePlanStatusElementInputFieldHighlight();
+			Assert.assertFalse(false);
+		}else {
+			Assert.assertFalse(true);
 		}
-		
-		//03.02. Type to the Rate Plan Status - get value
-		public AddNewRatePlan valueOfCheckRatePlanStatusElement() throws InterruptedException {
-			WebElement checkbox = driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[3]/div/input"));
-			//System.out.print(checkbox.isSelected());
-			if(checkbox.isSelected()) {
-				ratePlanStatusElementInputFieldHighlight();
-				Assert.assertFalse(false);
-			}else {
-				Assert.assertFalse(true);
-			}
-			return new AddNewRatePlan();
-		}
-		
-		//03.02. Type to the Rate Plan Status - get value
-		public AddNewRatePlan valueAfterandBeforeRefreshOfCheckRatePlanStatusElement() throws InterruptedException {
-			WebElement checkbox = driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[3]/div/input"));
-			//System.out.print(checkbox.isSelected());
-			boolean a=true, b=true;
-			b = checkbox.isSelected();
-			driver.navigate().refresh();
-			a = checkbox.isSelected();
-			if(a==b) {
-				ratePlanStatusElementInputFieldHighlight();
-				Assert.assertFalse(false);
-			}else {
-				Assert.assertFalse(true);
-			}
-			return new AddNewRatePlan();
-		}
+		return new AddNewRatePlan();
+	}
 		
 		/*******************************************************************************************************************
 					* ******************************************************************************************************

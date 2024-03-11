@@ -92,7 +92,7 @@ public class AddNewratePlanDescriptionFieldTest extends TestBase{
 	}
 	
 	
-	@Test(priority=4)
+	//@Test(priority=4)
 	//@Ignore
 	public void enter_the_below_minimum_allowed_length_of_characters_into_the_rate_plan_description_field() throws IOException, InterruptedException{
 		addNewRatePlan = loginPage.addNewRatePlan(props.getProperty("username"),props.getProperty("password"));
@@ -159,7 +159,7 @@ public class AddNewratePlanDescriptionFieldTest extends TestBase{
 		addNewRatePlan = loginPage.addNewRatePlan(props.getProperty("username"),props.getProperty("password"));
 		addNewRatePlan.openRatePlanNameFormPage();// open the Custom Panel Name Page.
 		addNewRatePlan.typeToRatePlanNameElemenParam("1 year pack");// for taking inputs from the rate name input text field
-		addNewRatePlan.typeToRatePlanDescriptionElementParam("!@#$%^&*!@#$%^&*!@#$%^&*");// for taking inputs from the rate description input textarea field
+		addNewRatePlan.typeToRatePlanDescriptionElementParam("              the price of 1 year package is 100 dollar  ");// for taking inputs from the rate description input textarea field
 		addNewRatePlan.clickToRatePlanStatusElement();//for clicking/unchecking status check box
 		//addNewRatePlan.clickToRatePlanSubmitButtonElement();//for submitting with the form data
 	}
@@ -208,7 +208,7 @@ public class AddNewratePlanDescriptionFieldTest extends TestBase{
 		addNewRatePlan = loginPage.addNewRatePlan(props.getProperty("username"),props.getProperty("password"));
 		addNewRatePlan.openRatePlanNameFormPage();// open the Custom Panel Name Page.
 		addNewRatePlan.typeToRatePlanNameElemenParam("1 year pack");// for taking inputs from the rate name input text field
-		addNewRatePlan.typeToRatePlanDescriptionElementParam("The price of 1 year package is 100 dollar");// for taking inputs from the rate description input textarea field
+		addNewRatePlan.typeToRatePlanDescriptionElementParam("The price of 1 year package is 100 Dollar");// for taking inputs from the rate description input textarea field
 		addNewRatePlan.clickToRatePlanStatusElement();//for clicking/unchecking status check box
 		//addNewRatePlan.clickToRatePlanSubmitButtonElement();//for submitting with the form data	
 		
@@ -282,13 +282,71 @@ public class AddNewratePlanDescriptionFieldTest extends TestBase{
 	}
 	
 	
-	//@Test(priority=20)
+	@Test(priority=20)
 	//@Ignore
-	public void enter_text_then_clear_the_input_text_field() throws IOException, InterruptedException{}
-	public void enter_then_undo_the_input_action_into_the_rate_plan_description_field() throws IOException, InterruptedException{}
-	public void enter_then_undo_then_redo_the_input_action_into_the_rate_name_field() throws IOException, InterruptedException{}
-	public void enter_text_and_navigate_through_the_input_field_using_the_tab_key() throws IOException, InterruptedException{}
-	public void paste_the_text_into_the_template_id_field_using_the_paste_action() throws IOException, InterruptedException{}
+	public void enter_text_then_clear_the_input_text_field() throws IOException, InterruptedException{
+		addNewRatePlan = loginPage.addNewRatePlan(props.getProperty("username"),props.getProperty("password"));
+		addNewRatePlan.openRatePlanNameFormPage();// open the Custom Panel Name Page.
+		addNewRatePlan.typeToRatePlanNameElemenParam("1 year pack");// for taking inputs from the rate name input text field
+		addNewRatePlan.typeToRatePlanDescriptionElementParam("The price of 1 year package is 100 dollar");// for taking inputs from the rate description input textarea field
+		addNewRatePlan.typeAndClearDescriptionInputField("");//Clear the text of description
+		addNewRatePlan.clickToRatePlanStatusElement();//for clicking/unchecking status check box
+		//addNewRatePlan.clickToRatePlanSubmitButtonElement();//for submitting with the form data	
+	
+	}
+	
+	
+	//@Test(priority=21)
+	//@Ignore
+	public void enter_then_undo_the_input_action_into_the_rate_plan_description_field() throws IOException, InterruptedException{
+		addNewRatePlan = loginPage.addNewRatePlan(props.getProperty("username"),props.getProperty("password"));
+		addNewRatePlan.openRatePlanNameFormPage();// open the Custom Panel Name Page.
+		addNewRatePlan.typeToRatePlanNameElemenParam("1 year pack");// for taking inputs from the rate name input text field
+		addNewRatePlan.typeToRatePlanDescriptionElementParam("The price of 1 year package is 100 dollar");// for taking inputs from the rate description input textarea field
+		addNewRatePlan.typeAndClearDescriptionInputField("");//undo the text of description
+		addNewRatePlan.clickToRatePlanStatusElement();//for clicking/unchecking status check box
+		//addNewRatePlan.clickToRatePlanSubmitButtonElement();//for submitting with the form data	
+		
+	}
+	
+	
+	//@Test(priority=22)
+	//@Ignore
+	public void enter_then_undo_then_redo_the_input_action_into_the_rate_name_field() throws IOException, InterruptedException{
+		addNewRatePlan = loginPage.addNewRatePlan(props.getProperty("username"),props.getProperty("password"));
+		addNewRatePlan.openRatePlanNameFormPage();// open the Custom Panel Name Page.
+		addNewRatePlan.typeToRatePlanNameElemenParam("1 year pack");// for taking inputs from the rate name input text field
+		addNewRatePlan.typeToRatePlanDescriptionElementParam("The price of 1 year package is 100 dollar");// for taking inputs from the rate description input textarea field
+		addNewRatePlan.typeAndClearDescriptionInputField("");//undo the text of description
+		addNewRatePlan.typeToRatePlanDescriptionElementParam("The price of 1 year package is 100 dollar");// for taking inputs from the rate description input textarea field
+		addNewRatePlan.clickToRatePlanStatusElement();//for clicking/unchecking status check box
+		//addNewRatePlan.clickToRatePlanSubmitButtonElement();//for submitting with the form data	
+	}
+	
+	
+	//@Test(priority=23)
+	//@Ignore
+	public void enter_text_and_navigate_through_the_input_field_using_the_tab_key() throws IOException, InterruptedException{
+		addNewRatePlan = loginPage.addNewRatePlan(props.getProperty("username"),props.getProperty("password"));
+		addNewRatePlan.openRatePlanNameFormPage();// open the Custom Panel Name Page.
+		addNewRatePlan.typeToRatePlanNameElemenParam("1 year pack");// for taking inputs from the rate name input text field
+		addNewRatePlan.typeToRatePlanDescriptionElementParam("The price of 1 year package is 100 dollar");// for taking inputs from the rate description input textarea field
+		addNewRatePlan.typeAndTabKeyDescriptionInputFieldParam("");//navigate the tab key
+		addNewRatePlan.clickToRatePlanStatusElement();//for clicking/unchecking status check box
+		//addNewRatePlan.clickToRatePlanSubmitButtonElement();//for submitting with the form data	
+	}
+	
+	
+	//@Test(priority=23)
+	//@Ignore
+	public void paste_the_text_into_the_template_id_field_using_the_paste_action() throws IOException, InterruptedException{
+		addNewRatePlan = loginPage.addNewRatePlan(props.getProperty("username"),props.getProperty("password"));
+		addNewRatePlan.openRatePlanNameFormPage();// open the Custom Panel Name Page.
+		addNewRatePlan.typeToRatePlanNameElemenParam("1 year pack");// for taking inputs from the rate name input text field
+		addNewRatePlan.typeToRatePlanDescriptionElementParam("the price of 1 year package is 100 dollar");// for taking inputs from the rate description input textarea field
+		addNewRatePlan.clickToRatePlanStatusElement();//for clicking/unchecking status check box
+		//addNewRatePlan.clickToRatePlanSubmitButtonElement();//for submitting with the form data
+	}
 	
 	/*
 	@AfterMethod
