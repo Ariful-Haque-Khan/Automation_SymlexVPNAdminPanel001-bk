@@ -41,7 +41,7 @@ public class AppIDFieldTest extends TestBase{
 	
 	
 	// ***** Test _Blank!!! 
-	//@Test(priority=1)
+	@Test(priority=1)
 	//@Ignore
 	public void enter_empty_text_into_the_app_ID_field() throws IOException, InterruptedException {
 		createNewApp = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
