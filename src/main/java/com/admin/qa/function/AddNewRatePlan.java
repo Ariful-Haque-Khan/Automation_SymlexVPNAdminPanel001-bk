@@ -142,7 +142,7 @@ public class AddNewRatePlan extends TestBase{
 		//03. Type to the Rate Plan Name
 		public AddNewRatePlan clickToRatePlanStatusElement() throws InterruptedException {
 			ratePlanStatusElementInputFieldHighlight();
-			ratePlanNameElement.click();
+			ratePlanStatusElement.click();
 			return new AddNewRatePlan();
 		}
 		
