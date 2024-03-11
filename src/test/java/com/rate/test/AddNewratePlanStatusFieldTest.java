@@ -39,14 +39,38 @@ public class AddNewratePlanStatusFieldTest extends TestBase{
 	}
 
 	
-	@Test(priority=1)
-	//@Ignore
+	//@Test(priority=1)
+	@Ignore
 	public void verify_that_the_checkbox_element_is_visible_on_the_page_screen() throws IOException, InterruptedException {
 		addNewRatePlan = loginPage.addNewRatePlan(props.getProperty("username"),props.getProperty("password"));
 		addNewRatePlan.openRatePlanNameFormPage();// open the Custom Panel Name Page.
 		addNewRatePlan.typeToRatePlanNameElemenParam("test");// for taking inputs from the rate name input text field
 		addNewRatePlan.typeToRatePlanDescriptionElementParam("test");// for taking inputs from the rate description input textarea field
-		addNewRatePlan.clickToRatePlanStatusElement();//for clicking/unchecking status check box
+		addNewRatePlan.checkRatePlanStatusElementExists();//for clicking/unchecking status check box
+		//addNewRatePlan.clickToRatePlanSubmitButtonElement();//for submitting with the form data
+		
+	}
+	
+	@Test(priority=1)
+	//@Ignore
+	public void verify_that_the_checkbox_is_checked_by_default() throws IOException, InterruptedException {
+		addNewRatePlan = loginPage.addNewRatePlan(props.getProperty("username"),props.getProperty("password"));
+		addNewRatePlan.openRatePlanNameFormPage();// open the Custom Panel Name Page.
+		addNewRatePlan.typeToRatePlanNameElemenParam("test");// for taking inputs from the rate name input text field
+		addNewRatePlan.typeToRatePlanDescriptionElementParam("test");// for taking inputs from the rate description input textarea field
+		addNewRatePlan.valueOfCheckRatePlanStatusElement();//for clicking/unchecking status check box
+		//addNewRatePlan.clickToRatePlanSubmitButtonElement();//for submitting with the form data
+		
+	}
+	
+	@Test(priority=1)
+	//@Ignore
+	public void verify_that_the_checkbox_state_persists_after_page_reload() throws IOException, InterruptedException {
+		addNewRatePlan = loginPage.addNewRatePlan(props.getProperty("username"),props.getProperty("password"));
+		addNewRatePlan.openRatePlanNameFormPage();// open the Custom Panel Name Page.
+		addNewRatePlan.typeToRatePlanNameElemenParam("test");// for taking inputs from the rate name input text field
+		addNewRatePlan.typeToRatePlanDescriptionElementParam("test");// for taking inputs from the rate description input textarea field
+		addNewRatePlan.valueAfterandBeforeRefreshOfCheckRatePlanStatusElement();//for clicking/unchecking status check box
 		//addNewRatePlan.clickToRatePlanSubmitButtonElement();//for submitting with the form data
 		
 	}
