@@ -3,7 +3,7 @@
  * @company: Kolpolok Limited.
 */
 
-package com.online_pin_migration.test;
+package com.add_jail_pin.test;
 
 import java.io.IOException;
 
@@ -13,24 +13,23 @@ import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import com.admin.qa.function.AddNewRatePlan;
-import com.admin.qa.function.AddPINJail;
 import com.admin.qa.function.CreateNewApp;
 import com.admin.qa.function.OnlinePINMigration;
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.TestUtils;
 
-public class OnlineMigrationNewPasswordFieldTest extends TestBase{
+public class AddnewPINtotheJailPINUsernameFieldTest extends TestBase{
 	
 	
 	LoginPage loginPage;
 
 	TestUtils testUtils;
 	
-	AddPINJail addPINJail;
+	OnlinePINMigration onlinePINMigration;
 	
 	//Initializing PageFactory
-	public OnlineMigrationNewPasswordFieldTest() {
+	public AddnewPINtotheJailPINUsernameFieldTest() {
 		super();   //Call the Constructor of the Super class - TestBase
 	}
 	
@@ -46,11 +45,16 @@ public class OnlineMigrationNewPasswordFieldTest extends TestBase{
 	@Test(priority=1)
 	//@Ignore
 	public void AddNewRatePlanForm() throws IOException, InterruptedException {
-		addPINJail = loginPage.addPINJailLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		addPINJail.openAddPINJail();// open the Online Migration Form Page.
-		addPINJail.typeToPINorUsernames();// open the Online Migration Form Page.
-		addPINJail.searchandtypeelementDropDownField();// for taking inputs from the email or new pin input text field
-		//addPINJail.clickONSaveButton();// for taking inputs from the password of new pin input text field
+		onlinePINMigration = loginPage.onlinePINMigrationLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		onlinePINMigration.openOnlinePINMigrationPage();// open the Online Migration Form Page.
+		onlinePINMigration.typeToNewPINandEmail();// for taking inputs from the email or new pin input text field
+		onlinePINMigration.typeTopasswordforNewPINandEmail();// for taking inputs from the password of new pin input text field
+		onlinePINMigration.typeToOldPINandEmail();//for taking inputs from the old email or old pin input text field
+		onlinePINMigration.typeTopasswordforOldPINandEmail(); //for taking inputs from the password of old pin input text field
+		onlinePINMigration.clickOnmigrationNowButton(); //for submitting with the form data
+		//onlinePINMigration.clickOnpopUpYesButton(); //for final permission submitting with the form data
+		onlinePINMigration.clickPopUpNoButton(); //for disallowing submitting with the form data
+		
 	}
 	
 	public void enter_the_above_maximum_allowed_length_of_characters_into_the_rate_name_field() throws IOException, InterruptedException{}
