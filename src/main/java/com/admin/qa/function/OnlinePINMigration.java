@@ -1,6 +1,7 @@
 package com.admin.qa.function;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -50,6 +51,36 @@ public class OnlinePINMigration extends TestBase{
 		return new OnlinePINMigration();
 	}
 	
+	
+	//01. Type to the New PIN / Email
+	public OnlinePINMigration typeToNewPINandEmailParam(String $email) throws InterruptedException {
+		newPINandEmailInputFieldHighlight();
+		newPINandEmailElement.sendKeys($email);
+		Thread.sleep(2000);
+		return new OnlinePINMigration();
+	}
+	
+	
+	//1.0.1. Type to the rate plan name Input Field (enter text, then clear the rate plan name field)
+	public OnlinePINMigration typeAndClearNewPINandEmailParam(String $email) throws InterruptedException {
+		newPINandEmailInputFieldHighlight();
+		newPINandEmailElement.sendKeys($email);
+		Thread.sleep(500);
+		newPINandEmailElement.clear();
+		return new OnlinePINMigration();
+				    			
+	}	
+	
+	
+	//1.0.2. enter text and navigate through the Rate plan name field using the tab key
+		public OnlinePINMigration typeAndTabKeyNewPINandEmailParam(String $plan) throws InterruptedException {
+			newPINandEmailInputFieldHighlight();
+			newPINandEmailElement.sendKeys($plan);
+			newPINandEmailElement.sendKeys(Keys.TAB); // Navigate to the next field
+
+		    return new OnlinePINMigration();
+		}
+	
 	/***************************************************************************************************************
      							* *****************************************************************************************************
      							* **************************    End No.01 - Element of New PIN / Email    *****************************
@@ -87,6 +118,17 @@ public class OnlinePINMigration extends TestBase{
 		passwordforNewPINandEmailElement.sendKeys("12121234");
 		return new OnlinePINMigration();
 	}
+	
+	
+	//02. Type to the New PIN / Email
+		public OnlinePINMigration typeTopasswordforNewPINandEmailParam(String $password) throws InterruptedException {
+			passwordforNewPINandEmailInputFieldHighlight();
+			passwordforNewPINandEmailElement.sendKeys($password);
+			Thread.sleep(2000);
+			return new OnlinePINMigration();
+		}
+	
+	
 	
 	
 	/***************************************************************************************************************
@@ -128,6 +170,15 @@ public class OnlinePINMigration extends TestBase{
 	}
 	
 	
+	//02. Type to the New PIN / Email
+	public OnlinePINMigration typeToOldPINandEmailParam(String $oldPin) throws InterruptedException {
+		oldPINorEmailInputFieldHighlight();
+		oldPINandEmailElement.sendKeys($oldPin);
+		Thread.sleep(2000);
+		return new OnlinePINMigration();
+	}
+	
+	
 	/*************************************************************************************************
 	 						* *****************************************************************************************************
 	 						* **************************    End No.03 - Element of New PIN / Email    ****************
@@ -165,6 +216,14 @@ public class OnlinePINMigration extends TestBase{
 		passwordforOldPINandEmailElement.sendKeys("12121234");/*type on the element */
 		return new OnlinePINMigration();
 	}
+	
+	//02. Type to the New PIN / Email
+		public OnlinePINMigration typeTopasswordforOldPINandEmailParam(String $oldPass) throws InterruptedException {
+			passwordforOldPINandEmailInputFieldHighlight();
+			passwordforOldPINandEmailElement.sendKeys($oldPass);
+			Thread.sleep(2000);
+			return new OnlinePINMigration();
+		}
 	
 	/*************************************************************************************************
 					* *****************************************************************************************************
