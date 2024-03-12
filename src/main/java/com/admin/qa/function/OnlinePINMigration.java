@@ -73,13 +73,13 @@ public class OnlinePINMigration extends TestBase{
 	
 	
 	//1.0.2. enter text and navigate through the Rate plan name field using the tab key
-		public OnlinePINMigration typeAndTabKeyNewPINandEmailParam(String $plan) throws InterruptedException {
-			newPINandEmailInputFieldHighlight();
-			newPINandEmailElement.sendKeys($plan);
-			newPINandEmailElement.sendKeys(Keys.TAB); // Navigate to the next field
+	public OnlinePINMigration typeAndTabKeyNewPINandEmailParam(String $plan) throws InterruptedException {
+		newPINandEmailInputFieldHighlight();
+		newPINandEmailElement.sendKeys($plan);
+		newPINandEmailElement.sendKeys(Keys.TAB); // Navigate to the next field
 
-		    return new OnlinePINMigration();
-		}
+	    return new OnlinePINMigration();
+	}
 	
 	/***************************************************************************************************************
      							* *****************************************************************************************************
@@ -127,6 +127,26 @@ public class OnlinePINMigration extends TestBase{
 			Thread.sleep(2000);
 			return new OnlinePINMigration();
 		}
+		
+	//2.0.1. Type to new password Input Field (enter text, then clear new password Input Field)
+	public OnlinePINMigration typeAndClearpasswordforNewPINandEmailParam(String $password) throws InterruptedException {
+		passwordforNewPINandEmailInputFieldHighlight();
+		passwordforNewPINandEmailElement.sendKeys($password);
+		Thread.sleep(100);
+		passwordforNewPINandEmailElement.clear();
+		return new OnlinePINMigration();
+					    			
+	}	
+		
+		
+	//2.0.2. enter text and navigate through the Rate plan name field using the tab key
+	public OnlinePINMigration typeAndTabKeypasswordforNewPINandEmailParam(String $password) throws InterruptedException {
+		passwordforNewPINandEmailInputFieldHighlight();
+		passwordforNewPINandEmailElement.sendKeys($password);
+		passwordforNewPINandEmailElement.sendKeys(Keys.TAB); // Navigate to the next field
+
+		return new OnlinePINMigration();
+	}
 	
 	
 	
@@ -170,11 +190,32 @@ public class OnlinePINMigration extends TestBase{
 	}
 	
 	
-	//02. Type to the New PIN / Email
+	//03. Type to the New PIN / Email
 	public OnlinePINMigration typeToOldPINandEmailParam(String $oldPin) throws InterruptedException {
 		oldPINorEmailInputFieldHighlight();
 		oldPINandEmailElement.sendKeys($oldPin);
 		Thread.sleep(2000);
+		return new OnlinePINMigration();
+	}
+	
+	
+	//3.0.1. Type to new password Input Field (enter text, then clear new password Input Field)
+	public OnlinePINMigration typeAndClearOldPINandEmailParam(String $oldPin) throws InterruptedException {
+		oldPINorEmailInputFieldHighlight();
+		oldPINandEmailElement.sendKeys($oldPin);
+		Thread.sleep(100);
+		oldPINandEmailElement.clear();
+		return new OnlinePINMigration();
+						    			
+	}	
+			
+			
+	//3.0.2. enter text and navigate through the Rate plan name field using the tab key
+	public OnlinePINMigration typeAndTabKeyOldPINandEmailParam(String $oldPin)  throws InterruptedException {
+		oldPINorEmailInputFieldHighlight();
+		oldPINandEmailElement.sendKeys($oldPin);
+		oldPINandEmailElement.sendKeys(Keys.TAB); // Navigate to the next field
+
 		return new OnlinePINMigration();
 	}
 	
