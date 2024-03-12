@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.add_new_app.qa.test.AppIDFieldTest">
+      <class name="com.rate.test.AddNewratePlanFieldTest">
         <methods>
-          <include name="enter_empty_text_into_the_app_ID_field"/>
           <include name="setUp"/>
+          <include name="enter_empty_text_into_the_rate_name_field"/>
+          <include name="enter_text_then_clear_the_input_text_field"/>
         </methods>
-      </class> <!-- com.add_new_app.qa.test.AppIDFieldTest -->
+      </class> <!-- com.rate.test.AddNewratePlanFieldTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
