@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.rate.test.AddNewratePlanFieldTest">
+      <class name="com.online_pin_migration.test.OnlineMigrationNewPINorEmailFieldTest">
         <methods>
+          <include name="AddNewRatePlanForm"/>
           <include name="setUp"/>
-          <include name="enter_empty_text_into_the_rate_name_field"/>
-          <include name="enter_text_then_clear_the_input_text_field"/>
         </methods>
-      </class> <!-- com.rate.test.AddNewratePlanFieldTest -->
+      </class> <!-- com.online_pin_migration.test.OnlineMigrationNewPINorEmailFieldTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

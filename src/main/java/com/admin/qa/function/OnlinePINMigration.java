@@ -251,13 +251,15 @@ public class OnlinePINMigration extends TestBase{
 								* * ***************************************************************************************************
 															***************************************************************************************************/
 	
+	
+	
 	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 	 						* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 	 						* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.07 -   Element of Pop Up No Button  $$$$$$$$$$$$$$$$$$$$$$$
 	 						* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
 								  						  *$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
 	
-	//07. Element of Pop Up Yes Button
+	//07. Element of Pop Up No Button
 	@FindBy(xpath="/html/body/div[4]/div[2]/div/div/div/div/div/div/div/div[4]/button[2]")
 	WebElement popUpNoButtonElement;
 	
@@ -276,7 +278,7 @@ public class OnlinePINMigration extends TestBase{
 		}
 	}
 	
-	//07. Type to the Migration Now Button
+	//07. Click on the Pop Up No Button
 	public OnlinePINMigration clickPopUpNoButton() throws InterruptedException {
 		popUpNoButtonHighlight();
 		popUpNoButtonElement.click();
