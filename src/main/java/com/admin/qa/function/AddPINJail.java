@@ -1,6 +1,7 @@
 package com.admin.qa.function;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -46,6 +47,22 @@ public class AddPINJail extends TestBase{
 	public AddPINJail typeToPINorUsernames() throws InterruptedException {
 		PINorUsernameHighlight();/* highlight the element of the tested. */
 		pinorUsernameElement.sendKeys("1");/*type on the element */
+		return new AddPINJail();
+	}
+	
+	//01.1 Type to the New PIN / Email
+	public AddPINJail typeToPINorUsernamesParam(String $text) throws InterruptedException {
+		PINorUsernameHighlight();
+		pinorUsernameElement.sendKeys($text);
+		Thread.sleep(2000);
+		return new AddPINJail();
+	}
+	
+	//01.2 Type to the New PIN / Email
+	public AddPINJail typeToPINorUsernamesTabKey() throws InterruptedException {
+		PINorUsernameHighlight();
+		pinorUsernameElement.sendKeys(Keys.TAB);
+		Thread.sleep(2000);
 		return new AddPINJail();
 	}
 	
