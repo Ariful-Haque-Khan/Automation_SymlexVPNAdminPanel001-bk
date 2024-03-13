@@ -354,7 +354,6 @@ public class OnlineMigrationNewPINorEmailFieldTest extends TestBase{
 		//onlinePINMigration.clickPopUpNoButton(); //for disallowing submitting with the form data
 	}
 	
-	
 	//@Test(priority=21)
 	//@Ignore
 	public void enter_then_undo_the_input_action_into_the_rate_name_field() throws IOException, InterruptedException{

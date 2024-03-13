@@ -3,7 +3,7 @@
  * @company: Kolpolok Limited.
 */
 
-package com.add_jail_pin.test;
+package com.add_pin_validity.test;
 
 import java.io.IOException;
 
@@ -15,23 +15,24 @@ import org.testng.annotations.Test;
 
 import com.admin.qa.function.AddNewRatePlan;
 import com.admin.qa.function.AddPINJail;
+import com.admin.qa.function.AddPINValidity;
 import com.admin.qa.function.CreateNewApp;
 import com.admin.qa.function.OnlinePINMigration;
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.TestUtils;
 
-public class AddnewPINtotheJailPINUsernameFieldTest extends TestBase{
+public class AddPINValidityPINinCSVorNewLineFieldTest extends TestBase{
 	
 	
 	LoginPage loginPage;
 
 	TestUtils testUtils;
 	
-	AddPINJail addPINJail;
+	AddPINValidity addPINValidity;
 	
 	//Initializing PageFactory
-	public AddnewPINtotheJailPINUsernameFieldTest() {
+	public AddPINValidityPINinCSVorNewLineFieldTest() {
 		super();   //Call the Constructor of the Super class - TestBase
 	}
 	
@@ -47,18 +48,22 @@ public class AddnewPINtotheJailPINUsernameFieldTest extends TestBase{
 	@Test(priority=1)
 	//@Ignore
 	public void AddNewRatePlanForm() throws IOException, InterruptedException {
-		addPINJail = loginPage.addPINJailLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		addPINJail.openAddPINJail();// open the add pin in jail Form Page.
-		addPINJail.searchandtypeelementDropDownField();// for taking inputs from the pin or username input text field
-		addPINJail.clickONSaveButton(); //for disallowing submitting with the form data
+		addPINValidity = loginPage.addPINValidityLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		addPINValidity.openAddPINvalidityReport();// open the add pin in jail Form Page.
+		addPINValidity.typeToNumberofDays();//for taking inputs from the Number of Days input text field
+		addPINValidity.typeelementDropDownField();// select value from the dropdown field called PIN Type
+		addPINValidity.typeToPINinCSVorNewLine();//for taking inputs from the PIN in CSV or New Line input text field
+		addPINValidity.clickOnSubmitButton(); //for disallowing submitting with the form data
 		
 	}
 	
 	public void enter_empty_text_into_the_new_pin_or_username_input_field() throws IOException, InterruptedException{
-		addPINJail = loginPage.addPINJailLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		addPINJail.typeToPINorUsernamesParam("");// open the Online Migration Form Page.
-		addPINJail.searchandtypeelementDropDownField();// for taking inputs from the email or new pin input text field
-		addPINJail.clickONSaveButton(); //for submitting with the form data
+		addPINValidity = loginPage.addPINValidityLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		addPINValidity.openAddPINvalidityReport();// open the add pin in jail Form Page.
+		addPINValidity.typeToNumberofDays();//for taking inputs from the Number of Days input text field
+		addPINValidity.typeelementDropDownField();// select value from the dropdown field called PIN Type
+		addPINValidity.typeToPINinCSVorNewLine();//for taking inputs from the PIN in CSV or New Line input text field
+		addPINValidity.clickOnSubmitButton(); //for disallowing submitting with the form data
 		
 	}
 	
