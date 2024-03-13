@@ -8,3 +8,6 @@ screenshots/
 *.project
 testng.xml
 bin/
+edgedriver_win64/
+src/main/java/com/crm/qa/base/
+src/main/java/com/crm/qa/config/
