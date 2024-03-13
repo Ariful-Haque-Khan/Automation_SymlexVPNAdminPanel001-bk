@@ -77,7 +77,6 @@ public class OnlinePINMigration extends TestBase{
 		newPINandEmailInputFieldHighlight();
 		newPINandEmailElement.sendKeys($plan);
 		newPINandEmailElement.sendKeys(Keys.TAB); // Navigate to the next field
-
 	    return new OnlinePINMigration();
 	}
 	

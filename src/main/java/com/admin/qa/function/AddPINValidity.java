@@ -51,6 +51,13 @@ public class AddPINValidity extends TestBase{
 		return new AddPINValidity();
 	}
 	
+	//01.1. Type to the Number of Days
+	public AddPINValidity typeToNumberofDaysParam(String $number_of_days) throws InterruptedException {
+		numberofDaysInputFieldHighlight();
+		numberofDaysElement.sendKeys($number_of_days);
+		return new AddPINValidity();
+	}
+	
 	/***************************************************************************************************************
      * *****************************************************************************************************
 	 * **************************    End No.01 - Element of Number of Days    ******************************************
@@ -128,6 +135,13 @@ public class AddPINValidity extends TestBase{
 	public AddPINValidity typeToPINinCSVorNewLine() throws InterruptedException {
 		pininCSVorNewLineInputFieldHighlight();
 		pininCSVorNewLineElement.sendKeys("rumy1yr");
+		return new AddPINValidity();
+	}
+	
+	//03.01. Type to the PIN in CSV or New Line
+	public AddPINValidity typeToPINinCSVorNewLineParam(String $pin_validity) throws InterruptedException {
+		pininCSVorNewLineInputFieldHighlight();
+		pininCSVorNewLineElement.sendKeys($pin_validity);
 		return new AddPINValidity();
 	}
 	
