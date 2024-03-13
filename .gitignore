@@ -3,4 +3,8 @@ target/
 .settings/
 tokens/
 test-output/
-gitignore
+screenshots/
+*.classpath
+*.project
+testng.xml
+bin/
