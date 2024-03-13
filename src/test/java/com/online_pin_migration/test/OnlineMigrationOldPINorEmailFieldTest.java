@@ -42,7 +42,7 @@ public class OnlineMigrationOldPINorEmailFieldTest extends TestBase{
 
 	
 	
-	@Test(priority=1)
+	/*@Test(priority=1)
 	//@Ignore
 	public void AddNewRatePlanForm() throws IOException, InterruptedException {
 		onlinePINMigration = loginPage.onlinePINMigrationLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
@@ -55,8 +55,23 @@ public class OnlineMigrationOldPINorEmailFieldTest extends TestBase{
 		//onlinePINMigration.clickOnpopUpYesButton(); //for final permission submitting with the form data
 		onlinePINMigration.clickPopUpNoButton(); //for disallowing submitting with the form data
 		
-	}
+	}*/
 	
+	
+	//@Test(priority=1)
+	//@Ignore
+	public void enter_empty_text_into_the_old_username_and_mail_input_field() throws IOException, InterruptedException{
+		onlinePINMigration = loginPage.onlinePINMigrationLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		onlinePINMigration.openOnlinePINMigrationPage();// open the Online Migration Form Page.
+		onlinePINMigration.typeToNewPINandEmailParam("abc@gmail.comas");// for taking inputs from the email or new pin input text field
+		onlinePINMigration.typeTopasswordforNewPINandEmailParam("123456");// for taking inputs from the password of new pin input text field
+		onlinePINMigration.typeToOldPINandEmailParam("abc@gmail.com");//for taking inputs from the old email or old pin input text field
+		onlinePINMigration.typeTopasswordforOldPINandEmailParam("987654"); //for taking inputs from the password of old pin input text field
+		//onlinePINMigration.clickOnmigrationNowButton(); //for submitting with the form data
+		//onlinePINMigration.clickOnpopUpYesButton(); //for final permission submitting with the form data
+		//onlinePINMigration.clickPopUpNoButton(); //for disallowing submitting with the form data
+				
+	}
 	public void enter_the_above_maximum_allowed_length_of_characters_into_the_rate_name_field() throws IOException, InterruptedException{}
 	public void enter_the_below_minimum_allowed_length_of_characters_into_the_rate_name_field() throws IOException, InterruptedException{}
 	public void enter_only_alphabetic_characters_into_the_rate_name_field() throws IOException, InterruptedException{}
