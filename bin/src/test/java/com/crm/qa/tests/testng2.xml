@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="PINs Section Test Suite">
+	<listeners>
+		<listener class-name="com.crm.qa.util.ExtentReportListener" />
+	</listeners>
+	<test name="Success Status Test for PINs Section">
+		<classes>
+			<class name="com.crm.qa.tests.SuccessStatusTestforPINsSection" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

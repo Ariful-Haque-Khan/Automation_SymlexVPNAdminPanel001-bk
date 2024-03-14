@@ -264,6 +264,27 @@ public class OnlinePINMigration extends TestBase{
 			Thread.sleep(2000);
 			return new OnlinePINMigration();
 		}
+		
+		
+		
+		//3.0.1. Type to new password Input Field (enter text, then clear new password Input Field)
+		public OnlinePINMigration typeAndClearpasswordforOldPINandEmailParam(String $oldPass) throws InterruptedException {
+			passwordforOldPINandEmailInputFieldHighlight();
+			passwordforOldPINandEmailElement.sendKeys($oldPass);
+			Thread.sleep(100);
+			passwordforOldPINandEmailElement.clear();
+			return new OnlinePINMigration();
+							    			
+		}
+		
+		//3.0.2. enter text and navigate through the Rate plan name field using the tab key
+		public OnlinePINMigration typeAndTabKeypasswordforOldPINandEmailParam(String $oldPass)  throws InterruptedException {
+			passwordforOldPINandEmailInputFieldHighlight();
+			passwordforOldPINandEmailElement.sendKeys($oldPass);
+			passwordforOldPINandEmailElement.sendKeys(Keys.TAB); // Navigate to the next field
+
+			return new OnlinePINMigration();
+		}
 	
 	/*************************************************************************************************
 					* *****************************************************************************************************
