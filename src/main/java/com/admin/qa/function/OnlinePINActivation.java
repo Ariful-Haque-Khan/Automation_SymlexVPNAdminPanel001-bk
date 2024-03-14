@@ -103,10 +103,17 @@ public class OnlinePINActivation extends TestBase{
 	}
 	
 	//02.  Type to the Payment TNX ID
-	public AddPINValidity typetothePaymentTNXID() throws InterruptedException {
+	public OnlinePINActivation typetothePaymentTNXID() throws InterruptedException {
 		paymentTNXIDInputFieldHighlight();
 		PaymentTNXIDElement.sendKeys("xxx1234fookmmmm");
-		return new AddPINValidity();
+		return new OnlinePINActivation();
+	}
+	
+	//02.1  Type to the Payment TNX ID
+	public OnlinePINActivation typetothePaymentTNXIDParam(String payment_tnx_id) throws InterruptedException {
+		paymentTNXIDInputFieldHighlight();
+		PaymentTNXIDElement.sendKeys(payment_tnx_id);
+		return new OnlinePINActivation();
 	}
 	
 	/***************************************************************************************************************
@@ -141,10 +148,17 @@ public class OnlinePINActivation extends TestBase{
 	}
 	
 	//03.  Type to the Price USD
-	public AddPINValidity typetothePriceUSD() throws InterruptedException {
+	public OnlinePINActivation typetothePriceUSD() throws InterruptedException {
 		priceUSDInputFieldHighlight();
 		PriceUSDElement.sendKeys("20");
-		return new AddPINValidity(); 
+		return new OnlinePINActivation(); 
+	}
+	
+	//03.1  Type to the Price USD
+	public OnlinePINActivation typetothePriceUSDParam(String price_usd) throws InterruptedException {
+		priceUSDInputFieldHighlight();
+		PriceUSDElement.sendKeys(price_usd);
+		return new OnlinePINActivation(); 
 	}
 	
 	/***************************************************************************************************************
@@ -180,10 +194,17 @@ public class OnlinePINActivation extends TestBase{
 	}
 	
 	//04.  Type to the Username/PIN
-	public AddPINValidity typetotheUsernameandPIN() throws InterruptedException {
+	public OnlinePINActivation typetotheUsernameandPIN() throws InterruptedException {
 		usernameAndPINInputFieldHighlight();
 		UsernameandPINElement.sendKeys("rumy1yr2ww");
-		return new AddPINValidity(); 
+		return new OnlinePINActivation(); 
+	}
+	
+	//04.1  Type to the Username/PIN
+	public OnlinePINActivation typetotheUsernameandPINParam(String username_0r_pin) throws InterruptedException {
+		usernameAndPINInputFieldHighlight();
+		UsernameandPINElement.sendKeys(username_0r_pin);
+		return new OnlinePINActivation(); 
 	}
 	
 	/***************************************************************************************************************
