@@ -176,7 +176,27 @@ public class AddnewPINtotheJailPINUsernameFieldTest extends TestBase{
 	}
 	public void enter_default_placeholder_text_into_the_rate_name_field() throws IOException, InterruptedException{
 		
+		test("a","");
+		test("a","");
+		
+		
+		test("adsfsdf","");
+		test("a","fsdf");
+		test("afsdfdsf","");
+		test("a","fsfdsfsf");
+		
 	}
+	
+	public void test(String pinparam1,String pinparam2)throws IOException, InterruptedException {
+		addPINJail = loginPage.addPINJailLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		addPINJail.openAddPINJail();
+		addPINJail.typeToPINorUsernamesParam(pinparam1);// open the Online Migration Form Page.
+		addPINJail.typeToPINorUsernamesParam(pinparam2);// open the Online Migration Form Page.
+		addPINJail.searchandtypeelementDropDownField();// for taking inputs from the email or new pin input text field
+		addPINJail.clickONSaveButton();
+		
+	}
+	
 	public void enter_text_then_clear_the_input_text_field() throws IOException, InterruptedException{
 		addPINJail = loginPage.addPINJailLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		addPINJail.openAddPINJail();
