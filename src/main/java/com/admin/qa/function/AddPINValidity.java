@@ -2,6 +2,7 @@ package com.admin.qa.function;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -55,6 +56,13 @@ public class AddPINValidity extends TestBase{
 	public AddPINValidity typeToNumberofDaysParam(String $number_of_days) throws InterruptedException {
 		numberofDaysInputFieldHighlight();
 		numberofDaysElement.sendKeys($number_of_days);
+		return new AddPINValidity();
+	}
+	
+	//01.2. Type to the Number of Days
+	public AddPINValidity typeToNumberofDaysTabKey() throws InterruptedException {
+		numberofDaysInputFieldHighlight();
+		numberofDaysElement.sendKeys(Keys.TAB);
 		return new AddPINValidity();
 	}
 	
@@ -142,6 +150,13 @@ public class AddPINValidity extends TestBase{
 	public AddPINValidity typeToPINinCSVorNewLineParam(String $pin_validity) throws InterruptedException {
 		pininCSVorNewLineInputFieldHighlight();
 		pininCSVorNewLineElement.sendKeys($pin_validity);
+		return new AddPINValidity();
+	}
+	
+	//03.2 Type to the PIN in CSV or New Line
+	public AddPINValidity typeToPINinCSVorNewLineTabKey() throws InterruptedException {
+		pininCSVorNewLineInputFieldHighlight();
+		pininCSVorNewLineElement.sendKeys(Keys.TAB);
 		return new AddPINValidity();
 	}
 	
