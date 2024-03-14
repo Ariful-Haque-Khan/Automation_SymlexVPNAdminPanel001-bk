@@ -72,7 +72,7 @@ public class OnlineMigrationNewPINorEmailFieldTest extends TestBase{
 	}
 	
 	
-	//@Test(priority=2)
+	@Test(priority=2)
 	//@Ignore
 	public void enter_a_valid_username_into_the_new_pin_and_email_input_field() throws IOException, InterruptedException{
 		onlinePINMigration = loginPage.onlinePINMigrationLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
@@ -353,6 +353,7 @@ public class OnlineMigrationNewPINorEmailFieldTest extends TestBase{
 		//onlinePINMigration.clickOnpopUpYesButton(); //for final permission submitting with the form data
 		//onlinePINMigration.clickPopUpNoButton(); //for disallowing submitting with the form data
 	}
+	
 	
 	//@Test(priority=21)
 	//@Ignore
