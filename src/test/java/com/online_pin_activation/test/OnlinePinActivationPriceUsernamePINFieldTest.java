@@ -3,7 +3,7 @@
  * @company: Kolpolok Limited.
 */
 
-package com.add_pin_validity.test;
+package com.online_pin_activation.test;
 
 import java.io.IOException;
 import org.testng.annotations.BeforeMethod;
@@ -14,7 +14,7 @@ import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.TestUtils;
 
-public class AddPINValidityPINinCSVorNewLineFieldTest extends TestBase{
+public class OnlinePinActivationPriceUsernamePINFieldTest extends TestBase{
 	
 	
 	LoginPage loginPage;
@@ -24,7 +24,7 @@ public class AddPINValidityPINinCSVorNewLineFieldTest extends TestBase{
 	AddPINValidity addPINValidity;
 	
 	//Initializing PageFactory
-	public AddPINValidityPINinCSVorNewLineFieldTest() {
+	public OnlinePinActivationPriceUsernamePINFieldTest() {
 		super();   //Call the Constructor of the Super class - TestBase
 	}
 	

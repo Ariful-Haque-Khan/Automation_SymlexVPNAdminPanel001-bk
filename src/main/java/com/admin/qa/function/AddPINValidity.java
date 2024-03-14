@@ -80,28 +80,29 @@ public class AddPINValidity extends TestBase{
 	*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
 	
 	//02. Element of PIN Type
-	@FindBy(xpath="/html/body/div[2]/div/div/section[2]/div/form/div[1]/div/div[2]/div[4]/div/select")
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[2]/form/div/div[1]/div[2]/div[2]/div/select")
+	
 	WebElement pinTypeElement;
 	
 	//02. Highlight the PIN Type Input Field
 	public void pinTypeInputFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", numberofDaysElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", pinTypeElement);
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", numberofDaysElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", pinTypeElement);
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", numberofDaysElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", pinTypeElement);
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", numberofDaysElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", pinTypeElement);
 			Thread.sleep(1000);
 		}
 	}
 	
 	//02. Select from PIN Type Element
 	public AddPINValidity typeelementDropDownField() throws InterruptedException {
-		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/div/section[2]/div/form/div[1]/div/div[2]/div[4]/div/select")));
-		drp.selectByIndex(1);
+		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div[2]/form/div/div[1]/div[2]/div[2]/div/select")));
+		drp.selectByIndex(0);
 		return new AddPINValidity(); 
 	}
 	
