@@ -1,6 +1,7 @@
 package com.admin.qa.function;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -62,7 +63,7 @@ public class OnlinePINActivation extends TestBase{
 		paymentGatewayElementHighlight();
 		dropDownPaymentGatewayElementSelect.click(); /*click on the expandable list */
 		try {Thread.sleep(6000);} catch (InterruptedException ie) {}
-		searchInPaymentGatewayElement.sendKeys("off"); /* type on the search bar */
+		searchInPaymentGatewayElement.sendKeys(""); /* type on the search bar */
 		try {Thread.sleep(2000);} catch (InterruptedException ie) {}
 		valueForSearchInPaymentGatewayElement.click();/* click on the Single value */
 		return new OnlinePINActivation();
@@ -105,7 +106,7 @@ public class OnlinePINActivation extends TestBase{
 	//02.  Type to the Payment TNX ID
 	public OnlinePINActivation typetothePaymentTNXID() throws InterruptedException {
 		paymentTNXIDInputFieldHighlight();
-		PaymentTNXIDElement.sendKeys("xxx1234fookmmmm");
+		PaymentTNXIDElement.sendKeys("");
 		return new OnlinePINActivation();
 	}
 	
@@ -115,6 +116,26 @@ public class OnlinePINActivation extends TestBase{
 		PaymentTNXIDElement.sendKeys(payment_tnx_id);
 		return new OnlinePINActivation();
 	}
+	
+	
+	//1.0.3. Type Payment TNX ID Input Field (enter text, then clear Payment TNX ID Input Field)
+	public OnlinePINActivation typeAndClearthePaymentTNXIDParam(String $payment_tnx_id) throws InterruptedException {
+		paymentTNXIDInputFieldHighlight();
+		PaymentTNXIDElement.sendKeys($payment_tnx_id);
+		Thread.sleep(100);
+		PaymentTNXIDElement.clear();
+		return new OnlinePINActivation();
+									    			
+	}	
+	
+	//01.2. Type to Payment TNX ID
+	public OnlinePINActivation typetothePaymentTNXIDParamTabKey() throws InterruptedException {
+		paymentTNXIDInputFieldHighlight();
+		PaymentTNXIDElement.sendKeys(Keys.TAB);
+		return new OnlinePINActivation();
+		}
+		
+		
 	
 	/***************************************************************************************************************
 						* *****************************************************************************************************
