@@ -60,14 +60,27 @@ public class OnlinePINActivation extends TestBase{
 	
 	//01. Select Payment Gateway
 	public OnlinePINActivation selectPaymentGateway() throws InterruptedException {
-		paymentGatewayElementHighlight();
+		//paymentGatewayElementHighlight();
 		dropDownPaymentGatewayElementSelect.click(); /*click on the expandable list */
-		try {Thread.sleep(6000);} catch (InterruptedException ie) {}
+		try {Thread.sleep(2000);} catch (InterruptedException ie) {}
 		searchInPaymentGatewayElement.sendKeys(""); /* type on the search bar */
 		try {Thread.sleep(2000);} catch (InterruptedException ie) {}
 		valueForSearchInPaymentGatewayElement.click();/* click on the Single value */
 		return new OnlinePINActivation();
 	}
+	
+	
+	//01. Select Payment Gateway
+	public OnlinePINActivation selectOfflinePaymentGateway() throws InterruptedException {
+		//paymentGatewayElementHighlight();
+		dropDownPaymentGatewayElementSelect.click(); /*click on the expandable list */
+		try {Thread.sleep(2000);} catch (InterruptedException ie) {}
+		searchInPaymentGatewayElement.sendKeys("offline"); /* type on the search bar */
+		try {Thread.sleep(2000);} catch (InterruptedException ie) {}
+		valueForSearchInPaymentGatewayElement.click();/* click on the Single value */
+		return new OnlinePINActivation();
+	}
+		
 	
 	
 	/***************************************************************************************************************
@@ -118,7 +131,7 @@ public class OnlinePINActivation extends TestBase{
 	}
 	
 	
-	//1.0.3. Type Payment TNX ID Input Field (enter text, then clear Payment TNX ID Input Field)
+	//2.0.2. Type Payment TNX ID Input Field (enter text, then clear Payment TNX ID Input Field)
 	public OnlinePINActivation typeAndClearthePaymentTNXIDParam(String $payment_tnx_id) throws InterruptedException {
 		paymentTNXIDInputFieldHighlight();
 		PaymentTNXIDElement.sendKeys($payment_tnx_id);
@@ -128,7 +141,7 @@ public class OnlinePINActivation extends TestBase{
 									    			
 	}	
 	
-	//01.2. Type to Payment TNX ID
+	//2.0.3. Type to Payment TNX ID
 	public OnlinePINActivation typetothePaymentTNXIDParamTabKey() throws InterruptedException {
 		paymentTNXIDInputFieldHighlight();
 		PaymentTNXIDElement.sendKeys(Keys.TAB);
@@ -182,6 +195,25 @@ public class OnlinePINActivation extends TestBase{
 		return new OnlinePINActivation(); 
 	}
 	
+	
+	
+	//3.0.1. Type Payment TNX ID Input Field (enter text, then clear Payment TNX ID Input Field)
+	public OnlinePINActivation typeAndClearthePriceUSDParam(String $price_usd) throws InterruptedException {
+		priceUSDInputFieldHighlight();
+		PriceUSDElement.sendKeys($price_usd);
+		Thread.sleep(100);
+		PriceUSDElement.clear();
+		return new OnlinePINActivation();
+										    			
+	}	
+		
+	//3.0.2 Type to Payment TNX ID
+	public OnlinePINActivation typetothePriceUSDParamTabKey() throws InterruptedException {
+		priceUSDInputFieldHighlight();
+		PriceUSDElement.sendKeys(Keys.TAB);
+		return new OnlinePINActivation();
+		}
+	
 	/***************************************************************************************************************
      					* *****************************************************************************************************
      					* **************************    End No.03 - Element of Price USD    ******************************************
@@ -217,16 +249,34 @@ public class OnlinePINActivation extends TestBase{
 	//04.  Type to the Username/PIN
 	public OnlinePINActivation typetotheUsernameandPIN() throws InterruptedException {
 		usernameAndPINInputFieldHighlight();
-		UsernameandPINElement.sendKeys("rumy1yr2ww");
+		UsernameandPINElement.sendKeys("");
 		return new OnlinePINActivation(); 
 	}
 	
 	//04.1  Type to the Username/PIN
-	public OnlinePINActivation typetotheUsernameandPINParam(String username_0r_pin) throws InterruptedException {
+	public OnlinePINActivation typetotheUsernameandPINParam(String $username_0r_pin) throws InterruptedException {
 		usernameAndPINInputFieldHighlight();
-		UsernameandPINElement.sendKeys(username_0r_pin);
+		UsernameandPINElement.sendKeys($username_0r_pin);
 		return new OnlinePINActivation(); 
 	}
+	
+	
+	//4.0.1. Type Payment TNX ID Input Field (enter text, then clear Payment TNX ID Input Field)
+	public OnlinePINActivation typeAndCleartheUsernameandPINParam(String $username_0r_pin) throws InterruptedException {
+		usernameAndPINInputFieldHighlight();
+		UsernameandPINElement.sendKeys($username_0r_pin);
+		Thread.sleep(100);
+		UsernameandPINElement.clear();
+		return new OnlinePINActivation();
+											    			
+	}	
+			
+	//4.0.2 Type to Payment TNX ID
+	public OnlinePINActivation typetotheUsernameandPINParamTabKey() throws InterruptedException {
+		usernameAndPINInputFieldHighlight();
+		UsernameandPINElement.sendKeys(Keys.TAB);
+		return new OnlinePINActivation();
+		}
 	
 	/***************************************************************************************************************
 					* *****************************************************************************************************
@@ -273,7 +323,7 @@ public class OnlinePINActivation extends TestBase{
 		paymentViaElementHighlight();
 		dropDownPaymentViaElementSelect.click(); /* click on the expandable list */
 		try {Thread.sleep(6000);} catch (InterruptedException ie) {}
-		searchInPaymentViaElement.sendKeys("bank"); /* type on the search bar */
+		searchInPaymentViaElement.sendKeys("hand"); /* type on the search bar */
 		try {Thread.sleep(2000);} catch (InterruptedException ie) {}
 		valueForSearchInPaymentViaElement.click();/* click on the Single value */
 		return new OnlinePINActivation();
@@ -320,7 +370,7 @@ public class OnlinePINActivation extends TestBase{
 		}
 	}
 	
-	//06. Select Payment Via
+	//06. Select Rate Plan
 	public OnlinePINActivation selectRatePlan() throws InterruptedException {
 		ratePlanElementHighlight();
 		dropDownRatePlanElementSelect.click(); /* click on the expandable list */
@@ -374,6 +424,32 @@ public class OnlinePINActivation extends TestBase{
 		return new AddPINValidity(); 
 	}
 	
+	
+	//7.0.1  Type to the Username/PIN
+	public OnlinePINActivation typetotheRemarksParam(String remark) throws InterruptedException {
+		remarksInputFieldHighlight();
+		remarksElement.sendKeys(remark);
+		return new OnlinePINActivation(); 
+	}
+	
+	
+	//7.0.2. Type Payment TNX ID Input Field (enter text, then clear Payment TNX ID Input Field)
+	public OnlinePINActivation typeAndCleartheRemarksParam(String remark) throws InterruptedException {
+		remarksInputFieldHighlight();
+		remarksElement.sendKeys(remark);
+		Thread.sleep(100);
+		remarksElement.clear();
+		return new OnlinePINActivation();
+												    			
+	}	
+				
+	//7.0.3 Type to Payment TNX ID
+	public OnlinePINActivation typetotheRemarksParamTabKey() throws InterruptedException {
+		remarksInputFieldHighlight();
+		remarksElement.sendKeys(Keys.TAB);
+		return new OnlinePINActivation();
+	}
+	
 	/***************************************************************************************************************
 			* *******************************************************************************************************
 			* **************************    End No.07 - Element of Remarks    ******************************************
@@ -414,6 +490,9 @@ public class OnlinePINActivation extends TestBase{
 		VerifyandActivateButtonElement.click();
 		return new AddPINValidity(); 
 	}
+	
+	
+	
 	
 	/***************************************************************************************************************
 	 			* *******************************************************************************************************
