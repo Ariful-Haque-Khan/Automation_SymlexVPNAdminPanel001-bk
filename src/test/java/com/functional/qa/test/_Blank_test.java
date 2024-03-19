@@ -16,7 +16,7 @@ import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.TestUtils;
 
-public class _Blank extends TestBase{
+public class _Blank_test extends TestBase{
 	
 	
 	LoginPage loginPage;
@@ -24,7 +24,7 @@ public class _Blank extends TestBase{
 	TestUtils testUtils;
 	
 	//Initializing PageFactory
-	public _Blank() {
+	public _Blank_test() {
 		super();   //Call the Constructor of the Super class - TestBase
 	}
 	

@@ -93,7 +93,7 @@ public class OnlinePinActivationPaymentTNXIDFieldTest extends TestBase{
 	public void enter_default_placeholder_text_into_payment_TNX_ID_input_field() throws IOException, InterruptedException{
 		
 	}
-	@Test(priority=20)
+	//@Test(priority=20)
 	public void enter_text_then_clear_the_input_text_field() throws IOException, InterruptedException{
 		onlinePINActivation = loginPage.onlinePINActivationLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		onlinePINActivation.openOnlinePINActivationPage();// open the online pin activation Form Page. 
@@ -117,7 +117,7 @@ public class OnlinePinActivationPaymentTNXIDFieldTest extends TestBase{
 		//onlinePINActivation.clickOnSubmitButton(); //for submitting with the form data
 		//onlinePINActivation.clickPopUpYesButton(); //for allowing submitting with the form data
 	}
-	//@Test(priority=22)
+	@Test(priority=22)
 	public void enter_then_undo_then_redo_the_input_action_into_payment_TNX_ID_input_field() throws IOException, InterruptedException{
 		onlinePINActivation = loginPage.onlinePINActivationLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		onlinePINActivation.openOnlinePINActivationPage();// open the online pin activation Form Page. 
