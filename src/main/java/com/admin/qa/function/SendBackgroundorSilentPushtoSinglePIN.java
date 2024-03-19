@@ -2,6 +2,7 @@ package com.admin.qa.function;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -138,6 +139,33 @@ public class SendBackgroundorSilentPushtoSinglePIN extends TestBase{
 	public SendBackgroundorSilentPushtoSinglePIN typeInpininCSVInputField() throws InterruptedException {
 		PINinCSVDropDownFieldHighlight();
 		pininCSVElement.sendKeys("rumy1yr");
+		return new SendBackgroundorSilentPushtoSinglePIN();
+	}
+	
+	
+	//02.1  Type to the PIN in CSV
+	public SendBackgroundorSilentPushtoSinglePIN typetothePINinCSVParam(String pin_in_csv) throws InterruptedException {
+		PINinCSVDropDownFieldHighlight();
+		pininCSVElement.sendKeys(pin_in_csv);
+		return new SendBackgroundorSilentPushtoSinglePIN();
+	}
+	
+	
+	//02.0.2. Type PIN in CSV Input Field (enter text, then clear PPIN in CSV Input Field)
+	public SendBackgroundorSilentPushtoSinglePIN typeAndClearthePINinCSVParam(String $payment_tnx_id) throws InterruptedException {
+		PINinCSVDropDownFieldHighlight();
+		pininCSVElement.sendKeys($payment_tnx_id);
+		Thread.sleep(100);
+		pininCSVElement.clear();
+		return new SendBackgroundorSilentPushtoSinglePIN();
+										    			
+	}	
+	
+		
+	//02.0.3. Type to PIN in CSV
+	public SendBackgroundorSilentPushtoSinglePIN typetothePINinCSVParamTabKey() throws InterruptedException {
+		PINinCSVDropDownFieldHighlight();
+		pininCSVElement.sendKeys(Keys.TAB);
 		return new SendBackgroundorSilentPushtoSinglePIN();
 	}
 	
