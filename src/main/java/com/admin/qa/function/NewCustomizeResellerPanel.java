@@ -1,6 +1,7 @@
 package com.admin.qa.function;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -48,6 +49,31 @@ public class NewCustomizeResellerPanel extends TestBase{
 		customPanelNameElement.sendKeys("1");/*type on the element */
 		return new NewCustomizeResellerPanel();
 	}
+	
+	
+	//1.0.1  Type to the PIN in CSV
+	public NewCustomizeResellerPanel typeToCustomPanelNameParam(String panel_name) throws InterruptedException {
+		customPanelNameHighlight();
+		customPanelNameElement.sendKeys(panel_name);
+		return new NewCustomizeResellerPanel();
+	}
+	
+	//1.0.2. Type PIN in CSV Input Field (enter text, then clear PPIN in CSV Input Field)
+	public NewCustomizeResellerPanel typeAndCleartheCustomPanelNameParam(String panel_name) throws InterruptedException {
+		customPanelNameHighlight();
+		customPanelNameElement.sendKeys(panel_name);
+		Thread.sleep(100);
+		customPanelNameElement.clear();
+		return new NewCustomizeResellerPanel();
+											    			
+	}	
+	//1.0.3. Type to PIN in CSV
+	public NewCustomizeResellerPanel typetotheCustomPanelNameParamTabKey() throws InterruptedException {
+		customPanelNameHighlight();
+		customPanelNameElement.sendKeys(Keys.TAB);
+		return new NewCustomizeResellerPanel();
+	}
+	
 	
 	/***************************************************
 							* *****************************************************************************************************
@@ -113,7 +139,7 @@ public class NewCustomizeResellerPanel extends TestBase{
 	WebElement hostServerInputFieldElement;
 	
 	//03. Highlight of PIN Host Server for First click On the Element 
-	public void saveButtonelementHighlight() throws InterruptedException {
+	public void hostServerInputFieldElementHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", hostServerInputFieldElement);/*make a yellow border outside edge of the element*/
@@ -129,10 +155,36 @@ public class NewCustomizeResellerPanel extends TestBase{
 	
 	//03. Type to the Host Server
 	public NewCustomizeResellerPanel typeONHostServer() throws InterruptedException {
-		saveButtonelementHighlight();/* highlight the element of the tested. */
+		hostServerInputFieldElementHighlight();/* highlight the element of the tested. */
 		hostServerInputFieldElement.sendKeys("127.0.0.1");/*type on the element */
 		return new NewCustomizeResellerPanel();
 	}
+	
+	
+	//3.0.1  Type to the Host Server
+	public NewCustomizeResellerPanel typeToHostServerParam(String host_server) throws InterruptedException {
+		hostServerInputFieldElementHighlight();
+		hostServerInputFieldElement.sendKeys(host_server);
+		return new NewCustomizeResellerPanel();
+	}
+	
+	
+	//1.0.2. Type Host Server Input Field (enter text, then clear PPIN in CSV Input Field)
+	public NewCustomizeResellerPanel typeAndCleartheHostServerParam(String host_server) throws InterruptedException {
+		hostServerInputFieldElementHighlight();
+		hostServerInputFieldElement.sendKeys(host_server);
+		Thread.sleep(100);
+		hostServerInputFieldElement.clear();
+		return new NewCustomizeResellerPanel();
+											    			
+	}	
+	//1.0.3. Type Host Server tab key
+	public NewCustomizeResellerPanel typetotheHostServerParamTabKey() throws InterruptedException {
+		hostServerInputFieldElementHighlight();
+		hostServerInputFieldElement.sendKeys(Keys.TAB);
+		return new NewCustomizeResellerPanel();
+	}
+	
 	
 	/***************************************************
 							* *****************************************************************************************************
@@ -170,6 +222,14 @@ public class NewCustomizeResellerPanel extends TestBase{
 	public NewCustomizeResellerPanel typeONBrandName() throws InterruptedException {
 		brandNameelementHighlight();/* highlight the element of the tested. */
 		brandNameInputFieldElement.sendKeys("Local Brand");/*type on the element */
+		return new NewCustomizeResellerPanel();
+	}
+	
+	
+	//4.0.1  Type to the brand name
+	public NewCustomizeResellerPanel typeONBrandNameParam(String brand_name) throws InterruptedException {
+		brandNameelementHighlight();
+		brandNameInputFieldElement.sendKeys(brand_name);
 		return new NewCustomizeResellerPanel();
 	}
 	
