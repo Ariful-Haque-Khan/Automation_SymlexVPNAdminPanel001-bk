@@ -41,11 +41,11 @@ public class CustomPanelNameFieldTest extends TestBase{
 	
 	public void NewCustomizeResellerPanelCommon(String panel_name) throws IOException, InterruptedException {
 		newCustomizeResellerPanel = loginPage.customPanelNameLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		newCustomizeResellerPanel.openNewCustomizeResellerPanelPage();// open the online pin activation Form Page.
-		newCustomizeResellerPanel.typeToCustomPanelNameParam(panel_name);//select inputs data from the Payment Gateway input text field
-		newCustomizeResellerPanel.searchandtypeelementDropDownField();// for taking inputs from the Payment TNX ID input text field
-		newCustomizeResellerPanel.typeToHostServerParam("100.0.0.1");// for taking inputs from the Price USD input text field
-		newCustomizeResellerPanel.typeONBrandNameParam("International");// for taking inputs from the Username/PIN input text field
+		newCustomizeResellerPanel.openNewCustomizeResellerPanelPage();// open the New Customize Reseller Panel Form Page.
+		newCustomizeResellerPanel.typeToCustomPanelNameParam(panel_name);//for taking inputs from the Custom Panel Name input text field
+		newCustomizeResellerPanel.searchandtypeelementDropDownField();//select from the Reseller with Level input text field
+		newCustomizeResellerPanel.typeToHostServerParam("100.0.0.1");// for taking inputs from the Host Server input text field
+		newCustomizeResellerPanel.typeONBrandNameParam("International");// for taking inputs from the Brand Name input text field
 		//newCustomizeResellerPanel.clickONSubmitButton();//for create button
 		
 		
@@ -95,36 +95,36 @@ public class CustomPanelNameFieldTest extends TestBase{
 	@Test(priority=20)
 	public void enter_text_then_clear_the_input_text_field() throws IOException, InterruptedException{
 		newCustomizeResellerPanel = loginPage.customPanelNameLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		newCustomizeResellerPanel.openNewCustomizeResellerPanelPage();// open the online pin activation Form Page.
-		newCustomizeResellerPanel.typeToCustomPanelNameParam("customizes panel");//select inputs data from the Payment Gateway input text field
+		newCustomizeResellerPanel.openNewCustomizeResellerPanelPage();// open the New Customize Reseller Panel Form Page.
+		newCustomizeResellerPanel.typeToCustomPanelNameParam("customizes panel");//for taking inputs from the Custom Panel Name input text field
 		newCustomizeResellerPanel.typeAndCleartheCustomPanelNameParam("");//
-		newCustomizeResellerPanel.searchandtypeelementDropDownField();// for taking inputs from the Payment TNX ID input text field
-		newCustomizeResellerPanel.typeToHostServerParam("100.0.0.1");// for taking inputs from the Price USD input text field
-		newCustomizeResellerPanel.typeONBrandNameParam("International");// for taking inputs from the Username/PIN input text field
+		newCustomizeResellerPanel.searchandtypeelementDropDownField();// select from the Reseller with Level input text field
+		newCustomizeResellerPanel.typeToHostServerParam("100.0.0.1");// for taking inputs from the Host Server input text field
+		newCustomizeResellerPanel.typeONBrandNameParam("International");//for taking inputs from the Brand Name input text field
 		//newCustomizeResellerPanel.clickONSubmitButton();//for create button
 		
 	}
 	//@Test(priority=21)
 	public void enter_then_undo_the_input_action_into_Custom_Panel_Name_input_field() throws IOException, InterruptedException{
 		newCustomizeResellerPanel = loginPage.customPanelNameLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		newCustomizeResellerPanel.openNewCustomizeResellerPanelPage();// open the online pin activation Form Page.
-		newCustomizeResellerPanel.typeToCustomPanelNameParam("");//select inputs data from the Payment Gateway input text field
-		newCustomizeResellerPanel.typeAndCleartheCustomPanelNameParam("");//
-		newCustomizeResellerPanel.searchandtypeelementDropDownField();// for taking inputs from the Payment TNX ID input text field
-		newCustomizeResellerPanel.typeToHostServerParam("100.0.0.1");// for taking inputs from the Price USD input text field
-		newCustomizeResellerPanel.typeONBrandNameParam("International");// for taking inputs from the Username/PIN input text field
+		newCustomizeResellerPanel.openNewCustomizeResellerPanelPage();// open the New Customize Reseller Panel Form Page.
+		newCustomizeResellerPanel.typeToCustomPanelNameParam("customized_panel");//for taking inputs from the Custom Panel Name input text field
+		newCustomizeResellerPanel.typeAndCleartheCustomPanelNameParam("");// cLear the text
+		newCustomizeResellerPanel.searchandtypeelementDropDownField();// select from the Reseller with Level input text field
+		newCustomizeResellerPanel.typeToHostServerParam("100.0.0.1");// for taking inputs from the Host Server input text field
+		newCustomizeResellerPanel.typeONBrandNameParam("International");// for taking inputs from the Brand Name input text field
 		//newCustomizeResellerPanel.clickONSubmitButton();//for create button
 	
 	}
 	//@Test(priority=22)
 	public void enter_then_undo_then_redo_the_input_action_into_Custom_Panel_Name_input_field() throws IOException, InterruptedException{
 		newCustomizeResellerPanel = loginPage.customPanelNameLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		newCustomizeResellerPanel.openNewCustomizeResellerPanelPage();// open the online pin activation Form Page.
-		newCustomizeResellerPanel.typeToCustomPanelNameParam("");//select inputs data from the Payment Gateway input text field
+		newCustomizeResellerPanel.openNewCustomizeResellerPanelPage();// open the New Customize Reseller Panel Form Page.
+		newCustomizeResellerPanel.typeToCustomPanelNameParam("");//for taking inputs from the Custom Panel Name input text field
 		newCustomizeResellerPanel.typeAndCleartheCustomPanelNameParam("");//
-		newCustomizeResellerPanel.searchandtypeelementDropDownField();// for taking inputs from the Payment TNX ID input text field
-		newCustomizeResellerPanel.typeToHostServerParam("100.0.0.1");// for taking inputs from the Price USD input text field
-		newCustomizeResellerPanel.typeONBrandNameParam("International");// for taking inputs from the Username/PIN input text field
+		newCustomizeResellerPanel.searchandtypeelementDropDownField();// select from the Reseller with Level input text field
+		newCustomizeResellerPanel.typeToHostServerParam("100.0.0.1");// for taking inputs from the Host Server input text field
+		newCustomizeResellerPanel.typeONBrandNameParam("International");// for taking inputs from the Brand Name input text field
 		//newCustomizeResellerPanel.clickONSubmitButton();//for create button
 		
 	}
@@ -132,23 +132,23 @@ public class CustomPanelNameFieldTest extends TestBase{
 	@Ignore
 	public void enter_text_and_navigate_through_into_Custom_Panel_Name_input_field_using_the_tab_key() throws IOException, InterruptedException{
 		newCustomizeResellerPanel = loginPage.customPanelNameLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		newCustomizeResellerPanel.openNewCustomizeResellerPanelPage();// open the online pin activation Form Page.
-		newCustomizeResellerPanel.typeToCustomPanelNameParam("");//select inputs data from the Payment Gateway input text field
+		newCustomizeResellerPanel.openNewCustomizeResellerPanelPage();// open the New Customize Reseller Panel Form Page.
+		newCustomizeResellerPanel.typeToCustomPanelNameParam("");//for taking inputs from the Custom Panel Name input text field
 		newCustomizeResellerPanel.typetotheCustomPanelNameParamTabKey();//
-		newCustomizeResellerPanel.searchandtypeelementDropDownField();// for taking inputs from the Payment TNX ID input text field
-		newCustomizeResellerPanel.typeToHostServerParam("100.0.0.1");// for taking inputs from the Price USD input text field
-		newCustomizeResellerPanel.typeONBrandNameParam("International");// for taking inputs from the Username/PIN input text field
+		newCustomizeResellerPanel.searchandtypeelementDropDownField();// select from the Reseller with Level input text field
+		newCustomizeResellerPanel.typeToHostServerParam("100.0.0.1");// for taking inputs from the Host Server input text field
+		newCustomizeResellerPanel.typeONBrandNameParam("International");// for taking inputs from the Brand Name input text field
 		//newCustomizeResellerPanel.clickONSubmitButton();//for create button
 		
 	}
 	//@Test(priority=24)
 	public void paste_the_text_into_Custom_Panel_Name_input_field_using_the_paste_action() throws IOException, InterruptedException{
 		newCustomizeResellerPanel = loginPage.customPanelNameLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		newCustomizeResellerPanel.openNewCustomizeResellerPanelPage();// open the online pin activation Form Page.
-		newCustomizeResellerPanel.typeToCustomPanelNameParam("");//select inputs data from the Payment Gateway input text field
-		newCustomizeResellerPanel.searchandtypeelementDropDownField();// for taking inputs from the Payment TNX ID input text field
-		newCustomizeResellerPanel.typeToHostServerParam("100.0.0.1");// for taking inputs from the Price USD input text field
-		newCustomizeResellerPanel.typeONBrandNameParam("International");// for taking inputs from the Username/PIN input text field
+		newCustomizeResellerPanel.openNewCustomizeResellerPanelPage();//open the New Customize Reseller Panel Form Page.
+		newCustomizeResellerPanel.typeToCustomPanelNameParam("");//for taking inputs from the Custom Panel Name input text field
+		newCustomizeResellerPanel.searchandtypeelementDropDownField();// select from the Reseller with Level input text field
+		newCustomizeResellerPanel.typeToHostServerParam("100.0.0.1");// for taking inputs from the Host Server input text field
+		newCustomizeResellerPanel.typeONBrandNameParam("International");// for taking inputs from the Brand Name input text field
 		//newCustomizeResellerPanel.clickONSubmitButton();//for create button
 		
 	}
