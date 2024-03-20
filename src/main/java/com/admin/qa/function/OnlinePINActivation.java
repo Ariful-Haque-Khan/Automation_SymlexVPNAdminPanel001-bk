@@ -116,6 +116,13 @@ public class OnlinePINActivation extends TestBase{
 		return new OnlinePINActivation();
 	}
 	
+	//02.1  Type to the Payment TNX ID
+	public OnlinePINActivation typetothePaymentTNXIDParamClear() throws InterruptedException {
+		paymentTNXIDInputFieldHighlight();
+		PaymentTNXIDElement.clear();
+		return new OnlinePINActivation();
+	}
+	
 	/***************************************************************************************************************
 						* *****************************************************************************************************
 						* **************************    End No.02 - Element of Payment TNX ID    ************************************
@@ -350,6 +357,14 @@ public class OnlinePINActivation extends TestBase{
 		remarksInputFieldHighlight();
 		remarksElement.click();
 		remarksElement.sendKeys("Test");
+		return new AddPINValidity(); 
+	}
+	
+	//07.  Type to the Remarks
+	public AddPINValidity typetotheRemarksParam(String remarks) throws InterruptedException {
+		remarksInputFieldHighlight();
+		remarksElement.click();
+		remarksElement.sendKeys(remarks);
 		return new AddPINValidity(); 
 	}
 	
