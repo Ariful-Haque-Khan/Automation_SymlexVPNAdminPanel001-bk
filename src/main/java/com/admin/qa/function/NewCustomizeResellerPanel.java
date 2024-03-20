@@ -51,14 +51,14 @@ public class NewCustomizeResellerPanel extends TestBase{
 	}
 	
 	
-	//1.0.1  Type to the PIN in CSV
+	//1.0.1  Type to the Custom Panel Name
 	public NewCustomizeResellerPanel typeToCustomPanelNameParam(String panel_name) throws InterruptedException {
 		customPanelNameHighlight();
 		customPanelNameElement.sendKeys(panel_name);
 		return new NewCustomizeResellerPanel();
 	}
 	
-	//1.0.2. Type PIN in CSV Input Field (enter text, then clear PPIN in CSV Input Field)
+	//1.0.2. Type Custom Panel Name Input Field (enter text, then clear PPIN in CSV Input Field)
 	public NewCustomizeResellerPanel typeAndCleartheCustomPanelNameParam(String panel_name) throws InterruptedException {
 		customPanelNameHighlight();
 		customPanelNameElement.sendKeys(panel_name);
@@ -67,7 +67,7 @@ public class NewCustomizeResellerPanel extends TestBase{
 		return new NewCustomizeResellerPanel();
 											    			
 	}	
-	//1.0.3. Type to PIN in CSV
+	//1.0.3. Type to Custom Panel Name
 	public NewCustomizeResellerPanel typetotheCustomPanelNameParamTabKey() throws InterruptedException {
 		customPanelNameHighlight();
 		customPanelNameElement.sendKeys(Keys.TAB);
@@ -138,7 +138,7 @@ public class NewCustomizeResellerPanel extends TestBase{
 	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[3]/div/input")
 	WebElement hostServerInputFieldElement;
 	
-	//03. Highlight of PIN Host Server for First click On the Element 
+	//03. Highlight of  Host Server for First click On the Element 
 	public void hostServerInputFieldElementHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -169,7 +169,7 @@ public class NewCustomizeResellerPanel extends TestBase{
 	}
 	
 	
-	//1.0.2. Type Host Server Input Field (enter text, then clear PPIN in CSV Input Field)
+	//3.0.2. Type Host Server Input Field (enter text, then clear Host Server Input Field)
 	public NewCustomizeResellerPanel typeAndCleartheHostServerParam(String host_server) throws InterruptedException {
 		hostServerInputFieldElementHighlight();
 		hostServerInputFieldElement.sendKeys(host_server);
@@ -178,7 +178,7 @@ public class NewCustomizeResellerPanel extends TestBase{
 		return new NewCustomizeResellerPanel();
 											    			
 	}	
-	//1.0.3. Type Host Server tab key
+	//3.0.3. Type Host Server tab key
 	public NewCustomizeResellerPanel typetotheHostServerParamTabKey() throws InterruptedException {
 		hostServerInputFieldElementHighlight();
 		hostServerInputFieldElement.sendKeys(Keys.TAB);
@@ -226,12 +226,29 @@ public class NewCustomizeResellerPanel extends TestBase{
 	}
 	
 	
-	//4.0.1  Type to the brand name
+	//4.0.1  Type to the Brand Name
 	public NewCustomizeResellerPanel typeONBrandNameParam(String brand_name) throws InterruptedException {
 		brandNameelementHighlight();
 		brandNameInputFieldElement.sendKeys(brand_name);
 		return new NewCustomizeResellerPanel();
 	}
+	
+	//4.0.2. Type Brand Name Input Field (enter text, then clear PPIN in CSV Input Field)
+	public NewCustomizeResellerPanel typeAndCleartheBrandNameParam(String brand_name) throws InterruptedException {
+		brandNameelementHighlight();
+		brandNameInputFieldElement.sendKeys(brand_name);
+		Thread.sleep(100);
+		brandNameInputFieldElement.clear();
+		return new NewCustomizeResellerPanel();
+											    			
+	}	
+	//4.0.3. Type to Brand Name tab key
+	public NewCustomizeResellerPanel typetotheBrandNameParamTabKey() throws InterruptedException {
+		brandNameelementHighlight();
+		brandNameInputFieldElement.sendKeys(Keys.TAB);
+		return new NewCustomizeResellerPanel();
+	}
+	
 	
 	/***************************************************
 							* *****************************************************************************************************
@@ -243,7 +260,7 @@ public class NewCustomizeResellerPanel extends TestBase{
 	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[2]/input[4]")
 	WebElement submitButtonElement;
 	
-	//05. Highlight of Brand Name for First click On the Element 
+	//05. Highlight of Submit Button for First click On the Element 
 	public void submitButtonelementHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -258,7 +275,7 @@ public class NewCustomizeResellerPanel extends TestBase{
 		}
 	}
 	
-	//05. Type to the Brand Name
+	//05. Type to the Submit Button
 	public NewCustomizeResellerPanel clickONSubmitButton() throws InterruptedException {
 		submitButtonelementHighlight();/* highlight the element of the tested. */
 		submitButtonElement.click();/*type on the element */
