@@ -69,7 +69,7 @@ public class UdidCheckBoxTest extends TestBase{
 	
 	
 	
-	//@Test(priority=2)
+	@Test(priority=2)
 	//@Ignore
     public void verify_that_the_checkbox_is_checked_by_default() throws IOException, InterruptedException {
 		
