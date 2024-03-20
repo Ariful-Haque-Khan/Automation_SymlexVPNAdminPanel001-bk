@@ -130,6 +130,12 @@ public class OnlinePINActivation extends TestBase{
 		return new OnlinePINActivation();
 	}
 	
+	//02.1  Type to the Payment TNX ID
+	public OnlinePINActivation typetothePaymentTNXIDParamClear() throws InterruptedException {
+		paymentTNXIDInputFieldHighlight();
+		PaymentTNXIDElement.clear();
+		return new OnlinePINActivation();
+	}
 	
 	//2.0.2. Type Payment TNX ID Input Field (enter text, then clear Payment TNX ID Input Field)
 	public OnlinePINActivation typeAndClearthePaymentTNXIDParam(String $payment_tnx_id) throws InterruptedException {
@@ -147,7 +153,6 @@ public class OnlinePINActivation extends TestBase{
 		PaymentTNXIDElement.sendKeys(Keys.TAB);
 		return new OnlinePINActivation();
 		}
-		
 		
 	
 	/***************************************************************************************************************
@@ -423,7 +428,7 @@ public class OnlinePINActivation extends TestBase{
 		remarksElement.sendKeys("Test");
 		return new AddPINValidity(); 
 	}
-	
+
 	
 	//7.0.1  Type to the Username/PIN
 	public OnlinePINActivation typetotheRemarksParam(String remark) throws InterruptedException {
