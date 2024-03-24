@@ -2,6 +2,7 @@ package com.admin.qa.function;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -134,7 +135,7 @@ public class AddNewNotice extends TestBase{
 		}
 	}
 	
-	//03. Select from User Type Dropdown Field
+	//03. Select from Operation Type Drop down Field
 	public AddNewNotice selectDataFromsOperationTypeDropdownField() throws InterruptedException {
 		operationTypeElementFieldHighlight();/* highlight the element of the tested. */
 		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div[2]/form/div/div[1]/div[2]/div[3]/div/select")));
@@ -309,6 +310,30 @@ public class AddNewNotice extends TestBase{
 		return new AddNewNotice(); 
 	}
 	
+	//7.0.1  Type to the Notice Message
+	public AddNewNotice  typetonoticeMessageInputParam(String notice) throws InterruptedException {
+		noticeMessageFieldHighlight();
+		noticeMessageElement.sendKeys(notice);
+		return new AddNewNotice ();
+	}
+
+	//7.0.2. Type Notice Message Input Field (enter text, then clear PPIN in CSV Input Field)
+	public AddNewNotice typeAndClearthenoticeMessageParam(String notice) throws InterruptedException {
+		noticeMessageFieldHighlight();
+		noticeMessageElement.sendKeys(notice);
+		Thread.sleep(100);
+		noticeMessageElement.clear();
+		return new AddNewNotice ();
+										    			
+	}		
+		
+	//7.0.3. Type to Notice Message
+	public AddNewNotice  typetothenoticeMessageTabKey() throws InterruptedException {
+		noticeMessageFieldHighlight();
+		noticeMessageElement.sendKeys(Keys.TAB);
+		return new AddNewNotice ();
+	}
+	
 	
 	/***************************************************
 				*********************************************************************************************
@@ -348,6 +373,31 @@ public class AddNewNotice extends TestBase{
 		pushMessageElement.sendKeys("Testttt...."); /*type to the element. */
 		return new AddNewNotice(); 
 	}
+	
+	//8.0.1  Type to the Push message
+	public AddNewNotice  typetopushMessageParam(String push_message) throws InterruptedException {
+		pushMessageFieldHighlight();
+		pushMessageElement.sendKeys(push_message);
+		return new AddNewNotice ();
+	}
+	
+	//8.0.2. Type Push Message Input Field (enter text, then clear Push Message Input Field)
+	public AddNewNotice typeAndClearthepushMessageParam(String push_message) throws InterruptedException {
+		pushMessageFieldHighlight();
+		pushMessageElement.sendKeys(push_message);
+		Thread.sleep(100);
+		pushMessageElement.clear();
+		return new AddNewNotice ();
+										    			
+	}		
+		
+	//8.0.3. Type to Push Message
+	public AddNewNotice  typetothepushMessageTabKey() throws InterruptedException {
+		pushMessageFieldHighlight();
+		pushMessageElement.sendKeys(Keys.TAB);
+		return new AddNewNotice ();
+	}
+
 	
 	
 	/***************************************************
@@ -389,6 +439,29 @@ public class AddNewNotice extends TestBase{
 		return new AddNewNotice(); 
 	}
 	
+	//9.0.1  Type to the Push Remarks
+	public AddNewNotice  typetopushRemarksParam(String remarks) throws InterruptedException {
+		pushRemarksFieldHighlight();
+		pushRemarksElement.sendKeys(remarks);
+		return new AddNewNotice ();
+	}
+	
+	//9.0.2. Type Push Remarks Input Field (enter text, then clear Push Message Input Field)
+	public AddNewNotice typeAndClearthepushRemarksParam(String remarks) throws InterruptedException {
+		pushRemarksFieldHighlight();
+		pushRemarksElement.sendKeys(remarks);
+		Thread.sleep(100);
+		pushRemarksElement.clear();
+		return new AddNewNotice ();
+										    			
+	}		
+		
+	//9.0.3. Type to Push Remarks
+	public AddNewNotice  typetothepushRemarksTabKey() throws InterruptedException {
+		pushRemarksFieldHighlight();
+		pushRemarksElement.sendKeys(Keys.TAB);
+		return new AddNewNotice ();
+	}
 	
 	/***************************************************
 							*********************************************************************************************
