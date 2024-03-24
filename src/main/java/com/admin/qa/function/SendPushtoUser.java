@@ -702,7 +702,7 @@ public class SendPushtoUser extends TestBase{
 		}
 	}
 	
-	//16. Select from Date Filter Condition Start Dropdown Field
+	//16. Select from Date Filter Condition Start Drop down Field
 	public SendPushtoUser dateFilterConditionEndDropdownField() throws InterruptedException {
 		dateFilterConditionEndFieldHighlight();/* highlight the element of the tested. */
 		dateFilterConditionEndDropDownElement.sendKeys("2023-09-15"); /*type to the element. */
@@ -753,7 +753,7 @@ public class SendPushtoUser extends TestBase{
 	public SendPushtoUser selectDatafromCopyTemplateDropDownElement() throws InterruptedException {
 		copyTemplateDropDownElementdHighlight();/* highlight the element of the tested. */
 		dropDownCopyTemplateinSelect.click(); /*click on the element */
-		searchInCopyTemplateDropDown.sendKeys("1 in");/*type on the input field */
+		searchInCopyTemplateDropDown.sendKeys("select");/*type on the input field */
 		valueForCopyTemplateSearch.click();/*click on the element from result of the first value. */
 		return new SendPushtoUser();
 	}
@@ -923,6 +923,30 @@ public class SendPushtoUser extends TestBase{
 		imageURLInputFieldFieldHighlight();
 		imageURLInputFieldElement.sendKeys(image_url);
 		return new SendPushtoUser ();
+	}
+	
+
+	//19.0.1  Type to the Message Input Input
+	public SendPushtoUser  typetoimageURLParam(String image_url) throws InterruptedException {
+		imageURLInputFieldFieldHighlight();
+		imageURLInputFieldElement.sendKeys(image_url);
+		return new SendPushtoUser ();
+	}
+
+	//19.0.2. Type Message Input Field (enter text, then clear Message Input Field)
+	public SendPushtoUser typeAndClearimageURLParam(String image_url) throws InterruptedException {
+		imageURLInputFieldFieldHighlight();
+		imageURLInputFieldElement.sendKeys(image_url);
+		Thread.sleep(100);
+		imageURLInputFieldElement.clear();
+		return new SendPushtoUser ();									    			
+	}		
+		
+	//19.0.3. Type to Message Input Field
+	public SendPushtoUser  typetotheimageURLTabKey() throws InterruptedException {
+		imageURLInputFieldFieldHighlight();
+		imageURLInputFieldElement.sendKeys(Keys.TAB);
+		return new SendPushtoUser();
 	}
 
 	
