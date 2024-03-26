@@ -996,6 +996,22 @@ public class SendPushtoUser extends TestBase{
 		return new SendPushtoUser ();
 	}
 	
+	//21.0.2. Type Message Input Field (enter text, then clear Message Input Field)
+	public SendPushtoUser typeAndClearurlforAndroidInputFieldParam(String url_android) throws InterruptedException {
+		urlforAndroidInputFieldFieldHighlight();
+		urlforAndroidInputFieldElement.sendKeys(url_android);
+		Thread.sleep(100);
+		urlforAndroidInputFieldElement.clear();
+		return new SendPushtoUser ();									    			
+	}		
+		
+	//21.0.3. Type to Message Input Field
+	public SendPushtoUser  typetotheurlforAndroidInputFieldtabKey() throws InterruptedException {
+		urlforAndroidInputFieldFieldHighlight();
+		urlforAndroidInputFieldElement.sendKeys(Keys.TAB);
+		return new SendPushtoUser();
+	}
+
 	
 	/***************************************************
 							*********************************************************************************************
@@ -1043,6 +1059,23 @@ public class SendPushtoUser extends TestBase{
 		return new SendPushtoUser ();
 	}
 	
+	//22.0.2. Type URL for iOS Input Field (enter text, then clear URL for iOS Input Field)
+	public SendPushtoUser typeAndClearurlforiOSInputFieldParam(String url_iOS) throws InterruptedException {
+		urlforiOSInputFieldFieldHighlight();
+		urlforiOSInputFieldElement.sendKeys(url_iOS);
+		Thread.sleep(100);
+		urlforiOSInputFieldElement.clear();
+		return new SendPushtoUser ();									    			
+	}		
+		
+	//22.0.3. Type to URL for iOS Input Field
+	public SendPushtoUser  typetotheurlforurlforiOSInputFieldtabKey() throws InterruptedException {
+		urlforiOSInputFieldFieldHighlight();
+		urlforiOSInputFieldElement.sendKeys(Keys.TAB);
+		return new SendPushtoUser();
+	}
+
+	
 	
 	
 	/***************************************************
@@ -1088,6 +1121,22 @@ public class SendPushtoUser extends TestBase{
 		pageControInputFieldFieldHighlight();
 		pageControlInputFieldElement.sendKeys(page_control);
 		return new SendPushtoUser ();
+	}
+	
+	//22.0.2. Type Page Control Input Field (enter text, then clear URL for iOS Input Field)
+	public SendPushtoUser typeAndClearpageControInputFieldParam(String page_control) throws InterruptedException {
+		pageControInputFieldFieldHighlight();
+		pageControlInputFieldElement.sendKeys(page_control);
+		Thread.sleep(100);
+		pageControlInputFieldElement.clear();
+		return new SendPushtoUser ();									    			
+	}		
+		
+	//22.0.3. Type to Page Control Input Field
+	public SendPushtoUser  typetotheurlforpageControInputFieldtabKey() throws InterruptedException {
+		pageControInputFieldFieldHighlight();
+		pageControlInputFieldElement.sendKeys(Keys.TAB);
+		return new SendPushtoUser();
 	}
 	
 	
