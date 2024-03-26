@@ -58,8 +58,8 @@ public class MessageFieldTest extends TestBase{
 		sendPushtoUser.selectDatafromCopyTemplateDropDownElement();//  select inputs data form the copy template drop down field 
 		sendPushtoUser.typetotitleInputFieldParam("");// taking input from the title input field  
 		sendPushtoUser.typetomessageInputFieldFieldParam(message);// taking inputs from the message input text field 
-		sendPushtoUser.imageURLInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg\\");// taking inputs from the image url input text field taking inputs from the url for android input text field
-		sendPushtoUser.urlforAndroidInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg\\");// taking inputs from the url for android input text field  taking inputs from the url for ios input text field
+		sendPushtoUser.imageURLInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg\\");// taking inputs from the image url input text field 
+		sendPushtoUser.urlforAndroidInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg\\");// taking inputs from the url for android input text field  
 		sendPushtoUser.urlforiOSInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg\\");//taking inputs from the url for ios input text field  
 		sendPushtoUser.pageControInputFieldFieldParam("home");// taking inputs from the page control input text field 
 		//sendPushtoUser.saveasTemplateInputFieldField();// for save as template check box
@@ -133,8 +133,8 @@ public class MessageFieldTest extends TestBase{
 			sendPushtoUser.typetotitleInputFieldParam("title for the push");// taking input from the title input field 
 			sendPushtoUser.typetomessageInputFieldFieldParam("message of the push");// taking inputs from the message input text field 
 			sendPushtoUser.typeAndClearmessageInputFieldFieldParam(""); //clear the text
-			sendPushtoUser.imageURLInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg\\");// taking inputs from the image url input text field taking inputs from the url for android input text field
-			sendPushtoUser.urlforAndroidInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg\\");// taking inputs from the url for android input text field  taking inputs from the url for ios input text field
+			sendPushtoUser.imageURLInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg\\");// taking inputs from the image url input text field 
+			sendPushtoUser.urlforAndroidInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg\\");// taking inputs from the url for android input text field 
 			sendPushtoUser.urlforiOSInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg\\");//taking inputs from the url for ios input text field  
 			sendPushtoUser.pageControInputFieldFieldParam("home");// taking inputs from the page control input text field 
 			//sendPushtoUser.saveasTemplateInputFieldField();// for save as template check box
@@ -166,8 +166,8 @@ public class MessageFieldTest extends TestBase{
 			sendPushtoUser.typetotitleInputFieldParam("title for the push");// taking input from the title input field 
 			sendPushtoUser.typetomessageInputFieldFieldParam("message of the push");// taking inputs from the message input text field 
 			sendPushtoUser.typeAndClearmessageInputFieldFieldParam(""); //undo the text
-			sendPushtoUser.imageURLInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg\\");// taking inputs from the image url input text field taking inputs from the url for android input text field
-			sendPushtoUser.urlforAndroidInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg\\");// taking inputs from the url for android input text field  taking inputs from the url for ios input text field
+			sendPushtoUser.imageURLInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg\\");// taking inputs from the image url input text field 
+			sendPushtoUser.urlforAndroidInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg\\");// taking inputs from the url for android input text field 
 			sendPushtoUser.urlforiOSInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg\\");//taking inputs from the url for ios input text field  
 			sendPushtoUser.pageControInputFieldFieldParam("home");// taking inputs from the page control input text field 
 			//sendPushtoUser.saveasTemplateInputFieldField();// for save as template check box
@@ -202,8 +202,8 @@ public class MessageFieldTest extends TestBase{
 			sendPushtoUser.typetomessageInputFieldFieldParam("message for the push");// taking inputs from the message input text field 
 			sendPushtoUser.typeAndClearmessageInputFieldFieldParam(""); //undo the text
 			sendPushtoUser.typetomessageInputFieldFieldParam("message for the push");//redo the text
-			sendPushtoUser.imageURLInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg");// taking inputs from the image url input text field taking inputs from the url for android input text field
-			sendPushtoUser.urlforAndroidInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg");// taking inputs from the url for android input text field  taking inputs from the url for ios input text field
+			sendPushtoUser.imageURLInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg");// taking inputs from the image url input text field 
+			sendPushtoUser.urlforAndroidInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg");// taking inputs from the url for android input text field  
 			sendPushtoUser.urlforiOSInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg");//taking inputs from the url for ios input text field  
 			sendPushtoUser.pageControInputFieldFieldParam("home");// taking inputs from the page control input text field 
 			//sendPushtoUser.saveasTemplateInputFieldField();// for save as template check box
@@ -236,8 +236,8 @@ public class MessageFieldTest extends TestBase{
 			sendPushtoUser.typetotitleInputFieldParam("title for the push");// taking input from the title input field  
 			sendPushtoUser.typetomessageInputFieldFieldParam("message for the push");// taking inputs from the message input text field 
 			sendPushtoUser.typetothemessageInputFieldFieldTabKey(); // navigate the tab key
-			sendPushtoUser.imageURLInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg");// taking inputs from the image url input text field taking inputs from the url for android input text field
-			sendPushtoUser.urlforAndroidInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg");// taking inputs from the url for android input text field  taking inputs from the url for ios input text field
+			sendPushtoUser.imageURLInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg");// taking inputs from the image url input text field
+			sendPushtoUser.urlforAndroidInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg");// taking inputs from the url for android input text field  
 			sendPushtoUser.urlforiOSInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg");//taking inputs from the url for ios input text field  
 			sendPushtoUser.pageControInputFieldFieldParam("home");// taking inputs from the page control input text field 
 			sendPushtoUser.saveasTemplateInputFieldField();// for save as template check box
@@ -268,8 +268,8 @@ public class MessageFieldTest extends TestBase{
 			sendPushtoUser.selectDatafromCopyTemplateDropDownElement();//  select inputs data form the copy template drop down field 
 			sendPushtoUser.typetotitleInputFieldParam("title for the push");// taking input from the title input field  
 			sendPushtoUser.typetomessageInputFieldFieldParam("message for the push");// taking inputs from the message input text field 
-			sendPushtoUser.imageURLInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg");// taking inputs from the image url input text field taking inputs from the url for android input text field
-			sendPushtoUser.urlforAndroidInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg");// taking inputs from the url for android input text field  taking inputs from the url for ios input text field
+			sendPushtoUser.imageURLInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg");// taking inputs from the image url input text field 
+			sendPushtoUser.urlforAndroidInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg");// taking inputs from the url for android input text field  
 			sendPushtoUser.urlforiOSInputFieldFieldParam("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg");//taking inputs from the url for ios input text field  
 			sendPushtoUser.pageControInputFieldFieldParam("home");// taking inputs from the page control input text field 
 			sendPushtoUser.saveasTemplateInputFieldField();// for save as template check box
