@@ -178,7 +178,7 @@ public class AddNewBanner extends TestBase{
 		return new AddNewBanner ();
 	}
 	
-	//3.0.2. Type Message Input Field (enter text, then clear Message Input Field)
+	//3.0.2. Type Android Onclick URL Input Field (enter text, then clear Message Input Field)
 	public AddNewBanner typeAndClearOnclickURLParam(String android_onclick_url) throws InterruptedException {
 		onclickURLElementFieldHighlight();
 		onclickURLElement.sendKeys(android_onclick_url);
@@ -187,7 +187,7 @@ public class AddNewBanner extends TestBase{
 		return new AddNewBanner ();									    			
 	}		
 		
-	//3.0.3. Type to Message Input Field
+	//3.0.3. Type to Android Onclick URL Input Field
 	public AddNewBanner  typetotheOnclickURLFieldtabKey() throws InterruptedException {
 		onclickURLElementFieldHighlight();
 		onclickURLElement.sendKeys(Keys.TAB);
@@ -239,6 +239,22 @@ public class AddNewBanner extends TestBase{
 		homeBanneriOSElement.sendKeys(banner_iOS);
 		return new AddNewBanner ();
 	}
+	//4.0.2. Type  App Home Banner iOS Input Field (enter text, then clear Message Input Field)
+	public AddNewBanner typeAndClearHomeBanneriOSElementFieldParam(String banner_iOS) throws InterruptedException {
+		homeBanneriOSElementFieldHighlight();
+		homeBanneriOSElement.sendKeys(banner_iOS);
+		Thread.sleep(100);
+		homeBanneriOSElement.clear();
+		return new AddNewBanner ();									    			
+	}		
+		
+	//4.0.3. Type to App Home Banner iOS Input Field
+	public AddNewBanner  typetotheHomeBanneriOSElementFieldtabKey() throws InterruptedException {
+		homeBanneriOSElementFieldHighlight();
+		homeBanneriOSElement.sendKeys(Keys.TAB);
+		return new AddNewBanner();
+	}
+	
 	
 	/*****************************************************
 								* ************************************************************************************************
@@ -284,6 +300,21 @@ public class AddNewBanner extends TestBase{
 		iOSonClickURLElement.sendKeys(iOS_onclick_url);
 		return new AddNewBanner ();
 	}
+	//5.0.2. Type  App Home iOS Onclick URL Input Field (enter text, then clear Message Input Field)
+	public AddNewBanner typeAndCleariOSOnclickURLElementFieldParam(String iOS_onclick_url) throws InterruptedException {
+		iOSOnclickURLElementFieldHighlight();
+		iOSonClickURLElement.sendKeys(iOS_onclick_url);
+		Thread.sleep(100);
+		iOSonClickURLElement.clear();
+		return new AddNewBanner ();									    			
+	}		
+		
+	//5.0.3. Type to App Home iOS Onclick URL Input Field
+	public AddNewBanner  typetotheiOSOnclickURLElementFieldtabKey() throws InterruptedException {
+		iOSOnclickURLElementFieldHighlight();
+		iOSonClickURLElement.sendKeys(Keys.TAB);
+		return new AddNewBanner();
+	}
 	
 	/*****************************************************
 								* ************************************************************************************************
@@ -323,11 +354,27 @@ public class AddNewBanner extends TestBase{
 		return new AddNewBanner();
 	}
 	
-	//6.  Type to the  Reseller Panel Banner Element 
+	//6.  Type to the Reseller Panel Banner Element 
 	public AddNewBanner  typeToResellerPanelBannerFieldParam(String reseller_banner) throws InterruptedException {
 		resellerPanelBannerElementFieldHighlight();
 		resellerPanelBannerElement.sendKeys(reseller_banner);
 		return new AddNewBanner ();
+	}
+	
+	//6.0.2. Type  Reseller Panel Banner Input Field (enter text, then clear Message Input Field)
+	public AddNewBanner typeAndClearResellerPanelBannerFieldParam(String reseller_banner) throws InterruptedException {
+		resellerPanelBannerElementFieldHighlight();
+		resellerPanelBannerElement.sendKeys(reseller_banner);
+		Thread.sleep(100);
+		resellerPanelBannerElement.clear();
+		return new AddNewBanner ();									    			
+	}		
+		
+	//6.0.3. Type to Reseller Panel Banner Input Field
+	public AddNewBanner  typetotheResellerPanelBannerFieldtabKey() throws InterruptedException {
+		resellerPanelBannerElementFieldHighlight();
+		resellerPanelBannerElement.sendKeys(Keys.TAB);
+		return new AddNewBanner();
 	}
 	
 	/*****************************************************
@@ -376,6 +423,23 @@ public class AddNewBanner extends TestBase{
 		return new AddNewBanner ();
 	}
 	
+	//7.0.2. Type  Reseller Onclick URL Input Field (enter text, then clear Message Input Field)
+	public AddNewBanner typeAndClearResellerOnclickFieldParam(String reseller_onclick_url) throws InterruptedException {
+		resellerOnclickURLElementFieldHighlight();
+		reselleronClickURLElement.sendKeys(reseller_onclick_url);
+		Thread.sleep(100);
+		reselleronClickURLElement.clear();
+		return new AddNewBanner ();									    			
+	}		
+		
+	//7.0.3. Type to Reseller Onclick URL Input Field
+	public AddNewBanner  typetotheResellerOnclickFieldtabKey() throws InterruptedException {
+		resellerOnclickURLElementFieldHighlight();
+		reselleronClickURLElement.sendKeys(Keys.TAB);
+		return new AddNewBanner();
+	}
+	
+	
 	/*****************************************************
 								* ************************************************************************************************
 		    					* ************************    End No.07 - Reseller Onclick URL Element    ************************
@@ -422,6 +486,8 @@ public class AddNewBanner extends TestBase{
 		valueForCountrySearch.click();/*click on the element from result of the first value. */
 		return new AddNewBanner();
 	}
+	
+
 	
 	/************************************************************
 										* **************************************************************************************************
@@ -507,6 +573,23 @@ public class AddNewBanner extends TestBase{
 		bannerRemarksElement.sendKeys(remarks);
 		return new AddNewBanner ();
 	}
+	
+	//10.0.2. Type  App Home iOS Onclick URL Input Field (enter text, then clear Message Input Field)
+	public AddNewBanner typeAndClearBannerRemarksFieldParam(String remarks) throws InterruptedException {
+		bannerRemarksElementFieldHighlight();
+		bannerRemarksElement.sendKeys(remarks);
+		Thread.sleep(100);
+		bannerRemarksElement.clear();
+		return new AddNewBanner ();									    			
+	}		
+		
+	//10.0.3. Type to App Home iOS Onclick URL Input Field
+	public AddNewBanner  typetotheBannerRemarksFieldtabKey() throws InterruptedException {
+		bannerRemarksElementFieldHighlight();
+		bannerRemarksElement.sendKeys(Keys.TAB);
+		return new AddNewBanner();
+	}
+	
 	
 	/*****************************************************
 								* ************************************************************************************************
