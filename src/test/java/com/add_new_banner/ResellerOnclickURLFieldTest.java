@@ -60,7 +60,7 @@ public class ResellerOnclickURLFieldTest extends TestBase{
 	addNewBanner.clickOnUserTypeAppPaidElement();// check box for the User Type (paid)
 	addNewBanner.clickOnUserTypeAppPremiumElement();// check box for the User Type (premium)
 	//addNewBanner.();/
-	//addNewBanner.();// ha
+	//addNewBanner.();// 
 	}
 	//@Ignore
 	//@Test(priority=1)
