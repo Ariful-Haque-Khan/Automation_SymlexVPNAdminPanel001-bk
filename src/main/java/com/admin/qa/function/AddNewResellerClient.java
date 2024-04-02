@@ -48,6 +48,29 @@ public class AddNewResellerClient extends TestBase{
 		resellerNameElement.sendKeys("rumy1yr");
 		return new AddNewResellerClient();
 	}
+	
+	//1.0.1  Type to the Reseller Name
+	public AddNewResellerClient  typeToResellerNameInputFieldParam(String reseller_name) throws InterruptedException {
+		resellerNameHighlight();
+		resellerNameElement.sendKeys(reseller_name);
+		return new AddNewResellerClient();
+	}
+	
+	//1.0.2. Type Reseller Name Input Field (enter text, then clear Message Input Field)
+	public AddNewResellerClient  typeAndClearResellerNameInputFieldParam(String reseller_name) throws InterruptedException {
+		resellerNameHighlight();
+		resellerNameElement.sendKeys(reseller_name);
+		Thread.sleep(100);
+		resellerNameElement.clear();
+		return new AddNewResellerClient  ();									    			
+	}		
+		
+	//1.0.3. Type to Reseller Name Input Field
+	public AddNewResellerClient   typetoResellerNameInputFieldtabKey() throws InterruptedException {
+		resellerNameHighlight();
+		resellerNameElement.sendKeys(Keys.TAB);
+		return new AddNewResellerClient ();
+	}
 	/***************************************************************************************************************
 										 * **************************    End No.1 - Reseller Name    ***************
 										******************************************************************************************************************************/
@@ -79,8 +102,31 @@ public class AddNewResellerClient extends TestBase{
 	//02. Type to the Login
 	public AddNewResellerClient typeTologinInputFieldElement() throws InterruptedException {
 		resellerLoginInputFieldHighlight();
-		loginInputFieldElement.sendKeys("rumy1yr");
+		loginInputFieldElement.sendKeys("");
 		return new AddNewResellerClient();
+	}
+	
+	//2.0.1  Type to the Login
+	public AddNewResellerClient  typeTologinInputFieldParam(String login) throws InterruptedException {
+		resellerLoginInputFieldHighlight();
+		loginInputFieldElement.sendKeys(login);
+		return new AddNewResellerClient();
+	}
+	
+	//1.0.2. Type Login Input Field (enter text, then clear Message Input Field)
+	public AddNewResellerClient  typeAndClearloginInputFieldParam(String login) throws InterruptedException {
+		resellerLoginInputFieldHighlight();
+		loginInputFieldElement.sendKeys(login);
+		Thread.sleep(100);
+		loginInputFieldElement.clear();
+		return new AddNewResellerClient  ();									    			
+	}		
+		
+	//1.0.3. Type to Login Input Field
+	public AddNewResellerClient   typetologinInputFieldtabKey() throws InterruptedException {
+		resellerLoginInputFieldHighlight();
+		loginInputFieldElement.sendKeys(Keys.TAB);
+		return new AddNewResellerClient ();
 	}
 	/***************************************************************************************************************
 			 * **************************    End No.2 - Login Field    ***************
@@ -113,8 +159,31 @@ public class AddNewResellerClient extends TestBase{
 	//03. Type to the Password Input Field
 	public AddNewResellerClient typeToPasswordInputFieldElement() throws InterruptedException {
 		resellerPasswordInputFieldHighlight();
-		passwordInputFieldElement.sendKeys("rumy1yr");
+		passwordInputFieldElement.sendKeys("");
 		return new AddNewResellerClient();
+	}
+	
+	//3.0.1  Type to the Password Input Field 
+	public AddNewResellerClient  typeToPasswordInputFieldParam(String password) throws InterruptedException {
+		resellerPasswordInputFieldHighlight();
+		passwordInputFieldElement.sendKeys(password);
+		return new AddNewResellerClient();
+	}
+	
+	//1.0.2. Type Login Input Field (enter text, then clear Message Input Field)
+	public AddNewResellerClient  typeAndClearPasswordInputFieldParam(String password) throws InterruptedException {
+		resellerLoginInputFieldHighlight();
+		loginInputFieldElement.sendKeys(password);
+		Thread.sleep(100);
+		loginInputFieldElement.clear();
+		return new AddNewResellerClient  ();									    			
+	}		
+		
+	//1.0.3. Type to Login Input Field
+	public AddNewResellerClient   typetoPasswordInputFieldtabKey() throws InterruptedException {
+		resellerLoginInputFieldHighlight();
+		loginInputFieldElement.sendKeys(Keys.TAB);
+		return new AddNewResellerClient ();
 	}
 	/***************************************************************************************************************
 			 * **************************    End No.3 - Password Field    ***************
@@ -143,11 +212,34 @@ public class AddNewResellerClient extends TestBase{
 		}
 	}
 	
-	//04. Type to the IP Bundle Drop Down Field
+	//04. Type to the Credit Limit
 	public AddNewResellerClient typeToCreditLimitInputFieldElement() throws InterruptedException {
 		resellerCreditLimitInputFieldHighlight();
-		creditLimitInputFieldElement.sendKeys("rumy1yr");
+		creditLimitInputFieldElement.sendKeys("");
 		return new AddNewResellerClient();
+	}
+	
+	//4.0.1  Type to the Credit Limit Input Field 
+	public AddNewResellerClient  typeToCreditLimitInputFieldParam(String credit_limit) throws InterruptedException {
+		resellerCreditLimitInputFieldHighlight();
+		creditLimitInputFieldElement.sendKeys(credit_limit);
+		return new AddNewResellerClient();
+	}
+	
+	//1.0.2. Type Credit Limit Input Field (enter text, then clear Message Input Field)
+	public AddNewResellerClient  typeAndClearCreditLimitInputFieldParam(String credit_limit) throws InterruptedException {
+		resellerCreditLimitInputFieldHighlight();
+		creditLimitInputFieldElement.sendKeys(credit_limit);
+		Thread.sleep(100);
+		creditLimitInputFieldElement.clear();
+		return new AddNewResellerClient  ();									    			
+	}		
+		
+	//1.0.3. Type to Credit Limit Input Field
+	public AddNewResellerClient   typetoCreditLimitInputFieldtabKey() throws InterruptedException {
+		resellerCreditLimitInputFieldHighlight();
+		creditLimitInputFieldElement.sendKeys(Keys.TAB);
+		return new AddNewResellerClient ();
 	}
 	/***************************************************************************************************************
 			 * **************************    End No.4 - Credit Limit Field    ***************
@@ -276,7 +368,7 @@ public class AddNewResellerClient extends TestBase{
 		resellerRatePlanDropDownFieldHighlight();
 		try {Thread.sleep(2000);} catch (InterruptedException ie) {}
 		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div/form/div[1]/div/div[2]/div[7]/div/select")));
-		drp.selectByIndex(15);
+		drp.selectByIndex(40);
 		return new AddNewResellerClient(); 
 	}
 	/***************************************************************************************************************
@@ -312,7 +404,7 @@ public class AddNewResellerClient extends TestBase{
 		resellerPINResetOptionDropDownFieldHighlight();
 		try {Thread.sleep(2000);} catch (InterruptedException ie) {}
 		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div/form/div[1]/div/div[2]/div[8]/div/select")));
-		drp.selectByIndex(0);
+		drp.selectByIndex(1);
 		return new AddNewResellerClient(); 
 	}
 	/***************************************************************************************************************
@@ -452,7 +544,15 @@ public class AddNewResellerClient extends TestBase{
 	//012. Type to the Brand Name Input Field
 	public AddNewResellerClient typeToBrandNameInputFieldElement() throws InterruptedException {
 		resellerBrandNameInputFieldHighlight();
-		brandNameInputFieldElement.sendKeys("rumy1yr");
+		brandNameInputFieldElement.sendKeys("");
+		return new AddNewResellerClient();
+	}
+	
+	
+	//12.0.1  Type to the Brand Name  Input Field 
+	public AddNewResellerClient  typeToBrandNameInputFieldParam(String brand_name) throws InterruptedException {
+		resellerBrandNameInputFieldHighlight();
+		brandNameInputFieldElement.sendKeys(brand_name);
 		return new AddNewResellerClient();
 	}
 	/***************************************************************************************************************
@@ -485,7 +585,14 @@ public class AddNewResellerClient extends TestBase{
 	//013. Type to the Brand PIN Prefix Input Field
 	public AddNewResellerClient typeToBrandPINPrefixInputFieldElement() throws InterruptedException {
 		resellerBrandPINPrefixInputFieldHighlight();
-		brandPINPrefixInputFieldElement.sendKeys("ab");
+		brandPINPrefixInputFieldElement.sendKeys("");
+		return new AddNewResellerClient();
+	}
+
+	//13.0.1  Type to the Brand PIN Prefix Input Field 
+	public AddNewResellerClient  typeToBrandPINPrefixInputFieldParam(String pin_prefix) throws InterruptedException {
+		resellerBrandPINPrefixInputFieldHighlight();
+		brandPINPrefixInputFieldElement.sendKeys(pin_prefix);
 		return new AddNewResellerClient();
 	}
 	/***************************************************************************************************************
@@ -567,7 +674,7 @@ public class AddNewResellerClient extends TestBase{
 		isCustomizePanelDropDownFieldHighlight();
 		try {Thread.sleep(2000);} catch (InterruptedException ie) {}
 		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div/form/div[1]/div/div[2]/div[15]/div/select")));
-		drp.selectByIndex(2);
+		drp.selectByIndex(1);
 		return new AddNewResellerClient(); 
 	}
 	/***************************************************************************************************************
@@ -577,6 +684,7 @@ public class AddNewResellerClient extends TestBase{
 	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
      * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.16 -   Is Customize Panel - Panel Name Input Field    $$$$$$$$$$$$$$$$$$$$$$$$$$$$
      *$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
 	//016. Element of Is Customize Panel - Panel Name Input Field
 	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div[1]/div/div[2]/div[16]/div/input")
 	WebElement isCustomizePanelPanelNameInputFieldElement;
@@ -601,7 +709,14 @@ public class AddNewResellerClient extends TestBase{
 	//016. Type to the Is Customize Panel - Panel Name Input Field
 	public AddNewResellerClient typeToIsCustomizePanelPanelNameFieldElement() throws InterruptedException {
 		isCustomizePanelPanelNameInputFieldHighlight();
-		isCustomizePanelPanelNameInputFieldElement.sendKeys("test");
+		isCustomizePanelPanelNameInputFieldElement.sendKeys("");
+		return new AddNewResellerClient();
+	}
+	
+	//16.0.1  Type to the Customize Panel - Panel Name Input Field 
+	public AddNewResellerClient  typeToIsCustomizePanelPanelNameFieldParam(String panel_name) throws InterruptedException {
+		isCustomizePanelPanelNameInputFieldHighlight();
+		isCustomizePanelPanelNameInputFieldElement.sendKeys(panel_name);
 		return new AddNewResellerClient();
 	}
 	/***************************************************************************************************************
@@ -674,12 +789,20 @@ public class AddNewResellerClient extends TestBase{
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0,250)");
 		resellerpinLimitInputFieldHighlight();
-		pinLimitInputFieldElement.sendKeys("100");
-		String s = Keys.chord(Keys.CONTROL, "a");
+		pinLimitInputFieldElement.sendKeys("");
+		String s = Keys.chord(Keys.CONTROL, "");
 		pinLimitInputFieldElement.sendKeys(s);
 		pinLimitInputFieldElement.sendKeys(Keys.DELETE);
 		Thread.sleep(2000);
-		pinLimitInputFieldElement.sendKeys("100");	
+		pinLimitInputFieldElement.sendKeys("");	
+		return new AddNewResellerClient();
+	}
+	
+	
+	//18.0.1  Type to the pin Limit Field
+	public AddNewResellerClient  typeToPinLimitInputFieldParam(String pin_limit) throws InterruptedException {
+		resellerpinLimitInputFieldHighlight();
+		pinLimitInputFieldElement.sendKeys(pin_limit);
 		return new AddNewResellerClient();
 	}
 	/***************************************************************************************************************
@@ -789,12 +912,15 @@ public class AddNewResellerClient extends TestBase{
 		//numberOfDevicesInputFieldHighlight();
 		//new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div/section[2]/div/form/div[1]/div/div[2]/div[20]/div/input"))).sendKeys("1");
 		numberOfDevicesInputFieldHighlight();
-		numberOfDevicesInputFieldElement.sendKeys("1");
-		String s = Keys.chord(Keys.CONTROL, "a");
-		numberOfDevicesInputFieldElement.sendKeys(s);
-		numberOfDevicesInputFieldElement.sendKeys(Keys.DELETE);
-		Thread.sleep(2000);
-		numberOfDevicesInputFieldElement.sendKeys("100");	
+		numberOfDevicesInputFieldElement.sendKeys("");
+		return new AddNewResellerClient();
+	}
+	
+	
+	//21.0.1  Type to the Number Of Devices Field
+	public AddNewResellerClient  typeTonumberOfDevicesInputFieldParam(String number_devices) throws InterruptedException {
+		numberOfDevicesInputFieldHighlight();
+		numberOfDevicesInputFieldElement.sendKeys(number_devices);
 		return new AddNewResellerClient();
 	}
 	/***************************************************************************************************************
@@ -830,13 +956,15 @@ public class AddNewResellerClient extends TestBase{
 	public AddNewResellerClient resellerLimitInputFieldElement() throws InterruptedException {
 		//numberOfDevicesInputFieldHighlight();
 		//new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div/section[2]/div/form/div[1]/div/div[2]/div[20]/div/input"))).sendKeys("1");
+		
+		resellerLimitInputFieldElement.sendKeys("");	
+		return new AddNewResellerClient();
+	}
+	
+	//22.0.1  Type to the Reseller Limit Field
+	public AddNewResellerClient  typeToresellerLimitInputFieldParam(String reseller_limit) throws InterruptedException {
 		resellerLimitInputFieldHighlight();
-		resellerLimitInputFieldElement.sendKeys("1");
-		String s = Keys.chord(Keys.CONTROL, "a");
-		resellerLimitInputFieldElement.sendKeys(s);
-		resellerLimitInputFieldElement.sendKeys(Keys.DELETE);
-		Thread.sleep(2000);
-		resellerLimitInputFieldElement.sendKeys("100");	
+		resellerLimitInputFieldElement.sendKeys(reseller_limit);
 		return new AddNewResellerClient();
 	}
 	/***************************************************************************************************************
@@ -872,12 +1000,14 @@ public class AddNewResellerClient extends TestBase{
 		//numberOfDevicesInputFieldHighlight();
 		//new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div/section[2]/div/form/div[1]/div/div[2]/div[20]/div/input"))).sendKeys("1");
 		balanceLimitInputFieldHighlight();
-		balanceLimitInputFieldElement.sendKeys("1");
-		String s = Keys.chord(Keys.CONTROL, "a");
-		balanceLimitInputFieldElement.sendKeys(s);
-		balanceLimitInputFieldElement.sendKeys(Keys.DELETE);
-		Thread.sleep(2000);
-		balanceLimitInputFieldElement.sendKeys("700");	
+		balanceLimitInputFieldElement.sendKeys("");	
+		return new AddNewResellerClient();
+	}
+	
+	//23.0.1  Type to the Balance Limit Field
+	public AddNewResellerClient  typeTobalanceLimitInputFieldParam(String balance_limit) throws InterruptedException {
+		balanceLimitInputFieldHighlight();
+		balanceLimitInputFieldElement.sendKeys(balance_limit);
 		return new AddNewResellerClient();
 	}
 	/***************************************************************************************************************
@@ -914,12 +1044,15 @@ public class AddNewResellerClient extends TestBase{
 		//numberOfDevicesInputFieldHighlight();
 		//new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div/section[2]/div/form/div[1]/div/div[2]/div[20]/div/input"))).sendKeys("1");
 		emailInputFieldHighlight();
-		emailInputFieldElement.sendKeys("1");
-		String s = Keys.chord(Keys.CONTROL, "a");
-		emailInputFieldElement.sendKeys(s);
-		emailInputFieldElement.sendKeys(Keys.DELETE);
-		Thread.sleep(2000);
-		emailInputFieldElement.sendKeys("test@qa.com");	
+		emailInputFieldElement.sendKeys("");
+		
+		return new AddNewResellerClient();
+	}
+	
+	//24.0.1  Type to the email Input Field
+	public AddNewResellerClient  typeToemailInputFieldFieldParam(String email) throws InterruptedException {
+		emailInputFieldHighlight();
+		emailInputFieldElement.sendKeys(email);
 		return new AddNewResellerClient();
 	}
 	/***************************************************************************************************************
@@ -936,7 +1069,7 @@ public class AddNewResellerClient extends TestBase{
 	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div[2]/div/div[2]/div[4]/div/input")
 	WebElement phoneNoInputFieldElement;
 	
-	//025. Highlight the Email Input Field
+	//025. Highlight the Phone No Input Field
 	public void phoneNoInputFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -951,17 +1084,20 @@ public class AddNewResellerClient extends TestBase{
 		}
 	}
 	
-	//025. Type to the email Input Field
+	//025. Type to the Phone No Input Field
 	public AddNewResellerClient phoneNoInputFieldElement() throws InterruptedException {
 		//numberOfDevicesInputFieldHighlight();
 		//new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div/section[2]/div/form/div[1]/div/div[2]/div[20]/div/input"))).sendKeys("1");
 		phoneNoInputFieldHighlight();
-		phoneNoInputFieldElement.sendKeys("1");
-		String s = Keys.chord(Keys.CONTROL, "a");
-		phoneNoInputFieldElement.sendKeys(s);
-		phoneNoInputFieldElement.sendKeys(Keys.DELETE);
-		Thread.sleep(2000);
 		phoneNoInputFieldElement.sendKeys("01795381162");	
+		return new AddNewResellerClient();
+	}
+	
+	
+	//25.0.1  Type to the phone no Input Field
+	public AddNewResellerClient  typeTophoneNoInputFieldEParam(String phone) throws InterruptedException {
+		phoneNoInputFieldHighlight();
+		phoneNoInputFieldElement.sendKeys(phone);
 		return new AddNewResellerClient();
 	}
 	/***************************************************************************************************************
@@ -1004,6 +1140,13 @@ public class AddNewResellerClient extends TestBase{
 		cityInputFieldElement.sendKeys(Keys.DELETE);
 		Thread.sleep(2000);
 		cityInputFieldElement.sendKeys("Dhaka");	
+		return new AddNewResellerClient();
+	}
+	
+	//26.0.1  Type to the City Input Field
+	public AddNewResellerClient  typeTocityInputFieldEParam(String city) throws InterruptedException {
+		cityInputFieldHighlight();
+		cityInputFieldElement.sendKeys(city);
 		return new AddNewResellerClient();
 	}
 	/***************************************************************************************************************
@@ -1086,6 +1229,13 @@ public class AddNewResellerClient extends TestBase{
 		stateInputFieldElement.sendKeys("Dhaka");	
 		return new AddNewResellerClient();
 	}
+	
+	//28.0.1  Type to the City Input Field
+	public AddNewResellerClient  typeTostateInputFieldEParam(String state) throws InterruptedException {
+		stateInputFieldHighlight();
+		stateInputFieldElement.sendKeys(state);
+		return new AddNewResellerClient();
+	}
 	/***************************************************************************************************************
 	         *******************************************************************************************************
 			 ******************************* End No.28 -  State Input Field ****************************
@@ -1125,6 +1275,12 @@ public class AddNewResellerClient extends TestBase{
 		//Thread.sleep(2000);
 		addressInputFieldElement.click();
 		addressInputFieldElement.sendKeys("DhakaBangladesh");	
+		return new AddNewResellerClient();
+	}
+	//28.0.1  Type to the address Input Field
+	public AddNewResellerClient  typeToaddressInputFieldParam(String address) throws InterruptedException {
+		addressInputFieldHighlight();
+		addressInputFieldElement.sendKeys(address);
 		return new AddNewResellerClient();
 	}
 	/***************************************************************************************************************
@@ -1216,6 +1372,13 @@ public class AddNewResellerClient extends TestBase{
 		tvcreditLimitInputFieldElement.sendKeys(Keys.DELETE);
 		Thread.sleep(2000);
 		tvcreditLimitInputFieldElement.sendKeys("50");	
+		return new AddNewResellerClient();
+	}
+	
+	//31.0.1  Type to the address Input Field
+	public AddNewResellerClient  creditLimitInputFieldParam(String credit_limit) throws InterruptedException {
+		creditLimitInputFieldHighlight();
+		tvcreditLimitInputFieldElement.sendKeys(credit_limit);
 		return new AddNewResellerClient();
 	}
 	/***************************************************************************************************************
