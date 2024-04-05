@@ -41,7 +41,7 @@ public class AppHomeBannerAndroidFieldTest extends TestBase{
 	public void AddNewBannerCommon(String banner_android) throws IOException, InterruptedException {
 		addNewBanner = loginPage.addNewBannerLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		addNewBanner.openAddNewBannerFormPage();// open the Add New Banner Form Page.
-		addNewBanner.typeToBannerNameInputFieldParam("");//taking input from the Banner Name
+		addNewBanner.typeToBannerNameInputFieldParam("1 year offer");//taking input from the Banner Name
 		addNewBanner.typeToAppHomeBannerAndroidFieldParam(banner_android);// taking input from the App Home Banner Android
 		addNewBanner.typeToAndroidOnclickURLElementFieldParam("url for android");// taking input from the Android Onclick URL
 		addNewBanner.typeToHomeBanneriOSElementFieldParam("banner for ios");// taking input from the App Home Banner iOS
@@ -66,7 +66,7 @@ public class AppHomeBannerAndroidFieldTest extends TestBase{
 	//@Ignore
 	//@Test(priority=1)
 	public void enter_empty_text_into_App_Home_Banner_Android_input_field() throws IOException, InterruptedException {AddNewBannerCommon("");	}
-	//@Test(priority=2)
+	@Test(priority=2)
 	public void enter_a_valid_text_into_App_Home_Banner_Android_input_field() throws IOException, InterruptedException {AddNewBannerCommon("banner for android user");	}
 	//@Test(priority=3)
 	public void enter_the_above_maximum_allowed_length_of_characters_into_App_Home_Banner_Android_input_field() throws IOException, InterruptedException{AddNewBannerCommon("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaniy1yr");}
