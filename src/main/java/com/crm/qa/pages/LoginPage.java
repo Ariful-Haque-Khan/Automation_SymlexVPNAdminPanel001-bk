@@ -36,6 +36,7 @@ import com.admin.qa.function.AddPINJail;
 import com.admin.qa.function.AddPINValidity;
 import com.admin.qa.function.AddPushTemplate;
 import com.admin.qa.function.CreateNewApp;
+import com.admin.qa.function.NewAdminCreation;
 import com.admin.qa.function.NewCustomizeResellerPanel;
 import com.admin.qa.function.OnlinePINActivation;
 import com.admin.qa.function.OnlinePINMigration;
@@ -415,7 +416,7 @@ public class LoginPage extends TestBase{
 		password.sendKeys(pwd);
 		loginBtn.click();
 		
-		return new AddNewIP(); //HomePage is the landing page for LoginPage
+		return new AddNewIP(); //Login form Add New IP Form page
 	}
 	
 	public AddNewCampaign addNewCampaignLogin(String uname , String pwd) {
@@ -424,7 +425,16 @@ public class LoginPage extends TestBase{
 		password.sendKeys(pwd);
 		loginBtn.click();
 		
-		return new AddNewCampaign(); //HomePage is the landing page for LoginPage
+		return new AddNewCampaign(); //Login form Add New Campaign Form page
+	}
+	
+	public NewAdminCreation newAdminCreationLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new NewAdminCreation(); //Login form New Admin Creation Form page
 	}
 	
     
