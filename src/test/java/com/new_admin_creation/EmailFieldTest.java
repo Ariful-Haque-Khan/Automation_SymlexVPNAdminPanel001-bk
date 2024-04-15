@@ -60,7 +60,7 @@ public class EmailFieldTest extends TestBase{
 	//@Test(priority=1)
 	public void enter_empty_text_into_Email_input_field() throws IOException, InterruptedException {newAdminCreationCommon("");	}
 	//@Test(priority=2)
-	public void enter_a_valid_text_into_Email_input_field() throws IOException, InterruptedException {newAdminCreationCommon("123456");	}
+	public void enter_a_valid_text_into_Email_input_field() throws IOException, InterruptedException {newAdminCreationCommon("abc@gmail.com");	}
 	//@Test(priority=3)
 	public void enter_the_above_maximum_allowed_length_of_characters_into_Email_input_field() throws IOException, InterruptedException{newAdminCreationCommon("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaniy1yr");}
 	//@Test(priority=4)
