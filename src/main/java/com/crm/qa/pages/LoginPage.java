@@ -31,6 +31,7 @@ import com.admin.qa.function.AddNewCampaign;
 import com.admin.qa.function.AddNewIP;
 import com.admin.qa.function.AddNewNotice;
 import com.admin.qa.function.AddNewResellerClient;
+import com.admin.qa.function.AddNewRole;
 import com.admin.qa.function.AddNewServer;
 import com.admin.qa.function.AddPINJail;
 import com.admin.qa.function.AddPINValidity;
@@ -436,6 +437,16 @@ public class LoginPage extends TestBase{
 		
 		return new NewAdminCreation(); //Login form New Admin Creation Form page
 	}
+	
+	public AddNewRole addNewRoleLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new AddNewRole(); //Login form Add New Role Form page
+	}
+	
 	
     
 }
