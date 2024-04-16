@@ -40,10 +40,8 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: run specific tests with method
-        if: ${{inputs.testname}}
         run: >
-          mvn test
-          -Dtest=UserNameFieldTest#enter_a_valid_text_into_user_name_input_field
+          mvn test -Dtest=UserNameFieldTest#enter_a_valid_text_into_user_name_input_field
       - name: archive artifact
         uses: actions/upload-artifact@v3
         with:
