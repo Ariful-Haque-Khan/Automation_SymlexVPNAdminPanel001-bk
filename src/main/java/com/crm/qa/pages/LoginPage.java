@@ -27,13 +27,17 @@ import com.admin.qa.pages.IPManagementSectionLinks;
 import com.admin.qa.pages.MailAddressSectionLinks;
 import com.admin.qa.pages.OnlinePINReportsSectionLinks;
 import com.admin.qa.function.AddNewBanner;
+import com.admin.qa.function.AddNewCampaign;
+import com.admin.qa.function.AddNewIP;
 import com.admin.qa.function.AddNewNotice;
 import com.admin.qa.function.AddNewResellerClient;
+import com.admin.qa.function.AddNewRole;
 import com.admin.qa.function.AddNewServer;
 import com.admin.qa.function.AddPINJail;
 import com.admin.qa.function.AddPINValidity;
 import com.admin.qa.function.AddPushTemplate;
 import com.admin.qa.function.CreateNewApp;
+import com.admin.qa.function.NewAdminCreation;
 import com.admin.qa.function.NewCustomizeResellerPanel;
 import com.admin.qa.function.OnlinePINActivation;
 import com.admin.qa.function.OnlinePINMigration;
@@ -406,5 +410,43 @@ public class LoginPage extends TestBase{
 		
 		return new AddNewRatePlan(); // Login form Add New Banner Form page
 	}
+
+	public AddNewIP addNewIPLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new AddNewIP(); //Login form Add New IP Form page
+	}
+	
+	public AddNewCampaign addNewCampaignLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new AddNewCampaign(); //Login form Add New Campaign Form page
+	}
+	
+	public NewAdminCreation newAdminCreationLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new NewAdminCreation(); //Login form New Admin Creation Form page
+	}
+	
+	public AddNewRole addNewRoleLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new AddNewRole(); //Login form Add New Role Form page
+	}
+	
+	
     
 }

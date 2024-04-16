@@ -2,6 +2,7 @@ package com.admin.qa.function;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -37,7 +38,7 @@ public class SendPushtoUser extends TestBase{
 	@FindBy(xpath="/html/body/span/span/span[2]/ul/li")
 	WebElement valueForAppNameSearch;
 	
-	//01. Highlight the Number of Days Input Field
+	//01. Highlight the App Name Input Field
 	public void appNameDropDownElementdHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -52,7 +53,7 @@ public class SendPushtoUser extends TestBase{
 		}
 	}
 	
-	//01. Type to the Number of Days
+	//01. Type to the App Name
 	public SendPushtoUser selectDatafromAppNameDropDownElement() throws InterruptedException {
 		appNameDropDownElementdHighlight();/* highlight the element of the tested. */
 		dropDownAppNameinSelect.click(); /*click on the element */
@@ -77,7 +78,7 @@ public class SendPushtoUser extends TestBase{
 	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[2]/form/div[1]/div/div[2]/div[2]/div[1]/select")
 	WebElement sendToElement;
 	
-	//02. Highlight the Auto Push Dropdown Field
+	//02. Highlight the Send To Dropdown Field
 	public void sendToFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -92,10 +93,9 @@ public class SendPushtoUser extends TestBase{
 		}
 	}
 	
-	//02. Select from Auto Push Dropdown Field
+	//02. Select from Send To Dropdown Field
 	public SendPushtoUser sendToDropdownField() throws InterruptedException {
-		sendToFieldHighlight
-		();/* highlight the element of the tested. */
+		sendToFieldHighlight();/* highlight the element of the tested. */
 		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div[2]/form/div[1]/div/div[2]/div[2]/div[1]/select")));
 		drp.selectByIndex(1);
 		return new SendPushtoUser(); 
@@ -178,6 +178,29 @@ public class SendPushtoUser extends TestBase{
 		return new SendPushtoUser();
 	}
 	
+	//4.0.1  Type to the PIN with comma separated
+	public SendPushtoUser  typetoPINWithCommaSeparatedInputParam(String pin_with_comma) throws InterruptedException {
+		pinWithCommaSeparatedInputboxElementHighlight();
+		pinWithCommaSeparatedInputboxElement.sendKeys(pin_with_comma);
+		return new SendPushtoUser ();
+	}
+
+	//4.0.2. Type PIN with comma separated Input Field (enter text, then clear PIN with comma separated Input Field)
+	public SendPushtoUser typeAndClearthePINWithCommaSeparatedParam(String notice) throws InterruptedException {
+		pinWithCommaSeparatedInputboxElementHighlight();
+		pinWithCommaSeparatedInputboxElement.sendKeys(notice);
+		Thread.sleep(100);
+		pinWithCommaSeparatedInputboxElement.clear();
+		return new SendPushtoUser ();									    			
+	}		
+		
+	//4.0.3. Type to PIN with comma separated
+	public SendPushtoUser  typetothePINWithCommaSeparatedTabKey() throws InterruptedException {
+		pinWithCommaSeparatedInputboxElementHighlight();
+		pinWithCommaSeparatedInputboxElement.sendKeys(Keys.TAB);
+		return new SendPushtoUser();
+	}
+	
 	/*******************************************************
 										***************************************************************************************************
 										********************    End No.04 - Input Box Element called PIN with comma separated     *********
@@ -221,7 +244,7 @@ public class SendPushtoUser extends TestBase{
 	public SendPushtoUser selectDatafromSelectResellerDropDownElement() throws InterruptedException {
 		selectResellerDropDownElementdHighlight();/* highlight the element of the tested. */
 		dropDownSelectResellerinSelect.click(); /*click on the element */
-		searchInSelectResellerDropDown.sendKeys("Symlex");/*type on the input field */
+		searchInSelectResellerDropDown.sendKeys("rumyqa");/*type on the input field */
 		valueForSelectResellerSearch.click();/*click on the element from result of the first value. */
 		return new SendPushtoUser();
 	}
@@ -237,11 +260,11 @@ public class SendPushtoUser extends TestBase{
 	 										*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  Start No.06 -  Checkbox Element called PIN Status Active   $$$$$$$$$$$$$$$
 	 										*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 	 																		*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
-	//06. PIN Status, Checkbox Element
+	//06. PIN Status,(active) Checkbox Element
 	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[2]/form/div[1]/div/div[2]/div[6]/div/div/div[1]/input")
 	WebElement pinStatusCheckboxElement;
 	
-	//06. Highlight the Number of With Child Field
+	//06. Highlight the PIN Status,(active) Field
 	public void pinStatusCheckboxElementdHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -256,7 +279,7 @@ public class SendPushtoUser extends TestBase{
 		}
 	}
 	
-	//06. Type to the With Child
+	//06. Type to the PIN Status,(active)
 	public SendPushtoUser datafromPINStatusCheckboxElement() throws InterruptedException {
 		pinStatusCheckboxElementdHighlight();
 		pinStatusCheckboxElement.click(); /*click on the element */
@@ -278,7 +301,7 @@ public class SendPushtoUser extends TestBase{
 	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[2]/form/div[1]/div/div[2]/div[6]/div/div/div[2]/input")
 	WebElement pinStatusInactiveCheckboxElement;
 	
-	//07. Highlight the Number of With Child Field
+	//07. Highlight the PIN Status Inactive Field
 	public void pinStatusInactiveCheckboxElementdHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -316,7 +339,7 @@ public class SendPushtoUser extends TestBase{
 	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[2]/form/div[1]/div/div[2]/div[6]/div/div/div[3]/input")
 	WebElement pinStatusExpiredCheckboxElement;
 	
-	//08. Highlight the Number of With Child Field
+	//08. Highlight the  PIN Status Expired, Checkbox Element
 	public void pinStatusExpiredCheckboxElementdHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -362,7 +385,7 @@ public class SendPushtoUser extends TestBase{
 	@FindBy(xpath="/html/body/span/span/span[2]/ul/li")
 	WebElement valueForPaymentMethodSearch;
 	
-	//09. Highlight the Payment Method Dropdown Field
+	//09. Highlight the Payment Method Drop down Field
 	public void paymentMethodDropDownElementdHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -410,7 +433,7 @@ public class SendPushtoUser extends TestBase{
 	@FindBy(xpath="/html/body/span/span/span[2]/ul/li")
 	WebElement valueForCountryFilterSearch;
 	
-	//10. Highlight the Payment Method Dropdown Field
+	//10. Highlight the Country Filter Dropdown Field
 	public void countryFilterDropDownElementdHighlight() throws InterruptedException {
 	if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -473,7 +496,7 @@ public class SendPushtoUser extends TestBase{
 		}
 	}
 	
-	//011. Type to the Number of Days
+	//011. Type to the Country
 	public SendPushtoUser selectDatafromCountryDropDownElement() throws InterruptedException {
 		countryDropDownElementdHighlight();/* highlight the element of the tested. */
 		dropDownCountrySelect.click(); /*click on the element */
@@ -545,7 +568,7 @@ public class SendPushtoUser extends TestBase{
 	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[2]/form/div[1]/div/div[2]/div[12]/div[1]/select")
 	WebElement dateFilterColumnElement;
 	
-	//13. Highlight the Date Filter Dropdown Field
+	//13. Highlight the Date Filter Column Dropdown Field
 	public void dateFilterColumnFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -679,7 +702,7 @@ public class SendPushtoUser extends TestBase{
 		}
 	}
 	
-	//16. Select from Date Filter Condition Start Dropdown Field
+	//16. Select from Date Filter Condition Start Drop down Field
 	public SendPushtoUser dateFilterConditionEndDropdownField() throws InterruptedException {
 		dateFilterConditionEndFieldHighlight();/* highlight the element of the tested. */
 		dateFilterConditionEndDropDownElement.sendKeys("2023-09-15"); /*type to the element. */
@@ -707,7 +730,7 @@ public class SendPushtoUser extends TestBase{
 	@FindBy(xpath="/html/body/span/span/span[1]/input")
 	WebElement searchInCopyTemplateDropDown;
 	
-	//17. App Name Element for Last click of first element On the Element
+	//17. Copy Template Element for Last click of first element On the Element
 	@FindBy(xpath="/html/body/span/span/span[2]/ul/li")
 	WebElement valueForCopyTemplateSearch;
 	
@@ -730,7 +753,7 @@ public class SendPushtoUser extends TestBase{
 	public SendPushtoUser selectDatafromCopyTemplateDropDownElement() throws InterruptedException {
 		copyTemplateDropDownElementdHighlight();/* highlight the element of the tested. */
 		dropDownCopyTemplateinSelect.click(); /*click on the element */
-		searchInCopyTemplateDropDown.sendKeys("1 in");/*type on the input field */
+		searchInCopyTemplateDropDown.sendKeys("select");/*type on the input field */
 		valueForCopyTemplateSearch.click();/*click on the element from result of the first value. */
 		return new SendPushtoUser();
 	}
@@ -751,7 +774,7 @@ public class SendPushtoUser extends TestBase{
 	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[2]/form/div[2]/div/div[2]/div[2]/div[1]/div/input")
 	WebElement titleInputFieldElement;
 	
-	//16. Highlight the Title Input Field
+	//18. Highlight the Title Input Field
 	public void titleInputFieldFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -766,13 +789,35 @@ public class SendPushtoUser extends TestBase{
 		}
 	}
 	
-	//16. Select from Title Input Field
-	public SendPushtoUser titleInputFieldField() throws InterruptedException {
+	//18. Select from Title Input Field
+	public SendPushtoUser titleInputField() throws InterruptedException {
 		titleInputFieldFieldHighlight();/* highlight the element of the tested. */
 		titleInputFieldElement.sendKeys("Test Title"); /*type to the element. */
 		return new SendPushtoUser(); 
 	}
 	
+	//18.0.1  Type to the Title Input
+	public SendPushtoUser  typetotitleInputFieldParam(String title) throws InterruptedException {
+		titleInputFieldFieldHighlight();
+		titleInputFieldElement.sendKeys(title);
+		return new SendPushtoUser ();
+	}
+
+	//18.0.2. Type Title Input Input Field (enter text, then clear PIN with comma separated Input Field)
+	public SendPushtoUser typeAndClearthetitleInputFieldParam(String title) throws InterruptedException {
+		titleInputFieldFieldHighlight();
+		titleInputFieldElement.sendKeys(title);
+		Thread.sleep(100);
+		titleInputFieldElement.clear();
+		return new SendPushtoUser ();									    			
+	}		
+		
+	//18.0.3. Type to Title Input Field
+	public SendPushtoUser  typetothetitleInputFieldTabKey() throws InterruptedException {
+		titleInputFieldFieldHighlight();
+		titleInputFieldElement.sendKeys(Keys.TAB);
+		return new SendPushtoUser();
+	}
 	
 	/***************************************************
 				*********************************************************************************************
@@ -805,11 +850,34 @@ public class SendPushtoUser extends TestBase{
 		}
 	}
 	
-	//19. Select from Message Input Field
+	//19. type to Message Input Field
 	public SendPushtoUser messageInputFieldField() throws InterruptedException {
 		messageInputFieldFieldHighlight();/* highlight the element of the tested. */
 		messageInputFieldElement.sendKeys("Test Title"); /*type to the element. */
 		return new SendPushtoUser(); 
+	}
+
+	//19.0.1  Type to the Message Input Input
+	public SendPushtoUser  typetomessageInputFieldFieldParam(String message) throws InterruptedException {
+		messageInputFieldFieldHighlight();
+		messageInputFieldElement.sendKeys(message);
+		return new SendPushtoUser ();
+	}
+
+	//19.0.2. Type Message Input Field (enter text, then clear Message Input Field)
+	public SendPushtoUser typeAndClearmessageInputFieldFieldParam(String message) throws InterruptedException {
+		messageInputFieldFieldHighlight();
+		messageInputFieldElement.sendKeys(message);
+		Thread.sleep(100);
+		messageInputFieldElement.clear();
+		return new SendPushtoUser ();									    			
+	}		
+		
+	//19.0.3. Type to Message Input Field
+	public SendPushtoUser  typetothemessageInputFieldFieldTabKey() throws InterruptedException {
+		messageInputFieldFieldHighlight();
+		messageInputFieldElement.sendKeys(Keys.TAB);
+		return new SendPushtoUser();
 	}
 	
 	
@@ -850,6 +918,37 @@ public class SendPushtoUser extends TestBase{
 		imageURLInputFieldElement.sendKeys("google.com"); /*type to the element. */
 		return new SendPushtoUser(); 
 	}
+	//20.0.1  Type to the Image URL Input Input
+	public SendPushtoUser  imageURLInputFieldFieldParam(String image_url) throws InterruptedException {
+		imageURLInputFieldFieldHighlight();
+		imageURLInputFieldElement.sendKeys(image_url);
+		return new SendPushtoUser ();
+	}
+	
+
+	//19.0.1  Type to the Message Input Input
+	public SendPushtoUser  typetoimageURLParam(String image_url) throws InterruptedException {
+		imageURLInputFieldFieldHighlight();
+		imageURLInputFieldElement.sendKeys(image_url);
+		return new SendPushtoUser ();
+	}
+
+	//19.0.2. Type Message Input Field (enter text, then clear Message Input Field)
+	public SendPushtoUser typeAndClearimageURLParam(String image_url) throws InterruptedException {
+		imageURLInputFieldFieldHighlight();
+		imageURLInputFieldElement.sendKeys(image_url);
+		Thread.sleep(100);
+		imageURLInputFieldElement.clear();
+		return new SendPushtoUser ();									    			
+	}		
+		
+	//19.0.3. Type to Message Input Field
+	public SendPushtoUser  typetotheimageURLTabKey() throws InterruptedException {
+		imageURLInputFieldFieldHighlight();
+		imageURLInputFieldElement.sendKeys(Keys.TAB);
+		return new SendPushtoUser();
+	}
+
 	
 	
 	/***************************************************
@@ -864,7 +963,7 @@ public class SendPushtoUser extends TestBase{
 					* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 														*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
 
-	//21. Element of Image URL Input Field
+	//21. Element of URL for android Input Field
 	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[2]/form/div[2]/div/div[2]/div[2]/div[4]/div/input")
 	WebElement urlforAndroidInputFieldElement;
 	
@@ -883,13 +982,36 @@ public class SendPushtoUser extends TestBase{
 		}
 	}
 	
-	//21. Select from Image URL Input Field
+	//21. Select from URL for android Input Field
 	public SendPushtoUser urlforAndroidInputFieldField() throws InterruptedException {
 		urlforAndroidInputFieldFieldHighlight();/* highlight the element of the tested. */
 		urlforAndroidInputFieldElement.sendKeys("google.com"); /*type to the element. */
 		return new SendPushtoUser(); 
 	}
 	
+	//21.0.1  Type to the URL for android Input
+	public SendPushtoUser  urlforAndroidInputFieldFieldParam(String url_android) throws InterruptedException {
+		urlforAndroidInputFieldFieldHighlight();
+		urlforAndroidInputFieldElement.sendKeys(url_android);
+		return new SendPushtoUser ();
+	}
+	
+	//21.0.2. Type Message Input Field (enter text, then clear Message Input Field)
+	public SendPushtoUser typeAndClearurlforAndroidInputFieldParam(String url_android) throws InterruptedException {
+		urlforAndroidInputFieldFieldHighlight();
+		urlforAndroidInputFieldElement.sendKeys(url_android);
+		Thread.sleep(100);
+		urlforAndroidInputFieldElement.clear();
+		return new SendPushtoUser ();									    			
+	}		
+		
+	//21.0.3. Type to Message Input Field
+	public SendPushtoUser  typetotheurlforAndroidInputFieldtabKey() throws InterruptedException {
+		urlforAndroidInputFieldFieldHighlight();
+		urlforAndroidInputFieldElement.sendKeys(Keys.TAB);
+		return new SendPushtoUser();
+	}
+
 	
 	/***************************************************
 							*********************************************************************************************
@@ -930,6 +1052,32 @@ public class SendPushtoUser extends TestBase{
 	}
 	
 	
+	//22.0.1  Type to the URL for iOS Input
+	public SendPushtoUser  urlforiOSInputFieldFieldParam(String url_iOS) throws InterruptedException {
+		urlforiOSInputFieldFieldHighlight();
+		urlforiOSInputFieldElement.sendKeys(url_iOS);
+		return new SendPushtoUser ();
+	}
+	
+	//22.0.2. Type URL for iOS Input Field (enter text, then clear URL for iOS Input Field)
+	public SendPushtoUser typeAndClearurlforiOSInputFieldParam(String url_iOS) throws InterruptedException {
+		urlforiOSInputFieldFieldHighlight();
+		urlforiOSInputFieldElement.sendKeys(url_iOS);
+		Thread.sleep(100);
+		urlforiOSInputFieldElement.clear();
+		return new SendPushtoUser ();									    			
+	}		
+		
+	//22.0.3. Type to URL for iOS Input Field
+	public SendPushtoUser  typetotheurlforurlforiOSInputFieldtabKey() throws InterruptedException {
+		urlforiOSInputFieldFieldHighlight();
+		urlforiOSInputFieldElement.sendKeys(Keys.TAB);
+		return new SendPushtoUser();
+	}
+
+	
+	
+	
 	/***************************************************
 							*********************************************************************************************
 							****************************    End No.22 - Element of URL for iOS Input Field **************
@@ -966,6 +1114,29 @@ public class SendPushtoUser extends TestBase{
 		pageControInputFieldFieldHighlight();/* highlight the element of the tested. */
 		pageControlInputFieldElement.sendKeys("google.com"); /*type to the element. */
 		return new SendPushtoUser(); 
+	}
+	
+	//22.0.1  Type to the Page Control Input
+	public SendPushtoUser  pageControInputFieldFieldParam(String page_control) throws InterruptedException {
+		pageControInputFieldFieldHighlight();
+		pageControlInputFieldElement.sendKeys(page_control);
+		return new SendPushtoUser ();
+	}
+	
+	//22.0.2. Type Page Control Input Field (enter text, then clear URL for iOS Input Field)
+	public SendPushtoUser typeAndClearpageControInputFieldParam(String page_control) throws InterruptedException {
+		pageControInputFieldFieldHighlight();
+		pageControlInputFieldElement.sendKeys(page_control);
+		Thread.sleep(100);
+		pageControlInputFieldElement.clear();
+		return new SendPushtoUser ();									    			
+	}		
+		
+	//22.0.3. Type to Page Control Input Field
+	public SendPushtoUser  typetotheurlforpageControInputFieldtabKey() throws InterruptedException {
+		pageControInputFieldFieldHighlight();
+		pageControlInputFieldElement.sendKeys(Keys.TAB);
+		return new SendPushtoUser();
 	}
 	
 	

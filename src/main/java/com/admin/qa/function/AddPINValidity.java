@@ -66,6 +66,17 @@ public class AddPINValidity extends TestBase{
 		return new AddPINValidity();
 	}
 	
+	
+	//1.0.3. Type to pin or username input field Input Field (enter text, then clear new password Input Field)
+	public AddPINValidity typeAndClearNumberofDaysParam(String $number_of_days) throws InterruptedException {
+		numberofDaysInputFieldHighlight();
+		numberofDaysElement.sendKeys($number_of_days);
+		Thread.sleep(100);
+		numberofDaysElement.clear();
+		return new AddPINValidity();
+								    			
+	}	
+	
 	/***************************************************************************************************************
      * *****************************************************************************************************
 	 * **************************    End No.01 - Element of Number of Days    ******************************************
@@ -161,6 +172,16 @@ public class AddPINValidity extends TestBase{
 		return new AddPINValidity();
 	}
 	
+	
+	//3.0.3. Type to pin or username input field Input Field (enter text, then clear new password Input Field)
+	public AddPINValidity typeAndClearPINinCSVorNewLineParam(String $pin_validity) throws InterruptedException {
+		pininCSVorNewLineInputFieldHighlight();
+		pininCSVorNewLineElement.sendKeys($pin_validity);
+		Thread.sleep(100);
+		pininCSVorNewLineElement.clear();
+		return new AddPINValidity();
+									    			
+	}	
 	
 	/*****************************************************************************
      				******************************************************************************************************
