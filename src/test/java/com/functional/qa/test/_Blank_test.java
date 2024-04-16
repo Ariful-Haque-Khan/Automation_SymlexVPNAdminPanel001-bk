@@ -37,14 +37,13 @@ public class _Blank_test extends TestBase{
 
 	
 	
-	/* ***** Test _Blank!!! 
-	//@Test(priority=1)
+	/* ***** Test _Blank!!! */
+	@Test(priority=1)
 	//@Ignore
 	public void TestAddNewServerBlankForm() throws IOException, InterruptedException {
-		newCustomizeResellerPanel = loginPage.customPanelNameLogin(props.getProperty("username"),props.getProperty("password"));
-		newCustomizeResellerPanel.openNewCustomizeResellerPanelPage();/*open the Custom Panel Name Page.
 		
-	}*/
+		
+	}
 	
 	
 	
