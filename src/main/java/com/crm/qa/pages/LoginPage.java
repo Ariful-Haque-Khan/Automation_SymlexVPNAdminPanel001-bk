@@ -30,6 +30,7 @@ import com.admin.qa.function.AddNewBanner;
 import com.admin.qa.function.AddNewCampaign;
 import com.admin.qa.function.AddNewIP;
 import com.admin.qa.function.AddNewNotice;
+import com.admin.qa.function.AddNewPaymentMethod;
 import com.admin.qa.function.AddNewResellerClient;
 import com.admin.qa.function.AddNewRole;
 import com.admin.qa.function.AddNewServer;
@@ -447,6 +448,16 @@ public class LoginPage extends TestBase{
 		return new AddNewRole(); //Login form Add New Role Form page
 	}
 	
+	public AddNewPaymentMethod addNewPaymentMethodLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new AddNewPaymentMethod(); //Login form Add New Role Form page
+	}
+	
+
 	
     
 }
