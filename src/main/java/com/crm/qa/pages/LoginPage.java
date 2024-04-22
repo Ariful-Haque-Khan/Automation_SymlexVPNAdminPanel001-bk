@@ -27,13 +27,16 @@ import com.admin.qa.pages.IPManagementSectionLinks;
 import com.admin.qa.pages.MailAddressSectionLinks;
 import com.admin.qa.pages.OnlinePINReportsSectionLinks;
 import com.admin.qa.function.AddNewBanner;
+import com.admin.qa.function.AddNewBlockAppCRC;
 import com.admin.qa.function.AddNewCampaign;
 import com.admin.qa.function.AddNewIP;
+import com.admin.qa.function.AddNewMenuPermission;
 import com.admin.qa.function.AddNewNotice;
 import com.admin.qa.function.AddNewPaymentMethod;
 import com.admin.qa.function.AddNewResellerClient;
 import com.admin.qa.function.AddNewRole;
 import com.admin.qa.function.AddNewServer;
+import com.admin.qa.function.AddNewSignUpBlacklistDomain;
 import com.admin.qa.function.AddPINJail;
 import com.admin.qa.function.AddPINValidity;
 import com.admin.qa.function.AddPushTemplate;
@@ -403,7 +406,7 @@ public class LoginPage extends TestBase{
 		return new AddNewBanner(); // Login form Add New Banner Form page
 	}
     
-    public AddNewRatePlan addNewRatePlan(String uname , String pwd) {
+    public AddNewRatePlan addNewRatePlanLogin(String uname , String pwd) {
 		
 		username.sendKeys(uname);
 		password.sendKeys(pwd);
@@ -457,7 +460,31 @@ public class LoginPage extends TestBase{
 		return new AddNewPaymentMethod(); //Login form Add New Role Form page
 	}
 	
-
+	public AddNewMenuPermission addNewMenuPermissionLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new AddNewMenuPermission(); //Login form Add New Role Form page
+	}
 	
-    
+	public AddNewSignUpBlacklistDomain addNewSignUpBlacklistDomainLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new AddNewSignUpBlacklistDomain(); //Login form Add New Role Form page
+	}
+	
+	public AddNewBlockAppCRC addNewBlockAppCRCLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new AddNewBlockAppCRC(); //Login form Add New Role Form page
+	}
+	   
 }
