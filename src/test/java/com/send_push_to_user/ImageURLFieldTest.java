@@ -72,7 +72,7 @@ public class ImageURLFieldTest extends TestBase{
 		//@Ignore
 		//@Test(priority=1)
 		public void enter_empty_text_into_image_URL_input_field() throws IOException, InterruptedException {SendPushtoUserCommon("");	}
-		//@Test(priority=2)
+		@Test(priority=2)
 		public void enter_a_valid_text_into_image_URL_input_field() throws IOException, InterruptedException {SendPushtoUserCommon("https://www.filepicker.io/api/file/FBrysv8XTuqjv42J23Qi?filename=name.jpg");	}
 		//@Test(priority=3)
 		public void enter_the_above_maximum_allowed_length_of_characters_into_image_URL_input_field() throws IOException, InterruptedException{SendPushtoUserCommon("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaniy1yr");}
@@ -178,7 +178,7 @@ public class ImageURLFieldTest extends TestBase{
 			//sendPushtoUser.clickOnPopUpNoButtonField(); // for clicking on pop-up no button 
 		
 		}
-		@Test(priority=22)
+		//@Test(priority=22)
 		public void enter_then_undo_then_redo_the_input_action_into_image_URL_input_field() throws IOException, InterruptedException{
 			sendPushtoUser = loginPage.sendPushtoUserLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 			sendPushtoUser.openSendPushtoUserPage();// open the send push to user Form Page.

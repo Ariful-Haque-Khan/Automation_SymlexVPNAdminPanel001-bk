@@ -44,7 +44,7 @@ public class AffiliateShareFieldTest extends TestBase{
 		addNewCampaign.typeToCampaignNameFieldParam("1 year offer");//taking input from the Campaign Name
 		addNewCampaign.typeToshowAsNameOnWebsiteFieldParam("1 year campaign for all");// taking input from the Show As Name (On Website)
 		addNewCampaign.typeTowebsiteHeaderImageFieldParam("hhtps:websiteforurl/com");// taking input from the Website Header Img(External URL)
-		addNewCampaign.typeToCouponCodeFieldParam("");// taking input from the Coupon Code
+		addNewCampaign.typeToCouponCodeFieldParam("abc-120");// taking input from the Coupon Code
 		addNewCampaign.typeToAffiliateShareFieldParam(Affiliate_Share);// taking input from the Affiliate Share (%)
 		addNewCampaign.campaignPeriodStartFromField();//select inputs data form the Campaign Period start from
 		addNewCampaign.campaignPeriodEndTimeField();// select inputs data form the  Campaign Period end date
@@ -117,7 +117,7 @@ public class AffiliateShareFieldTest extends TestBase{
 		//addNewCampaign.clickONSaveNowButton();////click on save button
 		
 	}
-	//@Test(priority=22)
+	@Test(priority=22)
 	public void enter_then_undo_the_input_action_into_coupon_code_input_field() throws IOException, InterruptedException{
 		addNewCampaign = loginPage.addNewCampaignLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		addNewCampaign.openAddNewCampaignForm();// open the Add New Campaign Form Page.
@@ -156,7 +156,7 @@ public class AffiliateShareFieldTest extends TestBase{
 		
 	}
 	
-	//@Test(priority=24)
+	@Test(priority=24)
 	//@Ignore
 	public void enter_text_and_navigate_through_into_coupon_code_input_field_using_the_tab_key() throws IOException, InterruptedException{ 
 		addNewCampaign = loginPage.addNewCampaignLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
