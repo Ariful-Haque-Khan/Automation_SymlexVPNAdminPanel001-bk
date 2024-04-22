@@ -54,45 +54,45 @@ public class DescriptionFieldTest extends TestBase{
 	public void enter_empty_text_into_description_input_field() throws IOException, InterruptedException {addNewRoleCommon("");	}
 	@Test(priority=2)
 	public void enter_a_valid_text_into_description_input_field() throws IOException, InterruptedException {addNewRoleCommon("description for admin panel");	}
-	//@Test(priority=3)
+	@Test(priority=3)
 	public void enter_the_above_maximum_allowed_length_of_characters_into_description_input_field() throws IOException, InterruptedException{addNewRoleCommon("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaniy1yr");}
-	//@Test(priority=4)
+	@Test(priority=4)
 	public void enter_the_below_minimum_allowed_length_of_characters_into_description_input_field() throws IOException, InterruptedException{addNewRoleCommon("a");}
-	//@Test(priority=5)
+	@Test(priority=5)
 	public void enter_only_alphabetic_characters_into_description_input_field() throws IOException, InterruptedException{addNewRoleCommon("abcdefgh");}
-	//@Test(priority=6)
+	@Test(priority=6)
 	public void enter_numeric_characters_into_description_input_field() throws IOException, InterruptedException{addNewRoleCommon("123456789123456789");}
-	//@Test(priority=7)
+	@Test(priority=7)
 	public void enter_a_combination_of_alphabetic_and_numeric_characters_into_description_input_field() throws IOException, InterruptedException{addNewRoleCommon("abc1234567abc");}
-	//@Test(priority=8)
+	@Test(priority=8)
 	public void enter_special_characters_into_description_input_field() throws IOException, InterruptedException{addNewRoleCommon("!@#$%^&*!@#$%^&*@!@#$%^&"); }
-	//@Test(priority=9)
+	@Test(priority=9)
 	public void enter_text_with_leading_whitespaces_into_description_input_field() throws IOException, InterruptedException{addNewRoleCommon("           ani1yr"); }
-	//@Test(priority=10)
+	@Test(priority=10)
 	public void enter_text_with_trailing_whitespaces_into_description_input_field() throws IOException, InterruptedException{addNewRoleCommon("abc1yr                   ");}
-	//@Test(priority=11)
+	@Test(priority=11)
 	public void enter_text_in_uppercase_letters_into_description_input_field() throws IOException, InterruptedException{addNewRoleCommon("asdfghjkzxcvbnm");}
-	//@Test(priority=12)
+	@Test(priority=12)
 	public void enter_text_in_lowercases_letters_into_description_input_field() throws IOException, InterruptedException{addNewRoleCommon("anianiani");}
-	//@Test(priority=13)
+	@Test(priority=13)
 	public void enter_text_with_a_mix_of_uppercase_and_lowercase_letter_into_description_input_field() throws IOException, InterruptedException{addNewRoleCommon("ABCdefasASD"); }
-	//@Test(priority=14)
+	@Test(priority=14)
 	public void enter_text_with_punctuation_marks_into_description_input_field() throws IOException, InterruptedException{addNewRoleCommon(",./;?.,;/.,./?><:;,./;.,"); }
-	//@Test(priority=15)
+	@Test(priority=15)
 	public void enter_text_with_line_breaks_or_newlines_into_description_input_field() throws IOException, InterruptedException{addNewRoleCommon("\\\\\"ANI1yr\\\\\\\\n\\\\\\\" +\\\\r\\\\n\\\"\\r\\n\"\r\n"
 				+ "				+ \"				+ \\\"                                  \\\\\\\"ani1yr\\\\\\\""); }
-	//@Test(priority=16)
+	@Test(priority=16)
 	public void enter_text_with_unicode_characters_into_description_input_field() throws IOException, InterruptedException{addNewRoleCommon("こんにちは"); }
-	//@Test(priority=17)
+	@Test(priority=17)
 	public void enter_text_containing_emojis_into_description_input_field() throws IOException, InterruptedException{addNewRoleCommon("😊, 🐱, 🍕, 🎉"); }
-	//@Test(priority=18)
+	@Test(priority=18)
 	public void enter_text_with_accented_characters_into_description_input_field() throws IOException, InterruptedException{addNewRoleCommon("á, ç, ō,  á, ç, ō");}
-	//@Test(priority=19)
+	@Test(priority=19)
 	public void enter_default_placeholder_text_into_description_input_field() throws IOException, InterruptedException{ 
 			
 	}
 	
-	//@Test(priority=21)
+	@Test(priority=21)
 	public void enter_then_clear_the_text_into_description_input_field() throws IOException, InterruptedException{
 		addNewRole = loginPage.addNewRoleLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		addNewRole.openAddNewRoleForm();// open the add new role Form Page.
@@ -103,7 +103,7 @@ public class DescriptionFieldTest extends TestBase{
 		//addNewRole.clickONSubmitButton(); //click on submit button
 		
 	}
-	//@Test(priority=22)
+	@Test(priority=22)
 	public void enter_then_undo_the_input_action_into_description_input_field() throws IOException, InterruptedException{
 		addNewRole = loginPage.addNewRoleLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		addNewRole.openAddNewRoleForm();// open the add new role Form Page.
@@ -126,7 +126,7 @@ public class DescriptionFieldTest extends TestBase{
 		//addNewRole.clickONSubmitButton(); //click on submit button
 	}
 	
-	//@Test(priority=24)
+	@Test(priority=24)
 	//@Ignore
 	public void enter_text_and_navigate_through_into_description_input_field_using_the_tab_key() throws IOException, InterruptedException{ 
 		addNewRole = loginPage.addNewRoleLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
@@ -138,7 +138,7 @@ public class DescriptionFieldTest extends TestBase{
 		//addNewRole.clickONSubmitButton(); //click on submit button
 	}
 	
-	//@Test(priority=25)
+	@Test(priority=25)
 	public void paste_the_text_into_description_input_field_using_the_paste_action() throws IOException, InterruptedException{
 		addNewRole = loginPage.addNewRoleLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		addNewRole.openAddNewRoleForm();// open the add new role Form Page.
