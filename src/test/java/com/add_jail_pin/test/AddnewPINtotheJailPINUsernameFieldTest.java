@@ -44,7 +44,7 @@ public class AddnewPINtotheJailPINUsernameFieldTest extends TestBase{
 
 	
 	
-	//@Test(priority=1)
+	@Test(priority=1)
 	//@Ignore
 	public void AddNewRatePlanForm() throws IOException, InterruptedException {
 		addPINJail = loginPage.addPINJailLogin(props.getProperty("username"),props.getProperty("password")); //login to the system

@@ -486,5 +486,6 @@ public class LoginPage extends TestBase{
 		
 		return new AddNewBlockAppCRC(); //Login form Add New Role Form page
 	}
-	   
+	
+     
 }
