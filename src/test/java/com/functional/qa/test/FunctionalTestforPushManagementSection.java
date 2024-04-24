@@ -167,8 +167,10 @@ public class FunctionalTestforPushManagementSection extends TestBase{
 	}
 	
 	/****** Test Add New Banner   !!! */ 
-	//@Test(priority=1)
-	@Ignore
+	@Test(priority=1)
+	
+	
+	//@Ignore
 	public void TestAddNewBannerForm() throws IOException, InterruptedException {
 		addNewBanner = loginPage.addNewBannerLogin(props.getProperty("username"),props.getProperty("password"));
 		addNewBanner.openAddNewBannerFormPage();/*open the Add New Banner Page. */
