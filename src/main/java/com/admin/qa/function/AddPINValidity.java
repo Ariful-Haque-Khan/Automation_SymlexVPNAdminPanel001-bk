@@ -2,6 +2,7 @@ package com.admin.qa.function;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -51,6 +52,31 @@ public class AddPINValidity extends TestBase{
 		return new AddPINValidity();
 	}
 	
+	//01.1. Type to the Number of Days
+	public AddPINValidity typeToNumberofDaysParam(String $number_of_days) throws InterruptedException {
+		numberofDaysInputFieldHighlight();
+		numberofDaysElement.sendKeys($number_of_days);
+		return new AddPINValidity();
+	}
+	
+	//01.2. Type to the Number of Days
+	public AddPINValidity typeToNumberofDaysTabKey() throws InterruptedException {
+		numberofDaysInputFieldHighlight();
+		numberofDaysElement.sendKeys(Keys.TAB);
+		return new AddPINValidity();
+	}
+	
+	
+	//1.0.3. Type to pin or username input field Input Field (enter text, then clear new password Input Field)
+	public AddPINValidity typeAndClearNumberofDaysParam(String $number_of_days) throws InterruptedException {
+		numberofDaysInputFieldHighlight();
+		numberofDaysElement.sendKeys($number_of_days);
+		Thread.sleep(100);
+		numberofDaysElement.clear();
+		return new AddPINValidity();
+								    			
+	}	
+	
 	/***************************************************************************************************************
      * *****************************************************************************************************
 	 * **************************    End No.01 - Element of Number of Days    ******************************************
@@ -65,28 +91,29 @@ public class AddPINValidity extends TestBase{
 	*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
 	
 	//02. Element of PIN Type
-	@FindBy(xpath="/html/body/div[2]/div/div/section[2]/div/form/div[1]/div/div[2]/div[4]/div/select")
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[2]/form/div/div[1]/div[2]/div[2]/div/select")
+	
 	WebElement pinTypeElement;
 	
 	//02. Highlight the PIN Type Input Field
 	public void pinTypeInputFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", numberofDaysElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", pinTypeElement);
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", numberofDaysElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", pinTypeElement);
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", numberofDaysElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", pinTypeElement);
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", numberofDaysElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", pinTypeElement);
 			Thread.sleep(1000);
 		}
 	}
 	
 	//02. Select from PIN Type Element
 	public AddPINValidity typeelementDropDownField() throws InterruptedException {
-		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/div/section[2]/div/form/div[1]/div/div[2]/div[4]/div/select")));
-		drp.selectByIndex(1);
+		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div[2]/form/div/div[1]/div[2]/div[2]/div/select")));
+		drp.selectByIndex(0);
 		return new AddPINValidity(); 
 	}
 	
@@ -131,6 +158,30 @@ public class AddPINValidity extends TestBase{
 		return new AddPINValidity();
 	}
 	
+	//03.01. Type to the PIN in CSV or New Line
+	public AddPINValidity typeToPINinCSVorNewLineParam(String $pin_validity) throws InterruptedException {
+		pininCSVorNewLineInputFieldHighlight();
+		pininCSVorNewLineElement.sendKeys($pin_validity);
+		return new AddPINValidity();
+	}
+	
+	//03.2 Type to the PIN in CSV or New Line
+	public AddPINValidity typeToPINinCSVorNewLineTabKey() throws InterruptedException {
+		pininCSVorNewLineInputFieldHighlight();
+		pininCSVorNewLineElement.sendKeys(Keys.TAB);
+		return new AddPINValidity();
+	}
+	
+	
+	//3.0.3. Type to pin or username input field Input Field (enter text, then clear new password Input Field)
+	public AddPINValidity typeAndClearPINinCSVorNewLineParam(String $pin_validity) throws InterruptedException {
+		pininCSVorNewLineInputFieldHighlight();
+		pininCSVorNewLineElement.sendKeys($pin_validity);
+		Thread.sleep(100);
+		pininCSVorNewLineElement.clear();
+		return new AddPINValidity();
+									    			
+	}	
 	
 	/*****************************************************************************
      				******************************************************************************************************

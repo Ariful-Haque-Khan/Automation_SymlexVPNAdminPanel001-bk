@@ -115,7 +115,7 @@ public class FunctionalTestforPushManagementSection extends TestBase{
 		//sendPushtoUser.dateFilterConditionStartDropdownField();/*15.. type to the date Filter Conditionar Start element */
 		//sendPushtoUser.dateFilterConditionEndDropdownField();/*16.. type to the date Filter Conditionar End element */
 		//sendPushtoUser.selectDatafromCopyTemplateDropDownElement();/*17.. select data from Copy Template Drop down Input Field */
-		sendPushtoUser.titleInputFieldField();/*18.. type to the Push Title element */
+		//sendPushtoUser.titleInputFieldField();/*18.. type to the Push Title element */
 		sendPushtoUser.messageInputFieldField();/*19.. type to the Push Message element */
 		//sendPushtoUser.imageURLInputFieldField();/*20.. type to the Push Image URL element */
 		//sendPushtoUser.urlforAndroidInputFieldField();/*21.. type to the Push url for Android element */

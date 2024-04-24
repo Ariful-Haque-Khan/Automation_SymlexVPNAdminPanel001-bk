@@ -3,4 +3,8 @@ target/
 .settings/
 tokens/
 test-output/
-gitignore
+screenshots/
+edgedriver_win64/
+src/main/java/com/crm/qa/base/
+src/main/java/com/crm/qa/config/
+/bin/

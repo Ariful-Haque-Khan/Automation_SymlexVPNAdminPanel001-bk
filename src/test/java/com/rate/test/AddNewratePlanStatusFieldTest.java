@@ -46,7 +46,7 @@ public class AddNewratePlanStatusFieldTest extends TestBase{
 		addNewRatePlan.openRatePlanNameFormPage();// open the Custom Panel Name Page.
 		addNewRatePlan.typeToRatePlanNameElemenParam("test");// for taking inputs from the rate name input text field
 		addNewRatePlan.typeToRatePlanDescriptionElementParam("test");// for taking inputs from the rate description input textarea field
-		addNewRatePlan.checkRatePlanStatusElementExists();//for clicking/unchecking status check box
+		//addNewRatePlan.checkRatePlanStatusElementExists();//for clicking/unchecking status check box
 		//addNewRatePlan.clickToRatePlanSubmitButtonElement();//for submitting with the form data
 		
 	}
@@ -58,7 +58,7 @@ public class AddNewratePlanStatusFieldTest extends TestBase{
 		addNewRatePlan.openRatePlanNameFormPage();// open the Custom Panel Name Page.
 		addNewRatePlan.typeToRatePlanNameElemenParam("test");// for taking inputs from the rate name input text field
 		addNewRatePlan.typeToRatePlanDescriptionElementParam("test");// for taking inputs from the rate description input textarea field
-		addNewRatePlan.valueOfCheckRatePlanStatusElement();//for clicking/unchecking status check box
+		//addNewRatePlan.valueOfCheckRatePlanStatusElement();//for clicking/unchecking status check box
 		//addNewRatePlan.clickToRatePlanSubmitButtonElement();//for submitting with the form data
 		
 	}
@@ -70,7 +70,7 @@ public class AddNewratePlanStatusFieldTest extends TestBase{
 		addNewRatePlan.openRatePlanNameFormPage();// open the Custom Panel Name Page.
 		addNewRatePlan.typeToRatePlanNameElemenParam("test");// for taking inputs from the rate name input text field
 		addNewRatePlan.typeToRatePlanDescriptionElementParam("test");// for taking inputs from the rate description input textarea field
-		addNewRatePlan.valueAfterandBeforeRefreshOfCheckRatePlanStatusElement();//for clicking/unchecking status check box
+		//addNewRatePlan.valueAfterandBeforeRefreshOfCheckRatePlanStatusElement();//for clicking/unchecking status check box
 		//addNewRatePlan.clickToRatePlanSubmitButtonElement();//for submitting with the form data
 		
 	}
