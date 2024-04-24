@@ -59,13 +59,14 @@ public class ConfirmPasswordFieldTest extends TestBase{
 	//@Ignore
 	//@Test(priority=1)
 	public void enter_empty_text_into_Confirm_Password_input_field() throws IOException, InterruptedException {newAdminCreationCommon("");	}
-	//@Test(priority=2)
+	@Test(priority=2)
 	public void enter_a_valid_text_into_Confirm_Password_input_field() throws IOException, InterruptedException {newAdminCreationCommon("123456");	}
 	//@Test(priority=3)
 	public void enter_the_above_maximum_allowed_length_of_characters_into_Confirm_Password_input_field() throws IOException, InterruptedException{newAdminCreationCommon("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaniy1yr");}
 	//@Test(priority=4)
 	public void enter_the_below_minimum_allowed_length_of_characters_into_Confirm_Password_input_field() throws IOException, InterruptedException{newAdminCreationCommon("a");}
-	//@Test(priority=5)
+	//@Test(priority=5)\
+
 	public void enter_only_alphabetic_characters_into_Confirm_Password_input_field() throws IOException, InterruptedException{newAdminCreationCommon("abcdefgh");}
 	//@Test(priority=6)
 	public void enter_numeric_characters_into_Confirm_Password_input_field() throws IOException, InterruptedException{newAdminCreationCommon("123456789123456789");}
@@ -164,7 +165,7 @@ public class ConfirmPasswordFieldTest extends TestBase{
 		newAdminCreation.typeToFullNameFieldParam("Anika Rashid");// taking input from the Full Name
 		newAdminCreation.typeToPasswordFieldParam("123456");// taking inputs from the Password 
 		newAdminCreation.typeToConfirmPasswordFieldParam("123456"); //taking inputs from the Confirm Password
-		newAdminCreation.typeAndClearConfirmPasswordFieldParam("");//clear the text
+		newAdminCreation.typetoConfirmPasswordtabKey();//navigate to the tab key
 		newAdminCreation.clickTIsActiveCheckboxField();// check box for active
 		newAdminCreation.typeToEmailFieldParam("abc@gmail.com");// taking input from the Email
 		newAdminCreation.typeToPhoneNoFieldParam("01210201010");//taking input from the Phone No
