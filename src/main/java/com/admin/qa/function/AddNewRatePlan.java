@@ -6,7 +6,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 
 import com.crm.qa.base.TestBase;
 
@@ -191,7 +190,7 @@ public class AddNewRatePlan extends TestBase{
 		ratePlanStatusElement.click();
 		return new AddNewRatePlan();
 	}
-		
+	/*	
 	//03.01. Type to the Rate Plan Status
 	public AddNewRatePlan checkRatePlanStatusElementExists() throws InterruptedException {
 		if(driver.findElements( By.xpath("/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[3]/div/input") ).size() != 0) {
@@ -202,7 +201,8 @@ public class AddNewRatePlan extends TestBase{
 		}
 		return new AddNewRatePlan();
 	}
-		
+	
+	
 	//03.02. Type to the Rate Plan Status - get value
 	public AddNewRatePlan valueOfCheckRatePlanStatusElement() throws InterruptedException {
 	WebElement checkbox = driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[3]/div/input"));
@@ -215,6 +215,7 @@ public class AddNewRatePlan extends TestBase{
 		}
 		return new AddNewRatePlan();
 	}
+
 		
 	//03.02. Type to the Rate Plan Status - get value
 	public AddNewRatePlan valueAfterandBeforeRefreshOfCheckRatePlanStatusElement() throws InterruptedException {
@@ -232,6 +233,7 @@ public class AddNewRatePlan extends TestBase{
 		}
 		return new AddNewRatePlan();
 	}
+	*/
 		
 		/*******************************************************************************************************************
 					* ******************************************************************************************************

@@ -23,7 +23,6 @@ import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.ContactsPage;
 import com.crm.qa.pages.HomePage;
 import com.crm.qa.pages.LoginPage;
-import com.crm.qa.util.ExtentReportListener;
 import com.crm.qa.util.TestUtils;
 
 import java.util.ArrayList;
@@ -52,7 +51,7 @@ public class SuccessStatusTestforPINsSection extends TestBase{
 	PINsSectionLinks pinSSectionLinks;
 	ContactsPage conPage;
 	TestUtils testUtils;
-	ExtentReportListener testExtentReportListener;
+	
 	
 	//Initializing PageFactory
 	public SuccessStatusTestforPINsSection() {
@@ -64,7 +63,7 @@ public class SuccessStatusTestforPINsSection extends TestBase{
 		initialization();
 		loginPage = new LoginPage();
 		testUtils = new TestUtils();
-		testExtentReportListener = new ExtentReportListener();
+		
 		
 	}
 	
