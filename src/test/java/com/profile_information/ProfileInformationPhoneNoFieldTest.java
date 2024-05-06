@@ -48,7 +48,7 @@ public class ProfileInformationPhoneNoFieldTest extends TestBase{
 		profileInformation.typeSkypeFieldParam("aniSkype"); //  taking inputs from the skype
 		profileInformation.typeViberWhatsAppImoFieldParam("aniViber"); //  taking inputs from the viber
 		profileInformation.typeAddressFieldParam("Mohammadpur"); //  taking inputs from the address
-		profileInformation.typeLogoFieldParam("");
+		//profileInformation.typeLogoFieldParam("");
 		//profileInformation.clickONSubmitButton();
 		
 	}
@@ -107,7 +107,6 @@ public class ProfileInformationPhoneNoFieldTest extends TestBase{
 		profileInformation.typeSkypeFieldParam("aniSkype"); //  taking inputs from the skype
 		profileInformation.typeViberWhatsAppImoFieldParam("aniViber"); //  taking inputs from the viber
 		profileInformation.typeAddressFieldParam("Mohammadpur"); //  taking inputs from the address
-		profileInformation.typeLogoFieldParam("");
 		//profileInformation.clickONSubmitButton();
 		
 	}
@@ -122,7 +121,6 @@ public class ProfileInformationPhoneNoFieldTest extends TestBase{
 		profileInformation.typeSkypeFieldParam("aniSkype"); //  taking inputs from the skype
 		profileInformation.typeViberWhatsAppImoFieldParam("aniViber"); //  taking inputs from the viber
 		profileInformation.typeAddressFieldParam("Mohammadpur"); //  taking inputs from the address
-		profileInformation.typeLogoFieldParam("");
 		//profileInformation.clickONSubmitButton();
 	}
 	
@@ -138,7 +136,6 @@ public class ProfileInformationPhoneNoFieldTest extends TestBase{
 		profileInformation.typeSkypeFieldParam("aniSkype"); //  taking inputs from the skype
 		profileInformation.typeViberWhatsAppImoFieldParam("aniViber"); //  taking inputs from the viber
 		profileInformation.typeAddressFieldParam("Mohammadpur"); //  taking inputs from the address
-		profileInformation.typeLogoFieldParam("");
 		//profileInformation.clickONSubmitButton();
 	}
 	
@@ -154,7 +151,6 @@ public class ProfileInformationPhoneNoFieldTest extends TestBase{
 		profileInformation.typeSkypeFieldParam("aniSkype"); //  taking inputs from the skype
 		profileInformation.typeViberWhatsAppImoFieldParam("aniViber"); //  taking inputs from the viber
 		profileInformation.typeAddressFieldParam("Mohammadpur"); //  taking inputs from the address
-		profileInformation.typeLogoFieldParam("");
 		//profileInformation.clickONSubmitButton();
 	}
 	
@@ -168,7 +164,6 @@ public class ProfileInformationPhoneNoFieldTest extends TestBase{
 		profileInformation.typeSkypeFieldParam("aniSkype"); //  taking inputs from the skype
 		profileInformation.typeViberWhatsAppImoFieldParam("aniViber"); //  taking inputs from the viber
 		profileInformation.typeAddressFieldParam("Mohammadpur"); //  taking inputs from the address
-		profileInformation.typeLogoFieldParam("");
 		//profileInformation.clickONSubmitButton();
 	}
 	
