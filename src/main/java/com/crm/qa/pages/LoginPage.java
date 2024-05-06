@@ -29,6 +29,7 @@ import com.admin.qa.pages.OnlinePINReportsSectionLinks;
 import com.admin.qa.function.AddNewBanner;
 import com.admin.qa.function.AddNewBlockAppCRC;
 import com.admin.qa.function.AddNewCampaign;
+import com.admin.qa.function.AddNewEventCode;
 import com.admin.qa.function.AddNewIP;
 import com.admin.qa.function.AddNewMenuPermission;
 import com.admin.qa.function.AddNewNotice;
@@ -40,11 +41,13 @@ import com.admin.qa.function.AddNewSignUpBlacklistDomain;
 import com.admin.qa.function.AddPINJail;
 import com.admin.qa.function.AddPINValidity;
 import com.admin.qa.function.AddPushTemplate;
+import com.admin.qa.function.AddSubEventCode;
 import com.admin.qa.function.CreateNewApp;
 import com.admin.qa.function.NewAdminCreation;
 import com.admin.qa.function.NewCustomizeResellerPanel;
 import com.admin.qa.function.OnlinePINActivation;
 import com.admin.qa.function.OnlinePINMigration;
+import com.admin.qa.function.ProfileInformation;
 import com.admin.qa.function.PushAutomationForm;
 import com.admin.qa.function.SendBackgroundorSilentPushtoSinglePIN;
 import com.admin.qa.function.SendPushtoUser;
@@ -487,5 +490,30 @@ public class LoginPage extends TestBase{
 		return new AddNewBlockAppCRC(); //Login form Add New Role Form page
 	}
 	
+   public ProfileInformation profileInformationLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new ProfileInformation(); //Login form Add New Role Form page
+	}
+   
+   public AddNewEventCode addNewEventCodeLogin(String uname , String pwd) {
+		
+ 		username.sendKeys(uname);
+ 		password.sendKeys(pwd);
+ 		loginBtn.click();
+ 		
+ 		return new AddNewEventCode(); //Login form Add New Role Form page
+ 	}
      
+   public AddSubEventCode addSubEventCodeLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new AddSubEventCode(); //Login form Add New Role Form page
+	}
 }

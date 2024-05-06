@@ -47,8 +47,7 @@ public class ProfileInformationBillingNameFieldTest extends TestBase{
 		profileInformation.typeSkypeFieldParam("aniSkype"); //  taking inputs from the skype
 		profileInformation.typeViberWhatsAppImoFieldParam("aniViber"); //  taking inputs from the viber
 		profileInformation.typeAddressFieldParam("Mohammadpur"); //  taking inputs from the address
-		profileInformation.typeLogoFieldParam("");
-		//profileInformation.clickONSubmitButton();
+		//profileInformation.clickOnSaveProfileButton();
 		
 	}
 	
@@ -99,46 +98,43 @@ public class ProfileInformationBillingNameFieldTest extends TestBase{
 	public void enter_then_clear_the_text_into_Billing_Name_input_field() throws IOException, InterruptedException{
 		profileInformation = loginPage.profileInformationLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		profileInformation.openProfileInformationForm();// open the Profile Information Page.
-		profileInformation.typeBillingNameFieldParam("Symlex ");//taking input from the role Name
-		profileInformation.typeAndClearBillingNameFieldParam("");//clear the text
+		profileInformation.typeBillingNameFieldParam("Symlex VPN");//taking input from the role Name
+		profileInformation.typeAndClearBillingNameFieldParam("");
 		profileInformation.typePhoneNoFieldParam("012231234123");// taking input from the Phone No
 		profileInformation.typeEmailFieldParam("abc@gmail.com");// taking inputs from the Email
 		profileInformation.typeSkypeFieldParam("aniSkype"); //  taking inputs from the skype
 		profileInformation.typeViberWhatsAppImoFieldParam("aniViber"); //  taking inputs from the viber
 		profileInformation.typeAddressFieldParam("Mohammadpur"); //  taking inputs from the address
-		profileInformation.typeLogoFieldParam("");
-		//profileInformation.clickONSubmitButton();
+		//profileInformation.clickOnSaveProfileButton();
 		
 	}
 	@Test(priority=22)
 	public void enter_then_undo_the_input_action_into_description_input_field() throws IOException, InterruptedException{
 		profileInformation = loginPage.profileInformationLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		profileInformation.openProfileInformationForm();// open the Profile Information Page.
-		profileInformation.typeBillingNameFieldParam("Symlex ");//taking input from the role Name
-		profileInformation.typeAndClearBillingNameFieldParam("");// undo the text
+		profileInformation.typeBillingNameFieldParam("Symlex VPN");//taking input from the role Name
+		profileInformation.typeAndClearBillingNameFieldParam("");
 		profileInformation.typePhoneNoFieldParam("012231234123");// taking input from the Phone No
 		profileInformation.typeEmailFieldParam("abc@gmail.com");// taking inputs from the Email
 		profileInformation.typeSkypeFieldParam("aniSkype"); //  taking inputs from the skype
 		profileInformation.typeViberWhatsAppImoFieldParam("aniViber"); //  taking inputs from the viber
 		profileInformation.typeAddressFieldParam("Mohammadpur"); //  taking inputs from the address
-		profileInformation.typeLogoFieldParam("");
-		//profileInformation.clickONSubmitButton();
+		//profileInformation.clickOnSaveProfileButton();
 	}
 	
 	@Test(priority=23)
 	public void enter_then_undo_and_redo_the_input_action_into_description_input_field() throws IOException, InterruptedException{
 		profileInformation = loginPage.profileInformationLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		profileInformation.openProfileInformationForm();// open the Profile Information Page.
-		profileInformation.typeBillingNameFieldParam("Symlex ");//taking input from the role Name
-		profileInformation.typeAndClearBillingNameFieldParam("");//undo the text
-		profileInformation.typeBillingNameFieldParam("Symlex "); //redo the text
+		profileInformation.typeBillingNameFieldParam("Symlex VPN");//taking input from the role Name
+		profileInformation.typeAndClearBillingNameFieldParam("");
+		profileInformation.typeBillingNameFieldParam("Symlex VPN");
 		profileInformation.typePhoneNoFieldParam("012231234123");// taking input from the Phone No
 		profileInformation.typeEmailFieldParam("abc@gmail.com");// taking inputs from the Email
 		profileInformation.typeSkypeFieldParam("aniSkype"); //  taking inputs from the skype
 		profileInformation.typeViberWhatsAppImoFieldParam("aniViber"); //  taking inputs from the viber
 		profileInformation.typeAddressFieldParam("Mohammadpur"); //  taking inputs from the address
-		profileInformation.typeLogoFieldParam("");
-		//profileInformation.clickONSubmitButton();
+		//profileInformation.clickOnSaveProfileButton();
 	}
 	
 	@Test(priority=24)
@@ -146,29 +142,27 @@ public class ProfileInformationBillingNameFieldTest extends TestBase{
 	public void enter_text_and_navigate_through_into_description_input_field_using_the_tab_key() throws IOException, InterruptedException{ 
 		profileInformation = loginPage.profileInformationLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		profileInformation.openProfileInformationForm();// open the Profile Information Page.
-		profileInformation.typeBillingNameFieldParam("Symlex ");//taking input from the role Name
+		profileInformation.typeBillingNameFieldParam("Symlex VPN");//taking input from the role Name
 		profileInformation.typetoBillingNametabKey();
 		profileInformation.typePhoneNoFieldParam("012231234123");// taking input from the Phone No
 		profileInformation.typeEmailFieldParam("abc@gmail.com");// taking inputs from the Email
 		profileInformation.typeSkypeFieldParam("aniSkype"); //  taking inputs from the skype
 		profileInformation.typeViberWhatsAppImoFieldParam("aniViber"); //  taking inputs from the viber
 		profileInformation.typeAddressFieldParam("Mohammadpur"); //  taking inputs from the address
-		profileInformation.typeLogoFieldParam("");
-		//profileInformation.clickONSubmitButton();
+		//profileInformation.clickOnSaveProfileButton();
 	}
 	
 	@Test(priority=25)
 	public void paste_the_text_into_description_input_field_using_the_paste_action() throws IOException, InterruptedException{
 		profileInformation = loginPage.profileInformationLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		profileInformation.openProfileInformationForm();// open the Profile Information Page.
-		profileInformation.typeBillingNameFieldParam("Symlex ");//taking input from the role Name
+		profileInformation.typeBillingNameFieldParam("Symlex VPN");//taking input from the role Name
 		profileInformation.typePhoneNoFieldParam("012231234123");// taking input from the Phone No
 		profileInformation.typeEmailFieldParam("abc@gmail.com");// taking inputs from the Email
 		profileInformation.typeSkypeFieldParam("aniSkype"); //  taking inputs from the skype
 		profileInformation.typeViberWhatsAppImoFieldParam("aniViber"); //  taking inputs from the viber
 		profileInformation.typeAddressFieldParam("Mohammadpur"); //  taking inputs from the address
-		profileInformation.typeLogoFieldParam("");
-		//profileInformation.clickONSubmitButton();
+		//profileInformation.clickOnSaveProfileButton();
 	}
 	
 /*
