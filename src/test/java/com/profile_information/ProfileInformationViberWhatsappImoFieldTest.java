@@ -47,8 +47,7 @@ public class ProfileInformationViberWhatsappImoFieldTest extends TestBase{
 		profileInformation.typeSkypeFieldParam("aniSkype"); //  taking inputs from the skype
 		profileInformation.typeViberWhatsAppImoFieldParam(Viber_WhatsApp_Imo); //  taking inputs from the viber
 		profileInformation.typeAddressFieldParam("Mohammadpur"); //  taking inputs from the address
-		profileInformation.typeLogoFieldParam("");
-		//profileInformation.clickONSubmitButton();
+		//profileInformation.clickOnSaveProfileButton();
 		
 	}
 	//@Ignore
@@ -105,8 +104,7 @@ public class ProfileInformationViberWhatsappImoFieldTest extends TestBase{
 		profileInformation.typeViberWhatsAppImoFieldParam("abc@gmail.com"); //  taking inputs from the viber
 		profileInformation.typeAndClearViberWhatsAppImoFieldParam("");
 		profileInformation.typeAddressFieldParam("Mohammadpur"); //  taking inputs from the address
-		profileInformation.typeLogoFieldParam("");
-		//profileInformation.clickONSubmitButton();
+		//profileInformation.clickOnSaveProfileButton();
 		
 	}
 	//@Test(priority=22)
@@ -120,8 +118,7 @@ public class ProfileInformationViberWhatsappImoFieldTest extends TestBase{
 		profileInformation.typeViberWhatsAppImoFieldParam("abc@gmail.com"); //  taking inputs from the viber
 		profileInformation.typeAndClearViberWhatsAppImoFieldParam("");
 		profileInformation.typeAddressFieldParam("Mohammadpur"); //  taking inputs from the address
-		profileInformation.typeLogoFieldParam("");
-		//profileInformation.clickONSubmitButton();
+		//profileInformation.clickOnSaveProfileButton();
 	}
 	
 	//@Test(priority=23)
@@ -136,8 +133,7 @@ public class ProfileInformationViberWhatsappImoFieldTest extends TestBase{
 		profileInformation.typeAndClearViberWhatsAppImoFieldParam("");
 		profileInformation.typeViberWhatsAppImoFieldParam("abc@gmail.com");
 		profileInformation.typeAddressFieldParam("Mohammadpur"); //  taking inputs from the address
-		profileInformation.typeLogoFieldParam("");
-		//profileInformation.clickONSubmitButton();
+		//profileInformation.clickOnSaveProfileButton();
 	}
 	
 	//@Test(priority=24)
@@ -152,8 +148,7 @@ public class ProfileInformationViberWhatsappImoFieldTest extends TestBase{
 		profileInformation.typeViberWhatsAppImoFieldParam("abc@gmail.com"); //  taking inputs from the viber
 		profileInformation.typetoViberWhatsAppImotabKey();
 		profileInformation.typeAddressFieldParam("Mohammadpur"); //  taking inputs from the address
-		profileInformation.typeLogoFieldParam("");
-		//profileInformation.clickONSubmitButton();
+		//profileInformation.clickOnSaveProfileButton();
 	}
 	
 	//@Test(priority=25)
@@ -166,8 +161,7 @@ public class ProfileInformationViberWhatsappImoFieldTest extends TestBase{
 		profileInformation.typeSkypeFieldParam("aniSkype"); //  taking inputs from the skype
 		profileInformation.typeViberWhatsAppImoFieldParam("aniViber"); //  taking inputs from the viber
 		profileInformation.typeAddressFieldParam("Mohammadpur"); //  taking inputs from the address
-		profileInformation.typeLogoFieldParam("");
-		//profileInformation.clickONSubmitButton();
+		//profileInformation.clickOnSaveProfileButton();
 	}
 	
 /*

@@ -13,7 +13,7 @@ public class ProfileInformation extends TestBase{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public ProfileInformation openAddPINvalidityReport() {
+	public ProfileInformation openProfileInformationForm() {
 		driver.get(props.getProperty("url")+"application/profileInfo");
 		return new ProfileInformation();
 	}
@@ -44,14 +44,14 @@ public class ProfileInformation extends TestBase{
 	}
 	
 	//01. Type to the Billing Name
-	public ProfileInformation typeToNumberofDays() throws InterruptedException {
+	public ProfileInformation typeToBillingName() throws InterruptedException {
 		billingNameInputFieldHighlight();
 		billingNameElement.sendKeys("");
 		return new ProfileInformation();
 	}
 	
 	//01.0.1 Type to Billing Name parameter
-	public ProfileInformation typeDomainNameFieldParam(String Billing_Name) throws InterruptedException {
+	public ProfileInformation typeBillingNameFieldParam(String Billing_Name) throws InterruptedException {
 		billingNameInputFieldHighlight();
 		billingNameElement.sendKeys(Billing_Name);		
 		Thread.sleep(2000);		
@@ -59,7 +59,7 @@ public class ProfileInformation extends TestBase{
 	}
 	
 	//01.0.2. Type Billing Name Input Field (enter text, then clear Billing Name Input Field)
-	public ProfileInformation typeAndClearDomainNameFieldParam(String Billing_Name) throws InterruptedException {
+	public ProfileInformation typeAndClearBillingNameFieldParam(String Billing_Name) throws InterruptedException {
 		billingNameInputFieldHighlight();
 		billingNameElement.sendKeys(Billing_Name);
 		Thread.sleep(100);
@@ -68,7 +68,7 @@ public class ProfileInformation extends TestBase{
 	}		
 		
 	//1.0.3. Type to Billing Name tab key
-	public ProfileInformation  typetoDomainNametabKey() throws InterruptedException {
+	public ProfileInformation  typetoBillingNametabKey() throws InterruptedException {
 		billingNameInputFieldHighlight();
 		billingNameElement.sendKeys(Keys.TAB);
 		return new ProfileInformation();
@@ -583,6 +583,47 @@ public class ProfileInformation extends TestBase{
 	 * **************************    End No.10 - Element of Switch Header Color  ******************************************
 	 * * *****************************************************************************************************
 	******************************************************************************************************************************/
+	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.11 -   Element of Save profile button $$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+	*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
+	//11. Element of Save button
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div[4]/input[2]")
+	WebElement saveProfileElement;
+	
+	//11. Highlight the Save button
+	public void saveButtonInputFieldHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", saveProfileElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", saveProfileElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", saveProfileElement);/*make a yellow border outside edge of the element*/
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", saveProfileElement);
+			Thread.sleep(1000);
+		}
+	}
+	
+	//11. Click to the Save button
+	public ProfileInformation clickOnSaveProfileButton() throws InterruptedException {
+		saveButtonInputFieldHighlight();
+		saveProfileElement.click();
+		return new ProfileInformation();
+	}
+	
+	
+	/***************************************************************************************************************
+     * *****************************************************************************************************
+	 * **************************    End No.11 - Element of Save profile button  ******************************************
+	 * * *****************************************************************************************************
+	******************************************************************************************************************************/
+	
+	
 	
 	
 }
