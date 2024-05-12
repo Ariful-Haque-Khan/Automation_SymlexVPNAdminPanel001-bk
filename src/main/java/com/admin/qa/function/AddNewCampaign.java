@@ -354,7 +354,7 @@ public class AddNewCampaign extends TestBase{
 	//6.0.3. Type to Campaign Period start from
 	public AddNewCampaign campaignPeriodStartFromField() throws InterruptedException {
 		campaignPeriodStartFromHighlight();
-		campaignPeriodStartFromElement.sendKeys("2023-09-13 15:00:54"); /*type to the element. */
+		campaignPeriodStartFromElement.sendKeys("2024-05-08 11:00:54"); /*type to the element. */
 		return new AddNewCampaign();
 	}	
 
@@ -394,7 +394,7 @@ public class AddNewCampaign extends TestBase{
 	//07. Type to Campaign Period end time
 	public AddNewCampaign campaignPeriodEndTimeField() throws InterruptedException {
 		campaignPeriodEndTimeHighlight();
-		campaignPeriodEndTimeElement.sendKeys("2023-09-17 15:70:54"); /*type to the element. */
+		campaignPeriodEndTimeElement.sendKeys("2024-05-13 15:00:54"); /*type to the element. */
 		return new AddNewCampaign();
 	}	
 
@@ -434,7 +434,7 @@ public class AddNewCampaign extends TestBase{
 	public AddNewCampaign typeSelectField() throws InterruptedException {
 		statusSelectFieldHighlight();
 		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div[2]/form/div/div[1]/div[2]/div[8]/div/select")));
-		drp.selectByIndex(1);
+		drp.selectByIndex(0);
 		return new AddNewCampaign();
 	}
 
@@ -542,6 +542,480 @@ public class AddNewCampaign extends TestBase{
 	 * **************************    End No.10 - Element of Save now Button ******************************************
 	 * * *****************************************************************************************************
 	******************************************************************************************************************************/
+	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.11 -   Element of Campaign name / coupon Code  $$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+	*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
+		
+	//11. Element of Campaign name / coupon Code 
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[1]/div[2]/input")
+	WebElement campaignCouponCodeElement;
+	
+	//11. Highlight the Campaign name / coupon Code  Input Field
+	public void campaignCouponCodeHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", campaignCouponCodeElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", campaignCouponCodeElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",campaignCouponCodeElement);
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", campaignCouponCodeElement);
+			Thread.sleep(1000);
+		}
+	}
+	
+	//11.0.1 Type to the Campaign name / coupon Code  parameter
+	public AddNewCampaign typeToCampaignCouponCodeFieldParam(String coupon_Code ) throws InterruptedException {
+		campaignCouponCodeHighlight();
+		campaignCouponCodeElement.sendKeys(coupon_Code);		
+		Thread.sleep(2000);		
+		return new AddNewCampaign();
+	}
+	
+	//11.0.2. Type Campaign name / coupon Code  Input Field (enter text, then clear Campaign name / coupon Code  Input Field)
+	public AddNewCampaign typeAndClearCampaignCouponCodeFieldParam(String coupon_Code) throws InterruptedException {
+		campaignCouponCodeHighlight();
+		campaignCouponCodeElement.sendKeys(coupon_Code);
+		Thread.sleep(100);
+		campaignCouponCodeElement.clear();
+		return new AddNewCampaign();									    			
+	}		
+			
+	/***************************************************************************************************************
+     * *****************************************************************************************************
+	 * **************************    End No.11 - Element ofCampaign name / coupon Code ******************************************
+	 * * *****************************************************************************************************
+	******************************************************************************************************************************/
+	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.12 -   Element of  coupon code Search Button $$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+	*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
+	//12. Element of  Element of coupon code Search Button
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[1]/div[4]/div[2]/a")
+	WebElement couponCodeSearchElement;
+	
+	//12. Highlight the  Element of coupon code Search Button
+	public void  couponCodeSearchHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",  couponCodeSearchElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');",  couponCodeSearchElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", couponCodeSearchElement);/*make a yellow border outside edge of the element*/
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');",  couponCodeSearchElement);
+			Thread.sleep(1000);
+		}
+	}
+	
+	//12. Click to the  Element of coupon code Search Button
+	public AddNewCampaign clickOnCouponCodeSearchbutton() throws InterruptedException {
+		couponCodeSearchHighlight();
+		couponCodeSearchElement.click();
+		return new AddNewCampaign();
+	}
+	
+	/***************************************************************************************************************
+     * *****************************************************************************************************
+	 * **************************    End No.12 -Element of  coupon code Search Button ******************************************
+	 * * *****************************************************************************************************
+	******************************************************************************************************************************/
+	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.13 -   Element of  set discount plan button $$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+	*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
+	//13. Element of  Element of set discount plan button
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[2]/div/div/div[2]/div/table/tbody/tr/td[12]/a/span")
+	WebElement setDiscountElement;
+	
+	//13. Highlight the  Element of set discount plan button
+	public void  SetDiscountButtonHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",  setDiscountElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');",  setDiscountElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", setDiscountElement);/*make a yellow border outside edge of the element*/
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');",  setDiscountElement);
+			Thread.sleep(1000);
+		}
+	}
+	
+	//13. Click to the  Element of set discount plan button
+	public AddNewCampaign clickOnSetDiscountbutton() throws InterruptedException {
+		SetDiscountButtonHighlight();
+		setDiscountElement.click();
+		return new AddNewCampaign();
+	}
+	
+	/***************************************************************************************************************
+     * *****************************************************************************************************
+	 * **************************    End No.13 - Element of set discount plan button ******************************************
+	 * * *****************************************************************************************************
+	******************************************************************************************************************************/
+	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.14 -   Element of Edit(6 Months) ACTION Click $$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+	*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
+	//14. Element of  Element of Edit(6 Months) ACTION Click
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/div/div[1]/form/div[2]/div/table/tbody/tr[4]/td[9]/a/i")
+	WebElement editActionElement;
+	
+	//14. Highlight the  Element of Edit(6 Months) ACTION Click
+	public void  editActionElementHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",  editActionElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');",  editActionElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", editActionElement);/*make a yellow border outside edge of the element*/
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');",  editActionElement);
+			Thread.sleep(1000);
+		}
+	}
+	
+	//14. Click to the  Element of Edit(6 Months) ACTION Click
+	public AddNewCampaign clickOnEditActionButton() throws InterruptedException {
+		editActionElementHighlight();
+		editActionElement.click();
+		return new AddNewCampaign();
+	}
+	
+	/***************************************************************************************************************
+     * *****************************************************************************************************
+	 * **************************    End No.14 - Element of Edit(6 Months) ACTION Click  ******************************************
+	 * * *****************************************************************************************************
+	******************************************************************************************************************************/
+	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.15 -   Element of Discount Amount  $$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+	*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
+	
+	//15. Element of Discount Amount 
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div[2]/div/div[2]/div[1]/div/input")
+	WebElement discountAmountElement;
+	
+	//15. Highlight the Discount Amount  Input Field
+	public void discountAmountHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", discountAmountElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", discountAmountElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",discountAmountElement);
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", discountAmountElement);
+			Thread.sleep(1000);
+		}
+	}
+	
+	//15.0.1 Type to the Discount Amount  parameter
+	public AddNewCampaign typeToDiscountAmountFieldParam(String discount_Amount ) throws InterruptedException {
+		discountAmountHighlight();
+		discountAmountElement.sendKeys(discount_Amount);		
+		Thread.sleep(2000);		
+		return new AddNewCampaign();
+	}
+	
+	//15.0.2. Type Discount Amount  Input Field (enter text, then clear Discount Amount  Input Field)
+	public AddNewCampaign typeAndClearDiscountAmountFieldParam(String discount_Amount) throws InterruptedException {
+		discountAmountHighlight();
+		discountAmountElement.sendKeys(discount_Amount);
+		Thread.sleep(100);
+		discountAmountElement.clear();
+		return new AddNewCampaign();									    			
+	}		
+			
+	/***************************************************************************************************************
+     * *****************************************************************************************************
+	 * **************************    End No.15 - Element of Discount Amount  ******************************************
+	 * * *****************************************************************************************************
+	******************************************************************************************************************************/
+	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.16 -   Element of Extra Bonus Validity in days  $$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+	*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
+		
+	//16. Element of Extra Bonus Validity in days 
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div[2]/div/div[2]/div[3]/div/input")
+	WebElement extraBonusElement;
+	
+	//16. Highlight the Extra Bonus Validity in days  Input Field
+	public void ExtraBonusHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", extraBonusElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", extraBonusElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",extraBonusElement);
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", extraBonusElement);
+			Thread.sleep(1000);
+		}
+	}
+	
+	//16.0.1 Type to the Extra Bonus Validity in days  parameter
+	public AddNewCampaign typeToExtraBonusFieldParam(String extra_Bonus ) throws InterruptedException {
+		ExtraBonusHighlight();
+		extraBonusElement.sendKeys(extra_Bonus);		
+		Thread.sleep(2000);		
+		return new AddNewCampaign();
+	}
+	
+	//16.0.2. Type Extra Bonus Validity in days Input Field (enter text, then clear Extra Bonus Validity in days  Input Field)
+	public AddNewCampaign typeAndClearExtraBonusFieldParam(String extra_Bonus) throws InterruptedException {
+		ExtraBonusHighlight();
+		extraBonusElement.sendKeys(extra_Bonus);
+		Thread.sleep(100);
+		extraBonusElement.clear();
+		return new AddNewCampaign();									    			
+	}		
+			
+	/***************************************************************************************************************
+     * *****************************************************************************************************
+	 * **************************    End No.16 - Element of Extra Bonus Validity in days  ******************************************
+	 * * *****************************************************************************************************
+	******************************************************************************************************************************/
+	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.17 -   Element of Update Button $$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+	*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
+	//17. Element of  Element of Update Button
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div[3]/div/input[4]")
+	WebElement UpdateButtonElement;
+	
+	//17. Highlight the  Element of Update Button
+	public void UpdateButtonHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", UpdateButtonElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');",UpdateButtonElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",  UpdateButtonElement);/*make a yellow border outside edge of the element*/
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", UpdateButtonElement);
+			Thread.sleep(1000);
+		}
+	}
+	
+	//17. Click to the  Element of Update Button
+	public AddNewCampaign clickONUpdateButton() throws InterruptedException {
+		UpdateButtonHighlight();
+		UpdateButtonElement.click();
+		return new AddNewCampaign();
+	}
+	
+	/***************************************************************************************************************
+     * *****************************************************************************************************
+	 * **************************    End No.17 - Element of Update Button ******************************************
+	 * * *****************************************************************************************************
+	******************************************************************************************************************************/
+	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.18 -   Element of Assign Button $$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+	*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
+	//18. Element of  Element of Assign Button
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[2]/div/div/div[2]/div/table/tbody/tr/td[2]/a")
+	WebElement AssignButtonElement;
+	
+	//18. Highlight the  Element of Assign Button
+	public void AssignButtonHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", AssignButtonElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');",AssignButtonElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",  AssignButtonElement);/*make a yellow border outside edge of the element*/
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", AssignButtonElement);
+			Thread.sleep(1000);
+		}
+	}
+	
+	//18. Click to the  Element of Assign Button
+	public AddNewCampaign clickOnAssignButton() throws InterruptedException {
+		AssignButtonHighlight();
+		AssignButtonElement.click();
+		return new AddNewCampaign();
+	}
+	
+	/***************************************************************************************************************
+     * *****************************************************************************************************
+	 * **************************    End No.18 - Element of Assign Button******************************************
+	 * * *****************************************************************************************************
+	******************************************************************************************************************************/
+	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+   * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.19-  Element of Select Reseller   $$$$$$$$$$$$$$$$$$$
+  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+									*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+	//19. Select Reseller for First click On the Element
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[2]/form/div/div[1]/div[2]/div[1]/div/span/span[1]/span/span[1]")
+	WebElement assignResellerSelect;
+		
+	//19.Select Reseller for Search On the Element
+	@FindBy(xpath="/html/body/span/span/span[1]/input")
+	WebElement assignResellerDropDown;
+	
+	//19. PIN Type Element for Last click of first element On the Element
+	@FindBy(xpath="/html/body/span/span/span[2]/ul/li")
+	WebElement assignResellerSearch;
+	
+	//19. Highlight the Number of Days Input Field
+	public void assignResellerSearchdHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", assignResellerSelect);/* make a yellow border outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');",assignResellerSelect);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", assignResellerSelect);/* make a yellow border outside edge of the element */
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", assignResellerSelect);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+		}
+	}
+	
+	//19. Type to the Number of Days
+	public AddNewCampaign selectDatafromAssignResDropDownElement() throws InterruptedException {
+		assignResellerSearchdHighlight();/* highlight the element of the tested. */
+		assignResellerSelect.click(); /*click on the element */
+		assignResellerDropDown.sendKeys("rumyqa");/*type on the input field */
+		assignResellerSearch.click();/*click on the element from result of the first value. */
+		return new AddNewCampaign();
+	}
+
+      /***************************************************
+		*********************************************************************************************
+		****************************    End No.19 - Element of Select Reseller    **************************
+		*********************************************************************************************
+										*****************************************************************************************************/
+	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.20 -   Element of Assign Campaign Update Button $$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+	*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
+	//20. Element of  Element of Assign Button
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[2]/form/div/div[2]/input")
+	WebElement AssignCampaignUpdateNowElement;
+	
+	//20. Highlight the  Element of Assign Button
+	public void AssignCampaignUpdateNowHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", AssignCampaignUpdateNowElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');",AssignCampaignUpdateNowElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",  AssignCampaignUpdateNowElement);/*make a yellow border outside edge of the element*/
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", AssignCampaignUpdateNowElement);
+			Thread.sleep(1000);
+		}
+	}
+	
+	//20. Click to the  Element of Assign Button
+	public AddNewCampaign clickOnAssignCampaignUpdateNowButton() throws InterruptedException {
+		AssignCampaignUpdateNowHighlight();
+		AssignCampaignUpdateNowElement.click();
+		return new AddNewCampaign();
+	}
+	
+	/***************************************************************************************************************
+     * *****************************************************************************************************
+	 * **************************    End No.20 - Element of Assign Campaign Update Button   ******************************************
+	 * * *****************************************************************************************************
+	******************************************************************************************************************************/
+	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$   Start No.21 - Element of website checkout page log  in (username) $$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+	*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
+		
+	//16. Element of Extra Bonus Validity in days 
+	@FindBy(xpath="/html/body/div[5]/div/section/div/div/div[2]/div/div[4]/form/div[1]/input")
+	WebElement extraBonusElement;
+	
+	//16. Highlight the Extra Bonus Validity in days  Input Field
+	public void ExtraBonusHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", extraBonusElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", extraBonusElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",extraBonusElement);
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", extraBonusElement);
+			Thread.sleep(1000);
+		}
+	}
+	
+	//16.0.1 Type to the Extra Bonus Validity in days  parameter
+	public AddNewCampaign typeToExtraBonusFieldParam(String extra_Bonus ) throws InterruptedException {
+		ExtraBonusHighlight();
+		extraBonusElement.sendKeys(extra_Bonus);		
+		Thread.sleep(2000);		
+		return new AddNewCampaign();
+	}
+	
+	//16.0.2. Type Extra Bonus Validity in days Input Field (enter text, then clear Extra Bonus Validity in days  Input Field)
+	public AddNewCampaign typeAndClearExtraBonusFieldParam(String extra_Bonus) throws InterruptedException {
+		ExtraBonusHighlight();
+		extraBonusElement.sendKeys(extra_Bonus);
+		Thread.sleep(100);
+		extraBonusElement.clear();
+		return new AddNewCampaign();									    			
+	}		
+			
+	/***************************************************************************************************************
+     * *****************************************************************************************************
+	 * **************************    End No.16 - Element of Extra Bonus Validity in days  ******************************************
+	 * * *****************************************************************************************************
+	******************************************************************************************************************************/
+	
+ 
 	
 	
 }
