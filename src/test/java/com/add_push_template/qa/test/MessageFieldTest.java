@@ -44,7 +44,7 @@ public class MessageFieldTest extends TestBase{
 	
 	// Test _Blank!!! 
 	//@Test(priority=1)
-	//@Ignor
+	//@Ignore
 		 
 	public void check_with_empty_text_in_the_message_field() throws IOException, InterruptedException {
 		addPushTemplate = loginPage.addPushTemplateLogin(props.getProperty("username"),props.getProperty("password"));
@@ -343,11 +343,6 @@ public class MessageFieldTest extends TestBase{
 		 
 	}
  
-			  
-			  
-	
-			
-	
 	
 	/*
 	@AfterMethod
