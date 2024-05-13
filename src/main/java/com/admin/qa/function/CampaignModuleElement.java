@@ -10,14 +10,14 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.crm.qa.base.TestBase;
 
-public class AddNewCampaign extends TestBase{
-	public AddNewCampaign(){
+public class CampaignModuleElement extends TestBase{
+	public CampaignModuleElement(){
 		PageFactory.initElements(driver, this);
 	}
 	
-	public AddNewCampaign openAddNewCampaignForm() {
+	public CampaignModuleElement openAddNewCampaignForm() {
 		driver.get(props.getProperty("url")+"/campaign/addCampaign");
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}
 	
 	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -46,34 +46,34 @@ public class AddNewCampaign extends TestBase{
 	}
 	
 	//01. Type to the Campaign Name
-	public AddNewCampaign  typeToServerNameInputField() throws InterruptedException {
+	public CampaignModuleElement  typeToServerNameInputField() throws InterruptedException {
 		campaignNameElementInputFieldHighlight();
 		campaignNameElement.sendKeys("");
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}
 	
 	//01.0.1 Type to the Campaign Name parameter
-	public AddNewCampaign typeToCampaignNameFieldParam(String campaign_name) throws InterruptedException {
+	public CampaignModuleElement typeToCampaignNameFieldParam(String campaign_name) throws InterruptedException {
 		campaignNameElementInputFieldHighlight();
 		campaignNameElement.sendKeys(campaign_name);		
 		Thread.sleep(2000);		
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}
 	
 	//01.0.2. Type Campaign Name Input Field (enter text, then clear Server Name Input Field)
-	public AddNewCampaign typeAndClearCampaignNameFieldParam(String campaign_name) throws InterruptedException {
+	public CampaignModuleElement typeAndClearCampaignNameFieldParam(String campaign_name) throws InterruptedException {
 		campaignNameElementInputFieldHighlight();
 		campaignNameElement.sendKeys(campaign_name);
 		Thread.sleep(100);
 		campaignNameElement.clear();
-		return new AddNewCampaign();									    			
+		return new CampaignModuleElement();									    			
 	}		
 		
 	//1.0.3. Type to Campaign Name tab key
-	public AddNewCampaign  typetoCampaignNameFieldtabKey() throws InterruptedException {
+	public CampaignModuleElement  typetoCampaignNameFieldtabKey() throws InterruptedException {
 		campaignNameElementInputFieldHighlight();
 		campaignNameElement.sendKeys(Keys.TAB);
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}	
 	/***************************************************************************************************************
      * *****************************************************************************************************
@@ -107,34 +107,34 @@ public class AddNewCampaign extends TestBase{
 	}
 	
 	//02. Type to the Show As Name (On Website)
-	public AddNewCampaign typeToshowAsNameOnWebsiteInputField() throws InterruptedException {
+	public CampaignModuleElement typeToshowAsNameOnWebsiteInputField() throws InterruptedException {
 		showAsNameOnWebsiteInputFieldHighlight();
 		showAsNameOnWebsiteElement.sendKeys("");
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}
 	
 	//02.0.1 Type to the Show As Name (On Website) parameter
-	public AddNewCampaign typeToshowAsNameOnWebsiteFieldParam(String show_name) throws InterruptedException {
+	public CampaignModuleElement typeToshowAsNameOnWebsiteFieldParam(String show_name) throws InterruptedException {
 		showAsNameOnWebsiteInputFieldHighlight();
 		showAsNameOnWebsiteElement.sendKeys(show_name);		
 		Thread.sleep(2000);		
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}
 	
 	//02.0.2. Type Show As Name (On Website) Input Field (enter text, then clear Show As Name (On Website) Input Field)
-	public AddNewCampaign typeAndClearshowAsNameOnWebsiteFieldParam(String show_name) throws InterruptedException {
+	public CampaignModuleElement typeAndClearshowAsNameOnWebsiteFieldParam(String show_name) throws InterruptedException {
 		showAsNameOnWebsiteInputFieldHighlight();
 		showAsNameOnWebsiteElement.sendKeys(show_name);
 		Thread.sleep(100);
 		showAsNameOnWebsiteElement.clear();
-		return new AddNewCampaign();									    			
+		return new CampaignModuleElement();									    			
 	}		
 		
 	//2.0.3. Type to Show As Name (On Website) tab key
-	public AddNewCampaign typetoshowAsNameOnWebsiteFieldtabKey() throws InterruptedException {
+	public CampaignModuleElement typetoshowAsNameOnWebsiteFieldtabKey() throws InterruptedException {
 		showAsNameOnWebsiteInputFieldHighlight();
 		showAsNameOnWebsiteElement.sendKeys(Keys.TAB);
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}	
 	/***************************************************************************************************************
      * *****************************************************************************************************
@@ -168,34 +168,34 @@ public class AddNewCampaign extends TestBase{
 	}
 	
 	//03. Type to the Website Header Img (External URL)
-	public AddNewCampaign typeTowebsiteHeaderImageInputField() throws InterruptedException {
+	public CampaignModuleElement typeTowebsiteHeaderImageInputField() throws InterruptedException {
 		websiteHeaderImageInputFieldHighlight();
 		websiteHeaderImageElement.sendKeys("");
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}
 	
 	//03.0.1 Type to the Website Header Img (External URL)parameter
-	public AddNewCampaign typeTowebsiteHeaderImageFieldParam(String Website_Header) throws InterruptedException {
+	public CampaignModuleElement typeTowebsiteHeaderImageFieldParam(String Website_Header) throws InterruptedException {
 		websiteHeaderImageInputFieldHighlight();
 		websiteHeaderImageElement.sendKeys(Website_Header);		
 		Thread.sleep(2000);		
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}
 	
 	//03.0.2. Type Website Header Img (External URL) Input Field (enter text, then clear Website Header Img(External URL Input Field)
-	public AddNewCampaign typeAndClearwebsiteHeaderImageFieldParam(String Website_Header) throws InterruptedException {
+	public CampaignModuleElement typeAndClearwebsiteHeaderImageFieldParam(String Website_Header) throws InterruptedException {
 		websiteHeaderImageInputFieldHighlight();
 		websiteHeaderImageElement.sendKeys(Website_Header);
 		Thread.sleep(100);
 		websiteHeaderImageElement.clear();
-		return new AddNewCampaign();									    			
+		return new CampaignModuleElement();									    			
 	}		
 		
 	//3.0.3. Type to Website Header Img (External URL)tab key
-	public AddNewCampaign  typetowebsiteHeaderImageFieldtabKey() throws InterruptedException {
+	public CampaignModuleElement  typetowebsiteHeaderImageFieldtabKey() throws InterruptedException {
 		websiteHeaderImageInputFieldHighlight();
 		websiteHeaderImageElement.sendKeys(Keys.TAB);
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}	
 	/***************************************************************************************************************
      * *****************************************************************************************************
@@ -229,34 +229,34 @@ public class AddNewCampaign extends TestBase{
 	}
 	
 	//04. Type to the Coupon Code
-	public AddNewCampaign typeToCouponCodeInputField() throws InterruptedException {
+	public CampaignModuleElement typeToCouponCodeInputField() throws InterruptedException {
 		couponCodeInputFieldHighlight();
 		couponCodeElement.sendKeys("");
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}
 	
 	//04.0.1 Type to the Coupon Code parameter
-	public AddNewCampaign typeToCouponCodeFieldParam(String coupon_code) throws InterruptedException {
+	public CampaignModuleElement typeToCouponCodeFieldParam(String coupon_code) throws InterruptedException {
 		couponCodeInputFieldHighlight();
 		couponCodeElement.sendKeys(coupon_code);		
 		Thread.sleep(2000);		
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}
 	
 	//04.0.2. Type Coupon Code Input Field (enter text, then clear Coupon Code Input Field)
-	public AddNewCampaign typeAndClearCouponCodeFieldParam(String coupon_code) throws InterruptedException {
+	public CampaignModuleElement typeAndClearCouponCodeFieldParam(String coupon_code) throws InterruptedException {
 		couponCodeInputFieldHighlight();
 		couponCodeElement.sendKeys(coupon_code);
 		Thread.sleep(100);
 		couponCodeElement.clear();
-		return new AddNewCampaign();									    			
+		return new CampaignModuleElement();									    			
 	}		
 		
 	//4.0.3. Type to Coupon Code tab key
-	public AddNewCampaign  typetoCouponCodetabKey() throws InterruptedException {
+	public CampaignModuleElement  typetoCouponCodetabKey() throws InterruptedException {
 		couponCodeInputFieldHighlight();
 		couponCodeElement.sendKeys(Keys.TAB);
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}	
 	/***************************************************************************************************************
      * *****************************************************************************************************
@@ -290,34 +290,34 @@ public class AddNewCampaign extends TestBase{
 	}
 	
 	//05. Type to the Affiliate Share
-	public AddNewCampaign typeToAffiliateShareInputField() throws InterruptedException {
+	public CampaignModuleElement typeToAffiliateShareInputField() throws InterruptedException {
 		affiliateShareInputFieldHighlight();
 		affiliateShareElement.sendKeys("");
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}
 	
 	//05.0.1 Type to the Affiliate Share parameter
-	public AddNewCampaign typeToAffiliateShareFieldParam(String Affiliate_Share) throws InterruptedException {
+	public CampaignModuleElement typeToAffiliateShareFieldParam(String Affiliate_Share) throws InterruptedException {
 		affiliateShareInputFieldHighlight();
 		affiliateShareElement.sendKeys(Affiliate_Share);		
 		Thread.sleep(2000);		
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}
 	
 	//05.0.2. Type Affiliate Share Input Field (enter text, then clear Affiliate Share Input Field)
-	public AddNewCampaign typeAndClearAffiliateShareFieldParam(String Affiliate_Share) throws InterruptedException {
+	public CampaignModuleElement typeAndClearAffiliateShareFieldParam(String Affiliate_Share) throws InterruptedException {
 		affiliateShareInputFieldHighlight();
 		affiliateShareElement.sendKeys(Affiliate_Share);
 		Thread.sleep(100);
 		affiliateShareElement.clear();
-		return new AddNewCampaign();									    			
+		return new CampaignModuleElement();									    			
 	}		
 		
 	//5.0.3. Type to Affiliate Share tab key
-	public AddNewCampaign  typetoAffiliateSharetabKey() throws InterruptedException {
+	public CampaignModuleElement  typetoAffiliateSharetabKey() throws InterruptedException {
 		affiliateShareInputFieldHighlight();
 		affiliateShareElement.sendKeys(Keys.TAB);
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}	
 	/***************************************************************************************************************
      * *****************************************************************************************************
@@ -352,10 +352,10 @@ public class AddNewCampaign extends TestBase{
 	}
 	
 	//6.0.3. Type to Campaign Period start from
-	public AddNewCampaign campaignPeriodStartFromField() throws InterruptedException {
+	public CampaignModuleElement campaignPeriodStartFromField() throws InterruptedException {
 		campaignPeriodStartFromHighlight();
 		campaignPeriodStartFromElement.sendKeys("2024-05-08 11:00:54"); /*type to the element. */
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}	
 
 
@@ -392,10 +392,10 @@ public class AddNewCampaign extends TestBase{
 	}
 	
 	//07. Type to Campaign Period end time
-	public AddNewCampaign campaignPeriodEndTimeField() throws InterruptedException {
+	public CampaignModuleElement campaignPeriodEndTimeField() throws InterruptedException {
 		campaignPeriodEndTimeHighlight();
 		campaignPeriodEndTimeElement.sendKeys("2024-05-13 15:00:54"); /*type to the element. */
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}	
 
 
@@ -431,11 +431,11 @@ public class AddNewCampaign extends TestBase{
 	}
 	
 	//08. Type to the status drop down field
-	public AddNewCampaign typeSelectField() throws InterruptedException {
+	public CampaignModuleElement typeSelectField() throws InterruptedException {
 		statusSelectFieldHighlight();
 		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div[2]/form/div/div[1]/div[2]/div[8]/div/select")));
 		drp.selectByIndex(0);
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}
 
     /***************************************************
@@ -470,34 +470,34 @@ public class AddNewCampaign extends TestBase{
 	}
 	
 	//09. Type to the Remarks
-	public AddNewCampaign typeToRemarksInputField() throws InterruptedException {
+	public CampaignModuleElement typeToRemarksInputField() throws InterruptedException {
 		remarkInputFieldHighlight();
 		remarkElement.sendKeys("");
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}
 	
 	//09.0.1 Type to the Remarks parameter
-	public AddNewCampaign typeToRemarksFieldParam(String remarks) throws InterruptedException {
+	public CampaignModuleElement typeToRemarksFieldParam(String remarks) throws InterruptedException {
 		remarkInputFieldHighlight();
 		remarkElement.sendKeys(remarks);		
 		Thread.sleep(2000);		
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}
 	
 	//09.0.2. Type Remarks Input Field (enter text, then clear Remarks Input Field)
-	public AddNewCampaign typeAndClearRemarksFieldParam(String remarks) throws InterruptedException {
+	public CampaignModuleElement typeAndClearRemarksFieldParam(String remarks) throws InterruptedException {
 		remarkInputFieldHighlight();
 		remarkElement.sendKeys(remarks);
 		Thread.sleep(100);
 		remarkElement.clear();
-		return new AddNewCampaign();									    			
+		return new CampaignModuleElement();									    			
 	}		
 		
 	//9.0.3. Type to Remarks tab key
-	public AddNewCampaign  typetoRemarkstabKey() throws InterruptedException {
+	public CampaignModuleElement  typetoRemarkstabKey() throws InterruptedException {
 		remarkInputFieldHighlight();
 		remarkElement.sendKeys(Keys.TAB);
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}	
 	/***************************************************************************************************************
      * *****************************************************************************************************
@@ -531,10 +531,10 @@ public class AddNewCampaign extends TestBase{
 	}
 	
 	//10. Click to the Save now Button
-	public AddNewCampaign clickONSaveNowButton() throws InterruptedException {
+	public CampaignModuleElement clickONSaveNowButton() throws InterruptedException {
 		saveNowButtonInputFieldHighlight();
 		saveNowButtonElement.click();
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}
 	
 	/***************************************************************************************************************
@@ -570,20 +570,20 @@ public class AddNewCampaign extends TestBase{
 	}
 	
 	//11.0.1 Type to the Campaign name / coupon Code  parameter
-	public AddNewCampaign typeToCampaignCouponCodeFieldParam(String coupon_Code ) throws InterruptedException {
+	public CampaignModuleElement typeToCampaignCouponCodeFieldParam(String coupon_Code ) throws InterruptedException {
 		campaignCouponCodeHighlight();
 		campaignCouponCodeElement.sendKeys(coupon_Code);		
 		Thread.sleep(2000);		
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}
 	
 	//11.0.2. Type Campaign name / coupon Code  Input Field (enter text, then clear Campaign name / coupon Code  Input Field)
-	public AddNewCampaign typeAndClearCampaignCouponCodeFieldParam(String coupon_Code) throws InterruptedException {
+	public CampaignModuleElement typeAndClearCampaignCouponCodeFieldParam(String coupon_Code) throws InterruptedException {
 		campaignCouponCodeHighlight();
 		campaignCouponCodeElement.sendKeys(coupon_Code);
 		Thread.sleep(100);
 		campaignCouponCodeElement.clear();
-		return new AddNewCampaign();									    			
+		return new CampaignModuleElement();									    			
 	}		
 			
 	/***************************************************************************************************************
@@ -618,10 +618,10 @@ public class AddNewCampaign extends TestBase{
 	}
 	
 	//12. Click to the  Element of coupon code Search Button
-	public AddNewCampaign clickOnCouponCodeSearchbutton() throws InterruptedException {
+	public CampaignModuleElement clickOnCouponCodeSearchbutton() throws InterruptedException {
 		couponCodeSearchHighlight();
 		couponCodeSearchElement.click();
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}
 	
 	/***************************************************************************************************************
@@ -656,10 +656,10 @@ public class AddNewCampaign extends TestBase{
 	}
 	
 	//13. Click to the  Element of set discount plan button
-	public AddNewCampaign clickOnSetDiscountbutton() throws InterruptedException {
+	public CampaignModuleElement clickOnSetDiscountbutton() throws InterruptedException {
 		SetDiscountButtonHighlight();
 		setDiscountElement.click();
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}
 	
 	/***************************************************************************************************************
@@ -694,10 +694,10 @@ public class AddNewCampaign extends TestBase{
 	}
 	
 	//14. Click to the  Element of Edit(6 Months) ACTION Click
-	public AddNewCampaign clickOnEditActionButton() throws InterruptedException {
+	public CampaignModuleElement clickOnEditActionButton() throws InterruptedException {
 		editActionElementHighlight();
 		editActionElement.click();
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}
 	
 	/***************************************************************************************************************
@@ -708,7 +708,7 @@ public class AddNewCampaign extends TestBase{
 	
 	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.15 -   Element of Discount Amount  $$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.15 - Element of Discount Amount-(Edit Discount for Campaign-Apply Discount)  $$$$$$$$$$$$$$$$$$$$$$$$$$$$
 	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
 	*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
 	
@@ -733,31 +733,31 @@ public class AddNewCampaign extends TestBase{
 	}
 	
 	//15.0.1 Type to the Discount Amount  parameter
-	public AddNewCampaign typeToDiscountAmountFieldParam(String discount_Amount ) throws InterruptedException {
+	public CampaignModuleElement typeToDiscountAmountFieldParam(String discount_Amount ) throws InterruptedException {
 		discountAmountHighlight();
 		discountAmountElement.sendKeys(discount_Amount);		
 		Thread.sleep(2000);		
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}
 	
 	//15.0.2. Type Discount Amount  Input Field (enter text, then clear Discount Amount  Input Field)
-	public AddNewCampaign typeAndClearDiscountAmountFieldParam(String discount_Amount) throws InterruptedException {
+	public CampaignModuleElement typeAndClearDiscountAmountFieldParam(String discount_Amount) throws InterruptedException {
 		discountAmountHighlight();
 		discountAmountElement.sendKeys(discount_Amount);
 		Thread.sleep(100);
 		discountAmountElement.clear();
-		return new AddNewCampaign();									    			
+		return new CampaignModuleElement();									    			
 	}		
 			
 	/***************************************************************************************************************
      * *****************************************************************************************************
-	 * **************************    End No.15 - Element of Discount Amount  ******************************************
+	 * **************************    End No.15 - Element of Discount Amount-(Edit Discount for Campaign-Apply Discount)  ******************************************
 	 * * *****************************************************************************************************
 	******************************************************************************************************************************/
 	
 	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.16 -   Element of Extra Bonus Validity in days  $$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.16 - Element of Extra Bonus Validity in days-(Edit Discount for Campaign-Apply Discount)  $$$$$$$$$$$$$$$$$$$$$$$$$$$$
 	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
 	*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
 	
@@ -782,25 +782,25 @@ public class AddNewCampaign extends TestBase{
 	}
 	
 	//16.0.1 Type to the Extra Bonus Validity in days  parameter
-	public AddNewCampaign typeToExtraBonusFieldParam(String extra_Bonus ) throws InterruptedException {
+	public CampaignModuleElement typeToExtraBonusFieldParam(String extra_Bonus ) throws InterruptedException {
 		ExtraBonusHighlight();
 		extraBonusElement.sendKeys(extra_Bonus);		
 		Thread.sleep(2000);		
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}
 	
 	//16.0.2. Type Extra Bonus Validity in days Input Field (enter text, then clear Extra Bonus Validity in days  Input Field)
-	public AddNewCampaign typeAndClearExtraBonusFieldParam(String extra_Bonus) throws InterruptedException {
+	public CampaignModuleElement typeAndClearExtraBonusFieldParam(String extra_Bonus) throws InterruptedException {
 		ExtraBonusHighlight();
 		extraBonusElement.sendKeys(extra_Bonus);
 		Thread.sleep(100);
 		extraBonusElement.clear();
-		return new AddNewCampaign();									    			
+		return new CampaignModuleElement();									    			
 	}		
 			
 	/***************************************************************************************************************
      * *****************************************************************************************************
-	 * **************************    End No.16 - Element of Extra Bonus Validity in days  ******************************************
+	 * **************************    End No.16 - Element of Extra Bonus Validity in days-(Edit Discount for Campaign-Apply Discount)******************************************
 	 * * *****************************************************************************************************
 	******************************************************************************************************************************/
 	
@@ -830,10 +830,10 @@ public class AddNewCampaign extends TestBase{
 	}
 	
 	//17. Click to the  Element of Update Button
-	public AddNewCampaign clickONUpdateButton() throws InterruptedException {
+	public CampaignModuleElement clickONUpdateButton() throws InterruptedException {
 		UpdateButtonHighlight();
 		UpdateButtonElement.click();
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}
 	
 	/***************************************************************************************************************
@@ -868,10 +868,10 @@ public class AddNewCampaign extends TestBase{
 	}
 	
 	//18. Click to the  Element of Assign Button
-	public AddNewCampaign clickOnAssignButton() throws InterruptedException {
+	public CampaignModuleElement clickOnAssignButton() throws InterruptedException {
 		AssignButtonHighlight();
 		AssignButtonElement.click();
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}
 	
 	/***************************************************************************************************************
@@ -882,7 +882,7 @@ public class AddNewCampaign extends TestBase{
 	
 	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-   * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.19-  Element of Select Reseller   $$$$$$$$$$$$$$$$$$$
+   * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.19-  Element of Select Reseller (Assign Campaign)  $$$$$$$$$$$$$$$$$$$
   * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 									*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
 
@@ -898,7 +898,7 @@ public class AddNewCampaign extends TestBase{
 	@FindBy(xpath="/html/body/span/span/span[2]/ul/li")
 	WebElement assignResellerSearch;
 	
-	//19. Highlight the Number of Days Input Field
+	//19. Highlight the Select Reseller Input Field
 	public void assignResellerSearchdHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -913,18 +913,18 @@ public class AddNewCampaign extends TestBase{
 		}
 	}
 	
-	//19. Type to the Number of Days
-	public AddNewCampaign selectDatafromAssignResDropDownElement() throws InterruptedException {
+	//19. Type to the Select Reseller
+	public CampaignModuleElement selectDatafromAssignResDropDownElement() throws InterruptedException {
 		assignResellerSearchdHighlight();/* highlight the element of the tested. */
 		assignResellerSelect.click(); /*click on the element */
 		assignResellerDropDown.sendKeys("rumyqa");/*type on the input field */
 		assignResellerSearch.click();/*click on the element from result of the first value. */
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}
 
       /***************************************************
 		*********************************************************************************************
-		****************************    End No.19 - Element of Select Reseller    **************************
+		****************************    End No.19 -  Element of Select Reseller (Assign Campaign)   **************************
 		*********************************************************************************************
 										*****************************************************************************************************/
 	
@@ -954,70 +954,224 @@ public class AddNewCampaign extends TestBase{
 	}
 	
 	//20. Click to the  Element of Assign Button
-	public AddNewCampaign clickOnAssignCampaignUpdateNowButton() throws InterruptedException {
+	public CampaignModuleElement clickOnAssignCampaignUpdateNowButton() throws InterruptedException {
 		AssignCampaignUpdateNowHighlight();
 		AssignCampaignUpdateNowElement.click();
-		return new AddNewCampaign();
+		return new CampaignModuleElement();
 	}
 	
 	/***************************************************************************************************************
      * *****************************************************************************************************
 	 * **************************    End No.20 - Element of Assign Campaign Update Button   ******************************************
 	 * * *****************************************************************************************************
-	******************************************************************************************************************************/
+	******************************************************************************************************************************/	
 	
 	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$   Start No.21 - Element of website checkout page log  in (username) $$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.21 -   Element of Update Now assign campaign Button $$$$$$$$$$$$$$$$$$$$$$$$$$$$
 	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
 	*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
 	
-		
-	//16. Element of Extra Bonus Validity in days 
-	@FindBy(xpath="/html/body/div[5]/div/section/div/div/div[2]/div/div[4]/form/div[1]/input")
-	WebElement extraBonusElement;
+	//21. Element of  Element of Update Now assign campaign Button
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[2]/form/div/div[2]/input")
+	WebElement UpdateNowAssignCampaignButtonElement;
 	
-	//16. Highlight the Extra Bonus Validity in days  Input Field
-	public void ExtraBonusHighlight() throws InterruptedException {
+	//21. Highlight the  Element of Assign Button
+	public void UpdateNowAssignCampaignButtonHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", extraBonusElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", UpdateNowAssignCampaignButtonElement);
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', '');", extraBonusElement);
+			js.executeScript("arguments[0].setAttribute('style', '');",UpdateNowAssignCampaignButtonElement);
 			Thread.sleep(1000);
-			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",extraBonusElement);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",  UpdateNowAssignCampaignButtonElement);/*make a yellow border outside edge of the element*/
 			Thread.sleep(2000);
-			js.executeScript("arguments[0].setAttribute('style', '');", extraBonusElement);
+			js.executeScript("arguments[0].setAttribute('style', '');", UpdateNowAssignCampaignButtonElement);
 			Thread.sleep(1000);
 		}
 	}
 	
-	//16.0.1 Type to the Extra Bonus Validity in days  parameter
-	public AddNewCampaign typeToExtraBonusFieldParam(String extra_Bonus ) throws InterruptedException {
-		ExtraBonusHighlight();
-		extraBonusElement.sendKeys(extra_Bonus);		
-		Thread.sleep(2000);		
-		return new AddNewCampaign();
+	//21. Click to the  Element of Assign Button
+	public CampaignModuleElement clickOnUpdateNowAssignCampaignButtonButton() throws InterruptedException {
+		UpdateNowAssignCampaignButtonHighlight();
+		UpdateNowAssignCampaignButtonElement.click();
+		return new CampaignModuleElement();
 	}
 	
-	//16.0.2. Type Extra Bonus Validity in days Input Field (enter text, then clear Extra Bonus Validity in days  Input Field)
-	public AddNewCampaign typeAndClearExtraBonusFieldParam(String extra_Bonus) throws InterruptedException {
-		ExtraBonusHighlight();
-		extraBonusElement.sendKeys(extra_Bonus);
+	/***************************************************************************************************************
+     * *****************************************************************************************************
+	 * **************************    End No.21 - Element of Assign Button******************************************
+	 * * *****************************************************************************************************
+	******************************************************************************************************************************/
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.22 - Element of Coupon Code-(Edit Discount for Campaign-Apply Discount)  $$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+	*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
+		
+	//22. Element of Coupon Code in Edit Discount for Campaign 
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div[1]/div/div[2]/div[1]/div/input")
+	WebElement couponCodeDiscountElement;
+	
+	//22. Highlight the Coupon Code in Edit Discount for Campaign Input Field
+	public void CouponCodeDiscountHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", couponCodeDiscountElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", couponCodeDiscountElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",couponCodeDiscountElement);
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", couponCodeDiscountElement);
+			Thread.sleep(1000);
+		}
+	}
+	
+	//22.0.1 Type to the Coupon Code in Edit Discount for Campaign parameter
+	public CampaignModuleElement typeToCouponCodeDiscountFieldParam(String Coupon_Code ) throws InterruptedException {
+		CouponCodeDiscountHighlight();
+		couponCodeDiscountElement.sendKeys(Coupon_Code);		
+		Thread.sleep(2000);		
+		return new CampaignModuleElement();
+	}
+	
+	//22.0.2. Type Coupon Code in Edit Discount for Campaign Input Field (enter text, then clear Coupon Code in Edit Discount for Campaign Input Field)
+	public CampaignModuleElement typeAndClearCouponCodeDiscountFieldParam(String Coupon_Code) throws InterruptedException {
+		CouponCodeDiscountHighlight();
+		couponCodeDiscountElement.sendKeys(Coupon_Code);
 		Thread.sleep(100);
-		extraBonusElement.clear();
-		return new AddNewCampaign();									    			
-	}		
+		couponCodeDiscountElement.clear();
+		return new CampaignModuleElement();									    			
+	}
+	
+	//22.0.3. Type to Coupon Code tab key
+	public CampaignModuleElement  typetoCouponCodeDiscounttabKey() throws InterruptedException {
+		CouponCodeDiscountHighlight();
+		couponCodeDiscountElement.sendKeys(Keys.TAB);
+		return new CampaignModuleElement();
+	}	
 			
 	/***************************************************************************************************************
      * *****************************************************************************************************
-	 * **************************    End No.16 - Element of Extra Bonus Validity in days  ******************************************
+	 * **************************    End No.22 - Element of Coupon Code-(Edit Discount for Campaign-Apply Discount)******************************************
+	 * * *****************************************************************************************************
+	******************************************************************************************************************************/
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.23 - Element of Package Name-(Edit Discount for Campaign-Apply Discount)  $$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+	*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
+		
+	//23. Element of Package Name in Edit Discount for Campaign 
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div[1]/div/div[2]/div[2]/div/input")
+	WebElement packageNameDiscountElement;
+	
+	//23. Highlight the Package Name in Edit Discount for Campaign Input Field
+	public void PackageNameHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", packageNameDiscountElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", packageNameDiscountElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",packageNameDiscountElement);
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", packageNameDiscountElement);
+			Thread.sleep(1000);
+		}
+	}
+	
+	//23.0.1 Type to the Package Name in Edit Discount for Campaign parameter
+	public CampaignModuleElement typeToPackageNameFieldParam(String Package_Name) throws InterruptedException {
+		PackageNameHighlight();
+		packageNameDiscountElement.sendKeys(Package_Name);		
+		Thread.sleep(2000);		
+		return new CampaignModuleElement();
+	}
+	
+	//23.0.2. Type Package Name in Edit Discount for Campaign Input Field (enter text, then clear Package Name in Edit Discount for Campaign Input Field)
+	public CampaignModuleElement typeAndClearPackageNameFieldParam(String Package_Name) throws InterruptedException {
+		PackageNameHighlight();
+		packageNameDiscountElement.sendKeys(Package_Name);
+		Thread.sleep(100);
+		packageNameDiscountElement.clear();
+		return new CampaignModuleElement();									    			
+	}
+	
+	//23.0.3. Type to Package Name tab key
+	public CampaignModuleElement  typetoPackageNametabKey() throws InterruptedException {
+		PackageNameHighlight();
+		packageNameDiscountElement.sendKeys(Keys.TAB);
+		return new CampaignModuleElement();
+	}	
+			
+	/***************************************************************************************************************
+     * *****************************************************************************************************
+	 * **************************    End No.23 - Element of Package Name -(Edit Discount for Campaign-Apply Discount)******************************************
 	 * * *****************************************************************************************************
 	******************************************************************************************************************************/
 	
- 
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.24 - Element of Number Of Days*-(Edit Discount for Campaign-Apply Discount)  $$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+	*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
+		
+	//24. Element of Number Of Days* in Edit Discount for Campaign 
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div[1]/div/div[2]/div[3]/div/input")
+	WebElement NumberOfDaysDiscountElement;
+	
+	//24. Highlight the Number Of Days* in Edit Discount for Campaign Input Field
+	public void NumberOfDaysHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", NumberOfDaysDiscountElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", NumberOfDaysDiscountElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",NumberOfDaysDiscountElement);
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", NumberOfDaysDiscountElement);
+			Thread.sleep(1000);
+		}
+	}
+	
+	//24.0.1 Type to the Number Of Days in Edit Discount for Campaign parameter
+	public CampaignModuleElement typeToNumberOfDaysFieldParam(String Number_Of_Days) throws InterruptedException {
+		NumberOfDaysHighlight();
+		NumberOfDaysDiscountElement.sendKeys(Number_Of_Days);		
+		Thread.sleep(2000);		
+		return new CampaignModuleElement();
+	}
+	
+	//24.0.2. Type Number Of Days in Edit Discount for Campaign Input Field (enter text, then clear Number Of Days in Edit Discount for Campaign Input Field)
+	public CampaignModuleElement typeAndClearNumberOfDaysFieldParam(String Number_Of_Days) throws InterruptedException {
+		NumberOfDaysHighlight();
+		NumberOfDaysDiscountElement.sendKeys(Number_Of_Days);
+		Thread.sleep(100);
+		NumberOfDaysDiscountElement.clear();
+		return new CampaignModuleElement();									    			
+	}
+	
+	//24.0.3. Type to Number Of Days tab key
+	public CampaignModuleElement  typetoNumberOfDaystabKey() throws InterruptedException {
+		NumberOfDaysHighlight();
+		NumberOfDaysDiscountElement.sendKeys(Keys.TAB);
+		return new CampaignModuleElement();
+	}	
+			
+	/***************************************************************************************************************
+     * *****************************************************************************************************
+	 * **************************    End No.24 - Element of  Number Of Days* -(Edit Discount for Campaign-Apply Discount)******************************************
+	 * * *****************************************************************************************************
+	******************************************************************************************************************************/
 	
 	
+
 }
 
 

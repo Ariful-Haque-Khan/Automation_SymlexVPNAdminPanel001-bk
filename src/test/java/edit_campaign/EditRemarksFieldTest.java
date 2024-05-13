@@ -3,7 +3,7 @@
  * @company: Kolpolok Limited.
 */
 
-package com.add_new_campaign;
+package edit_campaign;
 
 import java.io.IOException;
 
@@ -17,7 +17,7 @@ import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.TestUtils;
 
-public class RemarksFieldTest extends TestBase{
+public class EditRemarksFieldTest extends TestBase{
 	
 	
 	LoginPage loginPage;
@@ -27,7 +27,7 @@ public class RemarksFieldTest extends TestBase{
 	CampaignModuleElement campaignModuleElement;
 	
 	//Initializing PageFactory
-	public RemarksFieldTest() {
+	public EditRemarksFieldTest() {
 		super();   //Call the Constructor of the Super class - TestBase
 	}
 	
@@ -41,7 +41,7 @@ public class RemarksFieldTest extends TestBase{
 	
 	public void addNewCampaignCommon(String remarks) throws IOException, InterruptedException {
 		campaignModuleElement = loginPage.addNewCampaignLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		campaignModuleElement.openAddNewCampaignForm();// open the Add New Campaign Form Page.
+		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/campaign/editCampaign");// open the edit Campaign Form Page.
 		campaignModuleElement.typeToCampaignNameFieldParam("");//taking input from the Campaign Name
 		campaignModuleElement.typeToshowAsNameOnWebsiteFieldParam("1 year campaign for all");// taking input from the Show As Name (On Website)
 		campaignModuleElement.typeTowebsiteHeaderImageFieldParam("hhtps:websiteforurl/com");// taking input from the Website Header Img(External URL)
@@ -53,15 +53,13 @@ public class RemarksFieldTest extends TestBase{
 		campaignModuleElement.typeToRemarksFieldParam(remarks);//  taking input from the remarks
 		//campaignModuleElement.clickONSaveNowButton();////click on save button
 		
-		
-		
 	}
 	
 	//@Ignore
 	//@Test(priority=1)
 	public void enter_empty_text_into_remarks_input_field() throws IOException, InterruptedException {addNewCampaignCommon("");	}
 	//@Test(priority=2)
-	public void enter_a_valid_text_into_remarks_input_field() throws IOException, InterruptedException {addNewCampaignCommon("1 Year campaign for new user");	}
+	public void enter_a_valid_text_into_remarks_input_field() throws IOException, InterruptedException {addNewCampaignCommon("1 Year campaign is for new user");	}
 	//@Test(priority=3)
 	public void enter_the_above_maximum_allowed_length_of_characters_into_remarks_input_field() throws IOException, InterruptedException{addNewCampaignCommon("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaniy1yr");}
 	//@Test(priority=4)
@@ -103,7 +101,7 @@ public class RemarksFieldTest extends TestBase{
 	@Test(priority=21)
 	public void enter_then_clear_the_text_into_remarks_input_field() throws IOException, InterruptedException{
 		campaignModuleElement = loginPage.addNewCampaignLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		campaignModuleElement.openAddNewCampaignForm();// open the Add New Campaign Form Page.
+		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/campaign/editCampaign");// open the edit Campaign Form Page.
 		campaignModuleElement.typeToCampaignNameFieldParam("1 Year campaign for new user");//taking input from the Campaign Name
 		campaignModuleElement.typeToshowAsNameOnWebsiteFieldParam("1 year campaign for all");// taking input from the Show As Name (On Website)
 		campaignModuleElement.typeTowebsiteHeaderImageFieldParam("hhtps:websiteforurl/com");// taking input from the Website Header Img(External URL)
@@ -120,7 +118,7 @@ public class RemarksFieldTest extends TestBase{
 	//@Test(priority=22)
 	public void enter_then_undo_the_input_action_into_remarks_input_field() throws IOException, InterruptedException{
 		campaignModuleElement = loginPage.addNewCampaignLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		campaignModuleElement.openAddNewCampaignForm();// open the Add New Campaign Form Page.
+		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/campaign/editCampaign");// open the edit Campaign Form Page.
 		campaignModuleElement.typeToCampaignNameFieldParam("1 Year campaign for new user");//taking input from the Campaign Name
 		campaignModuleElement.typeAndClearCampaignNameFieldParam("");//undo the text
 		campaignModuleElement.typeToshowAsNameOnWebsiteFieldParam("1 year campaign for all");// taking input from the Show As Name (On Website)
@@ -139,7 +137,7 @@ public class RemarksFieldTest extends TestBase{
 	@Test(priority=23)
 	public void enter_then_undo_and_redo_the_input_action_into_remarks_input_field() throws IOException, InterruptedException{
 		campaignModuleElement = loginPage.addNewCampaignLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		campaignModuleElement.openAddNewCampaignForm();// open the Add New Campaign Form Page.
+		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/campaign/editCampaign");// open the edit Campaign Form Page.
 		campaignModuleElement.typeToCampaignNameFieldParam("1 Year campaign for new user");//taking input from the Campaign Name
 		campaignModuleElement.typeAndClearCampaignNameFieldParam("");//undo the text
 		campaignModuleElement.typeToCampaignNameFieldParam("1 Year campaign for new user");//redo the text
@@ -160,7 +158,7 @@ public class RemarksFieldTest extends TestBase{
 	//@Ignore
 	public void enter_text_and_navigate_through_into_remarks_input_field_using_the_tab_key() throws IOException, InterruptedException{ 
 		campaignModuleElement = loginPage.addNewCampaignLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		campaignModuleElement.openAddNewCampaignForm();// open the Add New Campaign Form Page.
+		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/campaign/editCampaign");// open the edit Campaign Form Page.
 		campaignModuleElement.typeToCampaignNameFieldParam("1 Year campaign for new user");//taking input from the Campaign Name
 		campaignModuleElement.typetoCampaignNameFieldtabKey();
 		campaignModuleElement.typeToshowAsNameOnWebsiteFieldParam("1 year campaign for all");// taking input from the Show As Name (On Website)
@@ -177,7 +175,7 @@ public class RemarksFieldTest extends TestBase{
 	//@Test(priority=25)
 	public void paste_the_text_into_remarks_input_field_using_the_paste_action() throws IOException, InterruptedException{
 		campaignModuleElement = loginPage.addNewCampaignLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		campaignModuleElement.openAddNewCampaignForm();// open the Add New Campaign Form Page.
+		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/campaign/editCampaign");// open the edit Campaign Form Page.
 		campaignModuleElement.typeToCampaignNameFieldParam("1 Year campaign for new user");//taking input from the Campaign Name
 		campaignModuleElement.typeToshowAsNameOnWebsiteFieldParam("1 year campaign for all");// taking input from the Show As Name (On Website)
 		campaignModuleElement.typeTowebsiteHeaderImageFieldParam("hhtps:websiteforurl/com");// taking input from the Website Header Img(External URL)

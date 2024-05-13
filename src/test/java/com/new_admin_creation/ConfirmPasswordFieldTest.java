@@ -52,7 +52,7 @@ public class ConfirmPasswordFieldTest extends TestBase{
 		newAdminCreation.isRechargeableSelectField();// select inputs data form the  Is Rechargeable
 		newAdminCreation.adminTypeSelectField();// select inputs data from the admin type drop down field 
 		newAdminCreation.roleTypeSelectField();//  select inputs data from the Role Type drop down field 
-		//addNewCampaign.clickONSubmitButton();////click on submit button
+		//campaignModuleElement.clickONSubmitButton();////click on submit button
 		
 	}
 
@@ -115,7 +115,7 @@ public class ConfirmPasswordFieldTest extends TestBase{
 		newAdminCreation.isRechargeableSelectField();// select inputs data form the  Is Rechargeable
 		newAdminCreation.adminTypeSelectField();// select inputs data from the admin type drop down field 
 		newAdminCreation.roleTypeSelectField();//  select inputs data from the Role Type drop down field 
-		//addNewCampaign.clickONSubmitButton();////click on submit button
+		//campaignModuleElement.clickONSubmitButton();////click on submit button
 		
 	}
 	//@Test(priority=22)
@@ -133,7 +133,7 @@ public class ConfirmPasswordFieldTest extends TestBase{
 		newAdminCreation.isRechargeableSelectField();// select inputs data form the  Is Rechargeable
 		newAdminCreation.adminTypeSelectField();// select inputs data from the admin type drop down field 
 		newAdminCreation.roleTypeSelectField();//  select inputs data from the Role Type drop down field 
-		//addNewCampaign.clickONSubmitButton();////click on submit button
+		//campaignModuleElement.clickONSubmitButton();////click on submit button
 		
 	}
 	
@@ -153,7 +153,7 @@ public class ConfirmPasswordFieldTest extends TestBase{
 		newAdminCreation.isRechargeableSelectField();// select inputs data form the  Is Rechargeable
 		newAdminCreation.adminTypeSelectField();// select inputs data from the admin type drop down field 
 		newAdminCreation.roleTypeSelectField();//  select inputs data from the Role Type drop down field 
-		//addNewCampaign.clickONSubmitButton();////click on submit button
+		//campaignModuleElement.clickONSubmitButton();////click on submit button
 	}
 	
 	//@Test(priority=24)
@@ -172,7 +172,7 @@ public class ConfirmPasswordFieldTest extends TestBase{
 		newAdminCreation.isRechargeableSelectField();// select inputs data form the  Is Rechargeable
 		newAdminCreation.adminTypeSelectField();// select inputs data from the admin type drop down field 
 		newAdminCreation.roleTypeSelectField();//  select inputs data from the Role Type drop down field 
-		//addNewCampaign.clickONSubmitButton();////click on submit button
+		//campaignModuleElement.clickONSubmitButton();////click on submit button
 	}
 	//@Test(priority=25)
 	public void paste_the_text_into_Confirm_Password_input_field_using_the_paste_action() throws IOException, InterruptedException{
@@ -188,7 +188,7 @@ public class ConfirmPasswordFieldTest extends TestBase{
 		newAdminCreation.isRechargeableSelectField();// select inputs data form the  Is Rechargeable
 		newAdminCreation.adminTypeSelectField();// select inputs data from the admin type drop down field 
 		newAdminCreation.roleTypeSelectField();//  select inputs data from the Role Type drop down field 
-		//addNewCampaign.clickONSubmitButton();////click on submit button
+		//campaignModuleElement.clickONSubmitButton();////click on submit button
 	}
 	
 /*
