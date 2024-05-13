@@ -28,7 +28,7 @@ import com.admin.qa.pages.MailAddressSectionLinks;
 import com.admin.qa.pages.OnlinePINReportsSectionLinks;
 import com.admin.qa.function.AddNewBanner;
 import com.admin.qa.function.AddNewBlockAppCRC;
-import com.admin.qa.function.AddNewCampaign;
+import com.admin.qa.function.CampaignModuleElement;
 import com.admin.qa.function.AddNewEventCode;
 import com.admin.qa.function.AddNewIP;
 import com.admin.qa.function.AddNewMenuPermission;
@@ -427,13 +427,13 @@ public class LoginPage extends TestBase{
 		return new AddNewIP(); //Login form Add New IP Form page
 	}
 	
-	public AddNewCampaign addNewCampaignLogin(String uname , String pwd) {
+	public CampaignModuleElement addNewCampaignLogin(String uname , String pwd) {
 		
 		username.sendKeys(uname);
 		password.sendKeys(pwd);
 		loginBtn.click();
 		
-		return new AddNewCampaign(); //Login form Add New Campaign Form page
+		return new CampaignModuleElement(); //Login form Add New Campaign Form page
 	}
 	
 	public NewAdminCreation newAdminCreationLogin(String uname , String pwd) {
