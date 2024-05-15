@@ -3,7 +3,7 @@
  * @company: Kolpolok Limited.
 */
 
-package edit_campaign;
+package com.edit_campaign;
 
 import java.io.IOException;
 
