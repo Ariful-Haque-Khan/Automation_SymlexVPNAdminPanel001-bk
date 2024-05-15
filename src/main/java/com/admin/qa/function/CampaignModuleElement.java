@@ -733,7 +733,7 @@ public class CampaignModuleElement extends TestBase{
 	}
 	
 	//15.0.1 Type to the Discount Amount  parameter
-	public CampaignModuleElement typeToDiscountAmountFieldParam(String discount_Amount ) throws InterruptedException {
+	public CampaignModuleElement typeToDiscountAmountFieldParam(String discount_Amount) throws InterruptedException {
 		discountAmountHighlight();
 		discountAmountElement.sendKeys(discount_Amount);		
 		Thread.sleep(2000);		
@@ -747,7 +747,14 @@ public class CampaignModuleElement extends TestBase{
 		Thread.sleep(100);
 		discountAmountElement.clear();
 		return new CampaignModuleElement();									    			
-	}		
+	}	
+	
+	//15.0.3. Type to Discount Amount tab key
+	public CampaignModuleElement  typetoEditDiscountAmounttabKey() throws InterruptedException {
+		discountAmountHighlight();
+		discountAmountElement.sendKeys(Keys.TAB);
+		return new CampaignModuleElement();
+	}	
 			
 	/***************************************************************************************************************
      * *****************************************************************************************************
@@ -1030,7 +1037,7 @@ public class CampaignModuleElement extends TestBase{
 	}
 	
 	//22.0.1 Type to the Coupon Code in Edit Discount for Campaign parameter
-	public CampaignModuleElement typeToCouponCodeDiscountFieldParam(String Coupon_Code ) throws InterruptedException {
+	public CampaignModuleElement typeToCouponCodeDiscountFieldParam(String Coupon_Code) throws InterruptedException {
 		CouponCodeDiscountHighlight();
 		couponCodeDiscountElement.sendKeys(Coupon_Code);		
 		Thread.sleep(2000);		
@@ -1170,6 +1177,98 @@ public class CampaignModuleElement extends TestBase{
 	 * * *****************************************************************************************************
 	******************************************************************************************************************************/
 	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.25 - Element of Package Price-(Edit Discount for Campaign- Apply Discount)  $$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+	*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
+		
+	//25. Element of Package Price in Edit Discount for Campaign 
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div[1]/div/div[2]/div[2]/div/input")
+	WebElement packagePriceDiscountElement;
+	
+	//25. Highlight the Package Price in Edit Discount for Campaign Input Field
+	public void PackagePriceHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", packagePriceDiscountElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", packagePriceDiscountElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",packagePriceDiscountElement);
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", packagePriceDiscountElement);
+			Thread.sleep(1000);
+		}
+	}
+	
+	//25.0.1 Type to the Package Price in Edit Discount for Campaign parameter
+	public CampaignModuleElement typeToPackagePriceFieldParam(String Package_Price) throws InterruptedException {
+		PackagePriceHighlight();
+		packagePriceDiscountElement.sendKeys(Package_Price);		
+		Thread.sleep(2000);		
+		return new CampaignModuleElement();
+	}
+	
+	//25.0.2. Type Package Price in Edit Discount for Campaign Input Field (enter text, then clear Package Name in Edit Discount for Campaign Input Field)
+	public CampaignModuleElement typeAndClearPackagePriceFieldParam(String Package_Price) throws InterruptedException {
+		PackagePriceHighlight();
+		packagePriceDiscountElement.sendKeys(Package_Price);
+		Thread.sleep(100);
+		packagePriceDiscountElement.clear();
+		return new CampaignModuleElement();									    			
+	}
+	
+	//25.0.3. Type to Package Price tab key
+	public CampaignModuleElement  typetoPackagePricetabKey() throws InterruptedException {
+		PackagePriceHighlight();
+		packagePriceDiscountElement.sendKeys(Keys.TAB);
+		return new CampaignModuleElement();
+	}	
+			
+	/***************************************************************************************************************
+     * *****************************************************************************************************
+	 * **************************    End No.25 - Element of Package Price -(Edit Discount for Campaign-Apply Discount) ******************************************
+	 * * *****************************************************************************************************
+	******************************************************************************************************************************/
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.26 -   Element of update Button- Edit Discount for Campaign $$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+	*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
+	//26. Element of update Button in Edit Discount for Campaign
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div[3]/div/input[4]")
+	WebElement updateEditDiscountButtonElement;
+	
+	//26. Highlight the update Button in Edit Discount for Campaign 
+	public void updateEditDiscountButtonHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", updateEditDiscountButtonElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');",updateEditDiscountButtonElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",  updateEditDiscountButtonElement);/*make a yellow border outside edge of the element*/
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", updateEditDiscountButtonElement);
+			Thread.sleep(1000);
+		}
+	}
+	
+	//26. Click to the update Button in Edit Discount for Campaign
+	public CampaignModuleElement clickOnUpdateEditDiscountButton() throws InterruptedException {
+		updateEditDiscountButtonHighlight();
+		updateEditDiscountButtonElement.click();
+		return new CampaignModuleElement();
+	} 
+	
+	/***************************************************************************************************************
+     * *****************************************************************************************************
+	 * **************************    End No.26 - Element of update Button- Edit Discount for Campaign *****************************************
+	 * * *****************************************************************************************************
+	******************************************************************************************************************************/
 	
 
 }
