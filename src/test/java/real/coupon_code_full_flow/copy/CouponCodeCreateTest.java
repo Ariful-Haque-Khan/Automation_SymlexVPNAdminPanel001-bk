@@ -1,4 +1,4 @@
-package real.coupon_code_full_flow;
+package real.coupon_code_full_flow.copy;
 
 import java.io.IOException;
 
