@@ -1270,6 +1270,99 @@ public class CampaignModuleElement extends TestBase{
 	 * * *****************************************************************************************************
 	******************************************************************************************************************************/
 	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.27 - Element of Affiliator Email Address -(Affiliator Sign Up Requests)  $$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+	*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
+		
+	//27. Element of Affiliator Email Address in Affiliator Sign Up Requests
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[1]/div[1]/input")
+	WebElement AffEmailAddressElement;
+	
+	//27. Highlight the Affiliator Email Address in Affiliator Sign Up Requests Input Field
+	public void AffEmailAddressHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", AffEmailAddressElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", AffEmailAddressElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",AffEmailAddressElement);
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", AffEmailAddressElement);
+			Thread.sleep(1000);
+		}
+	}
+	
+	//27.0.1 Type to the Affiliator Email Address in Affiliator Sign Up Requests parameter
+	public CampaignModuleElement typeToAffEmailAddressFieldParam(String Aff_Email) throws InterruptedException {
+		AffEmailAddressHighlight();
+		AffEmailAddressElement.sendKeys(Aff_Email);		
+		Thread.sleep(2000);		
+		return new CampaignModuleElement();
+	}
+	
+	//27.0.2. Type Affiliator Email Address in Affiliator Sign Up Requests Input Field (enter text, then clear Affiliator Email Address in Affiliator Sign Up Requests Input Field)
+	public CampaignModuleElement typeAndClearAffEmailAddressFieldParam(String Aff_Email) throws InterruptedException {
+		AffEmailAddressHighlight();
+		AffEmailAddressElement.sendKeys(Aff_Email);
+		Thread.sleep(100);
+		AffEmailAddressElement.clear();
+		return new CampaignModuleElement();									    			
+	}
+	
+	//27.0.3. Type to Affiliator Email Address tab key
+	public CampaignModuleElement  typetoAffEmailAddresstabKey() throws InterruptedException {
+		AffEmailAddressHighlight();
+		AffEmailAddressElement.sendKeys(Keys.TAB);
+		return new CampaignModuleElement();
+	}	
+			
+	/***************************************************************************************************************
+     * *****************************************************************************************************
+	 * **************************    End No.27 - Element of Affiliator Email Address -(Affiliator Sign Up Requests) ******************************************
+	 * * *****************************************************************************************************
+	******************************************************************************************************************************/
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.28 -   Element of Search Requested Affiliator Button- Affiliator Sign Up Requests $$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+	*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
+	//28. Element of Search Requested Affiliator Button in Affiliator Sign Up Requests
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[1]/div[2]/a")
+	WebElement searchRequestedAffButtonElement;
+	
+	//28. Highlight the Search Requested Affiliator Button in Affiliator Sign Up Requests
+	public void searchRequestedAffButtonHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", searchRequestedAffButtonElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');",searchRequestedAffButtonElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",  searchRequestedAffButtonElement);/*make a yellow border outside edge of the element*/
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", searchRequestedAffButtonElement);
+			Thread.sleep(1000);
+		}
+	}
+	
+	//28. Click to the Search Requested Affiliator Button in Affiliator Sign Up Requests
+	public CampaignModuleElement clickOnSearchRequestedAffButton() throws InterruptedException {
+		searchRequestedAffButtonHighlight();
+		searchRequestedAffButtonElement.click();
+		return new CampaignModuleElement();
+	} 
+	
+	/***************************************************************************************************************
+     * *****************************************************************************************************
+	 * **************************    End No.28 - Element of Search Requested Affiliator Button- Affiliator Sign Up Requests *****************************************
+	 * * *****************************************************************************************************
+	******************************************************************************************************************************/
+	
 
 }
 

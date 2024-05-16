@@ -38,16 +38,16 @@ public class CouponCodeCreateTest extends TestBase{
 		loginPage = new LoginPage();
 		testUtils = new TestUtils();
 	}
-    //@Test(priority=1)
+    @Test(priority=1)
 	//@Ignore
 	public void create_and_assign_the__coupon_code() throws IOException, InterruptedException {
 		campaignModuleElement = loginPage.addNewCampaignLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		campaignModuleElement.openAddNewCampaignForm();// open the Add New Campaign Form Page.
-		campaignModuleElement.typeToCampaignNameFieldParam("Automation Test 4");//taking input from the Campaign Name
-		campaignModuleElement.typeToshowAsNameOnWebsiteFieldParam("Anika rashid");// taking input from the Show As Name (On Website)
+		campaignModuleElement.typeToCampaignNameFieldParam("Automation Test 5");//taking input from the Campaign Name
+		campaignModuleElement.typeToshowAsNameOnWebsiteFieldParam("Anika rashid ");// taking input from the Show As Name (On Website)
 		campaignModuleElement.typeTowebsiteHeaderImageFieldParam("https://t4.ftcdn.net/jpg/05/68/62/81/360_F_568628131_OWTJpBnx0e78NZjPPkJcgA9JeLyaa5HC.jpg");// taking input from the Website Header Img(External URL)
-		campaignModuleElement.typeToCouponCodeFieldParam("mimi");// taking input from the Coupon Code
-		campaignModuleElement.typeToAffiliateShareFieldParam("0%");// taking input from the Affiliate Share (%)
+		campaignModuleElement.typeToCouponCodeFieldParam("mimini");// taking input from the Coupon Code
+		campaignModuleElement.typeToAffiliateShareFieldParam("3%%");// taking input from the Affiliate Share (%)
 		campaignModuleElement.campaignPeriodStartFromField();//select inputs data form the Campaign Period start from
 		campaignModuleElement.campaignPeriodEndTimeField();// select inputs data form the  Campaign Period end date
 		campaignModuleElement.typeSelectField();// select inputs data from the Status drop down field 
@@ -77,7 +77,7 @@ public class CouponCodeCreateTest extends TestBase{
     	campaignModuleElement.selectDatafromAssignResDropDownElement();
     	campaignModuleElement.clickOnUpdateNowAssignCampaignButtonButton();
     	Thread.sleep(9000);*/
-    	campaignModuleElement.typeToCampaignCouponCodeFieldParam("mimi");
+    	campaignModuleElement.typeToCampaignCouponCodeFieldParam("mimini");
     	Thread.sleep(2000);
     	campaignModuleElement.clickOnCouponCodeSearchbutton();
     	campaignModuleElement.clickOnSetDiscountbutton();
@@ -91,7 +91,7 @@ public class CouponCodeCreateTest extends TestBase{
     	campaignModuleElement.clickONUpdateButton();	
     	Thread.sleep(4000);
     	driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/campaign/campaignList");	//navigate to the Campaign List page
-    	campaignModuleElement.typeToCampaignCouponCodeFieldParam("mimi");
+    	campaignModuleElement.typeToCampaignCouponCodeFieldParam("mimini");
     	Thread.sleep(2000);
     	campaignModuleElement.clickOnCouponCodeSearchbutton();
     	Thread.sleep(2000);
