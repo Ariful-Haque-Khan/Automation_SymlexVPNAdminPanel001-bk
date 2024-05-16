@@ -11,12 +11,15 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
+import com.admin.qa.function.CampaignModuleElement;
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.TestUtils;
@@ -27,6 +30,8 @@ public class AffiliatorForm extends TestBase{
 	LoginPage loginPage;
 
 	TestUtils testUtils;
+	
+	CampaignModuleElement campaignModuleElement;
 	
 	//Initializing PageFactory
 	public AffiliatorForm() {
@@ -47,7 +52,7 @@ public class AffiliatorForm extends TestBase{
 		driver.get("https://symlexvpn.com/affiliate/#aff_form");  
 	
 	    WebElement firstnameField = driver.findElement(By.xpath("/html/body/section[3]/div/div/div/div/div/form/section[1]/div[1]/div[1]/div[1]/input"));// find the path of First Name of affiliator
-	    firstnameField.sendKeys("Anika");//taking input for the First Name field
+	    firstnameField.sendKeys("Ani");//taking input for the First Name field
 	    
 	    Thread.sleep(3000);
 
@@ -57,7 +62,7 @@ public class AffiliatorForm extends TestBase{
 	    Thread.sleep(3000);
 
 	    WebElement emailAddressField = driver.findElement(By.xpath("/html/body/section[3]/div/div/div/div/div/form/section[1]/div[1]/div[1]/div[3]/input")); //find the path of Email Address of affiliator
-	    emailAddressField.sendKeys("abc@gmail.com");//taking input for Email Address field
+	    emailAddressField.sendKeys("mim@gmail.com");//taking input for Email Address field
         
         Thread.sleep(3000);
         
@@ -66,14 +71,13 @@ public class AffiliatorForm extends TestBase{
     	
     	Thread.sleep(3000);
     	
-    	//WebElement SkypeIDField = driver.findElement(By.xpath("/html/body/section[3]/div/div/div/div/div/form/section[1]/div[1]/div[2]/div[2]/input")); //find the path of Skype ID of affiliator
-    	//SkypeIDField.sendKeys("010101010101");//taking input for Skype ID field
+    	WebElement SkypeIDField = driver.findElement(By.xpath("/html/body/section[3]/div/div/div/div/div/form/section[1]/div[1]/div[2]/div[2]/input")); //find the path of Skype ID of affiliator
+    	SkypeIDField.sendKeys("010101010101");//taking input for Skype ID field
     	
-    	Thread.sleep(3000);
+    	Thread.sleep(3000);	
     	
-    	
-    	//WebElement CouponCodeField = driver.findElement(By.xpath("/html/body/section[3]/div/div/div/div/div/form/section[1]/div[1]/div[2]/div[3]/input")); //find the path of  Coupon Code  of affiliator
-    	//CouponCodeField.sendKeys("AFF123");//taking input for  Coupon Code  field
+    	WebElement CouponCodeField = driver.findElement(By.xpath("/html/body/section[3]/div/div/div/div/div/form/section[1]/div[1]/div[2]/div[3]/input")); //find the path of  Coupon Code  of affiliator
+    	CouponCodeField.sendKeys("ANI23");//taking input for  Coupon Code  field
     	
     	Thread.sleep(3000);
     	
@@ -82,45 +86,29 @@ public class AffiliatorForm extends TestBase{
     	
     	Thread.sleep(3000);
     	
-    	/*WebElement AccountNameField = driver.findElement(By.xpath("/html/body/section[3]/div/div/div/div/div/form/section[2]/div[1]/div[1]/div[1]/input")); //find the path of  Account Name  of affiliator
+    	WebElement AccountNameField = driver.findElement(By.xpath("/html/body/section[3]/div/div/div/div/div/form/section[2]/div[1]/div[1]/div[1]/input")); //find the path of  Account Name  of affiliator
     	AccountNameField.sendKeys("Anika");//taking input for  Account Name  field
     	
-    	Thread.sleep(3000);*/
+    	Thread.sleep(3000);
     	
     	WebElement websiteField = driver.findElement(By.xpath("/html/body/section[3]/div/div/div/div/div/form/section[2]/div[1]/div[1]/div[2]/input")); //find the path of  website of affiliator
     	websiteField.sendKeys("Anika");//taking input for  website  field
     	
     	Thread.sleep(3000);
-    	/*
-        WebElement countryDropdown = driver.findElement(By.xpath("/html/body/section[3]/div/div/div/div/div/form/section[2]/div[1]/div[1]/div[3]/div/span"));
-        countryDropdown.click();
-        
-        Select select = new Select(countryDropdown);
-        
-        String countryName = "United States"; // Replace with the desired country
-        select.selectByVisibleText(countryName);*/
     	
-    	WebElement countryButtonselect = driver.findElement(By.xpath("/html/body/section[3]/div/div/div/div/div/form/section[2]/div[1]/div[1]/div[3]/div/span"));
+    	WebElement countryButtonselect = driver.findElement(By.xpath("/html/body/section[3]/div/div/div/div/div/form/section[2]/div[1]/div[1]/div[3]/div"));
     	countryButtonselect.click();// click on  next button
-    	WebElement countrySearch = driver.findElement(By.xpath("/html/body/section[3]/div/div/div/div/div/form/section[2]/div[1]/div[1]/div[3]/div/ul/li[9]"));
-    	countrySearch.sendKeys("Agentina");
+    
+    	WebDriverWait wait = new WebDriverWait(driver, 12);
+        WebElement clickableDropdown = wait.until(ExpectedConditions.elementToBeClickable(countryButtonselect));
     	
-    	//WebElement countrySelect = driver.findElement(By.xpath("/html/body/section[3]/div/div/div/div/div/form/section[2]/div[1]/div[1]/div[3]/select")); // Update the XPath as per your HTML structure
-
-    	//Select countrySelect1 = new Select(driver.findElement(By.xpath("/html/body/section[3]/div/div/div/div/div/form/section[2]/div[1]/div[1]/div[3]/select")));
-    	//countrySelect1.selectByIndex(3);
+    	WebElement countrySearch = driver.findElement(By.xpath("/html/body/section[3]/div/div/div/div/div/form/section[2]/div[1]/div[1]/div[3]/div/ul/li[2]"));
+    	countrySearch.click();
     	
-    	/*WebElement countrySelect = driver.findElement(By.xpath("/html/body/section[3]/div/div/div/div/div/form/section[2]/div[1]/div[1]/div[3]/select"));
-    	
-    	WebElement countryDropDown = driver.findElement(By.xpath("/html/body/section[3]/div/div/div/div/div/form/section[1]/div[1]/div[1]/div[3]/input"));
-    	
-    	WebElement countrySearch = driver.findElement(By.xpath("/html/body/section[3]/div/div/div/div/div/form/section[2]/div[1]/div[1]/div[3]/div/ul/li[18]"));
-    	
-    	countrySelect.click();
-    	
-    	countryDropDown.sendKeys("United states");
-    	
-    	countrySearch.click(); */
+    	WebDriverWait wait1 = new WebDriverWait(driver, 15);
+        WebElement clickableDropdown1 = wait.until(ExpectedConditions.elementToBeClickable(countrySearch));
+   
+        Thread.sleep(3000);
     	
     	WebElement StreetAddressField = driver.findElement(By.xpath("/html/body/section[3]/div/div/div/div/div/form/section[2]/div[1]/div[2]/div[1]/input")); //find the path of  Street Address of affiliator
     	StreetAddressField.sendKeys("36 East 8th Street, New York, NY 10003,");//taking input for Street Address  field
@@ -137,20 +125,35 @@ public class AffiliatorForm extends TestBase{
     	
     	Thread.sleep(3000);
 
-
     	WebElement next2Button = driver.findElement(By.xpath("/html/body/section[3]/div/div/div/div/div/form/section[2]/div[2]/button[2]"));
     	next2Button.click();// click on  next button
     	
     	Thread.sleep(3000);
     	
+    	WebElement emailPromotionalMethodButton = driver.findElement(By.xpath("/html/body/section[3]/div/div/div/div/div/form/section[3]/div[1]/div[1]/div[1]/input"));
+    	emailPromotionalMethodButton.click();// click on  submit button
+    	
+    	WebElement couponPromotionalMethodButton = driver.findElement(By.xpath("/html/body/section[3]/div/div/div/div/div/form/section[3]/div[1]/div[1]/div[4]/input"));
+    	couponPromotionalMethodButton.click();// click on  submit button
+    	
     	WebElement submitButton = driver.findElement(By.xpath("/html/body/section[3]/div/div/div/div/div/form/section[3]/div[2]/button[2]"));
     	submitButton.click();// click on  submit button
     	
-    	
-  
-  
+    	Thread.sleep(3000);
+    
 		}
 	
+	@Test(priority=2)
+	//@Ignore
+	public void seacrh_the_requested_affiliator_in_the_panel() throws IOException, InterruptedException {
+		
+		campaignModuleElement = loginPage.addNewCampaignLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+    	driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/campaign/affiliatorRequests");	//navigate to the Affiliator Sign Up Requests page
+    	campaignModuleElement.typeToAffEmailAddressFieldParam("mim@gmail.com");
+    	Thread.sleep(2000);
+    	campaignModuleElement.clickOnSearchRequestedAffButton();
+		
+	}
 	
 	/*
 	@AfterMethod
