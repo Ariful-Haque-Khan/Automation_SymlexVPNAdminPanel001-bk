@@ -156,7 +156,7 @@ public class AffiliatorForm extends TestBase{
 	}
 	
 	/*
-	@AfterMethod
+	@AfterMethod 
 	public void tearDown() {
 		super.tearDown();
 	}*/
