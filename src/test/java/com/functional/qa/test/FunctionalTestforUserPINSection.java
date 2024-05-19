@@ -13,7 +13,7 @@ import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import com.admin.qa.function.AddNewResellerClient;
-import com.admin.qa.function.AddNewServer;
+import com.admin.qa.function.ServerModuleElement;
 import com.admin.qa.function.AddPINJail;
 import com.admin.qa.function.AddPINValidity;
 import com.admin.qa.function.NewCustomizeResellerPanel;
@@ -38,7 +38,7 @@ public class FunctionalTestforUserPINSection extends TestBase{
 	AddNewResellerClient addNewResellerClient;
 	NewCustomizeResellerPanel newCustomizeResellerPanel;
 	AddPINJail addPINJail;
-	AddNewServer addNewServer;
+	ServerModuleElement serverModuleElement;
 	ContactsPage conPage;
 	TestUtils testUtils;
 	
@@ -241,26 +241,26 @@ public class FunctionalTestforUserPINSection extends TestBase{
 	//@Test(priority=1)
 	@Ignore
 	public void TestAddNewServerForm() throws IOException, InterruptedException {
-		addNewServer = loginPage.addNewServerLogin(props.getProperty("username"),props.getProperty("password"));
-		addNewServer.openAddNewServerPage();/*open the Add New Server Page.*/
-		//addNewServer.typeToserverNameInputField();/*1. Type to the Server Name Input Field.*/
-		//addNewServer.typeToipInputField();/*2. Type to the IP Input Field.*/
-		//addNewServer.typeToipRangeInputField();/*3. Type to the IP Range Input Field.*/
-		//addNewServer.typeTopathInputField();/*4. Type to the Path Input Field.*/
-		//addNewServer.capacityTopathInputField();/*5. Type to the Capacity Input Field.*/
-		//addNewServer.countrySelectField();/*6. Select Country to the Country Select Drop Down Field.*/
-		//addNewServer.typeToCityInputField();/*7. Type to the City Input Field.*/
-		//addNewServer.typeToOrderPriorityInputField();/*8. Type to the Order Priority Input Field.*/
-		//addNewServer.typeToServerPriceInputFieldElementInputField();/*9. Type to the Server Price Input Field.*/
-		addNewServer.clickToUploadWireGuardConfigCheckboxField();/*Click to the Upload WireGuard Config? Checkbox Field.*/
-		//addNewServer.wireGurdFilePriorityInputField();/*Input File Location to the Wireguard File Input Field.*/
-		//addNewServer.clickTIsActiveCheckboxField();/*click to theIs Active Checkbox Field.*/
-		//addNewServer.clickTOpenVPNCheckboxField();/*click to the OpenVPN Checkbox Field.*/
-		//addNewServer.anyconnectInputField();/*click to the AnyConnect Checkbox Field.*/
-		//addNewServer.shadowsockInputField();/*click to the AnyConnect Checkbox Field.*/
-		//addNewServer.SSHInputField();/*click to the SSH Checkbox Field.*/
-		//addNewServer.typeToWireGuardInputField();/*click to the WireGuard Checkbox Field.*/
-		addNewServer.clickToIsFreeCheckboxInputField();/*click to the Is Free Checkbox Input Field.*/
+		serverModuleElement = loginPage.addNewServerLogin(props.getProperty("username"),props.getProperty("password"));
+		serverModuleElement.openAddNewServerPage();/*open the Add New Server Page.*/
+		//serverModuleElement.typeToserverNameInputField();/*1. Type to the Server Name Input Field.*/
+		//serverModuleElement.typeToipInputField();/*2. Type to the IP Input Field.*/
+		//serverModuleElement.typeToipRangeInputField();/*3. Type to the IP Range Input Field.*/
+		//serverModuleElement.typeTopathInputField();/*4. Type to the Path Input Field.*/
+		//serverModuleElement.capacityTopathInputField();/*5. Type to the Capacity Input Field.*/
+		//serverModuleElement.countrySelectField();/*6. Select Country to the Country Select Drop Down Field.*/
+		//serverModuleElement.typeToCityInputField();/*7. Type to the City Input Field.*/
+		//serverModuleElement.typeToOrderPriorityInputField();/*8. Type to the Order Priority Input Field.*/
+		//serverModuleElement.typeToServerPriceInputFieldElementInputField();/*9. Type to the Server Price Input Field.*/
+		serverModuleElement.clickToUploadWireGuardConfigCheckboxField();/*Click to the Upload WireGuard Config? Checkbox Field.*/
+		//serverModuleElement.wireGurdFilePriorityInputField();/*Input File Location to the Wireguard File Input Field.*/
+		//serverModuleElement.clickTIsActiveCheckboxField();/*click to theIs Active Checkbox Field.*/
+		//serverModuleElement.clickTOpenVPNCheckboxField();/*click to the OpenVPN Checkbox Field.*/
+		//serverModuleElement.anyconnectInputField();/*click to the AnyConnect Checkbox Field.*/
+		//serverModuleElement.shadowsockInputField();/*click to the AnyConnect Checkbox Field.*/
+		//serverModuleElement.SSHInputField();/*click to the SSH Checkbox Field.*/
+		//serverModuleElement.typeToWireGuardInputField();/*click to the WireGuard Checkbox Field.*/
+		serverModuleElement.clickToIsFreeCheckboxInputField();/*click to the Is Free Checkbox Input Field.*/
 	}
 
 	
