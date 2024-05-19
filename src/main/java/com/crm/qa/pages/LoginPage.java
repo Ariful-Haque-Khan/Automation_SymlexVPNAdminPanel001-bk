@@ -36,7 +36,8 @@ import com.admin.qa.function.AddNewNotice;
 import com.admin.qa.function.AddNewPaymentMethod;
 import com.admin.qa.function.AddNewResellerClient;
 import com.admin.qa.function.AddNewRole;
-import com.admin.qa.function.AddNewServer;
+import com.admin.qa.function.ServerModuleElement;
+import com.admin.qa.function.WebsiteFormRequest;
 import com.admin.qa.function.AddNewSignUpBlacklistDomain;
 import com.admin.qa.function.AddPINJail;
 import com.admin.qa.function.AddPINValidity;
@@ -346,13 +347,13 @@ public class LoginPage extends TestBase{
 		return new NewCustomizeResellerPanel(); //HomePage is the landing page for LoginPage
 	}
 	
-	public AddNewServer addNewServerLogin(String uname , String pwd) {
+	public ServerModuleElement addNewServerLogin(String uname , String pwd) {
 		
 		username.sendKeys(uname);
 		password.sendKeys(pwd);
 		loginBtn.click();
 		
-		return new AddNewServer(); // Add New Server page for LoginPage
+		return new ServerModuleElement(); // Add New Server page for LoginPage
 	}
 	
 	public CreateNewApp createNewAppLogin(String uname , String pwd) {
@@ -515,5 +516,14 @@ public class LoginPage extends TestBase{
 		loginBtn.click();
 		
 		return new AddSubEventCode(); //Login form Add New Role Form page
+	}
+   
+   public WebsiteFormRequest websiteFormRequestLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new WebsiteFormRequest(); //Login form Add New Role Form page
 	}
 }
