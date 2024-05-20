@@ -44,7 +44,7 @@ public class AddnewPINtotheJailPINUsernameFieldTest extends TestBase{
 
 	
 	
-	@Test(priority=1)
+	//@Test(priority=1)
 	//@Ignore
 	public void AddNewRatePlanForm() throws IOException, InterruptedException {
 		addPINJail = loginPage.addPINJailLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
@@ -155,7 +155,7 @@ public class AddnewPINtotheJailPINUsernameFieldTest extends TestBase{
 	}
 	
 	
-	//@Test(priority=10)
+	@Test(priority=10)
 	//@Ignore
 	public void enter_text_with_trailing_whitespaces_into_the_pin_or_username_field() throws IOException, InterruptedException{
 		addPINJail = loginPage.addPINJailLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
@@ -282,7 +282,7 @@ public class AddnewPINtotheJailPINUsernameFieldTest extends TestBase{
 	}
 	
 	
-	@Test(priority=21)
+	//@Test(priority=21)
 	//@Ignore
 	public void enter_text_then_clear_the_input_text_field() throws IOException, InterruptedException{
 		addPINJail = loginPage.addPINJailLogin(props.getProperty("username"),props.getProperty("password")); //login to the system

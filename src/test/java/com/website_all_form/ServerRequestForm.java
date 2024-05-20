@@ -73,6 +73,8 @@ public class ServerRequestForm extends TestBase {
 		
 		WebElement closeButton = driver.findElement(By.xpath("html/body/section[4]/div/div[2]/div/div/div[2]/button"));
 		closeButton.click();// click on  submit button
+		
+		Thread.sleep(2000);
 	}
 	
 	@Test(priority=2)
@@ -81,10 +83,25 @@ public class ServerRequestForm extends TestBase {
 		
 		websiteFormRequest = loginPage.websiteFormRequestLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
     	driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/campaign/website_offer_registered_data");	//navigate to the Affiliator Sign Up Requests page
-    	websiteFormRequest.typeToNameFieldParam("mimbo");
+    	WebElement nameSearch = driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div[1]/div[1]/input"));// find the path of Your Preferable Location of server request form
+    	nameSearch.sendKeys("mimbo");//taking input for the Preferable Location field
     	Thread.sleep(2000);
+    	
     	websiteFormRequest.clickOnSearchButton();
-		
+    	
+    	websiteFormRequest.clickOnEditButton();    	
+    	Thread.sleep(2000);
+    	
+    	websiteFormRequest.typeAndClearAffNameEditField("");
+    	
+    	Thread.sleep(2000);
+    	
+    	websiteFormRequest.typeToNameEditFieldParam("anika");
+    	
+        Thread.sleep(2000);
+        
+        websiteFormRequest.clickOnUpdateButton();	
+
 	}
 
 }
