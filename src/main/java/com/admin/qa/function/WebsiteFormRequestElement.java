@@ -7,14 +7,14 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.crm.qa.base.TestBase;
 
-public class WebsiteFormRequest extends TestBase{
-	public WebsiteFormRequest(){
+public class WebsiteFormRequestElement extends TestBase{
+	public WebsiteFormRequestElement(){
 		PageFactory.initElements(driver, this);
 	}
 	
-	public WebsiteFormRequest openWebsiteFormRequestReport() {
+	public WebsiteFormRequestElement openWebsiteFormRequestReport() {
 		driver.get(props.getProperty("url")+"campaign/website_offer_registered_data");
-		return new WebsiteFormRequest();
+		return new WebsiteFormRequestElement();
 	}
 	
 	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -43,20 +43,20 @@ public class WebsiteFormRequest extends TestBase{
 	}
 	
 	//01. Type to the Name input field
-	public WebsiteFormRequest typeToNameFieldParam(String Name) throws InterruptedException {
+	public WebsiteFormRequestElement typeToNameFieldParam(String Name) throws InterruptedException {
 		nameSearchFieldHighlight();
 		NameSearchElement.sendKeys(Name);
 		Thread.sleep(2000);	
-		return new WebsiteFormRequest();
+		return new WebsiteFormRequestElement();
 	}
 	
-	//27.0.2. Type Name input field (enter text, then clear Name input field)
-	public WebsiteFormRequest typeAndClearAffNamelField() throws InterruptedException {
+	//01.0.2. Type Name input field (enter text, then clear Name input field)
+	public WebsiteFormRequestElement typeAndClearAffNamelField() throws InterruptedException {
 		nameSearchFieldHighlight();
 		NameSearchElement.sendKeys();
 		Thread.sleep(1000);
 		NameSearchElement.clear();
-		return new WebsiteFormRequest();									    			
+		return new WebsiteFormRequestElement();									    			
 	}
 	
 	
@@ -92,20 +92,20 @@ public class WebsiteFormRequest extends TestBase{
 	}
 	
 	//02. Type to the Email input field
-	public WebsiteFormRequest typeToEmailFieldParam(String Name) throws InterruptedException {
+	public WebsiteFormRequestElement typeToEmailFieldParam(String Name) throws InterruptedException {
 		emailSearchFieldHighlight();
 		emailSearchElement.sendKeys(Name);
 		Thread.sleep(2000);	
-		return new WebsiteFormRequest();
+		return new WebsiteFormRequestElement();
 	}
 	
 	//02.0.01 Type Email input field (enter text, then clear Email input field)
-	public WebsiteFormRequest typeAndClearEmailField() throws InterruptedException {
+	public WebsiteFormRequestElement typeAndClearEmailField() throws InterruptedException {
 		emailSearchFieldHighlight();
 		emailSearchElement.sendKeys();
 		Thread.sleep(1000);
 		emailSearchElement.clear();
-		return new WebsiteFormRequest();									    			
+		return new WebsiteFormRequestElement();									    			
 	}
 		
 	/***************************************************************************************************************
@@ -140,11 +140,11 @@ public class WebsiteFormRequest extends TestBase{
 	}
 	
 	//03. Type to the Search Button
-	public WebsiteFormRequest clickOnSearchButton() throws InterruptedException {
+	public WebsiteFormRequestElement clickOnSearchButton() throws InterruptedException {
 		SearchButtonElementHighlight();
 		SearchButtonElement.click();
 		Thread.sleep(2000);	
-		return new WebsiteFormRequest();
+		return new WebsiteFormRequestElement();
 	}
 		
 	/***************************************************************************************************************
@@ -179,11 +179,11 @@ public class WebsiteFormRequest extends TestBase{
 	}
 	
 	//04. Type to the edit Button
-	public WebsiteFormRequest clickOnEditButton() throws InterruptedException {
+	public WebsiteFormRequestElement clickOnEditButton() throws InterruptedException {
 		EditButtonElementHighlight();
 		EditButtonElement.click();
 		Thread.sleep(2000);	
-		return new WebsiteFormRequest();
+		return new WebsiteFormRequestElement();
 	}
 		
 	/***************************************************************************************************************
@@ -218,20 +218,20 @@ public class WebsiteFormRequest extends TestBase{
 	}
 	
 	//05. Type to the Name Edit input field
-	public WebsiteFormRequest typeToNameEditFieldParam(String Name_Edit) throws InterruptedException {
+	public WebsiteFormRequestElement typeToNameEditFieldParam(String Name_Edit) throws InterruptedException {
 		nameEditFieldHighlight();
 		NameEditElement.sendKeys(Name_Edit);
 		Thread.sleep(2000);	
-		return new WebsiteFormRequest();
+		return new WebsiteFormRequestElement();
 	}
 	
 	//05.0.2. Type Name Edit input field (enter text, then clear Name input field)
-	public WebsiteFormRequest typeAndClearAffNameEditField(String Name_Edit) throws InterruptedException {
+	public WebsiteFormRequestElement typeAndClearAffNameEditField(String Name_Edit) throws InterruptedException {
 		nameEditFieldHighlight();
 		NameEditElement.sendKeys(Name_Edit);
 		Thread.sleep(1000);
 		NameEditElement.clear();
-		return new WebsiteFormRequest();									    			
+		return new WebsiteFormRequestElement();									    			
 	}
 	
 	
@@ -267,20 +267,20 @@ public class WebsiteFormRequest extends TestBase{
 	}
 	
 	//06. Type to the Name Edit input field
-	public WebsiteFormRequest typeToEmailEditFieldParam(String Name_Edit) throws InterruptedException {
+	public WebsiteFormRequestElement typeToEmailEditFieldParam(String Name_Edit) throws InterruptedException {
 		emailEditFieldHighlight();
 		EmailEditElement.sendKeys(Name_Edit);
 		Thread.sleep(2000);	
-		return new WebsiteFormRequest();
+		return new WebsiteFormRequestElement();
 	}
 	
 	//06.0.2. Type Name Edit input field (enter text, then clear Name input field)
-	public WebsiteFormRequest typeAndClearAffEmailEditField() throws InterruptedException {
+	public WebsiteFormRequestElement typeAndClearAffEmailEditField() throws InterruptedException {
 		emailEditFieldHighlight();
 		EmailEditElement.sendKeys();
 		Thread.sleep(1000);
 		EmailEditElement.clear();
-		return new WebsiteFormRequest();									    			
+		return new WebsiteFormRequestElement();									    			
 	}
 	
 	
@@ -316,20 +316,20 @@ public class WebsiteFormRequest extends TestBase{
 	}
 	
 	//07. Type to the Remark Edit input field
-	public WebsiteFormRequest typeToRemarksEditFieldParam(String Remarks) throws InterruptedException {
+	public WebsiteFormRequestElement typeToRemarksEditFieldParam(String Remarks) throws InterruptedException {
 		remarksEditFieldHighlight();
 		remarksEditElement.sendKeys(Remarks);
 		Thread.sleep(2000);	
-		return new WebsiteFormRequest();
+		return new WebsiteFormRequestElement();
 	}
 	
 	//07.0.2. Type Remark Edit input field (enter text, then clear Name input field)
-	public WebsiteFormRequest typeAndClearAffRemarksEditField() throws InterruptedException {
+	public WebsiteFormRequestElement typeAndClearAffRemarksEditField() throws InterruptedException {
 		remarksEditFieldHighlight();
 		remarksEditElement.sendKeys();
 		Thread.sleep(1000);
 		remarksEditElement.clear();
-		return new WebsiteFormRequest();									    			
+		return new WebsiteFormRequestElement();									    			
 	}
 	
 	
@@ -365,11 +365,11 @@ public class WebsiteFormRequest extends TestBase{
 	}
 	
 	//04. Type to the Update Button
-	public WebsiteFormRequest clickOnUpdateButton() throws InterruptedException {
+	public WebsiteFormRequestElement clickOnUpdateButton() throws InterruptedException {
 		UpdateButtonElementHighlight();
 		UpdateButtonElement.click();
 		Thread.sleep(2000);	
-		return new WebsiteFormRequest();
+		return new WebsiteFormRequestElement();
 	}
 		
 	/***************************************************************************************************************
@@ -377,7 +377,54 @@ public class WebsiteFormRequest extends TestBase{
 	 * **************************    End No.No.08 -  Element of Update Request Button (Edit request)  ******************************************
 	 * * *****************************************************************************************************
 	******************************************************************************************************************************/
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+   * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.09-  Element of Select Form drop down  $$$$$$$$$$$$$$$$$$$
+  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+									*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+	//09. Select Reseller for First click On the Element
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[1]/div[8]/div/span/span[1]/span/span[1]")
+	WebElement formSelect;
+		
+	//09.Select Reseller for Search On the Element
+	@FindBy(xpath="/html/body/span/span/span[1]/input")
+	WebElement formDropDown;
 	
+	//09. PIN Type Element for Last click of first element On the Element
+	@FindBy(xpath="/html/body/span/span/span[2]/ul/li")
+	WebElement formSearch;
+	
+	//09. Highlight the Select Form drop down Input Field
+	public void FormSearchdHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", formSelect);/* make a yellow border outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');",formSelect);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", formSelect);/* make a yellow border outside edge of the element */
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", formSelect);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+		}
+	}
+	
+	//09. Type to the Select Form drop down
+	public WebsiteFormRequestElement selectDatafromFormDropDownElement() throws InterruptedException {
+		FormSearchdHighlight();/* highlight the element of the tested. */
+		formSelect.click(); /*click on the element */
+		formDropDown.sendKeys("Student Ambassador Request");/*type on the input field */
+		formSearch.click();/*click on the element from result of the first value. */
+		return new WebsiteFormRequestElement();
+	}
+
+      /***************************************************
+		*********************************************************************************************
+		****************************    End No.09 -  Element of Select Form drop down    **************************
+		*********************************************************************************************
+										*****************************************************************************************************/
+		
 	
 	
 
