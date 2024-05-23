@@ -37,7 +37,7 @@ import com.admin.qa.function.AddNewPaymentMethod;
 import com.admin.qa.function.AddNewResellerClient;
 import com.admin.qa.function.AddNewRole;
 import com.admin.qa.function.ServerModuleElement;
-import com.admin.qa.function.WebsiteFormRequest;
+import com.admin.qa.function.WebsiteFormRequestElement;
 import com.admin.qa.function.AddNewSignUpBlacklistDomain;
 import com.admin.qa.function.AddPINJail;
 import com.admin.qa.function.AddPINValidity;
@@ -518,12 +518,12 @@ public class LoginPage extends TestBase{
 		return new AddSubEventCode(); //Login form Add New Role Form page
 	}
    
-   public WebsiteFormRequest websiteFormRequestLogin(String uname , String pwd) {
+   public WebsiteFormRequestElement websiteFormRequestLogin(String uname , String pwd) {
 		
 		username.sendKeys(uname);
 		password.sendKeys(pwd);
 		loginBtn.click();
 		
-		return new WebsiteFormRequest(); //Login form Add New Role Form page
+		return new WebsiteFormRequestElement(); //Login form Add New Role Form page
 	}
 }
