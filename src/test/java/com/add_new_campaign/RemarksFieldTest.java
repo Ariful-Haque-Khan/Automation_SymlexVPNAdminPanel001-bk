@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
-import com.admin.qa.function.AddNewCampaign;
+import com.admin.qa.function.CampaignModuleElement;
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.TestUtils;
@@ -24,7 +24,7 @@ public class RemarksFieldTest extends TestBase{
 
 	TestUtils testUtils;
 	
-	AddNewCampaign addNewCampaign;
+	CampaignModuleElement campaignModuleElement;
 	
 	//Initializing PageFactory
 	public RemarksFieldTest() {
@@ -40,18 +40,18 @@ public class RemarksFieldTest extends TestBase{
 
 	
 	public void addNewCampaignCommon(String remarks) throws IOException, InterruptedException {
-		addNewCampaign = loginPage.addNewCampaignLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		addNewCampaign.openAddNewCampaignForm();// open the Add New Campaign Form Page.
-		addNewCampaign.typeToCampaignNameFieldParam("");//taking input from the Campaign Name
-		addNewCampaign.typeToshowAsNameOnWebsiteFieldParam("1 year campaign for all");// taking input from the Show As Name (On Website)
-		addNewCampaign.typeTowebsiteHeaderImageFieldParam("hhtps:websiteforurl/com");// taking input from the Website Header Img(External URL)
-		addNewCampaign.typeToCouponCodeFieldParam("Q-1234");// taking input from the Coupon Code
-		addNewCampaign.typeToAffiliateShareFieldParam("10%");// taking input from the Affiliate Share (%)
-		addNewCampaign.campaignPeriodStartFromField();//select inputs data form the Campaign Period start from
-		addNewCampaign.campaignPeriodEndTimeField();// select inputs data form the  Campaign Period end date
-		addNewCampaign.typeSelectField();// select inputs data from the Status drop down field 
-		addNewCampaign.typeToRemarksFieldParam(remarks);//  taking input from the remarks
-		//addNewCampaign.clickONSaveNowButton();////click on save button
+		campaignModuleElement = loginPage.addNewCampaignLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		campaignModuleElement.openAddNewCampaignForm();// open the Add New Campaign Form Page.
+		campaignModuleElement.typeToCampaignNameFieldParam("");//taking input from the Campaign Name
+		campaignModuleElement.typeToshowAsNameOnWebsiteFieldParam("1 year campaign for all");// taking input from the Show As Name (On Website)
+		campaignModuleElement.typeTowebsiteHeaderImageFieldParam("hhtps:websiteforurl/com");// taking input from the Website Header Img(External URL)
+		campaignModuleElement.typeToCouponCodeFieldParam("Q-1234");// taking input from the Coupon Code
+		campaignModuleElement.typeToAffiliateShareFieldParam("10%");// taking input from the Affiliate Share (%)
+		campaignModuleElement.campaignPeriodStartFromField();//select inputs data form the Campaign Period start from
+		campaignModuleElement.campaignPeriodEndTimeField();// select inputs data form the  Campaign Period end date
+		campaignModuleElement.typeSelectField();// select inputs data from the Status drop down field 
+		campaignModuleElement.typeToRemarksFieldParam(remarks);//  taking input from the remarks
+		//campaignModuleElement.clickONSaveNowButton();////click on save button
 		
 		
 		
@@ -102,92 +102,92 @@ public class RemarksFieldTest extends TestBase{
 
 	@Test(priority=21)
 	public void enter_then_clear_the_text_into_remarks_input_field() throws IOException, InterruptedException{
-		addNewCampaign = loginPage.addNewCampaignLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		addNewCampaign.openAddNewCampaignForm();// open the Add New Campaign Form Page.
-		addNewCampaign.typeToCampaignNameFieldParam("1 Year campaign for new user");//taking input from the Campaign Name
-		addNewCampaign.typeToshowAsNameOnWebsiteFieldParam("1 year campaign for all");// taking input from the Show As Name (On Website)
-		addNewCampaign.typeTowebsiteHeaderImageFieldParam("hhtps:websiteforurl/com");// taking input from the Website Header Img(External URL)
-		addNewCampaign.typeToCouponCodeFieldParam("Q-1234");// taking input from the Coupon Code
-		addNewCampaign.typeToAffiliateShareFieldParam("10%");// taking input from the Affiliate Share (%)
-		addNewCampaign.campaignPeriodStartFromField();//select inputs data form the Campaign Period start from
-		addNewCampaign.campaignPeriodEndTimeField();// select inputs data form the  Campaign Period end date
-		addNewCampaign.typeSelectField();// select inputs data from the Status drop down field 
-		addNewCampaign.typeToRemarksFieldParam("JUST FOR PREMIUM USER");//  taking input from the remarks
-		addNewCampaign.typeAndClearCampaignNameFieldParam("");
-		//addNewCampaign.clickONSaveNowButton();////click on save button
+		campaignModuleElement = loginPage.addNewCampaignLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		campaignModuleElement.openAddNewCampaignForm();// open the Add New Campaign Form Page.
+		campaignModuleElement.typeToCampaignNameFieldParam("1 Year campaign for new user");//taking input from the Campaign Name
+		campaignModuleElement.typeToshowAsNameOnWebsiteFieldParam("1 year campaign for all");// taking input from the Show As Name (On Website)
+		campaignModuleElement.typeTowebsiteHeaderImageFieldParam("hhtps:websiteforurl/com");// taking input from the Website Header Img(External URL)
+		campaignModuleElement.typeToCouponCodeFieldParam("Q-1234");// taking input from the Coupon Code
+		campaignModuleElement.typeToAffiliateShareFieldParam("10%");// taking input from the Affiliate Share (%)
+		campaignModuleElement.campaignPeriodStartFromField();//select inputs data form the Campaign Period start from
+		campaignModuleElement.campaignPeriodEndTimeField();// select inputs data form the  Campaign Period end date
+		campaignModuleElement.typeSelectField();// select inputs data from the Status drop down field 
+		campaignModuleElement.typeToRemarksFieldParam("JUST FOR PREMIUM USER");//  taking input from the remarks
+		campaignModuleElement.typeAndClearCampaignNameFieldParam("");
+		//campaignModuleElement.clickONSaveNowButton();////click on save button
 		
 	}
 	//@Test(priority=22)
 	public void enter_then_undo_the_input_action_into_remarks_input_field() throws IOException, InterruptedException{
-		addNewCampaign = loginPage.addNewCampaignLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		addNewCampaign.openAddNewCampaignForm();// open the Add New Campaign Form Page.
-		addNewCampaign.typeToCampaignNameFieldParam("1 Year campaign for new user");//taking input from the Campaign Name
-		addNewCampaign.typeAndClearCampaignNameFieldParam("");//undo the text
-		addNewCampaign.typeToshowAsNameOnWebsiteFieldParam("1 year campaign for all");// taking input from the Show As Name (On Website)
-		addNewCampaign.typeTowebsiteHeaderImageFieldParam("hhtps:websiteforurl/com");// taking input from the Website Header Img(External URL)
-		addNewCampaign.typeToCouponCodeFieldParam("Q-1234");// taking input from the Coupon Code
-		addNewCampaign.typeToAffiliateShareFieldParam("10%");// taking input from the Affiliate Share (%)
-		addNewCampaign.campaignPeriodStartFromField();//select inputs data form the Campaign Period start from
-		addNewCampaign.campaignPeriodEndTimeField();// select inputs data form the  Campaign Period end date
-		addNewCampaign.typeSelectField();// select inputs data from the Status drop down field 
-		addNewCampaign.typeToRemarksFieldParam("JUST FOR PREMIUM USER");//  taking input from the remarks
-		addNewCampaign.typeAndClearCampaignNameFieldParam("");
-		//addNewCampaign.clickONSaveNowButton();////click on save button
+		campaignModuleElement = loginPage.addNewCampaignLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		campaignModuleElement.openAddNewCampaignForm();// open the Add New Campaign Form Page.
+		campaignModuleElement.typeToCampaignNameFieldParam("1 Year campaign for new user");//taking input from the Campaign Name
+		campaignModuleElement.typeAndClearCampaignNameFieldParam("");//undo the text
+		campaignModuleElement.typeToshowAsNameOnWebsiteFieldParam("1 year campaign for all");// taking input from the Show As Name (On Website)
+		campaignModuleElement.typeTowebsiteHeaderImageFieldParam("hhtps:websiteforurl/com");// taking input from the Website Header Img(External URL)
+		campaignModuleElement.typeToCouponCodeFieldParam("Q-1234");// taking input from the Coupon Code
+		campaignModuleElement.typeToAffiliateShareFieldParam("10%");// taking input from the Affiliate Share (%)
+		campaignModuleElement.campaignPeriodStartFromField();//select inputs data form the Campaign Period start from
+		campaignModuleElement.campaignPeriodEndTimeField();// select inputs data form the  Campaign Period end date
+		campaignModuleElement.typeSelectField();// select inputs data from the Status drop down field 
+		campaignModuleElement.typeToRemarksFieldParam("JUST FOR PREMIUM USER");//  taking input from the remarks
+		campaignModuleElement.typeAndClearCampaignNameFieldParam("");
+		//campaignModuleElement.clickONSaveNowButton();////click on save button
 		
 	}
 	
 	@Test(priority=23)
 	public void enter_then_undo_and_redo_the_input_action_into_remarks_input_field() throws IOException, InterruptedException{
-		addNewCampaign = loginPage.addNewCampaignLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		addNewCampaign.openAddNewCampaignForm();// open the Add New Campaign Form Page.
-		addNewCampaign.typeToCampaignNameFieldParam("1 Year campaign for new user");//taking input from the Campaign Name
-		addNewCampaign.typeAndClearCampaignNameFieldParam("");//undo the text
-		addNewCampaign.typeToCampaignNameFieldParam("1 Year campaign for new user");//redo the text
-		addNewCampaign.typeToshowAsNameOnWebsiteFieldParam("1 year campaign for all");// taking input from the Show As Name (On Website)
-		addNewCampaign.typeTowebsiteHeaderImageFieldParam("hhtps:websiteforurl/com");// taking input from the Website Header Img(External URL)
-		addNewCampaign.typeToCouponCodeFieldParam("Q-1234");// taking input from the Coupon Code
-		addNewCampaign.typeToAffiliateShareFieldParam("10%");// taking input from the Affiliate Share (%)
-		addNewCampaign.campaignPeriodStartFromField();//select inputs data form the Campaign Period start from
-		addNewCampaign.campaignPeriodEndTimeField();// select inputs data form the  Campaign Period end date
-		addNewCampaign.typeSelectField();// select inputs data from the Status drop down field 
-		addNewCampaign.typeToRemarksFieldParam("JUST FOR PREMIUM USER");//  taking input from the remarks
-		addNewCampaign.typeAndClearCampaignNameFieldParam("");
-		//addNewCampaign.clickONSaveNowButton();////click on save button
+		campaignModuleElement = loginPage.addNewCampaignLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		campaignModuleElement.openAddNewCampaignForm();// open the Add New Campaign Form Page.
+		campaignModuleElement.typeToCampaignNameFieldParam("1 Year campaign for new user");//taking input from the Campaign Name
+		campaignModuleElement.typeAndClearCampaignNameFieldParam("");//undo the text
+		campaignModuleElement.typeToCampaignNameFieldParam("1 Year campaign for new user");//redo the text
+		campaignModuleElement.typeToshowAsNameOnWebsiteFieldParam("1 year campaign for all");// taking input from the Show As Name (On Website)
+		campaignModuleElement.typeTowebsiteHeaderImageFieldParam("hhtps:websiteforurl/com");// taking input from the Website Header Img(External URL)
+		campaignModuleElement.typeToCouponCodeFieldParam("Q-1234");// taking input from the Coupon Code
+		campaignModuleElement.typeToAffiliateShareFieldParam("10%");// taking input from the Affiliate Share (%)
+		campaignModuleElement.campaignPeriodStartFromField();//select inputs data form the Campaign Period start from
+		campaignModuleElement.campaignPeriodEndTimeField();// select inputs data form the  Campaign Period end date
+		campaignModuleElement.typeSelectField();// select inputs data from the Status drop down field 
+		campaignModuleElement.typeToRemarksFieldParam("JUST FOR PREMIUM USER");//  taking input from the remarks
+		campaignModuleElement.typeAndClearCampaignNameFieldParam("");
+		//campaignModuleElement.clickONSaveNowButton();////click on save button
 		
 	}
 	
 	//@Test(priority=24)
 	//@Ignore
 	public void enter_text_and_navigate_through_into_remarks_input_field_using_the_tab_key() throws IOException, InterruptedException{ 
-		addNewCampaign = loginPage.addNewCampaignLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		addNewCampaign.openAddNewCampaignForm();// open the Add New Campaign Form Page.
-		addNewCampaign.typeToCampaignNameFieldParam("1 Year campaign for new user");//taking input from the Campaign Name
-		addNewCampaign.typetoCampaignNameFieldtabKey();
-		addNewCampaign.typeToshowAsNameOnWebsiteFieldParam("1 year campaign for all");// taking input from the Show As Name (On Website)
-		addNewCampaign.typeTowebsiteHeaderImageFieldParam("hhtps:websiteforurl/com");// taking input from the Website Header Img(External URL)
-		addNewCampaign.typeToCouponCodeFieldParam("Q-1234");// taking input from the Coupon Code
-		addNewCampaign.typeToAffiliateShareFieldParam("10%");// taking input from the Affiliate Share (%)
-		addNewCampaign.campaignPeriodStartFromField();//select inputs data form the Campaign Period start from
-		addNewCampaign.campaignPeriodEndTimeField();// select inputs data form the  Campaign Period end date
-		addNewCampaign.typeSelectField();// select inputs data from the Status drop down field 
-		addNewCampaign.typeToRemarksFieldParam("JUST FOR PREMIUM USER");//  taking input from the remarks
-		addNewCampaign.typetoRemarkstabKey();
-		//addNewCampaign.clickONSaveNowButton();////click on save button
+		campaignModuleElement = loginPage.addNewCampaignLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		campaignModuleElement.openAddNewCampaignForm();// open the Add New Campaign Form Page.
+		campaignModuleElement.typeToCampaignNameFieldParam("1 Year campaign for new user");//taking input from the Campaign Name
+		campaignModuleElement.typetoCampaignNameFieldtabKey();
+		campaignModuleElement.typeToshowAsNameOnWebsiteFieldParam("1 year campaign for all");// taking input from the Show As Name (On Website)
+		campaignModuleElement.typeTowebsiteHeaderImageFieldParam("hhtps:websiteforurl/com");// taking input from the Website Header Img(External URL)
+		campaignModuleElement.typeToCouponCodeFieldParam("Q-1234");// taking input from the Coupon Code
+		campaignModuleElement.typeToAffiliateShareFieldParam("10%");// taking input from the Affiliate Share (%)
+		campaignModuleElement.campaignPeriodStartFromField();//select inputs data form the Campaign Period start from
+		campaignModuleElement.campaignPeriodEndTimeField();// select inputs data form the  Campaign Period end date
+		campaignModuleElement.typeSelectField();// select inputs data from the Status drop down field 
+		campaignModuleElement.typeToRemarksFieldParam("JUST FOR PREMIUM USER");//  taking input from the remarks
+		campaignModuleElement.typetoRemarkstabKey();
+		//campaignModuleElement.clickONSaveNowButton();////click on save button
 	}
 	//@Test(priority=25)
 	public void paste_the_text_into_remarks_input_field_using_the_paste_action() throws IOException, InterruptedException{
-		addNewCampaign = loginPage.addNewCampaignLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		addNewCampaign.openAddNewCampaignForm();// open the Add New Campaign Form Page.
-		addNewCampaign.typeToCampaignNameFieldParam("1 Year campaign for new user");//taking input from the Campaign Name
-		addNewCampaign.typeToshowAsNameOnWebsiteFieldParam("1 year campaign for all");// taking input from the Show As Name (On Website)
-		addNewCampaign.typeTowebsiteHeaderImageFieldParam("hhtps:websiteforurl/com");// taking input from the Website Header Img(External URL)
-		addNewCampaign.typeToCouponCodeFieldParam("Q-1234");// taking input from the Coupon Code
-		addNewCampaign.typeToAffiliateShareFieldParam("10%");// taking input from the Affiliate Share (%)
-		addNewCampaign.campaignPeriodStartFromField();//select inputs data form the Campaign Period start from
-		addNewCampaign.campaignPeriodEndTimeField();// select inputs data form the  Campaign Period end date
-		addNewCampaign.typeSelectField();// select inputs data from the Status drop down field 
-		addNewCampaign.typeToRemarksFieldParam("JUST FOR PREMIUM USER");//  taking input from the remarks
-		//addNewCampaign.clickONSaveNowButton();////click on save button
+		campaignModuleElement = loginPage.addNewCampaignLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		campaignModuleElement.openAddNewCampaignForm();// open the Add New Campaign Form Page.
+		campaignModuleElement.typeToCampaignNameFieldParam("1 Year campaign for new user");//taking input from the Campaign Name
+		campaignModuleElement.typeToshowAsNameOnWebsiteFieldParam("1 year campaign for all");// taking input from the Show As Name (On Website)
+		campaignModuleElement.typeTowebsiteHeaderImageFieldParam("hhtps:websiteforurl/com");// taking input from the Website Header Img(External URL)
+		campaignModuleElement.typeToCouponCodeFieldParam("Q-1234");// taking input from the Coupon Code
+		campaignModuleElement.typeToAffiliateShareFieldParam("10%");// taking input from the Affiliate Share (%)
+		campaignModuleElement.campaignPeriodStartFromField();//select inputs data form the Campaign Period start from
+		campaignModuleElement.campaignPeriodEndTimeField();// select inputs data form the  Campaign Period end date
+		campaignModuleElement.typeSelectField();// select inputs data from the Status drop down field 
+		campaignModuleElement.typeToRemarksFieldParam("JUST FOR PREMIUM USER");//  taking input from the remarks
+		//campaignModuleElement.clickONSaveNowButton();////click on save button
 	}
 	
 /*
