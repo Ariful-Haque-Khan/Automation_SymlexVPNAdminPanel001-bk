@@ -43,8 +43,7 @@ public class AddnewPINtotheJailPINUsernameFieldTest extends TestBase{
 	}
 
 	
-	
-	//@Test(priority=1)
+	@Test(priority=1)
 	//@Ignore
 	public void AddNewRatePlanForm() throws IOException, InterruptedException {
 		addPINJail = loginPage.addPINJailLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
@@ -55,7 +54,9 @@ public class AddnewPINtotheJailPINUsernameFieldTest extends TestBase{
 	}
 	
 	
+
 	@Test(priority=1)
+
 	//@Ignore
 	public void enter_empty_text_into_the_new_pin_or_username_input_field() throws IOException, InterruptedException{
 		addPINJail = loginPage.addPINJailLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
@@ -68,6 +69,7 @@ public class AddnewPINtotheJailPINUsernameFieldTest extends TestBase{
 	
 	
 	@Test(priority=2)
+
 	//@Ignore
 	public void enter_a_valid_text_into_the_new_pin_or_username_input_field() throws IOException, InterruptedException{
 		addPINJail = loginPage.addPINJailLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
@@ -80,6 +82,7 @@ public class AddnewPINtotheJailPINUsernameFieldTest extends TestBase{
 	
 	
 	@Test(priority=3)
+
 	//@Ignore
 	public void enter_the_above_maximum_allowed_length_of_characters_into_the_pin_or_username_field() throws IOException, InterruptedException{
 		addPINJail = loginPage.addPINJailLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
@@ -253,7 +256,7 @@ public class AddnewPINtotheJailPINUsernameFieldTest extends TestBase{
 	}
 	
 	
-	//@Test(priority=19)
+	@Test(priority=19)
 	//@Ignore
 	public void enter_default_placeholder_text_into_the_rate_name_field() throws IOException, InterruptedException{
 		
@@ -267,7 +270,7 @@ public class AddnewPINtotheJailPINUsernameFieldTest extends TestBase{
 	}
 	
 	
-	//@Test(priority=20)
+	@Test(priority=20)
 	//@Ignore
 	public void test(String pinparam1,String pinparam2)throws IOException, InterruptedException {
 		addPINJail = loginPage.addPINJailLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
@@ -280,7 +283,7 @@ public class AddnewPINtotheJailPINUsernameFieldTest extends TestBase{
 	}
 	
 	
-	//@Test(priority=21)
+	@Test(priority=21)
 	//@Ignore
 	public void enter_text_then_clear_the_input_text_field() throws IOException, InterruptedException{
 		addPINJail = loginPage.addPINJailLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
