@@ -54,7 +54,9 @@ public class AddnewPINtotheJailPINUsernameFieldTest extends TestBase{
 	}
 	
 	
-	@Test(priority=2)
+
+	@Test(priority=1)
+
 	//@Ignore
 	public void enter_empty_text_into_the_new_pin_or_username_input_field() throws IOException, InterruptedException{
 		addPINJail = loginPage.addPINJailLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
@@ -66,7 +68,8 @@ public class AddnewPINtotheJailPINUsernameFieldTest extends TestBase{
 	}
 	
 	
-	@Test(priority=3)
+	@Test(priority=2)
+
 	//@Ignore
 	public void enter_a_valid_text_into_the_new_pin_or_username_input_field() throws IOException, InterruptedException{
 		addPINJail = loginPage.addPINJailLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
@@ -78,7 +81,8 @@ public class AddnewPINtotheJailPINUsernameFieldTest extends TestBase{
 	}
 	
 	
-	@Test(priority=4)
+	@Test(priority=3)
+
 	//@Ignore
 	public void enter_the_above_maximum_allowed_length_of_characters_into_the_pin_or_username_field() throws IOException, InterruptedException{
 		addPINJail = loginPage.addPINJailLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
@@ -224,7 +228,7 @@ public class AddnewPINtotheJailPINUsernameFieldTest extends TestBase{
 	public void enter_text_with_unicode_characters_into_the_pin_or_username_field() throws IOException, InterruptedException{
 		addPINJail = loginPage.addPINJailLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		addPINJail.openAddPINJail();// open the add pin in jail Form Page.
-		addPINJail.typeToPINorUsernamesParam("こんにちは");//entering input into the PIN/username input field.
+		addPINJail.typeToPINorUsernamesParam("ã�“ã‚“ã�«ã�¡ã�¯");//entering input into the PIN/username input field.
 		addPINJail.searchandtypeelementDropDownField();//select data from drop down field
 		//addPINJail.clickONSaveButton(); //for submitting with the form data
 	}
@@ -235,7 +239,7 @@ public class AddnewPINtotheJailPINUsernameFieldTest extends TestBase{
 	public void enter_text_containing_emojis_into_the_pin_or_username_field() throws IOException, InterruptedException{
 		addPINJail = loginPage.addPINJailLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		addPINJail.openAddPINJail();// open the add pin in jail Form Page.
-		addPINJail.typeToPINorUsernamesParam("😊, 🐱, 🍕, 🎉");//entering input into the PIN/username input field.
+		addPINJail.typeToPINorUsernamesParam("ðŸ˜Š, ðŸ�±, ðŸ�•, ðŸŽ‰");//entering input into the PIN/username input field.
 		addPINJail.searchandtypeelementDropDownField();//select data from drop down field
 		//addPINJail.clickONSaveButton(); //for submitting with the form data
 	}
@@ -246,7 +250,7 @@ public class AddnewPINtotheJailPINUsernameFieldTest extends TestBase{
 	public void enter_text_with_accented_characters_into_the_pin_or_username_field() throws IOException, InterruptedException{
 		addPINJail = loginPage.addPINJailLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		addPINJail.openAddPINJail();// open the add pin in jail Form Page.
-		addPINJail.typeToPINorUsernamesParam("á, ç, ō,  á, ç, ō");//entering input into the PIN/username input field.
+		addPINJail.typeToPINorUsernamesParam("Ã¡, Ã§, Å�,  Ã¡, Ã§, Å�");//entering input into the PIN/username input field.
 		addPINJail.searchandtypeelementDropDownField();//select data from drop down field
 		//addPINJail.clickONSaveButton(); //for submitting with the form data
 	}
@@ -257,9 +261,7 @@ public class AddnewPINtotheJailPINUsernameFieldTest extends TestBase{
 	public void enter_default_placeholder_text_into_the_rate_name_field() throws IOException, InterruptedException{
 		
 		test("a","");
-		test("a","");
-		
-		
+		test("a","");	
 		test("adsfsdf","");
 		test("a","fsdf");
 		test("afsdfdsf","");
