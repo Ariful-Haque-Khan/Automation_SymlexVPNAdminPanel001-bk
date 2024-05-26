@@ -106,13 +106,6 @@ public class WriteForUsWebForm extends TestBase{
         Thread.sleep(2000);
         
         websiteFormRequestElement.clickOnUpdateButton();//click on update button
-
-	
-	/*
-	@AfterMethod
-	public void tearDown() {
-		super.tearDown();
-	}*/
 	}
 
 }
