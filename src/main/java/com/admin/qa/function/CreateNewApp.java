@@ -42,28 +42,20 @@ public class CreateNewApp extends TestBase{
 			Thread.sleep(1000);
 		}
 	}
-	
-	//01. Type to the App Name
-	public CreateNewApp typeToAppNameTest() throws InterruptedException {
-		appnameInputFieldHighlight();
-		appNameElement.sendKeys("test");
-		return new CreateNewApp();
 		
-	}
-	
 	//01. Type to the App Name
-	public CreateNewApp typeToAppNameInputFieldParam(String $name) throws InterruptedException {
+	public CreateNewApp typeToAppNameInputFieldParam(String App_Name) throws InterruptedException {
 		appnameInputFieldHighlight();
-		appNameElement.sendKeys($name);
+		appNameElement.sendKeys(App_Name);
 		Thread.sleep(2000);
 		return new CreateNewApp();
 		
 	}
 	
 	//1.0.1. Type to the App name Input Field (enter text, then clear the app name field)
-    public CreateNewApp typeAndClearAppNameInputField(String $name) throws InterruptedException {
+    public CreateNewApp typeAndClearAppNameInputField(String App_Name) throws InterruptedException {
     	appnameInputFieldHighlight();
-    	appNameElement.sendKeys($name);
+    	appNameElement.sendKeys(App_Name);
     	Thread.sleep(500);
     	appNameElement.clear();
     	return new CreateNewApp();
@@ -71,9 +63,9 @@ public class CreateNewApp extends TestBase{
    	}
     
     //01.0.2. enter text and navigate through the title field using the tab key
-    public CreateNewApp typeAndTabKeyAppNameInputFieldParam(String $name) throws InterruptedException {
+    public CreateNewApp typeAndTabKeyAppNameInputFieldParam() throws InterruptedException {
   		appnameInputFieldHighlight();
-  		appNameElement.sendKeys($name);
+  		appNameElement.sendKeys();
   		appNameElement.sendKeys(Keys.TAB); // Navigate to the next field
   		return new CreateNewApp();
   		
@@ -110,51 +102,34 @@ public class CreateNewApp extends TestBase{
 			Thread.sleep(1000);
 		}
 	}
-		
-	//02. Type to the APP ID (One Signal)
-	public CreateNewApp typeToAPPIDOneSignalTest() throws InterruptedException {
-		appIDOneSignalInputFieldHighlight();
-		appIDOneSignalElement.sendKeys("test");
-		return new CreateNewApp();
-	}
-		
-	//02. Type to the APP ID (One Signal)
-	public CreateNewApp typeToAPPIDOneSignalTestParam(String $id) throws InterruptedException {
-		appIDOneSignalInputFieldHighlight();
-		appIDOneSignalElement.sendKeys($id);
 			
-		Thread.sleep(2000);
-			
+	//02. Type to the APP ID (One Signal)
+	public CreateNewApp typeToAPPIDOneSignalTestParam(String App_ID) throws InterruptedException {
+		appIDOneSignalInputFieldHighlight();
+		appIDOneSignalElement.sendKeys(App_ID);	
+		Thread.sleep(2000);	
 		return new CreateNewApp();
 	}
 	
-	//02.0.1. Type to the APP key (One Signal)
-	public CreateNewApp typeAndTabKeyAppIDInputFieldParam(String $id) throws InterruptedException {
+	//02.0.1. Type to the APP ID (One Signal)
+	public CreateNewApp typeAndTabKeyAppIDInputFieldParam() throws InterruptedException {
 		appIDOneSignalInputFieldHighlight();
-		appIDOneSignalElement.sendKeys($id);
-		appIDOneSignalElement.sendKeys(Keys.TAB); // Navigate to the next field
-						
-		Thread.sleep(2000);
-					
+		appIDOneSignalElement.sendKeys();
+		appIDOneSignalElement.sendKeys(Keys.TAB); // Navigate to the next field				
+		Thread.sleep(2000);			
 		return new CreateNewApp();
 	}
-		
-		
-		
+			
 	//2.0.2. Type to the App id Input Field (enter text, then clear the app id field)
-	 public CreateNewApp typeAndClearAppIDInputField(String $id) throws InterruptedException {
+	 public CreateNewApp typeAndClearAppIDInputField(String App_ID) throws InterruptedException {
 		appIDOneSignalInputFieldHighlight();
-	    appIDOneSignalElement.sendKeys($id);
+	    appIDOneSignalElement.sendKeys(App_ID);
 	    Thread.sleep(500);
 	    appIDOneSignalElement.clear();
 	    return new CreateNewApp();
 	    			
 	}
 	 
-	
-		
-	
-	
 		/***************************************************
 								* **********************************************************************************************
 								* **************************    End No.02 - Element of APP ID (One Signal)   *******************
@@ -195,9 +170,9 @@ public class CreateNewApp extends TestBase{
 	}
 		
 	//03. Type to the APP key (One Signal)
-	public CreateNewApp typeToAPPKeyOneSignalTestParam(String $key) throws InterruptedException {
+	public CreateNewApp typeToAPPKeyOneSignalTestParam(String App_key) throws InterruptedException {
 		appKeyOneSignalInputFieldHighlight();
-		appKeyOneSignalElement.sendKeys($key);
+		appKeyOneSignalElement.sendKeys(App_key);
 					
 		Thread.sleep(2000);
 				
@@ -206,14 +181,23 @@ public class CreateNewApp extends TestBase{
 	
 	
 	//3.0.1. Type to the App id Input Field (enter text, then clear the app id field)
-	public CreateNewApp typeAndClearAppKeyInputField(String $key) throws InterruptedException {
+	public CreateNewApp typeAndClearAppKeyInputField(String App_key) throws InterruptedException {
 		appKeyOneSignalInputFieldHighlight();
-		appKeyOneSignalElement.sendKeys($key);
+		appKeyOneSignalElement.sendKeys(App_key);
 		Thread.sleep(500);
 		appKeyOneSignalElement.clear();
 		return new CreateNewApp();
 		    			
 	}
+	
+	   //01.0.2. enter text and navigate through the title field using the tab key
+    public CreateNewApp typeAndTabKeyAppKeyInputFieldParam() throws InterruptedException {
+  		appnameInputFieldHighlight();
+  		appNameElement.sendKeys();
+  		appNameElement.sendKeys(Keys.TAB); // Navigate to the next field
+  		return new CreateNewApp();
+  		
+  	}
 		
 	
 		/***************************************************
