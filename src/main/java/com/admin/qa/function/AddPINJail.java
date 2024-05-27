@@ -43,22 +43,16 @@ public class AddPINJail extends TestBase{
 		}
 	}
 	
-	//01. Type to the PIN or Username
-	public AddPINJail typeToPINorUsernames() throws InterruptedException {
-		PINorUsernameHighlight();/* highlight the element of the tested. */
-		pinorUsernameElement.sendKeys("1");/*type on the element */
-		return new AddPINJail();
-	}
 	
-	//1.0.1 Type to the New PIN / Email
-	public AddPINJail typeToPINorUsernamesParam(String $text) throws InterruptedException {
+	//1.0.1 Type to the PIN or Username
+	public AddPINJail typeToPINorUsernamesParam(String Username) throws InterruptedException {
 		PINorUsernameHighlight();
-		pinorUsernameElement.sendKeys($text);
+		pinorUsernameElement.sendKeys(Username);
 		Thread.sleep(2000);
 		return new AddPINJail();
 	}
 	
-	//1.0.2 Type to the New PIN / Email
+	//1.0.2 Type to the navigate tab key PIN or Username
 	public AddPINJail typeToPINorUsernamesTabKey() throws InterruptedException {
 		PINorUsernameHighlight();
 		pinorUsernameElement.sendKeys(Keys.TAB);
@@ -67,10 +61,10 @@ public class AddPINJail extends TestBase{
 	}
 	
 	
-	//1.0.3. Type to new password Input Field (enter text, then clear new password Input Field)
-	public AddPINJail typeAndClearPINorUsernamesParam(String $text) throws InterruptedException {
+	//1.0.3. Type to PIN or Username Input Field (enter text, then clear PIN or Username Input Field)
+	public AddPINJail typeAndClearPINorUsernamesParam(String Username) throws InterruptedException {
 		PINorUsernameHighlight();
-		pinorUsernameElement.sendKeys($text);
+		pinorUsernameElement.sendKeys(Username);
 		Thread.sleep(100);
 		pinorUsernameElement.clear();
 		return new AddPINJail();
@@ -141,7 +135,7 @@ public class AddPINJail extends TestBase{
 	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[2]/input[3]")
 	WebElement saveButtonElement;
 	
-	//03. Highlight of PIN Type Element for First click On the Element 
+	//03. Highlight of Save Button Element 
 	public void saveButtonelementHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
