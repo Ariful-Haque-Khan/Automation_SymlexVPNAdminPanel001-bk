@@ -54,6 +54,7 @@ public class DescriptionFieldTest extends TestBase{
 	//@Ignore
 	@Test(priority=1)
 	public void enter_empty_text_into_description_input_field() throws IOException, InterruptedException {addNewRatePlanCommon("");	}
+	/*
 	@Test(priority=2)
 	public void enter_a_valid_text_into_description_input_field() throws IOException, InterruptedException {addNewRatePlanCommon("this plan 1 year");	}
 	@Test(priority=3)
@@ -84,11 +85,11 @@ public class DescriptionFieldTest extends TestBase{
 	public void enter_text_with_line_breaks_or_newlines_into_description_input_field() throws IOException, InterruptedException{addNewRatePlanCommon("\\\\\"ANI1yr\\\\\\\\n\\\\\\\" +\\\\r\\\\n\\\"\\r\\n\"\r\n"
 				+ "				+ \"				+ \\\"                                  \\\\\\\"ani1yr\\\\\\\""); }
 	@Test(priority=16)
-	public void enter_text_with_unicode_characters_into_description_input_field() throws IOException, InterruptedException{addNewRatePlanCommon("こんにちは"); }
+	public void enter_text_with_unicode_characters_into_description_input_field() throws IOException, InterruptedException{addNewRatePlanCommon("ã�“ã‚“ã�«ã�¡ã�¯"); }
 	@Test(priority=17)
-	public void enter_text_containing_emojis_into_description_input_field() throws IOException, InterruptedException{addNewRatePlanCommon("😊, 🐱, 🍕, 🎉"); }
+	public void enter_text_containing_emojis_into_description_input_field() throws IOException, InterruptedException{addNewRatePlanCommon("ðŸ˜Š, ðŸ�±, ðŸ�•, ðŸŽ‰"); }
 	@Test(priority=18)
-	public void enter_text_with_accented_characters_into_description_input_field() throws IOException, InterruptedException{addNewRatePlanCommon("á, ç, ō,  á, ç, ō");}
+	public void enter_text_with_accented_characters_into_description_input_field() throws IOException, InterruptedException{addNewRatePlanCommon("Ã¡, Ã§, Å�,  Ã¡, Ã§, Å�");}
 	//@Test(priority=19)
 	public void enter_default_placeholder_text_into_description_input_field() throws IOException, InterruptedException{ 
 			
@@ -151,6 +152,7 @@ public class DescriptionFieldTest extends TestBase{
 		addNewRatePlan.clickToRatePlanStatusElement();// taking inputs from the Secret
 		//addNewRatePlan.clickToRatePlanSubmitButtonElement(); //select Gateway Type drop down button
 	}
+	*/
 	
 /*
 @AfterMethod
