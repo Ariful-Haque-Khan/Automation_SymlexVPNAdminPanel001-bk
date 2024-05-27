@@ -64,27 +64,27 @@ public class AndroidOnclickURLFieldTest extends TestBase{
 }
 	
 	//@Ignore
-	//@Test(priority=1)
+	@Test(priority=1)
 	public void enter_empty_text_into_android_onclick_URL_input_field() throws IOException, InterruptedException {AddNewBannerCommon("");	}
-	//@Test(priority=2)
+	@Test(priority=2)
 	public void enter_a_valid_text_into_android_onclick_URL_input_field() throws IOException, InterruptedException {AddNewBannerCommon("url for android");	}
-	//@Test(priority=3)
+	@Test(priority=3)
 	public void enter_the_above_maximum_allowed_length_of_characters_into_android_onclick_URL_input_field() throws IOException, InterruptedException{AddNewBannerCommon("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaniy1yr");}
-	//@Test(priority=4)
+	@Test(priority=4)
 	public void enter_the_below_minimum_allowed_length_of_characters_into_android_onclick_URL_input_field() throws IOException, InterruptedException{AddNewBannerCommon("a");}
-	//@Test(priority=5)
+	@Test(priority=5)
 	public void enter_only_alphabetic_characters_into_android_onclick_URL_input_field() throws IOException, InterruptedException{AddNewBannerCommon("abcdefgh");}
-	//@Test(priority=6)
+	@Test(priority=6)
 	public void enter_numeric_characters_into_android_onclick_URL_input_field() throws IOException, InterruptedException{AddNewBannerCommon("123456789123456789");}
-	//@Test(priority=7)
+	@Test(priority=7)
 	public void enter_a_combination_of_alphabetic_and_numeric_characters_into_android_onclick_URL_input_field() throws IOException, InterruptedException{AddNewBannerCommon("abc1234567abc");}
-	//@Test(priority=8)
+	@Test(priority=8)
 	public void enter_special_characters_into_android_onclick_URL_input_field() throws IOException, InterruptedException{AddNewBannerCommon("!@#$%^&*!@#$%^&*@!@#$%^&"); }
-	//@Test(priority=9)
+	@Test(priority=9)
 	public void enter_text_with_leading_whitespaces_into_android_onclick_URL_input_field() throws IOException, InterruptedException{AddNewBannerCommon("           ani1yr"); }
-	//@Test(priority=10)
+	@Test(priority=10)
 	public void enter_text_with_trailing_whitespaces_into_android_onclick_URL_input_field() throws IOException, InterruptedException{AddNewBannerCommon("abc1yr                   ");}
-	//@Test(priority=11)
+	@Test(priority=11)
 	public void enter_text_in_uppercase_letters_into_android_onclick_URL_input_field() throws IOException, InterruptedException{AddNewBannerCommon("asdfghjkzxcvbnm");}
 	//@Test(priority=12)
 	public void enter_text_in_lowercases_letters_into_android_onclick_URL_input_field() throws IOException, InterruptedException{AddNewBannerCommon("anianiani");}
