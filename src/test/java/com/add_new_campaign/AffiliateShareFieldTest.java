@@ -52,8 +52,6 @@ public class AffiliateShareFieldTest extends TestBase{
 		campaignModuleElement.typeToRemarksFieldParam("JUST FOR PREMIUM USER");//  taking input from the remarks
 		//campaignModuleElement.clickONSaveNowButton();////click on save button
 		
-		
-		
 	}
 	
 	//@Ignore
@@ -78,7 +76,7 @@ public class AffiliateShareFieldTest extends TestBase{
 	//@Test(priority=10)
 	public void enter_text_with_trailing_whitespaces_into_coupon_code_input_field() throws IOException, InterruptedException{addNewCampaignCommon("abc1yr                   ");}
 	//@Test(priority=11)
-	public void enter_text_in_uppercase_letters_into_coupon_code_input_field() throws IOException, InterruptedException{addNewCampaignCommon("asdfghjkzxcvbnm");}
+	public void enter_text_in_uppercase_letters_into_coupon_code_input_field() throws IOException, InterruptedException{addNewCampaignCommon("TEST SERVER");}
 	//@Test(priority=12)
 	public void enter_text_in_lowercases_letters_into_coupon_code_input_field() throws IOException, InterruptedException{addNewCampaignCommon("anianiani");}
 	//@Test(priority=13)

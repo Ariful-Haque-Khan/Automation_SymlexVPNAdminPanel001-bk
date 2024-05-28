@@ -69,7 +69,7 @@ public class ConfigFieldTest extends TestBase{
 	//@Ignore
 	//@Test(priority=1)
 	public void enter_empty_text_into_config_input_field() throws IOException, InterruptedException {addNewIPCommon("");	}
-	//@Test(priority=2)
+	@Test(priority=2)
 	public void enter_a_valid_text_into_config_input_field() throws IOException, InterruptedException {addNewIPCommon("a valid config");	}
 	//@Test(priority=3)
 	public void enter_the_above_maximum_allowed_length_of_characters_into_config_input_field() throws IOException, InterruptedException{addNewIPCommon("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaniy1yr");}
