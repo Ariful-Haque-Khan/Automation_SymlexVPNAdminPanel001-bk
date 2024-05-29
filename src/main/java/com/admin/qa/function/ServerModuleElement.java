@@ -56,8 +56,7 @@ public class ServerModuleElement extends TestBase {
 		return new ServerModuleElement();
 	}
 
-	// 01.0.2. Type Server Name Input Field (enter text, then clear Server Name
-	// Input Field)
+	// 01.0.2. Type Server Name Input Field (enter text, then clear Server Name Input Field)
 	public ServerModuleElement typeAndClearServerNameFieldParam(String Server_Name) throws InterruptedException {
 		serverNameInputFieldHighlight();
 		serverNameDaysElement.sendKeys(Server_Name);
@@ -509,8 +508,7 @@ public class ServerModuleElement extends TestBase {
 		return new ServerModuleElement();
 	}
 
-	// 09.0.2. Type Order Priority  Input Field (enter text, then clear Order Priority Input
-	// Field)
+	// 09.0.2. Type Order Priority  Input Field (enter text, then clear Order Priority Input Field)
 	public ServerModuleElement typeAndClearOrderPriorityFieldParam(String Order_Priority) throws InterruptedException {
 		orderPriorityInputFieldHighlight();
 		orderPriorityInputFieldElement.sendKeys(Order_Priority);
@@ -545,7 +543,7 @@ public class ServerModuleElement extends TestBase {
 	@FindBy(xpath = "/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[10]/div/input")
 	WebElement serverPriceInputFieldElement;
 
-	// 10. Highlight the Location Input Field
+	// 10. Highlight the Server Price Input Field
 	public void serverPriceInputFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
