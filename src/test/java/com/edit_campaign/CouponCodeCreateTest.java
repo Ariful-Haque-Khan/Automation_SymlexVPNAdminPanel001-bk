@@ -42,7 +42,7 @@ public class CouponCodeCreateTest extends TestBase{
 	//@Ignore
 	public void create_and_assign_the__coupon_code() throws IOException, InterruptedException {
 		campaignModuleElement = loginPage.addNewCampaignLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		campaignModuleElement.openAddNewCampaignForm();// open the Add New Campaign Form Page.
+		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/campaign/editCampaign");// open the edit Campaign Form Page.
 		campaignModuleElement.typeToCampaignNameFieldParam("Automation Test 4");//taking input from the Campaign Name
 		campaignModuleElement.typeToshowAsNameOnWebsiteFieldParam("Anika rashid");// taking input from the Show As Name (On Website)
 		campaignModuleElement.typeTowebsiteHeaderImageFieldParam("https://t4.ftcdn.net/jpg/05/68/62/81/360_F_568628131_OWTJpBnx0e78NZjPPkJcgA9JeLyaa5HC.jpg");// taking input from the Website Header Img(External URL)

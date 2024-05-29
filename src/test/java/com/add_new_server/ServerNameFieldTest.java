@@ -60,9 +60,9 @@ public class ServerNameFieldTest extends TestBase{
 		
 	}
 	//@Ignore
-	@Test(priority=1)
+	//@Test(priority=1)
 	public void enter_empty_text_into_Server_Name_input_field() throws IOException, InterruptedException {addNewServerCommon("");	}
-	//@Test(priority=2)
+	@Test(priority=2)
 	public void enter_a_valid_text_into_Server_Name_input_field() throws IOException, InterruptedException {addNewServerCommon("TEST SERVER");	}
 	//@Test(priority=3)
 	public void enter_the_above_maximum_allowed_length_of_characters_into_Server_Name_input_field() throws IOException, InterruptedException{addNewServerCommon("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaniy1yr");}

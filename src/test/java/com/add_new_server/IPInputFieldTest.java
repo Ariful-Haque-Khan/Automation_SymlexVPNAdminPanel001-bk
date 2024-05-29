@@ -97,10 +97,7 @@ public class IPInputFieldTest extends TestBase{
 	public void enter_text_containing_emojis_into_IP_input_field() throws IOException, InterruptedException{addNewServerCommon("😊, 🐱, 🍕, 🎉"); }
 	//@Test(priority=18)
 	public void enter_text_with_accented_characters_into_IP_input_field() throws IOException, InterruptedException{addNewServerCommon("á, ç, ō,  á, ç, ō");}
-	//@Test(priority=19)
-	public void enter_default_placeholder_text_into_IP_input_field() throws IOException, InterruptedException{ 
-			
-	}
+	
 	
 	//@Test(priority=21)
 	public void enter_then_clear_the_text_into_IP_input_field() throws IOException, InterruptedException{
