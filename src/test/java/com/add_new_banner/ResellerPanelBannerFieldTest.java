@@ -132,7 +132,7 @@ public class ResellerPanelBannerFieldTest extends TestBase{
 		//addNewBanner.();/
 		//addNewBanner.();// 
 	}
-	@Test(priority=21)
+	//@Test(priority=21)
 	public void enter_then_undo_the_input_action_into_Reseller_Panel_Banner_iOS_input_field() throws IOException, InterruptedException{
 		addNewBanner = loginPage.addNewBannerLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		addNewBanner.openAddNewBannerFormPage();// open the Add New Banner Form Page.

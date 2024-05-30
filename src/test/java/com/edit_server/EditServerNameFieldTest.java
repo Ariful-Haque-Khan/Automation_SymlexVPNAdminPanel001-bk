@@ -102,7 +102,7 @@ public class EditServerNameFieldTest extends TestBase{
 	public void enter_text_with_accented_characters_into_Server_Name_input_field() throws IOException, InterruptedException{editServerCommon("á, ç, ō,  á, ç, ō");}
 
 	
-	//@Test(priority=21)
+	@Test(priority=21)
 	public void enter_then_clear_the_text_into_Server_Name_input_field() throws IOException, InterruptedException{
 		serverModuleElement = loginPage.addNewServerLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/VpnServer/editForm/366");// open the edit Campaign Form Page.
