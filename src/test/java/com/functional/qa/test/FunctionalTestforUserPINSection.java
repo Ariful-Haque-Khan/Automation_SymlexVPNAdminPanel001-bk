@@ -252,7 +252,7 @@ public class FunctionalTestforUserPINSection extends TestBase{
 		//serverModuleElement.typeToCityInputField();/*7. Type to the City Input Field.*/
 		//serverModuleElement.typeToOrderPriorityInputField();/*8. Type to the Order Priority Input Field.*/
 		//serverModuleElement.typeToServerPriceInputFieldElementInputField();/*9. Type to the Server Price Input Field.*/
-		serverModuleElement.clickToUploadWireGuardConfigCheckboxField();/*Click to the Upload WireGuard Config? Checkbox Field.*/
+		//serverModuleElement.clickToUploadWireGuardConfigCheckboxField();/*Click to the Upload WireGuard Config? Checkbox Field.*/
 		//serverModuleElement.wireGurdFilePriorityInputField();/*Input File Location to the Wireguard File Input Field.*/
 		//serverModuleElement.clickTIsActiveCheckboxField();/*click to theIs Active Checkbox Field.*/
 		//serverModuleElement.clickTOpenVPNCheckboxField();/*click to the OpenVPN Checkbox Field.*/
