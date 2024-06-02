@@ -3,7 +3,7 @@
  * @company: Kolpolok Limited.
 */
 
-package com.add_new_ip;
+package com.edit_ip;
 
 import java.io.IOException;
 
@@ -17,7 +17,7 @@ import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.TestUtils;
 
-public class ServerNameFieldTest extends TestBase{
+public class EditServerNameFieldTest extends TestBase{
 	
 	
 	LoginPage loginPage;
@@ -27,8 +27,8 @@ public class ServerNameFieldTest extends TestBase{
 	IPListElement iPListElement;
 	
 	//Initializing PageFactory
-	public ServerNameFieldTest() {
-		super();   //Call the Constructor of the Super class - TestBase
+	public EditServerNameFieldTest() {
+		super();   //Call the Constructor of the Super class - TestBase  
 	}
 	
 	@BeforeMethod
@@ -40,27 +40,30 @@ public class ServerNameFieldTest extends TestBase{
 
 	public void addNewIPCommon(String server_name) throws IOException, InterruptedException {
 		iPListElement = loginPage.addNewIPLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		iPListElement.openAddNewIPForm();// open the Add New IP  Form Page.
+		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/ip/editForm/1392/0/100");// open the edit Server Form Page.
+		Thread.sleep (3000);
+		iPListElement.typeAndClearServerNameFieldParam("");//clear the text
+		Thread.sleep (3000);
 		iPListElement.typeToServerNameFieldParam(server_name);//taking input from the server Name
-		iPListElement.typeToIPInputFieldParam("100.000.23..1000");// taking input from the ip
-		iPListElement.typeToNoteInputFieldParam("server is down");// taking input from the note
+		iPListElement.typeToIPInputFieldParam(".00");// taking input from the ip
+		iPListElement.typeToNoteInputFieldParam("");// taking input from the note
 		iPListElement.typeSelectField();// select inputs data form the type of protocol dropdown field
 		iPListElement.transmissionprotocolSelectField();// select inputs data form the Transmission Protocol drop down field
 		iPListElement.uaeNetworkSelectField();//select inputs data form the UAE Network drop down field
 		iPListElement.countrySelectField();// select inputs data form the Country drop down field
 		iPListElement.vpnServerSelectField();// select inputs data from the VPN Server drop down field 
-		iPListElement.typeToConfigInputFieldParam("config");//  taking input from the config
+		iPListElement.typeToConfigInputFieldParam("");//  taking input from the config
 		iPListElement.connectionTypeSelectField();//select inputs data from Connection Type
-		iPListElement.typeTosslIpElementInputFieldParam("111.2222");//taking input from the SSL IP
-		iPListElement.typeToSiteInputFieldParam("germany");// taking inputs from Site input field
+		iPListElement.typeTosslIpElementInputFieldParam("");//taking input from the SSL IP
+		iPListElement.typeToSiteInputFieldParam("");// taking inputs from Site input field
 		iPListElement.platformTypeSelectField();//select inputs data form the Platform drop down field 
-		iPListElement.clickTIsActiveCheckboxField();//check box for is active
-		iPListElement.clickIsStreamingCheckboxField();// check box for Is Streaming
-		iPListElement.clickIsGamingCheckboxField();// check box for Is Gaming
+		//iPListElement.clickTIsActiveCheckboxField();//check box for is active
+		//iPListElement.clickIsStreamingCheckboxField();// check box for Is Streaming
+		//iPListElement.clickIsGamingCheckboxField();// check box for Is Gaming
 		iPListElement.clickIsFreeCheckboxField();// check box for Is Free
-		iPListElement.isAdsBlockerCheckboxField();// check box for Ads Blocker
-		iPListElement.isFastServerCheckboxField();// check box for  Fast Server
-		iPListElement.isLoyalUserServerCheckboxField();// check box for Loyal User Server
+		//iPListElement.isAdsBlockerCheckboxField();// check box for Ads Blocker
+		//iPListElement.isFastServerCheckboxField();// check box for  Fast Server
+		//iPListElement.isLoyalUserServerCheckboxField();// check box for Loyal User Server
 		//iPListElement.clickONSubmitButton();// click submit button
 		//iPListElement.typeToresellerLimitInputFieldParam("10");// 
 		
@@ -68,8 +71,8 @@ public class ServerNameFieldTest extends TestBase{
 	//@Ignore
 	//@Test(priority=1)
 	public void enter_empty_text_into_server_name_input_field() throws IOException, InterruptedException {addNewIPCommon("");	}
-	@Test(priority=2)
-	public void enter_a_valid_text_into_server_name_input_field() throws IOException, InterruptedException {addNewIPCommon("test ams-18");	}
+	//@Test(priority=2)
+	public void enter_a_valid_text_into_server_name_input_field() throws IOException, InterruptedException {addNewIPCommon("test server 01");	}
 	//@Test(priority=3)
 	public void enter_the_above_maximum_allowed_length_of_characters_into_server_name_input_field() throws IOException, InterruptedException{addNewIPCommon("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaniy1yr");}
 	//@Test(priority=4)
@@ -83,9 +86,9 @@ public class ServerNameFieldTest extends TestBase{
 	//@Test(priority=8)
 	public void enter_special_characters_into_server_name_input_field() throws IOException, InterruptedException{addNewIPCommon("!@#$%^&*!@#$%^&*@!@#$%^&"); }
 	//@Test(priority=9)
-	public void enter_text_with_leading_whitespaces_into_server_name_input_field() throws IOException, InterruptedException{addNewIPCommon("           ani1yr"); }
+	public void enter_text_with_leading_whitespaces_into_server_name_input_field() throws IOException, InterruptedException{addNewIPCommon("           test server 01"); }
 	//@Test(priority=10)
-	public void enter_text_with_trailing_whitespaces_into_server_name_input_field() throws IOException, InterruptedException{addNewIPCommon("abc1yr                   ");}
+	public void enter_text_with_trailing_whitespaces_into_server_name_input_field() throws IOException, InterruptedException{addNewIPCommon("test server 01                   ");}
 	//@Test(priority=11)
 	public void enter_text_in_uppercase_letters_into_server_name_input_field() throws IOException, InterruptedException{addNewIPCommon("asdfghjkzxcvbnm");}
 	//@Test(priority=12)
@@ -108,89 +111,91 @@ public class ServerNameFieldTest extends TestBase{
 			
 	}
 	
-	@Test(priority=21)
+	//@Test(priority=21)
 	public void enter_then_clear_the_text_into_server_name_input_field() throws IOException, InterruptedException{
 		iPListElement = loginPage.addNewIPLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		iPListElement.openAddNewIPForm();// open the Add New IP  Form Page.
-		iPListElement.typeToServerNameFieldParam("test ams-18 ");//taking input from the server Name
+		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/ip/editForm/1392/0/100");// open the edit Server Form Page.
+		Thread.sleep (4000);
 		iPListElement.typeAndClearServerNameFieldParam("");//clear the text
-		iPListElement.typeToIPInputFieldParam("100.000.23..1000");// taking input from the ip
-		iPListElement.typeToNoteInputFieldParam("server is down");// taking input from the note
+		Thread.sleep (3000);
+		iPListElement.typeToIPInputFieldParam(".00");// taking input from the ip
+		iPListElement.typeToNoteInputFieldParam("");// taking input from the note
 		iPListElement.typeSelectField();// select inputs data form the type of protocol dropdown field
 		iPListElement.transmissionprotocolSelectField();// select inputs data form the Transmission Protocol drop down field
 		iPListElement.uaeNetworkSelectField();//select inputs data form the UAE Network drop down field
 		iPListElement.countrySelectField();// select inputs data form the Country drop down field
 		iPListElement.vpnServerSelectField();// select inputs data from the VPN Server drop down field 
-		iPListElement.typeToConfigInputFieldParam("config");//  taking input from the config
+		iPListElement.typeToConfigInputFieldParam("");//  taking input from the config
 		iPListElement.connectionTypeSelectField();//select inputs data from Connection Type
-		iPListElement.typeTosslIpElementInputFieldParam("111.2222");//taking input from the SSL IP
-		iPListElement.typeToSiteInputFieldParam("germany");// taking inputs from Site input field
+		iPListElement.typeTosslIpElementInputFieldParam("");//taking input from the SSL IP
+		iPListElement.typeToSiteInputFieldParam("");// taking inputs from Site input field
 		iPListElement.platformTypeSelectField();//select inputs data form the Platform drop down field 
-		iPListElement.clickTIsActiveCheckboxField();//check box for is active
-		iPListElement.clickIsStreamingCheckboxField();// check box for Is Streaming
-		iPListElement.clickIsGamingCheckboxField();// check box for Is Gaming
+		//iPListElement.clickTIsActiveCheckboxField();//check box for is active
+		//iPListElement.clickIsStreamingCheckboxField();// check box for Is Streaming
+		//iPListElement.clickIsGamingCheckboxField();// check box for Is Gaming
 		iPListElement.clickIsFreeCheckboxField();// check box for Is Free
-		iPListElement.isAdsBlockerCheckboxField();// check box for Ads Blocker
-		iPListElement.isFastServerCheckboxField();// check box for  Fast Server
-		iPListElement.isLoyalUserServerCheckboxField();// check box for Loyal User Server
+		//iPListElement.isAdsBlockerCheckboxField();// check box for Ads Blocker
+		//iPListElement.isFastServerCheckboxField();// check box for  Fast Server
+		//iPListElement.isLoyalUserServerCheckboxField();// check box for Loyal User Server
 		//iPListElement.clickONSubmitButton();// click submit button
 		//iPListElement.typeToresellerLimitInputFieldParam("10");// 
 	}
 	//@Test(priority=22)
 	public void enter_then_undo_the_input_action_into_server_name_input_field() throws IOException, InterruptedException{
 		iPListElement = loginPage.addNewIPLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		iPListElement.openAddNewIPForm();// open the Add New IP  Form Page.
-		iPListElement.typeToServerNameFieldParam("test ams-18 ");//taking input from the server Name
-		iPListElement.typeAndClearServerNameFieldParam("");// undo the text
-		iPListElement.typeToIPInputFieldParam("100.000.23..1000");// taking input from the ip
-		iPListElement.typeToNoteInputFieldParam("server is down");// taking input from the note
+		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/ip/editForm/1392/0/100");// open the edit Server Form Page.
+		Thread.sleep (4000);
+		iPListElement.typeAndClearServerNameFieldParam("");//clear the text
+		Thread.sleep (3000);
+		iPListElement.typeToIPInputFieldParam(".00");// taking input from the ip
+		iPListElement.typeToNoteInputFieldParam("");// taking input from the note
 		iPListElement.typeSelectField();// select inputs data form the type of protocol dropdown field
 		iPListElement.transmissionprotocolSelectField();// select inputs data form the Transmission Protocol drop down field
 		iPListElement.uaeNetworkSelectField();//select inputs data form the UAE Network drop down field
 		iPListElement.countrySelectField();// select inputs data form the Country drop down field
 		iPListElement.vpnServerSelectField();// select inputs data from the VPN Server drop down field 
-		iPListElement.typeToConfigInputFieldParam("config");//  taking input from the config
+		iPListElement.typeToConfigInputFieldParam("");//  taking input from the config
 		iPListElement.connectionTypeSelectField();//select inputs data from Connection Type
-		iPListElement.typeTosslIpElementInputFieldParam("111.2222");//taking input from the SSL IP
-		iPListElement.typeToSiteInputFieldParam("germany");// taking inputs from Site input field
+		iPListElement.typeTosslIpElementInputFieldParam("");//taking input from the SSL IP
+		iPListElement.typeToSiteInputFieldParam("");// taking inputs from Site input field
 		iPListElement.platformTypeSelectField();//select inputs data form the Platform drop down field 
-		iPListElement.clickTIsActiveCheckboxField();//check box for is active
-		iPListElement.clickIsStreamingCheckboxField();// check box for Is Streaming
-		iPListElement.clickIsGamingCheckboxField();// check box for Is Gaming
+		//iPListElement.clickTIsActiveCheckboxField();//check box for is active
+		//iPListElement.clickIsStreamingCheckboxField();// check box for Is Streaming
+		//iPListElement.clickIsGamingCheckboxField();// check box for Is Gaming
 		iPListElement.clickIsFreeCheckboxField();// check box for Is Free
-		iPListElement.isAdsBlockerCheckboxField();// check box for Ads Blocker
-		iPListElement.isFastServerCheckboxField();// check box for  Fast Server
-		iPListElement.isLoyalUserServerCheckboxField();// check box for Loyal User Server
+		//iPListElement.isAdsBlockerCheckboxField();// check box for Ads Blocker
+		//iPListElement.isFastServerCheckboxField();// check box for  Fast Server
+		//iPListElement.isLoyalUserServerCheckboxField();// check box for Loyal User Server
 		//iPListElement.clickONSubmitButton();// click submit button
 		//iPListElement.typeToresellerLimitInputFieldParam("10");// 
 	}
 	
-	@Test(priority=23)
+	//@Test(priority=23)
 	public void enter_then_undo_and_redo_the_input_action_into_server_name_input_field() throws IOException, InterruptedException{
 		iPListElement = loginPage.addNewIPLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		iPListElement.openAddNewIPForm();// open the Add New IP  Form Page.
-		iPListElement.typeToServerNameFieldParam("test ams-18 ");//taking input from the server Name
-		iPListElement.typeAndClearServerNameFieldParam("");//undo the text
-		iPListElement.typeToServerNameFieldParam("test ams-18 "); //redo the text
-		iPListElement.typeToIPInputFieldParam("100.000.23..1000");// taking input from the ip
-		iPListElement.typeToNoteInputFieldParam("server is down");// taking input from the note
+		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/ip/editForm/1392/0/100");// open the edit Server Form Page.
+		Thread.sleep (4000);
+		iPListElement.typeAndClearServerNameFieldParam("");//clear the text
+		Thread.sleep (3000);
+		iPListElement.typeToIPInputFieldParam(".00");// taking input from the ip
+		iPListElement.typeToNoteInputFieldParam("");// taking input from the note
 		iPListElement.typeSelectField();// select inputs data form the type of protocol dropdown field
 		iPListElement.transmissionprotocolSelectField();// select inputs data form the Transmission Protocol drop down field
 		iPListElement.uaeNetworkSelectField();//select inputs data form the UAE Network drop down field
 		iPListElement.countrySelectField();// select inputs data form the Country drop down field
 		iPListElement.vpnServerSelectField();// select inputs data from the VPN Server drop down field 
-		iPListElement.typeToConfigInputFieldParam("config");//  taking input from the config
+		iPListElement.typeToConfigInputFieldParam("");//  taking input from the config
 		iPListElement.connectionTypeSelectField();//select inputs data from Connection Type
-		iPListElement.typeTosslIpElementInputFieldParam("111.2222");//taking input from the SSL IP
-		iPListElement.typeToSiteInputFieldParam("germany");// taking inputs from Site input field
+		iPListElement.typeTosslIpElementInputFieldParam("");//taking input from the SSL IP
+		iPListElement.typeToSiteInputFieldParam("");// taking inputs from Site input field
 		iPListElement.platformTypeSelectField();//select inputs data form the Platform drop down field 
-		iPListElement.clickTIsActiveCheckboxField();//check box for is active
-		iPListElement.clickIsStreamingCheckboxField();// check box for Is Streaming
-		iPListElement.clickIsGamingCheckboxField();// check box for Is Gaming
+		//iPListElement.clickTIsActiveCheckboxField();//check box for is active
+		//iPListElement.clickIsStreamingCheckboxField();// check box for Is Streaming
+		//iPListElement.clickIsGamingCheckboxField();// check box for Is Gaming
 		iPListElement.clickIsFreeCheckboxField();// check box for Is Free
-		iPListElement.isAdsBlockerCheckboxField();// check box for Ads Blocker
-		iPListElement.isFastServerCheckboxField();// check box for  Fast Server
-		iPListElement.isLoyalUserServerCheckboxField();// check box for Loyal User Server
+		//iPListElement.isAdsBlockerCheckboxField();// check box for Ads Blocker
+		//iPListElement.isFastServerCheckboxField();// check box for  Fast Server
+		//iPListElement.isLoyalUserServerCheckboxField();// check box for Loyal User Server
 		//iPListElement.clickONSubmitButton();// click submit button
 		//iPListElement.typeToresellerLimitInputFieldParam("10");// 
 	}

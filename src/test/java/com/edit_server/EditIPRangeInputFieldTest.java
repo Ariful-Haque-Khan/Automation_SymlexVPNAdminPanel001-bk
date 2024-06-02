@@ -40,12 +40,15 @@ public class EditIPRangeInputFieldTest extends TestBase{
 
 	public void editServerCommon(String IP_Range) throws IOException, InterruptedException {
 		serverModuleElement = loginPage.addNewServerLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/VpnServer/editForm/366");// open the edit Campaign Form Page.
+		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/VpnServer/editForm/366");// open the edit Sever Form Page.
+		Thread.sleep (3000);
 		serverModuleElement.typeToServerNameFieldParam("");//taking input from Server Name
-		serverModuleElement.typeAndClearIPFieldParam("");
-		serverModuleElement.typeToIPFieldParam("110.11010.11");// taking input from the IP
+		serverModuleElement.typeToIPFieldParam("");// taking input from the IP
+		Thread.sleep (3000);
 		serverModuleElement.typeAndClearIPRangeFieldParam("");
+		Thread.sleep (3000);
 		serverModuleElement.typeToIPRangeFieldParam(IP_Range);// taking input from the IP Range
+		Thread.sleep (2000);
 		serverModuleElement.typeToPathFieldParam("");// taking input from the Path
 		serverModuleElement.typeToCapacityFieldParam("1");// taking input from the Capacity
 		serverModuleElement.countrySelectField();//select inputs data form the Country
@@ -103,18 +106,17 @@ public class EditIPRangeInputFieldTest extends TestBase{
 	public void enter_text_with_accented_characters_into_IP_Range_input_field() throws IOException, InterruptedException{editServerCommon("á, ç, ō,  á, ç, ō");}
 
 	
-	@Test(priority=21)
+	//@Test(priority=21)
 	public void enter_then_clear_the_text_into_IP_Range_input_field() throws IOException, InterruptedException{
 		serverModuleElement = loginPage.addNewServerLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/VpnServer/editForm/366");// open the edit Campaign Form Page.
+		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/VpnServer/editForm/366");// open the edit server Form Page.
+		Thread.sleep (3000);
 		serverModuleElement.typeToServerNameFieldParam("");//taking input from Server Name
-		serverModuleElement.typeAndClearIPFieldParam("");
-		serverModuleElement.typeToIPRangeFieldParam("");
-		serverModuleElement.typeToIPFieldParam("110.11010.11");// taking input from the IP
 		Thread.sleep (2000);
-		serverModuleElement.typeAndClearIPRangeFieldParam("");
+		serverModuleElement.typeToIPFieldParam(".1");//taking input from the ip field
 		Thread.sleep (2000);
-		//serverModuleElement.typeToIPRangeFieldParam("");// taking input from the IP Range
+		serverModuleElement.typeAndClearIPRangeFieldParam("");//clear the text
+		Thread.sleep (2000);
 		serverModuleElement.typeToPathFieldParam("");// taking input from the Path
 		serverModuleElement.typeToCapacityFieldParam("1");// taking input from the Capacity
 		serverModuleElement.countrySelectField();//select inputs data form the Country
@@ -135,12 +137,14 @@ public class EditIPRangeInputFieldTest extends TestBase{
 	//@Test(priority=22)
 	public void enter_then_undo_the_input_action_into_IP_Range_input_field() throws IOException, InterruptedException{
 		serverModuleElement = loginPage.addNewServerLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/VpnServer/editForm/366");// open the edit Campaign Form Page.
+		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/VpnServer/editForm/366");// open the edit server Form Page.
+		Thread.sleep (3000);
 		serverModuleElement.typeToServerNameFieldParam("");//taking input from Server Name
-		serverModuleElement.typeAndClearServerNameFieldParam("");//undo the text
-		serverModuleElement.typeAndClearIPFieldParam("");
-		serverModuleElement.typeToIPFieldParam("100.000.121.11");// taking input from the IP
-		serverModuleElement.typeToIPRangeFieldParam(".01");// taking input from the IP Range
+		Thread.sleep (2000);
+		serverModuleElement.typeToIPFieldParam(".1");//taking input from the ip field
+		Thread.sleep (2000);
+		serverModuleElement.typeAndClearIPRangeFieldParam("");//clear the text
+		Thread.sleep (2000);
 		serverModuleElement.typeToPathFieldParam("");// taking input from the Path
 		serverModuleElement.typeToCapacityFieldParam("1");// taking input from the Capacity
 		serverModuleElement.countrySelectField();//select inputs data form the Country
@@ -155,18 +159,22 @@ public class EditIPRangeInputFieldTest extends TestBase{
 		serverModuleElement.clickTOpenVPNCheckboxField();// click on is OpenVPN checkbox
 		serverModuleElement.SSHInputField();// click on is SSH checkbox
 		//serverModuleElement.clickToSubmitButton();// click on Submit button
+
 	}
 	
 	//@Test(priority=23)
 	public void enter_then_undo_and_redo_the_input_action_into_IP_Range_input_field() throws IOException, InterruptedException{
 		serverModuleElement = loginPage.addNewServerLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/VpnServer/editForm/366");// open the edit Campaign Form Page.
+		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/VpnServer/editForm/366");// open the edit server Form Page.
+		Thread.sleep (3000);
 		serverModuleElement.typeToServerNameFieldParam("");//taking input from Server Name
-		serverModuleElement.typeAndClearServerNameFieldParam("");//undo the text
-		serverModuleElement.typeToServerNameFieldParam("test server 1");//redo the text
-		serverModuleElement.typeAndClearIPFieldParam("");
-		serverModuleElement.typeToIPFieldParam("100.000.121.11");// taking input from the IP
-		serverModuleElement.typeToIPRangeFieldParam(".01");// taking input from the IP Range
+		Thread.sleep (2000);
+		serverModuleElement.typeToIPFieldParam(".1");//taking input from the ip field
+		Thread.sleep (2000);
+		serverModuleElement.typeAndClearIPRangeFieldParam("");//clear the text
+		Thread.sleep (2000);
+		serverModuleElement.typeToIPRangeFieldParam("101.101.101");// taking input from the IP Range
+		Thread.sleep (2000);
 		serverModuleElement.typeToPathFieldParam("");// taking input from the Path
 		serverModuleElement.typeToCapacityFieldParam("1");// taking input from the Capacity
 		serverModuleElement.countrySelectField();//select inputs data form the Country
@@ -181,6 +189,7 @@ public class EditIPRangeInputFieldTest extends TestBase{
 		serverModuleElement.clickTOpenVPNCheckboxField();// click on is OpenVPN checkbox
 		serverModuleElement.SSHInputField();// click on is SSH checkbox
 		//serverModuleElement.clickToSubmitButton();// click on Submit button
+
 	}
 	
 	//@Test(priority=24)
@@ -188,11 +197,11 @@ public class EditIPRangeInputFieldTest extends TestBase{
 	public void enter_text_and_navigate_through_into_IP_Range_input_field_using_the_tab_key() throws IOException, InterruptedException{ 
 		serverModuleElement = loginPage.addNewServerLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/VpnServer/editForm/366");// open the edit Campaign Form Page.
+		Thread.sleep (3000);
 		serverModuleElement.typeToServerNameFieldParam("");//taking input from Server Name
-		serverModuleElement.typeAndClearServerNameFieldParam("");//undo the text
-		serverModuleElement.typeAndClearIPFieldParam("");
-		serverModuleElement.typeToIPFieldParam("100.000.121.11");// taking input from the IP
-		serverModuleElement.typeToIPRangeFieldParam(".01");// taking input from the IP Range
+		serverModuleElement.typeToIPFieldParam(".11");// taking input from the IP
+		serverModuleElement.typeToIPRangeFieldParam("");// taking input from the IP Range
+		serverModuleElement.typetoIPRangetabKey();// taking input from the IP Range
 		serverModuleElement.typeToPathFieldParam("");// taking input from the Path
 		serverModuleElement.typeToCapacityFieldParam("1");// taking input from the Capacity
 		serverModuleElement.countrySelectField();//select inputs data form the Country

@@ -42,9 +42,11 @@ public class EditIPInputFieldTest extends TestBase{
 		serverModuleElement = loginPage.addNewServerLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/VpnServer/editForm/366");// open the edit Campaign Form Page.
 		serverModuleElement.typeToServerNameFieldParam("");//taking input from Server Name
+		Thread.sleep (3000);
 		serverModuleElement.typeAndClearIPFieldParam("");
+		Thread.sleep (3000);
 		serverModuleElement.typeToIPFieldParam(IP);// taking input from the IP
-		//serverModuleElement.typeAndClearIPFieldParam("");
+		Thread.sleep (2000);
 		serverModuleElement.typeToIPRangeFieldParam(".01");// taking input from the IP Range
 		serverModuleElement.typeToPathFieldParam("");// taking input from the Path
 		serverModuleElement.typeToCapacityFieldParam("1");// taking input from the Capacity
@@ -68,7 +70,7 @@ public class EditIPInputFieldTest extends TestBase{
 	public void enter_empty_text_into_IP_input_field() throws IOException, InterruptedException {editServerCommon("");	}
 	//@Test(priority=2)
 	public void enter_a_valid_text_into_IP_input_field() throws IOException, InterruptedException {editServerCommon("100.100.100");	}
-	//@Test(priority=3)
+	@Test(priority=3)
 	public void enter_the_above_maximum_allowed_length_of_characters_into_IP_input_field() throws IOException, InterruptedException{editServerCommon("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaniy1yr");}
 	//@Test(priority=4)
 	public void enter_the_below_minimum_allowed_length_of_characters_into_IP_input_field() throws IOException, InterruptedException{editServerCommon("a");}
@@ -106,12 +108,11 @@ public class EditIPInputFieldTest extends TestBase{
 	//@Test(priority=21)
 	public void enter_then_clear_the_text_into_IP_input_field() throws IOException, InterruptedException{
 		serverModuleElement = loginPage.addNewServerLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/VpnServer/editForm/366");// open the edit Campaign Form Page.
+		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/VpnServer/editForm/366");// open the edit Server Form Page.
+		Thread.sleep (3000);
 		serverModuleElement.typeToServerNameFieldParam("");//taking input from Server Name
 		Thread.sleep (2000);
-		serverModuleElement.typeAndClearIPFieldParam("");
-		Thread.sleep (2000);
-		serverModuleElement.typeToIPFieldParam("");// taking input from the IP
+		serverModuleElement.typeAndClearIPFieldParam("");//clear the text
 		Thread.sleep (2000);
 		//serverModuleElement.typeAndClearIPFieldParam("");
 		serverModuleElement.typeToIPRangeFieldParam(".01");// taking input from the IP Range
@@ -136,12 +137,11 @@ public class EditIPInputFieldTest extends TestBase{
 	//@Test(priority=22)
 	public void enter_then_undo_the_input_action_into_IP_input_field() throws IOException, InterruptedException{
 		serverModuleElement = loginPage.addNewServerLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/VpnServer/editForm/366");// open the edit Campaign Form Page.
+		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/VpnServer/editForm/366");// open the edit Server Form Page.
+		Thread.sleep (3000);
 		serverModuleElement.typeToServerNameFieldParam("");//taking input from Server Name
 		Thread.sleep (2000);
-		serverModuleElement.typeAndClearIPFieldParam("");
-		Thread.sleep (2000);
-		serverModuleElement.typeToIPFieldParam("");// taking input from the IP
+		serverModuleElement.typeAndClearIPFieldParam("");//undo the text
 		Thread.sleep (2000);
 		//serverModuleElement.typeAndClearIPFieldParam("");
 		serverModuleElement.typeToIPRangeFieldParam(".01");// taking input from the IP Range
@@ -159,20 +159,19 @@ public class EditIPInputFieldTest extends TestBase{
 		serverModuleElement.clickTOpenVPNCheckboxField();// click on is OpenVPN checkbox
 		serverModuleElement.SSHInputField();// click on is SSH checkbox
 		//serverModuleElement.clickToSubmitButton();// click on Submit button
-
 	}
 	
-	@Test(priority=23)
+	//@Test(priority=23)
 	public void enter_then_undo_and_redo_the_input_action_into_IP_input_field() throws IOException, InterruptedException{
 		serverModuleElement = loginPage.addNewServerLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/VpnServer/editForm/366");// open the edit Campaign Form Page.
+		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/VpnServer/editForm/366");// open the edit Server Form Page.
+		Thread.sleep (3000);
 		serverModuleElement.typeToServerNameFieldParam("");//taking input from Server Name
 		Thread.sleep (2000);
-		serverModuleElement.typeAndClearIPFieldParam("");
+		serverModuleElement.typeAndClearIPFieldParam("");//undo the IP field
 		Thread.sleep (2000);
-		serverModuleElement.typeToIPFieldParam("111.1111.12.");// taking input from the IP
+		serverModuleElement.typeToIPFieldParam("100.1000.100");//redo the ip field
 		Thread.sleep (2000);
-		//serverModuleElement.typeAndClearIPFieldParam("");
 		serverModuleElement.typeToIPRangeFieldParam(".01");// taking input from the IP Range
 		serverModuleElement.typeToPathFieldParam("");// taking input from the Path
 		serverModuleElement.typeToCapacityFieldParam("1");// taking input from the Capacity
@@ -196,7 +195,6 @@ public class EditIPInputFieldTest extends TestBase{
 		serverModuleElement = loginPage.addNewServerLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/VpnServer/editForm/366");// open the edit Campaign Form Page.
 		serverModuleElement.typeToServerNameFieldParam("");//taking input from Server Name
-		serverModuleElement.typeAndClearIPFieldParam("");
 		serverModuleElement.typeToIPFieldParam("100.100.100");// taking input from the IP
 		serverModuleElement.typetoIPtabKey();
 		serverModuleElement.typeToIPRangeFieldParam(".01");// taking input from the IP Range

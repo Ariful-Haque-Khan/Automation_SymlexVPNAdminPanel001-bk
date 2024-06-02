@@ -60,7 +60,7 @@ public class ServerModuleElement extends TestBase {
 	public ServerModuleElement typeAndClearServerNameFieldParam(String Server_Name) throws InterruptedException {
 		serverNameInputFieldHighlight();
 		serverNameDaysElement.sendKeys(Server_Name);
-		Thread.sleep(100);
+		Thread.sleep(500);
 		serverNameDaysElement.clear();
 		return new ServerModuleElement();
 	}

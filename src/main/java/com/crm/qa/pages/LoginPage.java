@@ -30,7 +30,7 @@ import com.admin.qa.function.AddNewBanner;
 import com.admin.qa.function.AddNewBlockAppCRC;
 import com.admin.qa.function.CampaignModuleElement;
 import com.admin.qa.function.AddNewEventCode;
-import com.admin.qa.function.AddNewIP;
+import com.admin.qa.function.IPListElement;
 import com.admin.qa.function.AddNewMenuPermission;
 import com.admin.qa.function.AddNewNotice;
 import com.admin.qa.function.AddNewPaymentMethod;
@@ -419,13 +419,13 @@ public class LoginPage extends TestBase{
 		return new AddNewRatePlan(); // Login form Add New Banner Form page
 	}
 
-	public AddNewIP addNewIPLogin(String uname , String pwd) {
+	public IPListElement addNewIPLogin(String uname , String pwd) {
 		
 		username.sendKeys(uname);
 		password.sendKeys(pwd);
 		loginBtn.click();
 		
-		return new AddNewIP(); //Login form Add New IP Form page
+		return new IPListElement(); //Login form Add New IP Form page
 	}
 	
 	public CampaignModuleElement addNewCampaignLogin(String uname , String pwd) {

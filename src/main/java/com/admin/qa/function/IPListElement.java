@@ -10,14 +10,14 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.crm.qa.base.TestBase;
 
-public class AddNewIP extends TestBase{
-	public AddNewIP(){
+public class IPListElement extends TestBase{
+	public IPListElement(){
 		PageFactory.initElements(driver, this);
 	}
 	
-	public AddNewIP openAddNewIPForm() {
+	public IPListElement openAddNewIPForm() {
 		driver.get(props.getProperty("url")+"/ip/create");
-		return new AddNewIP();
+		return new IPListElement();
 	}
 	
 	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -46,34 +46,34 @@ public class AddNewIP extends TestBase{
 	}
 	
 	//01. Type to the Server Name
-	public AddNewIP typeToServerNameInputField() throws InterruptedException {
+	public IPListElement typeToServerNameInputField() throws InterruptedException {
 		serverNameElementInputFieldHighlight();
 		serverNameElement.sendKeys("");
-		return new AddNewIP();
+		return new IPListElement();
 	}
 	
 	//01.0.1 Type to the Server Name parameter
-	public AddNewIP typeToServerNameFieldParam(String server_name) throws InterruptedException {
+	public IPListElement typeToServerNameFieldParam(String server_name) throws InterruptedException {
 		serverNameElementInputFieldHighlight();
 		serverNameElement.sendKeys(server_name);		
 		Thread.sleep(2000);		
-		return new AddNewIP();
+		return new IPListElement();
 	}
 	
 	//01.0.2. Type Server Name Input Field (enter text, then clear Server Name Input Field)
-	public AddNewIP typeAndClearServerNameFieldParam(String server_name) throws InterruptedException {
+	public IPListElement typeAndClearServerNameFieldParam(String server_name) throws InterruptedException {
 		serverNameElementInputFieldHighlight();
 		serverNameElement.sendKeys(server_name);
 		Thread.sleep(100);
 		serverNameElement.clear();
-		return new AddNewIP();									    			
+		return new IPListElement();									    			
 	}		
 		
 	//1.0.3. Type to Server Name Input Field
-	public AddNewIP  typetoServerNameFieldtabKey() throws InterruptedException {
+	public IPListElement  typetoServerNameFieldtabKey() throws InterruptedException {
 		serverNameElementInputFieldHighlight();
 		serverNameElement.sendKeys(Keys.TAB);
-		return new AddNewIP();
+		return new IPListElement();
 	}
 	/***************************************************************************************************************
      * *****************************************************************************************************
@@ -107,34 +107,34 @@ public class AddNewIP extends TestBase{
 	}
 	
 	//02. Type to the IP
-	public AddNewIP typeToIPInputField() throws InterruptedException {
+	public IPListElement typeToIPInputField() throws InterruptedException {
 		ipElementInputFieldHighlight();
 		IPElement.sendKeys("");
-		return new AddNewIP();
+		return new IPListElement();
 	}
 	
 	//02.0.1 Type to the IP parameter
-	public AddNewIP typeToIPInputFieldParam(String IP) throws InterruptedException {
+	public IPListElement typeToIPInputFieldParam(String IP) throws InterruptedException {
 		ipElementInputFieldHighlight();
 		IPElement.sendKeys(IP);		
 		Thread.sleep(2000);		
-		return new AddNewIP();
+		return new IPListElement();
 	}
 	
 	//02.0.2. Type IP Input Field (enter text, then clear IP Input Field)
-	public AddNewIP typeAndClearIPFieldParam(String IP) throws InterruptedException {
+	public IPListElement typeAndClearIPFieldParam(String IP) throws InterruptedException {
 		ipElementInputFieldHighlight();
 		IPElement.sendKeys(IP);
 		Thread.sleep(100);
 		IPElement.clear();
-		return new AddNewIP();									    			
+		return new IPListElement();									    			
 	}		
 		
 	//2.0.3. Type to IP Input Field
-	public AddNewIP  typetoIPFieldtabKey() throws InterruptedException {
+	public IPListElement  typetoIPFieldtabKey() throws InterruptedException {
 		ipElementInputFieldHighlight();
 		IPElement.sendKeys(Keys.TAB);
-		return new AddNewIP();
+		return new IPListElement();
 	}
 	/***************************************************************************************************************
      * *****************************************************************************************************
@@ -168,34 +168,34 @@ public class AddNewIP extends TestBase{
 	}
 	
 	//03. Type to the Note
-	public AddNewIP typeToNoteInputField() throws InterruptedException {
+	public IPListElement typeToNoteInputField() throws InterruptedException {
 		noteElementInputFieldHighlight();
 		noteElement.sendKeys("");
-		return new AddNewIP();
+		return new IPListElement();
 	}
 	
 	//03.0.1 Type to the Note parameter
-	public AddNewIP typeToNoteInputFieldParam(String note) throws InterruptedException {
+	public IPListElement typeToNoteInputFieldParam(String note) throws InterruptedException {
 		noteElementInputFieldHighlight();
 		noteElement.sendKeys(note);		
 		Thread.sleep(2000);		
-		return new AddNewIP();
+		return new IPListElement();
 	}
 	
 	//03.0.2. Type Note Input Field (enter text, then clear Note Input Field)
-	public AddNewIP typeAndClearNoteFieldParam(String note) throws InterruptedException {
+	public IPListElement typeAndClearNoteFieldParam(String note) throws InterruptedException {
 		noteElementInputFieldHighlight();
 		noteElement.sendKeys(note);
 		Thread.sleep(100);
 		noteElement.clear();
-		return new AddNewIP();									    			
+		return new IPListElement();									    			
 	}		
 		
 	//3.0.3. Type to Note Input Field tab key
-	public AddNewIP  typetoNoteFieldtabKey() throws InterruptedException {
+	public IPListElement  typetoNoteFieldtabKey() throws InterruptedException {
 		noteElementInputFieldHighlight();
 		noteElement.sendKeys(Keys.TAB);
-		return new AddNewIP();
+		return new IPListElement();
 	}
 	/***************************************************************************************************************
      * *****************************************************************************************************
@@ -228,11 +228,11 @@ public class AddNewIP extends TestBase{
 	}
 	
 	//04. Type to the Type select Field
-	public AddNewIP typeSelectField() throws InterruptedException {
+	public IPListElement typeSelectField() throws InterruptedException {
 		typeSelectFieldHighlight();
 		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[4]/div/select")));
 		drp.selectByIndex(2);
-		return new AddNewIP();
+		return new IPListElement();
 	}
 	/***************************************************************************************************************
      * *****************************************************************************************************
@@ -265,11 +265,11 @@ public class AddNewIP extends TestBase{
 	}
 	
 	//05. Type to the Transmission Protocol select Field
-	public AddNewIP transmissionprotocolSelectField() throws InterruptedException {
+	public IPListElement transmissionprotocolSelectField() throws InterruptedException {
 		transmissionprotocolFieldHighlight();
 		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[5]/div/select")));
 		drp.selectByIndex(2);
-		return new AddNewIP();
+		return new IPListElement();
 	}
 	/***************************************************************************************************************
      * *****************************************************************************************************
@@ -302,11 +302,11 @@ public class AddNewIP extends TestBase{
 	}
 	
 	//06. Type to the UAE Network select Field
-	public AddNewIP uaeNetworkSelectField() throws InterruptedException {
+	public IPListElement uaeNetworkSelectField() throws InterruptedException {
 		uaeNetworkFieldHighlight();
 		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[6]/div/select")));
 		drp.selectByIndex(2);
-		return new AddNewIP();
+		return new IPListElement();
 	}
 	/***************************************************************************************************************
      * *****************************************************************************************************
@@ -339,11 +339,11 @@ public class AddNewIP extends TestBase{
 	}
 	
 	//07. Type to the Country Input Field
-	public AddNewIP countrySelectField() throws InterruptedException {
+	public IPListElement countrySelectField() throws InterruptedException {
 		countrySelectFieldHighlight();
 		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[7]/div/select")));
 		drp.selectByIndex(8);
-		return new AddNewIP();
+		return new IPListElement();
 	}
 	/***************************************************************************************************************
      * *****************************************************************************************************
@@ -377,11 +377,11 @@ public class AddNewIP extends TestBase{
 	}
 	
 	//08. Type to the VPN Server select Field
-	public AddNewIP vpnServerSelectField() throws InterruptedException {
+	public IPListElement vpnServerSelectField() throws InterruptedException {
 		vpnServerFieldHighlight();
 		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[8]/div/select")));
 		drp.selectByIndex(8);
-		return new AddNewIP();
+		return new IPListElement();
 	}
 	/***************************************************************************************************************
      * *****************************************************************************************************
@@ -415,34 +415,34 @@ public class AddNewIP extends TestBase{
 	}
 	
 	//09. Type to the Config
-	public AddNewIP typeToConfigInputField() throws InterruptedException {
+	public IPListElement typeToConfigInputField() throws InterruptedException {
 		configElementInputFieldHighlight();
 		configElement.sendKeys("");
-		return new AddNewIP();
+		return new IPListElement();
 	}
 	
 	//09.0.1 Type to the Config parameter
-	public AddNewIP typeToConfigInputFieldParam(String config) throws InterruptedException {
+	public IPListElement typeToConfigInputFieldParam(String config) throws InterruptedException {
 		configElementInputFieldHighlight();
 		configElement.sendKeys(config);		
 		Thread.sleep(2000);		
-		return new AddNewIP();
+		return new IPListElement();
 	}
 	
 	//09.0.2. Type Config Input Field (enter text, then clear Note Config Field)
-	public AddNewIP typeAndClearConfigInputFieldParam(String config) throws InterruptedException {
+	public IPListElement typeAndClearConfigInputFieldParam(String config) throws InterruptedException {
 		configElementInputFieldHighlight();
 		configElement.sendKeys(config);
 		Thread.sleep(100);
 		configElement.clear();
-		return new AddNewIP();									    			
+		return new IPListElement();									    			
 	}		
 		
 	//9.0.3. Type to Config Input Field
-	public AddNewIP  typetoConfigInputFieldtabKey() throws InterruptedException {
+	public IPListElement  typetoConfigInputFieldtabKey() throws InterruptedException {
 		configElementInputFieldHighlight();
 		configElement.sendKeys(Keys.TAB);
-		return new AddNewIP();
+		return new IPListElement();
 	}
 	/***************************************************************************************************************
      * *****************************************************************************************************
@@ -476,11 +476,11 @@ public class AddNewIP extends TestBase{
 	}
 	
 	//10. Type to the Connection Type input Field
-	public AddNewIP connectionTypeSelectField() throws InterruptedException {
+	public IPListElement connectionTypeSelectField() throws InterruptedException {
 		connectionTypeElementHighlight();
 		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[10]/div/select")));
 		drp.selectByIndex(1);
-		return new AddNewIP();
+		return new IPListElement();
 	}
 	/***************************************************************************************************************
      * *****************************************************************************************************
@@ -514,34 +514,34 @@ public class AddNewIP extends TestBase{
 	}
 	
 	//11. Type to the SSL IP
-	public AddNewIP typeTosslIpElementInputField() throws InterruptedException {
+	public IPListElement typeTosslIpElementInputField() throws InterruptedException {
 		noteElementInputFieldHighlight();
 		sslIpElement.sendKeys("");
-		return new AddNewIP();
+		return new IPListElement();
 	}
 	
 	//11.0.1 Type to the SSL IP parameter
-	public AddNewIP typeTosslIpElementInputFieldParam(String ssl_ip) throws InterruptedException {
+	public IPListElement typeTosslIpElementInputFieldParam(String ssl_ip) throws InterruptedException {
 		noteElementInputFieldHighlight();
 		sslIpElement.sendKeys(ssl_ip);		
 		Thread.sleep(2000);		
-		return new AddNewIP();
+		return new IPListElement();
 	}
 	
 	//11.0.2. Type SSL IP Input Field (enter text, then clear SSL IP Input Field)
-	public AddNewIP typeAndClearsslIpElementFieldParam(String ssl_ip) throws InterruptedException {
+	public IPListElement typeAndClearsslIpElementFieldParam(String ssl_ip) throws InterruptedException {
 		noteElementInputFieldHighlight();
 		sslIpElement.sendKeys(ssl_ip);
 		Thread.sleep(100);
 		sslIpElement.clear();
-		return new AddNewIP();									    			
+		return new IPListElement();									    			
 	}		
 		
 	//11.0.3. Type to SSL IP Input Field tab key
-	public AddNewIP  typetosslIpElementFieldtabKey() throws InterruptedException {
+	public IPListElement  typetosslIpElementFieldtabKey() throws InterruptedException {
 		noteElementInputFieldHighlight();
 		sslIpElement.sendKeys(Keys.TAB);
-		return new AddNewIP();
+		return new IPListElement();
 	}
 	/***************************************************************************************************************
      * *****************************************************************************************************
@@ -575,34 +575,34 @@ public class AddNewIP extends TestBase{
 	}
 	
 	//12. Type to the site
-	public AddNewIP typeToSiteInputField() throws InterruptedException {
+	public IPListElement typeToSiteInputField() throws InterruptedException {
 		siteElementInputFieldHighlight();
 		siteElement.sendKeys("");
-		return new AddNewIP();
+		return new IPListElement();
 	}
 	
 	//12.0.1 Type to the site parameter
-	public AddNewIP typeToSiteInputFieldParam(String site) throws InterruptedException {
+	public IPListElement typeToSiteInputFieldParam(String site) throws InterruptedException {
 		siteElementInputFieldHighlight();
 		siteElement.sendKeys(site);		
 		Thread.sleep(2000);		
-		return new AddNewIP();
+		return new IPListElement();
 	}
 	
 	//12.0.2. Type site Input Field (enter text, then clear site Input Field)
-	public AddNewIP typeAndClearSiteFieldParam(String site) throws InterruptedException {
+	public IPListElement typeAndClearSiteFieldParam(String site) throws InterruptedException {
 		siteElementInputFieldHighlight();
 		siteElement.sendKeys(site);
 		Thread.sleep(100);
 		siteElement.clear();
-		return new AddNewIP();									    			
+		return new IPListElement();									    			
 	}		
 		
 	//12.0.3. Type to site tab key
-	public AddNewIP  typetoSiteFieldtabKey() throws InterruptedException {
+	public IPListElement  typetoSiteFieldtabKey() throws InterruptedException {
 		siteElementInputFieldHighlight();
 		siteElement.sendKeys(Keys.TAB);
-		return new AddNewIP();
+		return new IPListElement();
 	}
 	/***************************************************************************************************************
      * *****************************************************************************************************
@@ -636,11 +636,11 @@ public class AddNewIP extends TestBase{
 	}
 	
 	//13. Type to the Platform input Field
-	public AddNewIP platformTypeSelectField() throws InterruptedException {
+	public IPListElement platformTypeSelectField() throws InterruptedException {
 		platformTypeElementHighlight();
 		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[13]/div/select")));
 		drp.selectByIndex(1);
-		return new AddNewIP();
+		return new IPListElement();
 	}
 	/***************************************************************************************************************
      * *****************************************************************************************************
@@ -673,10 +673,10 @@ public class AddNewIP extends TestBase{
      }
 
     //14. Type to the Is Active Check box Field
-    public AddNewIP clickTIsActiveCheckboxField() throws InterruptedException {
+    public IPListElement clickTIsActiveCheckboxField() throws InterruptedException {
         isActiveCheckboxFieldHighlight();
         isActiveCheckboxFieldElement.click();
-        return new AddNewIP();
+        return new IPListElement();
      }
 
     /*************************************************************
@@ -711,11 +711,11 @@ public class AddNewIP extends TestBase{
     }
 
    //14. Type to the Is Streaming Check box Field
-   public AddNewIP clickIsStreamingCheckboxField() throws InterruptedException {
+   public IPListElement clickIsStreamingCheckboxField() throws InterruptedException {
 	   isStreamingCheckboxFieldHighlight();
        Thread.sleep(1000);
        isStreamingCheckboxFieldElement.click();
-       return new AddNewIP();
+       return new IPListElement();
     }
 
    /*************************************************************
@@ -750,11 +750,11 @@ public class AddNewIP extends TestBase{
     }
 
    //16. Type to the Is Gaming Check box Field
-   public AddNewIP clickIsGamingCheckboxField() throws InterruptedException {
+   public IPListElement clickIsGamingCheckboxField() throws InterruptedException {
 	   isGamingCheckboxFieldHighlight();
        Thread.sleep(1000);
        isGamingCheckboxFieldElement.click();
-       return new AddNewIP();
+       return new IPListElement();
     }
 
    /*************************************************************
@@ -789,11 +789,11 @@ public class AddNewIP extends TestBase{
     }
 
    //16. Type to the Is Free Check box Field
-   public AddNewIP clickIsFreeCheckboxField() throws InterruptedException {
+   public IPListElement clickIsFreeCheckboxField() throws InterruptedException {
 	   isFreeCheckboxFieldHighlight();
        Thread.sleep(1000);
        isFreeCheckboxFieldElement.click();
-       return new AddNewIP();
+       return new IPListElement();
     }
    /*************************************************************
  	* ****************************************************************************************************
@@ -827,11 +827,11 @@ public class AddNewIP extends TestBase{
     }
 
    //18. Type to the Is Ads Blocker Check box Field
-   public AddNewIP isAdsBlockerCheckboxField() throws InterruptedException {
+   public IPListElement isAdsBlockerCheckboxField() throws InterruptedException {
 	   isAdsBlockerCheckboxFieldHighlight();
        Thread.sleep(1000);
        isAdsBlockerCheckboxFieldElement.click();
-       return new AddNewIP();
+       return new IPListElement();
     }
    
    /*************************************************************
@@ -866,11 +866,11 @@ public class AddNewIP extends TestBase{
     }
 
    //19. Type to the Is Fast Server Check box Field
-   public AddNewIP isFastServerCheckboxField() throws InterruptedException {
+   public IPListElement isFastServerCheckboxField() throws InterruptedException {
 	   isFastServerCheckboxFieldHighlight();
        Thread.sleep(1000);
        isFastServerCheckboxFieldElement.click();
-       return new AddNewIP();
+       return new IPListElement();
     }
    
    /*************************************************************
@@ -905,11 +905,11 @@ public class AddNewIP extends TestBase{
     }
 
    //20. Type to the Is Loyal User Server Check box Field
-   public AddNewIP isLoyalUserServerCheckboxField() throws InterruptedException {
+   public IPListElement isLoyalUserServerCheckboxField() throws InterruptedException {
 	   isLoyalUserServerFieldHighlight();
        Thread.sleep(1000);
        isLoyalUserServerCheckboxFieldElement.click();
-       return new AddNewIP();
+       return new IPListElement();
     }
   
    /*************************************************************
@@ -944,10 +944,10 @@ public class AddNewIP extends TestBase{
 	}
 	
 	//21. Click to the Submit Button
-	public AddNewIP clickONSubmitButton() throws InterruptedException {
+	public IPListElement clickONSubmitButton() throws InterruptedException {
 		submitButtonInputFieldHighlight();
 		submitButtonElement.click();
-		return new AddNewIP();
+		return new IPListElement();
 	}
 		
 	   /*************************************************************
