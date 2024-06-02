@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
-import com.admin.qa.function.AddNewIP;
+import com.admin.qa.function.IPListElement;
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.TestUtils;
@@ -24,7 +24,7 @@ public class SSLIPFieldTest extends TestBase{
 
 	TestUtils testUtils;
 	
-	AddNewIP addNewIP;
+	IPListElement iPListElement;
 	
 	//Initializing PageFactory
 	public SSLIPFieldTest() {
@@ -40,30 +40,30 @@ public class SSLIPFieldTest extends TestBase{
 
 	
 	public void addNewIPCommon(String ssl_ip) throws IOException, InterruptedException {
-		addNewIP = loginPage.addNewIPLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		addNewIP.openAddNewIPForm();// open the Add New IP  Form Page.
-		addNewIP.typeToServerNameFieldParam("TEST AMSSSS-18");//taking input from the server Name
-		addNewIP.typeToIPInputFieldParam("100.111.222.222.");// taking input from the ip
-		addNewIP.typeToNoteInputFieldParam("server is down");// taking input from the note
-		addNewIP.typeSelectField();// select inputs data form the type of protocol dropdown field
-		addNewIP.transmissionprotocolSelectField();// select inputs data form the Transmission Protocol drop down field
-		addNewIP.uaeNetworkSelectField();//select inputs data form the UAE Network drop down field
-		addNewIP.countrySelectField();// select inputs data form the Country drop down field
-		addNewIP.vpnServerSelectField();// select inputs data from the VPN Server drop down field 
-		addNewIP.typeToConfigInputFieldParam(ssl_ip);//  taking input from the config
-		addNewIP.connectionTypeSelectField();//select inputs data from Connection Type
-		addNewIP.typeTosslIpElementInputFieldParam("111.2222");//taking input from the SSL IP
-		addNewIP.typeToSiteInputFieldParam("germany");// taking inputs from Site input field
-		addNewIP.platformTypeSelectField();//select inputs data form the Platform drop down field 
-		addNewIP.clickTIsActiveCheckboxField();//check box for is active
-		addNewIP.clickIsStreamingCheckboxField();// check box for Is Streaming
-		addNewIP.clickIsGamingCheckboxField();// check box for Is Gaming
-		addNewIP.clickIsFreeCheckboxField();// check box for Is Free
-		addNewIP.isAdsBlockerCheckboxField();// check box for Ads Blocker
-		addNewIP.isFastServerCheckboxField();// check box for  Fast Server
-		addNewIP.isLoyalUserServerCheckboxField();// check box for Loyal User Server
-		//addNewIP.clickONSubmitButton();// click submit button
-		//addNewIP.typeToresellerLimitInputFieldParam("10");// 
+		iPListElement = loginPage.addNewIPLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		iPListElement.openAddNewIPForm();// open the Add New IP  Form Page.
+		iPListElement.typeToServerNameFieldParam("TEST AMSSSS-18");//taking input from the server Name
+		iPListElement.typeToIPInputFieldParam("100.111.222.222.");// taking input from the ip
+		iPListElement.typeToNoteInputFieldParam("server is down");// taking input from the note
+		iPListElement.typeSelectField();// select inputs data form the type of protocol dropdown field
+		iPListElement.transmissionprotocolSelectField();// select inputs data form the Transmission Protocol drop down field
+		iPListElement.uaeNetworkSelectField();//select inputs data form the UAE Network drop down field
+		iPListElement.countrySelectField();// select inputs data form the Country drop down field
+		iPListElement.vpnServerSelectField();// select inputs data from the VPN Server drop down field 
+		iPListElement.typeToConfigInputFieldParam(ssl_ip);//  taking input from the config
+		iPListElement.connectionTypeSelectField();//select inputs data from Connection Type
+		iPListElement.typeTosslIpElementInputFieldParam("111.2222");//taking input from the SSL IP
+		iPListElement.typeToSiteInputFieldParam("germany");// taking inputs from Site input field
+		iPListElement.platformTypeSelectField();//select inputs data form the Platform drop down field 
+		iPListElement.clickTIsActiveCheckboxField();//check box for is active
+		iPListElement.clickIsStreamingCheckboxField();// check box for Is Streaming
+		iPListElement.clickIsGamingCheckboxField();// check box for Is Gaming
+		iPListElement.clickIsFreeCheckboxField();// check box for Is Free
+		iPListElement.isAdsBlockerCheckboxField();// check box for Ads Blocker
+		iPListElement.isFastServerCheckboxField();// check box for  Fast Server
+		iPListElement.isLoyalUserServerCheckboxField();// check box for Loyal User Server
+		//iPListElement.clickONSubmitButton();// click submit button
+		//iPListElement.typeToresellerLimitInputFieldParam("10");// 
 		
 	}
 	
@@ -112,145 +112,145 @@ public class SSLIPFieldTest extends TestBase{
 
 	@Test(priority=21)
 	public void enter_then_clear_the_text_into_ssl_ip_input_field() throws IOException, InterruptedException{
-		addNewIP = loginPage.addNewIPLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		addNewIP.openAddNewIPForm();// open the Add New IP  Form Page.
-		addNewIP.typeToServerNameFieldParam("test ams-18 ");//taking input from the server Name
-		addNewIP.typeToIPInputFieldParam("100.000.23..1000");// taking input from the ip
-		addNewIP.typeToNoteInputFieldParam("server is down");// taking input from the note
-		addNewIP.typeSelectField();// select inputs data form the type of protocol dropdown field
-		addNewIP.transmissionprotocolSelectField();// select inputs data form the Transmission Protocol drop down field
-		addNewIP.uaeNetworkSelectField();//select inputs data form the UAE Network drop down field
-		addNewIP.countrySelectField();// select inputs data form the Country drop down field
-		addNewIP.vpnServerSelectField();// select inputs data from the VPN Server drop down field 
-		addNewIP.typeToConfigInputFieldParam("config");//  taking input from the config
-		addNewIP.connectionTypeSelectField();//select inputs data from Connection Type
-		addNewIP.typeTosslIpElementInputFieldParam("111.2222");//taking input from the SSL IP
-		addNewIP.typeAndClearsslIpElementFieldParam("");//clear the text
-		addNewIP.typeToSiteInputFieldParam("germany");// taking inputs from Site input field
-		addNewIP.platformTypeSelectField();//select inputs data form the Platform drop down field 
-		addNewIP.clickTIsActiveCheckboxField();//check box for is active
-		addNewIP.clickIsStreamingCheckboxField();// check box for Is Streaming
-		addNewIP.clickIsGamingCheckboxField();// check box for Is Gaming
-		addNewIP.clickIsFreeCheckboxField();// check box for Is Free
-		addNewIP.isAdsBlockerCheckboxField();// check box for Ads Blocker
-		addNewIP.isFastServerCheckboxField();// check box for  Fast Server
-		addNewIP.isLoyalUserServerCheckboxField();// check box for Loyal User Server
-		//addNewIP.clickONSubmitButton();// click submit button
-		//addNewIP.typeToresellerLimitInputFieldParam("10");// 
+		iPListElement = loginPage.addNewIPLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		iPListElement.openAddNewIPForm();// open the Add New IP  Form Page.
+		iPListElement.typeToServerNameFieldParam("test ams-18 ");//taking input from the server Name
+		iPListElement.typeToIPInputFieldParam("100.000.23..1000");// taking input from the ip
+		iPListElement.typeToNoteInputFieldParam("server is down");// taking input from the note
+		iPListElement.typeSelectField();// select inputs data form the type of protocol dropdown field
+		iPListElement.transmissionprotocolSelectField();// select inputs data form the Transmission Protocol drop down field
+		iPListElement.uaeNetworkSelectField();//select inputs data form the UAE Network drop down field
+		iPListElement.countrySelectField();// select inputs data form the Country drop down field
+		iPListElement.vpnServerSelectField();// select inputs data from the VPN Server drop down field 
+		iPListElement.typeToConfigInputFieldParam("config");//  taking input from the config
+		iPListElement.connectionTypeSelectField();//select inputs data from Connection Type
+		iPListElement.typeTosslIpElementInputFieldParam("111.2222");//taking input from the SSL IP
+		iPListElement.typeAndClearsslIpElementFieldParam("");//clear the text
+		iPListElement.typeToSiteInputFieldParam("germany");// taking inputs from Site input field
+		iPListElement.platformTypeSelectField();//select inputs data form the Platform drop down field 
+		iPListElement.clickTIsActiveCheckboxField();//check box for is active
+		iPListElement.clickIsStreamingCheckboxField();// check box for Is Streaming
+		iPListElement.clickIsGamingCheckboxField();// check box for Is Gaming
+		iPListElement.clickIsFreeCheckboxField();// check box for Is Free
+		iPListElement.isAdsBlockerCheckboxField();// check box for Ads Blocker
+		iPListElement.isFastServerCheckboxField();// check box for  Fast Server
+		iPListElement.isLoyalUserServerCheckboxField();// check box for Loyal User Server
+		//iPListElement.clickONSubmitButton();// click submit button
+		//iPListElement.typeToresellerLimitInputFieldParam("10");// 
 	}
 	//@Test(priority=22)
 	public void enter_then_undo_the_input_action_into_ssl_ip_input_field() throws IOException, InterruptedException{
-		addNewIP = loginPage.addNewIPLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		addNewIP.openAddNewIPForm();// open the Add New IP  Form Page.
-		addNewIP.typeToServerNameFieldParam("test ams-18 ");//taking input from the server Name
-		addNewIP.typeToIPInputFieldParam("100.000.23..1000");// taking input from the ip
-		addNewIP.typeToNoteInputFieldParam("server is down");// taking input from the note
-		addNewIP.typeSelectField();// select inputs data form the type of protocol dropdown field
-		addNewIP.transmissionprotocolSelectField();// select inputs data form the Transmission Protocol drop down field
-		addNewIP.uaeNetworkSelectField();//select inputs data form the UAE Network drop down field
-		addNewIP.countrySelectField();// select inputs data form the Country drop down field
-		addNewIP.vpnServerSelectField();// select inputs data from the VPN Server drop down field 
-		addNewIP.typeToConfigInputFieldParam("config");//  taking input from the config
-		addNewIP.connectionTypeSelectField();//select inputs data from Connection Type
-		addNewIP.typeTosslIpElementInputFieldParam("111.2222");//taking input from the SSL IP
-		addNewIP.typeAndClearsslIpElementFieldParam("");//clear the text
-		addNewIP.typeToSiteInputFieldParam("germany");// taking inputs from Site input field
-		addNewIP.platformTypeSelectField();//select inputs data form the Platform drop down field 
-		addNewIP.clickTIsActiveCheckboxField();//check box for is active
-		addNewIP.clickIsStreamingCheckboxField();// check box for Is Streaming
-		addNewIP.clickIsGamingCheckboxField();// check box for Is Gaming
-		addNewIP.clickIsFreeCheckboxField();// check box for Is Free
-		addNewIP.isAdsBlockerCheckboxField();// check box for Ads Blocker
-		addNewIP.isFastServerCheckboxField();// check box for  Fast Server
-		addNewIP.isLoyalUserServerCheckboxField();// check box for Loyal User Server
-		//addNewIP.clickONSubmitButton();// click submit button
-		//addNewIP.typeToresellerLimitInputFieldParam("10");// 
+		iPListElement = loginPage.addNewIPLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		iPListElement.openAddNewIPForm();// open the Add New IP  Form Page.
+		iPListElement.typeToServerNameFieldParam("test ams-18 ");//taking input from the server Name
+		iPListElement.typeToIPInputFieldParam("100.000.23..1000");// taking input from the ip
+		iPListElement.typeToNoteInputFieldParam("server is down");// taking input from the note
+		iPListElement.typeSelectField();// select inputs data form the type of protocol dropdown field
+		iPListElement.transmissionprotocolSelectField();// select inputs data form the Transmission Protocol drop down field
+		iPListElement.uaeNetworkSelectField();//select inputs data form the UAE Network drop down field
+		iPListElement.countrySelectField();// select inputs data form the Country drop down field
+		iPListElement.vpnServerSelectField();// select inputs data from the VPN Server drop down field 
+		iPListElement.typeToConfigInputFieldParam("config");//  taking input from the config
+		iPListElement.connectionTypeSelectField();//select inputs data from Connection Type
+		iPListElement.typeTosslIpElementInputFieldParam("111.2222");//taking input from the SSL IP
+		iPListElement.typeAndClearsslIpElementFieldParam("");//clear the text
+		iPListElement.typeToSiteInputFieldParam("germany");// taking inputs from Site input field
+		iPListElement.platformTypeSelectField();//select inputs data form the Platform drop down field 
+		iPListElement.clickTIsActiveCheckboxField();//check box for is active
+		iPListElement.clickIsStreamingCheckboxField();// check box for Is Streaming
+		iPListElement.clickIsGamingCheckboxField();// check box for Is Gaming
+		iPListElement.clickIsFreeCheckboxField();// check box for Is Free
+		iPListElement.isAdsBlockerCheckboxField();// check box for Ads Blocker
+		iPListElement.isFastServerCheckboxField();// check box for  Fast Server
+		iPListElement.isLoyalUserServerCheckboxField();// check box for Loyal User Server
+		//iPListElement.clickONSubmitButton();// click submit button
+		//iPListElement.typeToresellerLimitInputFieldParam("10");// 
 	}
 	
 	@Test(priority=23)
 	public void enter_then_undo_and_redo_the_input_action_into_ssl_ip_input_field() throws IOException, InterruptedException{
-		addNewIP = loginPage.addNewIPLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		addNewIP.openAddNewIPForm();// open the Add New IP  Form Page.
-		addNewIP.typeToServerNameFieldParam("test ams-18 ");//taking input from the server Name
-		addNewIP.typeToIPInputFieldParam("100.000.23..1000");// taking input from the ip
-		addNewIP.typeToNoteInputFieldParam("server is down");// taking input from the note
-		addNewIP.typeSelectField();// select inputs data form the type of protocol dropdown field
-		addNewIP.transmissionprotocolSelectField();// select inputs data form the Transmission Protocol drop down field
-		addNewIP.uaeNetworkSelectField();//select inputs data form the UAE Network drop down field
-		addNewIP.countrySelectField();// select inputs data form the Country drop down field
-		addNewIP.vpnServerSelectField();// select inputs data from the VPN Server drop down field 
-		addNewIP.typeToConfigInputFieldParam("config");//  taking input from the config
-		addNewIP.connectionTypeSelectField();//select inputs data from Connection Type
-		addNewIP.typeTosslIpElementInputFieldParam("111.2222");//taking input from the SSL IP
-		addNewIP.typeAndClearsslIpElementFieldParam("");//clear the text
-		addNewIP.typeToSiteInputFieldParam("germany");// taking inputs from Site input field
-		addNewIP.platformTypeSelectField();//select inputs data form the Platform drop down field 
-		addNewIP.clickTIsActiveCheckboxField();//check box for is active
-		addNewIP.clickIsStreamingCheckboxField();// check box for Is Streaming
-		addNewIP.clickIsGamingCheckboxField();// check box for Is Gaming
-		addNewIP.clickIsFreeCheckboxField();// check box for Is Free
-		addNewIP.isAdsBlockerCheckboxField();// check box for Ads Blocker
-		addNewIP.isFastServerCheckboxField();// check box for  Fast Server
-		addNewIP.isLoyalUserServerCheckboxField();// check box for Loyal User Server
-		//addNewIP.clickONSubmitButton();// click submit button
-		//addNewIP.typeToresellerLimitInputFieldParam("10");// 
+		iPListElement = loginPage.addNewIPLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		iPListElement.openAddNewIPForm();// open the Add New IP  Form Page.
+		iPListElement.typeToServerNameFieldParam("test ams-18 ");//taking input from the server Name
+		iPListElement.typeToIPInputFieldParam("100.000.23..1000");// taking input from the ip
+		iPListElement.typeToNoteInputFieldParam("server is down");// taking input from the note
+		iPListElement.typeSelectField();// select inputs data form the type of protocol dropdown field
+		iPListElement.transmissionprotocolSelectField();// select inputs data form the Transmission Protocol drop down field
+		iPListElement.uaeNetworkSelectField();//select inputs data form the UAE Network drop down field
+		iPListElement.countrySelectField();// select inputs data form the Country drop down field
+		iPListElement.vpnServerSelectField();// select inputs data from the VPN Server drop down field 
+		iPListElement.typeToConfigInputFieldParam("config");//  taking input from the config
+		iPListElement.connectionTypeSelectField();//select inputs data from Connection Type
+		iPListElement.typeTosslIpElementInputFieldParam("111.2222");//taking input from the SSL IP
+		iPListElement.typeAndClearsslIpElementFieldParam("");//clear the text
+		iPListElement.typeToSiteInputFieldParam("germany");// taking inputs from Site input field
+		iPListElement.platformTypeSelectField();//select inputs data form the Platform drop down field 
+		iPListElement.clickTIsActiveCheckboxField();//check box for is active
+		iPListElement.clickIsStreamingCheckboxField();// check box for Is Streaming
+		iPListElement.clickIsGamingCheckboxField();// check box for Is Gaming
+		iPListElement.clickIsFreeCheckboxField();// check box for Is Free
+		iPListElement.isAdsBlockerCheckboxField();// check box for Ads Blocker
+		iPListElement.isFastServerCheckboxField();// check box for  Fast Server
+		iPListElement.isLoyalUserServerCheckboxField();// check box for Loyal User Server
+		//iPListElement.clickONSubmitButton();// click submit button
+		//iPListElement.typeToresellerLimitInputFieldParam("10");// 
 	}
 	
 	//@Test(priority=24)
 	//@Ignore
 	public void enter_text_and_navigate_through_into_ssl_ip_input_field_using_the_tab_key() throws IOException, InterruptedException{ 
-		addNewIP = loginPage.addNewIPLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		addNewIP.openAddNewIPForm();// open the Add New IP  Form Page.
-		addNewIP.typeToServerNameFieldParam("test ams-18 ");//taking input from the server Name
-		addNewIP.typeToIPInputFieldParam("100.000.23..1000");// taking input from the ip
-		addNewIP.typeToNoteInputFieldParam("server is down");// taking input from the note
-		addNewIP.typeSelectField();// select inputs data form the type of protocol dropdown field
-		addNewIP.transmissionprotocolSelectField();// select inputs data form the Transmission Protocol drop down field
-		addNewIP.uaeNetworkSelectField();//select inputs data form the UAE Network drop down field
-		addNewIP.countrySelectField();// select inputs data form the Country drop down field
-		addNewIP.vpnServerSelectField();// select inputs data from the VPN Server drop down field 
-		addNewIP.typeToConfigInputFieldParam("config");//  taking input from the config
-		addNewIP.connectionTypeSelectField();//select inputs data from Connection Type
-		addNewIP.typeTosslIpElementInputFieldParam("111.2222");//taking input from the SSL IP
-		addNewIP.typetosslIpElementFieldtabKey();//clear the text
-		addNewIP.typeToSiteInputFieldParam("germany");// taking inputs from Site input field
-		addNewIP.platformTypeSelectField();//select inputs data form the Platform drop down field 
-		addNewIP.clickTIsActiveCheckboxField();//check box for is active
-		addNewIP.clickIsStreamingCheckboxField();// check box for Is Streaming
-		addNewIP.clickIsGamingCheckboxField();// check box for Is Gaming
-		addNewIP.clickIsFreeCheckboxField();// check box for Is Free
-		addNewIP.isAdsBlockerCheckboxField();// check box for Ads Blocker
-		addNewIP.isFastServerCheckboxField();// check box for  Fast Server
-		addNewIP.isLoyalUserServerCheckboxField();// check box for Loyal User Server
-		//addNewIP.clickONSubmitButton();// click submit button
-		//addNewIP.typeToresellerLimitInputFieldParam("10");// 
+		iPListElement = loginPage.addNewIPLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		iPListElement.openAddNewIPForm();// open the Add New IP  Form Page.
+		iPListElement.typeToServerNameFieldParam("test ams-18 ");//taking input from the server Name
+		iPListElement.typeToIPInputFieldParam("100.000.23..1000");// taking input from the ip
+		iPListElement.typeToNoteInputFieldParam("server is down");// taking input from the note
+		iPListElement.typeSelectField();// select inputs data form the type of protocol dropdown field
+		iPListElement.transmissionprotocolSelectField();// select inputs data form the Transmission Protocol drop down field
+		iPListElement.uaeNetworkSelectField();//select inputs data form the UAE Network drop down field
+		iPListElement.countrySelectField();// select inputs data form the Country drop down field
+		iPListElement.vpnServerSelectField();// select inputs data from the VPN Server drop down field 
+		iPListElement.typeToConfigInputFieldParam("config");//  taking input from the config
+		iPListElement.connectionTypeSelectField();//select inputs data from Connection Type
+		iPListElement.typeTosslIpElementInputFieldParam("111.2222");//taking input from the SSL IP
+		iPListElement.typetosslIpElementFieldtabKey();//clear the text
+		iPListElement.typeToSiteInputFieldParam("germany");// taking inputs from Site input field
+		iPListElement.platformTypeSelectField();//select inputs data form the Platform drop down field 
+		iPListElement.clickTIsActiveCheckboxField();//check box for is active
+		iPListElement.clickIsStreamingCheckboxField();// check box for Is Streaming
+		iPListElement.clickIsGamingCheckboxField();// check box for Is Gaming
+		iPListElement.clickIsFreeCheckboxField();// check box for Is Free
+		iPListElement.isAdsBlockerCheckboxField();// check box for Ads Blocker
+		iPListElement.isFastServerCheckboxField();// check box for  Fast Server
+		iPListElement.isLoyalUserServerCheckboxField();// check box for Loyal User Server
+		//iPListElement.clickONSubmitButton();// click submit button
+		//iPListElement.typeToresellerLimitInputFieldParam("10");// 
 	}
 	//@Test(priority=25)
 	public void paste_the_text_into_ssl_ip_input_field_using_the_paste_action() throws IOException, InterruptedException{
-		addNewIP = loginPage.addNewIPLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		addNewIP.openAddNewIPForm();// open the Add New IP  Form Page.
-		addNewIP.typeToServerNameFieldParam("test ams-18 ");//taking input from the server Name
-		addNewIP.typeToIPInputFieldParam("100.000.23..1000");// taking input from the ip
-		addNewIP.typeToNoteInputFieldParam("server is down");// taking input from the note
-		addNewIP.typeSelectField();// select inputs data form the type of protocol dropdown field
-		addNewIP.transmissionprotocolSelectField();// select inputs data form the Transmission Protocol drop down field
-		addNewIP.uaeNetworkSelectField();//select inputs data form the UAE Network drop down field
-		addNewIP.countrySelectField();// select inputs data form the Country drop down field
-		addNewIP.vpnServerSelectField();// select inputs data from the VPN Server drop down field 
-		addNewIP.typeToConfigInputFieldParam("config");//  taking input from the config
-		addNewIP.connectionTypeSelectField();//select inputs data from Connection Type
-		addNewIP.typeTosslIpElementInputFieldParam("111.2222");//taking input from the SSL IP
-		addNewIP.typeToSiteInputFieldParam("germany");// taking inputs from Site input field
-		addNewIP.platformTypeSelectField();//select inputs data form the Platform drop down field 
-		addNewIP.clickTIsActiveCheckboxField();//check box for is active
-		addNewIP.clickIsStreamingCheckboxField();// check box for Is Streaming
-		addNewIP.clickIsGamingCheckboxField();// check box for Is Gaming
-		addNewIP.clickIsFreeCheckboxField();// check box for Is Free
-		addNewIP.isAdsBlockerCheckboxField();// check box for Ads Blocker
-		addNewIP.isFastServerCheckboxField();// check box for  Fast Server
-		addNewIP.isLoyalUserServerCheckboxField();// check box for Loyal User Server
-		//addNewIP.clickONSubmitButton();// click submit button
-		//addNewIP.typeToresellerLimitInputFieldParam("10");// 
+		iPListElement = loginPage.addNewIPLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		iPListElement.openAddNewIPForm();// open the Add New IP  Form Page.
+		iPListElement.typeToServerNameFieldParam("test ams-18 ");//taking input from the server Name
+		iPListElement.typeToIPInputFieldParam("100.000.23..1000");// taking input from the ip
+		iPListElement.typeToNoteInputFieldParam("server is down");// taking input from the note
+		iPListElement.typeSelectField();// select inputs data form the type of protocol dropdown field
+		iPListElement.transmissionprotocolSelectField();// select inputs data form the Transmission Protocol drop down field
+		iPListElement.uaeNetworkSelectField();//select inputs data form the UAE Network drop down field
+		iPListElement.countrySelectField();// select inputs data form the Country drop down field
+		iPListElement.vpnServerSelectField();// select inputs data from the VPN Server drop down field 
+		iPListElement.typeToConfigInputFieldParam("config");//  taking input from the config
+		iPListElement.connectionTypeSelectField();//select inputs data from Connection Type
+		iPListElement.typeTosslIpElementInputFieldParam("111.2222");//taking input from the SSL IP
+		iPListElement.typeToSiteInputFieldParam("germany");// taking inputs from Site input field
+		iPListElement.platformTypeSelectField();//select inputs data form the Platform drop down field 
+		iPListElement.clickTIsActiveCheckboxField();//check box for is active
+		iPListElement.clickIsStreamingCheckboxField();// check box for Is Streaming
+		iPListElement.clickIsGamingCheckboxField();// check box for Is Gaming
+		iPListElement.clickIsFreeCheckboxField();// check box for Is Free
+		iPListElement.isAdsBlockerCheckboxField();// check box for Ads Blocker
+		iPListElement.isFastServerCheckboxField();// check box for  Fast Server
+		iPListElement.isLoyalUserServerCheckboxField();// check box for Loyal User Server
+		//iPListElement.clickONSubmitButton();// click submit button
+		//iPListElement.typeToresellerLimitInputFieldParam("10");// 
 	}
 	
 /*

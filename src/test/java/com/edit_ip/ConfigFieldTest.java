@@ -3,7 +3,7 @@
  * @company: Kolpolok Limited.
 */
 
-package com.add_new_ip;
+package com.edit_ip;
 
 import java.io.IOException;
 
@@ -17,7 +17,7 @@ import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.TestUtils;
 
-public class ServerNameFieldTest extends TestBase{
+public class ConfigFieldTest extends TestBase{
 	
 	
 	LoginPage loginPage;
@@ -27,7 +27,7 @@ public class ServerNameFieldTest extends TestBase{
 	IPListElement iPListElement;
 	
 	//Initializing PageFactory
-	public ServerNameFieldTest() {
+	public ConfigFieldTest() {
 		super();   //Call the Constructor of the Super class - TestBase
 	}
 	
@@ -38,18 +38,18 @@ public class ServerNameFieldTest extends TestBase{
 		testUtils = new TestUtils();
 	}
 
-	public void addNewIPCommon(String server_name) throws IOException, InterruptedException {
+	public void addNewIPCommon(String config) throws IOException, InterruptedException {
 		iPListElement = loginPage.addNewIPLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		iPListElement.openAddNewIPForm();// open the Add New IP  Form Page.
-		iPListElement.typeToServerNameFieldParam(server_name);//taking input from the server Name
-		iPListElement.typeToIPInputFieldParam("100.000.23..1000");// taking input from the ip
-		iPListElement.typeToNoteInputFieldParam("server is down");// taking input from the note
+		iPListElement.typeToServerNameFieldParam("TEST AMSSSS-18");//taking input from the server Name
+		iPListElement.typeToIPInputFieldParam("");// taking input from the ip
+		iPListElement.typeToNoteInputFieldParam("");// taking input from the note
 		iPListElement.typeSelectField();// select inputs data form the type of protocol dropdown field
 		iPListElement.transmissionprotocolSelectField();// select inputs data form the Transmission Protocol drop down field
 		iPListElement.uaeNetworkSelectField();//select inputs data form the UAE Network drop down field
 		iPListElement.countrySelectField();// select inputs data form the Country drop down field
 		iPListElement.vpnServerSelectField();// select inputs data from the VPN Server drop down field 
-		iPListElement.typeToConfigInputFieldParam("config");//  taking input from the config
+		iPListElement.typeToConfigInputFieldParam(config);//  taking input from the config
 		iPListElement.connectionTypeSelectField();//select inputs data from Connection Type
 		iPListElement.typeTosslIpElementInputFieldParam("111.2222");//taking input from the SSL IP
 		iPListElement.typeToSiteInputFieldParam("germany");// taking inputs from Site input field
@@ -65,55 +65,55 @@ public class ServerNameFieldTest extends TestBase{
 		//iPListElement.typeToresellerLimitInputFieldParam("10");// 
 		
 	}
+	
 	//@Ignore
 	//@Test(priority=1)
-	public void enter_empty_text_into_server_name_input_field() throws IOException, InterruptedException {addNewIPCommon("");	}
+	public void enter_empty_text_into_config_input_field() throws IOException, InterruptedException {addNewIPCommon("");	}
 	@Test(priority=2)
-	public void enter_a_valid_text_into_server_name_input_field() throws IOException, InterruptedException {addNewIPCommon("test ams-18");	}
+	public void enter_a_valid_text_into_config_input_field() throws IOException, InterruptedException {addNewIPCommon("a valid config");	}
 	//@Test(priority=3)
-	public void enter_the_above_maximum_allowed_length_of_characters_into_server_name_input_field() throws IOException, InterruptedException{addNewIPCommon("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaniy1yr");}
+	public void enter_the_above_maximum_allowed_length_of_characters_into_config_input_field() throws IOException, InterruptedException{addNewIPCommon("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaniy1yr");}
 	//@Test(priority=4)
-	public void enter_the_below_minimum_allowed_length_of_characters_into_server_name_input_field() throws IOException, InterruptedException{addNewIPCommon("a");}
+	public void enter_the_below_minimum_allowed_length_of_characters_into_config_input_field() throws IOException, InterruptedException{addNewIPCommon("a");}
 	//@Test(priority=5)
-	public void enter_only_alphabetic_characters_into_server_name_input_field() throws IOException, InterruptedException{addNewIPCommon("abcdefgh");}
+	public void enter_only_alphabetic_characters_into_config_input_field() throws IOException, InterruptedException{addNewIPCommon("abcdefgh");}
 	//@Test(priority=6)
-	public void enter_numeric_characters_into_server_name_input_field() throws IOException, InterruptedException{addNewIPCommon("123456789123456789");}
+	public void enter_numeric_characters_into_config_input_field() throws IOException, InterruptedException{addNewIPCommon("123456789123456789");}
 	//@Test(priority=7)
-	public void enter_a_combination_of_alphabetic_and_numeric_characters_into_server_name_input_field() throws IOException, InterruptedException{addNewIPCommon("abc1234567abc");}
+	public void enter_a_combination_of_alphabetic_and_numeric_characters_into_config_input_field() throws IOException, InterruptedException{addNewIPCommon("abc1234567abc");}
 	//@Test(priority=8)
-	public void enter_special_characters_into_server_name_input_field() throws IOException, InterruptedException{addNewIPCommon("!@#$%^&*!@#$%^&*@!@#$%^&"); }
+	public void enter_special_characters_into_config_input_field() throws IOException, InterruptedException{addNewIPCommon("!@#$%^&*!@#$%^&*@!@#$%^&"); }
 	//@Test(priority=9)
-	public void enter_text_with_leading_whitespaces_into_server_name_input_field() throws IOException, InterruptedException{addNewIPCommon("           ani1yr"); }
+	public void enter_text_with_leading_whitespaces_into_config_input_field() throws IOException, InterruptedException{addNewIPCommon("           ani1yr"); }
 	//@Test(priority=10)
-	public void enter_text_with_trailing_whitespaces_into_server_name_input_field() throws IOException, InterruptedException{addNewIPCommon("abc1yr                   ");}
+	public void enter_text_with_trailing_whitespaces_into_config_input_field() throws IOException, InterruptedException{addNewIPCommon("abc1yr                   ");}
 	//@Test(priority=11)
-	public void enter_text_in_uppercase_letters_into_server_name_input_field() throws IOException, InterruptedException{addNewIPCommon("asdfghjkzxcvbnm");}
+	public void enter_text_in_uppercase_letters_into_config_input_field() throws IOException, InterruptedException{addNewIPCommon("asdfghjkzxcvbnm");}
 	//@Test(priority=12)
-	public void enter_text_in_lowercases_letters_into_server_name_input_field() throws IOException, InterruptedException{addNewIPCommon("anianiani");}
+	public void enter_text_in_lowercases_letters_into_config_input_field() throws IOException, InterruptedException{addNewIPCommon("anianiani");}
 	//@Test(priority=13)
-	public void enter_text_with_a_mix_of_uppercase_and_lowercase_letter_into_server_name_input_field() throws IOException, InterruptedException{addNewIPCommon("ABCdefasASD"); }
+	public void enter_text_with_a_mix_of_uppercase_and_lowercase_letter_into_config_input_field() throws IOException, InterruptedException{addNewIPCommon("ABCdefasASD"); }
 	//@Test(priority=14)
-	public void enter_text_with_punctuation_marks_into_server_name_input_field() throws IOException, InterruptedException{addNewIPCommon(",./;?.,;/.,./?><:;,./;.,"); }
+	public void enter_text_with_punctuation_marks_into_config_input_field() throws IOException, InterruptedException{addNewIPCommon(",./;?.,;/.,./?><:;,./;.,"); }
 	//@Test(priority=15)
-	public void enter_text_with_line_breaks_or_newlines_into_server_name_input_field() throws IOException, InterruptedException{addNewIPCommon("\\\\\"ANI1yr\\\\\\\\n\\\\\\\" +\\\\r\\\\n\\\"\\r\\n\"\r\n"
+	public void enter_text_with_line_breaks_or_newlines_into_config_input_field() throws IOException, InterruptedException{addNewIPCommon("\\\\\"ANI1yr\\\\\\\\n\\\\\\\" +\\\\r\\\\n\\\"\\r\\n\"\r\n"
 				+ "				+ \"				+ \\\"                                  \\\\\\\"ani1yr\\\\\\\""); }
 	//@Test(priority=16)
-	public void enter_text_with_unicode_characters_into_server_name_input_field() throws IOException, InterruptedException{addNewIPCommon("こんにちは"); }
+	public void enter_text_with_unicode_characters_into_config_input_field() throws IOException, InterruptedException{addNewIPCommon("こんにちは"); }
 	//@Test(priority=17)
-	public void enter_text_containing_emojis_into_server_name_input_field() throws IOException, InterruptedException{addNewIPCommon("😊, 🐱, 🍕, 🎉"); }
+	public void enter_text_containing_emojis_into_config_input_field() throws IOException, InterruptedException{addNewIPCommon("😊, 🐱, 🍕, 🎉"); }
 	//@Test(priority=18)
-	public void enter_text_with_accented_characters_into_server_name_input_field() throws IOException, InterruptedException{addNewIPCommon("á, ç, ō,  á, ç, ō");}
+	public void enter_text_with_accented_characters_into_config_input_field() throws IOException, InterruptedException{addNewIPCommon("á, ç, ō,  á, ç, ō");}
 	//@Test(priority=19)
-	public void enter_default_placeholder_text_into_server_name_input_field() throws IOException, InterruptedException{ 
+	public void enter_default_placeholder_text_into_config_input_field() throws IOException, InterruptedException{ 
 			
 	}
-	
-	@Test(priority=21)
-	public void enter_then_clear_the_text_into_server_name_input_field() throws IOException, InterruptedException{
+
+	//@Test(priority=21)
+	public void enter_then_clear_the_text_into_config_input_field() throws IOException, InterruptedException{
 		iPListElement = loginPage.addNewIPLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		iPListElement.openAddNewIPForm();// open the Add New IP  Form Page.
 		iPListElement.typeToServerNameFieldParam("test ams-18 ");//taking input from the server Name
-		iPListElement.typeAndClearServerNameFieldParam("");//clear the text
 		iPListElement.typeToIPInputFieldParam("100.000.23..1000");// taking input from the ip
 		iPListElement.typeToNoteInputFieldParam("server is down");// taking input from the note
 		iPListElement.typeSelectField();// select inputs data form the type of protocol dropdown field
@@ -121,7 +121,8 @@ public class ServerNameFieldTest extends TestBase{
 		iPListElement.uaeNetworkSelectField();//select inputs data form the UAE Network drop down field
 		iPListElement.countrySelectField();// select inputs data form the Country drop down field
 		iPListElement.vpnServerSelectField();// select inputs data from the VPN Server drop down field 
-		iPListElement.typeToConfigInputFieldParam("config");//  taking input from the config
+		iPListElement.typeToConfigInputFieldParam("a valid config");//  taking input from the config
+		iPListElement.typeAndClearConfigInputFieldParam("");//clear the text
 		iPListElement.connectionTypeSelectField();//select inputs data from Connection Type
 		iPListElement.typeTosslIpElementInputFieldParam("111.2222");//taking input from the SSL IP
 		iPListElement.typeToSiteInputFieldParam("germany");// taking inputs from Site input field
@@ -137,11 +138,10 @@ public class ServerNameFieldTest extends TestBase{
 		//iPListElement.typeToresellerLimitInputFieldParam("10");// 
 	}
 	//@Test(priority=22)
-	public void enter_then_undo_the_input_action_into_server_name_input_field() throws IOException, InterruptedException{
+	public void enter_then_undo_the_input_action_into_config_input_field() throws IOException, InterruptedException{
 		iPListElement = loginPage.addNewIPLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		iPListElement.openAddNewIPForm();// open the Add New IP  Form Page.
 		iPListElement.typeToServerNameFieldParam("test ams-18 ");//taking input from the server Name
-		iPListElement.typeAndClearServerNameFieldParam("");// undo the text
 		iPListElement.typeToIPInputFieldParam("100.000.23..1000");// taking input from the ip
 		iPListElement.typeToNoteInputFieldParam("server is down");// taking input from the note
 		iPListElement.typeSelectField();// select inputs data form the type of protocol dropdown field
@@ -149,7 +149,8 @@ public class ServerNameFieldTest extends TestBase{
 		iPListElement.uaeNetworkSelectField();//select inputs data form the UAE Network drop down field
 		iPListElement.countrySelectField();// select inputs data form the Country drop down field
 		iPListElement.vpnServerSelectField();// select inputs data from the VPN Server drop down field 
-		iPListElement.typeToConfigInputFieldParam("config");//  taking input from the config
+		iPListElement.typeToConfigInputFieldParam("a valid config");//  taking input from the config
+		iPListElement.typeAndClearConfigInputFieldParam("");//undo the text
 		iPListElement.connectionTypeSelectField();//select inputs data from Connection Type
 		iPListElement.typeTosslIpElementInputFieldParam("111.2222");//taking input from the SSL IP
 		iPListElement.typeToSiteInputFieldParam("germany");// taking inputs from Site input field
@@ -166,12 +167,10 @@ public class ServerNameFieldTest extends TestBase{
 	}
 	
 	@Test(priority=23)
-	public void enter_then_undo_and_redo_the_input_action_into_server_name_input_field() throws IOException, InterruptedException{
+	public void enter_then_undo_and_redo_the_input_action_into_config_input_field() throws IOException, InterruptedException{
 		iPListElement = loginPage.addNewIPLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		iPListElement.openAddNewIPForm();// open the Add New IP  Form Page.
 		iPListElement.typeToServerNameFieldParam("test ams-18 ");//taking input from the server Name
-		iPListElement.typeAndClearServerNameFieldParam("");//undo the text
-		iPListElement.typeToServerNameFieldParam("test ams-18 "); //redo the text
 		iPListElement.typeToIPInputFieldParam("100.000.23..1000");// taking input from the ip
 		iPListElement.typeToNoteInputFieldParam("server is down");// taking input from the note
 		iPListElement.typeSelectField();// select inputs data form the type of protocol dropdown field
@@ -179,7 +178,9 @@ public class ServerNameFieldTest extends TestBase{
 		iPListElement.uaeNetworkSelectField();//select inputs data form the UAE Network drop down field
 		iPListElement.countrySelectField();// select inputs data form the Country drop down field
 		iPListElement.vpnServerSelectField();// select inputs data from the VPN Server drop down field 
-		iPListElement.typeToConfigInputFieldParam("config");//  taking input from the config
+		iPListElement.typeToConfigInputFieldParam("a valid config");//  taking input from the config
+		iPListElement.typeAndClearConfigInputFieldParam("");//undo the text
+		iPListElement.typeToConfigInputFieldParam("a valid config");//redo the text
 		iPListElement.connectionTypeSelectField();//select inputs data from Connection Type
 		iPListElement.typeTosslIpElementInputFieldParam("111.2222");//taking input from the SSL IP
 		iPListElement.typeToSiteInputFieldParam("germany");// taking inputs from Site input field
@@ -197,11 +198,10 @@ public class ServerNameFieldTest extends TestBase{
 	
 	//@Test(priority=24)
 	//@Ignore
-	public void enter_text_and_navigate_through_into_server_name_input_fieldd_using_the_tab_key() throws IOException, InterruptedException{ 
+	public void enter_text_and_navigate_through_into_config_input_field_using_the_tab_key() throws IOException, InterruptedException{ 
 		iPListElement = loginPage.addNewIPLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		iPListElement.openAddNewIPForm();// open the Add New IP  Form Page.
 		iPListElement.typeToServerNameFieldParam("test ams-18 ");//taking input from the server Name
-		iPListElement.typetoServerNameFieldtabKey();
 		iPListElement.typeToIPInputFieldParam("100.000.23..1000");// taking input from the ip
 		iPListElement.typeToNoteInputFieldParam("server is down");// taking input from the note
 		iPListElement.typeSelectField();// select inputs data form the type of protocol dropdown field
@@ -210,6 +210,7 @@ public class ServerNameFieldTest extends TestBase{
 		iPListElement.countrySelectField();// select inputs data form the Country drop down field
 		iPListElement.vpnServerSelectField();// select inputs data from the VPN Server drop down field 
 		iPListElement.typeToConfigInputFieldParam("config");//  taking input from the config
+		iPListElement.typetoConfigInputFieldtabKey();
 		iPListElement.connectionTypeSelectField();//select inputs data from Connection Type
 		iPListElement.typeTosslIpElementInputFieldParam("111.2222");//taking input from the SSL IP
 		iPListElement.typeToSiteInputFieldParam("germany");// taking inputs from Site input field
@@ -225,11 +226,10 @@ public class ServerNameFieldTest extends TestBase{
 		//iPListElement.typeToresellerLimitInputFieldParam("10");// 
 	}
 	//@Test(priority=25)
-	public void paste_the_text_into_server_name_input_field_using_the_paste_action() throws IOException, InterruptedException{
+	public void paste_the_text_into_config_input_field_using_the_paste_action() throws IOException, InterruptedException{
 		iPListElement = loginPage.addNewIPLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		iPListElement.openAddNewIPForm();// open the Add New IP  Form Page.
 		iPListElement.typeToServerNameFieldParam("test ams-18 ");//taking input from the server Name
-		iPListElement.typeAndClearServerNameFieldParam("");
 		iPListElement.typeToIPInputFieldParam("100.000.23..1000");// taking input from the ip
 		iPListElement.typeToNoteInputFieldParam("server is down");// taking input from the note
 		iPListElement.typeSelectField();// select inputs data form the type of protocol dropdown field
