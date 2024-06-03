@@ -17,7 +17,7 @@ import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.TestUtils;
 
-public class EditCityInputFieldTest extends TestBase{
+public class EditDomainInputFieldTest extends TestBase{
 	
 	
 	LoginPage loginPage;
@@ -27,7 +27,7 @@ public class EditCityInputFieldTest extends TestBase{
 	ServerModuleElement serverModuleElement;
 	
 	//Initializing PageFactory
-	public EditCityInputFieldTest() {
+	public EditDomainInputFieldTest() {
 		super();   //Call the Constructor of the Super class - TestBase
 	}
 	
@@ -38,7 +38,7 @@ public class EditCityInputFieldTest extends TestBase{
 		testUtils = new TestUtils();
 	}
 
-	public void editServerCommon(String City) throws IOException, InterruptedException {
+	public void editServerCommon(String Domain) throws IOException, InterruptedException {
 		serverModuleElement = loginPage.addNewServerLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/VpnServer/editForm/366");// open the edit Server Form Page.
 		Thread.sleep (3000);
@@ -48,15 +48,15 @@ public class EditCityInputFieldTest extends TestBase{
 		serverModuleElement.typeToPathFieldParam("");// taking input from the Path
 		serverModuleElement.typeToCapacityFieldParam("1");// taking input from the Capacity
 		serverModuleElement.countrySelectField();//select inputs data form the Country
-		serverModuleElement.typeAndClearCityFieldParam("");//clear the text
-		Thread.sleep (3000);
-		serverModuleElement.typeToCityFieldParam(City);//taking input from the City
-		Thread.sleep (3000);
+		serverModuleElement.typeToCityFieldParam("");//taking input from the City
 		serverModuleElement.typeToLocationFieldParam("");// taking input from the Location
 		serverModuleElement.typeToOrderPriorityFieldParam("1");//  taking input from the Order Priority
 		serverModuleElement.typeToServerPriceFieldParam("");//taking input from the Server Price $
+		Thread.sleep (3000);
 		serverModuleElement.typeAndClearDomainFieldParam("");
-		serverModuleElement.typeToDomainFieldParam("test domain");//taking input from the Domain
+		Thread.sleep (3000);
+		serverModuleElement.typeToDomainFieldParam(Domain);//taking input from the Domain
+		Thread.sleep (3000);
 		//serverModuleElement.clickTIsActiveCheckboxField();//click on is active checkbox
 		//serverModuleElement.clickTOpenVPNCheckboxField();// click on is OpenVPN checkbox
 		//serverModuleElement.SSHInputField();// click on is SSH checkbox
@@ -68,7 +68,7 @@ public class EditCityInputFieldTest extends TestBase{
 	//@Test(priority=1)
 	public void enter_empty_text_into_City_input_field() throws IOException, InterruptedException {editServerCommon("");	}
 	//@Test(priority=2)
-	public void enter_a_valid_text_into_City_input_field() throws IOException, InterruptedException {editServerCommon("Buenos Aires");	}
+	public void enter_a_valid_text_into_City_input_field() throws IOException, InterruptedException {editServerCommon("Test Domain");	}
 	//@Test(priority=3)
 	public void enter_the_above_maximum_allowed_length_of_characters_into_City_input_field() throws IOException, InterruptedException{editServerCommon("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaniy1yr");}
 	//@Test(priority=4)
@@ -82,9 +82,9 @@ public class EditCityInputFieldTest extends TestBase{
 	//@Test(priority=8)
 	public void enter_special_characters_into_City_input_field() throws IOException, InterruptedException{editServerCommon("!@#$%^&*!@#$%^&*@!@#$%^&"); }
 	//@Test(priority=9)
-	public void enter_text_with_leading_whitespaces_into_City_input_field() throws IOException, InterruptedException{editServerCommon("           TEST SERVER"); }
+	public void enter_text_with_leading_whitespaces_into_City_input_field() throws IOException, InterruptedException{editServerCommon("           Test Domain"); }
 	//@Test(priority=10)
-	public void enter_text_with_trailing_whitespaces_into_City_input_field() throws IOException, InterruptedException{editServerCommon("TEST SERVER                 ");}
+	public void enter_text_with_trailing_whitespaces_into_City_input_field() throws IOException, InterruptedException{editServerCommon("Test Domain                ");}
 	//@Test(priority=11)
 	public void enter_text_in_uppercase_letters_into_City_input_field() throws IOException, InterruptedException{editServerCommon("TEST SERVER");}
 	//@Test(priority=12)
@@ -110,23 +110,19 @@ public class EditCityInputFieldTest extends TestBase{
 		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/VpnServer/editForm/366");// open the edit Server Form Page.
 		Thread.sleep (3000);
 		serverModuleElement.typeToServerNameFieldParam("");//taking input from Server Name
-		serverModuleElement.typeToIPFieldParam("");// taking input from the IP
+		serverModuleElement.typeToIPFieldParam(".10");// taking input from the IP
 		serverModuleElement.typeToIPRangeFieldParam(".01");// taking input from the IP Range
 		serverModuleElement.typeToPathFieldParam("");// taking input from the Path
-		serverModuleElement.typeToCapacityFieldParam("");// taking input from the Capacity
+		serverModuleElement.typeToCapacityFieldParam("1");// taking input from the Capacity
 		serverModuleElement.countrySelectField();//select inputs data form the Country
-		Thread.sleep (3000);
-		serverModuleElement.typeAndClearCityFieldParam("");//clear the text
-		Thread.sleep (3000);
+		serverModuleElement.typeToCityFieldParam("");//taking input from the City
 		serverModuleElement.typeToLocationFieldParam("");// taking input from the Location
-		Thread.sleep (3000);
-		serverModuleElement.typeAndClearOrderPriorityFieldParam("");
-		Thread.sleep (3000);
-		serverModuleElement.typeToOrderPriorityFieldParam("15");//  taking input from the Order Priority
+		serverModuleElement.typeToOrderPriorityFieldParam("1");//  taking input from the Order Priority
 		serverModuleElement.typeToServerPriceFieldParam("");//taking input from the Server Price $
+		Thread.sleep (3000);
 		serverModuleElement.typeAndClearDomainFieldParam("");
-		serverModuleElement.typeToDomainFieldParam("test domain");//taking input from the Domain
-		serverModuleElement.clickTIsActiveCheckboxField();//click on is active checkbox
+		Thread.sleep (3000);
+		//serverModuleElement.clickTIsActiveCheckboxField();//click on is active checkbox
 		//serverModuleElement.clickTOpenVPNCheckboxField();// click on is OpenVPN checkbox
 		//serverModuleElement.SSHInputField();// click on is SSH checkbox
 		//serverModuleElement.clickToSubmitButton();// click on Submit button
@@ -139,23 +135,19 @@ public class EditCityInputFieldTest extends TestBase{
 		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/VpnServer/editForm/366");// open the edit Server Form Page.
 		Thread.sleep (3000);
 		serverModuleElement.typeToServerNameFieldParam("");//taking input from Server Name
-		serverModuleElement.typeToIPFieldParam("");// taking input from the IP
+		serverModuleElement.typeToIPFieldParam(".10");// taking input from the IP
 		serverModuleElement.typeToIPRangeFieldParam(".01");// taking input from the IP Range
 		serverModuleElement.typeToPathFieldParam("");// taking input from the Path
-		serverModuleElement.typeToCapacityFieldParam("");// taking input from the Capacity
+		serverModuleElement.typeToCapacityFieldParam("1");// taking input from the Capacity
 		serverModuleElement.countrySelectField();//select inputs data form the Country
-		Thread.sleep (3000);
-		serverModuleElement.typeAndClearCityFieldParam("");//undo the text
-		Thread.sleep (3000);
+		serverModuleElement.typeToCityFieldParam("");//taking input from the City
 		serverModuleElement.typeToLocationFieldParam("");// taking input from the Location
-		Thread.sleep (3000);
-		serverModuleElement.typeAndClearOrderPriorityFieldParam("");
-		Thread.sleep (3000);
-		serverModuleElement.typeToOrderPriorityFieldParam("15");//  taking input from the Order Priority
+		serverModuleElement.typeToOrderPriorityFieldParam("1");//  taking input from the Order Priority
 		serverModuleElement.typeToServerPriceFieldParam("");//taking input from the Server Price $
+		Thread.sleep (3000);
 		serverModuleElement.typeAndClearDomainFieldParam("");
-		serverModuleElement.typeToDomainFieldParam("test domain");//taking input from the Domain
-		serverModuleElement.clickTIsActiveCheckboxField();//click on is active checkbox
+		Thread.sleep (3000);
+		//serverModuleElement.clickTIsActiveCheckboxField();//click on is active checkbox
 		//serverModuleElement.clickTOpenVPNCheckboxField();// click on is OpenVPN checkbox
 		//serverModuleElement.SSHInputField();// click on is SSH checkbox
 		//serverModuleElement.clickToSubmitButton();// click on Submit button
@@ -168,30 +160,27 @@ public class EditCityInputFieldTest extends TestBase{
 		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/VpnServer/editForm/366");// open the edit Server Form Page.
 		Thread.sleep (3000);
 		serverModuleElement.typeToServerNameFieldParam("");//taking input from Server Name
-		serverModuleElement.typeToIPFieldParam("");// taking input from the IP
+		serverModuleElement.typeToIPFieldParam(".10");// taking input from the IP
 		serverModuleElement.typeToIPRangeFieldParam(".01");// taking input from the IP Range
 		serverModuleElement.typeToPathFieldParam("");// taking input from the Path
 		serverModuleElement.typeToCapacityFieldParam("1");// taking input from the Capacity
 		serverModuleElement.countrySelectField();//select inputs data form the Country
-		Thread.sleep (3000);
-		serverModuleElement.typeAndClearCityFieldParam("");//undo the text
-		Thread.sleep (3000);
-		serverModuleElement.typeToCityFieldParam("Buenos Aires");//redo the text
-		Thread.sleep (3000);
+		serverModuleElement.typeToCityFieldParam("");//taking input from the City
 		serverModuleElement.typeToLocationFieldParam("");// taking input from the Location
-		Thread.sleep (3000);
-		serverModuleElement.typeToOrderPriorityFieldParam("15");//  taking input from the Order Priority
+		serverModuleElement.typeToOrderPriorityFieldParam("1");//  taking input from the Order Priority
 		serverModuleElement.typeToServerPriceFieldParam("");//taking input from the Server Price $
-		serverModuleElement.typeAndClearDomainFieldParam("");
-		serverModuleElement.typeToDomainFieldParam("test domain");//taking input from the Domain
-		serverModuleElement.clickTIsActiveCheckboxField();//click on is active checkbox
-		serverModuleElement.clickTOpenVPNCheckboxField();// click on is OpenVPN checkbox
-		serverModuleElement.SSHInputField();// click on is SSH checkbox
+		Thread.sleep (3000);
+		serverModuleElement.typeAndClearDomainFieldParam("");//undo the text
+		Thread.sleep (3000);
+		serverModuleElement.typeToDomainFieldParam("test domain");//redo the text
+		//serverModuleElement.clickTIsActiveCheckboxField();//click on is active checkbox
+		//serverModuleElement.clickTOpenVPNCheckboxField();// click on is OpenVPN checkbox
+		//serverModuleElement.SSHInputField();// click on is SSH checkbox
 		//serverModuleElement.clickToSubmitButton();// click on Submit button
 
 	}
 	
-	@Test(priority=24)
+	//@Test(priority=24)
 	//@Ignore
 	public void enter_text_and_navigate_through_into_City_input_field_using_the_tab_key() throws IOException, InterruptedException{ 
 		serverModuleElement = loginPage.addNewServerLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
@@ -203,17 +192,12 @@ public class EditCityInputFieldTest extends TestBase{
 		serverModuleElement.typeToPathFieldParam("");// taking input from the Path
 		serverModuleElement.typeToCapacityFieldParam("1");// taking input from the Capacity
 		serverModuleElement.countrySelectField();//select inputs data form the Country
-		Thread.sleep (3000);
-		serverModuleElement.typetoCitytabKey();//navigate to the tab key
-		Thread.sleep (3000);
 		serverModuleElement.typeToLocationFieldParam("");// taking input from the Location
-		Thread.sleep (3000);
 		serverModuleElement.typeToOrderPriorityFieldParam("15");//  taking input from the Order Priority
 		serverModuleElement.typeToServerPriceFieldParam("");//taking input from the Server Price $
+		serverModuleElement.typeToDomainFieldParam("");//taking input from the Domain
 		Thread.sleep (3000);
-		serverModuleElement.typeAndClearDomainFieldParam("");
-		Thread.sleep (3000);
-		serverModuleElement.typeToDomainFieldParam("test domain");//taking input from the Domain
+		serverModuleElement.typetoDomaintabKey();//navigate to the tab key
 		serverModuleElement.clickTIsActiveCheckboxField();//click on is active checkbox
 		serverModuleElement.clickTOpenVPNCheckboxField();// click on is OpenVPN checkbox
 		serverModuleElement.SSHInputField();// click on is SSH checkbox
