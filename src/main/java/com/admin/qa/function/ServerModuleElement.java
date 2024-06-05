@@ -1054,4 +1054,44 @@ public class ServerModuleElement extends TestBase {
 	 * ************************ End No.21 - Element of Submit Button Input Field ******* *
 	 * ***************************************************************************************
 	 ******************************************************************************************/
+	
+	/*
+	 * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	 * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	 * $$$$$$$$$$$$$$$$$ Start No.22 - Element of SEARCH OF vpn server list $$$$$$$
+	 * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	 * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	 */
+
+	// 11. Element of Upload WireGuard Config? Checkbox Field
+	@FindBy(xpath = "/html/body/div[2]/div/section[2]/div[1]/div[5]/div[2]/a")
+	WebElement VPNServerSearchElement;
+
+	// 11. Highlight the Upload WireGuard Config Input Field
+	public void VPNServerSearchdHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",VPNServerSearchElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", VPNServerSearchElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",VPNServerSearchElement);
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", VPNServerSearchElement);
+			Thread.sleep(1000);
+		}
+	}
+
+	// 13. Type to the Is Upload WireGuard Config?
+	public ServerModuleElement clickVPNServerSearchButton() throws InterruptedException {
+		VPNServerSearchdHighlight();
+		VPNServerSearchElement.click();
+		return new ServerModuleElement();
+	}
+
+	/*************************************************************
+	 * *********************************************************************************************************
+	 * ************************ End No.11 - Element of SEARCH OF vpn server list*********** *
+	 * *******************************************************************************************************
+	 ************************************************************************************************/
 }

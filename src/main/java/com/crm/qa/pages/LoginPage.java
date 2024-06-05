@@ -31,6 +31,7 @@ import com.admin.qa.function.AddNewBlockAppCRC;
 import com.admin.qa.function.CampaignModuleElement;
 import com.admin.qa.function.AddNewEventCode;
 import com.admin.qa.function.IPListElement;
+import com.admin.qa.function.IpBundleElement;
 import com.admin.qa.function.AddNewMenuPermission;
 import com.admin.qa.function.AddNewNotice;
 import com.admin.qa.function.AddNewPaymentMethod;
@@ -525,5 +526,14 @@ public class LoginPage extends TestBase{
 		loginBtn.click();
 		
 		return new WebsiteFormRequestElement(); //Login form Add New Role Form page
+	}
+   
+   public IpBundleElement ipBundleElementLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new IpBundleElement(); //Login form Add New IP BundleForm page
 	}
 }
