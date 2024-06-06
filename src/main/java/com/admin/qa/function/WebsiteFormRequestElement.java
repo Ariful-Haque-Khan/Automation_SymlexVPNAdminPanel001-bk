@@ -414,7 +414,7 @@ public class WebsiteFormRequestElement extends TestBase{
 	public WebsiteFormRequestElement selectDatafromFormDropDownElement() throws InterruptedException {
 		FormSearchdHighlight();/* highlight the element of the tested. */
 		formSelect.click(); /*click on the element */
-		formDropDown.sendKeys("Student Ambassador Request");/*type on the input field */
+		formDropDown.sendKeys("Server Request Data");/*type on the input field */
 		formSearch.click();/*click on the element from result of the first value. */
 		return new WebsiteFormRequestElement();
 	}
