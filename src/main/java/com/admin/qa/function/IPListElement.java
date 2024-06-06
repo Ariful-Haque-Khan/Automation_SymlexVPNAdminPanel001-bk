@@ -1,5 +1,8 @@
 package com.admin.qa.function;
 
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -106,12 +109,6 @@ public class IPListElement extends TestBase{
 		}
 	}
 	
-	//02. Type to the IP
-	public IPListElement typeToIPInputField() throws InterruptedException {
-		ipElementInputFieldHighlight();
-		IPElement.sendKeys("");
-		return new IPListElement();
-	}
 	
 	//02.0.1 Type to the IP parameter
 	public IPListElement typeToIPInputFieldParam(String IP) throws InterruptedException {
@@ -136,6 +133,39 @@ public class IPListElement extends TestBase{
 		IPElement.sendKeys(Keys.TAB);
 		return new IPListElement();
 	}
+	
+    // Method to copy data from the IP input field
+    public String copyDataFromIPField() throws InterruptedException {
+        ipElementInputFieldHighlight();
+        String dataToCopy = IPElement.getAttribute("value");
+        //webelement time = driver.findElement(By.id("input_name")).getAttribute("value");
+        System.out.println(dataToCopy);
+
+        //StringSelection stringSelection = new StringSelection(dataToCopy); // Copy the data to the clipboard
+        //Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+        
+        //IPElement.sendKeys(Keys.c);
+        return dataToCopy;
+    }
+    
+    //02. Element of IP
+  	@FindBy(xpath="/html/body/div/div[3]/p[2]/a")
+  	WebElement advanced_continue;
+    
+  	public IPListElement  advanceClickedConti() throws InterruptedException {
+  		advanced_continue.click();
+		return new IPListElement();
+	}
+    
+   //02. Element of IP
+  	@FindBy(xpath="/html/body/div/div[2]/button[3]")
+  	WebElement advanced;
+    
+  	public IPListElement  advanceClicked() throws InterruptedException {
+		advanced.click();
+		return new IPListElement();
+	}
+
 	/***************************************************************************************************************
      * *****************************************************************************************************
 	 * **************************    End No.02 - Element of IP ******************************************
@@ -955,6 +985,184 @@ public class IPListElement extends TestBase{
 	 	* ************************    End No.21 - Element of Is Submit Button Field   **********************
 	 	* * **************************************************************************************************
 	 							************************************************************************************************/
-	  
 	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.12 - Element of (NAME - search IP list) $$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+	*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
+	//12. Element of Name Search
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[1]/div[1]/input")
+	WebElement NameSearchElement;
+	
+	//12. Highlight the site Input Field
+	public void NameSearchElementInputFieldHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", NameSearchElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", NameSearchElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", NameSearchElement);
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", NameSearchElement);
+			Thread.sleep(1000);
+		}
+	}
+	
+	//12.0.1 Type to the Name Search parameter
+	public IPListElement typeToNameSearchInputFieldParam(String Name_Search) throws InterruptedException {
+		NameSearchElementInputFieldHighlight();
+		NameSearchElement.sendKeys(Name_Search);		
+		Thread.sleep(2000);		
+		return new IPListElement();
+	}
+	
+	//12.0.2. Type Name Search Input Field (enter text, then clear Name Search Input Field)
+	public IPListElement typeAndClearNameSearchFieldParam(String Name_Search) throws InterruptedException {
+		NameSearchElementInputFieldHighlight();
+		NameSearchElement.sendKeys(Name_Search);
+		Thread.sleep(100);
+		NameSearchElement.clear();
+		return new IPListElement();									    			
+	}		
+		
+	/***************************************************************************************************************
+     * *****************************************************************************************************
+	 * **************************    End No.12 - Element of (NAME - search IP list) ******************************************
+	 * * *****************************************************************************************************
+	******************************************************************************************************************************/		
+	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	  * $$$$$$$$$$$$$$$$$ Start No.21 -   Element of Is (Search button- search IP list)   $$$$$$$$$$$$$$$$$$$$$$
+	  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+						*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+	//21. Element of Submit Button
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[1]/div[6]/div[2]/a")
+	WebElement SearchIPButtonElement;
+	
+	//21. Highlight the Submit Button
+	public void SearchIPButtondHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", SearchIPButtonElement);/*make a yellow border outside edge of the element*/
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", SearchIPButtonElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",SearchIPButtonElement);/*make a yellow border outside edge of the element*/
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", SearchIPButtonElement);
+			Thread.sleep(1000);
+		}
+	}
+	
+	//21. Click to the Submit Button
+	public IPListElement clickONSearchIPButton() throws InterruptedException {
+		SearchIPButtondHighlight();
+		SearchIPButtonElement.click();
+		return new IPListElement();
+	}
+		
+	   /*************************************************************
+	 	* ****************************************************************************************************
+	 	* ************************    End No.21 - Element of Is (Search button- search IP list)  **********************
+	 	* * **************************************************************************************************
+	 							************************************************************************************************/
+	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.12 - Element of (NAME - search IP list) $$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+	*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
+	//12. Element of IP Search
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[1]/div[2]/input")
+	WebElement IPSearchElement;
+	
+	//12. Highlight the IP Search Input Field
+	public void IPSearchElementInputFieldHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", IPSearchElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", IPSearchElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", IPSearchElement);
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", IPSearchElement);
+			Thread.sleep(1000);
+		}
+	}
+	
+	
+	//12.0.1 Type to the IP Search parameter
+	public IPListElement typeToIPSearchInputFieldParam(String IP_Search) throws InterruptedException {
+		IPSearchElementInputFieldHighlight();
+		IPSearchElement.sendKeys(IP_Search);		
+		Thread.sleep(2000);		
+		return new IPListElement();
+	}
+	
+	//12.0.2. Type ip Search Input Field (enter text, then clear IP Search Input Field)
+	public IPListElement typeAndClearIPSearchFieldParam(String IP_Search) throws InterruptedException {
+		IPSearchElementInputFieldHighlight();
+		IPSearchElement.sendKeys(IP_Search);
+		Thread.sleep(100);
+		IPSearchElement.clear();
+		return new IPListElement();									    			
+	}		
+		
+
+	/***************************************************************************************************************
+     * *****************************************************************************************************
+	 * **************************    End No.12 - Element of (NAME - search IP list) ******************************************
+	* * **************************************************************************************************
+	 							************************************************************************************************/
+	
+	/***************************************************************************************************************
+     * *****************************************************************************************************
+	 * **************************    End No.12 - Element of (NAME - search IP list) ******************************************
+	 * * *****************************************************************************************************
+	******************************************************************************************************************************/		
+	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	  * $$$$$$$$$$$$$$$$$ Start No.21 -   Element of Is (edit button IP list)   $$$$$$$$$$$$$$$$$$$$$$
+	  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+						*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+	//21. Element of IP edit button
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[2]/div/div/div[2]/div/table/tbody/tr[1]/td[15]/a[1]/i")
+	WebElement editIPButtonElement;
+	
+	//21. Highlight the IP edit button
+	public void editIPButtonHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", editIPButtonElement);/*make a yellow border outside edge of the element*/
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", editIPButtonElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');",editIPButtonElement);/*make a yellow border outside edge of the element*/
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", editIPButtonElement);
+			Thread.sleep(1000);
+		}
+	}
+	
+	//21. Click to the IP edit button
+	public IPListElement clickONEditIPButton() throws InterruptedException {
+		editIPButtonHighlight();
+		editIPButtonElement.click();
+		return new IPListElement();
+	}
+		
+	   /*************************************************************
+	 	* ****************************************************************************************************
+	 	* ************************    End No.21 - Element of Is (Search button- search IP list)  **********************
+	 	* * **************************************************************************************************
+	 							************************************************************************************************/
 }
