@@ -48,12 +48,12 @@ public class IPSelectProtocolDetect extends TestBase{
     	iPListElement = loginPage.addNewIPLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
     	driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/ip/ipList");	//navigate to the Campaign List page.
 		Thread.sleep(4000);
-		iPListElement.clickONEditIPButton();//taking input from the Campaign Name
+		iPListElement.advance2ClickedConti();//taking input from the Campaign Name
 		
 		Thread.sleep(4000);
 		iPListElement.copyDataFromIPField();
 		
-		driver.get("https://6"+iPListElement.copy2DataFromIPField());
+		driver.get(iPListElement.copy2DataFromIPField());
 		
 		/*driver.get("https://194.49.53.20:9439");
 		Thread.sleep(2000);
