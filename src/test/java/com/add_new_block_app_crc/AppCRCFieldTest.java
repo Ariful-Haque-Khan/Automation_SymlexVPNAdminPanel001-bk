@@ -48,7 +48,7 @@ public class AppCRCFieldTest extends TestBase{
 	}
 	
 	//@Ignore
-	//@Test(priority=1)
+	@Test(priority=1)
 	public void enter_empty_text_into_App_CRC_input_field() throws IOException, InterruptedException {addNewBlockAppCRCCommon("");	}
 	@Test(priority=2)
 	public void enter_a_valid_text_into_App_CRC_input_field() throws IOException, InterruptedException {addNewBlockAppCRCCommon("ABC123");	}
@@ -85,7 +85,7 @@ public class AppCRCFieldTest extends TestBase{
 	public void enter_text_containing_emojis_into_App_CRC_input_field() throws IOException, InterruptedException{addNewBlockAppCRCCommon("😊, 🐱, 🍕, 🎉"); }
 	@Test(priority=18)
 	public void enter_text_with_accented_characters_into_App_CRC_input_field() throws IOException, InterruptedException{addNewBlockAppCRCCommon("á, ç, ō,  á, ç, ō");}
-	//@Test(priority=19)
+	@Test(priority=19)
 	public void enter_default_placeholder_text_into_App_CRC_input_field() throws IOException, InterruptedException{ 
 			
 	}
@@ -109,7 +109,7 @@ public class AppCRCFieldTest extends TestBase{
 		
 	}
 	
-	//@Test(priority=23)
+	@Test(priority=23)
 	public void enter_then_undo_and_redo_the_input_action_into_coupon_code_input_field() throws IOException, InterruptedException{
 		addNewBlockAppCRC = loginPage.addNewBlockAppCRCLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		addNewBlockAppCRC.openAddNewBlockAppCRCForm();// open the Add New (Block App CRC) Page.
@@ -120,7 +120,7 @@ public class AppCRCFieldTest extends TestBase{
 		
 	}
 	
-	//@Test(priority=24)
+	@Test(priority=24)
 	//@Ignore
 	public void enter_text_and_navigate_through_into_coupon_code_input_field_using_the_tab_key() throws IOException, InterruptedException{ 
 		addNewBlockAppCRC = loginPage.addNewBlockAppCRCLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
@@ -130,7 +130,7 @@ public class AppCRCFieldTest extends TestBase{
 		//addNewSignUpBlacklistDomain.clickONSubmitButton();// click on save button
 	}
 	
-	//@Test(priority=25)
+	@Test(priority=25)
 	public void paste_the_text_into_coupon_code_input_field_using_the_paste_action() throws IOException, InterruptedException{
 		addNewBlockAppCRC = loginPage.addNewBlockAppCRCLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		addNewBlockAppCRC.openAddNewBlockAppCRCForm();// open the Add New (Block App CRC) Page.
