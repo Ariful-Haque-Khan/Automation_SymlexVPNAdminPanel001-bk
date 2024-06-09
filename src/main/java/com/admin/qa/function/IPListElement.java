@@ -165,12 +165,36 @@ public class IPListElement extends TestBase{
 		advanced.click();
 		return new IPListElement();
 	}
+  	
+    //02. Element of IP2
+  	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[2]/div/div/div[2]/div/table/tbody/tr[1]/td[3]")
+  	WebElement IP_advanced_continue;
+  	
+  	public IPListElement  advance2ClickedConti() throws InterruptedException {
+  		IP_advanced_continue.click();
+		return new IPListElement();
+	}
+    // Method to copy data from the IP input field
+    public String copy2DataFromIPField() throws InterruptedException {
+        //ipElementInputFieldHighlight();
+        String dataToCopy = IP_advanced_continue.getAttribute("value");
+        //String time = driver.findElement(By.id("input_name")).getAttribute("value");
+        System.out.println(dataToCopy);
+
+        //StringSelection stringSelection = new StringSelection(dataToCopy); // Copy the data to the clipboard
+        //Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+        
+        //IPElement.sendKeys(Keys.c);
+        return dataToCopy;
+    }
 
 	/***************************************************************************************************************
      * *****************************************************************************************************
 	 * **************************    End No.02 - Element of IP ******************************************
 	 * * *****************************************************************************************************
 	******************************************************************************************************************************/
+
+	
 	
 	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
