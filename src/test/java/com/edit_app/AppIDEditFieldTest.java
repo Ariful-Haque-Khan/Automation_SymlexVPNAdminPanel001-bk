@@ -1,0 +1,166 @@
+/*
+ * @author: Md. Abdullah Al Rumy, 
+ * @company: Kolpolok Limited.
+*/
+
+package com.edit_app;
+
+import java.io.IOException;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Ignore;
+import org.testng.annotations.Test;
+
+import com.admin.qa.function.AppListElement;
+import com.crm.qa.base.TestBase;
+import com.crm.qa.pages.LoginPage;
+import com.crm.qa.util.TestUtils;
+
+public class AppIDEditFieldTest extends TestBase{
+	
+	
+	LoginPage loginPage;
+
+	TestUtils testUtils;
+	
+	AppListElement appListElement;
+	
+	//Initializing PageFactory
+	public AppIDEditFieldTest() {
+		super();   //Call the Constructor of the Super class - TestBase
+	}
+	
+	@BeforeMethod
+	public void setUp() {
+		initialization();
+		loginPage = new LoginPage();
+		testUtils = new TestUtils();
+	}
+
+	public void EditAppCommon(String App_ID) throws IOException, InterruptedException {
+		appListElement = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
+		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/push/editForm/111");//open the edit app form
+		appListElement.typeToAppNameInputFieldParam("1"); //for taking inputs into the app name field
+		appListElement.typeAndClearAppIDInputField("");//Clear the text
+		appListElement.typeToAPPIDOneSignalTestParam(App_ID);//for taking inputs into the app id field
+		appListElement.typeToAPPKeyOneSignalTestParam("");//for taking inputs into the app key field
+		appListElement.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
+		//appListElement.clickToSaveButtonTest(); //for the save button
+	}
+	
+
+
+	//@Test(priority=1)
+	//@Ignore
+	public void enter_empty_text_into_App_ID_Edit_input_field() throws IOException, InterruptedException {EditAppCommon("");	}
+	//@Test(priority=2)
+	public void enter_a_valid_text_into_App_ID_Edit_input_field() throws IOException, InterruptedException {EditAppCommon("VPNTest123");	}
+	//@Test(priority=3)
+	public void enter_the_above_maximum_allowed_length_of_characters_into_App_ID_Edit_input_field() throws IOException, InterruptedException{EditAppCommon("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaniy1yr");}
+	//@Test(priority=4)
+	public void enter_the_below_minimum_allowed_length_of_characters_into_App_ID_Edit_input_field() throws IOException, InterruptedException{EditAppCommon("a");}
+	//@Test(priority=5)
+	public void enter_only_alphabetic_characters_into_App_ID_Edit_input_field() throws IOException, InterruptedException{EditAppCommon("abcdefgh");}
+	//@Test(priority=6)
+	public void enter_numeric_characters_into_App_ID_Edit_input_field() throws IOException, InterruptedException{EditAppCommon("123456789123456789");}
+	//@Test(priority=7)
+	public void enter_a_combination_of_alphabetic_and_numeric_characters_into_App_ID_Edit_input_field() throws IOException, InterruptedException{EditAppCommon("M2QxMzQ3YjktYzg3NS00YmMyLWJmZjItNDk4Njlh");}
+	//@Test(priority=8)
+	public void enter_special_characters_into_App_ID_Edit_input_field() throws IOException, InterruptedException{EditAppCommon("!@#$%^&*!@#$%^&*@!@#$%^&"); }
+	//@Test(priority=9)
+	public void enter_text_with_leading_whitespaces_into_App_ID_Edit_input_field() throws IOException, InterruptedException{EditAppCommon("                  VPNTest123"); }
+	//@Test(priority=10)
+	public void enter_text_with_trailing_whitespaces_into_App_ID_Edit_input_field() throws IOException, InterruptedException{EditAppCommon("VPNTest123                            ");}
+	//@Test(priority=11)
+	public void enter_text_in_uppercase_letters_into_App_ID_Edit_input_field() throws IOException, InterruptedException{EditAppCommon("AAASDFGHJHGFDFGH");}
+	//@Test(priority=12)
+	public void enter_text_in_lowercases_letters_into_App_ID_Edit_input_field() throws IOException, InterruptedException{EditAppCommon("anianiani");}
+	//@Test(priority=13)
+	public void enter_text_with_a_mix_of_uppercase_and_lowercase_letter_into_App_ID_Edit_input_field() throws IOException, InterruptedException{EditAppCommon("ABCdefasASD"); }
+	//@Test(priority=14)
+	public void enter_text_with_punctuation_marks_into_App_ID_Edit_input_field() throws IOException, InterruptedException{EditAppCommon(",./;?.,;/.,./?><:;,./;.,"); }
+	//@Test(priority=15)
+	public void enter_text_with_line_breaks_or_newlines_into_App_ID_Edit_input_field() throws IOException, InterruptedException{EditAppCommon("\\\\\"ANI1yr\\\\\\\\n\\\\\\\" +\\\\r\\\\n\\\"\\r\\n\"\r\n"
+				+ "				+ \"				+ \\\"                                  \\\\\\\"ani1yr\\\\\\\""); }
+	//@Test(priority=16)
+	public void enter_text_with_unicode_characters_into_App_ID_Edit_input_field() throws IOException, InterruptedException{EditAppCommon("こんにちは"); }
+	//@Test(priority=17)
+	public void enter_text_containing_emojis_into_App_ID_Edit_input_field() throws IOException, InterruptedException{EditAppCommon("😊, 🐱, 🍕, 🎉"); }
+	//@Test(priority=18)
+	public void enter_text_with_accented_characters_into_App_ID_Edit_input_field() throws IOException, InterruptedException{EditAppCommon("á, ç, ō,  á, ç, ō");}
+	//@Test(priority=19)
+	public void enter_default_placeholder_text_into_App_ID_Edit_input_field() throws IOException, InterruptedException{
+			
+	}
+	@Test(priority=21)
+	//@Ignore
+	public void enter_text_then_clear_the_input_text_field()throws IOException,InterruptedException  {
+		appListElement = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
+		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/push/editForm/111");//open the edit app form
+		appListElement.typeToAppNameInputFieldParam("1"); //for taking inputs into the app name field
+		appListElement.typeAndClearAppIDInputField("");//Clear the text
+		appListElement.typeToAPPKeyOneSignalTestParam("");//for taking inputs into the app key field
+		appListElement.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
+		//appListElement.clickToSaveButtonTest(); //for the save button
+
+	}
+
+	//@Test(priority=22)
+	//@Ignore
+	public void enter_then_undo_the_input_action_into_the_App_ID_field()throws IOException,InterruptedException  {
+		appListElement = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
+		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/push/editForm/111");//open the edit app form
+		appListElement.typeToAppNameInputFieldParam("1"); //for taking inputs into the app name field
+		appListElement.typeAndClearAppIDInputField("");//Clear the text
+		appListElement.typeToAPPKeyOneSignalTestParam("");//for taking inputs into the app key field
+		appListElement.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
+		//appListElement.clickToSaveButtonTest(); //for the save button
+
+	}
+
+	//@Test(priority=23)
+	//@Ignore
+	public void enter_then_undo_then_redo_the_input_action_into_the_App_ID_field() throws IOException,InterruptedException  {
+		appListElement = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
+		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/push/editForm/111");//open the edit app form
+		appListElement.typeToAppNameInputFieldParam("1"); //for taking inputs into the app name field
+		appListElement.typeAndClearAppIDInputField("");//Clear the text
+		appListElement.typeToAPPIDOneSignalTestParam("VPNTest123");
+		appListElement.typeToAPPKeyOneSignalTestParam("");//for taking inputs into the app key field
+		appListElement.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
+		//appListElement.clickToSaveButtonTest(); //for the save button
+
+
+	}
+
+
+	//@Test(priority=24)
+	//@Ignore
+	public void enter_text_and_navigate_through_the_input_field_using_the_tab_key()throws IOException,InterruptedException {
+		appListElement = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
+		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/push/editForm/111");//open the edit app form
+		appListElement.typeToAppNameInputFieldParam("1"); //for taking inputs into the app name field
+		appListElement.typeToAPPIDOneSignalTestParam("4");
+		appListElement.typeAndTabKeyAppIDInputFieldParam();
+		appListElement.typeToAPPKeyOneSignalTestParam("");//for taking inputs into the app key field
+		appListElement.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
+		//appListElement.clickToSaveButtonTest(); //for the save button
+
+	}
+
+
+	//@Test(priority=25)
+	//@Ignore
+	public void paste_the_text_into_the_template_App_ID_field_using_the_paste_action() throws IOException,InterruptedException  {
+		appListElement = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
+		driver.get("https://adminportal.symlexvpn.com/vpnadmin/index.php/push/editForm/111");//open the edit app form
+		appListElement.typeToAppNameInputFieldParam("1"); //for taking inputs into the app name field
+		appListElement.typeToAPPIDOneSignalTestParam("");//for taking inputs into the app id field
+		appListElement.typeToAPPKeyOneSignalTestParam("");//for taking inputs into the app key field
+		appListElement.clickToIsUDIDCheckChekboxInputTest();//for clicking UDID check box
+		//appListElement.clickToSaveButtonTest(); //for the save button
+
+	}
+
+}

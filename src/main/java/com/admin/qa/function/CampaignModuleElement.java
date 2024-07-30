@@ -228,12 +228,6 @@ public class CampaignModuleElement extends TestBase{
 		}
 	}
 	
-	//04. Type to the Coupon Code
-	public CampaignModuleElement typeToCouponCodeInputField() throws InterruptedException {
-		couponCodeInputFieldHighlight();
-		couponCodeElement.sendKeys("");
-		return new CampaignModuleElement();
-	}
 	
 	//04.0.1 Type to the Coupon Code parameter
 	public CampaignModuleElement typeToCouponCodeFieldParam(String coupon_code) throws InterruptedException {
@@ -581,7 +575,7 @@ public class CampaignModuleElement extends TestBase{
 	public CampaignModuleElement typeAndClearCampaignCouponCodeFieldParam(String coupon_Code) throws InterruptedException {
 		campaignCouponCodeHighlight();
 		campaignCouponCodeElement.sendKeys(coupon_Code);
-		Thread.sleep(100);
+		Thread.sleep(1000);
 		campaignCouponCodeElement.clear();
 		return new CampaignModuleElement();									    			
 	}		
@@ -894,7 +888,7 @@ public class CampaignModuleElement extends TestBase{
 									*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
 
 	//19. Select Reseller for First click On the Element
-	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[2]/form/div/div[1]/div[2]/div[1]/div/span/span[1]/span/span[1]")
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[2]/form/div/div[1]/div[2]/div[1]/div/span/span[1]/span/span[1]")//html/body/div[2]/div[1]/section[2]/div[1]/div[1]/span/span[1]/span/span[1]
 	WebElement assignResellerSelect;
 		
 	//19.Select Reseller for Search On the Element
@@ -1325,6 +1319,8 @@ public class CampaignModuleElement extends TestBase{
 	 * **************************    End No.27 - Element of Affiliator Email Address -(Affiliator Sign Up Requests) ******************************************
 	 * * *****************************************************************************************************
 	******************************************************************************************************************************/
+	
+	
 	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.28 -   Element of Search Requested Affiliator Button- Affiliator Sign Up Requests $$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -1362,6 +1358,215 @@ public class CampaignModuleElement extends TestBase{
 	 * **************************    End No.28 - Element of Search Requested Affiliator Button- Affiliator Sign Up Requests *****************************************
 	 * * *****************************************************************************************************
 	******************************************************************************************************************************/
+	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+   * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.29-  Element of Select Reseller (Campaign List)  $$$$$$$$$$$$$$$$$$$
+  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+									*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+	//29. Select Reseller (Campaign List) for First click On the Element
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[1]/div[3]/span/span[1]/span/span[1]")
+	WebElement searchResellerSelect;
+		
+	//29.Select Reseller (Campaign List) for Search On the Element
+	@FindBy(xpath="/html/body/span/span/span[1]/input")
+	WebElement searchResellerDropDown;
+	
+	//29. PIN Type Element  (Campaign List)for Last click of first element On the Element
+	@FindBy(xpath="/html/body/span/span/span[2]/ul/li")
+	WebElement searchResellerSearch;
+	
+	//29. Highlight the Select Reseller Input Field (Campaign List)
+	public void searchResellerSearchdHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", searchResellerSelect);/* make a yellow border outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');",searchResellerSelect);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", searchResellerSelect);/* make a yellow border outside edge of the element */
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", searchResellerSelect);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+		}
+	}
+	
+	//29. Type to the Select Reseller (Campaign List)
+	public CampaignModuleElement selectrumyqaResellerDropDownElement() throws InterruptedException {
+		searchResellerSearchdHighlight();/* highlight the element of the tested. */
+		searchResellerSelect.click(); /*click on the element */
+		searchResellerDropDown.sendKeys("rumyqa");/*type on the input field */
+		searchResellerSearch.click();/*click on the element from result of the first value. */
+		return new CampaignModuleElement();
+	}
+	
+	//29. Type to the Select Reseller (Campaign List)
+	public CampaignModuleElement selectSelectAffiliatorResellerDropDownElement() throws InterruptedException {
+		searchResellerSearchdHighlight();/* highlight the element of the tested. */
+		searchResellerSelect.click(); /*click on the element */
+		searchResellerDropDown.sendKeys("Select Affiliator");/*type on the input field */
+		searchResellerSearch.click();/*click on the element from result of the first value. */
+		return new CampaignModuleElement();
+	}
+	
+	//29. Type to the Select Reseller (Campaign List)
+	public CampaignModuleElement selectemailsymlexResellerDropDownElement() throws InterruptedException {
+		searchResellerSearchdHighlight();/* highlight the element of the tested. */
+		searchResellerSelect.click(); /*click on the element */
+		searchResellerDropDown.sendKeys("emailsymlex");/*type on the input field */
+		searchResellerSearch.click();/*click on the element from result of the first value. */
+		return new CampaignModuleElement();
+	}
+
+      /***************************************************
+		*********************************************************************************************
+		****************************    End No.29 -  Element of Select Reseller (Campaign List)   **************************
+		*********************************************************************************************
+										*****************************************************************************************************/
+	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+   * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.30-  Element of Pagination (Campaign List)  $$$$$$$$$$$$$$$$$$$
+  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+									*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+	//30. Select pagination (Campaign List)) for First click On the Element
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[1]/div[4]/div[1]/span/span[1]/span/span[1]")
+	WebElement searchPaginationSelect;
+		
+	//30.Select pagination (Campaign List)) for Search On the Element
+	@FindBy(xpath="/html/body/span/span/span[1]/input")
+	WebElement searchPaginationDropDown;
+	
+	//30. Pagination Type Element (Campaign List))for Last click of first element On the Element
+	@FindBy(xpath="/html/body/span/span/span[2]/ul/li")
+	WebElement searchPaginationSearch;
+	
+	//30. Highlight the Select Pagination Input Field (Campaign List)
+	public void searchPaginationSearchdHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", searchPaginationSelect);/* make a yellow border outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');",searchPaginationSelect);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", searchPaginationSelect);/* make a yellow border outside edge of the element */
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", searchPaginationSelect);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+		}
+	}
+	
+	//30. Type to the Select Pagination (Campaign List)
+	public CampaignModuleElement selectDatafromSearchPagination25DropDownElement() throws InterruptedException {
+		searchPaginationSearchdHighlight();/* highlight the element of the tested. */
+		searchPaginationSelect.click(); /*click on the element */
+		searchPaginationDropDown.sendKeys("25");/*type on the input field */
+		searchPaginationSearch.click();/*click on the element from result of the first value. */
+		return new CampaignModuleElement();
+	}
+	
+	//30. Type to the Select Pagination (Campaign List)
+	public CampaignModuleElement selectDatafromSearchPagination50DropDownElement() throws InterruptedException {
+		searchPaginationSearchdHighlight();/* highlight the element of the tested. */
+		searchPaginationSelect.click(); /*click on the element */
+		searchPaginationDropDown.sendKeys("50");/*type on the input field */
+		searchPaginationSearch.click();/*click on the element from result of the first value. */
+		return new CampaignModuleElement();
+	}
+	
+	//30. Type to the Select Pagination (Campaign List)
+	public CampaignModuleElement selectDatafromSearchPagination75DropDownElement() throws InterruptedException {
+		searchPaginationSearchdHighlight();/* highlight the element of the tested. */
+		searchPaginationSelect.click(); /*click on the element */
+		searchPaginationDropDown.sendKeys("75");/*type on the input field */
+		searchPaginationSearch.click();/*click on the element from result of the first value. */
+		return new CampaignModuleElement();
+	}
+
+	//30. Type to the Select Pagination (Campaign List)
+	public CampaignModuleElement selectDatafromSearchPagination100DropDownElement() throws InterruptedException {
+		searchPaginationSearchdHighlight();/* highlight the element of the tested. */
+		searchPaginationSelect.click(); /*click on the element */
+		searchPaginationDropDown.sendKeys("100");/*type on the input field */
+		searchPaginationSearch.click();/*click on the element from result of the first value. */
+		return new CampaignModuleElement();
+	}
+
+      /***************************************************
+		*********************************************************************************************
+		****************************    End No.30 -  Element of Select Pagination (Campaign List)   **************************
+		*********************************************************************************************
+										*****************************************************************************************************/
+	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+   * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.31-  Element of Select Status (Campaign List)  $$$$$$$$$$$$$$$$$$$
+  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+									*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+	//31. Select Status (Campaign List)) for First click On the Element
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[1]/div[1]/span/span[1]/span/span[1]")
+	WebElement searchStatusSelect;
+		
+	//31.Select Status (Campaign List)) for Search On the Element
+	@FindBy(xpath="/html/body/span/span/span[1]/input")
+	WebElement searchStatusDropDown;
+	
+	//31. Status Type Element (Campaign List))for Last click of first element On the Element
+	@FindBy(xpath="/html/body/span/span/span[2]/ul/li")
+	WebElement searchStatusSearch;
+
+	//31. Highlight the Select Status Input Field (Campaign List)
+	public void searchStatusSearchdHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", searchStatusSelect);/* make a yellow border outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');",searchStatusSelect);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", searchStatusSelect);/* make a yellow border outside edge of the element */
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", searchStatusSelect);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+		}
+	}
+
+	//31. Type to the Select Status (Campaign List)
+	public CampaignModuleElement selecActivefromSearchStatusDropDownElement() throws InterruptedException {
+		searchStatusSearchdHighlight();/* highlight the element of the tested. */
+		searchStatusSelect.click(); /*click on the element */
+		searchStatusDropDown.sendKeys("active");/*type on the input field */
+		searchStatusSearch.click();/*click on the element from result of the first value. */
+		return new CampaignModuleElement();
+	}
+
+	//32. Type to the Select Inactive Status (Campaign List)
+	public CampaignModuleElement selecInactivefromSearchStatusDropDownElement() throws InterruptedException {
+		searchStatusSearchdHighlight();/* highlight the element of the tested. */
+		searchStatusSelect.click(); /*click on the element */
+		searchStatusDropDown.sendKeys("Inactive");/*type on the input field */
+		searchStatusSearch.click();/*click on the element from result of the first value. */
+		return new CampaignModuleElement();
+	}
+	
+	
+	//31. Type to the Select Status (Campaign List)
+	public CampaignModuleElement selectStatusfromSearchStatusDropDownElement() throws InterruptedException {
+		searchStatusSearchdHighlight();/* highlight the element of the tested. */
+		searchStatusSelect.click(); /*click on the element */
+		searchStatusDropDown.sendKeys("Select status");/*type on the input field */
+		searchStatusSearch.click();/*click on the element from result of the first value. */
+		return new CampaignModuleElement();
+	}
+
+      /***************************************************
+		*********************************************************************************************
+		****************************    End No.31 -  Element of Select Active Status (Campaign List)   **************************
+		*********************************************************************************************
+										*****************************************************************************************************/
+	
 	
 
 }

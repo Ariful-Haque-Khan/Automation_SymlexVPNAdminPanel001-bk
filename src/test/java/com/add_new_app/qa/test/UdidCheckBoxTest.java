@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
-import com.admin.qa.function.CreateNewApp;
+import com.admin.qa.function.AppListElement;
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.TestUtils;
@@ -24,7 +24,7 @@ public class UdidCheckBoxTest extends TestBase{
 
 	TestUtils testUtils;
 	
-	CreateNewApp createNewApp;
+	AppListElement appListElement;
 	
 	//Initializing PageFactory
 	public UdidCheckBoxTest() {
@@ -44,9 +44,9 @@ public class UdidCheckBoxTest extends TestBase{
 	@Test(priority=1)
 	//@Ignore
 	public void verify_that_the_checkbox_element_is_visible_on_the_page() throws IOException, InterruptedException {
-	    createNewApp = loginPage.createNewAppLogin(props.getProperty("username"), props.getProperty("password"));
-	    createNewApp.openCreateNewAppPage(); //open the Custom Panel Name Page.
-	    createNewApp.clickToIsUDIDCheckChekboxInputTest();
+	    appListElement = loginPage.createNewAppLogin(props.getProperty("username"), props.getProperty("password"));
+	    appListElement.openCreateNewAppPage(); //open the Custom Panel Name Page.
+	    appListElement.clickToIsUDIDCheckChekboxInputTest();
 	    
 	    if (isCheckboxVisible()) {
 	        System.out.println("Checkbox is visible on the page.");
@@ -54,7 +54,7 @@ public class UdidCheckBoxTest extends TestBase{
 	        System.out.println("Checkbox is not visible on the page.");
 	        // You may throw an exception here or handle it according to your test scenario
 	    }
-	    createNewApp.clickToIsUDIDCheckChekboxInputTest();
+	    appListElement.clickToIsUDIDCheckChekboxInputTest();
 	}
 		
 

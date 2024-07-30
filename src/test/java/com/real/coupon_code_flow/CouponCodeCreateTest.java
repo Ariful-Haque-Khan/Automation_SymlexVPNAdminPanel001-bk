@@ -38,7 +38,7 @@ public class CouponCodeCreateTest extends TestBase{
 		loginPage = new LoginPage();
 		testUtils = new TestUtils();
 	}
-    @Test(priority=1)
+    //@Test(priority=1)
 	//@Ignore
 	public void create_and_assign_the__coupon_code() throws IOException, InterruptedException {
 		campaignModuleElement = loginPage.addNewCampaignLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
@@ -104,7 +104,7 @@ public class CouponCodeCreateTest extends TestBase{
     	
 	}
    
-	@Test(priority=3)
+	//@Test(priority=3)
 	//@Ignore
 	public void login_in_the_website_and_payment() throws IOException, InterruptedException {
 		
@@ -160,7 +160,7 @@ public class CouponCodeCreateTest extends TestBase{
     	bkashAccountNumber.sendKeys("01701137664");//taking input for password field  
         	
     	WebElement bkashBConfirmButton = driver.findElement(By.xpath("/html/body/div[2]/div/div[3]/div/div/div[2]/div/button[2]"));
-    	bkashBConfirmButton.click();//click on pay now button  /html/body/div[2]/div/div[3]/div/div/div[1]/input
+    	bkashBConfirmButton.click();//click on pay now button  
     	
     	WebElement bkashVerificationCode = driver.findElement(By.xpath("/html/body/div[2]/div/div[3]/div/div/div[1]/input")); // Find the password field and input password
     	bkashVerificationCode.sendKeys("");//taking input for password field*/

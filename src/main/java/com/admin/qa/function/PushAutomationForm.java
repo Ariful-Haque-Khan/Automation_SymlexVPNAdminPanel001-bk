@@ -15,9 +15,9 @@ public class PushAutomationForm extends TestBase{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public AddPINValidity openPushAutomationFormPage() {
+	public PushAutomationForm openPushAutomationFormPage() {
 		driver.get(props.getProperty("url")+"push/automatedPushForm");
-		return new AddPINValidity();
+		return new PushAutomationForm();
 	}
 	
 	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -140,11 +140,11 @@ public class PushAutomationForm extends TestBase{
 	}
 	
 	//03. Select from Auto Push Dropdown Field
-	public AddPINValidity autoPushDropdownField() throws InterruptedException {
+	public PushAutomationForm autoPushDropdownField() throws InterruptedException {
 		pinAutoPushFieldHighlight();/* highlight the element of the tested. */
 		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div[2]/form/div[1]/div/div[2]/div[3]/div/select")));
 		drp.selectByIndex(1);
-		return new AddPINValidity(); 
+		return new PushAutomationForm(); 
 	}
 	
 	
@@ -181,11 +181,11 @@ public class PushAutomationForm extends TestBase{
 	}
 	
 	//04. Select from Reseller Type Dropdown Field
-	public AddPINValidity ResellerTypehDropdownField() throws InterruptedException {
+	public PushAutomationForm ResellerTypehDropdownField() throws InterruptedException {
 		resellerTypeDropDownFieldHighlight();/* highlight the element of the tested. */
 		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div[2]/form/div[1]/div/div[2]/div[4]/div[1]/select")));
 		drp.selectByIndex(1);
-		return new AddPINValidity(); 
+		return new PushAutomationForm(); 
 	}
 	
 	/***************************************************
@@ -257,11 +257,11 @@ public class PushAutomationForm extends TestBase{
 	}
 	
 	//06. Select from Select reseller Dropdown Field
-	public AddPINValidity selectResellerFromDropdownField() throws InterruptedException {
+	public PushAutomationForm selectResellerFromDropdownField() throws InterruptedException {
 		selectResellerDropDownFieldHighlight();/* highlight the element of the tested. */
 		Select drp = new Select(driver.findElement(By.xpath("/html/body/div[2]/div/section[2]/div[2]/form/div[1]/div/div[2]/div[5]/div/select")));
 		drp.selectByIndex(1);
-		return new AddPINValidity(); 
+		return new PushAutomationForm(); 
 	}
 	
 	/***************************************************
@@ -391,7 +391,7 @@ public class PushAutomationForm extends TestBase{
 	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[2]/form/div[1]/div/div[2]/div[7]/div/textarea")
 	WebElement pinWithCommaSeparatedInputboxElement;
 	
-	//10. Highlight the Number of With Child Field
+	//10. Highlight the PIN with comma separated Field
 	public void pinWithCommaSeparatedInputboxElementHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -406,13 +406,30 @@ public class PushAutomationForm extends TestBase{
 		}
 	}
 	
-	//10. Click to the PIN Status Expired
-	public PushAutomationForm datafromPINWithCommaSeparatedInputboxElement() throws InterruptedException {
-		pinWithCommaSeparatedInputboxElementHighlight();/* highlight the element of the tested. */
-		pinWithCommaSeparatedInputboxElement.click(); /*click on the element */
-		pinWithCommaSeparatedInputboxElement.sendKeys("rumy1yr"); /*type on the element */
+	//01.1. Type to the PIN with comma separated
+	public PushAutomationForm typeToPinWithCommaParam(String pin_with_comma) throws InterruptedException {
+		pinWithCommaSeparatedInputboxElementHighlight();
+		pinWithCommaSeparatedInputboxElement.sendKeys(pin_with_comma);
 		return new PushAutomationForm();
 	}
+	
+	//01.2. Type to the PIN with comma separated
+	public PushAutomationForm typeToPinWithCommaTabKey() throws InterruptedException {
+		pinWithCommaSeparatedInputboxElementHighlight();
+		pinWithCommaSeparatedInputboxElement.sendKeys(Keys.TAB);
+		return new PushAutomationForm();
+	}
+	
+	
+	//1.0.3. Type to PIN with comma separated input field Input Field (enter text, then clear new PIN with comma separated Input Field)
+	public PushAutomationForm typeAndClearPinWithCommaParam(String pin_with_comma) throws InterruptedException {
+		pinWithCommaSeparatedInputboxElementHighlight();
+		pinWithCommaSeparatedInputboxElement.sendKeys(pin_with_comma);
+		Thread.sleep(100);
+		pinWithCommaSeparatedInputboxElement.clear();
+		return new PushAutomationForm();
+								    			
+	}	
 	
 	/*******************************************************
 	 									* **************************************************************************************************
@@ -434,7 +451,7 @@ public class PushAutomationForm extends TestBase{
 	WebElement searchInCountryDropDown;
 	
 	//011. PIN Type Element for Last click of first element On the Element
-	@FindBy(xpath="/html/body/span/span/span[2]/ul/li")
+	@FindBy(xpath="/html/body/span/span/span[2]/ul/li") 
 	WebElement valueForCountrySearch;
 	
 	//011. Highlight the Number of Days Input Field
@@ -596,8 +613,8 @@ public class PushAutomationForm extends TestBase{
 	
 	/************************************************************
 	 				* ***************************************************************************************************
-					* **************    End No.14. - Drop Down Element Called Days at Before Expired   ******************
-					* * *************************************************************************************************
+					* **************    End No.14. - Drop Down Element Called Days at Before Expired    ******************
+					* ****************************************************************************************************
 																	**************************************************************************************************/
 	
 	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$

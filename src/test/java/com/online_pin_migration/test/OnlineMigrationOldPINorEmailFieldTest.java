@@ -13,7 +13,7 @@ import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import com.admin.qa.function.AddNewRatePlan;
-import com.admin.qa.function.CreateNewApp;
+import com.admin.qa.function.AppListElement;
 import com.admin.qa.function.OnlinePINMigration;
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.LoginPage;
