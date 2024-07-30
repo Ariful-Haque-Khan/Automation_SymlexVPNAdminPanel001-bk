@@ -58,9 +58,9 @@ public class CouponCodeFieldTest extends TestBase{
 	}
 	
 	//@Ignore
-	//@Test(priority=1)
+	@Test(priority=1)
 	public void enter_empty_text_into_coupon_code_input_field() throws IOException, InterruptedException {addNewCampaignCommon("");	}
-	@Test(priority=2)
+	//@Test(priority=2)
 	public void enter_a_valid_text_into_coupon_code_input_field() throws IOException, InterruptedException {addNewCampaignCommon("ABC123");	}
 	@Test(priority=3)
 	public void enter_the_above_maximum_allowed_length_of_characters_into_coupon_code_input_field() throws IOException, InterruptedException{addNewCampaignCommon("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaniy1yr");}
@@ -74,9 +74,9 @@ public class CouponCodeFieldTest extends TestBase{
 	public void enter_a_combination_of_alphabetic_and_numeric_characters_into_coupon_code_input_field() throws IOException, InterruptedException{addNewCampaignCommon("abc1234567abc");}
 	//@Test(priority=8)
 	public void enter_special_characters_into_coupon_code_input_field() throws IOException, InterruptedException{addNewCampaignCommon("!@#$%^&*!@#$%^&*@!@#$%^&"); }
-	//@Test(priority=9)
+	@Test(priority=9)
 	public void enter_text_with_leading_whitespaces_into_coupon_code_input_field() throws IOException, InterruptedException{addNewCampaignCommon("           ani1yr"); }
-	//@Test(priority=10)
+	@Test(priority=10)
 	public void enter_text_with_trailing_whitespaces_into_coupon_code_input_field() throws IOException, InterruptedException{addNewCampaignCommon("abc1yr                   ");}
 	//@Test(priority=11)
 	public void enter_text_in_uppercase_letters_into_coupon_code_input_field() throws IOException, InterruptedException{addNewCampaignCommon("asdfghjkzxcvbnm");}
@@ -100,7 +100,7 @@ public class CouponCodeFieldTest extends TestBase{
 			
 	}
 
-	@Test(priority=21)
+	//@Test(priority=21)
 	public void enter_then_clear_the_text_into_coupon_code_input_field() throws IOException, InterruptedException{
 		campaignModuleElement = loginPage.addNewCampaignLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		campaignModuleElement.openAddNewCampaignForm();// open the Add New Campaign Form Page.
@@ -137,7 +137,7 @@ public class CouponCodeFieldTest extends TestBase{
 		
 	}
 	
-	@Test(priority=23)
+	//@Test(priority=23)
 	public void enter_then_undo_and_redo_the_input_action_into_coupon_code_input_field() throws IOException, InterruptedException{
 		campaignModuleElement = loginPage.addNewCampaignLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		campaignModuleElement.openAddNewCampaignForm();// open the Add New Campaign Form Page.

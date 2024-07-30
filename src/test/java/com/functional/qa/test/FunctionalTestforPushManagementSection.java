@@ -12,10 +12,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
-import com.admin.qa.function.AddNewBanner;
-import com.admin.qa.function.AddNewNotice;
-import com.admin.qa.function.AddPushTemplate;
-import com.admin.qa.function.CreateNewApp;
+import com.admin.qa.function.AdBannerListElement;
+import com.admin.qa.function.NoticeForUsersElement;
+import com.admin.qa.function.PushTemplateListElement;
+import com.admin.qa.function.AppListElement;
 import com.admin.qa.function.PushAutomationForm;
 import com.admin.qa.function.SendPushtoUser;
 import com.crm.qa.base.TestBase;
@@ -26,12 +26,12 @@ public class FunctionalTestforPushManagementSection extends TestBase{
 	
 	
 	LoginPage loginPage;
-	CreateNewApp createNewApp;
+	AppListElement appListElement;
 	PushAutomationForm pushAutomationForm;
 	SendPushtoUser sendPushtoUser;
-	AddPushTemplate addPushTemplate;
-	AddNewNotice addNewNotice;
-	AddNewBanner addNewBanner;
+	PushTemplateListElement pushTemplateListElement;
+	NoticeForUsersElement noticeForUsersElement;
+	AdBannerListElement adBannerListElement;
 	TestUtils testUtils;
 	
 	//Initializing PageFactory
@@ -52,13 +52,13 @@ public class FunctionalTestforPushManagementSection extends TestBase{
 	//@Test(priority=1)
 	@Ignore
 	public void TestCreateNewAppForm() throws IOException, InterruptedException {
-		createNewApp = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
-		createNewApp.openCreateNewAppPage();/*open the Create New App Page */
-		//createNewApp.typeToAppNameTest();/*1. Type in the App Name Input Field.*/
-		//createNewApp.typeToAPPIDOneSignalTest();/*2. Type in the APP ID (One Signal) Input Field.*/
-		//createNewApp.typeToAPPKeyOneSignalTest();/*3. Type in the APP Key (One Signal) Input Field.*/
-		//createNewApp.clickToIsUDIDCheckChekboxInputTest();/*4. click in the Is UDID Check, Checkbox Input Field.*/
-		createNewApp.clickToSaveButtonTest();/*4. click in the Is Save Button.*/
+		appListElement = loginPage.createNewAppLogin(props.getProperty("username"),props.getProperty("password"));
+		appListElement.openCreateNewAppPage();/*open the Create New App Page */
+		//appListElement.typeToAppNameTest();/*1. Type in the App Name Input Field.*/
+		//appListElement.typeToAPPIDOneSignalTest();/*2. Type in the APP ID (One Signal) Input Field.*/
+		//appListElement.typeToAPPKeyOneSignalTest();/*3. Type in the APP Key (One Signal) Input Field.*/
+		//appListElement.clickToIsUDIDCheckChekboxInputTest();/*4. click in the Is UDID Check, Checkbox Input Field.*/
+		appListElement.clickToSaveButtonTest();/*4. click in the Is Save Button.*/
 		
 	}
 	
@@ -77,7 +77,7 @@ public class FunctionalTestforPushManagementSection extends TestBase{
 		pushAutomationForm.datafromPINStatusCheckboxElement();/*7.. check data from Active Checkbox Field */
 		pushAutomationForm.datafromPINStatusInactiveCheckboxElement();/*8.. check data from InActive Checkbox Field */
 		pushAutomationForm.datafromPINStatusExpiredCheckboxElement();/*9.. check data from Expired Checkbox Field */
-		pushAutomationForm.datafromPINWithCommaSeparatedInputboxElement();/*10.. type data to PIN with comma separated Input Box Field */
+		//pushAutomationForm.datafromPINWithCommaSeparatedInputboxElement();/*10.. type data to PIN with comma separated Input Box Field */
 		pushAutomationForm.selectDatafromCountryDropDownElement();/*11.. Select data from Country Field */
 		pushAutomationForm.selectAutomationTypeFromDropdownField();/*12.. Select data from Automation Type Field */
 		//pushAutomationForm.selectDatafromDaysatAfterLoginDropDownElement();/*13.. Select data from Days at After Login Drop Down Field */
@@ -133,37 +133,37 @@ public class FunctionalTestforPushManagementSection extends TestBase{
 	@Test(priority=1)
 	//@Ignore
 	public void TestAddPushTemplateForm() throws IOException, InterruptedException {
-		addPushTemplate = loginPage.addPushTemplateLogin(props.getProperty("username"),props.getProperty("password"));
-		addPushTemplate.openAddPushTemplatePage();/*open the Custom Panel Name Page. */
-		addPushTemplate.typeTotemplateNameInputField(null);/*1.. type data to Template Name Input Box Field */
-		//addPushTemplate.selectDatafromAppNameDropDownElement();/*2.. select data from APP Name element. */
-		addPushTemplate.typeTotemplateTitleInputField();/*3.. type data to Push Title Input Box Field */
-		addPushTemplate.typeTotemplateMessageInputField();/*4.. type data to Push Message Input Box Field */
-		//addPushTemplate.typeTotemplateImageURLInputField();/*5.. type data to Push Image URL Input Box Field */
-		//addPushTemplate.typeTotemplateURLforAndroidInputField();/*6.. type data to Push URL for Android Input Box Field */
-		//addPushTemplate.typeTotemplateURLforiOSInputField();/*7.. type data to Push URL for iOS Input Box Field */
-		//addPushTemplate.typeTotemplatePageControlInputField();/*8.. type data to Push URL for Page Control Input Box Field */
-		//addPushTemplate.typeTotemplateActiveDeactiveStatusInputField();/*9.. click to the Active/Deactive Status */
-		addPushTemplate.typeTotemplateSaveButtonField();/*10.. click to the Active/Deactive Status */
+		pushTemplateListElement = loginPage.addPushTemplateLogin(props.getProperty("username"),props.getProperty("password"));
+		pushTemplateListElement.openAddPushTemplatePage();/*open the Custom Panel Name Page. */
+		//pushTemplateListElement.typeTotemplateNameInputField(null);/*1.. type data to Template Name Input Box Field */
+		//pushTemplateListElement.selectDatafromAppNameDropDownElement();/*2.. select data from APP Name element. */
+		//pushTemplateListElement.typeTotemplateTitleInputField();/*3.. type data to Push Title Input Box Field */
+		//pushTemplateListElement.typeTotemplateMessageInputField();/*4.. type data to Push Message Input Box Field */
+		//pushTemplateListElement.typeTotemplateImageURLInputField();/*5.. type data to Push Image URL Input Box Field */
+		//pushTemplateListElement.typeTotemplateURLforAndroidInputField();/*6.. type data to Push URL for Android Input Box Field */
+		//pushTemplateListElement.typeTotemplateURLforiOSInputField();/*7.. type data to Push URL for iOS Input Box Field */
+		//pushTemplateListElement.typeTotemplatePageControlInputField();/*8.. type data to Push URL for Page Control Input Box Field */
+		//pushTemplateListElement.typeTotemplateActiveDeactiveStatusInputField();/*9.. click to the Active/Deactive Status */
+		pushTemplateListElement.typeTotemplateSaveButtonField();/*10.. click to the Active/Deactive Status */
 	}
 	
 	/****** Test Add New Notice Form  *****/ 
 	//@Test(priority=1)
 	@Ignore
 	public void TestAddNewServerBlankForm() throws IOException, InterruptedException {
-		addNewNotice = loginPage.addNewNoticeLogin(props.getProperty("username"),props.getProperty("password"));
-		addNewNotice.openAddNewNoticePage();/* open the Add New Notice Page. */
-		//addNewNotice.selectDatafromNoticeTypeDropDownElement();/*1.. select data from Notice Type element. */
-		//addNewNotice.selectDataFromsuserTypeDropdownField();/*2.. select data from Notice Type element. */
-		addNewNotice.selectDataFromsOperationTypeDropdownField();/*3.. select data from Operation Type element. */
-		//addNewNotice.timePeriodFromInputField();/*4.. type data Time Period From element. */
-		//addNewNotice.timePeriodToInputField();/*5.. type data Time Period To element. */
-		//addNewNotice.selectDatafromPageControlDropDownElement();/*6.. select data from Page Control element. */
-		//addNewNotice.noticeMessageInputField();/*7.. type data to Notice Message Input Box Field */
-		//addNewNotice.pushMessageInputField();/*8.. type data to push Message Input Box Field */
-		//addNewNotice.pushRemarksInputField();/*9.. type data to push remarks Input Box Field */
-		addNewNotice.activeInactiveStatusInputField();/*10.. Click on data to Active/Inactive Status  Chaeck box Input Box Field */
-		addNewNotice.submitButtonInputField();/*10.. Click on data to Submit Button */
+		noticeForUsersElement = loginPage.addNewNoticeLogin(props.getProperty("username"),props.getProperty("password"));
+		noticeForUsersElement.openAddNewNoticePage();/* open the Add New Notice Page. */
+		//noticeForUsersElement.selectDatafromNoticeTypeDropDownElement();/*1.. select data from Notice Type element. */
+		//noticeForUsersElement.selectDataFromsuserTypeDropdownField();/*2.. select data from Notice Type element. */
+		noticeForUsersElement.selectDataFromsOperationTypeDropdownField();/*3.. select data from Operation Type element. */
+		//noticeForUsersElement.timePeriodFromInputField();/*4.. type data Time Period From element. */
+		//noticeForUsersElement.timePeriodToInputField();/*5.. type data Time Period To element. */
+		//noticeForUsersElement.selectDatafromPageControlDropDownElement();/*6.. select data from Page Control element. */
+		//noticeForUsersElement.noticeMessageInputField();/*7.. type data to Notice Message Input Box Field */
+		//noticeForUsersElement.pushMessageInputField();/*8.. type data to push Message Input Box Field */
+		//noticeForUsersElement.pushRemarksInputField();/*9.. type data to push remarks Input Box Field */
+		noticeForUsersElement.activeInactiveStatusInputField();/*10.. Click on data to Active/Inactive Status  Chaeck box Input Box Field */
+		noticeForUsersElement.submitButtonInputField();/*10.. Click on data to Submit Button */
 	}
 	
 	/****** Test Add New Banner   !!! */ 
@@ -172,26 +172,26 @@ public class FunctionalTestforPushManagementSection extends TestBase{
 	
 	//@Ignore
 	public void TestAddNewBannerForm() throws IOException, InterruptedException {
-		addNewBanner = loginPage.addNewBannerLogin(props.getProperty("username"),props.getProperty("password"));
-		addNewBanner.openAddNewBannerFormPage();/*open the Add New Banner Page. */
-		//addNewBanner.typeToBannerName();/*1.. type data to banner name element. */
-		//addNewBanner.typeToAppHomeBannerAndroidElement();/*2.. type data to App Home Banner Android Element. */
-		//addNewBanner.typeToOnclickURLElement();/*3.. type data to Onclick URL Element. */
-		//addNewBanner.typeToHomeBanneriOSElement();/*4.. type data to App Home Banner iOS Element. */
-		//addNewBanner.typeToiOSOnclickURLElement();/*5.. type data to iOS Onclick URL Element. */
-		//addNewBanner.typeToResellerPanelBannerElement();/*6.. type data to Reseller Panel Banner Element. */
-		//addNewBanner.typeToResellerOnclickURLElement();/*7.. type data to Reseller Onclick URL Element. */
-		//addNewBanner.selectDatafromCountryDropDownElement();/*8.. select and type data to Reseller Element. */
-		//addNewBanner.clickOncommonPanelElement();/*9.. click to Common Panel Checkbox Element. */
-		//addNewBanner.typeToBannerRemarksElement();/*10.. type to Banner Remarks Input Element. */
-		addNewBanner.clickOnLoginTypeAppElement();/*11.. click to Login Type(App) All Element. */
-		addNewBanner.clickOnloginTypeAppSymlexElement();/*12.. click to Login Type(App) Symlex Element. */
-		addNewBanner.clickOnloginTypeAppPlatinumElement();/*13.. click to Login Type(App) Platinum Element. */
-		addNewBanner.clickOnUserTypeAppAllElement();/*14.. click to User Type(App) All Element. */
-		addNewBanner.clickOnUserTypeAppFreeElement();/*15.. click to User Type(App) Free Element. */
-		addNewBanner.clickOnUserTypeAppExpiredElement();/*16.. click to User Type(App) Expired Element. */
-		addNewBanner.clickOnUserTypeAppPaidElement();/*17.. click to User Type(App) Expired Element. */
-		addNewBanner.clickOnUserTypeAppPremiumElement();/*18.. click to User Type(App) Expired Element. */
+		adBannerListElement = loginPage.addNewBannerLogin(props.getProperty("username"),props.getProperty("password"));
+		adBannerListElement.openAddNewBannerFormPage();/*open the Add New Banner Page. */
+		//adBannerListElement.typeToBannerName();/*1.. type data to banner name element. */
+		//adBannerListElement.typeToAppHomeBannerAndroidElement();/*2.. type data to App Home Banner Android Element. */
+		//adBannerListElement.typeToOnclickURLElement();/*3.. type data to Onclick URL Element. */
+		//adBannerListElement.typeToHomeBanneriOSElement();/*4.. type data to App Home Banner iOS Element. */
+		//adBannerListElement.typeToiOSOnclickURLElement();/*5.. type data to iOS Onclick URL Element. */
+		//adBannerListElement.typeToResellerPanelBannerElement();/*6.. type data to Reseller Panel Banner Element. */
+		//adBannerListElement.typeToResellerOnclickURLElement();/*7.. type data to Reseller Onclick URL Element. */
+		//adBannerListElement.selectDatafromCountryDropDownElement();/*8.. select and type data to Reseller Element. */
+		//adBannerListElement.clickOncommonPanelElement();/*9.. click to Common Panel Checkbox Element. */
+		//adBannerListElement.typeToBannerRemarksElement();/*10.. type to Banner Remarks Input Element. */
+		adBannerListElement.clickOnLoginTypeAppElement();/*11.. click to Login Type(App) All Element. */
+		adBannerListElement.clickOnloginTypeAppSymlexElement();/*12.. click to Login Type(App) Symlex Element. */
+		adBannerListElement.clickOnloginTypeAppPlatinumElement();/*13.. click to Login Type(App) Platinum Element. */
+		adBannerListElement.clickOnUserTypeAppAllElement();/*14.. click to User Type(App) All Element. */
+		adBannerListElement.clickOnUserTypeAppFreeElement();/*15.. click to User Type(App) Free Element. */
+		adBannerListElement.clickOnUserTypeAppExpiredElement();/*16.. click to User Type(App) Expired Element. */
+		adBannerListElement.clickOnUserTypeAppPaidElement();/*17.. click to User Type(App) Expired Element. */
+		adBannerListElement.clickOnUserTypeAppPremiumElement();/*18.. click to User Type(App) Expired Element. */
 	}
 	
 	/*

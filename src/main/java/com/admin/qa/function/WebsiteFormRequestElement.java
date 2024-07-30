@@ -1,6 +1,7 @@
 package com.admin.qa.function;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -197,11 +198,11 @@ public class WebsiteFormRequestElement extends TestBase{
 	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.05 -  Element of Name Edit Request input field   $$$$$$$$$$$$$$$$$$$$$$$$$$$$
 	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
 	*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
-	
+
 	//05. Element of Name Edit input field
 	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[1]/div/input")
 	WebElement NameEditElement;
-	
+
 	//05. Highlight the Name Edit input field Input Field
 	public void nameEditFieldHighlight() throws InterruptedException {
 		if (driver instanceof JavascriptExecutor) {
@@ -216,7 +217,7 @@ public class WebsiteFormRequestElement extends TestBase{
 			Thread.sleep(1000);
 		}
 	}
-	
+
 	//05. Type to the Name Edit input field
 	public WebsiteFormRequestElement typeToNameEditFieldParam(String Name_Edit) throws InterruptedException {
 		nameEditFieldHighlight();
@@ -224,7 +225,7 @@ public class WebsiteFormRequestElement extends TestBase{
 		Thread.sleep(2000);	
 		return new WebsiteFormRequestElement();
 	}
-	
+
 	//05.0.2. Type Name Edit input field (enter text, then clear Name input field)
 	public WebsiteFormRequestElement typeAndClearAffNameEditField(String Name_Edit) throws InterruptedException {
 		nameEditFieldHighlight();
@@ -232,6 +233,15 @@ public class WebsiteFormRequestElement extends TestBase{
 		Thread.sleep(1000);
 		NameEditElement.clear();
 		return new WebsiteFormRequestElement();									    			
+	}
+
+
+	//1.0.2. enter text and navigate through the Template Name field using the tab key
+	public WebsiteFormRequestElement typeAndTabKeyEditNameInputField(String Name_Edit) throws InterruptedException {
+		nameEditFieldHighlight();
+		NameEditElement.sendKeys(Name_Edit);
+		NameEditElement.sendKeys(Keys.TAB); // Navigate to the next field
+		return new WebsiteFormRequestElement();
 	}
 	
 	

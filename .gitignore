@@ -5,6 +5,7 @@ tokens/
 test-output/
 screenshots/
 edgedriver_win64/
+edge_mac/
 src/main/java/com/crm/qa/base/
 src/main/java/com/crm/qa/config/
 /bin/

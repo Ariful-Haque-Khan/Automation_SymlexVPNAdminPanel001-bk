@@ -101,6 +101,7 @@ public class DomainNameFieldTest extends TestBase{
 		//addNewSignUpBlacklistDomain.clickONSubmitButton();// click on save button
 		
 	}
+	
 	@Test(priority=22)
 	public void enter_then_undo_the_input_action_into_coupon_code_input_field() throws IOException, InterruptedException{
 		addNewSignUpBlacklistDomain = loginPage.addNewSignUpBlacklistDomainLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
@@ -130,6 +131,7 @@ public class DomainNameFieldTest extends TestBase{
 		addNewSignUpBlacklistDomain.typeDomainNameFieldParam("abc-domain");//taking input from the Domain Name
 		addNewSignUpBlacklistDomain.typetoDomainNametabKey();// navigate the tab key
 		//addNewSignUpBlacklistDomain.clickONSubmitButton();// click on save button
+		
 	}
 	
 	//@Test(priority=25)

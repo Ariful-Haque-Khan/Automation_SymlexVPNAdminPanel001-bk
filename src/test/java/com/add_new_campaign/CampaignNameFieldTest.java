@@ -57,9 +57,9 @@ public class CampaignNameFieldTest extends TestBase{
 	}
 	
 	//@Ignore
-	//@Test(priority=1)
+	@Test(priority=1)
 	public void enter_empty_text_into_campaign_name_input_field() throws IOException, InterruptedException {addNewCampaignCommon("");	}
-	//@Test(priority=2)
+	@Test(priority=2)
 	public void enter_a_valid_text_into_campaign_name_input_field() throws IOException, InterruptedException {addNewCampaignCommon("1 Year campaign for new user");	}
 	//@Test(priority=3)
 	public void enter_the_above_maximum_allowed_length_of_characters_into_campaign_name_input_field() throws IOException, InterruptedException{addNewCampaignCommon("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaniy1yr");}

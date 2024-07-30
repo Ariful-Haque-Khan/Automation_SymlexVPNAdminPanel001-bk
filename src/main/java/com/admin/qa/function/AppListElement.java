@@ -1,0 +1,277 @@
+package com.admin.qa.function;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.crm.qa.base.TestBase;
+
+public class AppListElement extends TestBase{
+	public AppListElement(){
+		PageFactory.initElements(driver, this);
+	}
+	
+	public AppListElement openCreateNewAppPage() {
+		driver.get(props.getProperty("url")+"push/create");
+		return new AppListElement();
+	}
+	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	 					* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+						*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.01 -   Element of App Name   $$$$$$$$$$$$$$$$$$$$
+						* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+															*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+	
+	//01. Element of App Name
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[1]/div/input")
+	WebElement appNameElement;
+	
+	//01. Highlight the App Name Input Field
+	public void appnameInputFieldHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", appNameElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", appNameElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", appNameElement);
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", appNameElement);
+			Thread.sleep(1000);
+		}
+	}
+		
+	//01. Type to the App Name
+	public AppListElement typeToAppNameInputFieldParam(String App_Name) throws InterruptedException {
+		appnameInputFieldHighlight();
+		appNameElement.sendKeys(App_Name);
+		Thread.sleep(2000);
+		return new AppListElement();
+		
+	}
+	
+	//1.0.1. Type to the App name Input Field (enter text, then clear the app name field)
+    public AppListElement typeAndClearAppNameInputField(String App_Name) throws InterruptedException {
+    	appnameInputFieldHighlight();
+    	appNameElement.sendKeys(App_Name);
+    	Thread.sleep(500);
+    	appNameElement.clear();
+    	return new AppListElement();
+    			
+   	}
+    
+    //01.0.2. enter text and navigate through the title field using the tab key
+    public AppListElement typeAndTabKeyAppNameInputFieldParam() throws InterruptedException {
+  		appnameInputFieldHighlight();
+  		appNameElement.sendKeys();
+  		appNameElement.sendKeys(Keys.TAB); // Navigate to the next field
+  		return new AppListElement();
+  		
+  	}
+	
+	
+	/***************************************************
+     						* *****************************************************************************************************
+	 						* **************************    End No.01 - Element ofApp Name    *************************************
+	 						* * ***************************************************************************************************
+	 													******************************************************************************************************/
+	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+						* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+						*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.02 -   Element of APP ID (One Signal)   $$$$$$$$$$
+						* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+																*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+	//02. Element of APP ID (One Signal)
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[2]/div/input")
+	WebElement appIDOneSignalElement;
+		
+	//02. Highlight the APP ID (One Signal) Input Field
+	public void appIDOneSignalInputFieldHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", appIDOneSignalElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", appIDOneSignalElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", appIDOneSignalElement);
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", appIDOneSignalElement);
+			Thread.sleep(1000);
+		}
+	}
+			
+	//02. Type to the APP ID (One Signal)
+	public AppListElement typeToAPPIDOneSignalTestParam(String App_ID) throws InterruptedException {
+		appIDOneSignalInputFieldHighlight();
+		appIDOneSignalElement.sendKeys(App_ID);	
+		Thread.sleep(2000);	
+		return new AppListElement();
+	}
+	
+	//02.0.1. Type to the tab key to APP ID (One Signal)
+	public AppListElement typeAndTabKeyAppIDInputFieldParam() throws InterruptedException {
+		appIDOneSignalInputFieldHighlight();
+		appIDOneSignalElement.sendKeys(Keys.TAB); // Navigate to the next field				
+		Thread.sleep(2000);			
+		return new AppListElement();
+	}
+			
+	//2.0.2. Type to the App id Input Field (enter text, then clear the app id field)
+	 public AppListElement typeAndClearAppIDInputField(String App_ID) throws InterruptedException {
+		appIDOneSignalInputFieldHighlight();
+	    appIDOneSignalElement.sendKeys(App_ID);
+	    Thread.sleep(500);
+	    appIDOneSignalElement.clear();
+	    return new AppListElement();
+	    			
+	}
+	 
+		/***************************************************
+								* **********************************************************************************************
+								* **************************    End No.02 - Element of APP ID (One Signal)   *******************
+								* * ********************************************************************************************
+															****************************************************************************************************/
+		
+		/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		 					* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+							*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.03 -   Element of APP Key (One Signal)   $$$$$$$$$$
+							* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+																	*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+	
+	//03. Element of APP Key (One Signal)
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[3]/div/input")
+	WebElement appKeyOneSignalElement;
+		
+	//03. Highlight the APP Key (One Signal) Input Field
+	public void appKeyOneSignalInputFieldHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", appKeyOneSignalElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", appKeyOneSignalElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", appKeyOneSignalElement);
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", appKeyOneSignalElement);
+			Thread.sleep(1000);
+		}
+	}
+
+		
+	//03. Type to the APP key (One Signal)
+	public AppListElement typeToAPPKeyOneSignalTestParam(String App_key) throws InterruptedException {
+		appKeyOneSignalInputFieldHighlight();
+		appKeyOneSignalElement.sendKeys(App_key);			
+		Thread.sleep(2000);		
+		return new AppListElement();
+	}
+	
+	
+	//3.0.1. Type to the APP key Input Field (enter text, then clear the app id field)
+	public AppListElement typeAndClearAppKeyInputField(String App_key) throws InterruptedException {
+		appKeyOneSignalInputFieldHighlight();
+		appKeyOneSignalElement.sendKeys(App_key);
+		Thread.sleep(500);
+		appKeyOneSignalElement.clear();
+		return new AppListElement();
+		    			
+	}
+	
+	 //03.0.2. enter text and navigate through the APP key field using the tab key
+    public AppListElement typeAndTabKeyAppKeyInputFieldParam() throws InterruptedException {
+  		appnameInputFieldHighlight();
+  		appNameElement.sendKeys();
+  		appNameElement.sendKeys(Keys.TAB); // Navigate to the next field
+  		return new AppListElement();
+  		
+  	}
+		
+	
+		/***************************************************
+						* **********************************************************************************************
+						* **************************    End No.03 - Element of APP Key (One Signal)   ******************
+						* * ********************************************************************************************
+													****************************************************************************************************/
+	
+		/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+							* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+							*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.04 -   Element of Is UDID Check?   $$$$$$$$$$$$$$$
+							* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+																					*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+	//04. Element of Is UDID Check?
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[1]/div[2]/div[4]/div/input")
+	WebElement isUDIDCheckElement;
+		
+	//04. Highlight the APP Key (One Signal) Input Field
+	public void isUDIDCheckChekboxInputFieldHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isUDIDCheckElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", isUDIDCheckElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", isUDIDCheckElement);
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", isUDIDCheckElement);
+			Thread.sleep(1000);
+		}
+	}
+		
+	//04. Type to the Is UDID Check?
+	public AppListElement clickToIsUDIDCheckChekboxInputTest() throws InterruptedException {
+		isUDIDCheckChekboxInputFieldHighlight();
+		isUDIDCheckElement.click();
+		return new AppListElement();
+	}
+		
+		/***************************************************
+								* **********************************************************************************************
+								* **************************    End No.04 - Element of Is UDID Check?   ************************
+								* * ********************************************************************************************
+															****************************************************************************************************/
+		
+		/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+		 					* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+							*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.05 -   Element of Save Button   $$$$$$$$$$$$$$$$$$
+							 * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
+																*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+	//05. Element of Save Button
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div/form/div/div[2]/input[3]")
+	WebElement saveButtonElement;
+		
+	//05. Highlight the Save Button
+	public void saveButtonElementHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", saveButtonElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');", saveButtonElement);
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", saveButtonElement);
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", saveButtonElement);
+			Thread.sleep(1000);
+		}
+	}
+		
+	//05. click to the Save Button
+	public AppListElement clickToSaveButtonTest() throws InterruptedException {
+		saveButtonElementHighlight();
+		saveButtonElement.click();
+		return new AppListElement();
+	}
+		
+		/***************************************************
+					* **********************************************************************************************
+					* **************************    End No.05 - Element of Save Button   ***************************
+					* * ********************************************************************************************
+												****************************************************************************************************/
+	
+	
+}

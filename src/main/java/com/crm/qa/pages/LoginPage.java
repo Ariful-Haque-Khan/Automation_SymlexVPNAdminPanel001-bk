@@ -26,25 +26,28 @@ import com.admin.qa.pages.UserPermissionSectionLinks;
 import com.admin.qa.pages.IPManagementSectionLinks;
 import com.admin.qa.pages.MailAddressSectionLinks;
 import com.admin.qa.pages.OnlinePINReportsSectionLinks;
-import com.admin.qa.function.AddNewBanner;
-import com.admin.qa.function.AddNewBlockAppCRC;
+import com.admin.qa.function.AdBannerListElement;
+import com.admin.qa.function.AddNewAdminPanelElement;
+import com.admin.qa.function.AppCrcBlockListElement;
 import com.admin.qa.function.CampaignModuleElement;
 import com.admin.qa.function.AddNewEventCode;
 import com.admin.qa.function.IPListElement;
 import com.admin.qa.function.IpBundleElement;
 import com.admin.qa.function.AddNewMenuPermission;
-import com.admin.qa.function.AddNewNotice;
+import com.admin.qa.function.NoticeForUsersElement;
 import com.admin.qa.function.AddNewPaymentMethod;
-import com.admin.qa.function.AddNewResellerClient;
+import com.admin.qa.function.SubscriptionCodesElement;
+import com.admin.qa.function.ResellerClient_AffiliatorClientElement;
 import com.admin.qa.function.AddNewRole;
 import com.admin.qa.function.ServerModuleElement;
 import com.admin.qa.function.WebsiteFormRequestElement;
 import com.admin.qa.function.AddNewSignUpBlacklistDomain;
 import com.admin.qa.function.AddPINJail;
 import com.admin.qa.function.AddPINValidity;
-import com.admin.qa.function.AddPushTemplate;
+import com.admin.qa.function.PushTemplateListElement;
+import com.admin.qa.function.AddServerLockSchedule;
 import com.admin.qa.function.AddSubEventCode;
-import com.admin.qa.function.CreateNewApp;
+import com.admin.qa.function.AppListElement;
 import com.admin.qa.function.NewAdminCreation;
 import com.admin.qa.function.NewCustomizeResellerPanel;
 import com.admin.qa.function.OnlinePINActivation;
@@ -330,13 +333,13 @@ public class LoginPage extends TestBase{
 		return new SendBackgroundorSilentPushtoSinglePIN(); //HomePage is the landing page for LoginPage
 	}
 	
-	public AddNewResellerClient addNewResellerClientLogin(String uname , String pwd) {
+	public ResellerClient_AffiliatorClientElement addNewResellerClientLogin(String uname , String pwd) {
 		
 		username.sendKeys(uname);
 		password.sendKeys(pwd);
 		loginBtn.click();
 		
-		return new AddNewResellerClient(); //HomePage is the landing page for LoginPage
+		return new ResellerClient_AffiliatorClientElement(); //HomePage is the landing page for LoginPage
 	}
 	
 	public NewCustomizeResellerPanel customPanelNameLogin(String uname , String pwd) {
@@ -357,13 +360,13 @@ public class LoginPage extends TestBase{
 		return new ServerModuleElement(); // Add New Server page for LoginPage
 	}
 	
-	public CreateNewApp createNewAppLogin(String uname , String pwd) {
+	public AppListElement createNewAppLogin(String uname , String pwd) {
 		
 		username.sendKeys(uname);
 		password.sendKeys(pwd);
 		loginBtn.click();
 		
-		return new CreateNewApp(); // Add New Server page for LoginPage
+		return new AppListElement(); // Add New Server page for LoginPage
 	}
 	
 	public PushAutomationForm pushAutomationLogin(String uname , String pwd) {
@@ -384,31 +387,31 @@ public class LoginPage extends TestBase{
 		return new SendPushtoUser(); // Login form Push Automation Form page
 	}
     
-    public AddPushTemplate addPushTemplateLogin(String uname , String pwd) {
+    public PushTemplateListElement addPushTemplateLogin(String uname , String pwd) {
 		
 		username.sendKeys(uname);
 		password.sendKeys(pwd);
 		loginBtn.click();
 		
-		return new AddPushTemplate(); // Login form Push Automation Form page
+		return new PushTemplateListElement(); // Login form Push Automation Form page
 	}
     
-    public AddNewNotice addNewNoticeLogin(String uname , String pwd) {
+    public NoticeForUsersElement addNewNoticeLogin(String uname , String pwd) {
 		
 		username.sendKeys(uname);
 		password.sendKeys(pwd);
 		loginBtn.click();
 		
-		return new AddNewNotice(); // Login form Push Automation Form page
+		return new NoticeForUsersElement(); // Login form Push Automation Form page
 	}
     
-    public AddNewBanner addNewBannerLogin(String uname , String pwd) {
+    public AdBannerListElement addNewBannerLogin(String uname , String pwd) {
 		
 		username.sendKeys(uname);
 		password.sendKeys(pwd);
 		loginBtn.click();
 		
-		return new AddNewBanner(); // Login form Add New Banner Form page
+		return new AdBannerListElement(); // Login form Add New Banner Form page
 	}
     
     public AddNewRatePlan addNewRatePlanLogin(String uname , String pwd) {
@@ -483,13 +486,13 @@ public class LoginPage extends TestBase{
 		return new AddNewSignUpBlacklistDomain(); //Login form Add New Role Form page
 	}
 	
-	public AddNewBlockAppCRC addNewBlockAppCRCLogin(String uname , String pwd) {
+	public AppCrcBlockListElement addNewBlockAppCRCLogin(String uname , String pwd) {
 		
 		username.sendKeys(uname);
 		password.sendKeys(pwd);
 		loginBtn.click();
 		
-		return new AddNewBlockAppCRC(); //Login form Add New Role Form page
+		return new AppCrcBlockListElement(); //Login form Add New Role Form page
 	}
 	
    public ProfileInformation profileInformationLogin(String uname , String pwd) {
@@ -535,5 +538,32 @@ public class LoginPage extends TestBase{
 		loginBtn.click();
 		
 		return new IpBundleElement(); //Login form Add New IP BundleForm page
+	}
+   
+   public AddServerLockSchedule addServerLockScheduleLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new AddServerLockSchedule(); //Login form Add Server Lock Schedule page 
+	}
+   
+   public AddNewAdminPanelElement addNewAdminPanelElementLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new AddNewAdminPanelElement(); //Login form Add Server Lock Schedule page 
+	}
+   
+   public SubscriptionCodesElement addNewPinBatchLogin(String uname , String pwd) {
+		
+		username.sendKeys(uname);
+		password.sendKeys(pwd);
+		loginBtn.click();
+		
+		return new SubscriptionCodesElement(); //Login form Add New PIN Batch page 
 	}
 }

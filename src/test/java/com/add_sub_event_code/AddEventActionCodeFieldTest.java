@@ -52,11 +52,11 @@ public class AddEventActionCodeFieldTest extends TestBase{
 	}
 		
 	//@Ignore
-	//@Test(priority=1)
+	@Test(priority=1)
 	public void enter_empty_text_into_Code_input_field() throws IOException, InterruptedException {addSubEventCodeCommon("");	}
-	@Test(priority=2)
+	//@Test(priority=2)
 	public void enter_a_valid_text_into_Code_input_field() throws IOException, InterruptedException {addSubEventCodeCommon("code_expired");	}
-	@Test(priority=3)
+	//@Test(priority=3)
 	public void enter_the_above_maximum_allowed_length_of_characters_into_Code_input_field() throws IOException, InterruptedException{addSubEventCodeCommon("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaniy1yr");}
 	//@Test(priority=4)
 	public void enter_the_below_minimum_allowed_length_of_characters_into_Code_input_field() throws IOException, InterruptedException{addSubEventCodeCommon("a");}
@@ -80,12 +80,12 @@ public class AddEventActionCodeFieldTest extends TestBase{
 	public void enter_text_with_a_mix_of_uppercase_and_lowercase_letter_into_Code_input_field() throws IOException, InterruptedException{addSubEventCodeCommon("ABCdefasASD"); }
 	//@Test(priority=14)
 	public void enter_text_with_punctuation_marks_into_Code_input_field() throws IOException, InterruptedException{addSubEventCodeCommon(",./;?.,;/.,./?><:;,./;.,"); }
-	//@Test(priority=15)
+	@Test(priority=15)
 	public void enter_text_with_line_breaks_or_newlines_into_Code_input_field() throws IOException, InterruptedException{addSubEventCodeCommon("\\\\\"ANI1yr\\\\\\\\n\\\\\\\" +\\\\r\\\\n\\\"\\r\\n\"\r\n"
 				+ "				+ \"				+ \\\"                                  \\\\\\\"ani1yr\\\\\\\""); }
 	//@Test(priority=16)
 	public void enter_text_with_unicode_characters_into_Code_input_field() throws IOException, InterruptedException{addSubEventCodeCommon("こんにちは"); }
-	//@Test(priority=17)
+	@Test(priority=17)
 	public void enter_text_containing_emojis_into_Code_input_field() throws IOException, InterruptedException{addSubEventCodeCommon("😊, 🐱, 🍕, 🎉"); }
 	//@Test(priority=18)
 	public void enter_text_with_accented_characters_into_Code_input_field() throws IOException, InterruptedException{addSubEventCodeCommon("á, ç, ō,  á, ç, ō");}
@@ -136,7 +136,7 @@ public class AddEventActionCodeFieldTest extends TestBase{
 	}
 	
 	//@Test(priority=24)
-	//@Ignore
+	//@Ignorep
 	public void enter_text_and_navigate_through_into_Code_input_field_using_the_tab_key() throws IOException, InterruptedException{ 
 		addSubEventCode = loginPage.addSubEventCodeLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
 		addSubEventCode.openAddSubEventCodeForm();// open the Add Sub Event Code Page.

@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
-import com.admin.qa.function.AddNewBanner;
+import com.admin.qa.function.AdBannerListElement;
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.TestUtils;
@@ -24,7 +24,7 @@ public class AndroidOnclickURLFieldTest extends TestBase{
 
 	TestUtils testUtils;
 	
-	AddNewBanner addNewBanner;
+	AdBannerListElement adBannerListElement;
 	
 	//Initializing PageFactory
 	public AndroidOnclickURLFieldTest() {
@@ -38,28 +38,28 @@ public class AndroidOnclickURLFieldTest extends TestBase{
 		testUtils = new TestUtils();
 	}
 		public void AddNewBannerCommon(String android_onclick_url) throws IOException, InterruptedException {
-		addNewBanner = loginPage.addNewBannerLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		addNewBanner.openAddNewBannerFormPage();// open the Add New Banner Form Page.
-		addNewBanner.typeToBannerNameInputFieldParam("");//taking input from the Banner Name
-		addNewBanner.typeToAppHomeBannerAndroidFieldParam("");// taking input from the App Home Banner Android
-		addNewBanner.typeToAndroidOnclickURLElementFieldParam(android_onclick_url);// taking input from the Android Onclick URL
-		addNewBanner.typeToHomeBanneriOSElementFieldParam("banner for ios");// taking input from the App Home Banner iOS
-		addNewBanner.typeToiOSOnclickURLElementFieldParam("url for ios");// taking input from the iOS Onclick URL
-		addNewBanner.typeToResellerPanelBannerFieldParam("banner for reseller");//taking input from the Reseller Panel Banner
-		addNewBanner.typeToResellerOnclickFieldParam("url for reseller");// taking input from the Reseller panel Onclick URL
-		addNewBanner.selectDatafromCountryDropDownElement();// select inputs data form the Reseller drop down field
-		addNewBanner.clickOncommonPanelElement();//  check box for the common panel
-		addNewBanner.typeToBannerRemarksFieldParam("only for symlex user");// taking input from the remarks
-		addNewBanner.clickOnLoginTypeAppElement();//check box for the login type (all)
-		addNewBanner.clickOnloginTypeAppSymlexElement();//  check box for the login type (Symlex)
-		addNewBanner.clickOnloginTypeAppPlatinumElement();//check box for the login type (Platinum) 
-		addNewBanner.clickOnUserTypeAppAllElement();//check box for the User Type (App)
-		addNewBanner.clickOnUserTypeAppFreeElement();// check box for the User Type (free)
-		addNewBanner.clickOnUserTypeAppExpiredElement();// check box for the User Type (expired)
-		addNewBanner.clickOnUserTypeAppPaidElement();// check box for the User Type (paid)
-		addNewBanner.clickOnUserTypeAppPremiumElement();// check box for the User Type (premium)
-		//addNewBanner.();/
-		//addNewBanner.();// 
+		adBannerListElement = loginPage.addNewBannerLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		adBannerListElement.openAddNewBannerFormPage();// open the Add New Banner Form Page.
+		adBannerListElement.typeToBannerNameInputFieldParam("");//taking input from the Banner Name
+		adBannerListElement.typeToAppHomeBannerAndroidFieldParam("");// taking input from the App Home Banner Android
+		adBannerListElement.typeToAndroidOnclickURLElementFieldParam(android_onclick_url);// taking input from the Android Onclick URL
+		adBannerListElement.typeToHomeBanneriOSElementFieldParam("banner for ios");// taking input from the App Home Banner iOS
+		adBannerListElement.typeToiOSOnclickURLElementFieldParam("url for ios");// taking input from the iOS Onclick URL
+		adBannerListElement.typeToResellerPanelBannerFieldParam("banner for reseller");//taking input from the Reseller Panel Banner
+		adBannerListElement.typeToResellerOnclickFieldParam("url for reseller");// taking input from the Reseller panel Onclick URL
+		adBannerListElement.selectDatafromCountryDropDownElement();// select inputs data form the Reseller drop down field
+		adBannerListElement.clickOncommonPanelElement();//  check box for the common panel
+		adBannerListElement.typeToBannerRemarksFieldParam("only for symlex user");// taking input from the remarks
+		adBannerListElement.clickOnLoginTypeAppElement();//check box for the login type (all)
+		adBannerListElement.clickOnloginTypeAppSymlexElement();//  check box for the login type (Symlex)
+		adBannerListElement.clickOnloginTypeAppPlatinumElement();//check box for the login type (Platinum) 
+		adBannerListElement.clickOnUserTypeAppAllElement();//check box for the User Type (App)
+		adBannerListElement.clickOnUserTypeAppFreeElement();// check box for the User Type (free)
+		adBannerListElement.clickOnUserTypeAppExpiredElement();// check box for the User Type (expired)
+		adBannerListElement.clickOnUserTypeAppPaidElement();// check box for the User Type (paid)
+		adBannerListElement.clickOnUserTypeAppPremiumElement();// check box for the User Type (premium)
+		//adBannerListElement.();/
+		//adBannerListElement.();// 
 
 }
 	
@@ -107,135 +107,135 @@ public class AndroidOnclickURLFieldTest extends TestBase{
 	}
 	//@Test(priority=20)
 	public void enter_text_then_clear_the_input_text_field() throws IOException, InterruptedException{
-		addNewBanner = loginPage.addNewBannerLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		addNewBanner.openAddNewBannerFormPage();// open the Add New Banner Form Page.
-		addNewBanner.typeToBannerNameInputFieldParam("1 year offer banner");//taking input from the Banner Name
-		addNewBanner.typeToAppHomeBannerAndroidFieldParam("banner for andorid ");// taking input from the App Home Banner Android
-		addNewBanner.typeToAndroidOnclickURLElementFieldParam("url for android");// taking input from the Android Onclick URL
-		addNewBanner.typeAndClearOnclickURLParam("");
-		addNewBanner.typeToHomeBanneriOSElementFieldParam("banner for ios");// taking input from the App Home Banner iOS
-		addNewBanner.typeToiOSOnclickURLElementFieldParam("url for ios");// taking input from the iOS Onclick URL
-		addNewBanner.typeToResellerPanelBannerFieldParam("banner for reseller");//taking input from the Reseller Panel Banner
-		addNewBanner.typeToResellerOnclickFieldParam("url for reseller");// taking input from the Reseller panel Onclick URL
-		addNewBanner.selectDatafromCountryDropDownElement();// select inputs data form the Reseller drop down field
-		addNewBanner.clickOncommonPanelElement();//  check box for the common panel
-		addNewBanner.typeToBannerRemarksFieldParam("only for symlex user");// taking input from the remarks
-		addNewBanner.clickOnLoginTypeAppElement();//check box for the login type (all)
-		addNewBanner.clickOnloginTypeAppSymlexElement();//  check box for the login type (Symlex)
-		addNewBanner.clickOnloginTypeAppPlatinumElement();//check box for the login type (Platinum) 
-		addNewBanner.clickOnUserTypeAppAllElement();//check box for the User Type (App)
-		addNewBanner.clickOnUserTypeAppFreeElement();// check box for the User Type (free)
-		addNewBanner.clickOnUserTypeAppExpiredElement();// check box for the User Type (expired)
-		addNewBanner.clickOnUserTypeAppPaidElement();// check box for the User Type (paid)
-		addNewBanner.clickOnUserTypeAppPremiumElement();// check box for the User Type (premium)
-		//addNewBanner.();/
-		//addNewBanner.();// 
+		adBannerListElement = loginPage.addNewBannerLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		adBannerListElement.openAddNewBannerFormPage();// open the Add New Banner Form Page.
+		adBannerListElement.typeToBannerNameInputFieldParam("1 year offer banner");//taking input from the Banner Name
+		adBannerListElement.typeToAppHomeBannerAndroidFieldParam("banner for andorid ");// taking input from the App Home Banner Android
+		adBannerListElement.typeToAndroidOnclickURLElementFieldParam("url for android");// taking input from the Android Onclick URL
+		adBannerListElement.typeAndClearOnclickURLParam("");
+		adBannerListElement.typeToHomeBanneriOSElementFieldParam("banner for ios");// taking input from the App Home Banner iOS
+		adBannerListElement.typeToiOSOnclickURLElementFieldParam("url for ios");// taking input from the iOS Onclick URL
+		adBannerListElement.typeToResellerPanelBannerFieldParam("banner for reseller");//taking input from the Reseller Panel Banner
+		adBannerListElement.typeToResellerOnclickFieldParam("url for reseller");// taking input from the Reseller panel Onclick URL
+		adBannerListElement.selectDatafromCountryDropDownElement();// select inputs data form the Reseller drop down field
+		adBannerListElement.clickOncommonPanelElement();//  check box for the common panel
+		adBannerListElement.typeToBannerRemarksFieldParam("only for symlex user");// taking input from the remarks
+		adBannerListElement.clickOnLoginTypeAppElement();//check box for the login type (all)
+		adBannerListElement.clickOnloginTypeAppSymlexElement();//  check box for the login type (Symlex)
+		adBannerListElement.clickOnloginTypeAppPlatinumElement();//check box for the login type (Platinum) 
+		adBannerListElement.clickOnUserTypeAppAllElement();//check box for the User Type (App)
+		adBannerListElement.clickOnUserTypeAppFreeElement();// check box for the User Type (free)
+		adBannerListElement.clickOnUserTypeAppExpiredElement();// check box for the User Type (expired)
+		adBannerListElement.clickOnUserTypeAppPaidElement();// check box for the User Type (paid)
+		adBannerListElement.clickOnUserTypeAppPremiumElement();// check box for the User Type (premium)
+		//adBannerListElement.();/
+		//adBannerListElement.();// 
 	}
 	@Test(priority=21)
 	public void enter_then_undo_the_input_action_into_android_onclick_URL_input_field() throws IOException, InterruptedException{
-		addNewBanner = loginPage.addNewBannerLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		addNewBanner.openAddNewBannerFormPage();// open the Add New Banner Form Page.
-		addNewBanner.typeToBannerNameInputFieldParam("1 year offer banner");//taking input from the Banner Name
-		addNewBanner.typeToAppHomeBannerAndroidFieldParam("banner for andorid ");// taking input from the App Home Banner Android
-		addNewBanner.typeToAndroidOnclickURLElementFieldParam("url for android");// taking input from the Android Onclick URL
-		addNewBanner.typeAndClearOnclickURLParam("");
-		addNewBanner.typeToHomeBanneriOSElementFieldParam("banner for ios");// taking input from the App Home Banner iOS
-		addNewBanner.typeToiOSOnclickURLElementFieldParam("url for ios");// taking input from the iOS Onclick URL
-		addNewBanner.typeToResellerPanelBannerFieldParam("banner for reseller");//taking input from the Reseller Panel Banner
-		addNewBanner.typeToResellerOnclickFieldParam("url for reseller");// taking input from the Reseller panel Onclick URL
-		addNewBanner.selectDatafromCountryDropDownElement();// select inputs data form the Reseller drop down field
-		addNewBanner.clickOncommonPanelElement();//  check box for the common panel
-		addNewBanner.typeToBannerRemarksFieldParam("only for symlex user");// taking input from the remarks
-		addNewBanner.clickOnLoginTypeAppElement();//check box for the login type (all)
-		addNewBanner.clickOnloginTypeAppSymlexElement();//  check box for the login type (Symlex)
-		addNewBanner.clickOnloginTypeAppPlatinumElement();//check box for the login type (Platinum) 
-		addNewBanner.clickOnUserTypeAppAllElement();//check box for the User Type (App)
-		addNewBanner.clickOnUserTypeAppFreeElement();// check box for the User Type (free)
-		addNewBanner.clickOnUserTypeAppExpiredElement();// check box for the User Type (expired)
-		addNewBanner.clickOnUserTypeAppPaidElement();// check box for the User Type (paid)
-		addNewBanner.clickOnUserTypeAppPremiumElement();// check box for the User Type (premium)
-		//addNewBanner.();/
-		//addNewBanner.();// 
+		adBannerListElement = loginPage.addNewBannerLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		adBannerListElement.openAddNewBannerFormPage();// open the Add New Banner Form Page.
+		adBannerListElement.typeToBannerNameInputFieldParam("1 year offer banner");//taking input from the Banner Name
+		adBannerListElement.typeToAppHomeBannerAndroidFieldParam("banner for andorid ");// taking input from the App Home Banner Android
+		adBannerListElement.typeToAndroidOnclickURLElementFieldParam("url for android");// taking input from the Android Onclick URL
+		adBannerListElement.typeAndClearOnclickURLParam("");
+		adBannerListElement.typeToHomeBanneriOSElementFieldParam("banner for ios");// taking input from the App Home Banner iOS
+		adBannerListElement.typeToiOSOnclickURLElementFieldParam("url for ios");// taking input from the iOS Onclick URL
+		adBannerListElement.typeToResellerPanelBannerFieldParam("banner for reseller");//taking input from the Reseller Panel Banner
+		adBannerListElement.typeToResellerOnclickFieldParam("url for reseller");// taking input from the Reseller panel Onclick URL
+		adBannerListElement.selectDatafromCountryDropDownElement();// select inputs data form the Reseller drop down field
+		adBannerListElement.clickOncommonPanelElement();//  check box for the common panel
+		adBannerListElement.typeToBannerRemarksFieldParam("only for symlex user");// taking input from the remarks
+		adBannerListElement.clickOnLoginTypeAppElement();//check box for the login type (all)
+		adBannerListElement.clickOnloginTypeAppSymlexElement();//  check box for the login type (Symlex)
+		adBannerListElement.clickOnloginTypeAppPlatinumElement();//check box for the login type (Platinum) 
+		adBannerListElement.clickOnUserTypeAppAllElement();//check box for the User Type (App)
+		adBannerListElement.clickOnUserTypeAppFreeElement();// check box for the User Type (free)
+		adBannerListElement.clickOnUserTypeAppExpiredElement();// check box for the User Type (expired)
+		adBannerListElement.clickOnUserTypeAppPaidElement();// check box for the User Type (paid)
+		adBannerListElement.clickOnUserTypeAppPremiumElement();// check box for the User Type (premium)
+		//adBannerListElement.();/
+		//adBannerListElement.();// 
 	}
 	//@Test(priority=22)
 	public void enter_then_undo_then_redo_the_input_action_into_android_onclick_URL_input_field() throws IOException, InterruptedException{
-		addNewBanner = loginPage.addNewBannerLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		addNewBanner.openAddNewBannerFormPage();// open the Add New Banner Form Page.
-		addNewBanner.typeToBannerNameInputFieldParam("1 year offer banner");//taking input from the Banner Name
-		addNewBanner.typeToAppHomeBannerAndroidFieldParam("banner for andorid ");// taking input from the App Home Banner Android
-		addNewBanner.typeToAndroidOnclickURLElementFieldParam("url for android");// taking input from the Android Onclick URL
-		addNewBanner.typeAndClearOnclickURLParam("");
-		addNewBanner.typeToAndroidOnclickURLElementFieldParam("url for android");
-		addNewBanner.typeToHomeBanneriOSElementFieldParam("banner for ios");// taking input from the App Home Banner iOS
-		addNewBanner.typeToiOSOnclickURLElementFieldParam("url for ios");// taking input from the iOS Onclick URL
-		addNewBanner.typeToResellerPanelBannerFieldParam("banner for reseller");//taking input from the Reseller Panel Banner
-		addNewBanner.typeToResellerOnclickFieldParam("url for reseller");// taking input from the Reseller panel Onclick URL
-		addNewBanner.selectDatafromCountryDropDownElement();// select inputs data form the Reseller drop down field
-		addNewBanner.clickOncommonPanelElement();//  check box for the common panel
-		addNewBanner.typeToBannerRemarksFieldParam("only for symlex user");// taking input from the remarks
-		addNewBanner.clickOnLoginTypeAppElement();//check box for the login type (all)
-		addNewBanner.clickOnloginTypeAppSymlexElement();//  check box for the login type (Symlex)
-		addNewBanner.clickOnloginTypeAppPlatinumElement();//check box for the login type (Platinum) 
-		addNewBanner.clickOnUserTypeAppAllElement();//check box for the User Type (App)
-		addNewBanner.clickOnUserTypeAppFreeElement();// check box for the User Type (free)
-		addNewBanner.clickOnUserTypeAppExpiredElement();// check box for the User Type (expired)
-		addNewBanner.clickOnUserTypeAppPaidElement();// check box for the User Type (paid)
-		addNewBanner.clickOnUserTypeAppPremiumElement();// check box for the User Type (premium)
-		//addNewBanner.();/
-		//addNewBanner.();// 
+		adBannerListElement = loginPage.addNewBannerLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		adBannerListElement.openAddNewBannerFormPage();// open the Add New Banner Form Page.
+		adBannerListElement.typeToBannerNameInputFieldParam("1 year offer banner");//taking input from the Banner Name
+		adBannerListElement.typeToAppHomeBannerAndroidFieldParam("banner for andorid ");// taking input from the App Home Banner Android
+		adBannerListElement.typeToAndroidOnclickURLElementFieldParam("url for android");// taking input from the Android Onclick URL
+		adBannerListElement.typeAndClearOnclickURLParam("");
+		adBannerListElement.typeToAndroidOnclickURLElementFieldParam("url for android");
+		adBannerListElement.typeToHomeBanneriOSElementFieldParam("banner for ios");// taking input from the App Home Banner iOS
+		adBannerListElement.typeToiOSOnclickURLElementFieldParam("url for ios");// taking input from the iOS Onclick URL
+		adBannerListElement.typeToResellerPanelBannerFieldParam("banner for reseller");//taking input from the Reseller Panel Banner
+		adBannerListElement.typeToResellerOnclickFieldParam("url for reseller");// taking input from the Reseller panel Onclick URL
+		adBannerListElement.selectDatafromCountryDropDownElement();// select inputs data form the Reseller drop down field
+		adBannerListElement.clickOncommonPanelElement();//  check box for the common panel
+		adBannerListElement.typeToBannerRemarksFieldParam("only for symlex user");// taking input from the remarks
+		adBannerListElement.clickOnLoginTypeAppElement();//check box for the login type (all)
+		adBannerListElement.clickOnloginTypeAppSymlexElement();//  check box for the login type (Symlex)
+		adBannerListElement.clickOnloginTypeAppPlatinumElement();//check box for the login type (Platinum) 
+		adBannerListElement.clickOnUserTypeAppAllElement();//check box for the User Type (App)
+		adBannerListElement.clickOnUserTypeAppFreeElement();// check box for the User Type (free)
+		adBannerListElement.clickOnUserTypeAppExpiredElement();// check box for the User Type (expired)
+		adBannerListElement.clickOnUserTypeAppPaidElement();// check box for the User Type (paid)
+		adBannerListElement.clickOnUserTypeAppPremiumElement();// check box for the User Type (premium)
+		//adBannerListElement.();/
+		//adBannerListElement.();// 
 	}
 	//@Test(priority=23)
 	//@Ignore
 	public void enter_text_and_navigate_through_into_android_onclick_URL_input_field_using_the_tab_key() throws IOException, InterruptedException{ 
-		addNewBanner = loginPage.addNewBannerLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		addNewBanner.openAddNewBannerFormPage();// open the Add New Banner Form Page.
-		addNewBanner.typeToBannerNameInputFieldParam("1 year offer banner");//taking input from the Banner Name
-		addNewBanner.typeToAppHomeBannerAndroidFieldParam("banner for andorid ");// taking input from the App Home Banner Android
-		addNewBanner.typeToAndroidOnclickURLElementFieldParam("url for android");// taking input from the Android Onclick URL
-		addNewBanner.typetotheOnclickURLFieldtabKey();
-		addNewBanner.typeToHomeBanneriOSElementFieldParam("banner for ios");// taking input from the App Home Banner iOS
-		addNewBanner.typeToiOSOnclickURLElementFieldParam("url for ios");// taking input from the iOS Onclick URL
-		addNewBanner.typeToResellerPanelBannerFieldParam("banner for reseller");//taking input from the Reseller Panel Banner
-		addNewBanner.typeToResellerOnclickFieldParam("url for reseller");// taking input from the Reseller panel Onclick URL
-		addNewBanner.selectDatafromCountryDropDownElement();// select inputs data form the Reseller drop down field
-		addNewBanner.clickOncommonPanelElement();//  check box for the common panel
-		addNewBanner.typeToBannerRemarksFieldParam("only for symlex user");// taking input from the remarks
-		addNewBanner.clickOnLoginTypeAppElement();//check box for the login type (all)
-		addNewBanner.clickOnloginTypeAppSymlexElement();//  check box for the login type (Symlex)
-		addNewBanner.clickOnloginTypeAppPlatinumElement();//check box for the login type (Platinum) 
-		addNewBanner.clickOnUserTypeAppAllElement();//check box for the User Type (App)
-		addNewBanner.clickOnUserTypeAppFreeElement();// check box for the User Type (free)
-		addNewBanner.clickOnUserTypeAppExpiredElement();// check box for the User Type (expired)
-		addNewBanner.clickOnUserTypeAppPaidElement();// check box for the User Type (paid)
-		addNewBanner.clickOnUserTypeAppPremiumElement();// check box for the User Type (premium)
-		//addNewBanner.();/
-		//addNewBanner.();//  
+		adBannerListElement = loginPage.addNewBannerLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		adBannerListElement.openAddNewBannerFormPage();// open the Add New Banner Form Page.
+		adBannerListElement.typeToBannerNameInputFieldParam("1 year offer banner");//taking input from the Banner Name
+		adBannerListElement.typeToAppHomeBannerAndroidFieldParam("banner for andorid ");// taking input from the App Home Banner Android
+		adBannerListElement.typeToAndroidOnclickURLElementFieldParam("url for android");// taking input from the Android Onclick URL
+		adBannerListElement.typetotheOnclickURLFieldtabKey();
+		adBannerListElement.typeToHomeBanneriOSElementFieldParam("banner for ios");// taking input from the App Home Banner iOS
+		adBannerListElement.typeToiOSOnclickURLElementFieldParam("url for ios");// taking input from the iOS Onclick URL
+		adBannerListElement.typeToResellerPanelBannerFieldParam("banner for reseller");//taking input from the Reseller Panel Banner
+		adBannerListElement.typeToResellerOnclickFieldParam("url for reseller");// taking input from the Reseller panel Onclick URL
+		adBannerListElement.selectDatafromCountryDropDownElement();// select inputs data form the Reseller drop down field
+		adBannerListElement.clickOncommonPanelElement();//  check box for the common panel
+		adBannerListElement.typeToBannerRemarksFieldParam("only for symlex user");// taking input from the remarks
+		adBannerListElement.clickOnLoginTypeAppElement();//check box for the login type (all)
+		adBannerListElement.clickOnloginTypeAppSymlexElement();//  check box for the login type (Symlex)
+		adBannerListElement.clickOnloginTypeAppPlatinumElement();//check box for the login type (Platinum) 
+		adBannerListElement.clickOnUserTypeAppAllElement();//check box for the User Type (App)
+		adBannerListElement.clickOnUserTypeAppFreeElement();// check box for the User Type (free)
+		adBannerListElement.clickOnUserTypeAppExpiredElement();// check box for the User Type (expired)
+		adBannerListElement.clickOnUserTypeAppPaidElement();// check box for the User Type (paid)
+		adBannerListElement.clickOnUserTypeAppPremiumElement();// check box for the User Type (premium)
+		//adBannerListElement.();/
+		//adBannerListElement.();//  
 	}
 	//@Test(priority=24)
 	public void paste_the_text_into_android_onclick_URL_input_field_using_the_paste_action() throws IOException, InterruptedException{
-		addNewBanner = loginPage.addNewBannerLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		addNewBanner.openAddNewBannerFormPage();// open the Add New Banner Form Page.
-		addNewBanner.typeToBannerNameInputFieldParam("1 year offer banner");//taking input from the Banner Name
-		addNewBanner.typetotheurlforBannerNameInputFieldtabKey();//undo the text
-		addNewBanner.typeToAppHomeBannerAndroidFieldParam("banner for andorid ");// taking input from the App Home Banner Android
-		addNewBanner.typeToAndroidOnclickURLElementFieldParam("url for android");// taking input from the Android Onclick URL
-		addNewBanner.typeToHomeBanneriOSElementFieldParam("banner for ios");// taking input from the App Home Banner iOS
-		addNewBanner.typeToiOSOnclickURLElementFieldParam("url for ios");// taking input from the iOS Onclick URL
-		addNewBanner.typeToResellerPanelBannerFieldParam("banner for reseller");//taking input from the Reseller Panel Banner
-		addNewBanner.typeToResellerOnclickFieldParam("url for reseller");// taking input from the Reseller panel Onclick URL
-		addNewBanner.selectDatafromCountryDropDownElement();// select inputs data form the Reseller drop down field
-		addNewBanner.clickOncommonPanelElement();//  check box for the common panel
-		addNewBanner.typeToBannerRemarksFieldParam("only for symlex user");// taking input from the remarks
-		addNewBanner.clickOnLoginTypeAppElement();//check box for the login type (all)
-		addNewBanner.clickOnloginTypeAppSymlexElement();//  check box for the login type (Symlex)
-		addNewBanner.clickOnloginTypeAppPlatinumElement();//check box for the login type (Platinum) 
-		addNewBanner.clickOnUserTypeAppAllElement();//check box for the User Type (App)
-		addNewBanner.clickOnUserTypeAppFreeElement();// check box for the User Type (free)
-		addNewBanner.clickOnUserTypeAppExpiredElement();// check box for the User Type (expired)
-		addNewBanner.clickOnUserTypeAppPaidElement();// check box for the User Type (paid)
-		addNewBanner.clickOnUserTypeAppPremiumElement();// check box for the User Type (premium)
-		//addNewBanner.();/
-		//addNewBanner.();// 
+		adBannerListElement = loginPage.addNewBannerLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		adBannerListElement.openAddNewBannerFormPage();// open the Add New Banner Form Page.
+		adBannerListElement.typeToBannerNameInputFieldParam("1 year offer banner");//taking input from the Banner Name
+		adBannerListElement.typetotheurlforBannerNameInputFieldtabKey();//undo the text
+		adBannerListElement.typeToAppHomeBannerAndroidFieldParam("banner for andorid ");// taking input from the App Home Banner Android
+		adBannerListElement.typeToAndroidOnclickURLElementFieldParam("url for android");// taking input from the Android Onclick URL
+		adBannerListElement.typeToHomeBanneriOSElementFieldParam("banner for ios");// taking input from the App Home Banner iOS
+		adBannerListElement.typeToiOSOnclickURLElementFieldParam("url for ios");// taking input from the iOS Onclick URL
+		adBannerListElement.typeToResellerPanelBannerFieldParam("banner for reseller");//taking input from the Reseller Panel Banner
+		adBannerListElement.typeToResellerOnclickFieldParam("url for reseller");// taking input from the Reseller panel Onclick URL
+		adBannerListElement.selectDatafromCountryDropDownElement();// select inputs data form the Reseller drop down field
+		adBannerListElement.clickOncommonPanelElement();//  check box for the common panel
+		adBannerListElement.typeToBannerRemarksFieldParam("only for symlex user");// taking input from the remarks
+		adBannerListElement.clickOnLoginTypeAppElement();//check box for the login type (all)
+		adBannerListElement.clickOnloginTypeAppSymlexElement();//  check box for the login type (Symlex)
+		adBannerListElement.clickOnloginTypeAppPlatinumElement();//check box for the login type (Platinum) 
+		adBannerListElement.clickOnUserTypeAppAllElement();//check box for the User Type (App)
+		adBannerListElement.clickOnUserTypeAppFreeElement();// check box for the User Type (free)
+		adBannerListElement.clickOnUserTypeAppExpiredElement();// check box for the User Type (expired)
+		adBannerListElement.clickOnUserTypeAppPaidElement();// check box for the User Type (paid)
+		adBannerListElement.clickOnUserTypeAppPremiumElement();// check box for the User Type (premium)
+		//adBannerListElement.();/
+		//adBannerListElement.();// 
 	}
 	
 /*

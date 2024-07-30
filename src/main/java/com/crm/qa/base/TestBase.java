@@ -31,9 +31,8 @@ public class TestBase {
 
 		try {
 			props = new Properties();
+			FileInputStream ip = new FileInputStream("/Users//md.abdullahalrumy/Documents/SymlexAdminPanel001/src/main/java/com/crm/qa/config/config.properties");
 
-			FileInputStream ip = new FileInputStream("D:\\office\\SymlexAdminPanel001\\src\\main\\java\\com\\crm\\qa\\config\\config.properties");
-			//C:\project\eclipse\SymlexResPanel001
 			//E:\\selenium\\SymlexAdminPanel001
 			props.load(ip);
 			System.out.println(props.getProperty("url"));
@@ -52,26 +51,22 @@ public class TestBase {
 
 	public void initialization() {
 		if (props.getProperty("browser").equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver",
-					"C:\\jar_files\\chromedriver_win32\\103\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver","C:\\jar_files\\chromedriver_win32\\103\\chromedriver.exe");
 			driver = new ChromeDriver(); // launch chrome browser
 		} else if (props.getProperty("browser").equals("edge")) {
-			System.setProperty("webdriver.edge.driver",
-					"D:\\office\\SymlexAdminPanel001\\edgedriver_win64\\msedgedriver.exe");
+			System.setProperty("webdriver.edge.driver","/Users/md.abdullahalrumy/Documents/SymlexAdminPanel001/edge_mac/msedgedriver");
+
+
 			driver = new EdgeDriver(); // launch edge browser
-			EdgeOptions options = new EdgeOptions();
-			//capability = DesiredCapabilities.edge();
+			EdgeOptions options = new EdgeOptions();//capability = DesiredCapabilities.edge();
 			
 		} else if (props.getProperty("browser").equals("firefox")) {
-			System.setProperty("webdriver.gecko.driver",
-					"E:\\eclipse\\geckodriver_v0_33_0\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver","E:\\eclipse\\geckodriver_v0_33_0\\geckodriver.exe");
 			driver = new FirefoxDriver(); // launch firefox browser
 		}
-		e_driver = new EventFiringWebDriver(driver);
-		// Now create object of WebEventListener handler to register it with EventFiringWebDriver
+		e_driver = new EventFiringWebDriver(driver);// Now create object of WebEventListener handler to register it with EventFiringWebDriver
 		eventListener = new WebEventListener();
-		e_driver.register(eventListener);
-		//Assign that to event listener driver to WebDriver.
+		e_driver.register(eventListener);//Assign that to event listener driver to WebDriver.
 		driver = e_driver;
 
 		driver.manage().window().maximize(); // maximize the windows

@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
-import com.admin.qa.function.AddNewNotice;
+import com.admin.qa.function.NoticeForUsersElement;
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.TestUtils;
@@ -24,7 +24,7 @@ public class PushRemarksFieldTest extends TestBase{
 
 	TestUtils testUtils;
 	
-	AddNewNotice addNewNotice;
+	NoticeForUsersElement noticeForUsersElement;
 	
 	//Initializing PageFactory
 	public PushRemarksFieldTest() {
@@ -39,19 +39,19 @@ public class PushRemarksFieldTest extends TestBase{
 	}
 	
 	public void AddNewNoticeFormCommon(String remarks) throws IOException, InterruptedException {
-		addNewNotice = loginPage.addNewNoticeLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		addNewNotice.openAddNewNoticePage();// open the Add New Notice Form Page.
-		addNewNotice.selectDatafromNoticeTypeDropDownElement();//select inputs data form the Notice Type drop down field
-		addNewNotice.selectDataFromsuserTypeDropdownField();// select inputs data form the User Type drop down field
-		addNewNotice.selectDataFromsOperationTypeDropdownField();// select inputs data form the Operation Type drop down field
-		addNewNotice.timePeriodFromInputField();// select inputs data form the Time Period Type drop down field
-		addNewNotice.timePeriodToInputField();// select inputs data form the time to Type drop down field
-		addNewNotice.selectDatafromPageControlDropDownElement();// select inputs data form the Page Control drop down field
-		addNewNotice.typetonoticeMessageInputParam("notice message foe automation purpose");//taking inputs from the Notice Message input text field
-		addNewNotice.typetopushMessageParam("push message for Automation");//taking inputs from the Push Message input text field
-		addNewNotice.typetopushRemarksParam(remarks);//  taking inputs from the Remarks input text field
-		addNewNotice.activeInactiveStatusInputField();// enable/disable to active button
-		//addNewNotice.submitButtonInputField ();// for submit button			
+		noticeForUsersElement = loginPage.addNewNoticeLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		noticeForUsersElement.openAddNewNoticePage();// open the Add New Notice Form Page.
+		noticeForUsersElement.selectDatafromNoticeTypeDropDownElement();//select inputs data form the Notice Type drop down field
+		noticeForUsersElement.selectDataFromsuserTypeDropdownField();// select inputs data form the User Type drop down field
+		noticeForUsersElement.selectDataFromsOperationTypeDropdownField();// select inputs data form the Operation Type drop down field
+		noticeForUsersElement.timePeriodFromInputField();// select inputs data form the Time Period Type drop down field
+		noticeForUsersElement.timePeriodToInputField();// select inputs data form the time to Type drop down field
+		noticeForUsersElement.selectDatafromPageControlDropDownElement();// select inputs data form the Page Control drop down field
+		noticeForUsersElement.typetonoticeMessageInputParam("notice message foe automation purpose");//taking inputs from the Notice Message input text field
+		noticeForUsersElement.typetopushMessageParam("push message for Automation");//taking inputs from the Push Message input text field
+		noticeForUsersElement.typetopushRemarksParam(remarks);//  taking inputs from the Remarks input text field
+		noticeForUsersElement.activeInactiveStatusInputField();// enable/disable to active button
+		//noticeForUsersElement.submitButtonInputField ();// for submit button			
 	}
 
 	//@Ignore
@@ -97,89 +97,89 @@ public class PushRemarksFieldTest extends TestBase{
 	}
 	@Test(priority=20)
 	public void enter_text_then_clear_the_input_text_field() throws IOException, InterruptedException{
-		addNewNotice = loginPage.addNewNoticeLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		addNewNotice.openAddNewNoticePage();// open the Add New Notice Form Page.
-		addNewNotice.selectDatafromNoticeTypeDropDownElement();//select inputs data form the Notice Type drop down field
-		addNewNotice.selectDataFromsuserTypeDropdownField();// select inputs data form the User Type drop down field
-		addNewNotice.selectDataFromsOperationTypeDropdownField();// select inputs data form the Operation Type drop down field
-		addNewNotice.timePeriodFromInputField();// select inputs data form the Time Period Type drop down field
-		addNewNotice.timePeriodToInputField();// select inputs data form the time to Type drop down field
-		addNewNotice.selectDatafromPageControlDropDownElement();// select inputs data form the Page Control drop down field
-		addNewNotice.typetonoticeMessageInputParam("test notice for automation");//taking inputs from the Notice Message input text field
-		addNewNotice.typetopushMessageParam("push message for automation");//taking inputs from the Push Message input text field
-		addNewNotice.typetopushRemarksParam("the notice is only for UAE user");//  taking inputs from the Remarks input text field
-		addNewNotice.typeAndClearthepushRemarksParam("");//clear the text
-		addNewNotice.activeInactiveStatusInputField();// enable/disable to active button
-		//addNewNotice.submitButtonInputField ();// for submit button
+		noticeForUsersElement = loginPage.addNewNoticeLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		noticeForUsersElement.openAddNewNoticePage();// open the Add New Notice Form Page.
+		noticeForUsersElement.selectDatafromNoticeTypeDropDownElement();//select inputs data form the Notice Type drop down field
+		noticeForUsersElement.selectDataFromsuserTypeDropdownField();// select inputs data form the User Type drop down field
+		noticeForUsersElement.selectDataFromsOperationTypeDropdownField();// select inputs data form the Operation Type drop down field
+		noticeForUsersElement.timePeriodFromInputField();// select inputs data form the Time Period Type drop down field
+		noticeForUsersElement.timePeriodToInputField();// select inputs data form the time to Type drop down field
+		noticeForUsersElement.selectDatafromPageControlDropDownElement();// select inputs data form the Page Control drop down field
+		noticeForUsersElement.typetonoticeMessageInputParam("test notice for automation");//taking inputs from the Notice Message input text field
+		noticeForUsersElement.typetopushMessageParam("push message for automation");//taking inputs from the Push Message input text field
+		noticeForUsersElement.typetopushRemarksParam("the notice is only for UAE user");//  taking inputs from the Remarks input text field
+		noticeForUsersElement.typeAndClearthepushRemarksParam("");//clear the text
+		noticeForUsersElement.activeInactiveStatusInputField();// enable/disable to active button
+		//noticeForUsersElement.submitButtonInputField ();// for submit button
 	}
 	//@Test(priority=21)
 	public void enter_then_undo_the_input_action_into_Push_Remarks_input_field() throws IOException, InterruptedException{
-		addNewNotice = loginPage.addNewNoticeLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		addNewNotice.openAddNewNoticePage();// open the Add New Notice Form Page.
-		addNewNotice.selectDatafromNoticeTypeDropDownElement();//select inputs data form the Notice Type drop down field
-		addNewNotice.selectDataFromsuserTypeDropdownField();// select inputs data form the User Type drop down field
-		addNewNotice.selectDataFromsOperationTypeDropdownField();// select inputs data form the Operation Type drop down field
-		addNewNotice.timePeriodFromInputField();// select inputs data form the Time Period Type drop down field
-		addNewNotice.timePeriodToInputField();// select inputs data form the time to Type drop down field
-		addNewNotice.selectDatafromPageControlDropDownElement();// select inputs data form the Page Control drop down field
-		addNewNotice.typetonoticeMessageInputParam("test notice for automation");//taking inputs from the Notice Message input text field
-		addNewNotice.typetopushMessageParam("push message for automation");//taking inputs from the Push Message input text field
-		addNewNotice.typetopushRemarksParam("the notice is only for UAE user");//  taking inputs from the Remarks input text field
-		addNewNotice.typeAndClearthepushRemarksParam("");//clear the text
-		addNewNotice.activeInactiveStatusInputField();// enable/disable to active button
-		//addNewNotice.submitButtonInputField ();// for submit button	
+		noticeForUsersElement = loginPage.addNewNoticeLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		noticeForUsersElement.openAddNewNoticePage();// open the Add New Notice Form Page.
+		noticeForUsersElement.selectDatafromNoticeTypeDropDownElement();//select inputs data form the Notice Type drop down field
+		noticeForUsersElement.selectDataFromsuserTypeDropdownField();// select inputs data form the User Type drop down field
+		noticeForUsersElement.selectDataFromsOperationTypeDropdownField();// select inputs data form the Operation Type drop down field
+		noticeForUsersElement.timePeriodFromInputField();// select inputs data form the Time Period Type drop down field
+		noticeForUsersElement.timePeriodToInputField();// select inputs data form the time to Type drop down field
+		noticeForUsersElement.selectDatafromPageControlDropDownElement();// select inputs data form the Page Control drop down field
+		noticeForUsersElement.typetonoticeMessageInputParam("test notice for automation");//taking inputs from the Notice Message input text field
+		noticeForUsersElement.typetopushMessageParam("push message for automation");//taking inputs from the Push Message input text field
+		noticeForUsersElement.typetopushRemarksParam("the notice is only for UAE user");//  taking inputs from the Remarks input text field
+		noticeForUsersElement.typeAndClearthepushRemarksParam("");//clear the text
+		noticeForUsersElement.activeInactiveStatusInputField();// enable/disable to active button
+		//noticeForUsersElement.submitButtonInputField ();// for submit button	
 	}
 	//@Test(priority=22)
 	public void enter_then_undo_then_redo_the_input_action_into_Push_Remarks_input_field() throws IOException, InterruptedException{
-		addNewNotice = loginPage.addNewNoticeLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		addNewNotice.openAddNewNoticePage();// open the Add New Notice Form Page.
-		addNewNotice.selectDatafromNoticeTypeDropDownElement();//select inputs data form the Notice Type drop down field
-		addNewNotice.selectDataFromsuserTypeDropdownField();// select inputs data form the User Type drop down field
-		addNewNotice.selectDataFromsOperationTypeDropdownField();// select inputs data form the Operation Type drop down field
-		addNewNotice.timePeriodFromInputField();// select inputs data form the Time Period Type drop down field
-		addNewNotice.timePeriodToInputField();// select inputs data form the time to Type drop down field
-		addNewNotice.selectDatafromPageControlDropDownElement();// select inputs data form the Page Control drop down field
-		addNewNotice.typetonoticeMessageInputParam("test notice for automation");//taking inputs from the Notice Message input text field
-		addNewNotice.typetopushMessageParam("push message for automation");//taking inputs from the Push Message input text field
-		addNewNotice.typetopushRemarksParam("the notice is only for UAE user");//  taking inputs from the Remarks input text field
-		addNewNotice.typeAndClearthepushRemarksParam("");//clear the text
-		addNewNotice.typetopushRemarksParam("the notice is only for UAE user");
-		addNewNotice.activeInactiveStatusInputField();// enable/disable to active button
-		//addNewNotice.submitButtonInputField ();// for submit button
+		noticeForUsersElement = loginPage.addNewNoticeLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		noticeForUsersElement.openAddNewNoticePage();// open the Add New Notice Form Page.
+		noticeForUsersElement.selectDatafromNoticeTypeDropDownElement();//select inputs data form the Notice Type drop down field
+		noticeForUsersElement.selectDataFromsuserTypeDropdownField();// select inputs data form the User Type drop down field
+		noticeForUsersElement.selectDataFromsOperationTypeDropdownField();// select inputs data form the Operation Type drop down field
+		noticeForUsersElement.timePeriodFromInputField();// select inputs data form the Time Period Type drop down field
+		noticeForUsersElement.timePeriodToInputField();// select inputs data form the time to Type drop down field
+		noticeForUsersElement.selectDatafromPageControlDropDownElement();// select inputs data form the Page Control drop down field
+		noticeForUsersElement.typetonoticeMessageInputParam("test notice for automation");//taking inputs from the Notice Message input text field
+		noticeForUsersElement.typetopushMessageParam("push message for automation");//taking inputs from the Push Message input text field
+		noticeForUsersElement.typetopushRemarksParam("the notice is only for UAE user");//  taking inputs from the Remarks input text field
+		noticeForUsersElement.typeAndClearthepushRemarksParam("");//clear the text
+		noticeForUsersElement.typetopushRemarksParam("the notice is only for UAE user");
+		noticeForUsersElement.activeInactiveStatusInputField();// enable/disable to active button
+		//noticeForUsersElement.submitButtonInputField ();// for submit button
 	}
 	//@Test(priority=23)
 	//@Ignore
 	public void enter_text_and_navigate_through_into_Push_Remarks_input_field_using_the_tab_key() throws IOException, InterruptedException{
-		addNewNotice = loginPage.addNewNoticeLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		addNewNotice.openAddNewNoticePage();// open the Add New Notice Form Page.
-		addNewNotice.selectDatafromNoticeTypeDropDownElement();//select inputs data form the Notice Type drop down field
-		addNewNotice.selectDataFromsuserTypeDropdownField();// select inputs data form the User Type drop down field
-		addNewNotice.selectDataFromsOperationTypeDropdownField();// select inputs data form the Operation Type drop down field
-		addNewNotice.timePeriodFromInputField();// select inputs data form the Time Period Type drop down field
-		addNewNotice.timePeriodToInputField();// select inputs data form the time to Type drop down field
-		addNewNotice.selectDatafromPageControlDropDownElement();// select inputs data form the Page Control drop down field
-		addNewNotice.typetonoticeMessageInputParam("test notice for automation");//taking inputs from the Notice Message input text field
-		addNewNotice.typetopushMessageParam("push message for automation");//taking inputs from the Push Message input text field
-		addNewNotice.typetopushRemarksParam("the notice is only for UAE user");//  taking inputs from the Remarks input text field
-		addNewNotice.typetothepushRemarksTabKey();//navigate to the tab key
-		addNewNotice.activeInactiveStatusInputField();// enable/disable to active button
-		//addNewNotice.submitButtonInputField ();// for submit button
+		noticeForUsersElement = loginPage.addNewNoticeLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		noticeForUsersElement.openAddNewNoticePage();// open the Add New Notice Form Page.
+		noticeForUsersElement.selectDatafromNoticeTypeDropDownElement();//select inputs data form the Notice Type drop down field
+		noticeForUsersElement.selectDataFromsuserTypeDropdownField();// select inputs data form the User Type drop down field
+		noticeForUsersElement.selectDataFromsOperationTypeDropdownField();// select inputs data form the Operation Type drop down field
+		noticeForUsersElement.timePeriodFromInputField();// select inputs data form the Time Period Type drop down field
+		noticeForUsersElement.timePeriodToInputField();// select inputs data form the time to Type drop down field
+		noticeForUsersElement.selectDatafromPageControlDropDownElement();// select inputs data form the Page Control drop down field
+		noticeForUsersElement.typetonoticeMessageInputParam("test notice for automation");//taking inputs from the Notice Message input text field
+		noticeForUsersElement.typetopushMessageParam("push message for automation");//taking inputs from the Push Message input text field
+		noticeForUsersElement.typetopushRemarksParam("the notice is only for UAE user");//  taking inputs from the Remarks input text field
+		noticeForUsersElement.typetothepushRemarksTabKey();//navigate to the tab key
+		noticeForUsersElement.activeInactiveStatusInputField();// enable/disable to active button
+		//noticeForUsersElement.submitButtonInputField ();// for submit button
 	}
 	//@Test(priority=24)
 	public void paste_the_text_into_Push_Remarks_input_field_using_the_paste_action() throws IOException, InterruptedException{
-		addNewNotice = loginPage.addNewNoticeLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
-		addNewNotice.openAddNewNoticePage();// open the Add New Notice Form Page.
-		addNewNotice.selectDatafromNoticeTypeDropDownElement();//select inputs data form the Notice Type drop down field
-		addNewNotice.selectDataFromsuserTypeDropdownField();// select inputs data form the User Type drop down field
-		addNewNotice.selectDataFromsOperationTypeDropdownField();// select inputs data form the Operation Type drop down field
-		addNewNotice.timePeriodFromInputField();// select inputs data form the Time Period Type drop down field
-		addNewNotice.timePeriodToInputField();// select inputs data form the time to Type drop down field
-		addNewNotice.selectDatafromPageControlDropDownElement();// select inputs data form the Page Control drop down field
-		addNewNotice.typetonoticeMessageInputParam("test notice for automation");//taking inputs from the Notice Message input text field
-		addNewNotice.typetopushMessageParam("push message for automation");//taking inputs from the Push Message input text field
-		addNewNotice.typetopushRemarksParam("the notice is only for UAE user");//  taking inputs from the Remarks input text field
-		addNewNotice.activeInactiveStatusInputField();// enable/disable to active button
-		//addNewNotice.submitButtonInputField ();// for submit button
+		noticeForUsersElement = loginPage.addNewNoticeLogin(props.getProperty("username"),props.getProperty("password")); //login to the system
+		noticeForUsersElement.openAddNewNoticePage();// open the Add New Notice Form Page.
+		noticeForUsersElement.selectDatafromNoticeTypeDropDownElement();//select inputs data form the Notice Type drop down field
+		noticeForUsersElement.selectDataFromsuserTypeDropdownField();// select inputs data form the User Type drop down field
+		noticeForUsersElement.selectDataFromsOperationTypeDropdownField();// select inputs data form the Operation Type drop down field
+		noticeForUsersElement.timePeriodFromInputField();// select inputs data form the Time Period Type drop down field
+		noticeForUsersElement.timePeriodToInputField();// select inputs data form the time to Type drop down field
+		noticeForUsersElement.selectDatafromPageControlDropDownElement();// select inputs data form the Page Control drop down field
+		noticeForUsersElement.typetonoticeMessageInputParam("test notice for automation");//taking inputs from the Notice Message input text field
+		noticeForUsersElement.typetopushMessageParam("push message for automation");//taking inputs from the Push Message input text field
+		noticeForUsersElement.typetopushRemarksParam("the notice is only for UAE user");//  taking inputs from the Remarks input text field
+		noticeForUsersElement.activeInactiveStatusInputField();// enable/disable to active button
+		//noticeForUsersElement.submitButtonInputField ();// for submit button
 	
 	}
 		

@@ -113,7 +113,7 @@ public class IPListElement extends TestBase{
 	//02.0.1 Type to the IP parameter
 	public IPListElement typeToIPInputFieldParam(String IP) throws InterruptedException {
 		ipElementInputFieldHighlight();
-		IPElement.sendKeys(IP);		
+		IPElement.sendKeys(IP);	
 		Thread.sleep(2000);		
 		return new IPListElement();
 	}
@@ -1189,4 +1189,102 @@ public class IPListElement extends TestBase{
 	 	* ************************    End No.21 - Element of Is (Search button- search IP list)  **********************
 	 	* * **************************************************************************************************
 	 							************************************************************************************************/
+	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+   * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.09-  protocol select of IP list of Select drop down  $$$$$$$$$$$$$$$$$$$
+  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+									*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+	//09. Select protocol for First click On the Element
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[1]/div[3]/span/span[1]/span/span[1]")
+	WebElement formSelect;
+		
+	//09.Select protocol for Search On the Element
+	@FindBy(xpath="/html/body/span/span/span[1]/input")
+	WebElement formDropDown;
+	
+	//09. protocol Type Element for Last click of first element On the Element
+	@FindBy(xpath="/html/body/span/span/span[2]/ul/li")
+	WebElement formSearch;
+	
+	//09. Highlight the Select Form drop down Input Field
+	public void FormSearchdHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", formSelect);/* make a yellow border outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');",formSelect);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", formSelect);/* make a yellow border outside edge of the element */
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", formSelect);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+		}
+	}
+	
+	//09. Type to the Select Form drop down
+	public IPListElement selectProtocolFromDropDownElement() throws InterruptedException {
+		FormSearchdHighlight();/* highlight the element of the tested. */
+		formSelect.click(); /*click on the element */
+		formDropDown.sendKeys("Any Connect");/*type on the input field */
+		formSearch.click();/*click on the element from result of the first value. */
+		return new IPListElement();
+	}
+
+      /***************************************************
+		*********************************************************************************************
+		****************************    End No.09 -  protocol select of IP list of Select drop down   **************************
+		*********************************************************************************************
+										*****************************************************************************************************/
+	
+	/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+   * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    Start No.10-  Status select of IP list of Select drop down  $$$$$$$$$$$$$$$$$$$
+  * $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+									*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
+	//09. Select status for First click On the Element
+	@FindBy(xpath="/html/body/div[2]/div/section[2]/div[1]/div[4]/span/span[1]/span/span[1]")
+	WebElement statusSelect;
+		
+	//09.Select protocol for Search On the Element
+	@FindBy(xpath="/html/body/span/span/span[1]/input")
+	WebElement statusDropDown;
+	
+	//09. protocol Type Element for Last click of first element On the Element
+	@FindBy(xpath="/html/body/span/span/span[2]/ul/li")
+	WebElement statusSearch;
+	
+	//09. Highlight the Select Form drop down Input Field
+	public void statusSearchdHighlight() throws InterruptedException {
+		if (driver instanceof JavascriptExecutor) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", statusSelect);/* make a yellow border outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', '');",statusSelect);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+			js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", statusSelect);/* make a yellow border outside edge of the element */
+			Thread.sleep(2000);
+			js.executeScript("arguments[0].setAttribute('style', '');", statusSelect);/* make a yellow border off outside edge of the element */
+			Thread.sleep(1000);
+		}
+	}
+	
+	//09. Type to the Select Form drop down
+	public IPListElement selectStatusFromDropDownElement() throws InterruptedException {
+		statusSearchdHighlight();/* highlight the element of the tested. */
+		statusSelect.click(); /*click on the element */
+		statusDropDown.sendKeys("Active");/*type on the input field */
+		statusSearch.click();/*click on the element from result of the first value. */
+		return new IPListElement();
+	}
+
+      /***************************************************
+		*********************************************************************************************
+		****************************    End No.09 -  Status select of IP list of Select drop down   **************************
+		*********************************************************************************************
+										*****************************************************************************************************/
+	
+	
 }
